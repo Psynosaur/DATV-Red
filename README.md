@@ -3,7 +3,8 @@ Original author is DL5OCD Michael and his post about it can be found [here](http
 
 # Node Red flows
 From this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
-This repository focuses on TX flows
+
+This repository focuses on **TX flows**
 
 ## Motivation
 Opening and closing batch scripts can be very time consuming.
