@@ -1,7 +1,8 @@
 # DATV-NotSoEasy
-## Original author is DL5OCD Michael and his post about it can be found [here](https://groups.io/g/plutodvb/message/257)
+Original author is DL5OCD Michael and his post about it can be found [here](https://groups.io/g/plutodvb/message/257)
 
-# Node Red flows from this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
+# Node Red flows
+From this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 This repository focuses on TX flows
 
 ## Motivation
