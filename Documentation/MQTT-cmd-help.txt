@@ -1,0 +1,25 @@
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/tssourceaddress -m 192.168.2.35:8282 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/gain -m -10 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/mute -m 0 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/frequency -m 2403.25e6 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/sr -m 333000 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/nco -m -20000 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/stream/mode -m dvbs2-ts -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/fec -m 4/5 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/constel -m qpsk -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/pilots -m 0 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/frame -m long -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/fecmode -m fixed -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/agcgain -m -100 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/digitalgain -m 0 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/fecrange -m 7 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/tssourcemode -m 0 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/tx/dvbs2/tssourcefile -m \path\to\file -h 192.168.2.35
+
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/system/longmynd -m on -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/longmynd/frequency -m 743000 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/longmynd/sr -m 333 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/longmynd/tsip -m 192.168.2.101 -h 192.168.2.35
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/longmynd/swport -m 0 -h 192.168.2.35
+
+"c:\program files\mosquitto\mosquitto_pub.exe" -t cmd/pluto/DL5OCD/system/reboot -m 1 -h 192.168.2.35

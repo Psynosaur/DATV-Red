@@ -13,4 +13,6 @@ The first commit of this post is ​DATV-NotSoEasy V1.0 as provided from Michael
 
 From here I will commit my changes so they can be tracked
 
+## ffmpeg, Linux-version, Mosquitto and MPV directories ignored
+
 Will add docs etc later
