@@ -2,7 +2,9 @@ REM Script for DATV-TX via FFMPEG, by DL5OCD
 REM DATV-NotSoEasy
 
 @echo off
-
+setlocal enabledelayedexpansion
+SET profile=%1
+SET lowlatency=%2
 SET BASEDIR=%~dp0
 cd %BASEDIR%
 
@@ -48,9 +50,61 @@ echo Profile 3 setup:
 more .\ini\favorite-3.ini
 echo -------------------------
 
+@REM This is not original functionality XD
+if "%lowlatency%" == "true" (
+	set lowlatency1=-tune zerolatency
+	set libx265params=-x265-params b-adapt=1
+	set libx265preset=	
+	)
+if "%lowlatency%" == "false" (
+	set lowlatency1=
+	set libx265params=
+	set libx265preset=
+	)
 
+if "%profile%"=="" goto INPUT
+if "%profile%"=="1" goto ONE
+if "%profile%"=="2" goto TWO
+if "%profile%"=="3" goto THREE
+if "%profile%"=="4" goto FOUR
+if "%profile%"=="7" goto SEVEN
+if "%profile%"=="8" goto EIGHT
+
+@REM Maintain original functionality :)
+:INPUT
 set /p AUTO=Use profile 1 (1), profile 2 (2), profile 3 (3), use previous parameters (4), start new parameters (5), GSE-Mode (6) :
+goto LOADSETTINGS
 
+:ONE
+echo ---- One
+set AUTO=1
+goto LOADSETTINGS
+
+:TWO
+echo ---- Two
+set AUTO=2
+goto LOADSETTINGS
+
+:THREE
+echo ---- Three
+set AUTO=3
+goto LOADSETTINGS
+
+:FOUR
+echo ---- Four
+set AUTO=4
+goto LOADSETTINGS
+
+@REM This is not original functionality XD
+:SEVEN
+set AUTO=500KS
+goto LOADSETTINGS
+
+:EIGHT
+set AUTO=1MS
+goto LOADSETTINGS
+
+:LOADSETTINGS
 if /I "%AUTO%"=="1" (for /f %%i in (.\ini\favorite-1.ini) do (
 set %%i
  )
@@ -66,8 +120,17 @@ set %%i
  )
 	)
 
-
 if /I "%AUTO%"=="4" (for /f %%i in (.\ini\params.ini) do (
+set %%i
+ )
+	)
+@REM This is not original functionality XD
+if /I "%AUTO%"=="500KS" (for /f %%i in (.\ini\favorite-4.ini) do (
+set %%i
+ )
+	)	
+
+if /I "%AUTO%"=="1MS" (for /f %%i in (.\ini\favorite-5.ini) do (
 set %%i
  )
 	)
@@ -86,6 +149,9 @@ if "%AUTO%"=="3" if "%RELAY%"=="on" GoTo DATVRX
 if "%AUTO%"=="1" GoTo DECISIONFW
 if "%AUTO%"=="2" GoTo DECISIONFW
 if "%AUTO%"=="3" GoTo DECISIONFW
+@REM This is not original functionality XD
+if "%AUTO%"=="500KS" GoTo DECISIONFW
+if "%AUTO%"=="1MS" GoTo DECISIONFW
 
 if "%AUTO%"=="4" if "%GSE%"=="1" (SET AUTO=6)&(GoTo GSE)
 if "%AUTO%"=="4" if "%RELAY%"=="on" (GoTo DATVRX)
@@ -752,7 +818,8 @@ if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/swport -m %TUNERPORT% -h %PLUTOIP%
 
 REM Start Control and MQTT Browser
 if "%FW%"=="yes" start "CONTROL" .\scripts\CONTROL.bat
-if "%FW%"=="yes" start .\Mosquitto\MQTT-Explorer-0.4.0-beta1.exe
+@REM This is not original functionality XD
+@REM if "%FW%"=="yes" start .\Mosquitto\MQTT-Explorer-0.4.0-beta1.exe
 
 
 
@@ -943,9 +1010,11 @@ echo ------------------------------------------
 if "%INPUTTYPE%"=="NETWORKUDP" GoTo SWENCNETWORKUDP
 if "%INPUTTYPE%"=="NETWORKRTMP" GoTo SWENCNETWORKRTMP
 if "%INPUTTYPE%"=="FILE" GoTo SWENCFILE
-
+@REM This is not original functionality XD
+echo LOW LATENCY: %lowlatency1%
 REM Software encoder via DSHOW
-.\ffmpeg\ffmpeg -itsoffset %OFFSET% -f dshow -thread_queue_size %THREADQUEUE%K -rtbufsize %RTBUF%M -i video=%VIDEODEVICE% -f dshow -thread_queue_size %THREADQUEUE%K -rtbufsize %RTBUF%M -i audio=%AUDIODEVICE% -ar %ABITRATE%K -vcodec %CODEC% -s %IMAGESIZE% -b:v %VBITRATE%K -r %FPS% -minrate %VBITRATE%K -maxrate %VBITRATE%K -bufsize %BUFSIZE%K -g %KEYSOFT% -acodec %AUDIOCODEC% -ac %AUDIO% -b:a %ABITRATE%k -f mpegts -muxrate %TSBITRATE%K -streamid 0:%VIDEOPID% -streamid 1:%AUDIOPID% -max_delay %MAXDELAY%K -max_interleave_delta %MAXINTERLEAVE%M -pcr_period %PCRPERIOD% -pat_period %PATPERIOD% -mpegts_service_id %SERVICEID% -mpegts_original_network_id %NETWORKID% -mpegts_transport_stream_id %STREAMID% -mpegts_pmt_start_pid %PMTPID% -mpegts_start_pid %MPEGTSSTARTPID% -metadata service_provider=%SERVICEPROVIDER% -metadata service_name=%CALLSIGN% -af aresample=async=1 "udp://%PLUTOIP%:%PLUTOPORT%?pkt_size=1316&overrun_nonfatal=1&fifo_size=%FIFOBUF%M"
+@REM ========================================================================================================================================================================================================== This is not original functionality XD........
+.\ffmpeg\ffmpeg -itsoffset %OFFSET% -f dshow -thread_queue_size %THREADQUEUE%K -rtbufsize %RTBUF%M -i video=%VIDEODEVICE% -f dshow -thread_queue_size %THREADQUEUE%K -rtbufsize %RTBUF%M -i audio=%AUDIODEVICE% %libx265preset% %libx265params% %lowlatency1% -ar %ABITRATE%K -vcodec %CODEC% -s %IMAGESIZE% -b:v %VBITRATE%K -r %FPS% -minrate %VBITRATE%K -maxrate %VBITRATE%K -bufsize %BUFSIZE%K -g %KEYSOFT% -acodec %AUDIOCODEC% -ac %AUDIO% -b:a %ABITRATE%k -f mpegts -muxrate %TSBITRATE%K -streamid 0:%VIDEOPID% -streamid 1:%AUDIOPID% -max_delay %MAXDELAY%K -max_interleave_delta %MAXINTERLEAVE%M -pcr_period %PCRPERIOD% -pat_period %PATPERIOD% -mpegts_service_id %SERVICEID% -mpegts_original_network_id %NETWORKID% -mpegts_transport_stream_id %STREAMID% -mpegts_pmt_start_pid %PMTPID% -mpegts_start_pid %MPEGTSSTARTPID% -metadata service_provider=%SERVICEPROVIDER% -metadata service_name=%CALLSIGN% -af aresample=async=1 "udp://%PLUTOIP%:%PLUTOPORT%?pkt_size=1316&overrun_nonfatal=1&fifo_size=%FIFOBUF%M"
 
 pause
 

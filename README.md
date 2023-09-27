@@ -16,4 +16,8 @@ From here I will commit my changes so they can be tracked
 
 ## ffmpeg, Linux-version, Mosquitto and MPV directories ignored
 
-Will add docs etc later
+
+### Please use **SET-FAVORITE.bat** to setup profiles and 1-5 and rename buttons accrodingly
+
+Mine is setup as 125, 250, 333, 500 and 1000KS
+

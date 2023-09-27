@@ -1,0 +1,5106 @@
+[
+    {
+        "id": "2ec6a7ddfe0cd173",
+        "type": "tab",
+        "label": "DATV TX Pluto (v5)",
+        "disabled": false,
+        "info": " - Low latency only for libx265/264, will break ffmpeg otherwise\r\n - Round trip latency fiddles 4s => 2s\r\n   - Yes I do mind that the round trip is 4s...\r\n - Update DATV-TX.bat!!! VERY IMPORTANT\r\n - Other profiles grey when one active\r\n - Stopping profile also stops transmission\r\n - perhaps we could call ffmpeg directly...",
+        "env": []
+    },
+    {
+        "id": "1d6ea1c9ce542926",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Not used right now",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#dbcbe7",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "f2453c932edfdf06",
+            "6707b23b38080a71",
+            "8305a6ab021ac648"
+        ],
+        "x": 154,
+        "y": 339,
+        "w": 532,
+        "h": 122
+    },
+    {
+        "id": "9c3a6dbecd18c092",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Read MQTT",
+        "style": {
+            "stroke": "#92d04f",
+            "label": true,
+            "fill": "#e3f3d3",
+            "color": "#000000"
+        },
+        "nodes": [
+            "36a9e71117a34327",
+            "babe629c1afb5e8b",
+            "45967ab8c3bd9a21",
+            "74fb79f38c7d1d72",
+            "d2b51c2f7d254def",
+            "18d422fe182d6186",
+            "306b57e47411d35c",
+            "ae6b05d807ae6c29",
+            "23773127332c2b1f",
+            "ecce0d5157b947f6",
+            "9aa8ef50bbbe8e2d",
+            "4301a516016525b7",
+            "d26972d34559fd63",
+            "a252d32151c887e4",
+            "a27d9eec9ce16ab7",
+            "b601d6596401a754",
+            "b6d03834b636d44d",
+            "9cea687107707a6b",
+            "50bf46056b71ec3a",
+            "5d39969ea562b92d",
+            "18b3a285bc3b304a",
+            "59e507f64ad42e32",
+            "4ddefda4dc462586",
+            "a3b043862df5d1c9",
+            "203d8eabee6242e7",
+            "33155f6018ceeffa",
+            "7a4a8d639646cff4",
+            "acbc87cefb97b581",
+            "96d158d7fdc5ee78",
+            "746af9f95f7438cd",
+            "3151643ca739182e",
+            "9fb89f4342f8baf0",
+            "e2ddf0eaa1468069",
+            "be979e81cb1cfd53",
+            "91114b46796f2205",
+            "aeded232cbae2ef0",
+            "4dc0d6bc0972a150",
+            "5969ebe7bc4ebaf9",
+            "8bcc3bb6537a078d",
+            "56ad120991eb3c83",
+            "97406770f0c5c44d",
+            "2e28b17c64c14184",
+            "04d27b36a3ee9934",
+            "76bed5f0ebc81a4c",
+            "ffdc2abacd936657",
+            "25a924b7dc1d4576",
+            "c25d1cacc8057d1d",
+            "0b6d33db8fc071c9",
+            "ac88fa94a49129ec",
+            "347c8041af1a52e0",
+            "92bdb03cfb54e314",
+            "54cbda477035a37f",
+            "295347c7270ee5f9",
+            "689b33376ddc8653",
+            "e0f5c4a53f48610b",
+            "4b23c7a819f12eb7",
+            "8ec0b8acdb25a6b7",
+            "1cc9bf09772f06d3",
+            "54e338fa6a48fd5b",
+            "45ea934ddc9664a3",
+            "12de00c45ec62557",
+            "ae61c1e19f8634d0",
+            "8a6e91746db5e484",
+            "31eb287a0ca0a45c",
+            "508bccc9de4506fc",
+            "2acfb18cb9db9a02",
+            "8e34088eda2b7263",
+            "b733d75a1c79f1a2",
+            "c8042db5402565df",
+            "e1cd38d2156ae7ba",
+            "0813517cbc9b99f3"
+        ],
+        "x": 14,
+        "y": 599,
+        "w": 1012,
+        "h": 1462
+    },
+    {
+        "id": "e6bb4e6e08658367",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Dashboard clickies",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "5e7078c95b5c8824",
+            "5f71534b6c02e324",
+            "f29b8d8eb8441fde",
+            "88c17ad9f892b06d",
+            "b6da9101dce07fd1",
+            "508ff50f2a470219",
+            "f0c209e940860820",
+            "0ceccbf10dbcc8af",
+            "4245872bb9518343",
+            "922871e293172bc4",
+            "af45e1bfc3e75ecb",
+            "55bca069bdb08ee7",
+            "dffe1e50bcaeb0a5",
+            "be4a04a5a054f988",
+            "2e677684d13ac6e0",
+            "aa6d588a480f161c",
+            "ddf60892397fbc68",
+            "1969a0cddc042f2e",
+            "152082051caa1d1d",
+            "37b18a222ae30d52",
+            "cec2f56be1fccf51",
+            "89b95ad3b6453036",
+            "807128449158f2eb",
+            "edf4a8f5daf0b0ab",
+            "f38c438a231661c6",
+            "c5ceed661f8529ce",
+            "ce96de0f7dba91c5",
+            "0c74362e749bcdc4",
+            "16a3685e614e0995",
+            "4a50af4869a33baa",
+            "14e5a286770d3cd0",
+            "0d6f171d50f0a0c3",
+            "70cb26f62de94a5d",
+            "b1b6fc76c723e0f1",
+            "93d8b2c69bdc7792",
+            "7b06e3153449eb9a",
+            "33a0bcca85522580",
+            "d533bf0f097fedc4",
+            "44d0cb3657f978dd",
+            "462c1bee49073de7",
+            "e91e846502f35c90",
+            "6bdd18a478266cdb",
+            "c157ba62f082ca1f",
+            "264a75ae81fe9571",
+            "e41f78ecb41096ea",
+            "26d4847d4e66ef33",
+            "ecd6781e5be6e360",
+            "8a16f1f5708afd9e",
+            "873a04942564e509",
+            "be766117a7d2334f",
+            "5c8e87753e4ad083",
+            "923832cf30d7070e",
+            "c4c1592e68a08ac2",
+            "43c746e7299a60f3",
+            "a6736166225853ff",
+            "4d9019e6505648e5",
+            "e6b4e62947ea3671",
+            "9e5aaf4953afd279",
+            "be04ba7a44aed070",
+            "4f5692cf8cb6b8dd",
+            "0024149327ace021",
+            "f4a493f6020481a0",
+            "3f2178d3d430812a",
+            "c140f8f622e33238",
+            "b2786302ea5b87d8",
+            "8105dd1d410bdd4b",
+            "162c77371bb6c962",
+            "0c94d661261c1f6e",
+            "8f75f111bea67d19",
+            "a0b7e955594b3ab5",
+            "d8a30908a8d1d05a",
+            "1fcb391face6d380",
+            "5f921d1388ef4777",
+            "b2256810aa9b7db3",
+            "5dd2297e2ab93299",
+            "a9ad9994f8c5db3b",
+            "cea8ea667bfe40bc",
+            "ec7f7985e8da8ed2",
+            "8fc50c918238bbb1",
+            "b12e26636bc4a755",
+            "6629d1fde454917d",
+            "12df56e883c6693d",
+            "4ecaf72037fc5448",
+            "3a96d30a3b796a9c",
+            "f79f4059793d2fec"
+        ],
+        "x": 1054,
+        "y": 13,
+        "w": 1718,
+        "h": 1908
+    },
+    {
+        "id": "162c77371bb6c962",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Disabled for breaking pluto...",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#ff7f7f",
+            "label": true,
+            "color": "#ffffff",
+            "fill-opacity": "0.63"
+        },
+        "nodes": [
+            "c6c7b77c513dc67d",
+            "7f859a7a7ee27404",
+            "9010393e1556714f",
+            "680e1065a1131216",
+            "139c2af2cc88bd80",
+            "64b6e4713fac94bf",
+            "9335bff762d93722",
+            "45b5b704879d30fe",
+            "c8c1c80d91c7c4b9"
+        ],
+        "x": 1954,
+        "y": 39,
+        "w": 792,
+        "h": 302
+    },
+    {
+        "id": "36a9e71117a34327",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1280,
+        "wires": [
+            [
+                "74fb79f38c7d1d72",
+                "a27d9eec9ce16ab7"
+            ]
+        ]
+    },
+    {
+        "id": "babe629c1afb5e8b",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 18,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Frequency",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 710,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "dffe1e50bcaeb0a5",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Frequency",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 19,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "144.600 Mhz",
+                "value": "144600000",
+                "type": "str"
+            },
+            {
+                "label": "436 Mhz",
+                "value": "436000000",
+                "type": "str"
+            },
+            {
+                "label": "437 Mhz",
+                "value": "437000000",
+                "type": "str"
+            },
+            {
+                "label": "1242 Mhz",
+                "value": "1242000000",
+                "type": "str"
+            },
+            {
+                "label": "1255 Mhz",
+                "value": "1255000000",
+                "type": "str"
+            },
+            {
+                "label": "1280 Mhz",
+                "value": "1280000000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH1 333KS",
+                "value": "2403250000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH2 125KS",
+                "value": "2403500000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH3 333KS 1Ms",
+                "value": "2403750000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH4 125KS",
+                "value": "2404000000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH5 333KS",
+                "value": "2404250000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH6 125KS",
+                "value": "2404500000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH7 333KS",
+                "value": "2404750000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH8 125KS",
+                "value": "2405000000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH9 333KS 1MS",
+                "value": "2405250000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH10 125KS",
+                "value": "2405500000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH11 333KS",
+                "value": "2405750000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH12 125KS",
+                "value": "2406000000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH13 333KS",
+                "value": "2406250000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH14 125KS",
+                "value": "2406500000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH15 333KS 1MS",
+                "value": "2406750000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH16 125KS",
+                "value": "2407000000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH17 333KS",
+                "value": "2407250000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH18 125KS",
+                "value": "2407500000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH19 333KS",
+                "value": "2407750000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH20 125KS",
+                "value": "2408000000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH21 333KS",
+                "value": "2408250000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH22 125KS",
+                "value": "2408500000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH23 333KS",
+                "value": "2408750000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH24 125KS",
+                "value": "2409000000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH25 333KS",
+                "value": "2409250000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH26 125KS",
+                "value": "2409500000",
+                "type": "str"
+            },
+            {
+                "label": "QO-100: CH27 333KS",
+                "value": "2409750000",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1340,
+        "y": 1100,
+        "wires": [
+            [
+                "807128449158f2eb"
+            ]
+        ]
+    },
+    {
+        "id": "be4a04a5a054f988",
+        "type": "ui_slider",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "TX Gain",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 42,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-30",
+        "max": "0",
+        "step": "-0.25",
+        "className": "",
+        "x": 1680,
+        "y": 960,
+        "wires": [
+            [
+                "37b18a222ae30d52"
+            ]
+        ]
+    },
+    {
+        "id": "2e677684d13ac6e0",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Mode",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 12,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "dvbs2-ts",
+                "value": "dvbs2-ts",
+                "type": "str"
+            },
+            {
+                "label": "dvbs2-gse",
+                "value": "dvbs2-gse",
+                "type": "str"
+            },
+            {
+                "label": "Carrier",
+                "value": "test",
+                "type": "str"
+            },
+            {
+                "label": "pass",
+                "value": "pass",
+                "type": "str"
+            },
+            {
+                "label": "dvbs-ts",
+                "value": "dvbs-ts",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1320,
+        "y": 1200,
+        "wires": [
+            [
+                "edf4a8f5daf0b0ab"
+            ]
+        ]
+    },
+    {
+        "id": "8a16f1f5708afd9e",
+        "type": "mqtt out",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16855981254e7e93",
+        "x": 2670,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "aa6d588a480f161c",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "SampleRate",
+        "tooltip": "",
+        "place": "Samplerate",
+        "group": "9ed1d9a126995072",
+        "order": 22,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "35Ks",
+                "value": 35000,
+                "type": "num"
+            },
+            {
+                "label": "66 Ks",
+                "value": 66000,
+                "type": "num"
+            },
+            {
+                "label": "125 Ks",
+                "value": 125000,
+                "type": "num"
+            },
+            {
+                "label": "250 Ks",
+                "value": 250000,
+                "type": "num"
+            },
+            {
+                "label": "333 Ks",
+                "value": 333000,
+                "type": "num"
+            },
+            {
+                "label": "500 Ks",
+                "value": 500000,
+                "type": "num"
+            },
+            {
+                "label": "1 Ms",
+                "value": 1000000,
+                "type": "num"
+            },
+            {
+                "label": "1.5 Ms/s",
+                "value": 1500000,
+                "type": "num"
+            },
+            {
+                "label": "2 Ms",
+                "value": 2000000,
+                "type": "num"
+            },
+            {
+                "label": "3 Ms",
+                "value": 3000000,
+                "type": "num"
+            },
+            {
+                "label": "4 Ms",
+                "value": 4000000,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1330,
+        "y": 1140,
+        "wires": [
+            [
+                "89b95ad3b6453036"
+            ]
+        ]
+    },
+    {
+        "id": "45967ab8c3bd9a21",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1040,
+        "wires": [
+            [
+                "babe629c1afb5e8b",
+                "8ec0b8acdb25a6b7"
+            ]
+        ]
+    },
+    {
+        "id": "74fb79f38c7d1d72",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 26,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "Muted ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "d2b51c2f7d254def",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 960,
+        "wires": [
+            [
+                "18d422fe182d6186",
+                "54cbda477035a37f"
+            ]
+        ]
+    },
+    {
+        "id": "18d422fe182d6186",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 36,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "TX Gain",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 700,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "ddf60892397fbc68",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Fec",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 25,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "none",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "1/4",
+                "value": "1/4",
+                "type": "str"
+            },
+            {
+                "label": "1/3",
+                "value": "1/3",
+                "type": "str"
+            },
+            {
+                "label": "2/5",
+                "value": "2/5",
+                "type": "str"
+            },
+            {
+                "label": "1/2",
+                "value": "1/2",
+                "type": "str"
+            },
+            {
+                "label": "3/5",
+                "value": "3/5",
+                "type": "str"
+            },
+            {
+                "label": "2/3",
+                "value": "2/3",
+                "type": "str"
+            },
+            {
+                "label": "3/4",
+                "value": "3/4",
+                "type": "str"
+            },
+            {
+                "label": "4/5",
+                "value": "4/5",
+                "type": "str"
+            },
+            {
+                "label": "5/6",
+                "value": "5/6",
+                "type": "str"
+            },
+            {
+                "label": "6/7",
+                "value": "6/7",
+                "type": "str"
+            },
+            {
+                "label": "7/8",
+                "value": "7/8",
+                "type": "str"
+            },
+            {
+                "label": "8/9",
+                "value": "8/9",
+                "type": "str"
+            },
+            {
+                "label": "9/10",
+                "value": "9/10",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1320,
+        "y": 780,
+        "wires": [
+            [
+                "cec2f56be1fccf51"
+            ]
+        ]
+    },
+    {
+        "id": "306b57e47411d35c",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1200,
+        "wires": [
+            [
+                "ae6b05d807ae6c29",
+                "54e338fa6a48fd5b"
+            ]
+        ]
+    },
+    {
+        "id": "ae6b05d807ae6c29",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 11,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "23773127332c2b1f",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1120,
+        "wires": [
+            [
+                "ecce0d5157b947f6",
+                "1cc9bf09772f06d3"
+            ]
+        ]
+    },
+    {
+        "id": "ecce0d5157b947f6",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 21,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Sample Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 710,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "9aa8ef50bbbe8e2d",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 800,
+        "wires": [
+            [
+                "4301a516016525b7",
+                "e0f5c4a53f48610b"
+            ]
+        ]
+    },
+    {
+        "id": "4301a516016525b7",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 24,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "FEC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "d26972d34559fd63",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 880,
+        "wires": [
+            [
+                "a252d32151c887e4",
+                "295347c7270ee5f9"
+            ]
+        ]
+    },
+    {
+        "id": "a252d32151c887e4",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 34,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "FECMode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 700,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "1969a0cddc042f2e",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set FecMode",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 35,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "fixed",
+                "value": "fixed",
+                "type": "str"
+            },
+            {
+                "label": "variable",
+                "value": "variable",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1330,
+        "y": 880,
+        "wires": [
+            [
+                "152082051caa1d1d"
+            ]
+        ]
+    },
+    {
+        "id": "a27d9eec9ce16ab7",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: mute",
+        "func": "let mute =msg.payload\nglobal.set(\"mute\", mute)\nmsg.mute_kleur=\"green\"\nif (mute === 0){\n    msg.mute_kleur=\"red\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1280,
+        "wires": [
+            [
+                "f0c209e940860820"
+            ]
+        ]
+    },
+    {
+        "id": "c140f8f622e33238",
+        "type": "status",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "scope": [
+            "347c8041af1a52e0"
+        ],
+        "x": 1500,
+        "y": 240,
+        "wires": [
+            [
+                "3f2178d3d430812a",
+                "b2786302ea5b87d8"
+            ]
+        ]
+    },
+    {
+        "id": "b2786302ea5b87d8",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Pluto connection status",
+        "func": "let status=msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Pluto MQTT connecting\"\n}\nif (status == \"node-red:common.status.connected\") {\n    human_status = \"Pluto MQTT connected\"\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Pluto MQTT disconnected\"\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status=human_status;\nmsg.kleur = fill;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 260,
+        "wires": [
+            [
+                "8105dd1d410bdd4b"
+            ]
+        ]
+    },
+    {
+        "id": "3f2178d3d430812a",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "d": true,
+        "g": "e6bb4e6e08658367",
+        "name": "Show Connect color",
+        "func": "",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1720,
+        "y": 200,
+        "wires": [
+            [
+                "8105dd1d410bdd4b",
+                "c8c1c80d91c7c4b9"
+            ]
+        ]
+    },
+    {
+        "id": "8105dd1d410bdd4b",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "{{human_status}}",
+        "tooltip": "",
+        "color": "{{achtergrond_kleur}}",
+        "bgcolor": "{{kleur}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1890,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "508ff50f2a470219",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 23,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Stop TX",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{mute_kleur}}",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 1320,
+        "y": 1340,
+        "wires": [
+            [
+                "4245872bb9518343",
+                "922871e293172bc4",
+                "55bca069bdb08ee7"
+            ]
+        ]
+    },
+    {
+        "id": "f0c209e940860820",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 20,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Start TX",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{mute_kleur}}",
+        "className": "",
+        "icon": "{{animo}}",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 1320,
+        "y": 1280,
+        "wires": [
+            [
+                "0ceccbf10dbcc8af",
+                "af45e1bfc3e75ecb"
+            ]
+        ]
+    },
+    {
+        "id": "0ceccbf10dbcc8af",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Tx button color changer: Green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mute_kleur",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "animo",
+                "pt": "msg",
+                "to": "fa-spinner fa-spin fa-2x",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 1280,
+        "wires": [
+            [
+                "f0c209e940860820"
+            ]
+        ]
+    },
+    {
+        "id": "4245872bb9518343",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Tx button color changer: Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mute_kleur",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "animo",
+                "pt": "msg",
+                "to": "fa-hand-paper-o fa-2x",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1680,
+        "y": 1380,
+        "wires": [
+            [
+                "f0c209e940860820"
+            ]
+        ]
+    },
+    {
+        "id": "922871e293172bc4",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Tx button color changer: Red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mute_kleur",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1380,
+        "y": 1420,
+        "wires": [
+            [
+                "508ff50f2a470219"
+            ]
+        ]
+    },
+    {
+        "id": "43c746e7299a60f3",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "group": "9ed1d9a126995072",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Pluto Connection",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1350,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b601d6596401a754",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1400,
+        "wires": [
+            [
+                "b6d03834b636d44d",
+                "aeded232cbae2ef0",
+                "2acfb18cb9db9a02"
+            ]
+        ]
+    },
+    {
+        "id": "b6d03834b636d44d",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 9,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "BBframebuffer  Queue",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "1",
+        "color": "#000000",
+        "x": 740,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "af45e1bfc3e75ecb",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Mute OFF",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/mute\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1840,
+        "y": 1240,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "55bca069bdb08ee7",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Mute ON",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/mute\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1840,
+        "y": 1300,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "644c4e9fd6d1aafc",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "label": "Call name",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "500",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 60,
+        "wires": [
+            [
+                "33b1db5a2a8af09d"
+            ]
+        ]
+    },
+    {
+        "id": "8a010d663bca0dd9",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "33b1db5a2a8af09d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "func": "let name = msg.payload\nlet call = global.set(\"call\", name)\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 60,
+        "wires": [
+            [
+                "8a010d663bca0dd9",
+                "d876bbde0d078d55"
+            ]
+        ]
+    },
+    {
+        "id": "d876bbde0d078d55",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "filename": "./mycall",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 760,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6a74f531b445a4c",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "filename": "./mycall",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "644c4e9fd6d1aafc"
+            ]
+        ]
+    },
+    {
+        "id": "3729f57de4a75fbf",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "f6a74f531b445a4c"
+            ]
+        ]
+    },
+    {
+        "id": "9cea687107707a6b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Mute",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/mute\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1280,
+        "wires": [
+            [
+                "36a9e71117a34327"
+            ]
+        ]
+    },
+    {
+        "id": "50bf46056b71ec3a",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 1160,
+        "wires": [
+            [
+                "9cea687107707a6b",
+                "5d39969ea562b92d",
+                "18b3a285bc3b304a",
+                "59e507f64ad42e32",
+                "4ddefda4dc462586",
+                "a3b043862df5d1c9",
+                "203d8eabee6242e7",
+                "33155f6018ceeffa",
+                "96d158d7fdc5ee78",
+                "9fb89f4342f8baf0",
+                "91114b46796f2205",
+                "8bcc3bb6537a078d",
+                "2e28b17c64c14184",
+                "04d27b36a3ee9934",
+                "0b6d33db8fc071c9",
+                "ac88fa94a49129ec",
+                "8e34088eda2b7263"
+            ]
+        ]
+    },
+    {
+        "id": "5d39969ea562b92d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Mode",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/stream/mode\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1200,
+        "wires": [
+            [
+                "306b57e47411d35c"
+            ]
+        ]
+    },
+    {
+        "id": "152082051caa1d1d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "FecMode",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/fecmode\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 880,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "18b3a285bc3b304a",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "FecMode",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/fecmode\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 880,
+        "wires": [
+            [
+                "d26972d34559fd63"
+            ]
+        ]
+    },
+    {
+        "id": "59e507f64ad42e32",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Gain",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/gain\"\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 960,
+        "wires": [
+            [
+                "d2b51c2f7d254def"
+            ]
+        ]
+    },
+    {
+        "id": "37b18a222ae30d52",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Gain",
+        "func": "let payloadToSend = msg.payload\nlet topicToSend = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/gain\"\nmsg.topic = topicToSend\nmsg.payload = payloadToSend\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1850,
+        "y": 960,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "cec2f56be1fccf51",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Fec",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/fec\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 780,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "89b95ad3b6453036",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "SampleRate",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/sr\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 1140,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "807128449158f2eb",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Frequency",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/frequency\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 1060,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "edf4a8f5daf0b0ab",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Stream Mode",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/stream/mode\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 1200,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "4ddefda4dc462586",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Fec",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/fec\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 800,
+        "wires": [
+            [
+                "9aa8ef50bbbe8e2d"
+            ]
+        ]
+    },
+    {
+        "id": "a3b043862df5d1c9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Frequency",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/frequency\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1040,
+        "wires": [
+            [
+                "45967ab8c3bd9a21"
+            ]
+        ]
+    },
+    {
+        "id": "203d8eabee6242e7",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Samplerate",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/sr\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1120,
+        "wires": [
+            [
+                "23773127332c2b1f"
+            ]
+        ]
+    },
+    {
+        "id": "33155f6018ceeffa",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Queu",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/queue\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1400,
+        "wires": [
+            [
+                "b601d6596401a754"
+            ]
+        ]
+    },
+    {
+        "id": "f38c438a231661c6",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Constallation",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 16,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "qpsk",
+                "value": "qpsk",
+                "type": "str"
+            },
+            {
+                "label": "8psk",
+                "value": "8psk",
+                "type": "str"
+            },
+            {
+                "label": "16apsk",
+                "value": "16apsk",
+                "type": "str"
+            },
+            {
+                "label": "32apsk",
+                "value": "32apsk",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1330,
+        "y": 1480,
+        "wires": [
+            [
+                "c5ceed661f8529ce"
+            ]
+        ]
+    },
+    {
+        "id": "c5ceed661f8529ce",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Constallation",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/constel\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 1480,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "7a4a8d639646cff4",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1480,
+        "wires": [
+            [
+                "acbc87cefb97b581",
+                "45ea934ddc9664a3"
+            ]
+        ]
+    },
+    {
+        "id": "acbc87cefb97b581",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 15,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Constellation",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 710,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "96d158d7fdc5ee78",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Constellation",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/constel\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1480,
+        "wires": [
+            [
+                "7a4a8d639646cff4"
+            ]
+        ]
+    },
+    {
+        "id": "746af9f95f7438cd",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1560,
+        "wires": [
+            [
+                "3151643ca739182e",
+                "12de00c45ec62557"
+            ]
+        ]
+    },
+    {
+        "id": "3151643ca739182e",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 27,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Frame",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "9fb89f4342f8baf0",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "frame",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/frame\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1560,
+        "wires": [
+            [
+                "746af9f95f7438cd"
+            ]
+        ]
+    },
+    {
+        "id": "e2ddf0eaa1468069",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1640,
+        "wires": [
+            [
+                "be979e81cb1cfd53",
+                "ae61c1e19f8634d0"
+            ]
+        ]
+    },
+    {
+        "id": "be979e81cb1cfd53",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 40,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Pilots",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "91114b46796f2205",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Pilots",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/pilots\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1640,
+        "wires": [
+            [
+                "e2ddf0eaa1468069"
+            ]
+        ]
+    },
+    {
+        "id": "ce96de0f7dba91c5",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Frame",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 28,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "short",
+                "value": "short",
+                "type": "str"
+            },
+            {
+                "label": "long",
+                "value": "long",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1310,
+        "y": 1560,
+        "wires": [
+            [
+                "0c74362e749bcdc4"
+            ]
+        ]
+    },
+    {
+        "id": "0c74362e749bcdc4",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Frame",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/frame\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 1560,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "16a3685e614e0995",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Pilots",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 41,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "off",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "on",
+                "value": "1",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1300,
+        "y": 1640,
+        "wires": [
+            [
+                "4a50af4869a33baa"
+            ]
+        ]
+    },
+    {
+        "id": "4a50af4869a33baa",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Pilots",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/pilots\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 1640,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "f2453c932edfdf06",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d6ea1c9ce542926",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 55,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Reset TX Settings",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "6707b23b38080a71",
+                "8305a6ab021ac648"
+            ]
+        ]
+    },
+    {
+        "id": "6707b23b38080a71",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d6ea1c9ce542926",
+        "name": "Set default TX gain",
+        "func": "msg.payload= \"-25\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "be4a04a5a054f988"
+            ]
+        ]
+    },
+    {
+        "id": "14e5a286770d3cd0",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Reboot",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/system/reboot\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 700,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "0d6f171d50f0a0c3",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 7,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Reboot Pluto",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 1330,
+        "y": 700,
+        "wires": [
+            [
+                "14e5a286770d3cd0"
+            ]
+        ]
+    },
+    {
+        "id": "aeded232cbae2ef0",
+        "type": "ui_chart",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 13,
+        "width": 11,
+        "height": 5,
+        "label": "Queue",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "monotone",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "120",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4dc0d6bc0972a150",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1720,
+        "wires": [
+            [
+                "5969ebe7bc4ebaf9",
+                "8a6e91746db5e484"
+            ]
+        ]
+    },
+    {
+        "id": "5969ebe7bc4ebaf9",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 50,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Gain Variable",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 720,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "8bcc3bb6537a078d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Gain Variable",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/gainvariable\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1720,
+        "wires": [
+            [
+                "4dc0d6bc0972a150"
+            ]
+        ]
+    },
+    {
+        "id": "70cb26f62de94a5d",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Variable gain",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 51,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "on",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "off",
+                "value": 0,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1330,
+        "y": 1720,
+        "wires": [
+            [
+                "b1b6fc76c723e0f1"
+            ]
+        ]
+    },
+    {
+        "id": "b1b6fc76c723e0f1",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Gain variable",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/gainvariable\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 1720,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "56ad120991eb3c83",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1800,
+        "wires": [
+            [
+                "97406770f0c5c44d",
+                "31eb287a0ca0a45c"
+            ]
+        ]
+    },
+    {
+        "id": "97406770f0c5c44d",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 65,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "TS Source mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 730,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "2e28b17c64c14184",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "TS Source Mode",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/tssourcemode\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1800,
+        "wires": [
+            [
+                "56ad120991eb3c83"
+            ]
+        ]
+    },
+    {
+        "id": "93d8b2c69bdc7792",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "TS Source mode",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 66,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "TS IP",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "Pattern",
+                "value": 2,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1330,
+        "y": 1800,
+        "wires": [
+            [
+                "7b06e3153449eb9a"
+            ]
+        ]
+    },
+    {
+        "id": "7b06e3153449eb9a",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "TsSourceMode",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/tssourcemode\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 1800,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "7c53b9187416bf54",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ZS1SCI",
+        "payloadType": "str",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "b56e0ed724bfefc0"
+            ]
+        ]
+    },
+    {
+        "id": "b56e0ed724bfefc0",
+        "type": "mqtt out",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "topic": "cmd/pluto/call",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16855981254e7e93",
+        "x": 340,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c6c7b77c513dc67d",
+        "type": "mqtt out",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "16855981254e7e93",
+        "x": 2610,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7f859a7a7ee27404",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "Pass to Pluto",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/tssourceaddress\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2410,
+        "y": 300,
+        "wires": [
+            [
+                "c6c7b77c513dc67d"
+            ]
+        ]
+    },
+    {
+        "id": "45b5b704879d30fe",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "",
+        "label": "TSInput",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 61,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "500",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2080,
+        "y": 160,
+        "wires": [
+            [
+                "9335bff762d93722",
+                "64b6e4713fac94bf",
+                "7f859a7a7ee27404",
+                "9010393e1556714f"
+            ]
+        ]
+    },
+    {
+        "id": "139c2af2cc88bd80",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "",
+        "filename": "./tssourceaddress",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2230,
+        "y": 80,
+        "wires": [
+            [
+                "45b5b704879d30fe"
+            ]
+        ]
+    },
+    {
+        "id": "9335bff762d93722",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "",
+        "filename": "./tssourceaddress",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 2630,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "680e1065a1131216",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 2050,
+        "y": 80,
+        "wires": [
+            [
+                "139c2af2cc88bd80"
+            ]
+        ]
+    },
+    {
+        "id": "64b6e4713fac94bf",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "global TSsourceaddress",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"tssourceaddress\")){\n    global.set(\"tssourceaddress\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2610,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9010393e1556714f",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 62,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Set",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{{msg.payload}}",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2070,
+        "y": 220,
+        "wires": [
+            [
+                "c8c1c80d91c7c4b9"
+            ]
+        ]
+    },
+    {
+        "id": "33a0bcca85522580",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set FEC Range",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9ed1d9a126995072",
+        "order": 47,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "2",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "3",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "4",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "5",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "6",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "8",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "9",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "11",
+                "value": 11,
+                "type": "num"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1320,
+        "y": 1880,
+        "wires": [
+            [
+                "d533bf0f097fedc4"
+            ]
+        ]
+    },
+    {
+        "id": "d533bf0f097fedc4",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "FEC Range variable",
+        "func": "run = msg.payload\ntopic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/fecrange\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 1880,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "04d27b36a3ee9934",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "FEC Range",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/fecrange\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1880,
+        "wires": [
+            [
+                "76bed5f0ebc81a4c"
+            ]
+        ]
+    },
+    {
+        "id": "76bed5f0ebc81a4c",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1880,
+        "wires": [
+            [
+                "ffdc2abacd936657",
+                "508bccc9de4506fc"
+            ]
+        ]
+    },
+    {
+        "id": "ffdc2abacd936657",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 46,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "FEC Range",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 710,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "44d0cb3657f978dd",
+        "type": "ui_slider",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "Set Frequency cont.",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 64,
+        "width": 12,
+        "height": 1,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "2403250000",
+        "max": "2409750000",
+        "step": "1000",
+        "className": "",
+        "x": 1360,
+        "y": 1060,
+        "wires": [
+            [
+                "807128449158f2eb"
+            ]
+        ]
+    },
+    {
+        "id": "bdfdc40f3409d5eb",
+        "type": "ui_slider",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "label": "Fine Tuning (NCO)",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 57,
+        "width": 10,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "str",
+        "min": "-50000",
+        "max": "50000",
+        "step": "250",
+        "className": "",
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "5af92414e3f29873"
+            ]
+        ]
+    },
+    {
+        "id": "526980609c934a59",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "e6138b2b0fe03b94"
+            ]
+        ]
+    },
+    {
+        "id": "b6f1e8e864f6acb1",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "filename": "./nco",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 750,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5af92414e3f29873",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "NCO",
+        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/nco\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 160,
+        "wires": [
+            [
+                "b6f1e8e864f6acb1",
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "e6138b2b0fe03b94",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "filename": "./nco",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "bdfdc40f3409d5eb"
+            ]
+        ]
+    },
+    {
+        "id": "25a924b7dc1d4576",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 720,
+        "wires": [
+            [
+                "c25d1cacc8057d1d",
+                "689b33376ddc8653"
+            ]
+        ]
+    },
+    {
+        "id": "c25d1cacc8057d1d",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 56,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "NCO (Hz)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 700,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "0b6d33db8fc071c9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "NCO",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/nco\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 720,
+        "wires": [
+            [
+                "25a924b7dc1d4576"
+            ]
+        ]
+    },
+    {
+        "id": "ba963a5480a22fc5",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 58,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Reset NCO",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "bdfdc40f3409d5eb"
+            ]
+        ]
+    },
+    {
+        "id": "462c1bee49073de7",
+        "type": "ui_slider",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "TX Digital Gain",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 52,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "payload",
+        "topicType": "msg",
+        "min": "-20",
+        "max": "3",
+        "step": "0.01",
+        "className": "",
+        "x": 1340,
+        "y": 640,
+        "wires": [
+            [
+                "e91e846502f35c90"
+            ]
+        ]
+    },
+    {
+        "id": "e91e846502f35c90",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Digital Gain",
+        "func": "let topic = \"cmd/pluto/\" + global.get(\"call\") + \"/tx/dvbs2/digitalgain\"\nmsg.topic = topic\nmsg.payload = parseFloat(msg.payload).toFixed(2);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 640,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "ac88fa94a49129ec",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Digital Gain",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/digitalgain\"\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 640,
+        "wires": [
+            [
+                "347c8041af1a52e0"
+            ]
+        ]
+    },
+    {
+        "id": "347c8041af1a52e0",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "mqtt dg",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 640,
+        "wires": [
+            [
+                "92bdb03cfb54e314",
+                "4b23c7a819f12eb7",
+                "4feed493dea078b7"
+            ]
+        ]
+    },
+    {
+        "id": "92bdb03cfb54e314",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 48,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Digital Gain",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 710,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5e7078c95b5c8824",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 54,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Reset Digital Gain",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1350,
+        "y": 580,
+        "wires": [
+            [
+                "462c1bee49073de7"
+            ]
+        ]
+    },
+    {
+        "id": "8305a6ab021ac648",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d6ea1c9ce542926",
+        "name": "Set default Digital TX gain",
+        "func": "msg.payload=\"0\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "462c1bee49073de7"
+            ]
+        ]
+    },
+    {
+        "id": "5f71534b6c02e324",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "+dBm",
+        "group": "9ed1d9a126995072",
+        "order": 44,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "+dBm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "gain",
+        "payloadType": "global",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1310,
+        "y": 940,
+        "wires": [
+            [
+                "88c17ad9f892b06d"
+            ]
+        ]
+    },
+    {
+        "id": "f29b8d8eb8441fde",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "-dBm",
+        "group": "9ed1d9a126995072",
+        "order": 45,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "-dBm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "gain",
+        "payloadType": "global",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1310,
+        "y": 1000,
+        "wires": [
+            [
+                "b6da9101dce07fd1"
+            ]
+        ]
+    },
+    {
+        "id": "88c17ad9f892b06d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Increase Gain",
+        "func": "let currentGain = msg.payload;\nlet uppedGain = parseFloat(currentGain) + 0.25;\nmsg.payload = uppedGain.toString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 980,
+        "wires": [
+            [
+                "be4a04a5a054f988"
+            ]
+        ]
+    },
+    {
+        "id": "b6da9101dce07fd1",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Decrease Gain",
+        "func": "let currentGain = msg.payload;\nlet downedGain = parseFloat(currentGain) - 0.25;\nmsg.payload = downedGain;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 1020,
+        "wires": [
+            [
+                "be4a04a5a054f988"
+            ]
+        ]
+    },
+    {
+        "id": "54cbda477035a37f",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: gain",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"gain\")){\n    global.set(\"gain\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 960,
+        "wires": [
+            [
+                "be4a04a5a054f988"
+            ]
+        ]
+    },
+    {
+        "id": "295347c7270ee5f9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: fecmode",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fecmode\")){\n    global.set(\"fecmode\", payload);\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 880,
+        "wires": [
+            [
+                "1969a0cddc042f2e"
+            ]
+        ]
+    },
+    {
+        "id": "689b33376ddc8653",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: nco",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"nco\")){\n    global.set(\"nco\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b23c7a819f12eb7",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: digitalgain",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"digitalgain\")){\n    global.set(\"digitalgain\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 640,
+        "wires": [
+            [
+                "462c1bee49073de7"
+            ]
+        ]
+    },
+    {
+        "id": "e0f5c4a53f48610b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: fec",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fec\")){\n    global.set(\"fec\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 800,
+        "wires": [
+            [
+                "ddf60892397fbc68"
+            ]
+        ]
+    },
+    {
+        "id": "8ec0b8acdb25a6b7",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: frequency",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"frequency\")) {\n    global.set(\"frequency\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1040,
+        "wires": [
+            [
+                "44d0cb3657f978dd"
+            ]
+        ]
+    },
+    {
+        "id": "1cc9bf09772f06d3",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: sr",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"sr\")){\n    global.set(\"sr\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1120,
+        "wires": [
+            [
+                "aa6d588a480f161c"
+            ]
+        ]
+    },
+    {
+        "id": "54e338fa6a48fd5b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: mode",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"mode\")){\n    global.set(\"mode\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1200,
+        "wires": [
+            [
+                "2e677684d13ac6e0"
+            ]
+        ]
+    },
+    {
+        "id": "45ea934ddc9664a3",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: constel",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"constel\")){\n    global.set(\"constel\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1480,
+        "wires": [
+            [
+                "f38c438a231661c6"
+            ]
+        ]
+    },
+    {
+        "id": "12de00c45ec62557",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: frame",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"frame\")){\n    global.set(\"frame\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1560,
+        "wires": [
+            [
+                "ce96de0f7dba91c5"
+            ]
+        ]
+    },
+    {
+        "id": "ae61c1e19f8634d0",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: pilots",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"pilots\")){\n    global.set(\"pilots\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1640,
+        "wires": [
+            [
+                "16a3685e614e0995"
+            ]
+        ]
+    },
+    {
+        "id": "8a6e91746db5e484",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: gainvariable",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"gainvariable\")){\n    global.set(\"gainvariable\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 1720,
+        "wires": [
+            [
+                "70cb26f62de94a5d"
+            ]
+        ]
+    },
+    {
+        "id": "31eb287a0ca0a45c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: tssourcemode",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"tssourcemode\")){\n    global.set(\"tssourcemode\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 1800,
+        "wires": [
+            [
+                "93d8b2c69bdc7792"
+            ]
+        ]
+    },
+    {
+        "id": "508bccc9de4506fc",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: fecrange",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fecrange\")){\n    global.set(\"fecrange\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1880,
+        "wires": [
+            [
+                "33a0bcca85522580"
+            ]
+        ]
+    },
+    {
+        "id": "c157ba62f082ca1f",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 1",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load Profile 1",
+        "x": 2620,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "264a75ae81fe9571",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 2",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load Profile 2",
+        "x": 2620,
+        "y": 480,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ecd6781e5be6e360",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 3",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load Profile 3",
+        "x": 2620,
+        "y": 540,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e41f78ecb41096ea",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "250KS",
+        "group": "9ed1d9a126995072",
+        "order": 31,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "250KS {{pid2}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p2_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2010,
+        "y": 480,
+        "wires": [
+            [
+                "a0b7e955594b3ab5"
+            ]
+        ]
+    },
+    {
+        "id": "26d4847d4e66ef33",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "333KS",
+        "group": "9ed1d9a126995072",
+        "order": 32,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "333KS {{pid3}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p3_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2010,
+        "y": 540,
+        "wires": [
+            [
+                "d8a30908a8d1d05a"
+            ]
+        ]
+    },
+    {
+        "id": "6bdd18a478266cdb",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "125KS",
+        "group": "9ed1d9a126995072",
+        "order": 30,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "125 KS {{pid1}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p1_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2010,
+        "y": 420,
+        "wires": [
+            [
+                "8f75f111bea67d19"
+            ]
+        ]
+    },
+    {
+        "id": "873a04942564e509",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "taskkill /T /F /IM MQTT-Explorer-0.4.0-beta1.exe",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "kill MQTT Explorer",
+        "x": 2650,
+        "y": 920,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c4c1592e68a08ac2",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Terminal Profile",
+        "group": "9ed1d9a126995072",
+        "order": 33,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Stop Profile",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{backgroundcolor}}",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2080,
+        "y": 840,
+        "wires": [
+            [
+                "0c94d661261c1f6e",
+                "55bca069bdb08ee7",
+                "4245872bb9518343"
+            ]
+        ]
+    },
+    {
+        "id": "be766117a7d2334f",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "taskkill /F /FI \"WINDOWTITLE eq CONTROL*\"",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "kill CONTROL",
+        "x": 2640,
+        "y": 860,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5c8e87753e4ad083",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "taskkill /T /F /IM ffmpeg.exe",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "kill ffmpeg",
+        "x": 2620,
+        "y": 800,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "923832cf30d7070e",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "taskkill /F /PID ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Kill NodeRed PID",
+        "x": 2650,
+        "y": 980,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0024149327ace021",
+        "type": "status",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "scope": [
+            "c157ba62f082ca1f",
+            "264a75ae81fe9571",
+            "ecd6781e5be6e360",
+            "be04ba7a44aed070",
+            "12df56e883c6693d",
+            "f79f4059793d2fec"
+        ],
+        "x": 1540,
+        "y": 380,
+        "wires": [
+            [
+                "f4a493f6020481a0",
+                "a6736166225853ff"
+            ]
+        ]
+    },
+    {
+        "id": "f4a493f6020481a0",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set active ffmpeg process id",
+        "func": "let pid;\nif(msg.status.text){\n    pid = msg.status.text.split(':');\n    flow.set(\"pid\", pid[1])\n}\n\nif (msg.status.text === \"error:1\"){\n    msg.backgroundcolor = \"\";\n    return msg;\n}\n\nmsg.backgroundcolor = \"orange\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1760,
+        "y": 380,
+        "wires": [
+            [
+                "c4c1592e68a08ac2"
+            ]
+        ]
+    },
+    {
+        "id": "b733d75a1c79f1a2",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 550,
+        "y": 1980,
+        "wires": [
+            [
+                "c8042db5402565df",
+                "e1cd38d2156ae7ba"
+            ]
+        ]
+    },
+    {
+        "id": "c8042db5402565df",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 60,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "TS Addr",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "8e34088eda2b7263",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "TS Address",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/tssourceaddress\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1980,
+        "wires": [
+            [
+                "b733d75a1c79f1a2"
+            ]
+        ]
+    },
+    {
+        "id": "e1cd38d2156ae7ba",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: tssourceaddress",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"tssourceaddress\")){\n    global.set(\"tssourceaddress\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8b84ed866d8e064",
+        "type": "comment",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Instructions for using flow",
+        "info": "## Pluto beta mqtt firmware TX dash\n\n### Thanks to DL5OCD_Michael for sending these flows\n\n## DATV-TX.bat has been modified for this to work please find the latest version here\n - Please update DATV-TX.BAT to use the profiles\n   - They are the profiles that are setup in DATVNotSoEasy, set them up according to your needs **and** update the profile button names accordingly\n - Run node-red from DATVNotSoEasy directory\n",
+        "x": 430,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a6736166225853ff",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Update Active Profile Button",
+        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet source = msg.status.source.name;\nif (msg.status.text === \"error:1\") {\n    msg.p1_color = \"\";\n    msg.pid1 = \"\";\n    msg.p2_color = \"\";\n    msg.pid2 = \"\";\n    msg.p3_color = \"\";\n    msg.pid3 = \"\";\n    msg.p4_color = \"\";\n    msg.pid4 = \"\";\n    msg.p5_color = \"\";\n    msg.pid5 = \"\";\n    msg.p6_color = \"\";\n    msg.pid6 = \"\";\n    return msg;\n}\nif (msg.status.text) {\n    switch (source) {\n        case \"Load Profile 1\":\n            let pid1 = msg.status.text.split(':');\n            msg.pid1 = `PID: ${pid1[1]}`;\n            msg.p1_color = \"green\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 2\":\n            let pid2 = msg.status.text.split(':');\n            msg.pid2 = `PID: ${pid2[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"green\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 3\":\n            let pid3 = msg.status.text.split(':');\n            msg.pid3 = `PID: ${pid3[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"green\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 4\":\n            let pid4 = msg.status.text.split(':');\n            msg.pid4 = `PID: ${pid4[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"green\"\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 5\":\n            let pid5 = msg.status.text.split(':');\n            msg.pid5 = `PID: ${pid5[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"green\";\n            msg.p6_color = \"gray\"\n            return msg;\n        case \"Load Profile 6\":\n            let pid6 = msg.status.text.split(':');\n            msg.pid6 = `PID: ${pid6[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"green\";\n            return msg;\n    }\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 460,
+        "wires": [
+            [
+                "6bdd18a478266cdb",
+                "e41f78ecb41096ea",
+                "26d4847d4e66ef33",
+                "4f5692cf8cb6b8dd",
+                "b12e26636bc4a755",
+                "4ecaf72037fc5448"
+            ]
+        ]
+    },
+    {
+        "id": "4d9019e6505648e5",
+        "type": "comment",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Process kill commands would differ on Linux",
+        "info": "",
+        "x": 2330,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "e6b4e62947ea3671",
+        "type": "ui_switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "low latency",
+        "label": "Low Latency",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 14,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1490,
+        "y": 140,
+        "wires": [
+            [
+                "9e5aaf4953afd279"
+            ]
+        ]
+    },
+    {
+        "id": "9e5aaf4953afd279",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Set low latency mode",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"lowLatency\")){\n    global.set(\"lowLatency\", payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be04ba7a44aed070",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 4",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load Profile 4",
+        "x": 2620,
+        "y": 600,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4f5692cf8cb6b8dd",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Last Run",
+        "group": "9ed1d9a126995072",
+        "order": 17,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Last Run {{pid4}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p4_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2020,
+        "y": 600,
+        "wires": [
+            [
+                "1fcb391face6d380"
+            ]
+        ]
+    },
+    {
+        "id": "2acfb18cb9db9a02",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: queue",
+        "func": "var payload = parseInt(msg.payload);\nif (payload !== global.get(\"queue\")){\n    global.set(\"queue\", payload);\n}\nif (payload > 10) {\n    msg.payload = \"overflow\";\n    return msg;\n}\nif (payload > 0) {\n    msg.payload = \"nominal\";\n    return msg;\n}\n\nmsg.payload = \"underflow\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1360,
+        "wires": [
+            [
+                "0813517cbc9b99f3"
+            ]
+        ]
+    },
+    {
+        "id": "0813517cbc9b99f3",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "9ed1d9a126995072",
+        "order": 10,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Buffer Health",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "0c94d661261c1f6e",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "get active ffmpeg process id",
+        "func": "let pid = flow.get(\"pid\");\nif(pid === undefined || pid === \"1\"){\n    msg.backgroundcolor = \"\";\n    return;\n}\nmsg.payload = pid;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2360,
+        "y": 840,
+        "wires": [
+            [
+                "923832cf30d7070e",
+                "c4c1592e68a08ac2",
+                "5c8e87753e4ad083",
+                "be766117a7d2334f",
+                "873a04942564e509"
+            ]
+        ]
+    },
+    {
+        "id": "8f75f111bea67d19",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2330,
+        "y": 420,
+        "wires": [
+            [
+                "c157ba62f082ca1f"
+            ]
+        ]
+    },
+    {
+        "id": "a0b7e955594b3ab5",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2330,
+        "y": 480,
+        "wires": [
+            [
+                "264a75ae81fe9571"
+            ]
+        ]
+    },
+    {
+        "id": "d8a30908a8d1d05a",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2310,
+        "y": 540,
+        "wires": [
+            [
+                "ecd6781e5be6e360"
+            ]
+        ]
+    },
+    {
+        "id": "1fcb391face6d380",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2310,
+        "y": 600,
+        "wires": [
+            [
+                "be04ba7a44aed070"
+            ]
+        ]
+    },
+    {
+        "id": "5f921d1388ef4777",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "group": "9ed1d9a126995072",
+        "order": 29,
+        "width": 2,
+        "height": 1,
+        "name": "Profiles",
+        "label": "Profiles",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1800,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b2256810aa9b7db3",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 1310,
+        "y": 300,
+        "wires": [
+            [
+                "5dd2297e2ab93299"
+            ]
+        ]
+    },
+    {
+        "id": "5dd2297e2ab93299",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set flow pid",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pid",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8c1c80d91c7c4b9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "162c77371bb6c962",
+        "name": "Get TSsourceaddress",
+        "func": "let newAddress = msg.payload;\nmsg.payload = newAddress;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9ad9994f8c5db3b",
+        "type": "comment",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Set custom ffpmeg flags for libx265",
+        "info": " - **-x265-params b-adapt=1**\n - **-tune zerolatency**\n",
+        "x": 1380,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "cea8ea667bfe40bc",
+        "type": "comment",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Ensures only one ffmepg process",
+        "info": "",
+        "x": 2210,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ec7f7985e8da8ed2",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1310,
+        "y": 140,
+        "wires": [
+            [
+                "e6b4e62947ea3671"
+            ]
+        ]
+    },
+    {
+        "id": "8fc50c918238bbb1",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "animo",
+                "v": "fa-hand-paper-o fa-2x",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1150,
+        "y": 1340,
+        "wires": [
+            [
+                "f0c209e940860820"
+            ]
+        ]
+    },
+    {
+        "id": "d86aa53e52641124",
+        "type": "http in",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Spectrum",
+        "url": "https://eshail.batc.org.uk/a.gif",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 520,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4feed493dea078b7",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b12e26636bc4a755",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "500KS",
+        "group": "9ed1d9a126995072",
+        "order": 37,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "500KS {{pid5}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p5_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2010,
+        "y": 660,
+        "wires": [
+            [
+                "6629d1fde454917d"
+            ]
+        ]
+    },
+    {
+        "id": "6629d1fde454917d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2330,
+        "y": 660,
+        "wires": [
+            [
+                "12df56e883c6693d"
+            ]
+        ]
+    },
+    {
+        "id": "12df56e883c6693d",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 7",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load Profile 5",
+        "x": 2620,
+        "y": 660,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4ecaf72037fc5448",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "1MS",
+        "group": "9ed1d9a126995072",
+        "order": 38,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "1MS {{pid6}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p6_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2010,
+        "y": 720,
+        "wires": [
+            [
+                "3a96d30a3b796a9c"
+            ]
+        ]
+    },
+    {
+        "id": "3a96d30a3b796a9c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2330,
+        "y": 720,
+        "wires": [
+            [
+                "f79f4059793d2fec"
+            ]
+        ]
+    },
+    {
+        "id": "f79f4059793d2fec",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 8",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load Profile 6",
+        "x": 2620,
+        "y": 720,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "49029862d41fc89c",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "98eac4b19e0d7f3b",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2f06b618b4496ce3",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 6,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "d1a8f6bd8c28666d",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 8,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "3c0a69402795a17d",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 39,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "9c1161fec5a7d4d3",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 43,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9422c4df24d36308",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 49,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "c50f7bd51c52dee9",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 53,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "88e8d7cee7c03e54",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 59,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "54e4a8fde2b4c425",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 63,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "86e8bc4c49154d89",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 67,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "16855981254e7e93",
+        "type": "mqtt-broker",
+        "name": "Pluto_tuin",
+        "broker": "192.168.2.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9ed1d9a126995072",
+        "type": "ui_group",
+        "name": "TX",
+        "tab": "9b3296db2e0c849f",
+        "order": 1,
+        "disp": true,
+        "width": "25",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "9b3296db2e0c849f",
+        "type": "ui_tab",
+        "name": "Pluto",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
