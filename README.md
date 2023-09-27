@@ -17,7 +17,7 @@ From here I will commit my changes so they can be tracked
 ## ffmpeg, Linux-version, Mosquitto and MPV directories ignored
 
 
-### Please use **SET-FAVORITE.bat** to setup profiles and 1-5 and rename buttons accrodingly
+Please use **SET-FAVORITE.bat** to setup profiles and 1-5 and rename Node-RED buttons accrodingly
 
 Mine is setup as 125, 250, 333, 500 and 1000KS
 
