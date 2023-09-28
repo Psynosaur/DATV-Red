@@ -9,7 +9,7 @@ This repository focuses on **TX flows**
 ## Motivation
 Opening and closing batch scripts can be very time consuming.
 
-![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/9226b0f1-dce5-45b5-ba4f-9a10dec32201)
+![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/12454b10-7330-41b8-89af-1b067e5b5f5a)
 
 This repository is my amalgamation of these two things with the focus on the TX front-end
 
