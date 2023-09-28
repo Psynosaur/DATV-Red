@@ -12,7 +12,7 @@ set %%i
 mode con lines=64
 CLS
 
-echo Script for setting favorite parameters by DL5OCD
+echo Script for setting favorite parameters by DL5OCD, ZS1SCI
 echo ------------------------------------------------
 echo -
 echo ----------------------------
@@ -27,26 +27,20 @@ echo ----------------------------
 echo Profile 3 parameters:
 more .\ini\favorite-3.ini
 echo ----------------------------
-echo ----------------------------
-echo Profile 4 parameters:
-more .\ini\favorite-4.ini
-echo ----------------------------
-echo ----------------------------
-echo Profile 5 parameters:
-more .\ini\favorite-5.ini
-echo ----------------------------
 
 :START
 set /p CHANGE=Do you want to edit a normal or GSE profile? Normal (1), GSE (2) :
 REM Set Change
 
 :PROFILE
-set /p PROFILECHOICE=Which profile do you want to change: Profile 1 (1), profile 2 (2), profile 3 (3), profile 4 (4) or profile 5 (5) :
+set /p PROFILECHOICE=Which profile do you want to change: Profile 1-7 (1-7):
 if /I "%PROFILECHOICE%"=="1" (SET PROFILECOUNT=1)
 if /I "%PROFILECHOICE%"=="2" (SET PROFILECOUNT=2)
 if /I "%PROFILECHOICE%"=="3" (SET PROFILECOUNT=3)
 if /I "%PROFILECHOICE%"=="4" (SET PROFILECOUNT=4)
 if /I "%PROFILECHOICE%"=="5" (SET PROFILECOUNT=5)
+if /I "%PROFILECHOICE%"=="6" (SET PROFILECOUNT=6)
+if /I "%PROFILECHOICE%"=="7" (SET PROFILECOUNT=7)
 
 if "%CHANGE%"=="2" GoTo MODE
 

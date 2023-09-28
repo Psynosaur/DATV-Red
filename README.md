@@ -22,3 +22,13 @@ From here I will commit my changes so they can be tracked
 Please use **SET-FAVORITE.bat** to setup profiles 1-7.
 
 ![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/cabc0f57-f57d-401f-8034-fab025e571d1)
+
+TODO:
+ - Add spectrum html
+ - Codec selection
+ - Identify all variables
+ - Get Video and Audio bitrate calculations
+ - Store last used frequency as file
+   - Stored more things that make sense
+   - We'd like to pick up where we left of
+ - Call ffmpeg directly...

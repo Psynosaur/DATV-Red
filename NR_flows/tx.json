@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV TX Pluto (v5)",
+        "label": "PlutoDVB TX V1",
         "disabled": false,
-        "info": " - Low latency only for libx265/264, will break ffmpeg otherwise\r\n - Round trip latency fiddles 4s => 2s\r\n   - Yes I do mind that the round trip is 4s...\r\n - Update DATV-TX.bat!!! VERY IMPORTANT\r\n - Other profiles grey when one active\r\n - Stopping profile also stops transmission\r\n - perhaps we could call ffmpeg directly...",
+        "info": "Layout changes, more symbol rates...",
         "env": []
     },
     {
@@ -110,12 +110,17 @@
             "b733d75a1c79f1a2",
             "c8042db5402565df",
             "e1cd38d2156ae7ba",
-            "0813517cbc9b99f3"
+            "0813517cbc9b99f3",
+            "c4f36ff7105c2dd1",
+            "de949c9780005117",
+            "c44d0cb54ec5e706",
+            "4fd321bd9fa719f3",
+            "4feed493dea078b7"
         ],
         "x": 14,
-        "y": 599,
+        "y": 559,
         "w": 1012,
-        "h": 1462
+        "h": 1502
     },
     {
         "id": "e6bb4e6e08658367",
@@ -138,7 +143,6 @@
             "f0c209e940860820",
             "0ceccbf10dbcc8af",
             "4245872bb9518343",
-            "922871e293172bc4",
             "af45e1bfc3e75ecb",
             "55bca069bdb08ee7",
             "dffe1e50bcaeb0a5",
@@ -213,11 +217,23 @@
             "12df56e883c6693d",
             "4ecaf72037fc5448",
             "3a96d30a3b796a9c",
-            "f79f4059793d2fec"
+            "f79f4059793d2fec",
+            "7e39412a746f70d4",
+            "aa4a256618f7c4a6",
+            "0d83df21a3badfd8",
+            "ba28f83345465e97",
+            "321917da5c241be6",
+            "37c0f70c56da77c5",
+            "21a3b184d3613c7e",
+            "863b303484773cde",
+            "8090b79c8e35900b",
+            "b5ed5a8ccff72343",
+            "13470e8cc4c1ccc1",
+            "cea22274822556fb"
         ],
-        "x": 1054,
+        "x": 1034,
         "y": 13,
-        "w": 1718,
+        "w": 1832,
         "h": 1908
     },
     {
@@ -236,7 +252,6 @@
         "nodes": [
             "c6c7b77c513dc67d",
             "7f859a7a7ee27404",
-            "9010393e1556714f",
             "680e1065a1131216",
             "139c2af2cc88bd80",
             "64b6e4713fac94bf",
@@ -278,7 +293,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 18,
+        "order": 21,
         "width": 5,
         "height": 1,
         "name": "",
@@ -304,8 +319,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 19,
-        "width": 6,
+        "order": 30,
+        "width": 9,
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -497,14 +512,14 @@
         "label": "TX Gain",
         "tooltip": "",
         "group": "9ed1d9a126995072",
-        "order": 42,
-        "width": 7,
+        "order": 38,
+        "width": 8,
         "height": 1,
         "passthru": true,
         "outs": "end",
         "topic": "topic",
         "topicType": "msg",
-        "min": "-30",
+        "min": "-89",
         "max": "0",
         "step": "-0.25",
         "className": "",
@@ -526,7 +541,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 12,
+        "order": 50,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -585,8 +600,8 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 2670,
-        "y": 1200,
+        "x": 2210,
+        "y": 1220,
         "wires": []
     },
     {
@@ -599,7 +614,7 @@
         "tooltip": "",
         "place": "Samplerate",
         "group": "9ed1d9a126995072",
-        "order": 22,
+        "order": 57,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -702,7 +717,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 26,
+        "order": 29,
         "width": 3,
         "height": 1,
         "name": "",
@@ -747,8 +762,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 36,
-        "width": 5,
+        "order": 37,
+        "width": 4,
         "height": 1,
         "name": "",
         "label": "TX Gain",
@@ -773,7 +788,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 25,
+        "order": 51,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -891,7 +906,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 11,
+        "order": 14,
         "width": 5,
         "height": 1,
         "name": "",
@@ -936,7 +951,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 21,
+        "order": 24,
         "width": 5,
         "height": 1,
         "name": "",
@@ -981,7 +996,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 24,
+        "order": 27,
         "width": 5,
         "height": 1,
         "name": "",
@@ -1026,8 +1041,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 34,
-        "width": 5,
+        "order": 28,
+        "width": 3,
         "height": 1,
         "name": "",
         "label": "FECMode",
@@ -1052,7 +1067,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 35,
+        "order": 58,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -1171,7 +1186,7 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 5,
+        "order": 2,
         "width": 5,
         "height": 1,
         "passthru": false,
@@ -1205,20 +1220,18 @@
         "label": "Stop TX",
         "tooltip": "",
         "color": "",
-        "bgcolor": "{{mute_kleur}}",
+        "bgcolor": "{{stop_button_color}}",
         "className": "",
-        "icon": "",
+        "icon": "{{animo}}",
         "payload": "1",
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
         "x": 1320,
-        "y": 1340,
+        "y": 1360,
         "wires": [
             [
-                "4245872bb9518343",
-                "922871e293172bc4",
-                "55bca069bdb08ee7"
+                "aa4a256618f7c4a6"
             ]
         ]
     },
@@ -1236,9 +1249,9 @@
         "label": "Start TX",
         "tooltip": "",
         "color": "",
-        "bgcolor": "{{mute_kleur}}",
+        "bgcolor": "{{start_button_color}}",
         "className": "",
-        "icon": "{{animo}}",
+        "icon": "{{start_animation}}",
         "payload": "0",
         "payloadType": "num",
         "topic": "payload",
@@ -1261,16 +1274,23 @@
         "rules": [
             {
                 "t": "set",
-                "p": "mute_kleur",
+                "p": "start_button_color",
                 "pt": "msg",
                 "to": "green",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "animo",
+                "p": "start_animation",
                 "pt": "msg",
                 "to": "fa-spinner fa-spin fa-2x",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "stop_button_color",
+                "pt": "msg",
+                "to": "red",
                 "tot": "str"
             }
         ],
@@ -1279,11 +1299,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1530,
+        "x": 1570,
         "y": 1280,
         "wires": [
             [
-                "f0c209e940860820"
+                "f0c209e940860820",
+                "508ff50f2a470219"
             ]
         ]
     },
@@ -1296,44 +1317,23 @@
         "rules": [
             {
                 "t": "set",
-                "p": "mute_kleur",
+                "p": "start_animation",
                 "pt": "msg",
-                "to": "red",
+                "to": "fa-hand-paper-o fa-2x",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "animo",
+                "p": "start_button_color",
                 "pt": "msg",
-                "to": "fa-hand-paper-o fa-2x",
+                "to": "",
                 "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1680,
-        "y": 1380,
-        "wires": [
-            [
-                "f0c209e940860820"
-            ]
-        ]
-    },
-    {
-        "id": "922871e293172bc4",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Tx button color changer: Red",
-        "rules": [
+            },
             {
                 "t": "set",
-                "p": "mute_kleur",
+                "p": "stop_button_color",
                 "pt": "msg",
-                "to": "red",
+                "to": "",
                 "tot": "str"
             }
         ],
@@ -1342,10 +1342,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1380,
+        "x": 1620,
         "y": 1420,
         "wires": [
             [
+                "f0c209e940860820",
+                "55bca069bdb08ee7",
                 "508ff50f2a470219"
             ]
         ]
@@ -1356,7 +1358,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "group": "9ed1d9a126995072",
-        "order": 3,
+        "order": 1,
         "width": 5,
         "height": 1,
         "name": "",
@@ -1402,7 +1404,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 9,
+        "order": 12,
         "width": 5,
         "height": 1,
         "name": "",
@@ -1435,7 +1437,8 @@
         "y": 1240,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "13470e8cc4c1ccc1"
             ]
         ]
     },
@@ -1456,7 +1459,8 @@
         "y": 1300,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "cea22274822556fb"
             ]
         ]
     },
@@ -1468,8 +1472,8 @@
         "label": "Call name",
         "tooltip": "",
         "group": "9ed1d9a126995072",
-        "order": 1,
-        "width": 4,
+        "order": 10,
+        "width": 5,
         "height": 1,
         "passthru": true,
         "mode": "text",
@@ -1648,7 +1652,8 @@
                 "04d27b36a3ee9934",
                 "0b6d33db8fc071c9",
                 "ac88fa94a49129ec",
-                "8e34088eda2b7263"
+                "8e34088eda2b7263",
+                "c44d0cb54ec5e706"
             ]
         ]
     },
@@ -1932,7 +1937,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 16,
+        "order": 54,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -2021,7 +2026,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 15,
+        "order": 18,
         "width": 5,
         "height": 1,
         "name": "",
@@ -2087,8 +2092,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 27,
-        "width": 5,
+        "order": 25,
+        "width": 3,
         "height": 1,
         "name": "",
         "label": "Frame",
@@ -2153,8 +2158,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 40,
-        "width": 5,
+        "order": 15,
+        "width": 3,
         "height": 1,
         "name": "",
         "label": "Pilots",
@@ -2200,7 +2205,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 28,
+        "order": 55,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -2260,8 +2265,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 41,
-        "width": 6,
+        "order": 56,
+        "width": 8,
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -2317,8 +2322,8 @@
         "g": "1d6ea1c9ce542926",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 55,
-        "width": 3,
+        "order": 52,
+        "width": 4,
         "height": 1,
         "passthru": false,
         "label": "Reset TX Settings",
@@ -2389,8 +2394,8 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 7,
-        "width": 4,
+        "order": 5,
+        "width": 3,
         "height": 1,
         "passthru": false,
         "label": "Reboot Pluto",
@@ -2418,9 +2423,9 @@
         "g": "9c3a6dbecd18c092",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 13,
-        "width": 11,
-        "height": 5,
+        "order": 16,
+        "width": 9,
+        "height": 4,
         "label": "Queue",
         "chartType": "line",
         "legend": "false",
@@ -2428,9 +2433,9 @@
         "interpolate": "monotone",
         "nodata": "",
         "dot": true,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "120",
+        "ymin": "0",
+        "ymax": "24",
+        "removeOlder": "60",
         "removeOlderPoints": "",
         "removeOlderUnit": "1",
         "cutout": 0,
@@ -2485,8 +2490,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 50,
-        "width": 5,
+        "order": 19,
+        "width": 3,
         "height": 1,
         "name": "",
         "label": "Gain Variable",
@@ -2528,12 +2533,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "",
-        "label": "Set Variable gain",
+        "label": "Set Variable_gain",
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 51,
-        "width": 6,
+        "order": 62,
+        "width": 8,
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -2611,8 +2616,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 65,
-        "width": 5,
+        "order": 60,
+        "width": 6,
         "height": 1,
         "name": "",
         "label": "TS Source mode",
@@ -2658,7 +2663,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 66,
+        "order": 61,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -2804,7 +2809,7 @@
         "label": "TSInput",
         "tooltip": "",
         "group": "9ed1d9a126995072",
-        "order": 61,
+        "order": 8,
         "width": 5,
         "height": 1,
         "passthru": true,
@@ -2820,8 +2825,7 @@
             [
                 "9335bff762d93722",
                 "64b6e4713fac94bf",
-                "7f859a7a7ee27404",
-                "9010393e1556714f"
+                "7f859a7a7ee27404"
             ]
         ]
     },
@@ -2914,35 +2918,6 @@
         ]
     },
     {
-        "id": "9010393e1556714f",
-        "type": "ui_button",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
-        "name": "",
-        "group": "9ed1d9a126995072",
-        "order": 62,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Set",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "{{msg.payload}}",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 2070,
-        "y": 220,
-        "wires": [
-            [
-                "c8c1c80d91c7c4b9"
-            ]
-        ]
-    },
-    {
         "id": "33a0bcca85522580",
         "type": "ui_dropdown",
         "z": "2ec6a7ddfe0cd173",
@@ -2952,8 +2927,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 47,
-        "width": 6,
+        "order": 59,
+        "width": 8,
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3096,8 +3071,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 46,
-        "width": 5,
+        "order": 22,
+        "width": 3,
         "height": 1,
         "name": "",
         "label": "FEC Range",
@@ -3121,8 +3096,8 @@
         "label": "Set Frequency cont.",
         "tooltip": "",
         "group": "9ed1d9a126995072",
-        "order": 64,
-        "width": 12,
+        "order": 49,
+        "width": 20,
         "height": 1,
         "passthru": false,
         "outs": "all",
@@ -3148,8 +3123,8 @@
         "label": "Fine Tuning (NCO)",
         "tooltip": "",
         "group": "9ed1d9a126995072",
-        "order": 57,
-        "width": 10,
+        "order": 47,
+        "width": 9,
         "height": 1,
         "passthru": true,
         "outs": "all",
@@ -3283,8 +3258,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 56,
-        "width": 5,
+        "order": 41,
+        "width": 4,
         "height": 1,
         "name": "",
         "label": "NCO (Hz)",
@@ -3325,8 +3300,8 @@
         "z": "2ec6a7ddfe0cd173",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 58,
-        "width": 2,
+        "order": 48,
+        "width": 3,
         "height": 1,
         "passthru": false,
         "label": "Reset NCO",
@@ -3356,8 +3331,8 @@
         "label": "TX Digital Gain",
         "tooltip": "",
         "group": "9ed1d9a126995072",
-        "order": 52,
-        "width": 7,
+        "order": 34,
+        "width": 9,
         "height": 1,
         "passthru": true,
         "outs": "end",
@@ -3408,7 +3383,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
+        "x": 130,
         "y": 640,
         "wires": [
             [
@@ -3430,7 +3405,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 550,
+        "x": 270,
         "y": 640,
         "wires": [
             [
@@ -3446,8 +3421,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 48,
-        "width": 5,
+        "order": 33,
+        "width": 3,
         "height": 1,
         "name": "",
         "label": "Digital Gain",
@@ -3469,8 +3444,8 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 54,
-        "width": 3,
+        "order": 53,
+        "width": 4,
         "height": 1,
         "passthru": false,
         "label": "Reset Digital Gain",
@@ -3547,7 +3522,7 @@
         "g": "e6bb4e6e08658367",
         "name": "-dBm",
         "group": "9ed1d9a126995072",
-        "order": 45,
+        "order": 43,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -3685,7 +3660,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
+        "x": 450,
         "y": 640,
         "wires": [
             [
@@ -3908,16 +3883,16 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "command": "DATV-TX.bat 1",
+        "command": "DATV-TX.bat 125KS",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Load Profile 1",
-        "x": 2620,
-        "y": 420,
+        "name": "Load 125KS",
+        "x": 2650,
+        "y": 540,
         "wires": [
             [],
             [],
@@ -3929,16 +3904,16 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "command": "DATV-TX.bat 2",
+        "command": "DATV-TX.bat 250KS",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Load Profile 2",
-        "x": 2620,
-        "y": 480,
+        "name": "Load 250KS",
+        "x": 2650,
+        "y": 660,
         "wires": [
             [],
             [],
@@ -3950,16 +3925,16 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "command": "DATV-TX.bat 3",
+        "command": "DATV-TX.bat 333KS",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Load Profile 3",
-        "x": 2620,
-        "y": 540,
+        "name": "Load 333KS",
+        "x": 2650,
+        "y": 720,
         "wires": [
             [],
             [],
@@ -3973,22 +3948,22 @@
         "g": "e6bb4e6e08658367",
         "name": "250KS",
         "group": "9ed1d9a126995072",
-        "order": 31,
-        "width": 3,
+        "order": 39,
+        "width": 4,
         "height": 1,
         "passthru": false,
-        "label": "250KS {{pid2}}",
+        "label": "250KS {{pid5}}",
         "tooltip": "",
         "color": "",
-        "bgcolor": "{{p2_color}}",
+        "bgcolor": "{{p5_color}}",
         "className": "",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2010,
-        "y": 480,
+        "x": 2050,
+        "y": 660,
         "wires": [
             [
                 "a0b7e955594b3ab5"
@@ -4002,22 +3977,22 @@
         "g": "e6bb4e6e08658367",
         "name": "333KS",
         "group": "9ed1d9a126995072",
-        "order": 32,
-        "width": 3,
+        "order": 40,
+        "width": 4,
         "height": 1,
         "passthru": false,
-        "label": "333KS {{pid3}}",
+        "label": "333KS {{pid6}}",
         "tooltip": "",
         "color": "",
-        "bgcolor": "{{p3_color}}",
+        "bgcolor": "{{p6_color}}",
         "className": "",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2010,
-        "y": 540,
+        "x": 2050,
+        "y": 720,
         "wires": [
             [
                 "d8a30908a8d1d05a"
@@ -4031,22 +4006,22 @@
         "g": "e6bb4e6e08658367",
         "name": "125KS",
         "group": "9ed1d9a126995072",
-        "order": 30,
-        "width": 3,
+        "order": 36,
+        "width": 4,
         "height": 1,
         "passthru": false,
-        "label": "125 KS {{pid1}}",
+        "label": "125 KS {{pid3}}",
         "tooltip": "",
         "color": "",
-        "bgcolor": "{{p1_color}}",
+        "bgcolor": "{{p3_color}}",
         "className": "",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2010,
-        "y": 420,
+        "x": 2050,
+        "y": 540,
         "wires": [
             [
                 "8f75f111bea67d19"
@@ -4066,8 +4041,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill MQTT Explorer",
-        "x": 2650,
-        "y": 920,
+        "x": 2670,
+        "y": 1060,
         "wires": [
             [],
             [],
@@ -4081,7 +4056,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Terminal Profile",
         "group": "9ed1d9a126995072",
-        "order": 33,
+        "order": 26,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -4095,8 +4070,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2080,
-        "y": 840,
+        "x": 2100,
+        "y": 980,
         "wires": [
             [
                 "0c94d661261c1f6e",
@@ -4118,8 +4093,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill CONTROL",
-        "x": 2640,
-        "y": 860,
+        "x": 2660,
+        "y": 1000,
         "wires": [
             [],
             [],
@@ -4139,8 +4114,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill ffmpeg",
-        "x": 2620,
-        "y": 800,
+        "x": 2640,
+        "y": 940,
         "wires": [
             [],
             [],
@@ -4160,8 +4135,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Kill NodeRed PID",
-        "x": 2650,
-        "y": 980,
+        "x": 2670,
+        "y": 1120,
         "wires": [
             [],
             [],
@@ -4180,7 +4155,9 @@
             "ecd6781e5be6e360",
             "be04ba7a44aed070",
             "12df56e883c6693d",
-            "f79f4059793d2fec"
+            "f79f4059793d2fec",
+            "8090b79c8e35900b",
+            "b5ed5a8ccff72343"
         ],
         "x": 1540,
         "y": 380,
@@ -4241,7 +4218,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 60,
+        "order": 4,
         "width": 5,
         "height": 1,
         "name": "",
@@ -4313,7 +4290,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Update Active Profile Button",
-        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet source = msg.status.source.name;\nif (msg.status.text === \"error:1\") {\n    msg.p1_color = \"\";\n    msg.pid1 = \"\";\n    msg.p2_color = \"\";\n    msg.pid2 = \"\";\n    msg.p3_color = \"\";\n    msg.pid3 = \"\";\n    msg.p4_color = \"\";\n    msg.pid4 = \"\";\n    msg.p5_color = \"\";\n    msg.pid5 = \"\";\n    msg.p6_color = \"\";\n    msg.pid6 = \"\";\n    return msg;\n}\nif (msg.status.text) {\n    switch (source) {\n        case \"Load Profile 1\":\n            let pid1 = msg.status.text.split(':');\n            msg.pid1 = `PID: ${pid1[1]}`;\n            msg.p1_color = \"green\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 2\":\n            let pid2 = msg.status.text.split(':');\n            msg.pid2 = `PID: ${pid2[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"green\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 3\":\n            let pid3 = msg.status.text.split(':');\n            msg.pid3 = `PID: ${pid3[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"green\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 4\":\n            let pid4 = msg.status.text.split(':');\n            msg.pid4 = `PID: ${pid4[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"green\"\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"gray\";\n            return msg;\n        case \"Load Profile 5\":\n            let pid5 = msg.status.text.split(':');\n            msg.pid5 = `PID: ${pid5[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"green\";\n            msg.p6_color = \"gray\"\n            return msg;\n        case \"Load Profile 6\":\n            let pid6 = msg.status.text.split(':');\n            msg.pid6 = `PID: ${pid6[1]}`;\n            msg.p1_color = \"gray\";\n            msg.p2_color = \"gray\";\n            msg.p3_color = \"gray\";\n            msg.p4_color = \"gray\";\n            msg.p5_color = \"gray\";\n            msg.p6_color = \"green\";\n            return msg;\n    }\n}",
+        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet source = msg.status.source.name;\nmsg.p1_color = \"\";\nmsg.pid1 = \"\";\nmsg.p2_color = \"\";\nmsg.pid2 = \"\";\nmsg.p3_color = \"\";\nmsg.pid3 = \"\";\nmsg.p4_color = \"\";\nmsg.pid4 = \"\";\nmsg.p5_color = \"\";\nmsg.pid5 = \"\";\nmsg.p6_color = \"\";\nmsg.pid6 = \"\";\nmsg.p7_color = \"\";\nmsg.pid7 = \"\";\nmsg.p8_color = \"\";\nmsg.pid8 = \"\";\nif (msg.status.text === \"error:1\") {\n    return msg;\n}\nmsg.p1_color = \"gray\";\nmsg.p2_color = \"gray\";\nmsg.p3_color = \"gray\";\nmsg.p4_color = \"gray\";\nmsg.p5_color = \"gray\";\nmsg.p6_color = \"gray\";\nmsg.p7_color = \"gray\";\nmsg.p8_color = \"gray\";\nif (msg.status.text) {\n    switch (source) {\n        case \"Load 33KS\":\n            let pid1 = msg.status.text.split(':');\n            msg.pid1 = `PID: ${pid1[1]}`;\n            msg.p1_color = \"orange\";\n            return msg;\n        case \"Load 66KS\":\n            let pid2 = msg.status.text.split(':');\n            msg.pid2 = `PID: ${pid2[1]}`;\n            msg.p2_color = \"orange\";\n            return msg;\n        case \"Load 125KS\":\n            let pid3 = msg.status.text.split(':');\n            msg.pid3 = `PID: ${pid3[1]}`;\n            msg.p3_color = \"orange\";\n            return msg;\n        case \"Load last run\":\n            let pid4 = msg.status.text.split(':');\n            msg.pid4 = `PID: ${pid4[1]}`;\n            msg.p4_color = \"orange\"\n            return msg;\n        case \"Load 250KS\":\n            let pid5 = msg.status.text.split(':');\n            msg.pid5 = `PID: ${pid5[1]}`;\n            msg.p5_color = \"orange\";\n            return msg;\n        case \"Load 333KS\":\n            let pid6 = msg.status.text.split(':');\n            msg.pid6 = `PID: ${pid6[1]}`;\n            msg.p6_color = \"orange\";\n            return msg;\n        case \"Load 500KS\":\n            let pid7 = msg.status.text.split(':');\n            msg.pid7 = `PID: ${pid7[1]}`;\n            msg.p7_color = \"orange\";\n            return msg;\n        case \"Load 1000KS\":\n            let pid8 = msg.status.text.split(':');\n            msg.pid8 = `PID: ${pid8[1]}`;\n            msg.p8_color = \"orange\";\n            return msg;\n    }\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4329,7 +4306,9 @@
                 "26d4847d4e66ef33",
                 "4f5692cf8cb6b8dd",
                 "b12e26636bc4a755",
-                "4ecaf72037fc5448"
+                "4ecaf72037fc5448",
+                "37c0f70c56da77c5",
+                "321917da5c241be6"
             ]
         ]
     },
@@ -4340,8 +4319,8 @@
         "g": "e6bb4e6e08658367",
         "name": "Process kill commands would differ on Linux",
         "info": "",
-        "x": 2330,
-        "y": 800,
+        "x": 2350,
+        "y": 940,
         "wires": []
     },
     {
@@ -4353,7 +4332,7 @@
         "label": "Low Latency",
         "tooltip": "",
         "group": "9ed1d9a126995072",
-        "order": 14,
+        "order": 13,
         "width": 3,
         "height": 1,
         "passthru": true,
@@ -4403,15 +4382,15 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "command": "DATV-TX.bat 4",
+        "command": "DATV-TX.bat LastRun",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Load Profile 4",
-        "x": 2620,
+        "name": "Load last run",
+        "x": 2650,
         "y": 600,
         "wires": [
             [],
@@ -4440,7 +4419,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2020,
+        "x": 2060,
         "y": 600,
         "wires": [
             [
@@ -4454,7 +4433,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: queue",
-        "func": "var payload = parseInt(msg.payload);\nif (payload !== global.get(\"queue\")){\n    global.set(\"queue\", payload);\n}\nif (payload > 10) {\n    msg.payload = \"overflow\";\n    return msg;\n}\nif (payload > 0) {\n    msg.payload = \"nominal\";\n    return msg;\n}\n\nmsg.payload = \"underflow\";\nreturn msg;",
+        "func": "var payload = parseInt(msg.payload);\nif (payload !== global.get(\"queue\")){\n    global.set(\"queue\", payload);\n}\nif (payload > 15) {\n    msg.payload = \"overflow\";\n    return msg;\n}\nif (payload > 0) {\n    msg.payload = \"nominal\";\n    return msg;\n}\n\nmsg.payload = \"underflow\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4475,8 +4454,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
-        "order": 10,
-        "width": 6,
+        "order": 11,
+        "width": 7,
         "height": 1,
         "name": "",
         "label": "Buffer Health",
@@ -4504,8 +4483,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2360,
-        "y": 840,
+        "x": 2380,
+        "y": 980,
         "wires": [
             [
                 "923832cf30d7070e",
@@ -4529,8 +4508,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2330,
-        "y": 420,
+        "x": 2370,
+        "y": 540,
         "wires": [
             [
                 "c157ba62f082ca1f"
@@ -4550,8 +4529,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2330,
-        "y": 480,
+        "x": 2370,
+        "y": 660,
         "wires": [
             [
                 "264a75ae81fe9571"
@@ -4571,8 +4550,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2310,
-        "y": 540,
+        "x": 2370,
+        "y": 720,
         "wires": [
             [
                 "ecd6781e5be6e360"
@@ -4592,7 +4571,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2310,
+        "x": 2370,
         "y": 600,
         "wires": [
             [
@@ -4606,8 +4585,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "group": "9ed1d9a126995072",
-        "order": 29,
-        "width": 2,
+        "order": 31,
+        "width": 4,
         "height": 1,
         "name": "Profiles",
         "label": "Profiles",
@@ -4618,8 +4597,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1800,
-        "y": 520,
+        "x": 1980,
+        "y": 380,
         "wires": []
     },
     {
@@ -4687,8 +4666,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 280,
+        "x": 2140,
+        "y": 300,
         "wires": [
             []
         ]
@@ -4753,8 +4732,13 @@
         "name": "",
         "props": [
             {
-                "p": "animo",
+                "p": "start_animation",
                 "v": "fa-hand-paper-o fa-2x",
+                "vt": "str"
+            },
+            {
+                "p": "button_color",
+                "v": "",
                 "vt": "str"
             }
         ],
@@ -4763,8 +4747,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1150,
-        "y": 1340,
+        "x": 1130,
+        "y": 1240,
         "wires": [
             [
                 "f0c209e940860820"
@@ -4772,24 +4756,10 @@
         ]
     },
     {
-        "id": "d86aa53e52641124",
-        "type": "http in",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Spectrum",
-        "url": "https://eshail.batc.org.uk/a.gif",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 520,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "4feed493dea078b7",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -4799,8 +4769,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
-        "y": 540,
+        "x": 880,
+        "y": 700,
         "wires": []
     },
     {
@@ -4810,22 +4780,22 @@
         "g": "e6bb4e6e08658367",
         "name": "500KS",
         "group": "9ed1d9a126995072",
-        "order": 37,
-        "width": 3,
+        "order": 45,
+        "width": 4,
         "height": 1,
         "passthru": false,
-        "label": "500KS {{pid5}}",
+        "label": "500KS {{pid7}}",
         "tooltip": "",
         "color": "",
-        "bgcolor": "{{p5_color}}",
+        "bgcolor": "{{p7_color}}",
         "className": "",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2010,
-        "y": 660,
+        "x": 2050,
+        "y": 780,
         "wires": [
             [
                 "6629d1fde454917d"
@@ -4845,8 +4815,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2330,
-        "y": 660,
+        "x": 2370,
+        "y": 780,
         "wires": [
             [
                 "12df56e883c6693d"
@@ -4858,16 +4828,16 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "command": "DATV-TX.bat 7",
+        "command": "DATV-TX.bat 500KS",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Load Profile 5",
-        "x": 2620,
-        "y": 660,
+        "name": "Load 500KS",
+        "x": 2650,
+        "y": 780,
         "wires": [
             [],
             [],
@@ -4879,24 +4849,24 @@
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "1MS",
+        "name": "1000KS",
         "group": "9ed1d9a126995072",
-        "order": 38,
-        "width": 3,
+        "order": 46,
+        "width": 4,
         "height": 1,
         "passthru": false,
-        "label": "1MS {{pid6}}",
+        "label": "1000KS {{pid8}}",
         "tooltip": "",
         "color": "",
-        "bgcolor": "{{p6_color}}",
+        "bgcolor": "{{p8_color}}",
         "className": "",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2010,
-        "y": 720,
+        "x": 2060,
+        "y": 840,
         "wires": [
             [
                 "3a96d30a3b796a9c"
@@ -4916,8 +4886,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2330,
-        "y": 720,
+        "x": 2370,
+        "y": 840,
         "wires": [
             [
                 "f79f4059793d2fec"
@@ -4929,16 +4899,16 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "command": "DATV-TX.bat 8",
+        "command": "DATV-TX.bat 1000KS",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "Load Profile 6",
-        "x": 2620,
-        "y": 720,
+        "name": "Load 1000KS",
+        "x": 2660,
+        "y": 840,
         "wires": [
             [],
             [],
@@ -4946,113 +4916,410 @@
         ]
     },
     {
-        "id": "49029862d41fc89c",
-        "type": "ui_spacer",
+        "id": "7e39412a746f70d4",
+        "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 2,
-        "width": 1,
-        "height": 1
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "animo",
+                "v": "fa-stop-circle fa-2x",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1130,
+        "y": 1360,
+        "wires": [
+            [
+                "508ff50f2a470219"
+            ]
+        ]
     },
     {
-        "id": "98eac4b19e0d7f3b",
-        "type": "ui_spacer",
+        "id": "aa4a256618f7c4a6",
+        "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 4,
-        "width": 1,
-        "height": 1
+        "g": "e6bb4e6e08658367",
+        "name": "Only send if we are unmuted",
+        "func": "if(msg.payload !== parseInt(global.get(\"mute\"))) {\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 1420,
+        "wires": [
+            [
+                "4245872bb9518343"
+            ]
+        ]
     },
     {
-        "id": "2f06b618b4496ce3",
-        "type": "ui_spacer",
+        "id": "0d83df21a3badfd8",
+        "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Open VLC 8888",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2080,
+        "y": 900,
+        "wires": [
+            [
+                "ba28f83345465e97"
+            ]
+        ]
+    },
+    {
+        "id": "ba28f83345465e97",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "vlc_udp.xspf",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "VLC",
+        "x": 2790,
+        "y": 900,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "321917da5c241be6",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "66KS",
+        "group": "9ed1d9a126995072",
+        "order": 35,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "66KS {{pid2}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p2_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2050,
+        "y": 480,
+        "wires": [
+            [
+                "21a3b184d3613c7e"
+            ]
+        ]
+    },
+    {
+        "id": "37c0f70c56da77c5",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "33KS",
+        "group": "9ed1d9a126995072",
+        "order": 32,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "33KS {{pid1}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{p1_color}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2050,
+        "y": 420,
+        "wires": [
+            [
+                "863b303484773cde"
+            ]
+        ]
+    },
+    {
+        "id": "21a3b184d3613c7e",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2370,
+        "y": 480,
+        "wires": [
+            [
+                "b5ed5a8ccff72343"
+            ]
+        ]
+    },
+    {
+        "id": "863b303484773cde",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "ffmpeg process safegaurd",
+        "func": "let ffmpegPID = flow.get(\"pid\");\nif (ffmpegPID === \"1\" || ffmpegPID === undefined) {\n    msg.payload = global.get(\"lowLatency\");\n    return msg;;\n}\nreturn;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2370,
+        "y": 420,
+        "wires": [
+            [
+                "8090b79c8e35900b"
+            ]
+        ]
+    },
+    {
+        "id": "8090b79c8e35900b",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 33KS",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load 33KS",
+        "x": 2650,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b5ed5a8ccff72343",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "DATV-TX.bat 66KS",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Load 66KS",
+        "x": 2650,
+        "y": 480,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c4f36ff7105c2dd1",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Global: digitalgain",
+        "func": "var payload = parseFloat(msg.payload)/1000;\nif (payload !== global.get(\"temp\")){\n    global.set(\"temp\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 600,
+        "wires": [
+            [
+                "4fd321bd9fa719f3"
+            ]
+        ]
+    },
+    {
+        "id": "de949c9780005117",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "mqtt temp",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "16855981254e7e93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 280,
+        "y": 600,
+        "wires": [
+            [
+                "c4f36ff7105c2dd1"
+            ]
+        ]
+    },
+    {
+        "id": "c44d0cb54ec5e706",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "name": "Temperature",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"call\") + \"/temperature_ad\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 130,
+        "y": 600,
+        "wires": [
+            [
+                "de949c9780005117"
+            ]
+        ]
+    },
+    {
+        "id": "4fd321bd9fa719f3",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
         "group": "9ed1d9a126995072",
         "order": 6,
         "width": 5,
-        "height": 1
+        "height": 1,
+        "name": "Pluto Temp",
+        "label": "Pluto Temp",
+        "format": "{{msg.payload}}°C",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#d2a80f",
+        "x": 630,
+        "y": 600,
+        "wires": []
     },
     {
-        "id": "d1a8f6bd8c28666d",
+        "id": "13470e8cc4c1ccc1",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set flow mute off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "mute",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2140,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cea22274822556fb",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set flow mute on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "mute",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2140,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20d4fb4ff4ff3717",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "9ed1d9a126995072",
-        "order": 8,
-        "width": 14,
+        "order": 3,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "3c0a69402795a17d",
+        "id": "1d11a4d0733617fe",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "9ed1d9a126995072",
-        "order": 39,
-        "width": 3,
+        "order": 7,
+        "width": 7,
         "height": 1
     },
     {
-        "id": "9c1161fec5a7d4d3",
+        "id": "eb277acd696ab348",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "9ed1d9a126995072",
-        "order": 43,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9422c4df24d36308",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 49,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "c50f7bd51c52dee9",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 53,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "88e8d7cee7c03e54",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 59,
-        "width": 8,
-        "height": 1
-    },
-    {
-        "id": "54e4a8fde2b4c425",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 63,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "86e8bc4c49154d89",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 67,
-        "width": 14,
+        "order": 42,
+        "width": 2,
         "height": 1
     },
     {
@@ -5090,7 +5357,7 @@
         "tab": "9b3296db2e0c849f",
         "order": 1,
         "disp": true,
-        "width": "25",
+        "width": "20",
         "collapse": true,
         "className": ""
     },

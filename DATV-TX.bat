@@ -54,7 +54,7 @@ echo -------------------------
 if "%lowlatency%" == "true" (
 	set lowlatency1=-tune zerolatency
 	set libx265params=-x265-params b-adapt=1
-	set libx265preset=	
+	set libx265preset=
 	)
 if "%lowlatency%" == "false" (
 	set lowlatency1=
@@ -63,45 +63,50 @@ if "%lowlatency%" == "false" (
 	)
 
 if "%profile%"=="" goto INPUT
-if "%profile%"=="1" goto ONE
-if "%profile%"=="2" goto TWO
-if "%profile%"=="3" goto THREE
-if "%profile%"=="4" goto FOUR
-if "%profile%"=="7" goto SEVEN
-if "%profile%"=="8" goto EIGHT
+if "%profile%"=="33KS" goto 33KS
+if "%profile%"=="66KS" goto 66KS
+if "%profile%"=="125KS" goto 125KS
+if "%profile%"=="250KS" goto 250KS
+if "%profile%"=="333KS" goto 333KS
+if "%profile%"=="500KS" goto 500KS
+if "%profile%"=="1000KS" goto 1000KS
+if "%profile%"=="LastRun" goto LastRun
 
 @REM Maintain original functionality :)
 :INPUT
 set /p AUTO=Use profile 1 (1), profile 2 (2), profile 3 (3), use previous parameters (4), start new parameters (5), GSE-Mode (6) :
 goto LOADSETTINGS
 
-:ONE
-echo ---- One
+:33KS
 set AUTO=1
 goto LOADSETTINGS
 
-:TWO
-echo ---- Two
+:66KS
 set AUTO=2
 goto LOADSETTINGS
 
-:THREE
-echo ---- Three
+:125KS
 set AUTO=3
 goto LOADSETTINGS
 
-:FOUR
-echo ---- Four
+:LastRun
 set AUTO=4
 goto LOADSETTINGS
 
-@REM This is not original functionality XD
-:SEVEN
+:250KS
+set AUTO=250KS
+goto LOADSETTINGS
+
+:333KS
+set AUTO=333KS
+goto LOADSETTINGS
+
+:500KS
 set AUTO=500KS
 goto LOADSETTINGS
 
-:EIGHT
-set AUTO=1MS
+:1000KS
+set AUTO=1000KS
 goto LOADSETTINGS
 
 :LOADSETTINGS
@@ -125,12 +130,23 @@ set %%i
  )
 	)
 @REM This is not original functionality XD
-if /I "%AUTO%"=="500KS" (for /f %%i in (.\ini\favorite-4.ini) do (
+
+if /I "%AUTO%"=="250KS" (for /f %%i in (.\ini\favorite-4.ini) do (
 set %%i
  )
 	)	
 
-if /I "%AUTO%"=="1MS" (for /f %%i in (.\ini\favorite-5.ini) do (
+if /I "%AUTO%"=="333KS" (for /f %%i in (.\ini\favorite-5.ini) do (
+set %%i
+ )
+	)
+
+if /I "%AUTO%"=="500KS" (for /f %%i in (.\ini\favorite-6.ini) do (
+set %%i
+ )
+	)	
+
+if /I "%AUTO%"=="1000KS" (for /f %%i in (.\ini\favorite-7.ini) do (
 set %%i
  )
 	)
@@ -150,8 +166,10 @@ if "%AUTO%"=="1" GoTo DECISIONFW
 if "%AUTO%"=="2" GoTo DECISIONFW
 if "%AUTO%"=="3" GoTo DECISIONFW
 @REM This is not original functionality XD
+if "%AUTO%"=="250KS" GoTo DECISIONFW
+if "%AUTO%"=="333KS" GoTo DECISIONFW
 if "%AUTO%"=="500KS" GoTo DECISIONFW
-if "%AUTO%"=="1MS" GoTo DECISIONFW
+if "%AUTO%"=="1000KS" GoTo DECISIONFW
 
 if "%AUTO%"=="4" if "%GSE%"=="1" (SET AUTO=6)&(GoTo GSE)
 if "%AUTO%"=="4" if "%RELAY%"=="on" (GoTo DATVRX)
@@ -792,9 +810,11 @@ if "%FW%"=="yes" if "%MODE%"=="8psk" if "%FECMODE%"=="variable" (set FECVARIABLE
 if "%FW%"=="yes" if "%MODE%"=="16apsk" if "%FECMODE%"=="variable" (set FECVARIABLE=2/3)
 
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/tssourceaddress -m %PLUTOIP%:%PLUTOPORT% -h %PLUTOIP%
-if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/gain -m %GAIN% -h %PLUTOIP%
+@REM This is not original functionality XD
+@REM if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/gain -m %GAIN% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/mute -m %MUTE% -h %PLUTOIP%
-if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/frequency -m %TXFREQUENCY% -h %PLUTOIP%
+@REM This is not original functionality XD
+@REM if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/frequency -m %TXFREQUENCY% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/sr -m %SRM% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/nco -m %NCO% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/stream/mode -m %TXMODE% -h %PLUTOIP%
