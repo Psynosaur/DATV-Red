@@ -9,7 +9,7 @@ This repository focuses on **TX flows**
 ## Motivation
 Opening and closing batch scripts can be very time consuming.
 
-![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/12454b10-7330-41b8-89af-1b067e5b5f5a)
+![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/a5facd09-ae2b-47af-96a9-f00afbb4c700)
 
 This repository is my amalgamation of these two things with the focus on the TX front-end
 
@@ -19,9 +19,6 @@ From here I will commit my changes so they can be tracked
 
 ## ffmpeg, Linux-version, Mosquitto and MPV directories ignored
 
-
-Please use **SET-FAVORITE.bat** to setup profiles 1-5 and rename Node-RED buttons accrodingly
-
-Mine is setup as 125, 250, 333, 500 and 1000KS
+Please use **SET-FAVORITE.bat** to setup profiles 1-7.
 
 ![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/cabc0f57-f57d-401f-8034-fab025e571d1)
