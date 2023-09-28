@@ -24,3 +24,4 @@ Please use **SET-FAVORITE.bat** to setup profiles 1-5 and rename Node-RED button
 
 Mine is setup as 125, 250, 333, 500 and 1000KS
 
+![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/cabc0f57-f57d-401f-8034-fab025e571d1)
