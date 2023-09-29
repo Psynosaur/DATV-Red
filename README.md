@@ -1,6 +1,8 @@
 # DATV-Simple
 
 ## Prerequisite 
+- **VERY IMPORTANT** atleast passive cooling on the PlutoSDR in the form of heatsinks
+- Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 - DATV-NotSoEasy setup and working...
 
 Original author is DL5OCD Michael and his post about it can be found [here](https://groups.io/g/plutodvb/message/257)
