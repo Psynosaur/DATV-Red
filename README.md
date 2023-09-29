@@ -1,27 +1,29 @@
-# DATV-NotSoEasy
+# DATV-Simple
+
+## Prerequisite 
+- DATV-NotSoEasy setup and working...
 Original author is DL5OCD Michael and his post about it can be found [here](https://groups.io/g/plutodvb/message/257)
 
-# Node Red flows
+# Node Red flows shamelessly used from here...
 From this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-This repository focuses on **TX flows**
-
 ## Motivation
-Opening and closing batch scripts can be very time consuming.
+Accomodate the need to **manage encoding profiles and tx settings in one place**.
 
 ![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/a5facd09-ae2b-47af-96a9-f00afbb4c700)
 
-This repository is my amalgamation of these two things with the focus on the TX front-end
+## Setup and use
+1. Clone this repository
 
-The first commit of this post is ​DATV-NotSoEasy V1.0 as provided from Michael's post
+    git clone https://github.com/Psynosaur/DATV-Simple
 
-From here I will commit my changes so they can be tracked
+or download the zip from github by clicking on the blue code button...
 
-## ffmpeg, Linux-version, Mosquitto and MPV directories ignored
+2. Then **replace the files in Michaels DATV-NotSoEasy folder**, with the contents of this project.
 
-Please use **SET-FAVORITE.bat** to setup profiles 1-7.
+3. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
 
-![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/cabc0f57-f57d-401f-8034-fab025e571d1)
+4. Run node red from the modifed **DATV-NotSoEasy** folder from step 2
 
 TODO:
  - Add spectrum html
