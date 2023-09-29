@@ -811,7 +811,7 @@ if "%FW%"=="yes" if "%MODE%"=="16apsk" if "%FECMODE%"=="variable" (set FECVARIAB
 
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/tssourceaddress -m %PLUTOIP%:%PLUTOPORT% -h %PLUTOIP%
 @REM This is not original functionality XD
-@REM if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/gain -m %GAIN% -h %PLUTOIP%
+if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/gain -m %GAIN% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/mute -m %MUTE% -h %PLUTOIP%
 @REM This is not original functionality XD
 @REM if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/frequency -m %TXFREQUENCY% -h %PLUTOIP%
