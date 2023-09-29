@@ -1,7 +1,7 @@
 # DATV-Simple
 
 ## Prerequisite 
-- **VERY IMPORTANT** atleast passive cooling on the PlutoSDR in the form of heatsinks
+- **VERY IMPORTANT** at least passive cooling on the PlutoSDR in the form of heatsinks, or it might explode ¯\_(ツ)_/¯
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 - DATV-NotSoEasy setup and working...
 
