@@ -21,18 +21,13 @@ Accomodate the need to **manage encoding profiles and tx settings in one place**
 
 or download the zip from github by clicking on the blue code button...
 
-2. Then **replace the files in Michaels DATV-NotSoEasy folder**, with the contents of this project.
+2. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
 
-3. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
-
-4. Run node red from the modifed **DATV-NotSoEasy** folder from step 2
+3. Run node red from the DATV-Simple directory
 
 TODO:
  - Add spectrum html
  - Codec selection
  - Identify all variables
  - Get Video and Audio bitrate calculations
- - Store last used frequency as file
-   - Stored more things that make sense
-   - We'd like to pick up where we left of
  - Call ffmpeg directly...
