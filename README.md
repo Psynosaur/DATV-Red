@@ -8,11 +8,6 @@ Script in this project is from DL5OCD Michael and his post about it can be found
 
 Node Red flows shamelessly used from this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-## Motivation
-Accomodate the need to **manage encoding profiles and tx settings in one place**.
-
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/2afba98e-6894-422f-951f-c2a4c1c3e7a9)
-
 ## Setup and use
 1. Clone this repository
 
@@ -20,13 +15,32 @@ Accomodate the need to **manage encoding profiles and tx settings in one place**
 
 or download the zip from github by clicking on the blue code button...
 
-2. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
+2. Setup **config-tx.ini**
 
-3. Run node red from the DATV-Simple directory
+3. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
 
-TODO:
- - Add spectrum html
- - Codec selection
+4. Run node red from the DATV-Simple directory
+
+## Motivation
+DATV transmissions normally have the following programs open:
+ 1. OBS
+ 2. DATV-Easy/FreeStreamCoder (ffmpeg maker...) < - - - **DATV-Simple**
+ 3. Panel for operating PlutoSDR  < - - - - - - - - - - - - - - **DATV-Simple**                
+ 4. OpenTuner / Minitioune < - - - - - We could use opentuner / quicktune spectrum as means to drive tx settings?
+ 5. QuickTune / Chat
+
+So that is five programs and their child windows we need open just to have TX and RX.
+
+I'd like to make that 3 or perhaps even less, it would be nice to run this on any operating system
+
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/268159b6-da39-46ed-ab47-04d74b4f4192)
+
+TODOs:
+ - Add spectrum from BATC as step one
+   - Add custom fft sources 
+ - Codec selections
  - Identify all variables
- - Get Video and Audio bitrate calculations
- - Call ffmpeg directly...
+ - Set video and audio bitrate calculations from selections
+   - Give calculated bitrates on GUI 
+ - Store state as JSON and not strings in files
+ - Call ffmpeg directly...(take out last of DATV-NotSoEasy bat files)
