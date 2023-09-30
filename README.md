@@ -12,7 +12,7 @@ Node Red flows shamelessly used from this [post](https://www.pg540.org/wiki/inde
 ## Motivation
 Accomodate the need to **manage encoding profiles and tx settings in one place**.
 
-![image](https://github.com/Psynosaur/DATV-NotSoEasy/assets/26934113/a5facd09-ae2b-47af-96a9-f00afbb4c700)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/2afba98e-6894-422f-951f-c2a4c1c3e7a9)
 
 ## Setup and use
 1. Clone this repository
