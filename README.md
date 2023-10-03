@@ -3,13 +3,13 @@
 ## Prerequisite 
 - **VERY IMPORTANT** at least passive cooling on the PlutoSDR in the form of heatsinks, or it might explode ¯\_(ツ)_/¯
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
-- **Node-Red** running on windows(temporary)
+- **Node-Red** running on windows(temporary)   
   
 Script in this project is from DL5OCD Michael and his post about it can be found [here](https://groups.io/g/plutodvb/message/257)
 
 Node Red flows shamelessly used from this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-## Setup and use
+## Setup and use( I will try automate these steps )
 1. Clone this repository
 
     git clone https://github.com/Psynosaur/DATV-Simple
@@ -19,8 +19,28 @@ or download the zip from github by clicking on the blue code button...
 2. Setup **config-tx.ini**
 
 3. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
+   
+4. Run node red from the DATV-Simple directory or use shortcut
 
-4. Run node red from the DATV-Simple directory
+5. Double click cmd/pluto/call node
+   
+  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/c32933b6-1838-48d5-8182-bd6832556803)
+
+  5.1 Then edit icon
+  
+  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/cd31b629-09ff-4953-bc29-701b3e03edca)
+
+  5.2 Edit Pluto IP and add security credentials for pluto
+  
+  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7963e16d-c3f1-4a77-b6c8-0c38bd4179fd)
+
+5. Click Update and then Done
+
+6. Then deploy your flow in the top right
+
+   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7cbd2d17-d3d2-45e6-a55d-3872cbf019d9)
+
+7. Then go to http://127.0.0.1:1880/ui/
 
 ## Motivation
 DATV transmissions normally have the following programs open:
