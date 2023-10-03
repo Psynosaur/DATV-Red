@@ -22,25 +22,27 @@ or download the zip from github by clicking on the blue code button...
    
 4. Run node red from the DATV-Simple directory or use shortcut
 
-5. Double click cmd/pluto/call node
+5. Import the tx.json flow
+
+6. Double click cmd/pluto/call node
    
   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/c32933b6-1838-48d5-8182-bd6832556803)
 
-  5.1 Then edit icon
-  
+7. Then edit icon
+
   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/cd31b629-09ff-4953-bc29-701b3e03edca)
 
-  5.2 Edit Pluto IP and add security credentials for pluto
+8. Edit Pluto IP and add security credentials for pluto
   
   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7963e16d-c3f1-4a77-b6c8-0c38bd4179fd)
 
-5. Click Update and then Done
+9. Click Update and then Done
 
-6. Then deploy your flow in the top right
+10. Then deploy your flow in the top right
 
-   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7cbd2d17-d3d2-45e6-a55d-3872cbf019d9)
+  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7cbd2d17-d3d2-45e6-a55d-3872cbf019d9)
 
-7. Then go to http://127.0.0.1:1880/ui/
+11. Then go to http://127.0.0.1:1880/ui/
 
 ## Motivation
 DATV transmissions normally have the following programs open:
