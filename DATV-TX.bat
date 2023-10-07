@@ -14,6 +14,8 @@ SET CODEC=%8
 SET TSBITRATE=%9
 shift
 shift
+shift
+SET TXFREQUENCY=%7
 SET VBITRATE=%8
 SET ABITRATE=%9
 SET BASEDIR=%~dp0
@@ -831,7 +833,7 @@ if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/tssourceaddress -m %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/gain -m %GAIN% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/mute -m %MUTE% -h %PLUTOIP%
 @REM This is not original functionality XD
-@REM if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/frequency -m %TXFREQUENCY% -h %PLUTOIP%
+if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/frequency -m %TXFREQUENCY% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/sr -m %SRM% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/nco -m %NCO% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/stream/mode -m %TXMODE% -h %PLUTOIP%
@@ -849,9 +851,9 @@ if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/digitalgain -m %DIGITALGAIN%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/fecrange -m %FECRANGE% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/tssourcemode -m %TSSOURCEMODE% -h %PLUTOIP%
 if "%FW%"=="yes" %mosquitto% -t %CMD_ROOT%/tx/dvbs2/tssourcefile -m %TSSOURCEFILE% -h %PLUTOIP%
-if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/lnb_supply -m %LNBSUPPLY% -h %PLUTOIP%
-if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/polarisation -m %LNBPOL% -h %PLUTOIP%
-if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/swport -m %TUNERPORT% -h %PLUTOIP%
+@REM if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/lnb_supply -m %LNBSUPPLY% -h %PLUTOIP%
+@REM if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/polarisation -m %LNBPOL% -h %PLUTOIP%
+@REM if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/swport -m %TUNERPORT% -h %PLUTOIP%
 
 REM Start Control and MQTT Browser
 @REM if "%FW%"=="yes" start "CONTROL" .\scripts\CONTROL.bat
@@ -889,6 +891,7 @@ echo SR=%SR% > .\ini\params.ini
 echo MODE=%MODE% >> .\ini\params.ini
 echo FEC=%FEC% >> .\ini\params.ini
 echo IMAGESIZE=%IMAGESIZE% >> .\ini\params.ini
+echo|set /p=%IMAGESIZE% > .\imagesize
 echo FPS=%FPS% >> .\ini\params.ini
 echo AUDIO=%AUDIO% >> .\ini\params.ini
 echo CODEC=%CODEC% >> .\ini\params.ini
@@ -1048,7 +1051,7 @@ if "%INPUTTYPE%"=="NETWORKUDP" GoTo SWENCNETWORKUDP
 if "%INPUTTYPE%"=="NETWORKRTMP" GoTo SWENCNETWORKRTMP
 if "%INPUTTYPE%"=="FILE" GoTo SWENCFILE
 @REM This is not original functionality XD
-echo LOW LATENCY: %lowlatency1%
+@REM echo LOW LATENCY: %lowlatency1%
 REM Software encoder via DSHOW
 @REM ========================================================================================================================================================================================================== This is not original functionality XD........
 .\ffmpeg\ffmpeg -itsoffset %OFFSET% -f dshow -thread_queue_size %THREADQUEUE%K -rtbufsize %RTBUF%M -i video=%VIDEODEVICE% -f dshow -thread_queue_size %THREADQUEUE%K -rtbufsize %RTBUF%M -i audio=%AUDIODEVICE% %libx265preset% %libx265params% %lowlatency1% -ar %ABITRATE%K -vcodec %CODEC% -s %IMAGESIZE% -b:v %VBITRATE%K -r %FPS% -minrate %VBITRATE%K -maxrate %VBITRATE%K -bufsize %BUFSIZE%K -g %KEYSOFT% -acodec %AUDIOCODEC% -ac %AUDIO% -b:a %ABITRATE%k -f mpegts -muxrate %TSBITRATE%K -streamid 0:%VIDEOPID% -streamid 1:%AUDIOPID% -max_delay %MAXDELAY%K -max_interleave_delta %MAXINTERLEAVE%M -pcr_period %PCRPERIOD% -pat_period %PATPERIOD% -mpegts_service_id %SERVICEID% -mpegts_original_network_id %NETWORKID% -mpegts_transport_stream_id %STREAMID% -mpegts_pmt_start_pid %PMTPID% -mpegts_start_pid %MPEGTSSTARTPID% -metadata service_provider=%SERVICEPROVIDER% -metadata service_name=%CALLSIGN% -af aresample=async=1 "udp://%PLUTOIP%:%PLUTOPORT%?pkt_size=1316&overrun_nonfatal=1&fifo_size=%FIFOBUF%M"
@@ -1056,12 +1059,12 @@ REM Software encoder via DSHOW
 pause
 
 REM Kill Control and MQTT Browser
-if "%FW%"=="yes" if "%REBOOT%"=="on" (%mosquitto% -t %CMD_ROOT%/system/reboot -m 1 -h %PLUTOIP%)
-if "%FW%"=="yes" (%mosquitto% -t %CMD_ROOT%/tx/mute -m 1 -h %PLUTOIP%)
-if "%FW%"=="yes" (taskkill /T /F /IM MQTT-Explorer-0.4.0-beta1.exe)
-if "%FW%"=="yes" (taskkill /F /FI "WINDOWTITLE eq CONTROL*")
-if "%FW%"=="yes" (taskkill /T /F /IM mpvnet-vvceasy.exe)
-if "%FW%"=="yes" (taskkill /F /FI "WINDOWTITLE eq FFPLAY*")
+@REM if "%FW%"=="yes" if "%REBOOT%"=="on" (%mosquitto% -t %CMD_ROOT%/system/reboot -m 1 -h %PLUTOIP%)
+@REM if "%FW%"=="yes" (%mosquitto% -t %CMD_ROOT%/tx/mute -m 1 -h %PLUTOIP%)
+@REM if "%FW%"=="yes" (taskkill /T /F /IM MQTT-Explorer-0.4.0-beta1.exe)
+@REM if "%FW%"=="yes" (taskkill /F /FI "WINDOWTITLE eq CONTROL*")
+@REM if "%FW%"=="yes" (taskkill /T /F /IM mpvnet-vvceasy.exe)
+@REM if "%FW%"=="yes" (taskkill /F /FI "WINDOWTITLE eq FFPLAY*")
 
 exit
 
