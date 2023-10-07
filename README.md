@@ -56,14 +56,14 @@ So that is five programs and their child windows we need open just to have TX an
 
 I'd like to make that 3 or perhaps even less, it would be nice to run this on any operating system
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/dd74788e-d64e-4fdd-9e1f-407c50910402)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/76724002-200f-4dc0-9113-62ccd05ebef0)
 
 TODOs:
  - Add spectrum from BATC as step one
    - Add custom fft sources 
- - Codec selections
- - Identify all variables
- - Set video and audio bitrate calculations from selections
-   - Give calculated bitrates on GUI 
- - Store state as JSON and not strings in files
+ - **DONE** Codec selections
+ - **DONE** Identify all variables
+ - **DONE** Set video and audio bitrate calculations from selections
+   - **DONE** Give calculated bitrates on GUI 
+ - **DONE** Store state as JSON and not strings in files
  - Call ffmpeg directly...(take out last of DATV-NotSoEasy bat files)
