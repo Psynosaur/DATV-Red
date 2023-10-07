@@ -4,7 +4,18 @@ REM DATV-NotSoEasy
 @echo off
 setlocal enabledelayedexpansion
 SET profile=%1
-SET lowlatency=%2
+SET SR=%2
+SET MODE=%3
+SET FEC=%4
+SET IMAGESIZE=%5
+SET FPS=%6
+SET AUDIO=%7
+SET CODEC=%8
+SET TSBITRATE=%9
+shift
+shift
+SET VBITRATE=%8
+SET ABITRATE=%9
 SET BASEDIR=%~dp0
 cd %BASEDIR%
 
@@ -71,6 +82,7 @@ if "%profile%"=="333KS" goto 333KS
 if "%profile%"=="500KS" goto 500KS
 if "%profile%"=="1000KS" goto 1000KS
 if "%profile%"=="LastRun" goto LastRun
+if "%profile%"=="custom" goto Custom
 
 @REM Maintain original functionality :)
 :INPUT
@@ -108,6 +120,11 @@ goto LOADSETTINGS
 :1000KS
 set AUTO=1000KS
 goto LOADSETTINGS
+
+:Custom
+set AUTO=1000KS
+set 
+goto AFTERLOADSETTINGS
 
 :LOADSETTINGS
 if /I "%AUTO%"=="1" (for /f %%i in (.\ini\favorite-1.ini) do (
@@ -153,7 +170,7 @@ set %%i
 
 REM if "%DATVOUT%"=="on" (SET RXCONF=on)
 
-
+:AFTERLOADSETTINGS
 if "%AUTO%"=="1" if "%GSE%"=="1" (SET AUTO=6)&(GoTo GSE)
 if "%AUTO%"=="2" if "%GSE%"=="1" (SET AUTO=6)&(GoTo GSE)
 if "%AUTO%"=="3" if "%GSE%"=="1" (SET AUTO=6)&(GoTo GSE)

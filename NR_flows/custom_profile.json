@@ -1,0 +1,828 @@
+[
+    {
+        "id": "15cb052db1c9d25e",
+        "type": "tab",
+        "label": "Profile Setup",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1f5722b7aff1a710",
+        "type": "group",
+        "z": "15cb052db1c9d25e",
+        "name": "Profile Setup",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#ffffff",
+            "fill": "#ffcf3f",
+            "label-position": "n"
+        },
+        "nodes": [
+            "f9186ed78accdb6c",
+            "d8316c32c9a501d4",
+            "a0addd449f41ee70",
+            "3c2665b335deadcc",
+            "142bd58e14cabe24",
+            "034d4cfc3008e95a",
+            "1bb882ca67278b69",
+            "6e2b3c9e08662125",
+            "ae40a9e5bdd0d113",
+            "5989fbe4c1133db2",
+            "b003500f8ea3ffe1",
+            "d2a7c63d9b2fe699",
+            "320ab26158363e57",
+            "9c6e205117c83338",
+            "e034dbd60b827228",
+            "42c11d5e18583e44",
+            "c65cda6215e191a8",
+            "5fb4d13c6bc3586f",
+            "08ac43981e17837e",
+            "6bfbf0101b2cd3a4",
+            "34feacf8cac79e5e"
+        ],
+        "x": 294,
+        "y": 39,
+        "w": 892,
+        "h": 722
+    },
+    {
+        "id": "f9186ed78accdb6c",
+        "type": "ui_dropdown",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Hardware Codec",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 20,
+        "width": 9,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "None",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "label": "h264_nvenc",
+                "value": "HW_h264_nvenc",
+                "type": "str"
+            },
+            {
+                "label": "hevc_nvenc",
+                "value": "HW_hevc_nvenc",
+                "type": "str"
+            },
+            {
+                "label": "libvvenc",
+                "value": "HW_libvvenc",
+                "type": "str"
+            },
+            {
+                "label": "libaom-av1",
+                "value": "HW_libaom-av1",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 570,
+        "y": 120,
+        "wires": [
+            [
+                "1bb882ca67278b69"
+            ]
+        ]
+    },
+    {
+        "id": "d8316c32c9a501d4",
+        "type": "ui_text",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 38,
+        "width": 9,
+        "height": 1,
+        "name": "Codec panel spacer",
+        "label": "",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a0addd449f41ee70",
+        "type": "ui_dropdown",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Software codec",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 23,
+        "width": 9,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "libx264",
+                "value": "SW_libx264",
+                "type": "str"
+            },
+            {
+                "label": "libx265",
+                "value": "SW_libx265",
+                "type": "str"
+            },
+            {
+                "label": "libvvenc",
+                "value": "SW_libvvenc",
+                "type": "str"
+            },
+            {
+                "label": "libaom-av1",
+                "value": "SW_libaom-av1",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 560,
+        "y": 180,
+        "wires": [
+            [
+                "1bb882ca67278b69"
+            ]
+        ]
+    },
+    {
+        "id": "3c2665b335deadcc",
+        "type": "ui_dropdown",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Framerate",
+        "tooltip": "",
+        "place": "Select framerate",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 26,
+        "width": 9,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "5fps",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "10 fps",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "15 fps",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "20 fps",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "25 fps",
+                "value": "25",
+                "type": "str"
+            },
+            {
+                "label": "30 fps",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "label": "48 fps",
+                "value": "48",
+                "type": "str"
+            },
+            {
+                "label": "50 fps",
+                "value": "50",
+                "type": "str"
+            },
+            {
+                "label": "60 fps",
+                "value": "60",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "6e2b3c9e08662125"
+            ]
+        ]
+    },
+    {
+        "id": "142bd58e14cabe24",
+        "type": "ui_dropdown",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Audio",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 29,
+        "width": 9,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Mono",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Stereo",
+                "value": "2",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "ae40a9e5bdd0d113"
+            ]
+        ]
+    },
+    {
+        "id": "034d4cfc3008e95a",
+        "type": "ui_text",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 17,
+        "width": 9,
+        "height": 1,
+        "name": "",
+        "label": "Selected codec",
+        "format": "{{msg.selectedCodec}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 920,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1bb882ca67278b69",
+        "type": "function",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "function 1",
+        "func": "let payload = msg.payload;\nmsg.selectedCodec = payload;\nmsg.payload = payload.slice(3);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 180,
+        "wires": [
+            [
+                "034d4cfc3008e95a",
+                "5989fbe4c1133db2"
+            ]
+        ]
+    },
+    {
+        "id": "6e2b3c9e08662125",
+        "type": "change",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "Framerate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.FPS",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 240,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "ae40a9e5bdd0d113",
+        "type": "change",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "Audio channels",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.AUDIO",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "5989fbe4c1133db2",
+        "type": "change",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "Codec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.CODEC",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 180,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "b003500f8ea3ffe1",
+        "type": "ui_dropdown",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Image Size",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 32,
+        "width": 9,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "426x240",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "640x360",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "854x480",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "960x540",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1024x576",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1280x720",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1600x900",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1920x1080",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "2560x1440",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "3840x2160",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "d2a7c63d9b2fe699"
+            ]
+        ]
+    },
+    {
+        "id": "d2a7c63d9b2fe699",
+        "type": "change",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "Image size",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.IMAGESIZE",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 420,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "320ab26158363e57",
+        "type": "ui_dropdown",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Audio bitrate kb/s",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 35,
+        "width": 9,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "24",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "32",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "48",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "64",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "96",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "128",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "192",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "256",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 570,
+        "y": 480,
+        "wires": [
+            [
+                "9c6e205117c83338"
+            ]
+        ]
+    },
+    {
+        "id": "9c6e205117c83338",
+        "type": "change",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "Audio Bitrate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.ABITRATE",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 480,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "e034dbd60b827228",
+        "type": "file in",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "filename": "settings.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 570,
+        "y": 720,
+        "wires": [
+            [
+                "42c11d5e18583e44"
+            ]
+        ]
+    },
+    {
+        "id": "42c11d5e18583e44",
+        "type": "function",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "function 3",
+        "func": "let jsonSettings = JSON.parse(msg.payload);\nmsg.payload = jsonSettings;\nglobal.set(\"settings\", jsonSettings);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 720,
+        "wires": [
+            [
+                "5fb4d13c6bc3586f"
+            ]
+        ]
+    },
+    {
+        "id": "c65cda6215e191a8",
+        "type": "inject",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 720,
+        "wires": [
+            [
+                "e034dbd60b827228"
+            ]
+        ]
+    },
+    {
+        "id": "5fb4d13c6bc3586f",
+        "type": "debug",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "08ac43981e17837e",
+        "type": "ui_button",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 74,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Settings restore",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 420,
+        "y": 660,
+        "wires": [
+            [
+                "e034dbd60b827228"
+            ]
+        ]
+    },
+    {
+        "id": "6bfbf0101b2cd3a4",
+        "type": "function",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "Settings manager",
+        "func": "let jsonSettings = global.get(\"settings\");\nmsg.payload = JSON.stringify(jsonSettings);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 360,
+        "wires": [
+            [
+                "34feacf8cac79e5e"
+            ]
+        ]
+    },
+    {
+        "id": "34feacf8cac79e5e",
+        "type": "file",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "filename": "settings.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f22c4dbc8bc16dd",
+        "type": "ui_group",
+        "name": "Custom profile",
+        "tab": "9b3296db2e0c849f",
+        "order": 4,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ed1d9a126995072",
+        "type": "ui_group",
+        "name": "TX",
+        "tab": "9b3296db2e0c849f",
+        "order": 1,
+        "disp": true,
+        "width": "19",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "9b3296db2e0c849f",
+        "type": "ui_tab",
+        "name": "Pluto",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
