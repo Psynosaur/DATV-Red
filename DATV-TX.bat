@@ -854,7 +854,7 @@ if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/polarisation -m %LNBPOL% -h %PLUTOI
 if "%FW%"=="yes" %mosquitto% -t cmd/longmynd/swport -m %TUNERPORT% -h %PLUTOIP%
 
 REM Start Control and MQTT Browser
-if "%FW%"=="yes" start "CONTROL" .\scripts\CONTROL.bat
+@REM if "%FW%"=="yes" start "CONTROL" .\scripts\CONTROL.bat
 @REM This is not original functionality XD
 @REM if "%FW%"=="yes" start .\Mosquitto\MQTT-Explorer-0.4.0-beta1.exe
 
