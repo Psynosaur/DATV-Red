@@ -56,7 +56,7 @@ So that is five programs and their child windows we need open just to have TX an
 
 I'd like to make that 3 or perhaps even less, it would be nice to run this on any operating system
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/76724002-200f-4dc0-9113-62ccd05ebef0)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/8f8cf976-60a3-466d-897a-d4885d61edeb)
 
 TODOs:
  - Add spectrum from BATC as step one
