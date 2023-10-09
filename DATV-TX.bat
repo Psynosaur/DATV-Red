@@ -895,10 +895,12 @@ echo|set /p=%IMAGESIZE% > .\imagesize
 echo FPS=%FPS% >> .\ini\params.ini
 echo AUDIO=%AUDIO% >> .\ini\params.ini
 echo CODEC=%CODEC% >> .\ini\params.ini
+echo|set /p=%CODEC% > .\codec
 echo TSBITRATE=%TSBITRATE% >> .\ini\params.ini
 echo VBITRATE=%VBITRATE% >> .\ini\params.ini
+echo|set /p=%VBITRATE% > .\vbitrate
 echo ABITRATE=%ABITRATE% >> .\ini\params.ini
-
+echo|set /p=%ABITRATE% > .\abitrate
 echo TXFREQUENCY=%TXFREQUENCY% >> .\ini\params.ini
 echo RXFREQUENCY=%RXFREQUENCY% >> .\ini\params.ini
 echo RXSR=%RXSR% >> .\ini\params.ini

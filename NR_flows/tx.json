@@ -128,9 +128,9 @@
             "e6bb4e6e08658367"
         ],
         "x": 1048,
-        "y": -27,
-        "w": 2204,
-        "h": 1934
+        "y": -47,
+        "w": 2264,
+        "h": 2000
     },
     {
         "id": "e6bb4e6e08658367",
@@ -282,12 +282,25 @@
             "4c5bde857e7964a8",
             "e0a8b11837a3a291",
             "d52ca12408c4cd7d",
-            "c326e0457b39d881"
+            "c326e0457b39d881",
+            "023820f309b020da",
+            "03deb776667356fc",
+            "bc75f00bd265544f",
+            "6c91e490a62106d5",
+            "2598c63498a7d271",
+            "9067de7ba141cd15",
+            "d4cacb1bf63ac8fb",
+            "39cfefa0e8ccb9b9",
+            "540d6ebea9628a71",
+            "4bfadd6d4acf437d",
+            "f6370190fe6ad34e",
+            "ef3ea3405435304a",
+            "f6bff8df621b3b2d"
         ],
         "x": 1074,
-        "y": -1,
-        "w": 2152,
-        "h": 1882
+        "y": -21,
+        "w": 2212,
+        "h": 1948
     },
     {
         "id": "162c77371bb6c962",
@@ -312,8 +325,8 @@
             "45b5b704879d30fe",
             "c8c1c80d91c7c4b9"
         ],
-        "x": 2294,
-        "y": 119,
+        "x": 1794,
+        "y": 1599,
         "w": 792,
         "h": 302
     },
@@ -495,7 +508,7 @@
             },
             {
                 "label": "CH18 125KS",
-                "value": "2407749888",
+                "value": "2407500032",
                 "type": "str"
             },
             {
@@ -2599,8 +2612,8 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 2950,
-        "y": 380,
+        "x": 2450,
+        "y": 1860,
         "wires": []
     },
     {
@@ -2616,8 +2629,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2750,
-        "y": 380,
+        "x": 2250,
+        "y": 1860,
         "wires": [
             [
                 "c6c7b77c513dc67d"
@@ -2643,8 +2656,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2420,
-        "y": 240,
+        "x": 1920,
+        "y": 1720,
         "wires": [
             [
                 "9335bff762d93722",
@@ -2666,8 +2679,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2570,
-        "y": 160,
+        "x": 2070,
+        "y": 1640,
         "wires": [
             [
                 "45b5b704879d30fe"
@@ -2686,8 +2699,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2970,
-        "y": 300,
+        "x": 2470,
+        "y": 1780,
         "wires": [
             []
         ]
@@ -2714,8 +2727,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 2390,
-        "y": 160,
+        "x": 1890,
+        "y": 1640,
         "wires": [
             [
                 "139c2af2cc88bd80"
@@ -2735,8 +2748,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 220,
+        "x": 2450,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -3427,7 +3440,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: fec",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fec\")){\n    global.set(\"fec\", payload);\n    global.set(\"device.FEC\", payload);\n    global.set(\"settings.FEC\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fec\")){\n    global.set(\"fec\", payload);\n    global.set(\"device.FEC\", payload);\n    global.set(\"settings.FEC\", payload);\n    global.set(\"bitratechange\", true);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3438,8 +3451,7 @@
         "y": 800,
         "wires": [
             [
-                "ddf60892397fbc68",
-                "243912e6844661ae"
+                "ddf60892397fbc68"
             ]
         ]
     },
@@ -3471,7 +3483,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: sr",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"sr\")){\n    global.set(\"sr\", payload);\n    global.set(\"device.SR\", payload);\n    global.set(\"settings.SR\", payload/1000);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"sr\")){\n    global.set(\"sr\", payload);\n    global.set(\"device.SR\", payload);\n    global.set(\"settings.SR\", payload/1000);\n    global.set(\"bitratechange\", true);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3482,8 +3494,7 @@
         "y": 1120,
         "wires": [
             [
-                "aa6d588a480f161c",
-                "243912e6844661ae"
+                "aa6d588a480f161c"
             ]
         ]
     },
@@ -3514,7 +3525,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: constel",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.Constel\")){\n    global.set(\"device.Constel\", payload);\n    global.set(\"settings.MODE\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.Constel\")){\n    global.set(\"device.Constel\", payload);\n    global.set(\"settings.MODE\", payload);\n    global.set(\"bitratechange\", true);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3525,8 +3536,7 @@
         "y": 1480,
         "wires": [
             [
-                "f38c438a231661c6",
-                "243912e6844661ae"
+                "f38c438a231661c6"
             ]
         ]
     },
@@ -4267,8 +4277,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2480,
-        "y": 380,
+        "x": 1980,
+        "y": 1860,
         "wires": [
             []
         ]
@@ -5512,15 +5522,15 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "function 2",
-        "func": "let sr = parseInt(global.get(\"device.SR\")) / 1000;\nglobal.set(\"settings.SR\", sr);\nlet audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\nlet videoBitRate = 0;\n\nlet fec = global.get(\"device.FEC\");\nlet numerator = parseInt(fec.substr(0, 1));\nlet denominator = parseInt(fec.substr(2, 2));\nlet fecCalculated = numerator / denominator;\nlet constelMode =\n    global.get(\"device.Constel\") === \"qpsk\" ? 2 :\n        global.get(\"device.Constel\") === \"8psk\" ? 3 :\n            global.get(\"device.Constel\") === \"16apsk\" ? 4 :\n                5;\nlet qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\nglobal.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\nif (sr > 20 && sr < 36) {\n    videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n}\nif (sr > 35 && sr < 67) {\n    videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n}\nif (sr > 66 && sr < 126) {\n    videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n}\nif (sr > 125 && sr < 251) {\n    videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n}\nif (sr > 250 && sr < 334) {\n    videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n}\nif (sr > 333 && sr < 501) {\n    videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n}\nif (sr > 500 && sr < 1001) {\n    videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n}\nif (sr > 1000 && sr < 1501) {\n    videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n}\nif (sr > 1500 && sr < 3001) {\n    videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n}\nmsg.payload = qpskTsBitRate.toFixed(2);\nglobal.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\nmsg.vidbr = videoBitRate.toFixed(2);\nreturn msg;",
+        "name": "Calculate bitrate function",
+        "func": "if (global.get(\"bitratechange\")) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.SR\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n\n    let fec = global.get(\"device.FEC\");\n    let numerator = parseInt(fec.substr(0, 1));\n    let denominator = parseInt(fec.substr(2, 2));\n    let fecCalculated = numerator / denominator;\n    let constelMode =\n        global.get(\"device.Constel\") === \"qpsk\" ? 2 :\n            global.get(\"device.Constel\") === \"8psk\" ? 3 :\n                global.get(\"device.Constel\") === \"16apsk\" ? 4 :\n                    5;\n    let qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\n    global.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\n    if (sr > 20 && sr < 36) {\n        videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 35 && sr < 67) {\n        videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 66 && sr < 126) {\n        videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 125 && sr < 251) {\n        videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 250 && sr < 334) {\n        videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 333 && sr < 501) {\n        videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 500 && sr < 1001) {\n        videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1000 && sr < 1501) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1500 && sr < 3001) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    msg.payload = qpskTsBitRate.toFixed(2);\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    msg.vidbr = videoBitRate?.toFixed(2);\n    return msg;\n} \n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
+        "x": 2190,
         "y": 60,
         "wires": [
             [
@@ -5548,8 +5558,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2390,
-        "y": 40,
+        "x": 2490,
+        "y": 20,
         "wires": []
     },
     {
@@ -5570,7 +5580,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2380,
+        "x": 2480,
         "y": 80,
         "wires": []
     },
@@ -5887,6 +5897,275 @@
         "wires": [
             [
                 "c4c1592e68a08ac2"
+            ]
+        ]
+    },
+    {
+        "id": "023820f309b020da",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "ffplayudp.bat",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "VLC",
+        "x": 2850,
+        "y": 1560,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "03deb776667356fc",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "group": "9ed1d9a126995072",
+        "order": 70,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Ffplay 8888",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2130,
+        "y": 1560,
+        "wires": [
+            [
+                "023820f309b020da"
+            ]
+        ]
+    },
+    {
+        "id": "bc75f00bd265544f",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 2690,
+        "y": 40,
+        "wires": [
+            [
+                "6c91e490a62106d5"
+            ]
+        ]
+    },
+    {
+        "id": "6c91e490a62106d5",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "vbitrate",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 2840,
+        "y": 40,
+        "wires": [
+            [
+                "2598c63498a7d271"
+            ]
+        ]
+    },
+    {
+        "id": "2598c63498a7d271",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set vbitrate first load",
+        "func": "if (msg.payload !== undefined) {\n    let vbitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.VBITRATE\", vbitrateAtStart)\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3040,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9067de7ba141cd15",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 2690,
+        "y": 100,
+        "wires": [
+            [
+                "d4cacb1bf63ac8fb"
+            ]
+        ]
+    },
+    {
+        "id": "d4cacb1bf63ac8fb",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "abitrate",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 2840,
+        "y": 100,
+        "wires": [
+            [
+                "39cfefa0e8ccb9b9"
+            ]
+        ]
+    },
+    {
+        "id": "39cfefa0e8ccb9b9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set abitrate first load",
+        "func": "if (msg.payload !== undefined) {\n    let vbitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.ABITRATE\", vbitrateAtStart)\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3040,
+        "y": 100,
+        "wires": [
+            [
+                "ef3ea3405435304a"
+            ]
+        ]
+    },
+    {
+        "id": "540d6ebea9628a71",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 2690,
+        "y": 140,
+        "wires": [
+            [
+                "4bfadd6d4acf437d"
+            ]
+        ]
+    },
+    {
+        "id": "4bfadd6d4acf437d",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "codec",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 2830,
+        "y": 140,
+        "wires": [
+            [
+                "f6370190fe6ad34e"
+            ]
+        ]
+    },
+    {
+        "id": "f6370190fe6ad34e",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set last used codecfirst load",
+        "func": "if (msg.payload !== undefined) {\n    let vbitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.CODEC\", vbitrateAtStart)\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3060,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef3ea3405435304a",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3180,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f6bff8df621b3b2d",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1950,
+        "y": 20,
+        "wires": [
+            [
+                "ac482a3670a2a148"
             ]
         ]
     },
