@@ -1,0 +1,1 @@
+echo|set /p="" > .\ffmpeg_call

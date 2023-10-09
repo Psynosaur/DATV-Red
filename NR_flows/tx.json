@@ -129,7 +129,7 @@
         ],
         "x": 1048,
         "y": -47,
-        "w": 2264,
+        "w": 2484,
         "h": 2000
     },
     {
@@ -295,11 +295,18 @@
             "4bfadd6d4acf437d",
             "f6370190fe6ad34e",
             "ef3ea3405435304a",
-            "f6bff8df621b3b2d"
+            "f6bff8df621b3b2d",
+            "332cd73b70ec7dca",
+            "b62a3f484010816e",
+            "b24692049485a46b",
+            "dd252f1ac7e17f8a",
+            "63528f3b0c9f3dae",
+            "6c2ed6b6c40e42db",
+            "29f59051e6cbe148"
         ],
         "x": 1074,
         "y": -21,
-        "w": 2212,
+        "w": 2432,
         "h": 1948
     },
     {
@@ -478,17 +485,17 @@
             },
             {
                 "label": "CH12 125KS",
-                "value": "2406000000",
+                "value": "2406000126",
                 "type": "str"
             },
             {
                 "label": "CH13 333KS",
-                "value": "2406250000",
+                "value": "2406249982",
                 "type": "str"
             },
             {
                 "label": "CH14 125KS",
-                "value": "2406500000",
+                "value": "2406500096",
                 "type": "str"
             },
             {
@@ -498,12 +505,12 @@
             },
             {
                 "label": "CH16 125KS",
-                "value": "2407000000",
+                "value": "2407000062",
                 "type": "str"
             },
             {
                 "label": "CH17 333KS",
-                "value": "2407250000",
+                "value": "2407249918",
                 "type": "str"
             },
             {
@@ -513,42 +520,42 @@
             },
             {
                 "label": "CH19 333KS",
-                "value": "2407750000",
+                "value": "2407749888",
                 "type": "str"
             },
             {
                 "label": "CH20 125KS",
-                "value": "2408000000",
+                "value": "2407999998",
                 "type": "str"
             },
             {
                 "label": "CH21 333KS",
-                "value": "2408250000",
+                "value": "2408250112",
                 "type": "str"
             },
             {
                 "label": "CH22 125KS",
-                "value": "2408500000",
+                "value": "2408499968",
                 "type": "str"
             },
             {
                 "label": "CH23 333KS",
-                "value": "2408750000",
+                "value": "2408750078",
                 "type": "str"
             },
             {
                 "label": "CH24 125KS",
-                "value": "2409000000",
+                "value": "2408999936",
                 "type": "str"
             },
             {
                 "label": "CH25 333KS",
-                "value": "2409250000",
+                "value": "2409250048",
                 "type": "str"
             },
             {
                 "label": "CH26 125KS",
-                "value": "2409500000",
+                "value": "2409499902",
                 "type": "str"
             },
             {
@@ -2205,7 +2212,7 @@
         "g": "1d6ea1c9ce542926",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 72,
+        "order": 74,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -3653,7 +3660,7 @@
         "command": "DATV-TX.bat 125KS",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": false,
         "oldrc": false,
@@ -3662,7 +3669,9 @@
         "y": 620,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -3674,7 +3683,7 @@
         "command": "DATV-TX.bat 250KS",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": false,
         "oldrc": false,
@@ -3683,7 +3692,9 @@
         "y": 740,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -3695,7 +3706,7 @@
         "command": "DATV-TX.bat 333KS",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": false,
         "oldrc": false,
@@ -3704,7 +3715,9 @@
         "y": 800,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -4070,7 +4083,7 @@
         "command": "DATV-TX.bat LastRun",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": false,
         "oldrc": false,
@@ -4079,7 +4092,9 @@
         "y": 680,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -4176,7 +4191,8 @@
                 "c4c1592e68a08ac2",
                 "5c8e87753e4ad083",
                 "be766117a7d2334f",
-                "873a04942564e509"
+                "873a04942564e509",
+                "b24692049485a46b"
             ]
         ]
     },
@@ -4394,7 +4410,7 @@
         "command": "DATV-TX.bat 500KS",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": false,
         "oldrc": false,
@@ -4403,7 +4419,9 @@
         "y": 860,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -4465,7 +4483,7 @@
         "command": "DATV-TX.bat 1000KS",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": true,
         "oldrc": false,
@@ -4474,7 +4492,9 @@
         "y": 920,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -4533,7 +4553,7 @@
         "name": "",
         "group": "9ed1d9a126995072",
         "order": 70,
-        "width": 4,
+        "width": 3,
         "height": 1,
         "passthru": false,
         "label": "Open VLC 8888",
@@ -4683,7 +4703,7 @@
         "command": "DATV-TX.bat 33KS",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": true,
         "oldrc": false,
@@ -4692,7 +4712,9 @@
         "y": 500,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -4704,7 +4726,7 @@
         "command": "DATV-TX.bat 66KS",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": true,
         "oldrc": false,
@@ -4713,7 +4735,9 @@
         "y": 560,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -5232,7 +5256,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "group": "9ed1d9a126995072",
-        "order": 76,
+        "order": 77,
         "width": 17,
         "height": 1,
         "name": "spacer_2",
@@ -5313,7 +5337,7 @@
         "name": "DVBS GUI",
         "group": "9ed1d9a126995072",
         "order": 69,
-        "width": 4,
+        "width": 3,
         "height": 1,
         "passthru": false,
         "label": "DVBS GUI",
@@ -5347,7 +5371,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "DVB-S GUI",
-        "x": 3130,
+        "x": 2610,
         "y": 1260,
         "wires": [
             [],
@@ -5414,7 +5438,7 @@
         "command": "DATV-TX.bat custom ",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "false",
+        "useSpawn": "true",
         "timer": "",
         "winHide": true,
         "oldrc": false,
@@ -5423,7 +5447,9 @@
         "y": 1360,
         "wires": [
             [],
-            [],
+            [
+                "29f59051e6cbe148"
+            ],
             []
         ]
     },
@@ -5433,7 +5459,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "ffmpeg process safegaurd",
-        "func": "let ffmpegPID = global.get(\"pid\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    msg.payload = `${parseInt(global.get(\"settings.SR\"))} ${global.get(\"settings.MODE\")} ${global.get(\"settings.FEC\")} ${global.get(\"settings.IMAGESIZE\")} ${global.get(\"settings.FPS\")} ${global.get(\"settings.AUDIO\")} ${global.get(\"settings.CODEC\")} ${global.get(\"settings.TSBITRATE\")} ${global.get(\"frequency\")} ${global.get(\"settings.VBITRATE\")} ${global.get(\"settings.ABITRATE\")} `;\n    return msg;\n}\nreturn;\n",
+        "func": "let ffmpegPID = global.get(\"pid\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    msg.payload = `${parseInt(global.get(\"settings.SR\"))} ${global.get(\"settings.MODE\")} ${global.get(\"settings.FEC\")} ${global.get(\"settings.IMAGESIZE\")} ${global.get(\"settings.FPS\")} ${global.get(\"settings.AUDIO\")} ${global.get(\"settings.CODEC\")} ${global.get(\"settings.TSBITRATE\")} ${global.get(\"frequency\")} ${global.get(\"settings.VBITRATE\")} ${global.get(\"settings.ABITRATE\")}`;\n    return msg;\n}\nreturn;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -5461,8 +5487,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2150,
-        "y": 240,
+        "x": 2370,
+        "y": 220,
         "wires": [
             [
                 "8751a0dd93a8ed60"
@@ -5481,8 +5507,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2050,
-        "y": 320,
+        "x": 2390,
+        "y": 300,
         "wires": [
             []
         ]
@@ -5494,8 +5520,8 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 73,
-        "width": 4,
+        "order": 72,
+        "width": 3,
         "height": 1,
         "passthru": true,
         "label": "Save settings",
@@ -5531,11 +5557,9 @@
         "finalize": "",
         "libs": [],
         "x": 2190,
-        "y": 60,
+        "y": 100,
         "wires": [
             [
-                "5d929a20d665af8d",
-                "23f54550ba5b6a79",
                 "8c336280fd0fcc92"
             ]
         ]
@@ -5551,7 +5575,7 @@
         "height": 1,
         "name": "",
         "label": "Video bitrate",
-        "format": "{{msg.vidbr}} kb/s",
+        "format": "{{msg.payload}} kb/s",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -5580,8 +5604,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2480,
-        "y": 80,
+        "x": 2500,
+        "y": 100,
         "wires": []
     },
     {
@@ -5928,8 +5952,8 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "group": "9ed1d9a126995072",
-        "order": 70,
-        "width": 4,
+        "order": 71,
+        "width": 3,
         "height": 1,
         "passthru": false,
         "label": "Ffplay 8888",
@@ -6170,7 +6194,170 @@
         ]
     },
     {
-        "id": "a77eafb97c20fbc6",
+        "id": "332cd73b70ec7dca",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.VBITRATE",
+        "payloadType": "global",
+        "x": 2200,
+        "y": 20,
+        "wires": [
+            [
+                "23f54550ba5b6a79"
+            ]
+        ]
+    },
+    {
+        "id": "b62a3f484010816e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.TSBITRATE",
+        "payloadType": "global",
+        "x": 2240,
+        "y": 60,
+        "wires": [
+            [
+                "5d929a20d665af8d"
+            ]
+        ]
+    },
+    {
+        "id": "b24692049485a46b",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "command": "clear_ffmpeg.bat",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "clear_ffmpeg",
+        "x": 3170,
+        "y": 1040,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dd252f1ac7e17f8a",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 2550,
+        "y": 340,
+        "wires": [
+            [
+                "63528f3b0c9f3dae"
+            ]
+        ]
+    },
+    {
+        "id": "63528f3b0c9f3dae",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "ffmpeg_call",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2710,
+        "y": 340,
+        "wires": [
+            [
+                "6c2ed6b6c40e42db"
+            ]
+        ]
+    },
+    {
+        "id": "6c2ed6b6c40e42db",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "ffmpeg command",
+        "tooltip": "",
+        "group": "9ed1d9a126995072",
+        "order": 80,
+        "width": 17,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2950,
+        "y": 340,
+        "wires": [
+            [
+                "29f59051e6cbe148"
+            ]
+        ]
+    },
+    {
+        "id": "29f59051e6cbe148",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "group": "9ed1d9a126995072",
+        "order": 83,
+        "width": 17,
+        "height": 1,
+        "name": "",
+        "label": "ffmpeg output",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "14",
+        "color": "#ffffff",
+        "x": 3400,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "b502d93f5b60fa69",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6180,7 +6367,7 @@
         "height": 1
     },
     {
-        "id": "0725ba4b88766592",
+        "id": "bc1ac4253c68c71c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6190,7 +6377,7 @@
         "height": 1
     },
     {
-        "id": "25a10b84b7ad770c",
+        "id": "8c21d69e96d70ce9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6200,7 +6387,7 @@
         "height": 1
     },
     {
-        "id": "2ca097ee16019475",
+        "id": "2653cbbba5fb985c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6210,7 +6397,7 @@
         "height": 1
     },
     {
-        "id": "e368550d3df32309",
+        "id": "8ef5c325ee38987f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6220,7 +6407,7 @@
         "height": 1
     },
     {
-        "id": "9a0b3ee453cc6eb2",
+        "id": "f2b4059106dc8341",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6230,7 +6417,7 @@
         "height": 1
     },
     {
-        "id": "d4cb539b2436bc5b",
+        "id": "b57cec34bcf99ad9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6240,7 +6427,7 @@
         "height": 1
     },
     {
-        "id": "50834925ae4cf59b",
+        "id": "53282952c5d6d750",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6250,7 +6437,7 @@
         "height": 1
     },
     {
-        "id": "fad81ea4f91fc38f",
+        "id": "f8807a184ab8923d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6260,7 +6447,7 @@
         "height": 1
     },
     {
-        "id": "c0a5231e56ee1f80",
+        "id": "ea2060fca610259f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6270,7 +6457,7 @@
         "height": 1
     },
     {
-        "id": "82f234188b984e77",
+        "id": "70aebe69b210b9c5",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6280,7 +6467,7 @@
         "height": 1
     },
     {
-        "id": "100a01fdc2c2de83",
+        "id": "e8d3c73ece442c9c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6290,7 +6477,7 @@
         "height": 1
     },
     {
-        "id": "c7431993c9b4a32b",
+        "id": "7aac7eea4f7b96e8",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6300,7 +6487,7 @@
         "height": 1
     },
     {
-        "id": "057c2a778557b514",
+        "id": "afe63b41d9ad523f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6310,7 +6497,7 @@
         "height": 1
     },
     {
-        "id": "f114a01e480cc54d",
+        "id": "4bcad247c982e37d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6320,7 +6507,7 @@
         "height": 1
     },
     {
-        "id": "0a9299d681d61e80",
+        "id": "1a51204601b244ea",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6330,7 +6517,7 @@
         "height": 1
     },
     {
-        "id": "c49de9742f49be44",
+        "id": "449788db77b60c70",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6340,7 +6527,7 @@
         "height": 1
     },
     {
-        "id": "3f1d0a4435dcebcd",
+        "id": "d5da455b36ab867a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6350,7 +6537,7 @@
         "height": 1
     },
     {
-        "id": "69b9179cecc79390",
+        "id": "32d90c6066bab5c6",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6360,7 +6547,7 @@
         "height": 1
     },
     {
-        "id": "d0719f8027ab11a5",
+        "id": "03cbf4c6212c06c4",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6370,7 +6557,7 @@
         "height": 1
     },
     {
-        "id": "ea9cff0144ad6159",
+        "id": "4668730fe7e157ac",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6380,7 +6567,7 @@
         "height": 1
     },
     {
-        "id": "54274756e5f9b180",
+        "id": "1518b0d7ce127a6e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6390,7 +6577,7 @@
         "height": 1
     },
     {
-        "id": "69536559280b309f",
+        "id": "2589ecaabccb7a4c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6400,7 +6587,7 @@
         "height": 1
     },
     {
-        "id": "ed46557f01046caf",
+        "id": "af72cbcb3b87c17b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6410,7 +6597,7 @@
         "height": 1
     },
     {
-        "id": "8659e2658cb1d0a1",
+        "id": "01d679eaa66f1c94",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6420,7 +6607,7 @@
         "height": 1
     },
     {
-        "id": "25a79495cef8c19e",
+        "id": "0561c37042e24da8",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6430,7 +6617,7 @@
         "height": 1
     },
     {
-        "id": "cdc6acfd1ab5d4fa",
+        "id": "f2427cbae21e33ca",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6440,7 +6627,7 @@
         "height": 1
     },
     {
-        "id": "8868dd9f6d0bbf7d",
+        "id": "8cd4ed7442006579",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6450,7 +6637,7 @@
         "height": 1
     },
     {
-        "id": "ea58b9c40402330d",
+        "id": "38423824eeb09d7f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6460,7 +6647,7 @@
         "height": 1
     },
     {
-        "id": "bf5c77a524fa9847",
+        "id": "d04e2927967e29d0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6470,7 +6657,7 @@
         "height": 1
     },
     {
-        "id": "c505680d095e95de",
+        "id": "0e9945128d6d0e80",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6480,7 +6667,7 @@
         "height": 1
     },
     {
-        "id": "ce3ec55d1aa3d6c1",
+        "id": "a05b2eacd97c9035",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6490,7 +6677,7 @@
         "height": 1
     },
     {
-        "id": "1f569f0a4c21131d",
+        "id": "e5f2a253a59f331b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6500,7 +6687,7 @@
         "height": 1
     },
     {
-        "id": "da9b71cd83cc80cd",
+        "id": "cc254a82f63b680f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6510,7 +6697,7 @@
         "height": 1
     },
     {
-        "id": "ed65092437f11d30",
+        "id": "eafd575f228d2e0d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6520,7 +6707,7 @@
         "height": 1
     },
     {
-        "id": "684089434ec269ed",
+        "id": "804f4ed1aa412037",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6530,7 +6717,7 @@
         "height": 1
     },
     {
-        "id": "3affcee8b9d8e16a",
+        "id": "7a1b411c3784b50a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6540,7 +6727,7 @@
         "height": 1
     },
     {
-        "id": "a1c6da8ffa07b1f5",
+        "id": "88ef04ce2a9284ac",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6550,7 +6737,7 @@
         "height": 1
     },
     {
-        "id": "b20214a5b029c4e6",
+        "id": "0c91645daed62360",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6560,7 +6747,7 @@
         "height": 1
     },
     {
-        "id": "74c9f4bd64479736",
+        "id": "cd4f05dd186c620a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6570,7 +6757,7 @@
         "height": 1
     },
     {
-        "id": "d7e388a4b394d6c9",
+        "id": "6f28f56424351c46",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6580,7 +6767,7 @@
         "height": 1
     },
     {
-        "id": "6e05817759d8a604",
+        "id": "2992d718455ffd5c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6590,7 +6777,7 @@
         "height": 1
     },
     {
-        "id": "90d50ff1e4de1dbc",
+        "id": "d67892d409396fb3",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6600,7 +6787,7 @@
         "height": 1
     },
     {
-        "id": "3971ee903003d559",
+        "id": "f33fa8acd70381f6",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6610,7 +6797,7 @@
         "height": 1
     },
     {
-        "id": "4c92915b9ee3222f",
+        "id": "fc44bca9a0497e40",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6620,7 +6807,7 @@
         "height": 1
     },
     {
-        "id": "6ad474b3f04b6f31",
+        "id": "877e492ff4296f73",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6630,7 +6817,7 @@
         "height": 1
     },
     {
-        "id": "808ce6a3addc5408",
+        "id": "828292a4924321f0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6640,7 +6827,7 @@
         "height": 1
     },
     {
-        "id": "29dd6b981328fb3d",
+        "id": "b1e19e057f77518e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6650,7 +6837,7 @@
         "height": 1
     },
     {
-        "id": "8830b817a0d3cd9d",
+        "id": "3705e04c257809eb",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6660,7 +6847,7 @@
         "height": 1
     },
     {
-        "id": "ee3fd571d6260296",
+        "id": "34e26931d301874e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6670,7 +6857,7 @@
         "height": 1
     },
     {
-        "id": "459fbfc22c58f639",
+        "id": "cc2cae317070a25f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6680,7 +6867,7 @@
         "height": 1
     },
     {
-        "id": "224eb3a46c130a69",
+        "id": "781be1bdeee134ea",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6690,7 +6877,7 @@
         "height": 1
     },
     {
-        "id": "7117c8aa8eb8132c",
+        "id": "60ef970e2b7c59ca",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6700,7 +6887,7 @@
         "height": 1
     },
     {
-        "id": "9f284970a5edb269",
+        "id": "2d58cf4ee9824995",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6710,7 +6897,7 @@
         "height": 1
     },
     {
-        "id": "0e8295c86587215c",
+        "id": "f203fe6578462529",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6720,7 +6907,7 @@
         "height": 1
     },
     {
-        "id": "cd8cc1bef1f5dc24",
+        "id": "2589df0c7927d5f5",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6730,7 +6917,7 @@
         "height": 1
     },
     {
-        "id": "bc869a72076c1bc8",
+        "id": "2cc92d1a0d2358f3",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6740,7 +6927,7 @@
         "height": 1
     },
     {
-        "id": "caba76151bdacb52",
+        "id": "6b37f0dd9a843b23",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6750,7 +6937,7 @@
         "height": 1
     },
     {
-        "id": "bf088c9c198b15e4",
+        "id": "ed98ed736b5a9149",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6760,7 +6947,7 @@
         "height": 1
     },
     {
-        "id": "518145ad41436032",
+        "id": "a4646d7d63b84f09",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6770,7 +6957,7 @@
         "height": 1
     },
     {
-        "id": "8faa16565f45266f",
+        "id": "4d14767fdff6ee0b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6780,7 +6967,7 @@
         "height": 1
     },
     {
-        "id": "032c31e2993764ad",
+        "id": "b638ae841d74ac2c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6790,7 +6977,7 @@
         "height": 1
     },
     {
-        "id": "99d0a737fd05527c",
+        "id": "eab5d6e65befce02",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6800,7 +6987,7 @@
         "height": 1
     },
     {
-        "id": "4186e53c7e1b3233",
+        "id": "007847a797c7e62b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6810,7 +6997,7 @@
         "height": 1
     },
     {
-        "id": "9120dff00cfeed18",
+        "id": "508852bd1c3187f0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6820,7 +7007,7 @@
         "height": 1
     },
     {
-        "id": "c3a78a5356184acb",
+        "id": "0b89451b73c3b84f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6830,7 +7017,7 @@
         "height": 1
     },
     {
-        "id": "9e8533e765ca9c0b",
+        "id": "347d4375f2b901b3",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6840,7 +7027,7 @@
         "height": 1
     },
     {
-        "id": "604ec7c273aa0331",
+        "id": "4839b8330d803a13",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6850,7 +7037,7 @@
         "height": 1
     },
     {
-        "id": "583de043b7c9c029",
+        "id": "f63d2ab2e1c5ee2b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6860,27 +7047,17 @@
         "height": 1
     },
     {
-        "id": "72b9814414834ffe",
+        "id": "379055b8ee1343e9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "9ed1d9a126995072",
-        "order": 71,
+        "order": 73,
         "width": 1,
         "height": 1
     },
     {
-        "id": "df0f4f5703fb5e25",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 74,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "51ec6d10daa5df17",
+        "id": "a3fb01d4fedf5105",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6890,17 +7067,67 @@
         "height": 1
     },
     {
-        "id": "5596d8afc519bd1b",
+        "id": "ac7823d2d826e284",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "9ed1d9a126995072",
-        "order": 77,
+        "order": 76,
         "width": 1,
         "height": 1
     },
     {
-        "id": "1793e3fdbc4adf71",
+        "id": "96b05c6ebf86d38e",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 78,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "06f96970d34ff173",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 79,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "94c5c3483b2f9c24",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 81,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c36cd38a6a97dca5",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 82,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "23ca01def4b3a35b",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 84,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "14700f455bba88b6",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6910,7 +7137,7 @@
         "height": 1
     },
     {
-        "id": "36f0f22eaa054c21",
+        "id": "9a762942a5437c22",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6920,7 +7147,7 @@
         "height": 1
     },
     {
-        "id": "3f06fc384afa547f",
+        "id": "5df63dfc729c2830",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6930,7 +7157,7 @@
         "height": 1
     },
     {
-        "id": "c2e0c6d257a03c24",
+        "id": "fbc9d7eb4913912e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6940,7 +7167,7 @@
         "height": 1
     },
     {
-        "id": "7f5525b21d2a85a1",
+        "id": "e9d5a84e8793d626",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6950,7 +7177,7 @@
         "height": 1
     },
     {
-        "id": "1474fe022f019b09",
+        "id": "35bf0ecd9989d3c8",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6960,7 +7187,7 @@
         "height": 1
     },
     {
-        "id": "c7115c04a0cdad07",
+        "id": "243a4c97cec38d91",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6970,7 +7197,7 @@
         "height": 1
     },
     {
-        "id": "fd02542e3312f8fc",
+        "id": "339f8a990119bc6e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6980,7 +7207,7 @@
         "height": 1
     },
     {
-        "id": "44e3468b6bc2556b",
+        "id": "eb2de6458eb565ec",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6990,7 +7217,7 @@
         "height": 1
     },
     {
-        "id": "d1f49e2302a27342",
+        "id": "59f1fa442340a0d5",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7000,7 +7227,7 @@
         "height": 1
     },
     {
-        "id": "fb395764516c420e",
+        "id": "85294805120d52a2",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7010,7 +7237,7 @@
         "height": 1
     },
     {
-        "id": "3dc484a6e07fbc34",
+        "id": "92a6ebf9f1655c72",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7020,7 +7247,7 @@
         "height": 1
     },
     {
-        "id": "883ba8183c1d4650",
+        "id": "cf567b40afe5fb90",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7071,7 +7298,7 @@
     {
         "id": "4f22c4dbc8bc16dd",
         "type": "ui_group",
-        "name": "Custom profile",
+        "name": "Profiles",
         "tab": "9b3296db2e0c849f",
         "order": 1,
         "disp": true,

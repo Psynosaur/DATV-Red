@@ -40,7 +40,6 @@
             "5fb4d13c6bc3586f",
             "6bfbf0101b2cd3a4",
             "34feacf8cac79e5e",
-            "8d3153c5c7d3092e",
             "832b9a47eae8dabb",
             "8c06bae5f257a948",
             "a34ba6d8846e44b2",
@@ -53,7 +52,7 @@
         ],
         "x": 174,
         "y": 39,
-        "w": 1122,
+        "w": 1092,
         "h": 722
     },
     {
@@ -768,27 +767,8 @@
         "x": 1110,
         "y": 540,
         "wires": [
-            [
-                "8d3153c5c7d3092e"
-            ]
+            []
         ]
-    },
-    {
-        "id": "8d3153c5c7d3092e",
-        "type": "debug",
-        "z": "15cb052db1c9d25e",
-        "g": "1f5722b7aff1a710",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1190,
-        "y": 480,
-        "wires": []
     },
     {
         "id": "832b9a47eae8dabb",
@@ -980,7 +960,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 920,
+        "x": 870,
         "y": 580,
         "wires": [
             []
@@ -1015,7 +995,7 @@
     {
         "id": "4f22c4dbc8bc16dd",
         "type": "ui_group",
-        "name": "Custom profile",
+        "name": "Profiles",
         "tab": "9b3296db2e0c849f",
         "order": 1,
         "disp": true,
