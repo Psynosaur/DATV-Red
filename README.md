@@ -61,9 +61,4 @@ I'd like to make that 3 or perhaps even less, it would be nice to run this on an
 TODOs:
  - Add spectrum from BATC as step one
    - Add custom fft sources 
- - **DONE** Codec selections
- - **DONE** Identify all variables
- - **DONE** Set video and audio bitrate calculations from selections
-   - **DONE** Give calculated bitrates on GUI 
- - **DONE** Store state as JSON and not strings in files
  - Call ffmpeg directly...(take out last of DATV-NotSoEasy bat files)
