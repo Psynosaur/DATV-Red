@@ -379,7 +379,6 @@
         "id": "040de946a96743c9",
         "type": "mqtt out",
         "z": "de03ca0fa3cffa4e",
-        "d": true,
         "name": "",
         "topic": "",
         "qos": "",
@@ -390,8 +389,8 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 1390,
-        "y": 320,
+        "x": 1590,
+        "y": 300,
         "wires": []
     },
     {
