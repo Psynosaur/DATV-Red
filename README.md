@@ -68,7 +68,14 @@ I'd like to make that 3 or perhaps even less, it would be nice to run this on an
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/d1248e22-9db0-48a0-bdf9-719808fb71a4)
 
+## QuickTune Control
+If you'd like to tune with QuickTune, import the flow and setup QuickTune like so adding 127.0.0.1 all default paramaters.
+
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/4f82a378-30e7-4a4d-8120-e4f68aa08e4f)
+
+
 TODOs:
+ - Guard QuickTune control to not put TX frequency on beacon :)
  - Add spectrum from BATC as step one
    - Add custom fft sources 
  - Call ffmpeg directly...(take out last of DATV-NotSoEasy bat files)
