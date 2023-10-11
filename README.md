@@ -9,6 +9,15 @@ Script in this project is from DL5OCD Michael and his post about it can be found
 
 Node Red flows shamelessly used from this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
+## Check libx265 performance 
+
+ Run this bat file.
+
+    .\ffmpeg_bench_libx265.bat
+
+ ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/5d4a27f6-fa75-4bc7-b946-618829cf75c0)
+If you get higher than 25fps, you should be okay... 
+
 ## Setup and use( I will try automate these steps )
 1. Clone this repository
 
