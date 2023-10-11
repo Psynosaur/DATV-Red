@@ -2,6 +2,7 @@
 
 ## Prerequisite 
 - **VERY IMPORTANT** at least passive cooling on the PlutoSDR in the form of heatsinks, or it might explode ¯\_(ツ)_/¯
+  - Mine with big chungus metal block heatsink goes upto 45°C
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 - **Node-Red** running on windows(temporary)   
   
@@ -79,3 +80,8 @@ TODOs:
  - Add spectrum from BATC as step one
    - Add custom fft sources 
  - Call ffmpeg directly...(take out last of DATV-NotSoEasy bat files)
+
+8PSK 333KS 1920x1080 - Exceptional quality 
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/6d66a89f-3dce-472f-9c38-f6e7aad07dbc)
+
+Tested somewhat successfully to 3MS 16APSK ¯\_(ツ)_/¯
