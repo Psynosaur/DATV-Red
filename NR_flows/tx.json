@@ -292,7 +292,6 @@
             "540d6ebea9628a71",
             "4bfadd6d4acf437d",
             "f6370190fe6ad34e",
-            "f6bff8df621b3b2d",
             "332cd73b70ec7dca",
             "b62a3f484010816e",
             "b24692049485a46b",
@@ -302,7 +301,9 @@
             "29f59051e6cbe148",
             "380f24164e357a8f",
             "66d128c2a339f3cb",
-            "dd4535e1d6b65679"
+            "dd4535e1d6b65679",
+            "6dc66b7d07f866f4",
+            "f79b05ded58d1157"
         ],
         "x": 1074,
         "y": -1,
@@ -1299,7 +1300,7 @@
         "to": "",
         "reg": false,
         "x": 1400,
-        "y": 1380,
+        "y": 1400,
         "wires": [
             [
                 "f0c209e940860820",
@@ -1723,7 +1724,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Fec",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload\nmsg.stop = true;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1734,7 +1735,8 @@
         "y": 760,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "f79b05ded58d1157"
             ]
         ]
     },
@@ -1744,7 +1746,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: SampleRate",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nmsg.stop = true;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1755,7 +1757,8 @@
         "y": 1120,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "f79b05ded58d1157"
             ]
         ]
     },
@@ -1787,7 +1790,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Stream Mode",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1941,7 +1944,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Constellation",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nmsg.stop = true;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1952,7 +1955,8 @@
         "y": 1440,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "f79b05ded58d1157"
             ]
         ]
     },
@@ -3851,8 +3855,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2440,
-        "y": 1060,
+        "x": 2420,
+        "y": 1080,
         "wires": [
             [
                 "0c94d661261c1f6e",
@@ -4040,7 +4044,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Update Active Profile Button",
-        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet source = msg.status.source.name;\nmsg.p1_color = \"\";\nmsg.pid1 = \"33KS\";\nmsg.p2_color = \"\";\nmsg.pid2 = \"66KS\";\nmsg.p3_color = \"\";\nmsg.pid3 = \"125KS\";\nmsg.p4_color = \"\";\nmsg.pid4 = \"Last run\";\nmsg.p5_color = \"\";\nmsg.pid5 = \"250KS\";\nmsg.p6_color = \"\";\nmsg.pid6 = \"333KS\";\nmsg.p7_color = \"\";\nmsg.pid7 = \"500KS\";\nmsg.p8_color = \"\";\nmsg.pid8 = \"1000KS\";\nmsg.p9_color = \"\";\nmsg.pid9 = \"Custom\";\nif (msg.status.text === \"error:1\" || msg.status.text === \"rc:1\") {\n    msg.command = \"stop\";\n    return msg;\n}\nmsg.p1_color = \"gray\";\nmsg.p2_color = \"gray\";\nmsg.p3_color = \"gray\";\nmsg.p4_color = \"gray\";\nmsg.p5_color = \"gray\";\nmsg.p6_color = \"gray\";\nmsg.p7_color = \"gray\";\nmsg.p8_color = \"gray\";\nmsg.p9_color = \"gray\";\nif (msg.status.text) {\n    let pid = msg.status.text.split(':');\n    msg.command = \"start\";\n    switch (source) {\n        case \"Load 33KS\":\n            msg.pid1 = `PID: ${pid[1]}`;\n            msg.p1_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 66KS\":\n            msg.pid2 = `PID: ${pid[1]}`;\n            msg.p2_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 125KS\":\n            msg.pid3 = `PID: ${pid[1]}`;\n            msg.p3_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load last run\":\n            msg.pid4 = `PID: ${pid[1]}`;\n            msg.p4_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 250KS\":\n            msg.pid5 = `PID: ${pid[1]}`;\n            msg.p5_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 333KS\":\n            msg.pid6 = `PID: ${pid[1]}`;\n            msg.p6_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 500KS\":\n            msg.pid7 = `PID: ${pid[1]}`;\n            msg.p7_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 1000KS\":\n            msg.pid8 = `PID: ${pid[1]}`;\n            msg.p8_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load custom\":\n            msg.pid9 = `PID: ${pid[1]}`;\n            msg.p9_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n    }\n}",
+        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet source = msg.status.source.name;\nmsg.p1_color = \"\";\nmsg.p2_color = \"\";\nmsg.p3_color = \"\";\nmsg.p4_color = \"\";\nmsg.p5_color = \"\";\nmsg.p6_color = \"\";\nmsg.p7_color = \"\";\nmsg.p8_color = \"\";\nmsg.p9_color = \"\";\nif (msg.status.text === \"error:1\" || msg.status.text === \"rc:1\") {\n    msg.command = \"stop\";\n    return msg;\n}\nmsg.p1_color = \"gray\";\nmsg.p2_color = \"gray\";\nmsg.p3_color = \"gray\";\nmsg.p4_color = \"gray\";\nmsg.p5_color = \"gray\";\nmsg.p6_color = \"gray\";\nmsg.p7_color = \"gray\";\nmsg.p8_color = \"gray\";\nmsg.p9_color = \"gray\";\nif (msg.status.text) {\n    let pid = msg.status.text.split(':');\n    msg.command = \"start\";\n    switch (source) {\n        case \"Load 33KS\":\n            msg.p1_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 66KS\":\n            msg.p2_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 125KS\":\n            msg.p3_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load last run\":\n            msg.p4_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 250KS\":\n            msg.p5_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 333KS\":\n            msg.p6_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 500KS\":\n            msg.p7_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 1000KS\":\n            msg.p8_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load custom\":\n            msg.p9_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n    }\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4176,7 +4180,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "get active ffmpeg process id",
-        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\") || payload === true) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false)\n    global.set(\"bitrateChanged\", false)\n    return msg;\n}",
+        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\") ) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false)\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4192,7 +4196,8 @@
                 "5c8e87753e4ad083",
                 "be766117a7d2334f",
                 "873a04942564e509",
-                "b24692049485a46b"
+                "b24692049485a46b",
+                "6dc66b7d07f866f4"
             ]
         ]
     },
@@ -4306,8 +4311,8 @@
         "g": "e6bb4e6e08658367",
         "name": "Set custom ffpmeg flags for libx265",
         "info": " - **-x265-params b-adapt=1**\n - **-tune zerolatency**\n",
-        "x": 2100,
-        "y": 140,
+        "x": 2120,
+        "y": 40,
         "wires": []
     },
     {
@@ -5101,8 +5106,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1890,
-        "y": 180,
+        "x": 1910,
+        "y": 80,
         "wires": [
             []
         ]
@@ -5121,8 +5126,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2080,
-        "y": 180,
+        "x": 2100,
+        "y": 80,
         "wires": [
             []
         ]
@@ -5423,15 +5428,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Settings manager",
-        "func": "if (msg.payload !== 1) {\n    let jsonSettings = global.get(\"settings\");\n    msg.payload = JSON.stringify(jsonSettings);\n    return msg;\n}\n",
+        "func": "if (msg.payload !== 1) {\n    let jsonSettings = global.get(\"settings\");\n    msg.payload = JSON.stringify(jsonSettings);\n    msg.stop = true;\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3270,
-        "y": 160,
+        "x": 2790,
+        "y": 220,
         "wires": [
             [
                 "8751a0dd93a8ed60"
@@ -5450,8 +5455,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 3490,
-        "y": 160,
+        "x": 3010,
+        "y": 220,
         "wires": [
             []
         ]
@@ -5477,8 +5482,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2860,
-        "y": 160,
+        "x": 2380,
+        "y": 220,
         "wires": [
             [
                 "8c336280fd0fcc92",
@@ -5492,15 +5497,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Calculate bitrate function",
-        "func": "if (global.get(\"bitratechange\")) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.SR\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n\n    let fec = global.get(\"device.FEC\");\n    let numerator = parseInt(fec.substr(0, 1));\n    let denominator = parseInt(fec.substr(2, 2));\n    let fecCalculated = numerator / denominator;\n    let constelMode =\n        global.get(\"device.Constel\") === \"qpsk\" ? 2 :\n            global.get(\"device.Constel\") === \"8psk\" ? 3 :\n                global.get(\"device.Constel\") === \"16apsk\" ? 4 :\n                    5;\n    let qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\n    global.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\n    if (sr > 20 && sr < 36) {\n        videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 35 && sr < 67) {\n        videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 66 && sr < 126) {\n        videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 125 && sr < 251) {\n        videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 250 && sr < 334) {\n        videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 333 && sr < 501) {\n        videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 500 && sr < 1001) {\n        videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1000 && sr < 1501) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1500 && sr < 3001) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    msg.payload = qpskTsBitRate.toFixed(2);\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    msg.vidbr = videoBitRate?.toFixed(2);\n    return msg;\n} \n",
+        "func": "if (msg.payload) {\n    let sr = parseInt(global.get(\"device.SR\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n\n    let fec = global.get(\"device.FEC\");\n    let numerator = parseInt(fec.substr(0, 1));\n    let denominator = parseInt(fec.substr(2, 2));\n    let fecCalculated = numerator / denominator;\n    let constelMode =\n        global.get(\"device.Constel\") === \"qpsk\" ? 2 :\n            global.get(\"device.Constel\") === \"8psk\" ? 3 :\n                global.get(\"device.Constel\") === \"16apsk\" ? 4 :\n                    5;\n    let qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\n    global.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\n    if (sr > 20 && sr < 36) {\n        videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 35 && sr < 67) {\n        videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 66 && sr < 126) {\n        videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 125 && sr < 251) {\n        videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 250 && sr < 334) {\n        videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 333 && sr < 501) {\n        videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 500 && sr < 1001) {\n        videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1000 && sr < 1501) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1500 && sr < 3001) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    msg.payload = qpskTsBitRate.toFixed(2);\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    msg.vidbr = videoBitRate?.toFixed(2);\n    global.set(\"bitratechange\", false);\n    return msg;\n} \n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3110,
-        "y": 60,
+        "x": 2630,
+        "y": 120,
         "wires": [
             [
                 "8c336280fd0fcc92"
@@ -5852,7 +5857,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "0.5",
+        "repeat": "0.1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -6098,26 +6103,6 @@
         ]
     },
     {
-        "id": "f6bff8df621b3b2d",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "props": [],
-        "repeat": "0.1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 2850,
-        "y": 60,
-        "wires": [
-            [
-                "ac482a3670a2a148"
-            ]
-        ]
-    },
-    {
         "id": "332cd73b70ec7dca",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
@@ -6327,7 +6312,7 @@
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "active pid",
+        "name": "did bit change checker",
         "props": [
             {
                 "p": "payload"
@@ -6338,13 +6323,53 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "bitrateChanged",
+        "payload": "bitratechange",
         "payloadType": "global",
-        "x": 2390,
-        "y": 1160,
+        "x": 2070,
+        "y": 200,
         "wires": [
             [
-                "0c94d661261c1f6e"
+                "ac482a3670a2a148"
+            ]
+        ]
+    },
+    {
+        "id": "6dc66b7d07f866f4",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2940,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "f79b05ded58d1157",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "function 4",
+        "func": "let payload = msg.stop;\nif (payload){\n    msg.payload = \"1\";\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 820,
+        "wires": [
+            [
+                "0c94d661261c1f6e",
+                "4245872bb9518343"
             ]
         ]
     },
