@@ -128,9 +128,9 @@
             "e6bb4e6e08658367"
         ],
         "x": 1048,
-        "y": -47,
-        "w": 2484,
-        "h": 2000
+        "y": -27,
+        "w": 2864,
+        "h": 1980
     },
     {
         "id": "e6bb4e6e08658367",
@@ -255,8 +255,6 @@
             "5af92414e3f29873",
             "b6f1e8e864f6acb1",
             "95d261161c65d78d",
-            "edc838b06d6511f4",
-            "cde0b8f279bd036d",
             "bd7080b9d634eebf",
             "e7122ff60e30d850",
             "3022dd981488dba6",
@@ -294,7 +292,6 @@
             "540d6ebea9628a71",
             "4bfadd6d4acf437d",
             "f6370190fe6ad34e",
-            "ef3ea3405435304a",
             "f6bff8df621b3b2d",
             "332cd73b70ec7dca",
             "b62a3f484010816e",
@@ -302,12 +299,15 @@
             "dd252f1ac7e17f8a",
             "63528f3b0c9f3dae",
             "6c2ed6b6c40e42db",
-            "29f59051e6cbe148"
+            "29f59051e6cbe148",
+            "380f24164e357a8f",
+            "66d128c2a339f3cb",
+            "dd4535e1d6b65679"
         ],
         "x": 1074,
-        "y": -21,
-        "w": 2432,
-        "h": 1948
+        "y": -1,
+        "w": 2812,
+        "h": 1928
     },
     {
         "id": "162c77371bb6c962",
@@ -439,7 +439,7 @@
                 "type": "str"
             },
             {
-                "label": "CH3 333KS 1Ms",
+                "label": "CH3 333KS 1MS",
                 "value": "2403749886",
                 "type": "str"
             },
@@ -1640,7 +1640,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: FecMode",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1723,7 +1723,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Fec",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1744,7 +1744,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: SampleRate",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1941,7 +1941,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Constellation",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3670,7 +3670,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -3693,7 +3693,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -3716,7 +3716,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -4093,7 +4093,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -4176,7 +4176,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "get active ffmpeg process id",
-        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\")) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false)\n    return msg;\n}\n",
+        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\") || payload === true) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false)\n    global.set(\"bitrateChanged\", false)\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4306,7 +4306,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Set custom ffpmeg flags for libx265",
         "info": " - **-x265-params b-adapt=1**\n - **-tune zerolatency**\n",
-        "x": 1980,
+        "x": 2100,
         "y": 140,
         "wires": []
     },
@@ -4420,7 +4420,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -4493,7 +4493,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -4713,7 +4713,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -4736,7 +4736,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -5101,8 +5101,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1770,
-        "y": 140,
+        "x": 1890,
+        "y": 180,
         "wires": [
             []
         ]
@@ -5273,63 +5273,6 @@
         "wires": []
     },
     {
-        "id": "edc838b06d6511f4",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 2090,
-        "y": 1060,
-        "wires": [
-            [
-                "cde0b8f279bd036d"
-            ]
-        ]
-    },
-    {
-        "id": "cde0b8f279bd036d",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pid",
-                "pt": "global",
-                "to": "1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2210,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "bd7080b9d634eebf",
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
@@ -5448,7 +5391,7 @@
         "wires": [
             [],
             [
-                "29f59051e6cbe148"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -5480,15 +5423,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Settings manager",
-        "func": "let jsonSettings = global.get(\"settings\");\nmsg.payload = JSON.stringify(jsonSettings);\nreturn msg;",
+        "func": "if (msg.payload !== 1) {\n    let jsonSettings = global.get(\"settings\");\n    msg.payload = JSON.stringify(jsonSettings);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2370,
-        "y": 220,
+        "x": 3270,
+        "y": 160,
         "wires": [
             [
                 "8751a0dd93a8ed60"
@@ -5507,8 +5450,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2390,
-        "y": 300,
+        "x": 3490,
+        "y": 160,
         "wires": [
             []
         ]
@@ -5534,8 +5477,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1860,
-        "y": 200,
+        "x": 2860,
+        "y": 160,
         "wires": [
             [
                 "8c336280fd0fcc92",
@@ -5556,8 +5499,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2190,
-        "y": 100,
+        "x": 3110,
+        "y": 60,
         "wires": [
             [
                 "8c336280fd0fcc92"
@@ -5582,8 +5525,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2490,
-        "y": 20,
+        "x": 3710,
+        "y": 620,
         "wires": []
     },
     {
@@ -5604,8 +5547,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2500,
-        "y": 100,
+        "x": 3700,
+        "y": 680,
         "wires": []
     },
     {
@@ -5616,8 +5559,8 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 2000,
-        "y": 720,
+        "x": 3540,
+        "y": 320,
         "wires": [
             [
                 "57db37c4faa9e7f2",
@@ -5643,8 +5586,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2170,
-        "y": 700,
+        "x": 3710,
+        "y": 240,
         "wires": []
     },
     {
@@ -5660,8 +5603,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1760,
-        "y": 720,
+        "x": 3320,
+        "y": 320,
         "wires": [
             [
                 "26fb093b23e3a621"
@@ -5688,8 +5631,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2030,
-        "y": 860,
+        "x": 3730,
+        "y": 360,
         "wires": [
             []
         ]
@@ -5706,8 +5649,8 @@
         "constant": "1000",
         "round": true,
         "decimals": "0",
-        "x": 2160,
-        "y": 800,
+        "x": 3720,
+        "y": 300,
         "wires": [
             [
                 "86f5a4e13856dce4"
@@ -5732,8 +5675,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "str",
-        "x": 2030,
-        "y": 640,
+        "x": 3710,
+        "y": 180,
         "wires": [
             [
                 "86f5a4e13856dce4"
@@ -5853,8 +5796,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 1760,
-        "y": 640,
+        "x": 3100,
+        "y": 320,
         "wires": [
             [
                 "2a88de9371c58247"
@@ -5879,8 +5822,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1610,
-        "y": 620,
+        "x": 2950,
+        "y": 320,
         "wires": [
             [
                 "4c5bde857e7964a8"
@@ -5894,8 +5837,8 @@
         "g": "e6bb4e6e08658367",
         "name": "profile loading change imagesize",
         "info": "",
-        "x": 1810,
-        "y": 600,
+        "x": 3310,
+        "y": 280,
         "wires": []
     },
     {
@@ -5903,7 +5846,7 @@
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "image size",
+        "name": "active pid",
         "props": [
             {
                 "p": "payload"
@@ -5916,8 +5859,8 @@
         "topic": "",
         "payload": "pid",
         "payloadType": "global",
-        "x": 2170,
-        "y": 1140,
+        "x": 2230,
+        "y": 1060,
         "wires": [
             [
                 "c4c1592e68a08ac2"
@@ -5986,8 +5929,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 2690,
-        "y": 40,
+        "x": 3370,
+        "y": 440,
         "wires": [
             [
                 "6c91e490a62106d5"
@@ -6007,8 +5950,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 2840,
-        "y": 40,
+        "x": 3520,
+        "y": 440,
         "wires": [
             [
                 "2598c63498a7d271"
@@ -6028,8 +5971,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3040,
-        "y": 40,
+        "x": 3720,
+        "y": 440,
         "wires": [
             []
         ]
@@ -6046,8 +5989,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 2690,
-        "y": 100,
+        "x": 3370,
+        "y": 500,
         "wires": [
             [
                 "d4cacb1bf63ac8fb"
@@ -6067,8 +6010,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 2840,
-        "y": 100,
+        "x": 3520,
+        "y": 500,
         "wires": [
             [
                 "39cfefa0e8ccb9b9"
@@ -6088,12 +6031,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3040,
-        "y": 100,
+        "x": 3720,
+        "y": 500,
         "wires": [
-            [
-                "ef3ea3405435304a"
-            ]
+            []
         ]
     },
     {
@@ -6108,8 +6049,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 2690,
-        "y": 140,
+        "x": 3370,
+        "y": 560,
         "wires": [
             [
                 "4bfadd6d4acf437d"
@@ -6129,8 +6070,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 2830,
-        "y": 140,
+        "x": 3510,
+        "y": 560,
         "wires": [
             [
                 "f6370190fe6ad34e"
@@ -6150,28 +6091,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3060,
-        "y": 140,
+        "x": 3740,
+        "y": 560,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "ef3ea3405435304a",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3180,
-        "y": 240,
-        "wires": []
     },
     {
         "id": "f6bff8df621b3b2d",
@@ -6185,8 +6109,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1950,
-        "y": 20,
+        "x": 2850,
+        "y": 60,
         "wires": [
             [
                 "ac482a3670a2a148"
@@ -6211,8 +6135,8 @@
         "topic": "",
         "payload": "settings.VBITRATE",
         "payloadType": "global",
-        "x": 2200,
-        "y": 20,
+        "x": 3440,
+        "y": 620,
         "wires": [
             [
                 "23f54550ba5b6a79"
@@ -6237,8 +6161,8 @@
         "topic": "",
         "payload": "settings.TSBITRATE",
         "payloadType": "global",
-        "x": 2240,
-        "y": 60,
+        "x": 3440,
+        "y": 680,
         "wires": [
             [
                 "5d929a20d665af8d"
@@ -6278,8 +6202,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 2550,
-        "y": 340,
+        "x": 2790,
+        "y": 400,
         "wires": [
             [
                 "63528f3b0c9f3dae"
@@ -6299,8 +6223,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2710,
-        "y": 340,
+        "x": 2950,
+        "y": 400,
         "wires": [
             [
                 "6c2ed6b6c40e42db"
@@ -6321,16 +6245,16 @@
         "height": 1,
         "passthru": true,
         "mode": "text",
-        "delay": 300,
+        "delay": "0",
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2950,
-        "y": 340,
+        "x": 3150,
+        "y": 400,
         "wires": [
             [
-                "29f59051e6cbe148"
+                "66d128c2a339f3cb"
             ]
         ]
     },
@@ -6352,9 +6276,77 @@
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
-        "x": 3400,
-        "y": 960,
+        "x": 3600,
+        "y": 880,
         "wires": []
+    },
+    {
+        "id": "380f24164e357a8f",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Output safegaurd",
+        "func": "let ffmpegOut = msg.payload;\nif (`${ffmpegOut}`.includes(\"drop=\")){\n    msg.payload = ffmpegOut;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3450,
+        "y": 980,
+        "wires": [
+            [
+                "29f59051e6cbe148"
+            ]
+        ]
+    },
+    {
+        "id": "66d128c2a339f3cb",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Output clearer",
+        "func": "let ffmpegOut = msg.payload;\nif (ffmpegOut === \"\" || `${ffmpegOut}`.length < 2){\n    msg.payload = ffmpegOut;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3420,
+        "y": 820,
+        "wires": [
+            [
+                "29f59051e6cbe148"
+            ]
+        ]
+    },
+    {
+        "id": "dd4535e1d6b65679",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "active pid",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "bitrateChanged",
+        "payloadType": "global",
+        "x": 2390,
+        "y": 1160,
+        "wires": [
+            [
+                "0c94d661261c1f6e"
+            ]
+        ]
     },
     {
         "id": "b502d93f5b60fa69",
