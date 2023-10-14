@@ -303,7 +303,8 @@
             "66d128c2a339f3cb",
             "dd4535e1d6b65679",
             "6dc66b7d07f866f4",
-            "f79b05ded58d1157"
+            "f79b05ded58d1157",
+            "ae8f84a8936bf21e"
         ],
         "x": 1074,
         "y": -1,
@@ -1724,7 +1725,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Fec",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload\nmsg.stop = true;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"stop\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1735,8 +1736,7 @@
         "y": 760,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "f79b05ded58d1157"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -1746,7 +1746,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: SampleRate",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nmsg.stop = true;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1757,8 +1757,7 @@
         "y": 1120,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "f79b05ded58d1157"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -1944,7 +1943,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Constellation",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nmsg.stop = true;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1955,8 +1954,7 @@
         "y": 1440,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "f79b05ded58d1157"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -4180,7 +4178,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "get active ffmpeg process id",
-        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\") ) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false)\n    return msg;\n}",
+        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\")) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false)\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -5428,7 +5426,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Settings manager",
-        "func": "if (msg.payload !== 1) {\n    let jsonSettings = global.get(\"settings\");\n    msg.payload = JSON.stringify(jsonSettings);\n    msg.stop = true;\n    return msg;\n}\n",
+        "func": "if (msg.payload !== 1) {\n    let jsonSettings = global.get(\"settings\");\n    msg.payload = JSON.stringify(jsonSettings);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6356,20 +6354,46 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "function 4",
-        "func": "let payload = msg.stop;\nif (payload){\n    msg.payload = \"1\";\n    return msg;\n}",
+        "name": "then we should stop the transmission and profile",
+        "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\";\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2000,
-        "y": 820,
+        "x": 1880,
+        "y": 760,
         "wires": [
             [
                 "0c94d661261c1f6e",
                 "4245872bb9518343"
+            ]
+        ]
+    },
+    {
+        "id": "ae8f84a8936bf21e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "did we change profile variables?",
+        "props": [
+            {
+                "p": "stop",
+                "v": "stop",
+                "vt": "global"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1740,
+        "y": 660,
+        "wires": [
+            [
+                "f79b05ded58d1157"
             ]
         ]
     },
