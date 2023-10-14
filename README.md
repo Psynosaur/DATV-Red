@@ -10,6 +10,8 @@ Script in this project is from DL5OCD Michael and his post about it can be found
 
 Node Red flows shamelessly used from this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/d7790d64-9b21-4f52-a7dc-c5661dc7c487)
+
 ## Check libx265 performance 
 
  Run this bat file.
@@ -66,8 +68,6 @@ DATV transmissions normally have the following programs open:
 So that is five programs and their child windows we need open just to have TX and RX.
 
 I'd like to make that 3 or perhaps even less, it would be nice to run this on any operating system
-
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/34c9501f-82ce-4599-9a5b-d33ef3f69a86)
 
 ## QuickTune Control
 If you'd like to tune with QuickTune, import the flow and setup QuickTune like so adding 127.0.0.1 all default paramaters.
