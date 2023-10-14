@@ -48,11 +48,13 @@
             "3db47b10f2ad0660",
             "9afe5b50e0c2e439",
             "3eb70786a69e6c70",
-            "f1c89523da4ca9da"
+            "f1c89523da4ca9da",
+            "906644f41d307cdf",
+            "1411feb53b899df2"
         ],
-        "x": 174,
+        "x": 34,
         "y": 39,
-        "w": 1092,
+        "w": 1352,
         "h": 722
     },
     {
@@ -72,28 +74,13 @@
         "multiple": false,
         "options": [
             {
-                "label": "None",
-                "value": "",
+                "label": "",
+                "value": "h264_nvenc",
                 "type": "str"
             },
             {
-                "label": "h264_nvenc",
-                "value": "HW_h264_nvenc",
-                "type": "str"
-            },
-            {
-                "label": "hevc_nvenc",
-                "value": "HW_hevc_nvenc",
-                "type": "str"
-            },
-            {
-                "label": "libvvenc",
-                "value": "HW_libvvenc",
-                "type": "str"
-            },
-            {
-                "label": "libaom-av1",
-                "value": "HW_libaom-av1",
+                "label": "",
+                "value": "hevc_nvenc",
                 "type": "str"
             }
         ],
@@ -148,23 +135,23 @@
         "multiple": false,
         "options": [
             {
-                "label": "libx264",
-                "value": "SW_libx264",
+                "label": "",
+                "value": "libx264",
                 "type": "str"
             },
             {
-                "label": "libx265",
-                "value": "SW_libx265",
+                "label": "",
+                "value": "libx265",
                 "type": "str"
             },
             {
-                "label": "libvvenc",
-                "value": "SW_libvvenc",
+                "label": "",
+                "value": "libvvenc",
                 "type": "str"
             },
             {
-                "label": "libaom-av1",
-                "value": "SW_libaom-av1",
+                "label": "",
+                "value": "libaom-av1",
                 "type": "str"
             }
         ],
@@ -321,7 +308,7 @@
         "z": "15cb052db1c9d25e",
         "g": "1f5722b7aff1a710",
         "name": "function 1",
-        "func": "let payload = msg.payload;\nmsg.payload = payload.slice(3);\nreturn msg;",
+        "func": "let payload = msg.payload;\nmsg.payload = payload;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -416,7 +403,8 @@
         "y": 180,
         "wires": [
             [
-                "6bfbf0101b2cd3a4"
+                "6bfbf0101b2cd3a4",
+                "906644f41d307cdf"
             ]
         ]
     },
@@ -641,8 +629,7 @@
         "y": 480,
         "wires": [
             [
-                "6bfbf0101b2cd3a4",
-                "3eb70786a69e6c70"
+                "6bfbf0101b2cd3a4"
             ]
         ]
     },
@@ -748,7 +735,8 @@
         "y": 360,
         "wires": [
             [
-                "34feacf8cac79e5e"
+                "34feacf8cac79e5e",
+                "3eb70786a69e6c70"
             ]
         ]
     },
@@ -764,8 +752,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1110,
-        "y": 540,
+        "x": 1290,
+        "y": 420,
         "wires": [
             []
         ]
@@ -830,8 +818,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1080,
-        "y": 260,
+        "x": 1020,
+        "y": 440,
         "wires": [
             []
         ]
@@ -867,7 +855,7 @@
         "type": "inject",
         "z": "15cb052db1c9d25e",
         "g": "1f5722b7aff1a710",
-        "name": "image size",
+        "name": "audio bitrate",
         "props": [
             {
                 "p": "payload"
@@ -880,7 +868,7 @@
         "topic": "",
         "payload": "settings.ABITRATE",
         "payloadType": "global",
-        "x": 350,
+        "x": 360,
         "y": 480,
         "wires": [
             [
@@ -893,7 +881,7 @@
         "type": "inject",
         "z": "15cb052db1c9d25e",
         "g": "1f5722b7aff1a710",
-        "name": "image size",
+        "name": "audio channels",
         "props": [
             {
                 "p": "payload"
@@ -906,7 +894,7 @@
         "topic": "",
         "payload": "settings.AUDIO",
         "payloadType": "global",
-        "x": 290,
+        "x": 300,
         "y": 300,
         "wires": [
             [
@@ -919,7 +907,7 @@
         "type": "inject",
         "z": "15cb052db1c9d25e",
         "g": "1f5722b7aff1a710",
-        "name": "image size",
+        "name": "fps",
         "props": [
             {
                 "p": "payload"
@@ -932,7 +920,7 @@
         "topic": "",
         "payload": "settings.FPS",
         "payloadType": "global",
-        "x": 290,
+        "x": 270,
         "y": 220,
         "wires": [
             [
@@ -945,11 +933,18 @@
         "type": "change",
         "z": "15cb052db1c9d25e",
         "g": "1f5722b7aff1a710",
-        "name": "",
+        "name": "Set globals",
         "rules": [
             {
                 "t": "set",
                 "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "stop",
                 "pt": "global",
                 "to": "true",
                 "tot": "str"
@@ -960,8 +955,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 870,
-        "y": 580,
+        "x": 1290,
+        "y": 300,
         "wires": [
             []
         ]
@@ -971,7 +966,7 @@
         "type": "inject",
         "z": "15cb052db1c9d25e",
         "g": "1f5722b7aff1a710",
-        "name": "image size",
+        "name": "codec",
         "props": [
             {
                 "p": "payload"
@@ -984,7 +979,7 @@
         "topic": "",
         "payload": "settings.CODEC",
         "payloadType": "global",
-        "x": 490,
+        "x": 480,
         "y": 620,
         "wires": [
             [
@@ -993,11 +988,56 @@
         ]
     },
     {
+        "id": "906644f41d307cdf",
+        "type": "file",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "filename": "codec",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1230,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1411feb53b899df2",
+        "type": "inject",
+        "z": "15cb052db1c9d25e",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.CODEC",
+        "payloadType": "global",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "f9186ed78accdb6c",
+                "a0addd449f41ee70"
+            ]
+        ]
+    },
+    {
         "id": "4f22c4dbc8bc16dd",
         "type": "ui_group",
         "name": "Profiles",
         "tab": "9b3296db2e0c849f",
-        "order": 1,
+        "order": 6,
         "disp": true,
         "width": "13",
         "collapse": false,
@@ -1006,9 +1046,9 @@
     {
         "id": "9b3296db2e0c849f",
         "type": "ui_tab",
-        "name": "Pluto",
-        "icon": "dashboard",
-        "order": 2,
+        "name": "DATV Simple",
+        "icon": "fa-fire",
+        "order": 1,
         "disabled": false,
         "hidden": false
     }
