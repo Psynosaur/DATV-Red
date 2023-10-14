@@ -127,9 +127,9 @@
         "nodes": [
             "e6bb4e6e08658367"
         ],
-        "x": 1048,
+        "x": 1088,
         "y": -27,
-        "w": 2864,
+        "w": 3064,
         "h": 1980
     },
     {
@@ -304,11 +304,15 @@
             "dd4535e1d6b65679",
             "6dc66b7d07f866f4",
             "f79b05ded58d1157",
-            "ae8f84a8936bf21e"
+            "ae8f84a8936bf21e",
+            "86a189cf7830c88d",
+            "f7229eafdbdca0eb",
+            "e8dd5b834ed5e893",
+            "68f30c5c5f1b0e33"
         ],
-        "x": 1074,
+        "x": 1114,
         "y": -1,
-        "w": 2812,
+        "w": 3012,
         "h": 1928
     },
     {
@@ -334,7 +338,7 @@
             "45b5b704879d30fe",
             "c8c1c80d91c7c4b9"
         ],
-        "x": 1794,
+        "x": 2034,
         "y": 1599,
         "w": 792,
         "h": 302
@@ -570,7 +574,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1200,
+        "x": 1440,
         "y": 1060,
         "wires": [
             [
@@ -598,7 +602,7 @@
         "max": "0",
         "step": "-0.25",
         "className": "",
-        "x": 1200,
+        "x": 1440,
         "y": 960,
         "wires": [
             [
@@ -652,7 +656,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1190,
+        "x": 1430,
         "y": 1180,
         "wires": [
             [
@@ -675,7 +679,7 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 1930,
+        "x": 2170,
         "y": 940,
         "wires": []
     },
@@ -696,58 +700,53 @@
         "multiple": false,
         "options": [
             {
-                "label": "35Ks",
+                "label": "35KS",
                 "value": 35000,
                 "type": "num"
             },
             {
-                "label": "66 Ks",
+                "label": "66 KS",
                 "value": 66000,
                 "type": "num"
             },
             {
-                "label": "125 Ks",
+                "label": "125 KS",
                 "value": 125000,
                 "type": "num"
             },
             {
-                "label": "250 Ks",
+                "label": "250 KS",
                 "value": 250000,
                 "type": "num"
             },
             {
-                "label": "333 Ks",
+                "label": "333 KS",
                 "value": 333000,
                 "type": "num"
             },
             {
-                "label": "500 Ks",
+                "label": "500 KS",
                 "value": 500000,
                 "type": "num"
             },
             {
-                "label": "1 Ms",
+                "label": "1 MS",
                 "value": 1000000,
                 "type": "num"
             },
             {
-                "label": "1.5 Ms/s",
+                "label": "1.5 MS",
                 "value": 1500000,
                 "type": "num"
             },
             {
-                "label": "2 Ms",
+                "label": "2 MS",
                 "value": 2000000,
                 "type": "num"
             },
             {
-                "label": "3 Ms",
+                "label": "3 MS",
                 "value": 3000000,
-                "type": "num"
-            },
-            {
-                "label": "4 Ms",
-                "value": 4000000,
                 "type": "num"
             }
         ],
@@ -755,7 +754,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1210,
+        "x": 1450,
         "y": 1120,
         "wires": [
             [
@@ -867,83 +866,12 @@
         "height": 1,
         "passthru": false,
         "multiple": false,
-        "options": [
-            {
-                "label": "none",
-                "value": 0,
-                "type": "num"
-            },
-            {
-                "label": "1/4",
-                "value": "1/4",
-                "type": "str"
-            },
-            {
-                "label": "1/3",
-                "value": "1/3",
-                "type": "str"
-            },
-            {
-                "label": "2/5",
-                "value": "2/5",
-                "type": "str"
-            },
-            {
-                "label": "1/2",
-                "value": "1/2",
-                "type": "str"
-            },
-            {
-                "label": "3/5",
-                "value": "3/5",
-                "type": "str"
-            },
-            {
-                "label": "2/3",
-                "value": "2/3",
-                "type": "str"
-            },
-            {
-                "label": "3/4",
-                "value": "3/4",
-                "type": "str"
-            },
-            {
-                "label": "4/5",
-                "value": "4/5",
-                "type": "str"
-            },
-            {
-                "label": "5/6",
-                "value": "5/6",
-                "type": "str"
-            },
-            {
-                "label": "6/7",
-                "value": "6/7",
-                "type": "str"
-            },
-            {
-                "label": "7/8",
-                "value": "7/8",
-                "type": "str"
-            },
-            {
-                "label": "8/9",
-                "value": "8/9",
-                "type": "str"
-            },
-            {
-                "label": "9/10",
-                "value": "9/10",
-                "type": "str"
-            }
-        ],
+        "options": [],
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1190,
+        "x": 1430,
         "y": 760,
         "wires": [
             [
@@ -1070,7 +998,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1200,
+        "x": 1440,
         "y": 820,
         "wires": [
             [
@@ -1108,7 +1036,7 @@
         "scope": [
             "347c8041af1a52e0"
         ],
-        "x": 1160,
+        "x": 1400,
         "y": 140,
         "wires": [
             [
@@ -1129,7 +1057,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1610,
         "y": 140,
         "wires": [
             [
@@ -1158,7 +1086,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1550,
+        "x": 1790,
         "y": 140,
         "wires": [
             []
@@ -1185,7 +1113,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1390,
+        "x": 1630,
         "y": 1320,
         "wires": [
             [
@@ -1214,7 +1142,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1390,
+        "x": 1630,
         "y": 1280,
         "wires": [
             [
@@ -1257,7 +1185,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1400,
+        "x": 1640,
         "y": 1220,
         "wires": [
             [
@@ -1300,7 +1228,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1400,
+        "x": 1640,
         "y": 1400,
         "wires": [
             [
@@ -1328,7 +1256,7 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1150,
+        "x": 1390,
         "y": 200,
         "wires": []
     },
@@ -1391,7 +1319,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1600,
+        "x": 1840,
         "y": 1280,
         "wires": [
             [
@@ -1413,7 +1341,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1940,
+        "x": 2180,
         "y": 1380,
         "wires": [
             [
@@ -1649,7 +1577,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1620,
         "y": 820,
         "wires": [
             [
@@ -1710,7 +1638,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1570,
+        "x": 1810,
         "y": 960,
         "wires": [
             [
@@ -1732,7 +1660,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
+        "x": 1590,
         "y": 760,
         "wires": [
             [
@@ -1753,7 +1681,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
+        "x": 1650,
         "y": 1120,
         "wires": [
             [
@@ -1774,7 +1702,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1490,
+        "x": 1730,
         "y": 1020,
         "wires": [
             [
@@ -1796,7 +1724,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
+        "x": 1660,
         "y": 1180,
         "wires": [
             [
@@ -1929,7 +1857,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1210,
+        "x": 1450,
         "y": 1440,
         "wires": [
             [
@@ -1950,7 +1878,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1470,
+        "x": 1710,
         "y": 1440,
         "wires": [
             [
@@ -2118,7 +2046,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1190,
+        "x": 1430,
         "y": 1520,
         "wires": [
             [
@@ -2139,7 +2067,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
+        "x": 1650,
         "y": 1520,
         "wires": [
             [
@@ -2178,7 +2106,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1190,
+        "x": 1430,
         "y": 1600,
         "wires": [
             [
@@ -2199,7 +2127,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1390,
+        "x": 1630,
         "y": 1600,
         "wires": [
             [
@@ -2271,7 +2199,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1620,
         "y": 700,
         "wires": [
             [
@@ -2300,7 +2228,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1210,
+        "x": 1450,
         "y": 700,
         "wires": [
             [
@@ -2427,7 +2355,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1220,
+        "x": 1460,
         "y": 1680,
         "wires": [
             [
@@ -2448,7 +2376,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1470,
+        "x": 1710,
         "y": 1680,
         "wires": [
             [
@@ -2530,7 +2458,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1230,
+        "x": 1470,
         "y": 1760,
         "wires": [
             [
@@ -2551,7 +2479,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
+        "x": 1720,
         "y": 1760,
         "wires": [
             [
@@ -2621,7 +2549,7 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 2450,
+        "x": 2690,
         "y": 1860,
         "wires": []
     },
@@ -2638,7 +2566,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
+        "x": 2490,
         "y": 1860,
         "wires": [
             [
@@ -2665,7 +2593,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1920,
+        "x": 2160,
         "y": 1720,
         "wires": [
             [
@@ -2688,7 +2616,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2070,
+        "x": 2310,
         "y": 1640,
         "wires": [
             [
@@ -2708,7 +2636,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2470,
+        "x": 2710,
         "y": 1780,
         "wires": [
             []
@@ -2736,7 +2664,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1890,
+        "x": 2130,
         "y": 1640,
         "wires": [
             [
@@ -2757,7 +2685,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2450,
+        "x": 2690,
         "y": 1700,
         "wires": [
             []
@@ -2839,7 +2767,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1210,
+        "x": 1450,
         "y": 1840,
         "wires": [
             [
@@ -2860,7 +2788,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
+        "x": 1720,
         "y": 1840,
         "wires": [
             [
@@ -2931,7 +2859,7 @@
         "max": "2409750000",
         "step": "1000",
         "className": "",
-        "x": 1240,
+        "x": 1480,
         "y": 1000,
         "wires": [
             [
@@ -2959,7 +2887,7 @@
         "max": "50000",
         "step": "250",
         "className": "",
-        "x": 1650,
+        "x": 1890,
         "y": 260,
         "wires": [
             [
@@ -2979,7 +2907,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1810,
+        "x": 2050,
         "y": 340,
         "wires": [
             []
@@ -2998,7 +2926,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1670,
+        "x": 1910,
         "y": 360,
         "wires": [
             [
@@ -3020,7 +2948,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1430,
+        "x": 1670,
         "y": 200,
         "wires": [
             [
@@ -3113,7 +3041,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1630,
+        "x": 1870,
         "y": 200,
         "wires": [
             [
@@ -3141,7 +3069,7 @@
         "max": "3",
         "step": "0.01",
         "className": "",
-        "x": 1220,
+        "x": 1460,
         "y": 640,
         "wires": [
             [
@@ -3162,7 +3090,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
+        "x": 1930,
         "y": 560,
         "wires": [
             [
@@ -3278,7 +3206,7 @@
         "payloadType": "global",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1190,
+        "x": 1430,
         "y": 880,
         "wires": [
             [
@@ -3307,7 +3235,7 @@
         "payloadType": "global",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1190,
+        "x": 1430,
         "y": 920,
         "wires": [
             [
@@ -3328,7 +3256,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1580,
         "y": 880,
         "wires": [
             [
@@ -3349,7 +3277,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1580,
         "y": 920,
         "wires": [
             [
@@ -3545,7 +3473,8 @@
         "y": 1480,
         "wires": [
             [
-                "f38c438a231661c6"
+                "f38c438a231661c6",
+                "86a189cf7830c88d"
             ]
         ]
     },
@@ -3667,7 +3596,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 125KS",
-        "x": 2990,
+        "x": 3230,
         "y": 620,
         "wires": [
             [],
@@ -3690,7 +3619,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 250KS",
-        "x": 2990,
+        "x": 3230,
         "y": 740,
         "wires": [
             [],
@@ -3713,7 +3642,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 333KS",
-        "x": 2990,
+        "x": 3230,
         "y": 800,
         "wires": [
             [],
@@ -3744,7 +3673,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2390,
+        "x": 2630,
         "y": 740,
         "wires": [
             [
@@ -3773,7 +3702,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2390,
+        "x": 2630,
         "y": 800,
         "wires": [
             [
@@ -3802,7 +3731,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2390,
+        "x": 2630,
         "y": 620,
         "wires": [
             [
@@ -3824,7 +3753,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill MQTT Explorer",
-        "x": 3010,
+        "x": 3250,
         "y": 1140,
         "wires": [
             [],
@@ -3853,7 +3782,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2420,
+        "x": 2660,
         "y": 1080,
         "wires": [
             [
@@ -3876,7 +3805,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill CONTROL",
-        "x": 3000,
+        "x": 3240,
         "y": 1080,
         "wires": [
             [],
@@ -3897,7 +3826,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill ffmpeg",
-        "x": 2980,
+        "x": 3220,
         "y": 1020,
         "wires": [
             [],
@@ -3918,7 +3847,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Kill NodeRed PID",
-        "x": 3010,
+        "x": 3250,
         "y": 1200,
         "wires": [
             [],
@@ -3943,7 +3872,7 @@
             "b5ed5a8ccff72343",
             "45c2428c04be0e5f"
         ],
-        "x": 1880,
+        "x": 2120,
         "y": 460,
         "wires": [
             [
@@ -4049,7 +3978,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2040,
+        "x": 2280,
         "y": 560,
         "wires": [
             [
@@ -4073,7 +4002,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Process kill commands would differ on Linux",
         "info": "",
-        "x": 2690,
+        "x": 2930,
         "y": 1020,
         "wires": []
     },
@@ -4090,7 +4019,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load last run",
-        "x": 2990,
+        "x": 3230,
         "y": 680,
         "wires": [
             [],
@@ -4121,7 +4050,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2400,
+        "x": 2640,
         "y": 680,
         "wires": [
             [
@@ -4185,7 +4114,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2700,
+        "x": 2940,
         "y": 1140,
         "wires": [
             [
@@ -4212,7 +4141,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 620,
         "wires": [
             [
@@ -4233,7 +4162,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 740,
         "wires": [
             [
@@ -4254,7 +4183,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 800,
         "wires": [
             [
@@ -4275,7 +4204,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 680,
         "wires": [
             [
@@ -4296,7 +4225,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
+        "x": 2220,
         "y": 1860,
         "wires": [
             []
@@ -4309,7 +4238,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Set custom ffpmeg flags for libx265",
         "info": " - **-x265-params b-adapt=1**\n - **-tune zerolatency**\n",
-        "x": 2120,
+        "x": 2360,
         "y": 40,
         "wires": []
     },
@@ -4320,7 +4249,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Ensures only one ffmepg process",
         "info": "",
-        "x": 2550,
+        "x": 2790,
         "y": 460,
         "wires": []
     },
@@ -4347,7 +4276,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1190,
+        "x": 1430,
         "y": 1260,
         "wires": [
             [
@@ -4376,7 +4305,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2390,
+        "x": 2630,
         "y": 860,
         "wires": [
             [
@@ -4397,7 +4326,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 860,
         "wires": [
             [
@@ -4418,7 +4347,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 500KS",
-        "x": 2990,
+        "x": 3230,
         "y": 860,
         "wires": [
             [],
@@ -4449,7 +4378,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2400,
+        "x": 2640,
         "y": 920,
         "wires": [
             [
@@ -4470,7 +4399,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 920,
         "wires": [
             [
@@ -4491,7 +4420,7 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load 1000KS",
-        "x": 3000,
+        "x": 3240,
         "y": 920,
         "wires": [
             [],
@@ -4519,7 +4448,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1190,
+        "x": 1430,
         "y": 1320,
         "wires": [
             [
@@ -4540,7 +4469,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1700,
+        "x": 1940,
         "y": 1380,
         "wires": [
             [
@@ -4569,7 +4498,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2420,
+        "x": 2660,
         "y": 980,
         "wires": [
             [
@@ -4590,7 +4519,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "VLC",
-        "x": 3130,
+        "x": 3370,
         "y": 980,
         "wires": [
             [],
@@ -4619,7 +4548,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2390,
+        "x": 2630,
         "y": 560,
         "wires": [
             [
@@ -4648,7 +4577,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2390,
+        "x": 2630,
         "y": 500,
         "wires": [
             [
@@ -4669,7 +4598,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 560,
         "wires": [
             [
@@ -4690,7 +4619,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2710,
+        "x": 2950,
         "y": 500,
         "wires": [
             [
@@ -4711,7 +4640,7 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load 33KS",
-        "x": 2990,
+        "x": 3230,
         "y": 500,
         "wires": [
             [],
@@ -4734,7 +4663,7 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load 66KS",
-        "x": 2990,
+        "x": 3230,
         "y": 560,
         "wires": [
             [],
@@ -4843,7 +4772,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 1430,
+        "x": 1670,
         "y": 400,
         "wires": [
             [
@@ -4872,7 +4801,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1190,
+        "x": 1430,
         "y": 300,
         "wires": [
             [
@@ -4897,7 +4826,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1530,
+        "x": 1770,
         "y": 1080,
         "wires": [
             []
@@ -4915,7 +4844,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1710,
+        "x": 1950,
         "y": 480,
         "wires": [
             []
@@ -4934,7 +4863,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1410,
+        "x": 1650,
         "y": 320,
         "wires": [
             [
@@ -4963,7 +4892,7 @@
         "payloadType": "global",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1190,
+        "x": 1430,
         "y": 560,
         "wires": [
             [
@@ -4992,7 +4921,7 @@
         "payloadType": "global",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1190,
+        "x": 1430,
         "y": 600,
         "wires": [
             [
@@ -5013,7 +4942,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1580,
         "y": 560,
         "wires": [
             [
@@ -5034,7 +4963,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1580,
         "y": 600,
         "wires": [
             [
@@ -5054,7 +4983,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1590,
+        "x": 1830,
         "y": 900,
         "wires": [
             []
@@ -5073,7 +5002,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1450,
+        "x": 1690,
         "y": 280,
         "wires": [
             [
@@ -5104,7 +5033,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1910,
+        "x": 2150,
         "y": 80,
         "wires": [
             []
@@ -5124,7 +5053,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2100,
+        "x": 2340,
         "y": 80,
         "wires": [
             []
@@ -5143,7 +5072,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1420,
+        "x": 1660,
         "y": 440,
         "wires": [
             [
@@ -5163,7 +5092,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1640,
+        "x": 1880,
         "y": 1220,
         "wires": [
             []
@@ -5182,7 +5111,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1430,
+        "x": 1670,
         "y": 360,
         "wires": [
             [
@@ -5197,7 +5126,7 @@
         "g": "e6bb4e6e08658367",
         "name": "tsmode must be set, or else digital mode setting reboots pluto",
         "info": "",
-        "x": 1320,
+        "x": 1560,
         "y": 240,
         "wires": []
     },
@@ -5221,7 +5150,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2080,
+        "x": 2320,
         "y": 1320,
         "wires": [
             []
@@ -5247,7 +5176,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1800,
+        "x": 2040,
         "y": 1320,
         "wires": [
             []
@@ -5271,7 +5200,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1180,
+        "x": 1420,
         "y": 480,
         "wires": []
     },
@@ -5296,7 +5225,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2410,
+        "x": 2650,
         "y": 1260,
         "wires": [
             [
@@ -5317,7 +5246,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "DVB-S GUI",
-        "x": 2610,
+        "x": 2850,
         "y": 1260,
         "wires": [
             [],
@@ -5343,7 +5272,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1180,
+        "x": 1420,
         "y": 520,
         "wires": []
     },
@@ -5368,7 +5297,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2400,
+        "x": 2640,
         "y": 1360,
         "wires": [
             [
@@ -5389,7 +5318,7 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load custom",
-        "x": 2910,
+        "x": 3150,
         "y": 1360,
         "wires": [
             [],
@@ -5412,7 +5341,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2650,
+        "x": 2890,
         "y": 1360,
         "wires": [
             [
@@ -5433,7 +5362,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2790,
+        "x": 3030,
         "y": 220,
         "wires": [
             [
@@ -5453,7 +5382,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 3010,
+        "x": 3250,
         "y": 220,
         "wires": [
             []
@@ -5480,7 +5409,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2380,
+        "x": 2620,
         "y": 220,
         "wires": [
             [
@@ -5502,7 +5431,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2630,
+        "x": 2870,
         "y": 120,
         "wires": [
             [
@@ -5528,7 +5457,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3710,
+        "x": 3950,
         "y": 620,
         "wires": []
     },
@@ -5550,7 +5479,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3700,
+        "x": 3940,
         "y": 680,
         "wires": []
     },
@@ -5562,7 +5491,7 @@
         "name": "",
         "persistId": "",
         "humanizeLocale": "",
-        "x": 3540,
+        "x": 3780,
         "y": 320,
         "wires": [
             [
@@ -5589,7 +5518,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3710,
+        "x": 3950,
         "y": 240,
         "wires": []
     },
@@ -5606,7 +5535,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3320,
+        "x": 3560,
         "y": 320,
         "wires": [
             [
@@ -5634,7 +5563,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3730,
+        "x": 3970,
         "y": 360,
         "wires": [
             []
@@ -5652,7 +5581,7 @@
         "constant": "1000",
         "round": true,
         "decimals": "0",
-        "x": 3720,
+        "x": 3960,
         "y": 300,
         "wires": [
             [
@@ -5678,7 +5607,7 @@
         "topic": "",
         "payload": "0",
         "payloadType": "str",
-        "x": 3710,
+        "x": 3950,
         "y": 180,
         "wires": [
             [
@@ -5707,7 +5636,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1510,
+        "x": 1750,
         "y": 40,
         "wires": [
             [
@@ -5736,7 +5665,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1510,
+        "x": 1750,
         "y": 80,
         "wires": [
             [
@@ -5757,7 +5686,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1670,
+        "x": 1910,
         "y": 40,
         "wires": [
             [
@@ -5778,7 +5707,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1680,
+        "x": 1920,
         "y": 80,
         "wires": [
             [
@@ -5799,7 +5728,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3100,
+        "x": 3340,
         "y": 320,
         "wires": [
             [
@@ -5825,7 +5754,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 2950,
+        "x": 3190,
         "y": 320,
         "wires": [
             [
@@ -5840,7 +5769,7 @@
         "g": "e6bb4e6e08658367",
         "name": "profile loading change imagesize",
         "info": "",
-        "x": 3310,
+        "x": 3550,
         "y": 280,
         "wires": []
     },
@@ -5862,7 +5791,7 @@
         "topic": "",
         "payload": "pid",
         "payloadType": "global",
-        "x": 2230,
+        "x": 2470,
         "y": 1060,
         "wires": [
             [
@@ -5883,7 +5812,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "VLC",
-        "x": 2850,
+        "x": 3090,
         "y": 1560,
         "wires": [
             [],
@@ -5912,7 +5841,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2130,
+        "x": 2370,
         "y": 1560,
         "wires": [
             [
@@ -5932,7 +5861,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 3370,
+        "x": 3610,
         "y": 440,
         "wires": [
             [
@@ -5953,7 +5882,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3520,
+        "x": 3760,
         "y": 440,
         "wires": [
             [
@@ -5974,7 +5903,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3720,
+        "x": 3960,
         "y": 440,
         "wires": [
             []
@@ -5992,7 +5921,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 3370,
+        "x": 3610,
         "y": 500,
         "wires": [
             [
@@ -6013,7 +5942,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3520,
+        "x": 3760,
         "y": 500,
         "wires": [
             [
@@ -6027,14 +5956,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "set abitrate first load",
-        "func": "if (msg.payload !== undefined) {\n    let vbitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.ABITRATE\", vbitrateAtStart)\n    return msg;\n}\n",
+        "func": "if (msg.payload !== undefined) {\n    let abitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.ABITRATE\", abitrateAtStart)\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3720,
+        "x": 3960,
         "y": 500,
         "wires": [
             []
@@ -6047,12 +5976,12 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "props": [],
-        "repeat": "",
+        "repeat": "0.1",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 3370,
+        "x": 3610,
         "y": 560,
         "wires": [
             [
@@ -6073,7 +6002,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3510,
+        "x": 3750,
         "y": 560,
         "wires": [
             [
@@ -6087,14 +6016,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "set last used codecfirst load",
-        "func": "if (msg.payload !== undefined) {\n    let vbitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.CODEC\", vbitrateAtStart)\n    return msg;\n}\n",
+        "func": "if (msg.payload !== undefined) {\n    let codec = `${msg.payload}`.trim();\n    global.set(\"settings.CODEC\", codec)\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3740,
+        "x": 3980,
         "y": 560,
         "wires": [
             []
@@ -6118,7 +6047,7 @@
         "topic": "",
         "payload": "settings.VBITRATE",
         "payloadType": "global",
-        "x": 3440,
+        "x": 3680,
         "y": 620,
         "wires": [
             [
@@ -6144,7 +6073,7 @@
         "topic": "",
         "payload": "settings.TSBITRATE",
         "payloadType": "global",
-        "x": 3440,
+        "x": 3680,
         "y": 680,
         "wires": [
             [
@@ -6165,7 +6094,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "clear_ffmpeg",
-        "x": 3170,
+        "x": 3410,
         "y": 1040,
         "wires": [
             [],
@@ -6185,7 +6114,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 2790,
+        "x": 3030,
         "y": 400,
         "wires": [
             [
@@ -6206,7 +6135,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2950,
+        "x": 3190,
         "y": 400,
         "wires": [
             [
@@ -6233,7 +6162,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 3150,
+        "x": 3390,
         "y": 400,
         "wires": [
             [
@@ -6259,7 +6188,7 @@
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
-        "x": 3600,
+        "x": 3840,
         "y": 880,
         "wires": []
     },
@@ -6276,7 +6205,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3450,
+        "x": 3690,
         "y": 980,
         "wires": [
             [
@@ -6297,7 +6226,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3420,
+        "x": 3660,
         "y": 820,
         "wires": [
             [
@@ -6323,7 +6252,7 @@
         "topic": "",
         "payload": "bitratechange",
         "payloadType": "global",
-        "x": 2070,
+        "x": 2310,
         "y": 200,
         "wires": [
             [
@@ -6345,7 +6274,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2940,
+        "x": 3180,
         "y": 1280,
         "wires": []
     },
@@ -6362,7 +6291,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1880,
+        "x": 2120,
         "y": 760,
         "wires": [
             [
@@ -6389,7 +6318,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1740,
+        "x": 1980,
         "y": 660,
         "wires": [
             [
@@ -6398,7 +6327,88 @@
         ]
     },
     {
-        "id": "b502d93f5b60fa69",
+        "id": "86a189cf7830c88d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "FEC watchdog",
+        "func": "let constel = msg.payload;\nlet fec = global.get(\"device.FEC\");\nswitch (constel) {\n    case \"qpsk\":\n        msg.payload = fec;\n        msg.options = [\"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"8psk\":\n        msg.payload = fec;\n        msg.options = [\"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"16apsk\":\n        msg.payload = fec;\n        msg.options = [\"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"32apsk\":\n        msg.payload = fec;\n        msg.options = [\"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 900,
+        "wires": [
+            [
+                "ddf60892397fbc68"
+            ]
+        ]
+    },
+    {
+        "id": "f7229eafdbdca0eb",
+        "type": "ui_iframe",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "group": "4f22c4dbc8bc16dd",
+        "name": "",
+        "order": 62,
+        "width": 13,
+        "height": 7,
+        "url": "",
+        "origin": "eshail.batc.org",
+        "scale": 100,
+        "x": 2370,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8dd5b834ed5e893",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "wb/index.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2180,
+        "y": 260,
+        "wires": [
+            [
+                "f7229eafdbdca0eb"
+            ]
+        ]
+    },
+    {
+        "id": "68f30c5c5f1b0e33",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 2050,
+        "y": 180,
+        "wires": [
+            [
+                "e8dd5b834ed5e893"
+            ]
+        ]
+    },
+    {
+        "id": "a1e8d5536404504e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6408,7 +6418,7 @@
         "height": 1
     },
     {
-        "id": "bc1ac4253c68c71c",
+        "id": "39e7bfc3bd6d5c82",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6418,7 +6428,7 @@
         "height": 1
     },
     {
-        "id": "8c21d69e96d70ce9",
+        "id": "06f6cb6cc2e9db6b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6428,7 +6438,7 @@
         "height": 1
     },
     {
-        "id": "2653cbbba5fb985c",
+        "id": "73f54080d7b5e9cc",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6438,7 +6448,7 @@
         "height": 1
     },
     {
-        "id": "8ef5c325ee38987f",
+        "id": "e3f04dc08d8e41b1",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6448,7 +6458,7 @@
         "height": 1
     },
     {
-        "id": "f2b4059106dc8341",
+        "id": "9102afd4f5e2a25e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6458,7 +6468,7 @@
         "height": 1
     },
     {
-        "id": "b57cec34bcf99ad9",
+        "id": "9d929ad235979852",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6468,7 +6478,7 @@
         "height": 1
     },
     {
-        "id": "53282952c5d6d750",
+        "id": "824fca7fbfb833ec",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6478,7 +6488,7 @@
         "height": 1
     },
     {
-        "id": "f8807a184ab8923d",
+        "id": "0afaf89fa9dd75b6",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6488,7 +6498,7 @@
         "height": 1
     },
     {
-        "id": "ea2060fca610259f",
+        "id": "74a0f9136a5682d5",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6498,7 +6508,7 @@
         "height": 1
     },
     {
-        "id": "70aebe69b210b9c5",
+        "id": "4691c467d9093660",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6508,7 +6518,7 @@
         "height": 1
     },
     {
-        "id": "e8d3c73ece442c9c",
+        "id": "4e96333744a7d76d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6518,7 +6528,7 @@
         "height": 1
     },
     {
-        "id": "7aac7eea4f7b96e8",
+        "id": "31a43886d3bb4a87",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6528,7 +6538,7 @@
         "height": 1
     },
     {
-        "id": "afe63b41d9ad523f",
+        "id": "886bcb51d704a4a3",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6538,7 +6548,7 @@
         "height": 1
     },
     {
-        "id": "4bcad247c982e37d",
+        "id": "34b2f9630fe72826",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6548,7 +6558,7 @@
         "height": 1
     },
     {
-        "id": "1a51204601b244ea",
+        "id": "4e0ebc797d988155",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6558,7 +6568,7 @@
         "height": 1
     },
     {
-        "id": "449788db77b60c70",
+        "id": "5caa2377d7f31004",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6568,7 +6578,7 @@
         "height": 1
     },
     {
-        "id": "d5da455b36ab867a",
+        "id": "31c6f14e8f270182",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6578,7 +6588,7 @@
         "height": 1
     },
     {
-        "id": "32d90c6066bab5c6",
+        "id": "2ebfe987db0cb85d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6588,7 +6598,7 @@
         "height": 1
     },
     {
-        "id": "03cbf4c6212c06c4",
+        "id": "4423427991788125",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6598,7 +6608,7 @@
         "height": 1
     },
     {
-        "id": "4668730fe7e157ac",
+        "id": "f29b5b46f6326be9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6608,7 +6618,7 @@
         "height": 1
     },
     {
-        "id": "1518b0d7ce127a6e",
+        "id": "c7848a9b64f0a659",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6618,7 +6628,7 @@
         "height": 1
     },
     {
-        "id": "2589ecaabccb7a4c",
+        "id": "4345f4d0f5926731",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6628,7 +6638,7 @@
         "height": 1
     },
     {
-        "id": "af72cbcb3b87c17b",
+        "id": "013fbb516fbdeedb",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6638,7 +6648,7 @@
         "height": 1
     },
     {
-        "id": "01d679eaa66f1c94",
+        "id": "db89a0b397ebc7b0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6648,7 +6658,7 @@
         "height": 1
     },
     {
-        "id": "0561c37042e24da8",
+        "id": "5169ed868613bcfb",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6658,7 +6668,7 @@
         "height": 1
     },
     {
-        "id": "f2427cbae21e33ca",
+        "id": "9aa99a955fa17ca1",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6668,7 +6678,7 @@
         "height": 1
     },
     {
-        "id": "8cd4ed7442006579",
+        "id": "bb5214c57873a605",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6678,7 +6688,7 @@
         "height": 1
     },
     {
-        "id": "38423824eeb09d7f",
+        "id": "7b6d5d56f8505510",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6688,7 +6698,7 @@
         "height": 1
     },
     {
-        "id": "d04e2927967e29d0",
+        "id": "4975bc733597cd29",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6698,7 +6708,7 @@
         "height": 1
     },
     {
-        "id": "0e9945128d6d0e80",
+        "id": "8e507ea5752d57f1",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6708,7 +6718,7 @@
         "height": 1
     },
     {
-        "id": "a05b2eacd97c9035",
+        "id": "6c4e2d52633d1dae",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6718,7 +6728,7 @@
         "height": 1
     },
     {
-        "id": "e5f2a253a59f331b",
+        "id": "5f415b7aac04259b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6728,7 +6738,7 @@
         "height": 1
     },
     {
-        "id": "cc254a82f63b680f",
+        "id": "4306d78b0631ddcf",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6738,7 +6748,7 @@
         "height": 1
     },
     {
-        "id": "eafd575f228d2e0d",
+        "id": "69b721c9c065b3b3",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6748,7 +6758,7 @@
         "height": 1
     },
     {
-        "id": "804f4ed1aa412037",
+        "id": "8c967a499c4c0e62",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6758,7 +6768,7 @@
         "height": 1
     },
     {
-        "id": "7a1b411c3784b50a",
+        "id": "f2a4f2f7dcf70318",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6768,7 +6778,7 @@
         "height": 1
     },
     {
-        "id": "88ef04ce2a9284ac",
+        "id": "566a4c814c5547b1",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6778,7 +6788,7 @@
         "height": 1
     },
     {
-        "id": "0c91645daed62360",
+        "id": "a3d522307a4aec5d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6788,7 +6798,7 @@
         "height": 1
     },
     {
-        "id": "cd4f05dd186c620a",
+        "id": "a534d0547aa253b7",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6798,7 +6808,7 @@
         "height": 1
     },
     {
-        "id": "6f28f56424351c46",
+        "id": "02eaec635da625e4",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6808,7 +6818,7 @@
         "height": 1
     },
     {
-        "id": "2992d718455ffd5c",
+        "id": "9e3b0ff3438c6181",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6818,7 +6828,7 @@
         "height": 1
     },
     {
-        "id": "d67892d409396fb3",
+        "id": "35b08a7ee60f927a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6828,7 +6838,7 @@
         "height": 1
     },
     {
-        "id": "f33fa8acd70381f6",
+        "id": "9f1bf8dcca716d53",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6838,7 +6848,7 @@
         "height": 1
     },
     {
-        "id": "fc44bca9a0497e40",
+        "id": "244f8497141f1ecd",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6848,7 +6858,7 @@
         "height": 1
     },
     {
-        "id": "877e492ff4296f73",
+        "id": "b1b3158509f2c34b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6858,7 +6868,7 @@
         "height": 1
     },
     {
-        "id": "828292a4924321f0",
+        "id": "e39160536a761043",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6868,7 +6878,7 @@
         "height": 1
     },
     {
-        "id": "b1e19e057f77518e",
+        "id": "77d52d7d432de393",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6878,7 +6888,7 @@
         "height": 1
     },
     {
-        "id": "3705e04c257809eb",
+        "id": "e9284f48f6ae7d0b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6888,7 +6898,7 @@
         "height": 1
     },
     {
-        "id": "34e26931d301874e",
+        "id": "3d5416e17a657399",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6898,7 +6908,7 @@
         "height": 1
     },
     {
-        "id": "cc2cae317070a25f",
+        "id": "d5ac22fd7cd0c53d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6908,7 +6918,7 @@
         "height": 1
     },
     {
-        "id": "781be1bdeee134ea",
+        "id": "47f2b290c78e9787",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6918,7 +6928,7 @@
         "height": 1
     },
     {
-        "id": "60ef970e2b7c59ca",
+        "id": "89b3bd48c2fa0c4e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6928,7 +6938,7 @@
         "height": 1
     },
     {
-        "id": "2d58cf4ee9824995",
+        "id": "71b737d7640f6361",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6938,7 +6948,7 @@
         "height": 1
     },
     {
-        "id": "f203fe6578462529",
+        "id": "9d724e3402bac9e1",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6948,7 +6958,7 @@
         "height": 1
     },
     {
-        "id": "2589df0c7927d5f5",
+        "id": "cec383596265fb1e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6958,7 +6968,7 @@
         "height": 1
     },
     {
-        "id": "2cc92d1a0d2358f3",
+        "id": "7858f4c767ad5ab8",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6968,7 +6978,7 @@
         "height": 1
     },
     {
-        "id": "6b37f0dd9a843b23",
+        "id": "e70d543571e7a983",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6978,7 +6988,7 @@
         "height": 1
     },
     {
-        "id": "ed98ed736b5a9149",
+        "id": "c42cf3e64a3fa728",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6988,7 +6998,7 @@
         "height": 1
     },
     {
-        "id": "a4646d7d63b84f09",
+        "id": "ddca751b258807e7",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6998,7 +7008,7 @@
         "height": 1
     },
     {
-        "id": "4d14767fdff6ee0b",
+        "id": "89c5281be824d12e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7008,7 +7018,7 @@
         "height": 1
     },
     {
-        "id": "b638ae841d74ac2c",
+        "id": "05572ea664f1932c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7018,7 +7028,7 @@
         "height": 1
     },
     {
-        "id": "eab5d6e65befce02",
+        "id": "7d4c67e3c3e36f11",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7028,7 +7038,7 @@
         "height": 1
     },
     {
-        "id": "007847a797c7e62b",
+        "id": "d216d88412723273",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7038,7 +7048,7 @@
         "height": 1
     },
     {
-        "id": "508852bd1c3187f0",
+        "id": "d6cdb65b3b2b3fdf",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7048,7 +7058,7 @@
         "height": 1
     },
     {
-        "id": "0b89451b73c3b84f",
+        "id": "54174fc45b2050ef",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7058,7 +7068,7 @@
         "height": 1
     },
     {
-        "id": "347d4375f2b901b3",
+        "id": "76553981c405137c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7068,7 +7078,7 @@
         "height": 1
     },
     {
-        "id": "4839b8330d803a13",
+        "id": "0da1ff386cfb2b3d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7078,7 +7088,7 @@
         "height": 1
     },
     {
-        "id": "f63d2ab2e1c5ee2b",
+        "id": "7edd39b14864d382",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7088,7 +7098,7 @@
         "height": 1
     },
     {
-        "id": "379055b8ee1343e9",
+        "id": "f4f38b063589372b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7098,7 +7108,7 @@
         "height": 1
     },
     {
-        "id": "a3fb01d4fedf5105",
+        "id": "b6915d2885eea33d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7108,7 +7118,7 @@
         "height": 1
     },
     {
-        "id": "ac7823d2d826e284",
+        "id": "942b1dbce357193a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7118,7 +7128,7 @@
         "height": 1
     },
     {
-        "id": "96b05c6ebf86d38e",
+        "id": "1594916f30383b72",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7128,7 +7138,7 @@
         "height": 1
     },
     {
-        "id": "06f96970d34ff173",
+        "id": "f841d3b35468d550",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7138,7 +7148,7 @@
         "height": 1
     },
     {
-        "id": "94c5c3483b2f9c24",
+        "id": "c119fe023d5fc528",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7148,7 +7158,7 @@
         "height": 1
     },
     {
-        "id": "c36cd38a6a97dca5",
+        "id": "44a1a7cc3967b133",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7158,7 +7168,7 @@
         "height": 1
     },
     {
-        "id": "23ca01def4b3a35b",
+        "id": "6f6d182ab43d125b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7168,7 +7178,7 @@
         "height": 1
     },
     {
-        "id": "14700f455bba88b6",
+        "id": "c4ebc5e90d5096af",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7178,7 +7188,7 @@
         "height": 1
     },
     {
-        "id": "9a762942a5437c22",
+        "id": "fa1fb9d1b8954dfc",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7188,7 +7198,7 @@
         "height": 1
     },
     {
-        "id": "5df63dfc729c2830",
+        "id": "5225feaa1aa5fc9e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7198,7 +7208,7 @@
         "height": 1
     },
     {
-        "id": "fbc9d7eb4913912e",
+        "id": "c56d59b959192e7b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7208,7 +7218,7 @@
         "height": 1
     },
     {
-        "id": "e9d5a84e8793d626",
+        "id": "49ffe8f75bdd8308",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7218,7 +7228,7 @@
         "height": 1
     },
     {
-        "id": "35bf0ecd9989d3c8",
+        "id": "804e956239c19317",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7228,7 +7238,7 @@
         "height": 1
     },
     {
-        "id": "243a4c97cec38d91",
+        "id": "188f1686e7682f1e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7238,7 +7248,7 @@
         "height": 1
     },
     {
-        "id": "339f8a990119bc6e",
+        "id": "f62ee82a5b173b94",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7248,7 +7258,7 @@
         "height": 1
     },
     {
-        "id": "eb2de6458eb565ec",
+        "id": "9bc56668986f63ee",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7258,7 +7268,7 @@
         "height": 1
     },
     {
-        "id": "59f1fa442340a0d5",
+        "id": "0d54d7c28b7353c6",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7268,7 +7278,7 @@
         "height": 1
     },
     {
-        "id": "85294805120d52a2",
+        "id": "2cbecc6ba4881b32",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7278,7 +7288,7 @@
         "height": 1
     },
     {
-        "id": "92a6ebf9f1655c72",
+        "id": "c0eac45ab5d50052",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -7288,7 +7298,7 @@
         "height": 1
     },
     {
-        "id": "cf567b40afe5fb90",
+        "id": "272d0d3e4539eda6",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
