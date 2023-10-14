@@ -67,7 +67,7 @@ So that is five programs and their child windows we need open just to have TX an
 
 I'd like to make that 3 or perhaps even less, it would be nice to run this on any operating system
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/d1248e22-9db0-48a0-bdf9-719808fb71a4)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/34c9501f-82ce-4599-9a5b-d33ef3f69a86)
 
 ## QuickTune Control
 If you'd like to tune with QuickTune, import the flow and setup QuickTune like so adding 127.0.0.1 all default paramaters.
