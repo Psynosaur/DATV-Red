@@ -4,13 +4,13 @@
 - **VERY IMPORTANT** at least passive cooling on the PlutoSDR in the form of heatsinks, or it might explode ¯\_(ツ)_/¯
   - Mine with big chungus metal block heatsink goes upto 45°C
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
-- **Node-Red** running on windows(temporary)   
+- **Node-Red** running on windows(temporary)
   
-Script in this project is from DL5OCD Michael and his post about it can be found [here](https://groups.io/g/plutodvb/message/257)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/f5b8e3b1-cb20-414c-b74d-86f37c950bda)
 
-Node Red flows shamelessly used from this [post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
+Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/d7790d64-9b21-4f52-a7dc-c5661dc7c487)
+Node Red flows used in project are from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
 ## Check libx265 performance 
 
