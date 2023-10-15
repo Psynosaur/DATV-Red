@@ -660,7 +660,7 @@
         "z": "15cb052db1c9d25e",
         "g": "1f5722b7aff1a710",
         "name": "function 3",
-        "func": "let jsonSettings = JSON.parse(msg.payload);\nmsg.payload = jsonSettings;\nmsg.codec = jsonSettings.CODEC;\nglobal.set(\"settings\", jsonSettings);\nreturn msg;",
+        "func": "let jsonSettings = JSON.parse(msg.payload);\nmsg.payload = jsonSettings;\nmsg.codec = jsonSettings.CODEC;\nglobal.set(\"settings\", jsonSettings);\nglobal.set(\"device.Constel\", jsonSettings.MODE);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

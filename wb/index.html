@@ -55,7 +55,16 @@
     }
 
     var fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
-
+    var uplink,freqBW;
+    function on_canvas_click(ev) {
+        var x = ev.clientX - ctx.canvas.offsetLeft;
+        var y = ev.clientY - ctx.canvas.offsetTop;
+        console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${freqBW}`)
+        var request = new XMLHttpRequest();
+        request.open('GET', `http://127.0.0.1:1880/setRadio?freq=${uplink}&SR=${freqBW}`, true);
+        request.send();
+        request = null;
+    }
     /* On load */
     $(function () {
         canvasHeight = 500;
@@ -63,9 +72,9 @@
 
         el = document.getElementById('c');
         canvas_jqel = $("#c");
-
+       
         initCanvas();
-
+        ctx.canvas.addEventListener('click', on_canvas_click, false);
         updateFFT(null);
 
         // var chat = new BATC_Chat({
@@ -680,18 +689,16 @@
                         ctx.font = (signals[i].symbolrate < 500 ? "11px" : "12px") + " Arial";
                         ctx.fillStyle = "yellow";
                         ctx.textAlign = "center";
-
+                        freqBW = signals[i].symbolrate / 1000;
+                        uplink = Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4;
                         db_per_pixel = ((canvasHeight * 7 / 8) - (canvasHeight / 12)) / 15; // 15dB screen window
                         beacon_strength_pixel = canvasHeight - ((beacon_strength / 65536) * canvasHeight);
-
-                        ctx.fillText(((beacon_strength_pixel - signals[i].top) / db_per_pixel).toFixed(1) + " dBb",
+                        let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} / ${((beacon_strength_pixel - signals[i].top) / db_per_pixel).toFixed(1)} dB(b)`;
+                        ctx.fillText(mer,
                             signals[i].start - ((signals[i].start - signals[i].end) / 2),
                             (canvasHeight * 7 / 8) - (7 * ((canvasHeight * 7 / 8) - signals[i].top) / 8));
-
                     }
-
                     ctx.restore();
-
                     return;
                 }
             }
@@ -742,8 +749,9 @@
                         " MHz\nUplink: " + (1910.50 + freq_info[i].center_frequency) +
                         " MHz\nSymbol Rate: " + ((freq_info[i].bandwidth == 0.125) ? "125/66/33 Ksps" :
                             (freq_info[i].bandwidth == 0.333) ? (freq_info[i].center_frequency < 497.0 ? "500/333/250 Ksps" : "333/250 Ksps") : "1 Msps");
-                    console.log("pew");
-                    ctx.fillStyle = 'yellow';
+                    uplink = (1910.50 + freq_info[i].center_frequency);
+                    freqBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
+                    ctx.fillStyle = 'white';
                     ctx.fillRect(xd1, yd, xd2 - xd1, 5);
                     display_triggered = true;
                     break;

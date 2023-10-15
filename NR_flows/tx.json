@@ -2,15 +2,16 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.03",
+        "label": "DATV Simple V1.3",
         "disabled": false,
-        "info": "It hath the spectrum",
+        "info": "It hath the spectrum\r\nI clickith and it tunith\r\nI clickith and it setith stuff",
         "env": []
     },
     {
         "id": "1d6ea1c9ce542926",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
         "name": "Not used right now",
         "style": {
             "stroke": "#6f2fa0",
@@ -22,8 +23,8 @@
             "6707b23b38080a71",
             "8305a6ab021ac648"
         ],
-        "x": 774,
-        "y": 399,
+        "x": 1074,
+        "y": 459,
         "w": 272,
         "h": 122
     },
@@ -126,10 +127,36 @@
         "nodes": [
             "e6bb4e6e08658367"
         ],
-        "x": 1088,
+        "x": 988,
         "y": -27,
-        "w": 3064,
+        "w": 3164,
         "h": 1980
+    },
+    {
+        "id": "28611a179255d92b",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Spectrum ",
+        "style": {
+            "label": true,
+            "color": "#92d04f",
+            "fill": "#92d04f"
+        },
+        "nodes": [
+            "b115e827f5958c33",
+            "dcae1df31f4c48c6",
+            "2d8d13aaf93f40dc",
+            "2fccdd25faa09e10",
+            "542c8a5bb4913303",
+            "1052941d.efad6c",
+            "b828f6a6.47d708",
+            "64b76a53a5576a2f",
+            "63698f5f30341a43"
+        ],
+        "x": 54,
+        "y": 159,
+        "w": 592,
+        "h": 322
     },
     {
         "id": "e6bb4e6e08658367",
@@ -302,11 +329,16 @@
             "f79b05ded58d1157",
             "ae8f84a8936bf21e",
             "86a189cf7830c88d",
-            "9d65ce1e866729e6"
+            "9d65ce1e866729e6",
+            "d791940d6fb69cd4",
+            "d233942edd1dc8df",
+            "43ea11b6033b9ecf",
+            "1d6ea1c9ce542926",
+            "defa0aea55bdcca9"
         ],
-        "x": 1114,
+        "x": 1014,
         "y": -1,
-        "w": 3012,
+        "w": 3112,
         "h": 1928
     },
     {
@@ -336,28 +368,6 @@
         "y": 1599,
         "w": 792,
         "h": 302
-    },
-    {
-        "id": "28611a179255d92b",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Spectrum ",
-        "style": {
-            "label": true,
-            "color": "#92d04f",
-            "fill": "#92d04f"
-        },
-        "nodes": [
-            "b115e827f5958c33",
-            "dcae1df31f4c48c6",
-            "2d8d13aaf93f40dc",
-            "2fccdd25faa09e10",
-            "542c8a5bb4913303"
-        ],
-        "x": 74,
-        "y": 199,
-        "w": 592,
-        "h": 162
     },
     {
         "id": "36a9e71117a34327",
@@ -1192,7 +1202,7 @@
                 "t": "set",
                 "p": "stop_button_color",
                 "pt": "msg",
-                "to": "red",
+                "to": "Darkred",
                 "tot": "str"
             }
         ],
@@ -1676,7 +1686,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1590,
+        "x": 1670,
         "y": 760,
         "wires": [
             [
@@ -1898,7 +1908,8 @@
         "y": 1440,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "86a189cf7830c88d"
             ]
         ]
     },
@@ -2164,8 +2175,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 480,
+        "x": 1230,
+        "y": 540,
         "wires": [
             [
                 "37b18a222ae30d52"
@@ -2229,9 +2240,9 @@
         "g": "9c3a6dbecd18c092",
         "name": "",
         "group": "e8adab232b1d4dce",
-        "order": 2,
-        "width": 11,
-        "height": 5,
+        "order": 1,
+        "width": "32",
+        "height": "5",
         "label": "Queue",
         "chartType": "line",
         "legend": "false",
@@ -2241,7 +2252,7 @@
         "dot": true,
         "ymin": "0",
         "ymax": "",
-        "removeOlder": "60",
+        "removeOlder": "30",
         "removeOlderPoints": "",
         "removeOlderUnit": "1",
         "cutout": 0,
@@ -2516,8 +2527,8 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 340,
-        "y": 100,
+        "x": 440,
+        "y": 120,
         "wires": []
     },
     {
@@ -3163,8 +3174,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 440,
+        "x": 1210,
+        "y": 500,
         "wires": [
             [
                 "e91e846502f35c90"
@@ -3459,8 +3470,7 @@
         "y": 1480,
         "wires": [
             [
-                "f38c438a231661c6",
-                "86a189cf7830c88d"
+                "f38c438a231661c6"
             ]
         ]
     },
@@ -4050,7 +4060,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: queue",
-        "func": "var payload = parseInt(msg.payload);\nif (payload !== global.get(\"queue\")){\n    global.set(\"queue\", payload);\n}\nif (payload > 25) {\n    msg.payload = \"overflow\";\n    return msg;\n}\nif (payload > 0) {\n    msg.payload = \"nominal\";\n    return msg;\n}\n\nmsg.payload = \"underflow\";\nreturn msg;",
+        "func": "var payload = parseInt(msg.payload);\nif (payload !== global.get(\"queue\")) {\n    global.set(\"queue\", payload);\n}\nif (payload > 25) {\n    msg.fcolor = \"#d81706\";\n    msg.payload = \"overflow\";\n    return msg;\n}\nif (payload > 0) {\n    msg.fcolor = \"#0e7c1a\";\n    msg.payload = \"nominal\";\n    return msg;\n}\n\nmsg.payload = \"underflow\";\nmsg.fcolor = \"#ff9e07\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4076,7 +4086,7 @@
         "height": 1,
         "name": "",
         "label": "Buffer",
-        "format": "{{msg.payload}}",
+        "format": "<font size=3><font color={{fcolor}}>{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -5308,7 +5318,8 @@
         "y": 220,
         "wires": [
             [
-                "8751a0dd93a8ed60"
+                "8751a0dd93a8ed60",
+                "d791940d6fb69cd4"
             ]
         ]
     },
@@ -5336,7 +5347,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Calculate bitrate function",
-        "func": "if (msg.payload) {\n    let sr = parseInt(global.get(\"device.SR\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n\n    let fec = global.get(\"device.FEC\");\n    let numerator = parseInt(fec.substr(0, 1));\n    let denominator = parseInt(fec.substr(2, 2));\n    let fecCalculated = numerator / denominator;\n    let constelMode =\n        global.get(\"device.Constel\") === \"qpsk\" ? 2 :\n            global.get(\"device.Constel\") === \"8psk\" ? 3 :\n                global.get(\"device.Constel\") === \"16apsk\" ? 4 :\n                    5;\n    let qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\n    global.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\n    if (sr > 20 && sr < 36) {\n        videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 35 && sr < 67) {\n        videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 66 && sr < 126) {\n        videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 125 && sr < 251) {\n        videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 250 && sr < 334) {\n        videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 333 && sr < 501) {\n        videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 500 && sr < 1001) {\n        videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1000 && sr < 1501) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1500 && sr < 3001) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    msg.payload = qpskTsBitRate.toFixed(2);\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    msg.vidbr = videoBitRate?.toFixed(2);\n    global.set(\"bitratechange\", false);\n    return msg;\n} \n",
+        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.SR\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n\n    let fec = global.get(\"device.FEC\");\n    let numerator = parseInt(fec.substr(0, 1));\n    let denominator = parseInt(fec.substr(2, 2));\n    let fecCalculated = numerator / denominator;\n    let constelMode =\n        global.get(\"device.Constel\") === \"qpsk\" ? 2 :\n            global.get(\"device.Constel\") === \"8psk\" ? 3 :\n                global.get(\"device.Constel\") === \"16apsk\" ? 4 :\n                    5;\n    let qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\n    global.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\n    if (sr > 20 && sr < 36) {\n        videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 35 && sr < 67) {\n        videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 66 && sr < 126) {\n        videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 125 && sr < 251) {\n        videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 250 && sr < 334) {\n        videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 333 && sr < 501) {\n        videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 500 && sr < 1001) {\n        videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1000 && sr < 1501) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1500 && sr < 3001) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    msg.payload = qpskTsBitRate.toFixed(2);\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    msg.vidbr = videoBitRate?.toFixed(2);\n    return msg;\n} \n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6064,9 +6075,9 @@
         "label": "ffmpeg command",
         "tooltip": "",
         "group": "e8adab232b1d4dce",
-        "order": 53,
-        "width": "13",
-        "height": 1,
+        "order": 2,
+        "width": 0,
+        "height": 0,
         "passthru": true,
         "mode": "text",
         "delay": "0",
@@ -6255,7 +6266,8 @@
         "y": 900,
         "wires": [
             [
-                "ddf60892397fbc68"
+                "ddf60892397fbc68",
+                "cec2f56be1fccf51"
             ]
         ]
     },
@@ -6269,8 +6281,8 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 180,
-        "y": 280,
+        "x": 160,
+        "y": 240,
         "wires": [
             [
                 "2d8d13aaf93f40dc"
@@ -6283,8 +6295,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "28611a179255d92b",
         "name": "",
-        "x": 590,
-        "y": 280,
+        "x": 570,
+        "y": 240,
         "wires": []
     },
     {
@@ -6300,8 +6312,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 400,
-        "y": 280,
+        "x": 380,
+        "y": 240,
         "wires": [
             [
                 "dcae1df31f4c48c6"
@@ -6321,8 +6333,8 @@
         "url": "/spectrum",
         "origin": "*",
         "scale": "93",
-        "x": 400,
-        "y": 320,
+        "x": 380,
+        "y": 280,
         "wires": [
             []
         ]
@@ -6334,8 +6346,8 @@
         "g": "28611a179255d92b",
         "name": "Spectrum comments",
         "info": "This was hacked together on a Saterday afternoon usign the javascript available on the [batc](https://eshail.batc.org.uk/wb) site\nSince path referencing cannot work this way, I had to include all the JS and CSS import in one html file.\nThis works...",
-        "x": 410,
-        "y": 240,
+        "x": 390,
+        "y": 200,
         "wires": []
     },
     {
@@ -6361,104 +6373,196 @@
         "wires": []
     },
     {
-        "id": "c9c47a5fd5eb1906",
-        "type": "ui_spacer",
+        "id": "d791940d6fb69cd4",
+        "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 1,
-        "width": 1,
-        "height": 1
+        "g": "e6bb4e6e08658367",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 3230,
+        "y": 80,
+        "wires": []
     },
     {
-        "id": "788b95aacc981f14",
-        "type": "ui_spacer",
+        "id": "d233942edd1dc8df",
+        "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 3,
-        "width": 1,
-        "height": 1
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device.Constel",
+        "payloadType": "global",
+        "x": 1160,
+        "y": 800,
+        "wires": [
+            [
+                "86a189cf7830c88d"
+            ]
+        ]
     },
     {
-        "id": "303108c8b1afd76e",
-        "type": "ui_spacer",
+        "id": "43ea11b6033b9ecf",
+        "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 4,
-        "width": 1,
-        "height": 1
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device.Constel",
+        "payloadType": "global",
+        "x": 1200,
+        "y": 1400,
+        "wires": [
+            [
+                "f38c438a231661c6"
+            ]
+        ]
     },
     {
-        "id": "d5c87b1faca01a6e",
-        "type": "ui_spacer",
+        "id": "1052941d.efad6c",
+        "type": "http in",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 5,
-        "width": 1,
-        "height": 1
+        "g": "28611a179255d92b",
+        "name": "",
+        "url": "/setRadio",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "b828f6a6.47d708",
+                "64b76a53a5576a2f",
+                "63698f5f30341a43"
+            ]
+        ]
     },
     {
-        "id": "8afd7bd04337d5eb",
-        "type": "ui_spacer",
+        "id": "b828f6a6.47d708",
+        "type": "http response",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 6,
-        "width": 1,
-        "height": 1
+        "g": "28611a179255d92b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 490,
+        "y": 340,
+        "wires": []
     },
     {
-        "id": "f8e45bd1773c81cd",
-        "type": "ui_spacer",
+        "id": "64b76a53a5576a2f",
+        "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 7,
-        "width": 1,
-        "height": 1
+        "g": "28611a179255d92b",
+        "name": "spectrum click frequency",
+        "func": "let freq = parseFloat(msg.payload.freq);\nfreq = freq * 1000000\nmsg.payload = freq; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "807128449158f2eb",
+                "11531a3595ef0f5a"
+            ]
+        ]
     },
     {
-        "id": "4ba97f14d1d019e5",
-        "type": "ui_spacer",
+        "id": "63698f5f30341a43",
+        "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 8,
-        "width": 1,
-        "height": 1
+        "g": "28611a179255d92b",
+        "name": "spectrum click symbol rate",
+        "func": "let sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000\nmsg.payload = sr; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "89b95ad3b6453036"
+            ]
+        ]
     },
     {
-        "id": "15f5211a0ca42ac3",
-        "type": "ui_spacer",
+        "id": "11531a3595ef0f5a",
+        "type": "change",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 9,
-        "width": 1,
-        "height": 1
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 440,
+        "wires": [
+            [
+                "4245872bb9518343",
+                "defa0aea55bdcca9"
+            ]
+        ]
     },
     {
-        "id": "4ffd53eb4620226d",
-        "type": "ui_spacer",
+        "id": "defa0aea55bdcca9",
+        "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 10,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "e2e6713338550141",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 11,
-        "width": 1,
-        "height": 1
+        "g": "e6bb4e6e08658367",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 380,
+        "wires": []
     },
     {
         "id": "fa1ba9eb3aafddb9",
@@ -7169,7 +7273,7 @@
         "tab": "3fcae860e82945fc",
         "order": 1,
         "disp": false,
-        "width": "13",
+        "width": "32",
         "collapse": false,
         "className": ""
     },
