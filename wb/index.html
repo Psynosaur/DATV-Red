@@ -55,24 +55,30 @@
     }
 
     var fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
-    var uplink,freqBW;
+    var uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
     function on_canvas_click(ev) {
         var x = ev.clientX - ctx.canvas.offsetLeft;
         var y = ev.clientY - ctx.canvas.offsetTop;
-        console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${freqBW}`)
+        console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${canvasClickBW}`)
         // block must be highlighted or box drawn for fire of request
-        if(uplink !== undefined && freqBW !== undefined){
+        if(uplink !== undefined && canvasClickBW !== undefined){
+            
             console.dir(ev);
             if (ev.shiftKey) {
-                freqBW = 0.333;
+                canvasClickBW = 0.333;
             }
             if (ev.ctrlKey) {
-                freqBW = 0.25;
+                canvasClickBW = 0.25;
             }
-            var request = new XMLHttpRequest();
-            request.open('GET', `http://127.0.0.1:1880/setRadio?freq=${uplink}&SR=${freqBW}`, true);
-            request.send();
-            request = null;
+            if(lastUplink !== uplink || lastCanvasClickBW !== canvasClickBW){
+                lastUplink = uplink;
+                lastCanvasClickBW = canvasClickBW;
+                var request = new XMLHttpRequest();
+                request.open('GET', `http://127.0.0.1:1880/setRadio?freq=${uplink}&SR=${canvasClickBW}`, true);
+                request.send();
+                request = null;
+            }
+           
         }
     }
     /* On load */
@@ -298,16 +304,23 @@
 
         /* 1MS */
         for (var f = 493.25; f <= 496.25; f = f + 1.5) {
+            canvasClickBW = undefined;
+            uplink = undefined;
             draw_channel(f, 1.0, (7.475 / 8));
+            
         }
 
         /* 333Ks */
         for (var f = 492.75; f <= 499.25; f = f + 0.5) {
+            canvasClickBW = undefined;
+            uplink = undefined;
             draw_channel(f, 0.333, (7.25 / 8));
         }
 
         /* 125Ks */
         for (var f = 492.75; f <= 499.25; f = f + 0.25) {
+            canvasClickBW = undefined;
+            uplink = undefined;
             draw_channel(f, 0.125, (7.025 / 8));
         }
 
@@ -700,7 +713,7 @@
                         ctx.fillStyle = "yellow";
                         ctx.textAlign = "center";
                         if((Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4) !== 10491.5){
-                            freqBW = signals[i].symbolrate / 1000;
+                            canvasClickBW = signals[i].symbolrate / 1000;
                             uplink = Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4;
                         }
                         db_per_pixel = ((canvasHeight * 7 / 8) - (canvasHeight / 12)) / 15; // 15dB screen window
@@ -714,7 +727,7 @@
                     return;
                 }
             }
-            freqBW = undefined;
+            canvasClickBW = undefined;
             uplink = undefined;
         }
     }
@@ -764,7 +777,7 @@
                         " MHz\nSymbol Rate: " + ((freq_info[i].bandwidth == 0.125) ? "125/66/33 Ksps" :
                             (freq_info[i].bandwidth == 0.333) ? (freq_info[i].center_frequency < 497.0 ? "500/333/250 Ksps" : "333/250 Ksps") : "1 Msps");
                     uplink = (1910.50 + freq_info[i].center_frequency);
-                    freqBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
+                    canvasClickBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
                     ctx.fillStyle = 'white';
                     ctx.fillRect(xd1, yd, xd2 - xd1, 5);
                     display_triggered = true;
