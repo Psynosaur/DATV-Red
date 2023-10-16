@@ -60,10 +60,20 @@
         var x = ev.clientX - ctx.canvas.offsetLeft;
         var y = ev.clientY - ctx.canvas.offsetTop;
         console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${freqBW}`)
-        var request = new XMLHttpRequest();
-        request.open('GET', `http://127.0.0.1:1880/setRadio?freq=${uplink}&SR=${freqBW}`, true);
-        request.send();
-        request = null;
+        // block must be highlighted or box drawn for fire of request
+        if(uplink !== undefined && freqBW !== undefined){
+            console.dir(ev);
+            if (ev.shiftKey) {
+                freqBW = 0.333;
+            }
+            if (ev.ctrlKey) {
+                freqBW = 0.25;
+            }
+            var request = new XMLHttpRequest();
+            request.open('GET', `http://127.0.0.1:1880/setRadio?freq=${uplink}&SR=${freqBW}`, true);
+            request.send();
+            request = null;
+        }
     }
     /* On load */
     $(function () {
@@ -689,8 +699,10 @@
                         ctx.font = (signals[i].symbolrate < 500 ? "11px" : "12px") + " Arial";
                         ctx.fillStyle = "yellow";
                         ctx.textAlign = "center";
-                        freqBW = signals[i].symbolrate / 1000;
-                        uplink = Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4;
+                        if((Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4) !== 10491.5){
+                            freqBW = signals[i].symbolrate / 1000;
+                            uplink = Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4;
+                        }
                         db_per_pixel = ((canvasHeight * 7 / 8) - (canvasHeight / 12)) / 15; // 15dB screen window
                         beacon_strength_pixel = canvasHeight - ((beacon_strength / 65536) * canvasHeight);
                         let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} / ${((beacon_strength_pixel - signals[i].top) / db_per_pixel).toFixed(1)} dB(b)`;
@@ -702,6 +714,8 @@
                     return;
                 }
             }
+            freqBW = undefined;
+            uplink = undefined;
         }
     }
 
