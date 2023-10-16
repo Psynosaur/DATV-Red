@@ -37,8 +37,8 @@
 
     var beacon_strength = 0;
 
-    var fft_colour = 'green';
-    var band_colour = 'green';
+    var fft_colour = 'blue';
+    var band_colour = 'blue';
     var signals = [];
     var freq_info = [];
 
@@ -92,7 +92,9 @@
         }
 
     var fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
-
+    var nodeRedIp = "127.0.0.1:1880";
+    const urlParams = new URLSearchParams(window.location.search);
+    const nodeRed = urlParams.get('nodeRed');
     /* This controls the pluto via HTTP request to the node-red API endpoint 'setRadio' */
     var uplink, canvasClickBW, lastUplink, lastCanvasClickBW, busy;
     var busy = false;
@@ -116,7 +118,7 @@
             if(lastUplink !== uplink || lastCanvasClickBW !== canvasClickBW){
                 lastUplink = uplink;
                 lastCanvasClickBW = canvasClickBW;
-                fetch('/setRadio?' + new URLSearchParams({
+                fetch(`http://${nodeRed}/setRadio?` + new URLSearchParams({
                     freq: uplink,
                     SR: canvasClickBW,
                     busy: busy

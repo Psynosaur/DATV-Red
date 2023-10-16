@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.31",
+        "label": "DATV Simple V1.33",
         "disabled": false,
-        "info": "It hath the spectrum\r\nI clickith and it tunith\r\nI clickith and it setith stuff\r\nmore control",
+        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code",
         "env": []
     },
     {
@@ -157,8 +157,6 @@
             "b6da9101dce07fd1",
             "508ff50f2a470219",
             "f0c209e940860820",
-            "0ceccbf10dbcc8af",
-            "4245872bb9518343",
             "af45e1bfc3e75ecb",
             "55bca069bdb08ee7",
             "dffe1e50bcaeb0a5",
@@ -225,7 +223,6 @@
             "4ecaf72037fc5448",
             "3a96d30a3b796a9c",
             "f79f4059793d2fec",
-            "7e39412a746f70d4",
             "aa4a256618f7c4a6",
             "0d83df21a3badfd8",
             "ba28f83345465e97",
@@ -253,8 +250,6 @@
             "d860f0accbd4f141",
             "da592dbb63826f5c",
             "b9e877b123e7e841",
-            "cea22274822556fb",
-            "13470e8cc4c1ccc1",
             "e6138b2b0fe03b94",
             "ba963a5480a22fc5",
             "bdfdc40f3409d5eb",
@@ -312,7 +307,8 @@
             "9d65ce1e866729e6",
             "d791940d6fb69cd4",
             "d233942edd1dc8df",
-            "43ea11b6033b9ecf"
+            "43ea11b6033b9ecf",
+            "f3b56d13d111f207"
         ],
         "x": 1014,
         "y": -1,
@@ -682,8 +678,8 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 2170,
-        "y": 940,
+        "x": 2410,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1111,16 +1107,16 @@
         "color": "",
         "bgcolor": "{{stop_button_color}}",
         "className": "",
-        "icon": "{{animo}}",
+        "icon": "{{stop_animation}}",
         "payload": "1",
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1630,
-        "y": 1320,
+        "x": 1430,
+        "y": 1340,
         "wires": [
             [
-                "4245872bb9518343"
+                "aa4a256618f7c4a6"
             ]
         ]
     },
@@ -1145,99 +1141,11 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1630,
-        "y": 1280,
+        "x": 1430,
+        "y": 1260,
         "wires": [
             [
-                "0ceccbf10dbcc8af",
                 "af45e1bfc3e75ecb"
-            ]
-        ]
-    },
-    {
-        "id": "0ceccbf10dbcc8af",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Tx start color changer: Green",
-        "rules": [
-            {
-                "t": "set",
-                "p": "start_button_color",
-                "pt": "msg",
-                "to": "green",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "start_animation",
-                "pt": "msg",
-                "to": "fa-spinner fa-spin fa-2x",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "stop_button_color",
-                "pt": "msg",
-                "to": "Darkred",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1220,
-        "wires": [
-            [
-                "f0c209e940860820",
-                "508ff50f2a470219"
-            ]
-        ]
-    },
-    {
-        "id": "4245872bb9518343",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Tx stop color changer: Red",
-        "rules": [
-            {
-                "t": "set",
-                "p": "start_animation",
-                "pt": "msg",
-                "to": "fa-hand-paper-o fa-2x",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "start_button_color",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "stop_button_color",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1400,
-        "wires": [
-            [
-                "f0c209e940860820",
-                "508ff50f2a470219",
-                "aa4a256618f7c4a6"
             ]
         ]
     },
@@ -1322,12 +1230,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1840,
-        "y": 1280,
+        "x": 1720,
+        "y": 1260,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "13470e8cc4c1ccc1"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -1344,12 +1251,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2180,
-        "y": 1380,
+        "x": 1720,
+        "y": 1320,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "cea22274822556fb"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -1580,7 +1486,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1620,
+        "x": 1720,
         "y": 820,
         "wires": [
             [
@@ -1641,8 +1547,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1810,
-        "y": 960,
+        "x": 1970,
+        "y": 940,
         "wires": [
             [
                 "8a16f1f5708afd9e",
@@ -1663,7 +1569,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1670,
+        "x": 1710,
         "y": 760,
         "wires": [
             [
@@ -1684,7 +1590,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1650,
+        "x": 1730,
         "y": 1120,
         "wires": [
             [
@@ -1727,7 +1633,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1660,
+        "x": 1740,
         "y": 1180,
         "wires": [
             [
@@ -1861,7 +1767,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1450,
-        "y": 1440,
+        "y": 1420,
         "wires": [
             [
                 "c5ceed661f8529ce"
@@ -1881,8 +1787,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
-        "y": 1440,
+        "x": 1730,
+        "y": 1420,
         "wires": [
             [
                 "8a16f1f5708afd9e",
@@ -2071,7 +1977,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1650,
+        "x": 1710,
         "y": 1520,
         "wires": [
             [
@@ -2131,7 +2037,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
+        "x": 1710,
         "y": 1600,
         "wires": [
             [
@@ -2152,7 +2058,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1620,
+        "x": 1720,
         "y": 700,
         "wires": [
             [
@@ -2329,7 +2235,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
+        "x": 1730,
         "y": 1680,
         "wires": [
             [
@@ -2432,7 +2338,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
+        "x": 1740,
         "y": 1760,
         "wires": [
             [
@@ -2741,7 +2647,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
+        "x": 1760,
         "y": 1840,
         "wires": [
             [
@@ -2879,7 +2785,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
+        "x": 1930,
         "y": 360,
         "wires": [
             [
@@ -3043,8 +2949,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 560,
+        "x": 2050,
+        "y": 600,
         "wires": [
             [
                 "05fd121d8c4be283",
@@ -3188,7 +3094,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1580,
+        "x": 1720,
         "y": 880,
         "wires": [
             [
@@ -3209,7 +3115,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1580,
+        "x": 1720,
         "y": 920,
         "wires": [
             [
@@ -3717,8 +3623,7 @@
         "y": 1080,
         "wires": [
             [
-                "0c94d661261c1f6e",
-                "4245872bb9518343"
+                "0c94d661261c1f6e"
             ]
         ]
     },
@@ -4171,28 +4076,17 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "",
-        "props": [
-            {
-                "p": "start_animation",
-                "v": "fa-hand-paper-o fa-2x",
-                "vt": "str"
-            },
-            {
-                "p": "button_color",
-                "v": "",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
+        "props": [],
+        "repeat": "0.1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1230,
-        "y": 1240,
+        "x": 1150,
+        "y": 1360,
         "wires": [
             [
-                "f0c209e940860820"
+                "f3b56d13d111f207"
             ]
         ]
     },
@@ -4343,32 +4237,6 @@
         ]
     },
     {
-        "id": "7e39412a746f70d4",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "props": [
-            {
-                "p": "animo",
-                "v": "fa-stop-circle fa-2x",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 1230,
-        "y": 1340,
-        "wires": [
-            [
-                "508ff50f2a470219"
-            ]
-        ]
-    },
-    {
         "id": "aa4a256618f7c4a6",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
@@ -4381,8 +4249,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1940,
-        "y": 1380,
+        "x": 1760,
+        "y": 1360,
         "wires": [
             [
                 "55bca069bdb08ee7"
@@ -4738,7 +4606,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1770,
+        "x": 1710,
         "y": 1080,
         "wires": [
             []
@@ -4854,7 +4722,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1580,
+        "x": 1720,
         "y": 560,
         "wires": [
             [
@@ -4875,7 +4743,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1580,
+        "x": 1720,
         "y": 600,
         "wires": [
             [
@@ -4895,8 +4763,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1830,
-        "y": 900,
+        "x": 2150,
+        "y": 980,
         "wires": [
             []
         ]
@@ -4945,7 +4813,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 2150,
+        "x": 2210,
         "y": 80,
         "wires": [
             []
@@ -4965,7 +4833,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2340,
+        "x": 2380,
         "y": 80,
         "wires": [
             []
@@ -5004,8 +4872,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1880,
-        "y": 1220,
+        "x": 1980,
+        "y": 1180,
         "wires": [
             []
         ]
@@ -5041,58 +4909,6 @@
         "x": 1560,
         "y": 240,
         "wires": []
-    },
-    {
-        "id": "cea22274822556fb",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "set flow mute on",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "mute",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2320,
-        "y": 1320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "13470e8cc4c1ccc1",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "set flow mute off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "mute",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2040,
-        "y": 1320,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "bd7080b9d634eebf",
@@ -5270,8 +5086,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2870,
-        "y": 120,
+        "x": 2790,
+        "y": 220,
         "wires": [
             [
                 "8c336280fd0fcc92"
@@ -5525,7 +5341,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1910,
+        "x": 1950,
         "y": 40,
         "wires": [
             [
@@ -5546,7 +5362,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1920,
+        "x": 1960,
         "y": 80,
         "wires": [
             [
@@ -6091,8 +5907,8 @@
         "topic": "",
         "payload": "bitratechange",
         "payloadType": "global",
-        "x": 2310,
-        "y": 200,
+        "x": 2530,
+        "y": 220,
         "wires": [
             [
                 "ac482a3670a2a148"
@@ -6135,7 +5951,7 @@
         "wires": [
             [
                 "0c94d661261c1f6e",
-                "4245872bb9518343"
+                "aa4a256618f7c4a6"
             ]
         ]
     },
@@ -6353,7 +6169,7 @@
         "payload": "device.Constel",
         "payloadType": "global",
         "x": 1200,
-        "y": 1400,
+        "y": 1420,
         "wires": [
             [
                 "f38c438a231661c6"
@@ -6459,7 +6275,29 @@
         "y": 480,
         "wires": [
             [
-                "4245872bb9518343"
+                "aa4a256618f7c4a6"
+            ]
+        ]
+    },
+    {
+        "id": "f3b56d13d111f207",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "inject button animations",
+        "func": "// We are not transmitting state...\nmsg.start_button_color = \"\";\nmsg.start_animation = \"fa-hand-paper-o fa-2x\";\nmsg.stop_button_color = \"\";\nmsg.stop_animation = \"fa-stop-circle fa-2x\";\nif(global.get(\"mute\") === \"0\") {\n    // We are transmitting state...\n    msg.start_button_color =\"green\";\n    msg.start_animation = \"fa-spinner fa-spin fa-2x\";\n    msg.stop_button_color = \"darkred\";\n    msg.stop_animation = \"fa-stop-circle fa-2x\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 1300,
+        "wires": [
+            [
+                "f0c209e940860820",
+                "508ff50f2a470219"
             ]
         ]
     },
