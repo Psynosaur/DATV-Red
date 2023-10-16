@@ -27,6 +27,7 @@
     var ctx;
     var canvasWidth;
     var canvasHeight;
+    var canvasHeightLast;
 
     var mouse_in_canvas = false;
     var mouse_x = 0;
@@ -93,7 +94,8 @@
     var fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
 
     /* This controls the pluto via HTTP request to the node-red API endpoint 'setRadio' */
-    var uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
+    var uplink, canvasClickBW, lastUplink, lastCanvasClickBW, busy;
+    var busy = false;
     function on_canvas_click(ev) {
         var x = ev.clientX - ctx.canvas.offsetLeft;
         var y = ev.clientY - ctx.canvas.offsetTop;
@@ -117,6 +119,7 @@
                 fetch('/setRadio?' + new URLSearchParams({
                     freq: uplink,
                     SR: canvasClickBW,
+                    busy: busy
                 }));
             }
         }
@@ -124,6 +127,7 @@
     /* On load */
     $(function () {
         canvasHeight = 500;
+        canvasHeightLast = canvasHeight;
         canvasWidth = $("#fft-col").width();
 
         el = document.getElementById('c');
@@ -379,10 +383,10 @@
         ctx.fillText("A71A DATV Beacon", ((491.5) - _start_freq) * (canvasWidth / 9), canvasHeight - 45);
         ctx.fillText("10491.500", ((491.5) - _start_freq) * (canvasWidth / 9), canvasHeight - 28);
         ctx.fillText("(1.5MS/s QPSK, 4/5)", ((491.5) - _start_freq) * (canvasWidth / 9), canvasHeight - 12);
-        ctx.fillText(" Click to tune wide & narrow channels", ((494.75) - _start_freq) * (canvasWidth / 9), canvasHeight - 6);
+        ctx.fillText("Click to tune wide & narrow channels", ((494.75) - _start_freq) * (canvasWidth / 9), canvasHeight - 6);
 
-        ctx.fillText("Hold Shift for 333KS", ((494.75) - _start_freq) * (canvasWidth / 15.5), canvasHeight - 6);
-        ctx.fillText("Hold ALT for 250KS", ((494.75) - _start_freq) * (canvasWidth / 6.33), canvasHeight - 6);
+        /* ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 15), canvasHeight - 6);
+        ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 6.42), canvasHeight - 6); */
 
         ctx.fillText("Narrow channels", ((498.25) - _start_freq) * (canvasWidth / 9), canvasHeight - 12);
         ctx.restore();
@@ -765,6 +769,7 @@
                         if((Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4) !== 10491.5){
                             canvasClickBW = signals[i].symbolrate / 1000;
                             uplink = Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4;
+                            busy = true;
                         }
                         db_per_pixel = ((canvasHeight * 7 / 8) - (canvasHeight / 12)) / 15; // 15dB screen window
                         beacon_strength_pixel = canvasHeight - ((beacon_strength / 65536) * canvasHeight);
@@ -779,6 +784,7 @@
             }
             canvasClickBW = undefined;
             uplink = undefined;
+            busy = false;
         }
     }
 
@@ -828,6 +834,7 @@
                             (freq_info[i].bandwidth == 0.333) ? (freq_info[i].center_frequency < 497.0 ? "500/333/250 Ksps" : "333/250 Ksps") : "1 Msps");
                     uplink = (1910.50 + freq_info[i].center_frequency);
                     canvasClickBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
+                    busy= false;
                     /* console.log(`Band color ${band_colour} : HEX ${colourNameToHex(band_colour)} invert: #${invertColor(colourNameToHex(band_colour))}`) */
                     ctx.fillStyle = invertColor(colourNameToHex(band_colour));
                     ctx.fillRect(xd1, yd, xd2 - xd1, 5);
@@ -849,4 +856,62 @@
         } else if (el.mozRequestFullScreen) {
             el.mozRequestFullScreen();
         }
-    }</script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Changing frequency with the same symbol rate does not stop active profile</span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><select id="fft-colour-select"><option value="blue" selected="selected" title="Spectrum color">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select><label style="color: white;padding: 3px;" for="band-colour-select">Bands</label><select id="band-colour-select"><option value="blue" selected="selected">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select></div></div></div></div>
+    }
+    var checkFullScreen = function () {
+        if (typeof document.fullScreen != "undefined") {
+            return document.fullScreen;
+        } else if (typeof document.webkitIsFullScreen != "undefined") {
+            return document.webkitIsFullScreen;
+        } else if (typeof document.mozFullScreen != "undefined") {
+            return document.mozFullScreen;
+        } else {
+            return false;
+        }
+    }
+    var previousOrientation = window.orientation;
+    var checkOrientation = function () {
+        if (checkFullScreen()) {
+            if (window.orientation !== previousOrientation) {
+                if (0 != (previousOrientation + window.orientation) % 180) {
+                    canvasWidth = window.innerHeight;
+                    canvasHeight = window.innerWidth;
+                    initCanvas();
+                }
+                previousOrientation = window.orientation;
+                previousHeight = window.innerHeight;
+                previousWidth = window.innerWidth;
+            }
+        }
+    };
+    var previousHeight = window.innerHeight;
+    var previousWidth = window.innerWidth;
+    var checkResize = function () {
+        if (!checkFullScreen() &&
+            (previousHeight != window.innerHeight || previousWidth != window.innerWidth)) {
+            canvasHeight = $("#fft-col").height() < canvasHeightLast ? $("#fft-col").height() : canvasHeightLast;
+            canvasWidth = $("#fft-col").width();
+            initCanvas();
+            previousHeight = window.innerHeight;
+            previousWidth = window.innerWidth;
+        }
+    }
+    window.addEventListener("fullscreenchange", function () {
+        if (checkFullScreen()) {
+            setTimeout(function () {
+                /* Set canvas to full document size */
+                canvasHeight = $("#c").height();
+                canvasWidth = $("#c").width();
+                initCanvas();
+            }, 10);
+        } else {
+            /* Reset canvas size */
+            canvasHeight = 550;
+            canvasWidth = $("#fft-col").width();
+            initCanvas();
+        }
+    });
+    window.addEventListener("resize", checkResize, false);
+    window.addEventListener("orientationchange", checkOrientation, false);
+    // Android doesn't always fire orientationChange on 180 degree turns
+    setInterval(checkOrientation, 2000);
+    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Hold Shift for 333KS or ALT for 250KS symbol rate on channel selection (click)</span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><select id="fft-colour-select"><option value="blue" selected="selected" title="Spectrum color">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select><label style="color: white;padding: 3px;" for="band-colour-select">Bands</label><select id="band-colour-select"><option value="blue" selected="selected">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select></div></div></div></div>
