@@ -90,11 +90,10 @@
 
             return false;
         }
-
+    
     var fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
-    var nodeRedIp = "127.0.0.1:1880";
-    const urlParams = new URLSearchParams(window.location.search);
-    const nodeRed = urlParams.get('nodeRed');
+    /* const urlParams = new URLSearchParams(window.location.search);
+    var nodeRedIp = urlParams.get('nodeRed') === undefined ? "127.0.0.1:1880" : urlParams.get('nodeRed'); */
     /* This controls the pluto via HTTP request to the node-red API endpoint 'setRadio' */
     var uplink, canvasClickBW, lastUplink, lastCanvasClickBW, busy;
     var busy = false;
@@ -118,7 +117,7 @@
             if(lastUplink !== uplink || lastCanvasClickBW !== canvasClickBW){
                 lastUplink = uplink;
                 lastCanvasClickBW = canvasClickBW;
-                fetch(`http://${nodeRed}/setRadio?` + new URLSearchParams({
+                fetch(`/setRadio?` + new URLSearchParams({
                     freq: uplink,
                     SR: canvasClickBW,
                     busy: busy
