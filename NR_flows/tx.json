@@ -2,31 +2,10 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.3",
+        "label": "DATV Simple V1.31",
         "disabled": false,
-        "info": "It hath the spectrum\r\nI clickith and it tunith\r\nI clickith and it setith stuff",
+        "info": "It hath the spectrum\r\nI clickith and it tunith\r\nI clickith and it setith stuff\r\nmore control",
         "env": []
-    },
-    {
-        "id": "1d6ea1c9ce542926",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Not used right now",
-        "style": {
-            "stroke": "#6f2fa0",
-            "fill": "#dbcbe7",
-            "label": true,
-            "color": "#ffffff"
-        },
-        "nodes": [
-            "6707b23b38080a71",
-            "8305a6ab021ac648"
-        ],
-        "x": 1074,
-        "y": 459,
-        "w": 272,
-        "h": 122
     },
     {
         "id": "9c3a6dbecd18c092",
@@ -139,7 +118,7 @@
         "name": "Spectrum ",
         "style": {
             "label": true,
-            "color": "#92d04f",
+            "color": "#001f60",
             "fill": "#92d04f"
         },
         "nodes": [
@@ -151,12 +130,13 @@
             "1052941d.efad6c",
             "b828f6a6.47d708",
             "64b76a53a5576a2f",
-            "63698f5f30341a43"
+            "63698f5f30341a43",
+            "11531a3595ef0f5a"
         ],
         "x": 54,
         "y": 159,
-        "w": 592,
-        "h": 322
+        "w": 792,
+        "h": 362
     },
     {
         "id": "e6bb4e6e08658367",
@@ -332,9 +312,7 @@
             "9d65ce1e866729e6",
             "d791940d6fb69cd4",
             "d233942edd1dc8df",
-            "43ea11b6033b9ecf",
-            "1d6ea1c9ce542926",
-            "defa0aea55bdcca9"
+            "43ea11b6033b9ecf"
         ],
         "x": 1014,
         "y": -1,
@@ -361,8 +339,7 @@
             "139c2af2cc88bd80",
             "64b6e4713fac94bf",
             "9335bff762d93722",
-            "45b5b704879d30fe",
-            "c8c1c80d91c7c4b9"
+            "45b5b704879d30fe"
         ],
         "x": 2034,
         "y": 1599,
@@ -2163,27 +2140,6 @@
         ]
     },
     {
-        "id": "6707b23b38080a71",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1d6ea1c9ce542926",
-        "name": "Set default TX gain",
-        "func": "msg.payload= \"-25\"\nreturn msg;\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1230,
-        "y": 540,
-        "wires": [
-            [
-                "37b18a222ae30d52"
-            ]
-        ]
-    },
-    {
         "id": "14e5a286770d3cd0",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
@@ -2590,8 +2546,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2160,
-        "y": 1720,
+        "x": 2180,
+        "y": 1780,
         "wires": [
             [
                 "9335bff762d93722",
@@ -3160,27 +3116,6 @@
         "x": 690,
         "y": 680,
         "wires": []
-    },
-    {
-        "id": "8305a6ab021ac648",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1d6ea1c9ce542926",
-        "name": "Set default Digital TX gain",
-        "func": "msg.payload = 0;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1210,
-        "y": 500,
-        "wires": [
-            [
-                "e91e846502f35c90"
-            ]
-        ]
     },
     {
         "id": "5f71534b6c02e324",
@@ -3868,8 +3803,8 @@
             "b5ed5a8ccff72343",
             "45c2428c04be0e5f"
         ],
-        "x": 2120,
-        "y": 460,
+        "x": 2320,
+        "y": 360,
         "wires": [
             [
                 "a6736166225853ff"
@@ -3974,8 +3909,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2280,
-        "y": 560,
+        "x": 2320,
+        "y": 420,
         "wires": [
             [
                 "6bdd18a478266cdb",
@@ -4206,25 +4141,6 @@
             [
                 "be04ba7a44aed070"
             ]
-        ]
-    },
-    {
-        "id": "c8c1c80d91c7c4b9",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
-        "name": "Get TSsourceaddress",
-        "func": "let newAddress = msg.payload;\nmsg.payload = newAddress;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2220,
-        "y": 1860,
-        "wires": [
-            []
         ]
     },
     {
@@ -6214,8 +6130,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 760,
+        "x": 2220,
+        "y": 840,
         "wires": [
             [
                 "0c94d661261c1f6e",
@@ -6241,8 +6157,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1980,
-        "y": 660,
+        "x": 2280,
+        "y": 720,
         "wires": [
             [
                 "f79b05ded58d1157"
@@ -6489,12 +6405,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 670,
         "y": 400,
         "wires": [
             [
-                "807128449158f2eb",
-                "11531a3595ef0f5a"
+                "807128449158f2eb"
             ]
         ]
     },
@@ -6503,19 +6418,20 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "28611a179255d92b",
-        "name": "spectrum click symbol rate",
-        "func": "let sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000\nmsg.payload = sr; \nreturn msg;",
+        "name": "spectrum click symbol rate if different",
+        "func": "let sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000\nif (`${sr}` !== global.get(\"sr\")){\n    msg.payload = sr; \n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 440,
+        "x": 390,
+        "y": 460,
         "wires": [
             [
-                "89b95ad3b6453036"
+                "89b95ad3b6453036",
+                "11531a3595ef0f5a"
             ]
         ]
     },
@@ -6523,7 +6439,8 @@
         "id": "11531a3595ef0f5a",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
-        "name": "",
+        "g": "28611a179255d92b",
+        "name": "Kill transmission",
         "rules": [
             {
                 "t": "set",
@@ -6538,31 +6455,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 840,
-        "y": 440,
+        "x": 740,
+        "y": 480,
         "wires": [
             [
-                "4245872bb9518343",
-                "defa0aea55bdcca9"
+                "4245872bb9518343"
             ]
         ]
-    },
-    {
-        "id": "defa0aea55bdcca9",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 380,
-        "wires": []
     },
     {
         "id": "fa1ba9eb3aafddb9",
