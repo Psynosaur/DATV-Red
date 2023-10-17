@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.33",
+        "label": "DATV Simple V1.5",
         "disabled": false,
-        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code",
+        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...",
         "env": []
     },
     {
@@ -106,10 +106,10 @@
         "nodes": [
             "e6bb4e6e08658367"
         ],
-        "x": 988,
+        "x": 1068,
         "y": -27,
-        "w": 3164,
-        "h": 1980
+        "w": 4024,
+        "h": 1987.5
     },
     {
         "id": "28611a179255d92b",
@@ -137,6 +137,55 @@
         "y": 159,
         "w": 792,
         "h": 362
+    },
+    {
+        "id": "1f5722b7aff1a710",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Profile Setup",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "fill": "#ffcf3f"
+        },
+        "nodes": [
+            "f9186ed78accdb6c",
+            "d8316c32c9a501d4",
+            "a0addd449f41ee70",
+            "3c2665b335deadcc",
+            "142bd58e14cabe24",
+            "034d4cfc3008e95a",
+            "1bb882ca67278b69",
+            "6e2b3c9e08662125",
+            "ae40a9e5bdd0d113",
+            "5989fbe4c1133db2",
+            "b003500f8ea3ffe1",
+            "d2a7c63d9b2fe699",
+            "320ab26158363e57",
+            "9c6e205117c83338",
+            "e034dbd60b827228",
+            "42c11d5e18583e44",
+            "c65cda6215e191a8",
+            "5fb4d13c6bc3586f",
+            "6bfbf0101b2cd3a4",
+            "34feacf8cac79e5e",
+            "832b9a47eae8dabb",
+            "8c06bae5f257a948",
+            "a34ba6d8846e44b2",
+            "072a53bc4325b8e2",
+            "da44a9637b5774a0",
+            "3db47b10f2ad0660",
+            "9afe5b50e0c2e439",
+            "3eb70786a69e6c70",
+            "f1c89523da4ca9da",
+            "906644f41d307cdf",
+            "1411feb53b899df2"
+        ],
+        "x": 34,
+        "y": 2099,
+        "w": 1272,
+        "h": 722
     },
     {
         "id": "e6bb4e6e08658367",
@@ -195,21 +244,14 @@
             "26d4847d4e66ef33",
             "ecd6781e5be6e360",
             "8a16f1f5708afd9e",
-            "873a04942564e509",
-            "be766117a7d2334f",
-            "5c8e87753e4ad083",
-            "923832cf30d7070e",
-            "c4c1592e68a08ac2",
             "43c746e7299a60f3",
             "a6736166225853ff",
-            "4d9019e6505648e5",
             "be04ba7a44aed070",
             "4f5692cf8cb6b8dd",
             "0024149327ace021",
             "c140f8f622e33238",
             "b2786302ea5b87d8",
             "8105dd1d410bdd4b",
-            "0c94d661261c1f6e",
             "8f75f111bea67d19",
             "a0b7e955594b3ab5",
             "d8a30908a8d1d05a",
@@ -232,55 +274,87 @@
             "863b303484773cde",
             "8090b79c8e35900b",
             "b5ed5a8ccff72343",
-            "05674316d3d8cdd1",
-            "05fd121d8c4be283",
-            "2b53743d597a8bd2",
             "b4aff87862b89a39",
             "edd3123535a89e2c",
             "5d8a44d8d3dfd931",
             "33dc958065cdada2",
-            "c86fe263aa4ec386",
-            "fa40ea4c517a1f33",
             "ec7f7985e8da8ed2",
             "9e5aaf4953afd279",
-            "162c77371bb6c962",
-            "8d1438b1aced373b",
-            "8a4b0bf69ca74873",
             "7d6077cea86f2378",
-            "d860f0accbd4f141",
-            "da592dbb63826f5c",
             "b9e877b123e7e841",
-            "e6138b2b0fe03b94",
             "ba963a5480a22fc5",
             "bdfdc40f3409d5eb",
             "5af92414e3f29873",
-            "b6f1e8e864f6acb1",
             "bd7080b9d634eebf",
             "e7122ff60e30d850",
             "6f5791e469edab55",
             "45c2428c04be0e5f",
             "932baa0f165b71a2",
-            "8c336280fd0fcc92",
-            "8751a0dd93a8ed60",
-            "ac482a3670a2a148",
             "23f54550ba5b6a79",
             "5d929a20d665af8d",
-            "26fb093b23e3a621",
-            "86f5a4e13856dce4",
-            "2a88de9371c58247",
-            "57db37c4faa9e7f2",
-            "f1c3eeafb1365330",
-            "d04e83af7fca53f0",
             "2d16a7785c1bb3dd",
             "b019a1fc7eadfd0f",
             "68e079e44b9dd5c2",
             "524de1980547eaea",
-            "4c5bde857e7964a8",
-            "e0a8b11837a3a291",
-            "d52ca12408c4cd7d",
-            "c326e0457b39d881",
             "023820f309b020da",
             "03deb776667356fc",
+            "332cd73b70ec7dca",
+            "b62a3f484010816e",
+            "dd252f1ac7e17f8a",
+            "63528f3b0c9f3dae",
+            "6c2ed6b6c40e42db",
+            "29f59051e6cbe148",
+            "380f24164e357a8f",
+            "66d128c2a339f3cb",
+            "86a189cf7830c88d",
+            "9d65ce1e866729e6",
+            "d233942edd1dc8df",
+            "43ea11b6033b9ecf",
+            "f3b56d13d111f207",
+            "27cbad3062794d58",
+            "6b0cd6504e13d973",
+            "30312ad9e7c5689b",
+            "30575829e5293823",
+            "50469be080414712",
+            "7806bcad704424dd",
+            "3ea225876900d6cc",
+            "04c8e605a02922e7",
+            "5256f916f7a707b7",
+            "0116ed63e32c47c2",
+            "88e74c15960c22df",
+            "475c87a434b0f7e6",
+            "271147b0966b0076",
+            "570136a8608a39a6",
+            "5f939f9512d4ba6e",
+            "d09cacf11e30c19d",
+            "516b3edadca50bf7",
+            "1473030260740438",
+            "359e81623396a0cb",
+            "b3d69a3460af42a4",
+            "4d2f5ac9520ad4d3",
+            "32dfcf20406c9b9a",
+            "5937fb0a3c880ee7",
+            "7f859a7a7ee27404",
+            "45b5b704879d30fe"
+        ],
+        "x": 1094,
+        "y": -1,
+        "w": 3972,
+        "h": 1935.5
+    },
+    {
+        "id": "516b3edadca50bf7",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Check profile attribute changes from preset loading",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e0a8b11837a3a291",
+            "4c5bde857e7964a8",
+            "2a88de9371c58247",
             "bc75f00bd265544f",
             "6c91e490a62106d5",
             "2598c63498a7d271",
@@ -289,58 +363,81 @@
             "39cfefa0e8ccb9b9",
             "540d6ebea9628a71",
             "4bfadd6d4acf437d",
-            "f6370190fe6ad34e",
-            "332cd73b70ec7dca",
-            "b62a3f484010816e",
-            "b24692049485a46b",
-            "dd252f1ac7e17f8a",
-            "63528f3b0c9f3dae",
-            "6c2ed6b6c40e42db",
-            "29f59051e6cbe148",
-            "380f24164e357a8f",
-            "66d128c2a339f3cb",
-            "dd4535e1d6b65679",
-            "6dc66b7d07f866f4",
-            "f79b05ded58d1157",
-            "ae8f84a8936bf21e",
-            "86a189cf7830c88d",
-            "9d65ce1e866729e6",
-            "d791940d6fb69cd4",
-            "d233942edd1dc8df",
-            "43ea11b6033b9ecf",
-            "f3b56d13d111f207"
+            "f6370190fe6ad34e"
         ],
-        "x": 1014,
-        "y": -1,
-        "w": 3112,
-        "h": 1928
+        "x": 3594,
+        "y": 359,
+        "w": 572,
+        "h": 202
     },
     {
-        "id": "162c77371bb6c962",
+        "id": "1473030260740438",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "Disabled for breaking pluto...",
+        "name": "Bitrate calculator",
         "style": {
-            "stroke": "#000000",
-            "fill": "#ff7f7f",
-            "label": true,
-            "color": "#ffffff",
-            "fill-opacity": "0.63"
+            "label": true
         },
         "nodes": [
-            "c6c7b77c513dc67d",
-            "7f859a7a7ee27404",
-            "680e1065a1131216",
-            "139c2af2cc88bd80",
-            "64b6e4713fac94bf",
-            "9335bff762d93722",
-            "45b5b704879d30fe"
+            "dd4535e1d6b65679",
+            "ac482a3670a2a148",
+            "8c336280fd0fcc92",
+            "8751a0dd93a8ed60",
+            "d791940d6fb69cd4"
         ],
-        "x": 2034,
-        "y": 1599,
-        "w": 792,
-        "h": 302
+        "x": 3194,
+        "y": 39,
+        "w": 942,
+        "h": 122
+    },
+    {
+        "id": "359e81623396a0cb",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Device settings saver",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3208e4f72b88b92e",
+            "0c5e1df9f4cacd67",
+            "c708b213a5701d8c",
+            "99a4c83c076987df"
+        ],
+        "x": 3194,
+        "y": 179,
+        "w": 992,
+        "h": 142
+    },
+    {
+        "id": "32dfcf20406c9b9a",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "FFMPEG KILLER",
+        "style": {
+            "fill": "#ff3f3f",
+            "label": true
+        },
+        "nodes": [
+            "873a04942564e509",
+            "c4c1592e68a08ac2",
+            "be766117a7d2334f",
+            "5c8e87753e4ad083",
+            "923832cf30d7070e",
+            "4d9019e6505648e5",
+            "0c94d661261c1f6e",
+            "c326e0457b39d881",
+            "b24692049485a46b",
+            "f79b05ded58d1157",
+            "ae8f84a8936bf21e"
+        ],
+        "x": 2574,
+        "y": 1459,
+        "w": 1032,
+        "h": 449.5
     },
     {
         "id": "36a9e71117a34327",
@@ -573,8 +670,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1440,
-        "y": 1060,
+        "x": 1740,
+        "y": 1120,
         "wires": [
             [
                 "807128449158f2eb"
@@ -601,8 +698,8 @@
         "max": "0",
         "step": "-0.25",
         "className": "",
-        "x": 1440,
-        "y": 960,
+        "x": 1740,
+        "y": 1000,
         "wires": [
             [
                 "37b18a222ae30d52"
@@ -655,8 +752,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1430,
-        "y": 1180,
+        "x": 1730,
+        "y": 1240,
         "wires": [
             [
                 "edf4a8f5daf0b0ab"
@@ -678,8 +775,8 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 2410,
-        "y": 1300,
+        "x": 3070,
+        "y": 960,
         "wires": []
     },
     {
@@ -753,8 +850,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1450,
-        "y": 1120,
+        "x": 1750,
+        "y": 1180,
         "wires": [
             [
                 "89b95ad3b6453036"
@@ -870,7 +967,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1430,
+        "x": 1730,
         "y": 760,
         "wires": [
             [
@@ -997,7 +1094,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1440,
+        "x": 1740,
         "y": 820,
         "wires": [
             [
@@ -1011,7 +1108,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: mute",
-        "func": "let mute =msg.payload\nglobal.set(\"mute\", mute)\nmsg.mute_kleur=\"green\"\nif (mute === 0){\n    msg.mute_kleur=\"red\"\n}\nreturn msg;",
+        "func": "let mute =msg.payload\nglobal.set(\"mute\", mute)\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1035,8 +1132,8 @@
         "scope": [
             "347c8041af1a52e0"
         ],
-        "x": 1400,
-        "y": 140,
+        "x": 3100,
+        "y": 400,
         "wires": [
             [
                 "b2786302ea5b87d8"
@@ -1056,8 +1153,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1610,
-        "y": 140,
+        "x": 3310,
+        "y": 400,
         "wires": [
             [
                 "8105dd1d410bdd4b"
@@ -1085,8 +1182,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1790,
-        "y": 140,
+        "x": 3490,
+        "y": 400,
         "wires": [
             []
         ]
@@ -1112,8 +1209,8 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1430,
-        "y": 1340,
+        "x": 1730,
+        "y": 1360,
         "wires": [
             [
                 "aa4a256618f7c4a6"
@@ -1141,8 +1238,8 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1430,
-        "y": 1260,
+        "x": 1730,
+        "y": 1300,
         "wires": [
             [
                 "af45e1bfc3e75ecb"
@@ -1167,8 +1264,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1390,
-        "y": 200,
+        "x": 3090,
+        "y": 460,
         "wires": []
     },
     {
@@ -1230,8 +1327,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
-        "y": 1260,
+        "x": 2020,
+        "y": 1300,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -1251,7 +1348,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
+        "x": 2320,
         "y": 1320,
         "wires": [
             [
@@ -1479,14 +1576,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: FecMode",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nglobal.set(\"bitrateChanged\", true);\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fecmode\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
+        "x": 2020,
         "y": 820,
         "wires": [
             [
@@ -1540,19 +1637,18 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Gain",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/gain`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/gain`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.gain\", payload);\nglobal.set(\"settings.GAIN\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1970,
-        "y": 940,
+        "x": 2270,
+        "y": 920,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "c86fe263aa4ec386"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -1562,14 +1658,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Fec",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"stop\", true);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fec\", payload);\nglobal.set(\"settings.FEC\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
+        "x": 2010,
         "y": 760,
         "wires": [
             [
@@ -1583,15 +1679,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: SampleRate",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"settings.SR\", payload/1000);\nglobal.set(\"device.tx.dvbs2.sr\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1730,
-        "y": 1120,
+        "x": 2030,
+        "y": 1180,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -1604,19 +1700,18 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Frequency",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/frequency`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/frequency`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.frequency\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1730,
-        "y": 1020,
+        "x": 2030,
+        "y": 1000,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "05674316d3d8cdd1"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -1626,19 +1721,18 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Stream Mode",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1740,
-        "y": 1180,
+        "x": 2040,
+        "y": 1240,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "8a4b0bf69ca74873"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -1766,7 +1860,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1450,
+        "x": 1750,
         "y": 1420,
         "wires": [
             [
@@ -1780,14 +1874,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Constellation",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.constel\", payload);\nglobal.set(\"settings.MODE\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1730,
+        "x": 2030,
         "y": 1420,
         "wires": [
             [
@@ -1956,8 +2050,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1430,
-        "y": 1520,
+        "x": 1730,
+        "y": 1480,
         "wires": [
             [
                 "0c74362e749bcdc4"
@@ -1970,15 +2064,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Frame",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/frame`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/frame`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.frame\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
-        "y": 1520,
+        "x": 2010,
+        "y": 1480,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -2016,8 +2110,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1430,
-        "y": 1600,
+        "x": 1730,
+        "y": 1540,
         "wires": [
             [
                 "4a50af4869a33baa"
@@ -2030,15 +2124,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Pilots",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/pilots`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/pilots`;\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.pilots\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
-        "y": 1600,
+        "x": 2010,
+        "y": 1540,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -2051,14 +2145,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Reboot",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/system/reboot`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/system/reboot`;\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
+        "x": 2020,
         "y": 700,
         "wires": [
             [
@@ -2087,7 +2181,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1450,
+        "x": 1750,
         "y": 700,
         "wires": [
             [
@@ -2214,8 +2308,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1460,
-        "y": 1680,
+        "x": 1760,
+        "y": 1600,
         "wires": [
             [
                 "b1b6fc76c723e0f1"
@@ -2228,15 +2322,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Gain variable",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/gainvariable`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/gainvariable`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.gainvariable\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1730,
-        "y": 1680,
+        "x": 2030,
+        "y": 1600,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -2317,8 +2411,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1470,
-        "y": 1760,
+        "x": 1770,
+        "y": 1660,
         "wires": [
             [
                 "7b06e3153449eb9a"
@@ -2331,15 +2425,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: TsSourceMode",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/tssourcemode`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/tssourcemode`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.tssourcemode\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1740,
-        "y": 1760,
+        "x": 2040,
+        "y": 1660,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -2394,42 +2488,23 @@
         "wires": []
     },
     {
-        "id": "c6c7b77c513dc67d",
-        "type": "mqtt out",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "16855981254e7e93",
-        "x": 2690,
-        "y": 1860,
-        "wires": []
-    },
-    {
         "id": "7f859a7a7ee27404",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
+        "g": "e6bb4e6e08658367",
         "name": "Pass to Pluto",
-        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/tssourceaddress\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "func": "let payload = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/tssourceaddress\"\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.tssourceaddress\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2490,
-        "y": 1860,
+        "x": 2030,
+        "y": 280,
         "wires": [
             [
-                "c6c7b77c513dc67d"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -2437,7 +2512,7 @@
         "id": "45b5b704879d30fe",
         "type": "ui_text_input",
         "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
+        "g": "e6bb4e6e08658367",
         "name": "",
         "label": "TSInput",
         "tooltip": "",
@@ -2452,102 +2527,12 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2180,
-        "y": 1780,
+        "x": 1740,
+        "y": 280,
         "wires": [
             [
-                "9335bff762d93722",
-                "64b6e4713fac94bf",
                 "7f859a7a7ee27404"
             ]
-        ]
-    },
-    {
-        "id": "139c2af2cc88bd80",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
-        "name": "",
-        "filename": "./tssourceaddress",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 2310,
-        "y": 1640,
-        "wires": [
-            [
-                "45b5b704879d30fe"
-            ]
-        ]
-    },
-    {
-        "id": "9335bff762d93722",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
-        "name": "",
-        "filename": "./tssourceaddress",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 2710,
-        "y": 1780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "680e1065a1131216",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2130,
-        "y": 1640,
-        "wires": [
-            [
-                "139c2af2cc88bd80"
-            ]
-        ]
-    },
-    {
-        "id": "64b6e4713fac94bf",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "162c77371bb6c962",
-        "name": "global TSsourceaddress",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"tssourceaddress\")){\n    global.set(\"tssourceaddress\", payload);\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2690,
-        "y": 1700,
-        "wires": [
-            []
         ]
     },
     {
@@ -2626,8 +2611,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1450,
-        "y": 1840,
+        "x": 1750,
+        "y": 1720,
         "wires": [
             [
                 "d533bf0f097fedc4"
@@ -2640,15 +2625,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: FEC Range variable",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecrange`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecrange`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fecrange\", payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1760,
-        "y": 1840,
+        "x": 2060,
+        "y": 1720,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -2718,8 +2703,8 @@
         "max": "2409750000",
         "step": "1000",
         "className": "",
-        "x": 1480,
-        "y": 1000,
+        "x": 1780,
+        "y": 1060,
         "wires": [
             [
                 "807128449158f2eb"
@@ -2746,30 +2731,12 @@
         "max": "50000",
         "step": "250",
         "className": "",
-        "x": 1890,
-        "y": 260,
+        "x": 1730,
+        "y": 380,
         "wires": [
             [
                 "5af92414e3f29873"
             ]
-        ]
-    },
-    {
-        "id": "b6f1e8e864f6acb1",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./nco",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 2050,
-        "y": 340,
-        "wires": [
-            []
         ]
     },
     {
@@ -2778,40 +2745,18 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "NCO",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/nco`;\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/nco`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.nco\", payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1930,
-        "y": 360,
+        "x": 2230,
+        "y": 420,
         "wires": [
             [
-                "b6f1e8e864f6acb1",
                 "8a16f1f5708afd9e"
-            ]
-        ]
-    },
-    {
-        "id": "e6138b2b0fe03b94",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./nco",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1670,
-        "y": 200,
-        "wires": [
-            [
-                "bdfdc40f3409d5eb"
             ]
         ]
     },
@@ -2900,8 +2845,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1870,
-        "y": 200,
+        "x": 1750,
+        "y": 340,
         "wires": [
             [
                 "bdfdc40f3409d5eb"
@@ -2928,7 +2873,7 @@
         "max": "3",
         "step": "0.01",
         "className": "",
-        "x": 1460,
+        "x": 1760,
         "y": 640,
         "wires": [
             [
@@ -2942,18 +2887,17 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Digital Gain when not is pass mode...",
-        "func": "let payload = msg.payload;\n// We cannot send digital gain in pass mode...\nif(global.get(\"mode\") === \"pass\") return;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/digitalgain`\nmsg.topic = topic\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\n// We cannot send digital gain in pass mode...\nif(global.get(\"device.tx.stream.mode\") === \"pass\") return;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/digitalgain`\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.digitalgain\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2050,
-        "y": 600,
+        "x": 2350,
+        "y": 640,
         "wires": [
             [
-                "05fd121d8c4be283",
                 "8a16f1f5708afd9e"
             ]
         ]
@@ -3040,11 +2984,11 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "gain",
-        "payloadType": "global",
+        "payload": "",
+        "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1430,
+        "x": 1730,
         "y": 880,
         "wires": [
             [
@@ -3069,12 +3013,12 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "gain",
-        "payloadType": "global",
+        "payload": "",
+        "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1430,
-        "y": 920,
+        "x": 1730,
+        "y": 940,
         "wires": [
             [
                 "b6da9101dce07fd1"
@@ -3087,14 +3031,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Increase Gain",
-        "func": "let currentGain = msg.payload;\nlet uppedGain = parseFloat(currentGain) + 0.25;\nmsg.payload = uppedGain.toString();\nreturn msg;",
+        "func": "let currentGain = global.get(\"device.tx.gain\");\nlet uppedGain = parseFloat(currentGain) + 0.25;\nmsg.payload = uppedGain;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
+        "x": 2020,
         "y": 880,
         "wires": [
             [
@@ -3108,15 +3052,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Decrease Gain",
-        "func": "let currentGain = msg.payload;\nlet downedGain = parseFloat(currentGain) - 0.25;\nmsg.payload = downedGain;\nreturn msg;",
+        "func": "let currentGain = global.get(\"device.tx.gain\");\nlet downedGain = parseFloat(currentGain) - 0.25;\nmsg.payload = downedGain;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
-        "y": 920,
+        "x": 2020,
+        "y": 940,
         "wires": [
             [
                 "be4a04a5a054f988",
@@ -3130,7 +3074,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: gain",
-        "func": "var payload = parseFloat(msg.payload).toFixed(2);\nif (payload !== global.get(\"device.GAIN\")){\n    global.set(\"gain\", payload);\n    global.set(\"device.GAIN\", payload);\n    global.set(\"settings.GAIN\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
+        "func": "var payload = parseFloat(msg.payload).toFixed(2);\nif (payload !== global.get(\"device.tx.gain\")){\n    global.set(\"device.tx.gain\", payload);\n    global.set(\"settings.GAIN\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3152,7 +3096,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: fecmode",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fecmode\")){\n    global.set(\"fecmode\", payload);\n    return msg;\n}",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.fecmode\")){\n    global.set(\"device.tx.dvbs2.fecmode\", payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3173,7 +3117,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: nco",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"nco\")){\n    global.set(\"nco\", payload );\n    msg.payload = payload;\n    return msg;\n}",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.nco\")){\n    global.set(\"device.tx.nco\", payload );\n    msg.payload = payload;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3194,7 +3138,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: digitalgain",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"digitalgain\")){\n    global.set(\"digitalgain\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.digitalgain\")){\n    global.set(\"device.tx.dvbs2.digitalgain\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3215,7 +3159,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: fec",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fec\")){\n    global.set(\"fec\", payload);\n    global.set(\"device.FEC\", payload);\n    global.set(\"settings.FEC\", payload);\n    global.set(\"bitratechange\", true);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.fec\")){\n    global.set(\"device.tx.dvbs2.fec\", payload);\n    global.set(\"settings.FEC\", payload);\n    global.set(\"bitratechange\", true);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3236,7 +3180,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: frequency",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"frequency\")) {\n    global.set(\"frequency\", payload);\n    global.set(\"device.frequency\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.frequency\")) {\n    global.set(\"device.tx.frequency\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3258,7 +3202,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: sr",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"sr\")){\n    global.set(\"sr\", payload);\n    global.set(\"device.SR\", payload);\n    global.set(\"settings.SR\", payload/1000);\n    global.set(\"bitratechange\", true);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.sr\")) {\n    global.set(\"bitratechange\", true);\n    global.set(\"device.tx.dvbs2.sr\", payload);\n    global.set(\"settings.SR\", payload / 1000);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3279,7 +3223,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: mode",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"mode\")){\n    global.set(\"mode\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.stream.mode\")){\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3300,7 +3244,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: constel",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.Constel\")){\n    global.set(\"device.Constel\", payload);\n    global.set(\"settings.MODE\", payload);\n    global.set(\"bitratechange\", true);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.constel\")){\n    global.set(\"device.tx.dvbs2.constel\", payload);\n    global.set(\"settings.MODE\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3321,7 +3265,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: frame",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"frame\")){\n    global.set(\"frame\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.frame\")){\n    global.set(\"device.tx.dvbs2.frame\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3342,7 +3286,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: pilots",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"pilots\")){\n    global.set(\"pilots\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.pilots\")){\n    global.set(\"device.tx.dvbs2.pilots\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3363,7 +3307,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: gainvariable",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"gainvariable\")){\n    global.set(\"gainvariable\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.gainvariable\")){\n    global.set(\"device.tx.dvbs2.gainvariable\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3384,7 +3328,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: tssourcemode",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"tssourcemode\")){\n    global.set(\"tssourcemode\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.tssourcemode\")){\n    global.set(\"device.tx.dvbs2.tssourcemode\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3405,7 +3349,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: fecrange",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"fecrange\")){\n    global.set(\"fecrange\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.fecrange\")){\n    global.set(\"device.tx.dvbs2.fecrange\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3433,8 +3377,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 125KS",
-        "x": 3230,
-        "y": 620,
+        "x": 4350,
+        "y": 1000,
         "wires": [
             [],
             [
@@ -3456,8 +3400,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 250KS",
-        "x": 3230,
-        "y": 740,
+        "x": 4350,
+        "y": 1120,
         "wires": [
             [],
             [
@@ -3479,8 +3423,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 333KS",
-        "x": 3230,
-        "y": 800,
+        "x": 4350,
+        "y": 1180,
         "wires": [
             [],
             [
@@ -3496,7 +3440,7 @@
         "g": "e6bb4e6e08658367",
         "name": "250KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 48,
+        "order": 46,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -3510,8 +3454,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 740,
+        "x": 3750,
+        "y": 1120,
         "wires": [
             [
                 "a0b7e955594b3ab5"
@@ -3525,7 +3469,7 @@
         "g": "e6bb4e6e08658367",
         "name": "333KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 51,
+        "order": 49,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -3539,8 +3483,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 800,
+        "x": 3750,
+        "y": 1180,
         "wires": [
             [
                 "d8a30908a8d1d05a"
@@ -3554,7 +3498,7 @@
         "g": "e6bb4e6e08658367",
         "name": "125KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 46,
+        "order": 44,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -3568,8 +3512,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 620,
+        "x": 3750,
+        "y": 1000,
         "wires": [
             [
                 "8f75f111bea67d19"
@@ -3581,7 +3525,7 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "d": true,
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "command": "taskkill /T /F /IM MQTT-Explorer-0.4.0-beta1.exe",
         "addpay": "",
         "append": "",
@@ -3590,8 +3534,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill MQTT Explorer",
-        "x": 3250,
-        "y": 1140,
+        "x": 3490,
+        "y": 1680,
         "wires": [
             [],
             [],
@@ -3602,10 +3546,10 @@
         "id": "c4c1592e68a08ac2",
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "name": "Terminal Profile",
         "group": "4f22c4dbc8bc16dd",
-        "order": 39,
+        "order": 37,
         "width": 5,
         "height": 1,
         "passthru": false,
@@ -3619,11 +3563,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2660,
-        "y": 1080,
+        "x": 2880,
+        "y": 1760,
         "wires": [
             [
-                "0c94d661261c1f6e"
+                "0c94d661261c1f6e",
+                "aa4a256618f7c4a6"
             ]
         ]
     },
@@ -3632,7 +3577,7 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "d": true,
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "command": "taskkill /F /FI \"WINDOWTITLE eq CONTROL*\"",
         "addpay": "",
         "append": "",
@@ -3641,8 +3586,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill CONTROL",
-        "x": 3240,
-        "y": 1080,
+        "x": 3480,
+        "y": 1620,
         "wires": [
             [],
             [],
@@ -3653,7 +3598,7 @@
         "id": "5c8e87753e4ad083",
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "command": "taskkill /T /F /IM ffmpeg.exe",
         "addpay": "",
         "append": "",
@@ -3662,8 +3607,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill ffmpeg",
-        "x": 3220,
-        "y": 1020,
+        "x": 3460,
+        "y": 1560,
         "wires": [
             [],
             [],
@@ -3674,7 +3619,7 @@
         "id": "923832cf30d7070e",
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "command": "taskkill /F /PID ",
         "addpay": "payload",
         "append": "",
@@ -3683,8 +3628,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Kill NodeRed PID",
-        "x": 3250,
-        "y": 1200,
+        "x": 3490,
+        "y": 1740,
         "wires": [
             [],
             [],
@@ -3708,8 +3653,8 @@
             "b5ed5a8ccff72343",
             "45c2428c04be0e5f"
         ],
-        "x": 2320,
-        "y": 360,
+        "x": 3200,
+        "y": 800,
         "wires": [
             [
                 "a6736166225853ff"
@@ -3788,7 +3733,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: tssourceaddress",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"tssourceaddress\")){\n    global.set(\"tssourceaddress\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.tssourceaddress\")){\n    global.set(\"device.tx.dvbs2.tssourceaddress\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3807,15 +3752,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Update Active Profile Button",
-        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet source = msg.status.source.name;\nmsg.p1_color = \"\";\nmsg.p2_color = \"\";\nmsg.p3_color = \"\";\nmsg.p4_color = \"\";\nmsg.p5_color = \"\";\nmsg.p6_color = \"\";\nmsg.p7_color = \"\";\nmsg.p8_color = \"\";\nmsg.p9_color = \"\";\nif (msg.status.text === \"error:1\" || msg.status.text === \"rc:1\") {\n    msg.command = \"stop\";\n    return msg;\n}\nmsg.p1_color = \"gray\";\nmsg.p2_color = \"gray\";\nmsg.p3_color = \"gray\";\nmsg.p4_color = \"gray\";\nmsg.p5_color = \"gray\";\nmsg.p6_color = \"gray\";\nmsg.p7_color = \"gray\";\nmsg.p8_color = \"gray\";\nmsg.p9_color = \"gray\";\nif (msg.status.text) {\n    let pid = msg.status.text.split(':');\n    msg.command = \"start\";\n    switch (source) {\n        case \"Load 33KS\":\n            msg.p1_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 66KS\":\n            msg.p2_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 125KS\":\n            msg.p3_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load last run\":\n            msg.p4_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 250KS\":\n            msg.p5_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 333KS\":\n            msg.p6_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 500KS\":\n            msg.p7_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 1000KS\":\n            msg.p8_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load custom\":\n            msg.p9_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n    }\n}",
+        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet source = msg.status.source.name;\nmsg.p1_color = \"\";\nmsg.p2_color = \"\";\nmsg.p3_color = \"\";\nmsg.p4_color = \"\";\nmsg.p5_color = \"\";\nmsg.p6_color = \"\";\nmsg.p7_color = \"\";\nmsg.p8_color = \"\";\nmsg.p9_color = \"\";\nif (msg.status.text === \"error:1\" || msg.status.text === \"rc:1\") {\n    msg.ffmpeg = \"clear\";\n    return msg;\n}\nmsg.p1_color = \"gray\";\nmsg.p2_color = \"gray\";\nmsg.p3_color = \"gray\";\nmsg.p4_color = \"gray\";\nmsg.p5_color = \"gray\";\nmsg.p6_color = \"gray\";\nmsg.p7_color = \"gray\";\nmsg.p8_color = \"gray\";\nmsg.p9_color = \"gray\";\nif (msg.status.text) {\n    let pid = msg.status.text.split(':');\n    msg.command = \"start\";\n    switch (source) {\n        case \"Load 33KS\":\n            msg.p1_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 66KS\":\n            msg.p2_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 125KS\":\n            msg.p3_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load last run\":\n            msg.p4_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 250KS\":\n            msg.p5_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 333KS\":\n            msg.p6_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 500KS\":\n            msg.p7_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load 1000KS\":\n            msg.p8_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n        case \"Load custom\":\n            msg.p9_color = \"green\";\n            global.set(\"pid\", pid[1]);\n            global.set(\"ProfileButtonsActive\", true);\n            return msg;\n    }\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2320,
-        "y": 420,
+        "x": 3460,
+        "y": 800,
         "wires": [
             [
                 "6bdd18a478266cdb",
@@ -3827,7 +3772,7 @@
                 "37c0f70c56da77c5",
                 "321917da5c241be6",
                 "6f5791e469edab55",
-                "26fb093b23e3a621"
+                "66d128c2a339f3cb"
             ]
         ]
     },
@@ -3835,11 +3780,11 @@
         "id": "4d9019e6505648e5",
         "type": "comment",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "name": "Process kill commands would differ on Linux",
         "info": "",
-        "x": 2930,
-        "y": 1020,
+        "x": 3150,
+        "y": 1600,
         "wires": []
     },
     {
@@ -3855,8 +3800,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load last run",
-        "x": 3230,
-        "y": 680,
+        "x": 4350,
+        "y": 1060,
         "wires": [
             [],
             [
@@ -3872,7 +3817,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Last Run",
         "group": "4f22c4dbc8bc16dd",
-        "order": 57,
+        "order": 55,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -3886,8 +3831,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2640,
-        "y": 680,
+        "x": 3760,
+        "y": 1060,
         "wires": [
             [
                 "1fcb391face6d380"
@@ -3941,7 +3886,7 @@
         "id": "0c94d661261c1f6e",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "name": "get active ffmpeg process id",
         "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\")) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false)\n    return msg;\n}",
         "outputs": 1,
@@ -3950,8 +3895,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2940,
-        "y": 1140,
+        "x": 3180,
+        "y": 1680,
         "wires": [
             [
                 "923832cf30d7070e",
@@ -3959,8 +3904,7 @@
                 "5c8e87753e4ad083",
                 "be766117a7d2334f",
                 "873a04942564e509",
-                "b24692049485a46b",
-                "6dc66b7d07f866f4"
+                "b24692049485a46b"
             ]
         ]
     },
@@ -3977,8 +3921,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 620,
+        "x": 4070,
+        "y": 1000,
         "wires": [
             [
                 "c157ba62f082ca1f"
@@ -3998,8 +3942,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 740,
+        "x": 4070,
+        "y": 1120,
         "wires": [
             [
                 "264a75ae81fe9571"
@@ -4019,8 +3963,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 800,
+        "x": 4070,
+        "y": 1180,
         "wires": [
             [
                 "ecd6781e5be6e360"
@@ -4040,8 +3984,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 680,
+        "x": 4070,
+        "y": 1060,
         "wires": [
             [
                 "be04ba7a44aed070"
@@ -4055,7 +3999,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Set custom ffpmeg flags for libx265",
         "info": " - **-x265-params b-adapt=1**\n - **-tune zerolatency**\n",
-        "x": 2360,
+        "x": 2440,
         "y": 40,
         "wires": []
     },
@@ -4066,8 +4010,8 @@
         "g": "e6bb4e6e08658367",
         "name": "Ensures only one ffmepg process",
         "info": "",
-        "x": 2790,
-        "y": 460,
+        "x": 4070,
+        "y": 840,
         "wires": []
     },
     {
@@ -4082,8 +4026,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1150,
-        "y": 1360,
+        "x": 1330,
+        "y": 1340,
         "wires": [
             [
                 "f3b56d13d111f207"
@@ -4097,7 +4041,7 @@
         "g": "e6bb4e6e08658367",
         "name": "500KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 53,
+        "order": 51,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4111,8 +4055,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 860,
+        "x": 3750,
+        "y": 1240,
         "wires": [
             [
                 "6629d1fde454917d"
@@ -4132,8 +4076,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 860,
+        "x": 4070,
+        "y": 1240,
         "wires": [
             [
                 "12df56e883c6693d"
@@ -4153,8 +4097,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Load 500KS",
-        "x": 3230,
-        "y": 860,
+        "x": 4350,
+        "y": 1240,
         "wires": [
             [],
             [
@@ -4170,7 +4114,7 @@
         "g": "e6bb4e6e08658367",
         "name": "1000KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 55,
+        "order": 53,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4184,8 +4128,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2640,
-        "y": 920,
+        "x": 3760,
+        "y": 1300,
         "wires": [
             [
                 "3a96d30a3b796a9c"
@@ -4205,8 +4149,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 920,
+        "x": 4070,
+        "y": 1300,
         "wires": [
             [
                 "f79f4059793d2fec"
@@ -4226,8 +4170,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load 1000KS",
-        "x": 3240,
-        "y": 920,
+        "x": 4360,
+        "y": 1300,
         "wires": [
             [],
             [
@@ -4249,7 +4193,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1760,
+        "x": 2060,
         "y": 1360,
         "wires": [
             [
@@ -4278,8 +4222,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2660,
-        "y": 980,
+        "x": 3780,
+        "y": 1420,
         "wires": [
             [
                 "ba28f83345465e97"
@@ -4299,8 +4243,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "VLC",
-        "x": 3370,
-        "y": 980,
+        "x": 4490,
+        "y": 1420,
         "wires": [
             [],
             [],
@@ -4314,7 +4258,7 @@
         "g": "e6bb4e6e08658367",
         "name": "66KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 44,
+        "order": 42,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4328,8 +4272,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 560,
+        "x": 3750,
+        "y": 940,
         "wires": [
             [
                 "21a3b184d3613c7e"
@@ -4343,7 +4287,7 @@
         "g": "e6bb4e6e08658367",
         "name": "33KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 42,
+        "order": 40,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4357,8 +4301,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 500,
+        "x": 3750,
+        "y": 880,
         "wires": [
             [
                 "863b303484773cde"
@@ -4378,8 +4322,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 560,
+        "x": 4070,
+        "y": 940,
         "wires": [
             [
                 "b5ed5a8ccff72343"
@@ -4399,8 +4343,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2950,
-        "y": 500,
+        "x": 4070,
+        "y": 880,
         "wires": [
             [
                 "8090b79c8e35900b"
@@ -4420,8 +4364,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load 33KS",
-        "x": 3230,
-        "y": 500,
+        "x": 4350,
+        "y": 880,
         "wires": [
             [],
             [
@@ -4443,8 +4387,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load 66KS",
-        "x": 3230,
-        "y": 560,
+        "x": 4350,
+        "y": 940,
         "wires": [
             [],
             [
@@ -4540,27 +4484,6 @@
         "wires": []
     },
     {
-        "id": "d860f0accbd4f141",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./frequency",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": true,
-        "x": 1670,
-        "y": 400,
-        "wires": [
-            [
-                "807128449158f2eb"
-            ]
-        ]
-    },
-    {
         "id": "7d6077cea86f2378",
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
@@ -4581,73 +4504,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1430,
-        "y": 300,
+        "x": 1250,
+        "y": 900,
         "wires": [
             [
-                "d860f0accbd4f141",
-                "2b53743d597a8bd2",
-                "fa40ea4c517a1f33",
-                "8d1438b1aced373b",
-                "da592dbb63826f5c",
-                "e6138b2b0fe03b94"
-            ]
-        ]
-    },
-    {
-        "id": "05674316d3d8cdd1",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./frequency",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1710,
-        "y": 1080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "05fd121d8c4be283",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./digitalgain",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1950,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2b53743d597a8bd2",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./gain",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1650,
-        "y": 320,
-        "wires": [
-            [
-                "37b18a222ae30d52"
+                "6b0cd6504e13d973"
             ]
         ]
     },
@@ -4668,12 +4529,12 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "digitalgain",
-        "payloadType": "global",
+        "payload": "",
+        "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1430,
-        "y": 560,
+        "x": 1730,
+        "y": 520,
         "wires": [
             [
                 "5d8a44d8d3dfd931"
@@ -4697,12 +4558,12 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "digitalgain",
+        "payload": "device.tx.dvbs2.digitalgain",
         "payloadType": "global",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1430,
-        "y": 600,
+        "x": 1730,
+        "y": 580,
         "wires": [
             [
                 "33dc958065cdada2"
@@ -4714,16 +4575,16 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "Increase Gain",
-        "func": "let currentGain = msg.payload;\nlet uppedGain = parseFloat(currentGain) + 1;\nmsg.payload = uppedGain.toString();\nreturn msg;",
+        "name": "Digital Increase Gain",
+        "func": "let currentGain = global.get(\"device.tx.dvbs2.digitalgain\");\nlet uppedGain = parseFloat(currentGain) + 1;\nmsg.payload = uppedGain;\nglobal.set(\"deviceChange\", true);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
-        "y": 560,
+        "x": 2040,
+        "y": 520,
         "wires": [
             [
                 "e91e846502f35c90"
@@ -4735,58 +4596,19 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "Decrease Gain",
-        "func": "let currentGain = msg.payload;\nlet downedGain = parseFloat(currentGain) - 1;\nmsg.payload = downedGain;\nreturn msg;",
+        "name": "Digital Decrease Gain",
+        "func": "let currentGain = global.get(\"device.tx.dvbs2.digitalgain\");\nlet downedGain = parseFloat(currentGain) - 1;\nmsg.payload = downedGain;\nglobal.set(\"deviceChange\", true);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
-        "y": 600,
+        "x": 2040,
+        "y": 580,
         "wires": [
             [
                 "e91e846502f35c90"
-            ]
-        ]
-    },
-    {
-        "id": "c86fe263aa4ec386",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./gain",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 2150,
-        "y": 980,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fa40ea4c517a1f33",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./tssourceaddress",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1690,
-        "y": 280,
-        "wires": [
-            [
-                "7f859a7a7ee27404"
             ]
         ]
     },
@@ -4813,7 +4635,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 2210,
+        "x": 2290,
         "y": 80,
         "wires": [
             []
@@ -4833,70 +4655,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2380,
+        "x": 2500,
         "y": 80,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "8d1438b1aced373b",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./tsmode",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1660,
-        "y": 440,
-        "wires": [
-            [
-                "edf4a8f5daf0b0ab"
-            ]
-        ]
-    },
-    {
-        "id": "8a4b0bf69ca74873",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./tsmode",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1980,
-        "y": 1180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "da592dbb63826f5c",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "filename": "./digitalgain",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1670,
-        "y": 360,
-        "wires": [
-            [
-                "e91e846502f35c90"
-            ]
         ]
     },
     {
@@ -4906,8 +4668,8 @@
         "g": "e6bb4e6e08658367",
         "name": "tsmode must be set, or else digital mode setting reboots pluto",
         "info": "",
-        "x": 1560,
-        "y": 240,
+        "x": 2820,
+        "y": 40,
         "wires": []
     },
     {
@@ -4931,8 +4693,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2650,
-        "y": 1260,
+        "x": 3770,
+        "y": 1540,
         "wires": [
             [
                 "e7122ff60e30d850"
@@ -4952,8 +4714,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "DVB-S GUI",
-        "x": 2850,
-        "y": 1260,
+        "x": 3970,
+        "y": 1540,
         "wires": [
             [],
             [],
@@ -4981,8 +4743,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2640,
-        "y": 1360,
+        "x": 3760,
+        "y": 1740,
         "wires": [
             [
                 "932baa0f165b71a2"
@@ -5002,8 +4764,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load custom",
-        "x": 3150,
-        "y": 1360,
+        "x": 4270,
+        "y": 1740,
         "wires": [
             [],
             [
@@ -5018,15 +4780,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "ffmpeg process safegaurd",
-        "func": "let ffmpegPID = global.get(\"pid\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    msg.payload = `${parseInt(global.get(\"settings.SR\"))} ${global.get(\"settings.MODE\")} ${global.get(\"settings.FEC\")} ${global.get(\"settings.IMAGESIZE\")} ${global.get(\"settings.FPS\")} ${global.get(\"settings.AUDIO\")} ${global.get(\"settings.CODEC\")} ${global.get(\"settings.TSBITRATE\")} ${global.get(\"frequency\")} ${global.get(\"settings.VBITRATE\")} ${global.get(\"settings.ABITRATE\")}`;\n    return msg;\n}\nreturn;\n",
+        "func": "let ffmpegPID = global.get(\"pid\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    msg.payload = `${parseInt(global.get(\"settings.SR\"))} ${global.get(\"settings.MODE\")} ${global.get(\"settings.FEC\")} ${global.get(\"settings.IMAGESIZE\")} ${global.get(\"settings.FPS\")} ${global.get(\"settings.AUDIO\")} ${global.get(\"settings.CODEC\")} ${global.get(\"settings.TSBITRATE\")} ${global.get(\"device.tx.frequency\")} ${global.get(\"settings.VBITRATE\")} ${global.get(\"settings.ABITRATE\")}`;\n    return msg;\n}\nreturn;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2890,
-        "y": 1360,
+        "x": 4010,
+        "y": 1740,
         "wires": [
             [
                 "45c2428c04be0e5f"
@@ -5037,7 +4799,7 @@
         "id": "8c336280fd0fcc92",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "1473030260740438",
         "name": "Settings manager",
         "func": "if (msg.payload !== 1) {\n    let jsonSettings = global.get(\"settings\");\n    msg.payload = JSON.stringify(jsonSettings);\n    return msg;\n}\n",
         "outputs": 1,
@@ -5046,8 +4808,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3030,
-        "y": 220,
+        "x": 3810,
+        "y": 80,
         "wires": [
             [
                 "8751a0dd93a8ed60",
@@ -5059,7 +4821,7 @@
         "id": "8751a0dd93a8ed60",
         "type": "file",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "1473030260740438",
         "name": "",
         "filename": "settings.json",
         "filenameType": "str",
@@ -5067,8 +4829,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 3250,
-        "y": 220,
+        "x": 4010,
+        "y": 120,
         "wires": [
             []
         ]
@@ -5077,17 +4839,17 @@
         "id": "ac482a3670a2a148",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "1473030260740438",
         "name": "Calculate bitrate function",
-        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.SR\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n\n    let fec = global.get(\"device.FEC\");\n    let numerator = parseInt(fec.substr(0, 1));\n    let denominator = parseInt(fec.substr(2, 2));\n    let fecCalculated = numerator / denominator;\n    let constelMode =\n        global.get(\"device.Constel\") === \"qpsk\" ? 2 :\n            global.get(\"device.Constel\") === \"8psk\" ? 3 :\n                global.get(\"device.Constel\") === \"16apsk\" ? 4 :\n                    5;\n    let qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\n    global.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\n    if (sr > 20 && sr < 36) {\n        videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 35 && sr < 67) {\n        videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 66 && sr < 126) {\n        videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 125 && sr < 251) {\n        videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 250 && sr < 334) {\n        videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 333 && sr < 501) {\n        videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 500 && sr < 1001) {\n        videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1000 && sr < 1501) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1500 && sr < 3001) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    msg.payload = qpskTsBitRate.toFixed(2);\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    msg.vidbr = videoBitRate?.toFixed(2);\n    return msg;\n} \n",
+        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let numerator = parseInt(fec.substr(0, 1));\n    let denominator = parseInt(fec.substr(2, 2));\n    let fecCalculated = numerator / denominator;\n    let constelMode =\n        global.get(\"device.tx.dvbs2.constel\") === \"qpsk\" ? 2 :\n            global.get(\"device.tx.dvbs2.constel\") === \"8psk\" ? 3 :\n                global.get(\"device.tx.dvbs2.constel\") === \"16apsk\" ? 4 :\n                    5;\n    let qpskTsBitRate = constelMode * sr * 188 / 204 * fecCalculated * 1075 / 1000;\n    global.set(\"settings.TSBITRATE\", qpskTsBitRate.toFixed(2));\n    if (sr > 20 && sr < 36) {\n        videoBitRate = (1000 * qpskTsBitRate * 50 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 35 && sr < 67) {\n        videoBitRate = (1000 * qpskTsBitRate * 60 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 66 && sr < 126) {\n        videoBitRate = (1000 * qpskTsBitRate * 68 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 125 && sr < 251) {\n        videoBitRate = (1000 * qpskTsBitRate * 76 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 250 && sr < 334) {\n        videoBitRate = (1000 * qpskTsBitRate * 80 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 333 && sr < 501) {\n        videoBitRate = (1000 * qpskTsBitRate * 82 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 500 && sr < 1001) {\n        videoBitRate = (1000 * qpskTsBitRate * 86 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1000 && sr < 1501) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    if (sr > 1500 && sr < 3001) {\n        videoBitRate = (1000 * qpskTsBitRate * 87 / 100 / 1000) - audioBitRate;\n    }\n    msg.payload = qpskTsBitRate.toFixed(2);\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    msg.vidbr = videoBitRate?.toFixed(2);\n    return msg;\n} \n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2790,
-        "y": 220,
+        "x": 3590,
+        "y": 80,
         "wires": [
             [
                 "8c336280fd0fcc92"
@@ -5112,8 +4874,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3950,
-        "y": 620,
+        "x": 3450,
+        "y": 520,
         "wires": []
     },
     {
@@ -5134,140 +4896,27 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3940,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "26fb093b23e3a621",
-        "type": "hourglass",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "persistId": "",
-        "humanizeLocale": "",
-        "x": 3780,
-        "y": 320,
-        "wires": [
-            [
-                "57db37c4faa9e7f2",
-                "f1c3eeafb1365330"
-            ]
-        ]
-    },
-    {
-        "id": "86f5a4e13856dce4",
-        "type": "ui_text",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 37,
-        "width": 5,
-        "height": 1,
-        "name": "",
-        "label": "Profile time",
-        "format": "{{msg.payload}} s",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 3950,
-        "y": 240,
+        "x": 3440,
+        "y": 580,
         "wires": []
     },
     {
         "id": "2a88de9371c58247",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Timer status and reset",
-        "func": "if(msg.payload !== undefined){\n    let imagesize = msg.payload;\n    global.set(\"settings.IMAGESIZE\", `${imagesize}`.trim());\n}\nif(global.get(\"ProfileButtonsActive\")){\n    msg.command = \"status\";\n    return msg;\n}\nif(global.get(\"started\")){\n    msg.command = \"reset\";\n    return msg;\n}\n",
+        "g": "516b3edadca50bf7",
+        "name": "set IMAGESIZE",
+        "func": "if(msg.payload !== undefined){\n    let imagesize = msg.payload;\n    global.set(\"settings.IMAGESIZE\", `${imagesize}`.trim());\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3560,
-        "y": 320,
-        "wires": [
-            [
-                "26fb093b23e3a621"
-            ]
-        ]
-    },
-    {
-        "id": "57db37c4faa9e7f2",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "started",
-                "pt": "global",
-                "to": "started",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3970,
-        "y": 360,
+        "x": 4020,
+        "y": 440,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "f1c3eeafb1365330",
-        "type": "calculator",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Milli to second",
-        "inputMsgField": "elapsed.millis",
-        "outputMsgField": "payload",
-        "operation": "div",
-        "constant": "1000",
-        "round": true,
-        "decimals": "0",
-        "x": 3960,
-        "y": 300,
-        "wires": [
-            [
-                "86f5a4e13856dce4"
-            ]
-        ]
-    },
-    {
-        "id": "d04e83af7fca53f0",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "str",
-        "x": 3950,
-        "y": 180,
-        "wires": [
-            [
-                "86f5a4e13856dce4"
-            ]
         ]
     },
     {
@@ -5291,8 +4940,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1750,
-        "y": 40,
+        "x": 1730,
+        "y": 440,
         "wires": [
             [
                 "68e079e44b9dd5c2"
@@ -5320,8 +4969,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1750,
-        "y": 80,
+        "x": 1730,
+        "y": 480,
         "wires": [
             [
                 "524de1980547eaea"
@@ -5334,15 +4983,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Increase nco",
-        "func": "let currentNCO = global.get(\"nco\");\nlet uppedNCO = parseFloat(currentNCO) + 250;\nmsg.payload = uppedNCO.toString();\nreturn msg;",
+        "func": "let currentNCO = global.get(\"device.tx.nco\");\nlet uppedNCO = parseFloat(currentNCO) + 250;\nmsg.payload = uppedNCO.toString();\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1950,
-        "y": 40,
+        "x": 2010,
+        "y": 400,
         "wires": [
             [
                 "5af92414e3f29873"
@@ -5355,15 +5004,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Decrease nco",
-        "func": "let currentNCO = global.get(\"nco\");\nlet uppedNCO = parseFloat(currentNCO) - 250;\nmsg.payload = uppedNCO.toString();\nreturn msg;",
+        "func": "let currentNCO = global.get(\"device.tx.nco\");\nlet uppedNCO = parseFloat(currentNCO) - 250;\nmsg.payload = uppedNCO.toString();\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1960,
-        "y": 80,
+        "x": 2020,
+        "y": 460,
         "wires": [
             [
                 "5af92414e3f29873"
@@ -5374,7 +5023,7 @@
         "id": "4c5bde857e7964a8",
         "type": "file in",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "filename": "imagesize",
         "filenameType": "str",
@@ -5383,8 +5032,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3340,
-        "y": 320,
+        "x": 3840,
+        "y": 440,
         "wires": [
             [
                 "2a88de9371c58247"
@@ -5395,7 +5044,7 @@
         "id": "e0a8b11837a3a291",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "props": [
             {
@@ -5409,8 +5058,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 3190,
-        "y": 320,
+        "x": 3690,
+        "y": 440,
         "wires": [
             [
                 "4c5bde857e7964a8"
@@ -5418,21 +5067,10 @@
         ]
     },
     {
-        "id": "d52ca12408c4cd7d",
-        "type": "comment",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "profile loading change imagesize",
-        "info": "",
-        "x": 3550,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "c326e0457b39d881",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "name": "active pid",
         "props": [
             {
@@ -5446,8 +5084,8 @@
         "topic": "",
         "payload": "pid",
         "payloadType": "global",
-        "x": 2470,
-        "y": 1060,
+        "x": 2770,
+        "y": 1660,
         "wires": [
             [
                 "c4c1592e68a08ac2"
@@ -5466,9 +5104,9 @@
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "VLC",
-        "x": 3090,
-        "y": 1560,
+        "name": "ffplay",
+        "x": 4410,
+        "y": 1480,
         "wires": [
             [],
             [],
@@ -5496,8 +5134,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2370,
-        "y": 1560,
+        "x": 3770,
+        "y": 1480,
         "wires": [
             [
                 "023820f309b020da"
@@ -5508,7 +5146,7 @@
         "id": "bc75f00bd265544f",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "props": [],
         "repeat": "",
@@ -5516,8 +5154,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 3610,
-        "y": 440,
+        "x": 3690,
+        "y": 480,
         "wires": [
             [
                 "6c91e490a62106d5"
@@ -5528,7 +5166,7 @@
         "id": "6c91e490a62106d5",
         "type": "file in",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "filename": "vbitrate",
         "filenameType": "str",
@@ -5537,8 +5175,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3760,
-        "y": 440,
+        "x": 3840,
+        "y": 480,
         "wires": [
             [
                 "2598c63498a7d271"
@@ -5549,7 +5187,7 @@
         "id": "2598c63498a7d271",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "set vbitrate first load",
         "func": "if (msg.payload !== undefined) {\n    let vbitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.VBITRATE\", vbitrateAtStart)\n    return msg;\n}\n",
         "outputs": 1,
@@ -5558,8 +5196,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3960,
-        "y": 440,
+        "x": 4040,
+        "y": 480,
         "wires": [
             []
         ]
@@ -5568,7 +5206,7 @@
         "id": "9067de7ba141cd15",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "props": [],
         "repeat": "",
@@ -5576,8 +5214,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 3610,
-        "y": 500,
+        "x": 3690,
+        "y": 520,
         "wires": [
             [
                 "d4cacb1bf63ac8fb"
@@ -5588,7 +5226,7 @@
         "id": "d4cacb1bf63ac8fb",
         "type": "file in",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "filename": "abitrate",
         "filenameType": "str",
@@ -5597,8 +5235,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3760,
-        "y": 500,
+        "x": 3840,
+        "y": 520,
         "wires": [
             [
                 "39cfefa0e8ccb9b9"
@@ -5609,7 +5247,7 @@
         "id": "39cfefa0e8ccb9b9",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "set abitrate first load",
         "func": "if (msg.payload !== undefined) {\n    let abitrateAtStart = `${msg.payload}`.trim();\n    global.set(\"settings.ABITRATE\", abitrateAtStart)\n    return msg;\n}\n",
         "outputs": 1,
@@ -5618,8 +5256,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3960,
-        "y": 500,
+        "x": 4040,
+        "y": 520,
         "wires": [
             []
         ]
@@ -5628,7 +5266,7 @@
         "id": "540d6ebea9628a71",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "props": [],
         "repeat": "0.1",
@@ -5636,8 +5274,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 3610,
-        "y": 560,
+        "x": 3690,
+        "y": 400,
         "wires": [
             [
                 "4bfadd6d4acf437d"
@@ -5648,7 +5286,7 @@
         "id": "4bfadd6d4acf437d",
         "type": "file in",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "516b3edadca50bf7",
         "name": "",
         "filename": "codec",
         "filenameType": "str",
@@ -5657,8 +5295,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 3750,
-        "y": 560,
+        "x": 3830,
+        "y": 400,
         "wires": [
             [
                 "f6370190fe6ad34e"
@@ -5669,8 +5307,8 @@
         "id": "f6370190fe6ad34e",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "set last used codecfirst load",
+        "g": "516b3edadca50bf7",
+        "name": "set codec",
         "func": "if (msg.payload !== undefined) {\n    let codec = `${msg.payload}`.trim();\n    global.set(\"settings.CODEC\", codec)\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
@@ -5678,8 +5316,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3980,
-        "y": 560,
+        "x": 4000,
+        "y": 400,
         "wires": [
             []
         ]
@@ -5702,8 +5340,8 @@
         "topic": "",
         "payload": "settings.VBITRATE",
         "payloadType": "global",
-        "x": 3680,
-        "y": 620,
+        "x": 3180,
+        "y": 520,
         "wires": [
             [
                 "23f54550ba5b6a79"
@@ -5728,8 +5366,8 @@
         "topic": "",
         "payload": "settings.TSBITRATE",
         "payloadType": "global",
-        "x": 3680,
-        "y": 680,
+        "x": 3180,
+        "y": 580,
         "wires": [
             [
                 "5d929a20d665af8d"
@@ -5740,7 +5378,7 @@
         "id": "b24692049485a46b",
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "command": "clear_ffmpeg.bat",
         "addpay": "",
         "append": "",
@@ -5749,8 +5387,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "clear_ffmpeg",
-        "x": 3410,
-        "y": 1040,
+        "x": 3470,
+        "y": 1860,
         "wires": [
             [],
             [],
@@ -5769,8 +5407,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 3030,
-        "y": 400,
+        "x": 3770,
+        "y": 780,
         "wires": [
             [
                 "63528f3b0c9f3dae"
@@ -5790,8 +5428,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 3190,
-        "y": 400,
+        "x": 4030,
+        "y": 780,
         "wires": [
             [
                 "6c2ed6b6c40e42db"
@@ -5817,8 +5455,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 3390,
-        "y": 400,
+        "x": 4310,
+        "y": 780,
         "wires": [
             [
                 "66d128c2a339f3cb"
@@ -5843,8 +5481,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
-        "x": 3840,
-        "y": 880,
+        "x": 4960,
+        "y": 1260,
         "wires": []
     },
     {
@@ -5860,8 +5498,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3690,
-        "y": 980,
+        "x": 4810,
+        "y": 1360,
         "wires": [
             [
                 "29f59051e6cbe148"
@@ -5874,15 +5512,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Output clearer",
-        "func": "let ffmpegOut = msg.payload;\nif (ffmpegOut === \"\" || `${ffmpegOut}`.length < 2){\n    msg.payload = ffmpegOut;\n    return msg;\n}",
+        "func": "if(msg.ffmpeg === \"clear\"){\n    msg.payload = \"\";\n    return msg;\n}\nlet ffmpegOut = msg.payload;\nif (ffmpegOut === \"\" || `${ffmpegOut}`.length < 2){\n    msg.payload = ffmpegOut;\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3660,
-        "y": 820,
+        "x": 4780,
+        "y": 1200,
         "wires": [
             [
                 "29f59051e6cbe148"
@@ -5893,7 +5531,7 @@
         "id": "dd4535e1d6b65679",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "1473030260740438",
         "name": "did bit change checker",
         "props": [
             {
@@ -5907,8 +5545,8 @@
         "topic": "",
         "payload": "bitratechange",
         "payloadType": "global",
-        "x": 2530,
-        "y": 220,
+        "x": 3350,
+        "y": 80,
         "wires": [
             [
                 "ac482a3670a2a148"
@@ -5916,28 +5554,10 @@
         ]
     },
     {
-        "id": "6dc66b7d07f866f4",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3180,
-        "y": 1280,
-        "wires": []
-    },
-    {
         "id": "f79b05ded58d1157",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "32dfcf20406c9b9a",
         "name": "then we should stop the transmission and profile",
         "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\";\n    return msg;\n}",
         "outputs": 1,
@@ -5946,8 +5566,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2220,
-        "y": 840,
+        "x": 2780,
+        "y": 1560,
         "wires": [
             [
                 "0c94d661261c1f6e",
@@ -5959,8 +5579,8 @@
         "id": "ae8f84a8936bf21e",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "did we change profile variables?",
+        "g": "32dfcf20406c9b9a",
+        "name": "global.stop checker",
         "props": [
             {
                 "p": "stop",
@@ -5973,8 +5593,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 2280,
-        "y": 720,
+        "x": 2740,
+        "y": 1500,
         "wires": [
             [
                 "f79b05ded58d1157"
@@ -5987,15 +5607,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "FEC watchdog",
-        "func": "let constel = msg.payload;\nlet fec = global.get(\"device.FEC\");\nswitch (constel) {\n    case \"qpsk\":\n        msg.payload = fec;\n        msg.options = [\"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"8psk\":\n        msg.payload = fec;\n        msg.options = [\"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"16apsk\":\n        msg.payload = fec;\n        msg.options = [\"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"32apsk\":\n        msg.payload = fec;\n        msg.options = [\"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n}\n",
+        "func": "let constel = msg.payload;\nlet fec = global.get(\"device.tx.dvbs2.fec\");\nswitch (constel) {\n    case \"qpsk\":\n        msg.payload = fec;\n        msg.options = [\"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"8psk\":\n        msg.payload = fec;\n        msg.options = [\"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"16apsk\":\n        msg.payload = fec;\n        msg.options = [\"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"32apsk\":\n        msg.payload = fec;\n        msg.options = [\"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 900,
+        "x": 1540,
+        "y": 700,
         "wires": [
             [
                 "ddf60892397fbc68",
@@ -6060,8 +5680,8 @@
         "group": "235bdacf6041386f",
         "name": "spectrum iframe",
         "order": 1,
-        "width": "32",
-        "height": "10",
+        "width": 32,
+        "height": 10,
         "url": "/spectrum",
         "origin": "*",
         "scale": "93",
@@ -6100,15 +5720,15 @@
         "font": "",
         "fontSize": "2",
         "color": "#000000",
-        "x": 1350,
-        "y": 400,
+        "x": 3250,
+        "y": 460,
         "wires": []
     },
     {
         "id": "d791940d6fb69cd4",
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
+        "g": "1473030260740438",
         "position": "top right",
         "displayTime": "3",
         "highlight": "green",
@@ -6120,7 +5740,7 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 3230,
+        "x": 4030,
         "y": 80,
         "wires": []
     },
@@ -6140,10 +5760,10 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "device.Constel",
+        "payload": "device.tx.dvbs2.constel",
         "payloadType": "global",
-        "x": 1160,
-        "y": 800,
+        "x": 1270,
+        "y": 700,
         "wires": [
             [
                 "86a189cf7830c88d"
@@ -6166,9 +5786,9 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "device.Constel",
+        "payload": "device.tx.dvbs2.constel",
         "payloadType": "global",
-        "x": 1200,
+        "x": 1350,
         "y": 1420,
         "wires": [
             [
@@ -6221,8 +5841,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 400,
+        "x": 390,
+        "y": 420,
         "wires": [
             [
                 "807128449158f2eb"
@@ -6235,7 +5855,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "28611a179255d92b",
         "name": "spectrum click symbol rate if different",
-        "func": "let sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000\nif (`${sr}` !== global.get(\"sr\")){\n    msg.payload = sr; \n    return msg;\n}",
+        "func": "let sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000\nif (`${sr}` !== global.get(\"device.tx.dvbs2.sr\")){\n    msg.payload = sr; \n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6292,8 +5912,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 1300,
+        "x": 1530,
+        "y": 1340,
         "wires": [
             [
                 "f0c209e940860820",
@@ -6302,7 +5922,1577 @@
         ]
     },
     {
-        "id": "fa1ba9eb3aafddb9",
+        "id": "c708b213a5701d8c",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "359e81623396a0cb",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 4090,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c5e1df9f4cacd67",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "359e81623396a0cb",
+        "name": "save device settings ",
+        "func": "if (msg.payload) {\n    global.set(\"deviceChange\", false);\n    let deviceSettings = global.get(\"device\");\n    msg.payload = msg.payload = JSON.stringify(deviceSettings);;\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3620,
+        "y": 220,
+        "wires": [
+            [
+                "c708b213a5701d8c",
+                "99a4c83c076987df"
+            ]
+        ]
+    },
+    {
+        "id": "3208e4f72b88b92e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "359e81623396a0cb",
+        "name": "did device settings change",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "deviceChange",
+        "payloadType": "global",
+        "x": 3360,
+        "y": 220,
+        "wires": [
+            [
+                "0c5e1df9f4cacd67"
+            ]
+        ]
+    },
+    {
+        "id": "27cbad3062794d58",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "group": "9ed1d9a126995072",
+        "order": 55,
+        "width": 0,
+        "height": 0,
+        "name": "spacer_1",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 3400,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "99a4c83c076987df",
+        "type": "ui_toast",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "359e81623396a0cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 3850,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6b0cd6504e13d973",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1250,
+        "y": 960,
+        "wires": [
+            [
+                "30312ad9e7c5689b"
+            ]
+        ]
+    },
+    {
+        "id": "30312ad9e7c5689b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "restore device settings",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 1020,
+        "wires": [
+            [
+                "30575829e5293823",
+                "50469be080414712",
+                "7806bcad704424dd",
+                "3ea225876900d6cc",
+                "04c8e605a02922e7",
+                "5256f916f7a707b7",
+                "5937fb0a3c880ee7",
+                "0116ed63e32c47c2",
+                "88e74c15960c22df",
+                "475c87a434b0f7e6",
+                "271147b0966b0076",
+                "570136a8608a39a6",
+                "5f939f9512d4ba6e",
+                "d09cacf11e30c19d",
+                "4d2f5ac9520ad4d3"
+            ]
+        ]
+    },
+    {
+        "id": "30575829e5293823",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "nco",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.nco",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 380,
+        "wires": [
+            [
+                "5af92414e3f29873"
+            ]
+        ]
+    },
+    {
+        "id": "50469be080414712",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "digitalgain",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.digitalgain",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 640,
+        "wires": [
+            [
+                "e91e846502f35c90"
+            ]
+        ]
+    },
+    {
+        "id": "7806bcad704424dd",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "fec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.fec",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 760,
+        "wires": [
+            [
+                "cec2f56be1fccf51"
+            ]
+        ]
+    },
+    {
+        "id": "3ea225876900d6cc",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "fecmode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.fecmode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 820,
+        "wires": [
+            [
+                "152082051caa1d1d"
+            ]
+        ]
+    },
+    {
+        "id": "04c8e605a02922e7",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "gain",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.gain",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1000,
+        "wires": [
+            [
+                "37b18a222ae30d52"
+            ]
+        ]
+    },
+    {
+        "id": "5256f916f7a707b7",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "frequency",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.frequency",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 1060,
+        "wires": [
+            [
+                "807128449158f2eb"
+            ]
+        ]
+    },
+    {
+        "id": "5937fb0a3c880ee7",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "sr",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.sr",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1180,
+        "wires": [
+            [
+                "89b95ad3b6453036"
+            ]
+        ]
+    },
+    {
+        "id": "0116ed63e32c47c2",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "constel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.constel",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 1420,
+        "wires": [
+            [
+                "c5ceed661f8529ce"
+            ]
+        ]
+    },
+    {
+        "id": "88e74c15960c22df",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "frame",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.frame",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1480,
+        "wires": [
+            [
+                "0c74362e749bcdc4"
+            ]
+        ]
+    },
+    {
+        "id": "475c87a434b0f7e6",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "pilots",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.pilots",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1540,
+        "wires": [
+            [
+                "4a50af4869a33baa"
+            ]
+        ]
+    },
+    {
+        "id": "271147b0966b0076",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "gainvariable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.gainvariable",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1590,
+        "y": 1600,
+        "wires": [
+            [
+                "b1b6fc76c723e0f1"
+            ]
+        ]
+    },
+    {
+        "id": "570136a8608a39a6",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "tssourcemode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.tssourcemode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 1660,
+        "wires": [
+            [
+                "7b06e3153449eb9a"
+            ]
+        ]
+    },
+    {
+        "id": "5f939f9512d4ba6e",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "fecrange",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.fecrange",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 1720,
+        "wires": [
+            [
+                "d533bf0f097fedc4"
+            ]
+        ]
+    },
+    {
+        "id": "d09cacf11e30c19d",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "tssourceaddress",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.tssourceaddress",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 280,
+        "wires": [
+            [
+                "7f859a7a7ee27404"
+            ]
+        ]
+    },
+    {
+        "id": "b3d69a3460af42a4",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "device_bak.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1800,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d2f5ac9520ad4d3",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "copy device settings",
+        "func": "let payload = msg.payload;\nmsg.payload = JSON.stringify(payload);\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 220,
+        "wires": [
+            [
+                "b3d69a3460af42a4"
+            ]
+        ]
+    },
+    {
+        "id": "f9186ed78accdb6c",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Hardware Codec",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 29,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "h264_nvenc",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "hevc_nvenc",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 550,
+        "y": 2140,
+        "wires": [
+            [
+                "1bb882ca67278b69"
+            ]
+        ]
+    },
+    {
+        "id": "d8316c32c9a501d4",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 58,
+        "width": 11,
+        "height": 1,
+        "name": "Codec panel spacer",
+        "label": "",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 240,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "a0addd449f41ee70",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Software codec",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 27,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "libx264",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "libx265",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "libvvenc",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "libaom-av1",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 520,
+        "y": 2220,
+        "wires": [
+            [
+                "1bb882ca67278b69"
+            ]
+        ]
+    },
+    {
+        "id": "3c2665b335deadcc",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Framerate",
+        "tooltip": "",
+        "place": "",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 19,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "5fps",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "10 fps",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "15 fps",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "20 fps",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "25 fps",
+                "value": "25",
+                "type": "str"
+            },
+            {
+                "label": "30 fps",
+                "value": "30",
+                "type": "str"
+            },
+            {
+                "label": "48 fps",
+                "value": "48",
+                "type": "str"
+            },
+            {
+                "label": "50 fps",
+                "value": "50",
+                "type": "str"
+            },
+            {
+                "label": "60 fps",
+                "value": "60",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 470,
+        "y": 2300,
+        "wires": [
+            [
+                "6e2b3c9e08662125"
+            ]
+        ]
+    },
+    {
+        "id": "142bd58e14cabe24",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Audio",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 22,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Mono",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Stereo",
+                "value": "2",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 450,
+        "y": 2360,
+        "wires": [
+            [
+                "ae40a9e5bdd0d113"
+            ]
+        ]
+    },
+    {
+        "id": "034d4cfc3008e95a",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 9,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Codec",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 590,
+        "y": 2680,
+        "wires": []
+    },
+    {
+        "id": "1bb882ca67278b69",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "function 1",
+        "func": "let payload = msg.payload;\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 2240,
+        "wires": [
+            [
+                "5989fbe4c1133db2"
+            ]
+        ]
+    },
+    {
+        "id": "6e2b3c9e08662125",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Framerate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.FPS",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 2300,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "ae40a9e5bdd0d113",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Audio channels",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.AUDIO",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 2360,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "5989fbe4c1133db2",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Codec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.CODEC",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 2240,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4",
+                "906644f41d307cdf"
+            ]
+        ]
+    },
+    {
+        "id": "b003500f8ea3ffe1",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Image Size",
+        "tooltip": "",
+        "place": "",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 32,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "426x240",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "640x360",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "854x480",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "960x540",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1024x576",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1280x720",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1600x900",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "1920x1080",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "2560x1440",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "3840x2160",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 490,
+        "y": 2480,
+        "wires": [
+            [
+                "d2a7c63d9b2fe699"
+            ]
+        ]
+    },
+    {
+        "id": "d2a7c63d9b2fe699",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Image size",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.IMAGESIZE",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2480,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4",
+                "a34ba6d8846e44b2"
+            ]
+        ]
+    },
+    {
+        "id": "320ab26158363e57",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "Audio bitrate kb/s",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 24,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "24",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "32",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "48",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "64",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "96",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "128",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "192",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "256",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 490,
+        "y": 2540,
+        "wires": [
+            [
+                "9c6e205117c83338"
+            ]
+        ]
+    },
+    {
+        "id": "9c6e205117c83338",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Audio Bitrate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.ABITRATE",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 2540,
+        "wires": [
+            [
+                "6bfbf0101b2cd3a4"
+            ]
+        ]
+    },
+    {
+        "id": "e034dbd60b827228",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "filename": "settings.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 490,
+        "y": 2780,
+        "wires": [
+            [
+                "42c11d5e18583e44"
+            ]
+        ]
+    },
+    {
+        "id": "42c11d5e18583e44",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "function 3",
+        "func": "let jsonSettings = JSON.parse(msg.payload);\nmsg.payload = jsonSettings;\nmsg.codec = jsonSettings.CODEC;\nglobal.set(\"settings\", jsonSettings);\nglobal.set(\"device.tx.dvbs2.constel\", jsonSettings.MODE);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 2780,
+        "wires": [
+            [
+                "5fb4d13c6bc3586f"
+            ]
+        ]
+    },
+    {
+        "id": "c65cda6215e191a8",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 310,
+        "y": 2780,
+        "wires": [
+            [
+                "e034dbd60b827228"
+            ]
+        ]
+    },
+    {
+        "id": "5fb4d13c6bc3586f",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "6bfbf0101b2cd3a4",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Settings manager",
+        "func": "let jsonSettings = global.get(\"settings\");\nmsg.codec = jsonSettings.CODEC;\nmsg.payload = JSON.stringify(jsonSettings);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 2420,
+        "wires": [
+            [
+                "34feacf8cac79e5e",
+                "3eb70786a69e6c70"
+            ]
+        ]
+    },
+    {
+        "id": "34feacf8cac79e5e",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "filename": "settings.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1210,
+        "y": 2480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "832b9a47eae8dabb",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 7,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Imagesize",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1090,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "8c06bae5f257a948",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "image size",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.IMAGESIZE",
+        "payloadType": "global",
+        "x": 870,
+        "y": 2180,
+        "wires": [
+            [
+                "832b9a47eae8dabb"
+            ]
+        ]
+    },
+    {
+        "id": "a34ba6d8846e44b2",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "filename": "imagesize",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 940,
+        "y": 2500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "072a53bc4325b8e2",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "image size",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.IMAGESIZE",
+        "payloadType": "global",
+        "x": 270,
+        "y": 2480,
+        "wires": [
+            [
+                "b003500f8ea3ffe1"
+            ]
+        ]
+    },
+    {
+        "id": "da44a9637b5774a0",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "audio bitrate",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ABITRATE",
+        "payloadType": "global",
+        "x": 280,
+        "y": 2540,
+        "wires": [
+            [
+                "320ab26158363e57"
+            ]
+        ]
+    },
+    {
+        "id": "3db47b10f2ad0660",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "audio channels",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.AUDIO",
+        "payloadType": "global",
+        "x": 220,
+        "y": 2360,
+        "wires": [
+            [
+                "142bd58e14cabe24"
+            ]
+        ]
+    },
+    {
+        "id": "9afe5b50e0c2e439",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "fps",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.FPS",
+        "payloadType": "global",
+        "x": 190,
+        "y": 2280,
+        "wires": [
+            [
+                "3c2665b335deadcc"
+            ]
+        ]
+    },
+    {
+        "id": "3eb70786a69e6c70",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Set globals",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "stop",
+                "pt": "global",
+                "to": "true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1c89523da4ca9da",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "codec",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.CODEC",
+        "payloadType": "global",
+        "x": 400,
+        "y": 2680,
+        "wires": [
+            [
+                "034d4cfc3008e95a"
+            ]
+        ]
+    },
+    {
+        "id": "906644f41d307cdf",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "filename": "codec",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1150,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1411feb53b899df2",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.CODEC",
+        "payloadType": "global",
+        "x": 190,
+        "y": 2180,
+        "wires": [
+            [
+                "f9186ed78accdb6c",
+                "a0addd449f41ee70"
+            ]
+        ]
+    },
+    {
+        "id": "f5a7d488f8b70ab6",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6312,7 +7502,7 @@
         "height": 1
     },
     {
-        "id": "1a2c141f72f92097",
+        "id": "962447ede9de3ea0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6322,7 +7512,7 @@
         "height": 1
     },
     {
-        "id": "0c87dbdaff1a90d4",
+        "id": "01c0108f94cae391",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6332,7 +7522,7 @@
         "height": 1
     },
     {
-        "id": "7a5d016e32270b6b",
+        "id": "812bc5c981bfe566",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6342,7 +7532,7 @@
         "height": 1
     },
     {
-        "id": "5db4c159c209ec6d",
+        "id": "2ac07def8cb38be8",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6352,7 +7542,7 @@
         "height": 1
     },
     {
-        "id": "38a2f875d7d6c8f7",
+        "id": "79c5983066979f5c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6362,7 +7552,7 @@
         "height": 1
     },
     {
-        "id": "1757068eafc6dcfc",
+        "id": "af65a60f5f7df53c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6372,7 +7562,7 @@
         "height": 1
     },
     {
-        "id": "5864ad9f4921b729",
+        "id": "0553b2a7861dd423",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6382,7 +7572,7 @@
         "height": 1
     },
     {
-        "id": "e11d778d9b27b386",
+        "id": "c2f5f9601a6c84ec",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6392,7 +7582,7 @@
         "height": 1
     },
     {
-        "id": "6705af2d559af888",
+        "id": "2c917920dda00bb8",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6402,7 +7592,7 @@
         "height": 1
     },
     {
-        "id": "ac2edec2c3ce7fa4",
+        "id": "18e9b0620fc0069e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6412,7 +7602,7 @@
         "height": 1
     },
     {
-        "id": "51bedd2c837f0bb3",
+        "id": "d9b8f29235a732ea",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6422,7 +7612,7 @@
         "height": 1
     },
     {
-        "id": "5f405a68832cc102",
+        "id": "a0c15e2e100ca488",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6432,7 +7622,7 @@
         "height": 1
     },
     {
-        "id": "99dc089626028cb8",
+        "id": "b098bb31824b0b9e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6442,7 +7632,7 @@
         "height": 1
     },
     {
-        "id": "d3bfc795c88c8e29",
+        "id": "feb6a21453cc618a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6452,7 +7642,7 @@
         "height": 1
     },
     {
-        "id": "c36b3fd96c8032d2",
+        "id": "ef3754e453d92519",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6462,7 +7652,7 @@
         "height": 1
     },
     {
-        "id": "4ca6e5b07b2dbaec",
+        "id": "cfa39fe0d556f34b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6472,7 +7662,7 @@
         "height": 1
     },
     {
-        "id": "ae8ba4d808703c95",
+        "id": "fd8365b60505ffda",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6482,7 +7672,7 @@
         "height": 1
     },
     {
-        "id": "a39b8df9a93a161f",
+        "id": "eb524d3c25648ed3",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6492,7 +7682,7 @@
         "height": 1
     },
     {
-        "id": "548d5348afd056fb",
+        "id": "86b2cb4feeb17f1c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6502,7 +7692,7 @@
         "height": 1
     },
     {
-        "id": "53265739d2f9a355",
+        "id": "d26239bd9d34a503",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6512,7 +7702,7 @@
         "height": 1
     },
     {
-        "id": "cd3a94c4c1628628",
+        "id": "ec6b05c9c1a221b1",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6522,7 +7712,7 @@
         "height": 1
     },
     {
-        "id": "a7d82799230d083c",
+        "id": "b511076468729b28",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6532,7 +7722,7 @@
         "height": 1
     },
     {
-        "id": "6d0178690289049b",
+        "id": "edf5d6e20e02e307",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6542,37 +7732,7 @@
         "height": 1
     },
     {
-        "id": "7b23ee7623bb90dd",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 55,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "217fcaf318e6f594",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 57,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "ac627bd9b399a297",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 59,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "a1fa57c785e0512c",
+        "id": "5474c7b392f148d4",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6582,7 +7742,7 @@
         "height": 1
     },
     {
-        "id": "4c55b3d2dc71ecb9",
+        "id": "33b7da5ecb993dd9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6592,7 +7752,7 @@
         "height": 1
     },
     {
-        "id": "d2e2541875ed73e7",
+        "id": "d315d410425e2a8b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6602,7 +7762,7 @@
         "height": 1
     },
     {
-        "id": "8813b4842e072297",
+        "id": "d98405d22948d225",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6612,7 +7772,7 @@
         "height": 1
     },
     {
-        "id": "e7f12132be61875a",
+        "id": "08692d13998c0c48",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6622,7 +7782,7 @@
         "height": 1
     },
     {
-        "id": "cb8e5ff13ef2db48",
+        "id": "989b5af0b700b846",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6632,7 +7792,7 @@
         "height": 1
     },
     {
-        "id": "ab889f26f328930f",
+        "id": "caaa9a1828d18e51",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6642,7 +7802,7 @@
         "height": 1
     },
     {
-        "id": "1530112192cca541",
+        "id": "bfaa8259be01c217",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6652,7 +7812,7 @@
         "height": 1
     },
     {
-        "id": "6856e2ac9e66f3c4",
+        "id": "9526d95f0ec90f8e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6662,7 +7822,7 @@
         "height": 1
     },
     {
-        "id": "06088eab6c6aadaa",
+        "id": "51b06fa6a0ff6205",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6672,7 +7832,7 @@
         "height": 1
     },
     {
-        "id": "26968a33060dc93e",
+        "id": "edc6cba98f4e603d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6682,7 +7842,7 @@
         "height": 1
     },
     {
-        "id": "bca00f63b4d6d545",
+        "id": "13f439f795206f65",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6692,7 +7852,7 @@
         "height": 1
     },
     {
-        "id": "6ecb935cf98faf3f",
+        "id": "e7a18f4192179d20",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6702,7 +7862,7 @@
         "height": 1
     },
     {
-        "id": "fc244f577fcfb2c3",
+        "id": "4b547136afa642a3",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6712,7 +7872,7 @@
         "height": 1
     },
     {
-        "id": "2fa3ebe204883ba7",
+        "id": "c570e98470708b47",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6722,7 +7882,7 @@
         "height": 1
     },
     {
-        "id": "f5c75894fc88293b",
+        "id": "83f42408aac1d39f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6732,7 +7892,7 @@
         "height": 1
     },
     {
-        "id": "9348d284d32b77bd",
+        "id": "b1c45b33d7d34280",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6742,7 +7902,7 @@
         "height": 1
     },
     {
-        "id": "c81f2952af3c1c4e",
+        "id": "f0c71cdc42c81548",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6752,7 +7912,7 @@
         "height": 1
     },
     {
-        "id": "cb45ffd9aa923ba3",
+        "id": "8addb1f25d366182",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6762,7 +7922,7 @@
         "height": 1
     },
     {
-        "id": "c3ad0008602a7dfa",
+        "id": "2aa89cf7e7ab2fce",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6772,7 +7932,7 @@
         "height": 1
     },
     {
-        "id": "42294511a148eec7",
+        "id": "b72988522f3a4721",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6782,17 +7942,17 @@
         "height": 1
     },
     {
-        "id": "0d880260263d3e23",
+        "id": "2d03637cc267af29",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
         "order": 36,
-        "width": 1,
+        "width": 7,
         "height": 1
     },
     {
-        "id": "1a465dfc00adf747",
+        "id": "eeaaa8c9068a1c45",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6802,17 +7962,17 @@
         "height": 1
     },
     {
-        "id": "c737d25b82f5bf0c",
+        "id": "b23237b841dbf902",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
-        "order": 40,
+        "order": 39,
         "width": 1,
         "height": 1
     },
     {
-        "id": "2e299bdbf872b1f4",
+        "id": "058d7eb5d57afc35",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6822,7 +7982,7 @@
         "height": 1
     },
     {
-        "id": "77c6a1677c7a85c1",
+        "id": "0acd08e019f957ae",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6832,7 +7992,7 @@
         "height": 1
     },
     {
-        "id": "b8bf54ecb27d5e52",
+        "id": "318da39c83f6283a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6842,7 +8002,7 @@
         "height": 1
     },
     {
-        "id": "5193f686dec2ac80",
+        "id": "f7fe619b6a192c7e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6852,17 +8012,17 @@
         "height": 1
     },
     {
-        "id": "0ece51ae5c38fe5b",
+        "id": "0978a2bc7131ae2f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
-        "order": 49,
+        "order": 48,
         "width": 1,
         "height": 1
     },
     {
-        "id": "a91c2dbd0553d840",
+        "id": "4d6ced853ddf8255",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6872,7 +8032,7 @@
         "height": 1
     },
     {
-        "id": "44a74d260f30702c",
+        "id": "12119644bd273f22",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6882,7 +8042,7 @@
         "height": 1
     },
     {
-        "id": "f35ffa90ad22ef18",
+        "id": "3593243bf8a4e8e9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6892,7 +8052,7 @@
         "height": 1
     },
     {
-        "id": "c0f6e2903d3d3ece",
+        "id": "05664e41f1c49522",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -6902,32 +8062,22 @@
         "height": 1
     },
     {
-        "id": "1eaab8500ea16efa",
+        "id": "a8283d54dd97ef95",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
-        "order": 58,
+        "order": 57,
         "width": 1,
         "height": 1
     },
     {
-        "id": "16d776ca15e1e453",
+        "id": "b82c3fc58fd6e77e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
         "order": 59,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "31eec803e2cb65cf",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 61,
         "width": 1,
         "height": 1
     },
