@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.7",
+        "label": "DATV Simple V1.73",
         "disabled": false,
-        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd",
+        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd\r\n - Fix bugs for CTRL click\r\n - rx has seperate endpoint on API",
         "env": []
     },
     {
@@ -135,11 +135,12 @@
             "2c6310aae8f397fd",
             "2a5a3cc2d63b2942",
             "d7da39a04a0b98ab",
-            "6e96b284f2323a85"
+            "6e96b284f2323a85",
+            "117e420d4df518b1"
         ],
         "x": 54,
         "y": 159,
-        "w": 972,
+        "w": 992,
         "h": 362
     },
     {
@@ -355,7 +356,8 @@
             "645cda7b921399b2",
             "64a9de4a4bd4dab6",
             "4195a19542b26c20",
-            "faf5a12234cf3d6a"
+            "faf5a12234cf3d6a",
+            "cca7205f3414de69"
         ],
         "x": 1034,
         "y": -47,
@@ -5778,9 +5780,7 @@
             [
                 "b828f6a6.47d708",
                 "64b76a53a5576a2f",
-                "63698f5f30341a43",
-                "2c6310aae8f397fd",
-                "2a5a3cc2d63b2942"
+                "63698f5f30341a43"
             ]
         ]
     },
@@ -7916,7 +7916,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: longmynd rx freq",
-        "func": "let payload = msg.payload;\nlet offset = global.get(\"device.rx.offset\");\nlet rxActual = payload + offset;\nlet topic = \"cmd/longmynd/frequency\";\nmsg.topic = topic\nmsg.payload = rxActual\nglobal.set(\"device.rx.frequency\", rxActual);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet offset = global.get(\"device.rx.offset\");\nlet rxActual = payload + offset;\nlet topic = \"cmd/longmynd/frequency\";\nmsg.topic = topic\nmsg.payload = rxActual\nglobal.set(\"device.rx.frequency\", Number(rxActual));\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8022,13 +8022,51 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
+        "x": 920,
         "y": 380,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "cca7205f3414de69"
             ]
         ]
+    },
+    {
+        "id": "117e420d4df518b1",
+        "type": "http in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28611a179255d92b",
+        "name": "",
+        "url": "/setRx",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "b828f6a6.47d708",
+                "2a5a3cc2d63b2942",
+                "2c6310aae8f397fd"
+            ]
+        ]
+    },
+    {
+        "id": "cca7205f3414de69",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "4d7f3afe5d943275",

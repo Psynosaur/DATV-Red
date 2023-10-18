@@ -105,7 +105,7 @@
         if(uplink !== undefined && canvasClickBW !== undefined){
             if (ev.ctrlKey) {
                 // send commands to onboard longmynd / OpenTuner...
-                fetch(`/setRadio?` + new URLSearchParams({
+                fetch(`/setRx?` + new URLSearchParams({
                     downlink,
                     SR: canvasClickBW
                 }));
