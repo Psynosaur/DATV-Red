@@ -6,7 +6,8 @@
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 - **Node-Red** running on windows(temporary)
   
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/02d2e613-8ef4-413f-a2ca-fa7dc3b271d6)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/8e2baeb7-e48e-47d8-82f3-1a318f254cd9)
+
 
 Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
