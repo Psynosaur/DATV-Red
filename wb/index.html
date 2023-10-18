@@ -95,7 +95,7 @@
     /* const urlParams = new URLSearchParams(window.location.search);
     var nodeRedIp = urlParams.get('nodeRed') === undefined ? "127.0.0.1:1880" : urlParams.get('nodeRed'); */
     /* This controls the pluto via HTTP request to the node-red API endpoint 'setRadio' */
-    var uplink, canvasClickBW, lastUplink, lastCanvasClickBW, busy;
+    var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW, busy;
     var busy = false;
     function on_canvas_click(ev) {
         var x = ev.clientX - ctx.canvas.offsetLeft;
@@ -103,6 +103,14 @@
         /* console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${canvasClickBW}`) */
         // block must be highlighted or box drawn for fire of request
         if(uplink !== undefined && canvasClickBW !== undefined){
+            if (ev.ctrlKey) {
+                // send commands to onboard longmynd / OpenTuner...
+                fetch(`/setRadio?` + new URLSearchParams({
+                    downlink,
+                    SR: canvasClickBW
+                }));
+                return;
+            }
             // 333KS on > 500KS channel
             if (ev.shiftKey && canvasClickBW > 0.333) {
                 canvasClickBW = 0.333;
@@ -111,14 +119,12 @@
             if (ev.altKey && canvasClickBW >= 0.333) {
                 canvasClickBW = 0.25;
             }
-            if (ev.ctrlKey) {
-                // send commands to OpenTuner...
-            }
             if(lastUplink !== uplink || lastCanvasClickBW !== canvasClickBW){
                 lastUplink = uplink;
                 lastCanvasClickBW = canvasClickBW;
                 fetch(`/setRadio?` + new URLSearchParams({
-                    freq: uplink,
+                    uplink,
+                    downlink,
                     SR: canvasClickBW,
                     busy: busy
                 }));
@@ -833,7 +839,8 @@
                         " MHz\nUplink: " + (1910.50 + freq_info[i].center_frequency) +
                         " MHz\nSymbol Rate: " + ((freq_info[i].bandwidth == 0.125) ? "125/66/33 Ksps" :
                             (freq_info[i].bandwidth == 0.333) ? (freq_info[i].center_frequency < 497.0 ? "500/333/250 Ksps" : "333/250 Ksps") : "1 Msps");
-                    uplink = (1910.50 + freq_info[i].center_frequency);
+                    downlink = 10000.00 + freq_info[i].center_frequency;
+                    uplink = 1910.50 + freq_info[i].center_frequency;
                     canvasClickBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
                     busy= false;
                     /* console.log(`Band color ${band_colour} : HEX ${colourNameToHex(band_colour)} invert: #${invertColor(colourNameToHex(band_colour))}`) */
@@ -915,4 +922,4 @@
     window.addEventListener("orientationchange", checkOrientation, false);
     // Android doesn't always fire orientationChange on 180 degree turns
     setInterval(checkOrientation, 2000);
-    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Hold Shift for 333KS or ALT for 250KS symbol rate on channel selection (click)</span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><select id="fft-colour-select"><option value="blue" selected="selected" title="Spectrum color">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select><label style="color: white;padding: 3px;" for="band-colour-select">Bands</label><select id="band-colour-select"><option value="blue" selected="selected">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select></div></div></div></div>
+    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Hold Shift for 333KS or ALT for 250KS symbol rate on channel selection, CTRL click tunes onboard Longmynd client</span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><select id="fft-colour-select"><option value="blue" selected="selected" title="Spectrum color">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select><label style="color: white;padding: 3px;" for="band-colour-select">Bands</label><select id="band-colour-select"><option value="blue" selected="selected">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select></div></div></div></div>
