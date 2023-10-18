@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.5",
+        "label": "DATV Simple V1.6",
         "disabled": false,
-        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...",
+        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order",
         "env": []
     },
     {
@@ -335,7 +335,12 @@
             "32dfcf20406c9b9a",
             "5937fb0a3c880ee7",
             "7f859a7a7ee27404",
-            "45b5b704879d30fe"
+            "45b5b704879d30fe",
+            "b800a9f107cb3124",
+            "35c6cd1a805aeca5",
+            "cd7a771d4df1122f",
+            "705c15b896ead893",
+            "8c7733a45d32bf17"
         ],
         "x": 1094,
         "y": -1,
@@ -388,7 +393,7 @@
         ],
         "x": 3194,
         "y": 39,
-        "w": 942,
+        "w": 952,
         "h": 122
     },
     {
@@ -434,10 +439,10 @@
             "f79b05ded58d1157",
             "ae8f84a8936bf21e"
         ],
-        "x": 2574,
-        "y": 1459,
-        "w": 1032,
-        "h": 449.5
+        "x": 2314,
+        "y": 1511.5,
+        "w": 1312,
+        "h": 397
     },
     {
         "id": "36a9e71117a34327",
@@ -1108,7 +1113,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: mute",
-        "func": "let mute =msg.payload\nglobal.set(\"mute\", mute)\nreturn msg;",
+        "func": "let mute = msg.payload;\nif (mute !== global.get(\"mute\") && global.get(\"device.tx.stream.mode\") !== \"pass\") {\n    global.set(\"mute\", mute)\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1331,7 +1336,8 @@
         "y": 1300,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "705c15b896ead893"
             ]
         ]
     },
@@ -1679,7 +1685,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: SampleRate",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"settings.SR\", payload/1000);\nglobal.set(\"device.tx.dvbs2.sr\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.sr\", payload);\nglobal.set(\"settings.SR\", payload/1000);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1732,7 +1738,8 @@
         "y": 1240,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "cd7a771d4df1122f"
             ]
         ]
     },
@@ -2145,7 +2152,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Reboot",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/system/reboot`;\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/system/reboot`;\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"mute\", \"1\");\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2520,7 +2527,7 @@
         "order": 4,
         "width": 4,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "mode": "text",
         "delay": "500",
         "topic": "topic",
@@ -2723,7 +2730,7 @@
         "order": 14,
         "width": 8,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "outs": "all",
         "topic": "topic",
         "topicType": "str",
@@ -2732,7 +2739,7 @@
         "step": "250",
         "className": "",
         "x": 1730,
-        "y": 380,
+        "y": 400,
         "wires": [
             [
                 "5af92414e3f29873"
@@ -2745,7 +2752,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "NCO",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/nco`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.nco\", payload);\nreturn msg;",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/nco`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.nco\", payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2894,7 +2901,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2350,
+        "x": 2450,
         "y": 640,
         "wires": [
             [
@@ -3534,7 +3541,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill MQTT Explorer",
-        "x": 3490,
+        "x": 3510,
         "y": 1680,
         "wires": [
             [],
@@ -3563,8 +3570,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2880,
-        "y": 1760,
+        "x": 2840,
+        "y": 1840,
         "wires": [
             [
                 "0c94d661261c1f6e",
@@ -3586,7 +3593,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill CONTROL",
-        "x": 3480,
+        "x": 3500,
         "y": 1620,
         "wires": [
             [],
@@ -3607,7 +3614,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill ffmpeg",
-        "x": 3460,
+        "x": 3480,
         "y": 1560,
         "wires": [
             [],
@@ -3628,7 +3635,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Kill NodeRed PID",
-        "x": 3490,
+        "x": 3510,
         "y": 1740,
         "wires": [
             [],
@@ -3783,7 +3790,7 @@
         "g": "32dfcf20406c9b9a",
         "name": "Process kill commands would differ on Linux",
         "info": "",
-        "x": 3150,
+        "x": 3170,
         "y": 1600,
         "wires": []
     },
@@ -3895,8 +3902,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3180,
-        "y": 1680,
+        "x": 3160,
+        "y": 1740,
         "wires": [
             [
                 "923832cf30d7070e",
@@ -4504,11 +4511,12 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1250,
-        "y": 900,
+        "x": 1210,
+        "y": 140,
         "wires": [
             [
-                "6b0cd6504e13d973"
+                "6b0cd6504e13d973",
+                "8c7733a45d32bf17"
             ]
         ]
     },
@@ -4666,10 +4674,10 @@
         "type": "comment",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "tsmode must be set, or else digital mode setting reboots pluto",
+        "name": "stream.mode must be set, or else digital mode setting reboots pluto",
         "info": "",
-        "x": 2820,
-        "y": 40,
+        "x": 2420,
+        "y": 580,
         "wires": []
     },
     {
@@ -4983,7 +4991,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Increase nco",
-        "func": "let currentNCO = global.get(\"device.tx.nco\");\nlet uppedNCO = parseFloat(currentNCO) + 250;\nmsg.payload = uppedNCO.toString();\nreturn msg;",
+        "func": "let currentNCO = global.get(\"device.tx.nco\");\nlet uppedNCO = parseFloat(currentNCO) + 250;\nmsg.payload = uppedNCO;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5004,7 +5012,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Decrease nco",
-        "func": "let currentNCO = global.get(\"device.tx.nco\");\nlet uppedNCO = parseFloat(currentNCO) - 250;\nmsg.payload = uppedNCO.toString();\nreturn msg;",
+        "func": "let currentNCO = global.get(\"device.tx.nco\");\nlet uppedNCO = parseFloat(currentNCO) - 250;\nmsg.payload = uppedNCO;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5084,8 +5092,8 @@
         "topic": "",
         "payload": "pid",
         "payloadType": "global",
-        "x": 2770,
-        "y": 1660,
+        "x": 2430,
+        "y": 1840,
         "wires": [
             [
                 "c4c1592e68a08ac2"
@@ -5387,7 +5395,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "clear_ffmpeg",
-        "x": 3470,
+        "x": 3490,
         "y": 1860,
         "wires": [
             [],
@@ -5566,8 +5574,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2780,
-        "y": 1560,
+        "x": 2820,
+        "y": 1680,
         "wires": [
             [
                 "0c94d661261c1f6e",
@@ -5593,8 +5601,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 2740,
-        "y": 1500,
+        "x": 2500,
+        "y": 1680,
         "wires": [
             [
                 "f79b05ded58d1157"
@@ -6042,11 +6050,11 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1250,
-        "y": 960,
+        "x": 1230,
+        "y": 220,
         "wires": [
             [
-                "30312ad9e7c5689b"
+                "b800a9f107cb3124"
             ]
         ]
     },
@@ -6056,7 +6064,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "restore device settings",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings;\nreturn msg;",
+        "func": "let jsonDeviceSettings = global.get(\"device\");\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"mute\", \"1\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6078,10 +6086,10 @@
                 "88e74c15960c22df",
                 "475c87a434b0f7e6",
                 "271147b0966b0076",
-                "570136a8608a39a6",
                 "5f939f9512d4ba6e",
-                "d09cacf11e30c19d",
-                "4d2f5ac9520ad4d3"
+                "4d2f5ac9520ad4d3",
+                "570136a8608a39a6",
+                "d09cacf11e30c19d"
             ]
         ]
     },
@@ -6105,10 +6113,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1610,
-        "y": 380,
+        "x": 1530,
+        "y": 400,
         "wires": [
             [
+                "bdfdc40f3409d5eb",
+                "c25d1cacc8057d1d",
                 "5af92414e3f29873"
             ]
         ]
@@ -6137,7 +6147,8 @@
         "y": 640,
         "wires": [
             [
-                "e91e846502f35c90"
+                "e91e846502f35c90",
+                "92bdb03cfb54e314"
             ]
         ]
     },
@@ -6221,7 +6232,9 @@
         "y": 1000,
         "wires": [
             [
-                "37b18a222ae30d52"
+                "37b18a222ae30d52",
+                "be4a04a5a054f988",
+                "18d422fe182d6186"
             ]
         ]
     },
@@ -6249,7 +6262,9 @@
         "y": 1060,
         "wires": [
             [
-                "807128449158f2eb"
+                "807128449158f2eb",
+                "44d0cb3657f978dd",
+                "dffe1e50bcaeb0a5"
             ]
         ]
     },
@@ -6273,11 +6288,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1610,
+        "x": 1570,
         "y": 1180,
         "wires": [
             [
-                "89b95ad3b6453036"
+                "89b95ad3b6453036",
+                "aa6d588a480f161c"
             ]
         ]
     },
@@ -6305,7 +6321,8 @@
         "y": 1420,
         "wires": [
             [
-                "c5ceed661f8529ce"
+                "c5ceed661f8529ce",
+                "f38c438a231661c6"
             ]
         ]
     },
@@ -6333,7 +6350,8 @@
         "y": 1480,
         "wires": [
             [
-                "0c74362e749bcdc4"
+                "0c74362e749bcdc4",
+                "ce96de0f7dba91c5"
             ]
         ]
     },
@@ -6361,7 +6379,8 @@
         "y": 1540,
         "wires": [
             [
-                "4a50af4869a33baa"
+                "4a50af4869a33baa",
+                "16a3685e614e0995"
             ]
         ]
     },
@@ -6389,7 +6408,8 @@
         "y": 1600,
         "wires": [
             [
-                "b1b6fc76c723e0f1"
+                "b1b6fc76c723e0f1",
+                "70cb26f62de94a5d"
             ]
         ]
     },
@@ -6417,7 +6437,8 @@
         "y": 1660,
         "wires": [
             [
-                "7b06e3153449eb9a"
+                "7b06e3153449eb9a",
+                "93d8b2c69bdc7792"
             ]
         ]
     },
@@ -6445,7 +6466,8 @@
         "y": 1720,
         "wires": [
             [
-                "d533bf0f097fedc4"
+                "d533bf0f097fedc4",
+                "33a0bcca85522580"
             ]
         ]
     },
@@ -6469,11 +6491,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1580,
+        "x": 1560,
         "y": 280,
         "wires": [
             [
-                "7f859a7a7ee27404"
+                "7f859a7a7ee27404",
+                "45b5b704879d30fe"
             ]
         ]
     },
@@ -6501,7 +6524,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "copy device settings",
-        "func": "let payload = msg.payload;\nmsg.payload = JSON.stringify(payload);\nreturn msg;\n\n\n",
+        "func": "let payload = msg.payload;\nmsg.payload = JSON.stringify(payload);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7164,6 +7187,7 @@
         "id": "5fb4d13c6bc3586f",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "1f5722b7aff1a710",
         "name": "debug 3",
         "active": true,
@@ -7488,6 +7512,129 @@
             [
                 "f9186ed78accdb6c",
                 "a0addd449f41ee70"
+            ]
+        ]
+    },
+    {
+        "id": "b800a9f107cb3124",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "set stream mode",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 340,
+        "wires": [
+            [
+                "35c6cd1a805aeca5"
+            ]
+        ]
+    },
+    {
+        "id": "35c6cd1a805aeca5",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "tx.stream.mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.stream.mode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 400,
+        "wires": [
+            [
+                "edf4a8f5daf0b0ab",
+                "2e677684d13ac6e0"
+            ]
+        ]
+    },
+    {
+        "id": "cd7a771d4df1122f",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1210,
+        "y": 920,
+        "wires": [
+            [
+                "30312ad9e7c5689b"
+            ]
+        ]
+    },
+    {
+        "id": "705c15b896ead893",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2360,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "8c7733a45d32bf17",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "mode after reboot",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mute",
+                "pt": "global",
+                "to": "1",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1490,
+        "y": 120,
+        "wires": [
+            [
+                "55bca069bdb08ee7"
             ]
         ]
     },
