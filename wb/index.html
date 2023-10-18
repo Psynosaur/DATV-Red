@@ -106,7 +106,7 @@
             if (ev.ctrlKey) {
                 // send commands to onboard longmynd / OpenTuner...
                 fetch(`/setRx?` + new URLSearchParams({
-                    downlink,
+                    downlink: downlink,
                     SR: canvasClickBW
                 }));
                 return;
@@ -776,6 +776,7 @@
                         if((Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4) !== 10491.5){
                             canvasClickBW = signals[i].symbolrate / 1000;
                             uplink = Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4;
+                            downlink = Math.round(parseFloat(signals[i].frequency).toFixed(2) * 4) / 4;
                             busy = true;
                         }
                         db_per_pixel = ((canvasHeight * 7 / 8) - (canvasHeight / 12)) / 15; // 15dB screen window
