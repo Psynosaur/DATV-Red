@@ -5,10 +5,26 @@
   - Mine with big chungus metal block heatsink goes upto 45°C
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 - **Node-Red** running on windows(temporary)
+
+## Setup and use
+1. Clone this repository
+
+    git clone https://github.com/Psynosaur/DATV-Simple
+
+or download the zip from github by clicking on the blue code button...
+
+2. Setup **config-tx.ini**
+
+3. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
+   
+4. Run node red from the DATV-Simple directory or use shortcut
+
+5. Please check these two videos: [setup](https://www.youtube.com/watch?v=H9hI2qRMb-A) and [general use](https://www.youtube.com/watch?v=8q4WMCyKtKw)
+
   
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/bc5a4ec9-3dda-4f3f-95c1-5ab79cf0ea77)
 
-Please check these two videos: [setup](https://www.youtube.com/watch?v=H9hI2qRMb-A) and [general use](https://www.youtube.com/watch?v=8q4WMCyKtKw)
+
 
 Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
@@ -27,40 +43,7 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
  
 If you get higher than 25fps, you should be okay... 
 
-## Setup and use( I will try automate these steps )
-1. Clone this repository
 
-    git clone https://github.com/Psynosaur/DATV-Simple
-
-or download the zip from github by clicking on the blue code button...
-
-2. Setup **config-tx.ini**
-
-3. Use **SET-FAVORITE.bat** to setup profiles 1-7 for each KS...
-   
-4. Run node red from the DATV-Simple directory or use shortcut
-
-5. Import the tx.json flow
-
-6. Double click cmd/pluto/call node
-   
-  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/c32933b6-1838-48d5-8182-bd6832556803)
-
-7. Then edit icon
-
-  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/cd31b629-09ff-4953-bc29-701b3e03edca)
-
-8. Edit Pluto IP and add security credentials for pluto
-  
-  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7963e16d-c3f1-4a77-b6c8-0c38bd4179fd)
-
-9. Click Update and then Done
-
-10. Then deploy your flow in the top right
-
-  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7cbd2d17-d3d2-45e6-a55d-3872cbf019d9)
-
-11. Then go to http://127.0.0.1:1880/ui/
 
 ## Motivation
 DATV transmissions normally have the following programs open:
