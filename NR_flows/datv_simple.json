@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.8",
+        "label": "DATV Simple V1.8.3",
         "disabled": false,
-        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd\r\n - Fix bugs for CTRL click\r\n - rx has seperate endpoint on API\r\n - uplink correction\r\n - Channel busy, you shall not PASS!!",
+        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd\r\n - Fix bugs for CTRL click\r\n - rx has seperate endpoint on API\r\n - uplink correction\r\n - Channel busy, you shall not PASS!!\r\n - add device config, \r\n - fixed longmynd frequency and sr messages we send in KHz and KS",
         "env": []
     },
     {
@@ -349,12 +349,41 @@
             "64a9de4a4bd4dab6",
             "faf5a12234cf3d6a",
             "9f151e324008585b",
-            "78b656eeda23dc5a"
+            "78b656eeda23dc5a",
+            "a20121af8968c4a2"
         ],
         "x": 1234,
         "y": 99,
         "w": 3972,
         "h": 1995.5
+    },
+    {
+        "id": "516b3edadca50bf7",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "Check profile attribute changes from preset loading",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e0a8b11837a3a291",
+            "4c5bde857e7964a8",
+            "2a88de9371c58247",
+            "bc75f00bd265544f",
+            "6c91e490a62106d5",
+            "2598c63498a7d271",
+            "9067de7ba141cd15",
+            "d4cacb1bf63ac8fb",
+            "39cfefa0e8ccb9b9",
+            "540d6ebea9628a71",
+            "4bfadd6d4acf437d",
+            "f6370190fe6ad34e"
+        ],
+        "x": 834,
+        "y": 2519,
+        "w": 572,
+        "h": 202
     },
     {
         "id": "1473030260740438",
@@ -426,34 +455,6 @@
         "y": 1671.5,
         "w": 1212,
         "h": 397
-    },
-    {
-        "id": "516b3edadca50bf7",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1f5722b7aff1a710",
-        "name": "Check profile attribute changes from preset loading",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "e0a8b11837a3a291",
-            "4c5bde857e7964a8",
-            "2a88de9371c58247",
-            "bc75f00bd265544f",
-            "6c91e490a62106d5",
-            "2598c63498a7d271",
-            "9067de7ba141cd15",
-            "d4cacb1bf63ac8fb",
-            "39cfefa0e8ccb9b9",
-            "540d6ebea9628a71",
-            "4bfadd6d4acf437d",
-            "f6370190fe6ad34e"
-        ],
-        "x": 834,
-        "y": 2519,
-        "w": 572,
-        "h": 202
     },
     {
         "id": "9f151e324008585b",
@@ -4130,7 +4131,7 @@
         "width": 3,
         "height": 1,
         "passthru": false,
-        "label": "VLC 8888",
+        "label": "VLC",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -4140,7 +4141,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 4080,
+        "x": 4070,
         "y": 1520,
         "wires": [
             [
@@ -4933,7 +4934,7 @@
         "width": 3,
         "height": 1,
         "passthru": false,
-        "label": "Ffplay 8888",
+        "label": "Ffplay",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -4943,7 +4944,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 4090,
+        "x": 4070,
         "y": 1580,
         "wires": [
             [
@@ -7087,16 +7088,17 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "props": [],
-        "repeat": "1",
+        "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "x": 1370,
         "y": 180,
         "wires": [
             [
-                "08c32461acb9a75f"
+                "08c32461acb9a75f",
+                "7d6077cea86f2378"
             ]
         ]
     },
@@ -7319,7 +7321,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: longmynd rx freq",
-        "func": "let payload = msg.payload;\nlet offset = global.get(\"device.rx.offset\");\nlet rxActual =  Number(payload + offset);\nlet topic = \"cmd/longmynd/frequency\";\nmsg.topic = topic\nmsg.payload = rxActual\nglobal.set(\"device.rx.frequency\", rxActual);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet offset = global.get(\"device.rx.offset\");\nlet rxActual =  Number(payload + offset) / 1000;\nlet topic = \"cmd/longmynd/frequency\";\nmsg.topic = topic\nmsg.payload = rxActual\nglobal.set(\"device.rx.frequency\", rxActual);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -7331,7 +7333,8 @@
         "wires": [
             [
                 "8a16f1f5708afd9e",
-                "faf5a12234cf3d6a"
+                "faf5a12234cf3d6a",
+                "a20121af8968c4a2"
             ]
         ]
     },
@@ -7341,7 +7344,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "28611a179255d92b",
         "name": "spectrum click symbol rate RX",
-        "func": "let sr = Number(msg.payload.SR);\nsr = sr * 1000000;\nmsg.payload = sr;\nreturn msg;",
+        "func": "let sr = Number(msg.payload.SR);\nsr = sr * 1000;\nmsg.payload = sr;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7365,7 +7368,7 @@
         "inputMsgField": "payload",
         "outputMsgField": "payload",
         "operation": "div",
-        "constant": "1000000",
+        "constant": "1000",
         "round": true,
         "decimals": "2",
         "x": 2670,
@@ -8208,6 +8211,23 @@
         ]
     },
     {
+        "id": "a20121af8968c4a2",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2920,
+        "y": 400,
+        "wires": []
+    },
+    {
         "id": "4d7f3afe5d943275",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
@@ -8811,7 +8831,7 @@
         "id": "16855981254e7e93",
         "type": "mqtt-broker",
         "name": "Pluto_tuin",
-        "broker": "192.168.2.1",
+        "broker": "192.168.1.111",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
