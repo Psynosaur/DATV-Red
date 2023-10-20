@@ -9,10 +9,11 @@
 ## Setup and use
 1. Download [this repository](https://github.com/Psynosaur/DATV-Simple/archive/refs/heads/main.zip) and extract to folder `DATV-Simple` and open in file explorer
 
-2. **VERY IMPORTANT** Setup `config-tx.ini` by chaning values for your setup 
+2. **VERY IMPORTANT**
+   - Setup `config-tx.ini` by chaning values for your setup 
 
-3. **PLEASE IGNORE IF Node-Red is installed!**
-     - Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
+4. **PLEASE IGNORE IF Node-Red is installed!**
+   - Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
    
 5. Run node red using shortcut in folder
 
