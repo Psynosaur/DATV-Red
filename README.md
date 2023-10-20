@@ -73,3 +73,6 @@ I'd like to make that 3 or perhaps even less, it would be nice to run this on an
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/6d66a89f-3dce-472f-9c38-f6e7aad07dbc)
 
 Tested somewhat successfully to 3MS 16APSK ¯\_(ツ)_/¯
+
+I you want buy me a coffee
+[paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
