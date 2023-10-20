@@ -29,8 +29,12 @@
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/bc5a4ec9-3dda-4f3f-95c1-5ab79cf0ea77)
 
+If you want buy me a coffee:
+
+  [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
 
+## Thanks 
 Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
@@ -63,16 +67,4 @@ So that is five programs and their child windows we need open just to have TX an
 
 I'd like to make that 3 or perhaps even less, it would be nice to run this on any operating system
 
-### TODOs:
- - Add spectrum from BATC as step one - DONE
-   - Add custom fft sources - Maybe
- - Call ffmpeg directly...(take out last of DATV-NotSoEasy bat files)
 
-### 8PSK 333KS 1920x1080 - Exceptional quality 
-
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/6d66a89f-3dce-472f-9c38-f6e7aad07dbc)
-
-Tested somewhat successfully to 3MS 16APSK ¯\_(ツ)_/¯
-
-If you want buy me a coffee XD
-[paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
