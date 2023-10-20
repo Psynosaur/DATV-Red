@@ -15,7 +15,7 @@ or download the zip from github by clicking on the blue code button...
 
 2. Setup **config-tx.ini**
 
-3. **PLEASE IGNORE IF Node-Red is installed!**Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
+3. **PLEASE IGNORE IF Node-Red is installed!** Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
    
 4. Run node red using shortcut in folder
 
