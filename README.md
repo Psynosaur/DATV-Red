@@ -7,27 +7,24 @@
 - **Node-Red** running on Windows
 
 ## Setup and use
-1. Clone this repository
+1. Download [this repository](https://github.com/Psynosaur/DATV-Simple/archive/refs/heads/main.zip) and extract to folder `DATV-Simple` and open in file explorer
 
-    git clone https://github.com/Psynosaur/DATV-Simple
+2. **VERY IMPORTANT** Setup `config-tx.ini` by chaning values for your setup 
 
-or download the zip from github by clicking on the blue code button...
-
-2. Setup **config-tx.ini**
-
-3. **PLEASE IGNORE IF Node-Red is installed!** Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
+3. **PLEASE IGNORE IF Node-Red is installed!**
+     - Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
    
-4. Run node red using shortcut in folder
+5. Run node red using shortcut in folder
 
-5. Please check this setup video: [setup](https://www.youtube.com/watch?v=H9hI2qRMb-A) for importing the flow
+6. Please check this setup video: [setup](https://www.youtube.com/watch?v=H9hI2qRMb-A) for importing the flow
 
-6. Once you have imported the flow please run `.\install_dependencies.bat` to ensure the flow has all its dependencies.
+7. Once you have imported the flow please run `.\install_dependencies.bat` to ensure the flow has all its dependencies.
 
-7. Open this [link](http://127.0.0.1:1880/ui/)
+8. Open this [link](http://127.0.0.1:1880/ui/)
 
-8. Watch this intro video on [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw)
+9. Watch this intro video on [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw)
 
-9. Have fun
+10. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/bc5a4ec9-3dda-4f3f-95c1-5ab79cf0ea77)
 
