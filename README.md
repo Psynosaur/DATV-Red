@@ -74,5 +74,5 @@ I'd like to make that 3 or perhaps even less, it would be nice to run this on an
 
 Tested somewhat successfully to 3MS 16APSK ¯\_(ツ)_/¯
 
-I you want buy me a coffee
+If you want buy me a coffee XD
 [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
