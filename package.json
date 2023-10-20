@@ -1,20 +1,14 @@
 {
     "name": "datv-simple",
     "description": "Node-Red frontend to drive DATV transmissions",
-    "version": "1.3.1",
+    "version": "1.9.0",
     "private": true,
     "dependencies": {
         "@node-red-contrib-themes/theme-collection": "~3.1.2",
-        "json-db-node-red": "~0.5.3",
-        "node-red-contrib-buffer-parser": "~3.2.2",
         "node-red-contrib-calc": "~1.0.5",
-        "node-red-contrib-hourglass": "~1.5.0",
-        "node-red-contrib-moment": "~5.0.0",
         "node-red-contrib-string": "~1.0.0",
         "node-red-contrib-sum": "~0.1.1",
-        "node-red-contrib-timer": "~1.0.6",
         "node-red-dashboard": "~3.6.0",
-        "node-red-node-daemon": "~0.6.0",
         "node-red-node-ui-iframe": "~0.2.1"
     }
 }
