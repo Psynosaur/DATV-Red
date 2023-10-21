@@ -103,6 +103,19 @@
         /* console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${canvasClickBW}`) */
         // block must be highlighted or box drawn for fire of request
         if(uplink !== undefined && canvasClickBW !== undefined){
+            // Tune pluto channel mode
+            if (ev.altKey && ev.shiftKey) {
+                lastUplink = uplink;
+                lastCanvasClickBW = canvasClickBW;
+                fetch(`/setTx?` + new URLSearchParams({
+                    uplink,
+                    downlink,
+                    SR: canvasClickBW,
+                    busy: false,
+                    tune: true
+                }));
+                return;
+            }
             if (ev.ctrlKey) {
                 // send commands to onboard longmynd / OpenTuner...
                 // 333KS on > 500KS channel
@@ -370,7 +383,7 @@
                 });
             }
 
-            ctx.fillRect(((center_frequency - (rolloff * bandwidth)) - _start_freq) * (canvasWidth / 9), canvasHeight * line_height, 2 * (rolloff * bandwidth) * (canvasWidth / 9), 5);
+            ctx.fillRect(((center_frequency - (rolloff * bandwidth)) - _start_freq) * (canvasWidth / 9), canvasHeight * line_height, 2 * (rolloff * bandwidth) * (canvasWidth / 9), 10);
         }
 
         /* 1MS */
@@ -857,7 +870,7 @@
                     busy= false;
                     /* console.log(`Band color ${band_colour} : HEX ${colourNameToHex(band_colour)} invert: #${invertColor(colourNameToHex(band_colour))}`) */
                     ctx.fillStyle = invertColor(colourNameToHex(band_colour));
-                    ctx.fillRect(xd1, yd, xd2 - xd1, 5);
+                    ctx.fillRect(xd1, yd, xd2 - xd1, 10);
                     display_triggered = true;
                     break;
                 }
