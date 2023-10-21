@@ -107,7 +107,6 @@ goto LOADSETTINGS
 
 :LastRun
 set AUTO=4
-set FECMODE=fixed
 goto LOADSETTINGS
 
 :250KS
