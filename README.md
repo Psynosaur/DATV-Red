@@ -23,11 +23,11 @@
 
 8. Open this [link](http://127.0.0.1:1880/ui/)
 
-9. Watch this intro video on [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw)
+9. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw)
 
 10. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/bc5a4ec9-3dda-4f3f-95c1-5ab79cf0ea77)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/0c5f3dba-f538-403c-8cb7-11d5318c5295)
 
 If you want buy me a coffee:
 
