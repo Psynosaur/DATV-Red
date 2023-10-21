@@ -47,7 +47,7 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
 
  Run this bat file.
 
-    .\ffmpeg_bench_libx265.bat
+    .\scripts\ffmpeg_bench_libx265.bat
 
  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/5d4a27f6-fa75-4bc7-b946-618829cf75c0)
  
