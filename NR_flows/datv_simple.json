@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.9",
+        "label": "DATV Simple V1.9.3",
         "disabled": false,
-        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd\r\n - Fix bugs for CTRL click\r\n - rx has seperate endpoint on API\r\n - uplink correction\r\n - Channel busy, you shall not PASS!!\r\n - add device config, \r\n - fixed longmynd frequency and sr messages we send in KHz and KS\r\n - spectrum watchdog only watches you when transmitting . . .\r\n - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!",
+        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd\r\n - Fix bugs for CTRL click\r\n - rx has seperate endpoint on API\r\n - uplink correction\r\n - Channel busy, you shall not PASS!!\r\n - add device config, \r\n - fixed longmynd frequency and sr messages we send in KHz and KS\r\n - spectrum watchdog only watches you when transmitting . . .\r\n - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n - Fixed state injectors\r\n   - restores state after pluto reboot  \r\n - If Restore state is Orange, PRESS IT!\r\n",
         "env": []
     },
     {
@@ -83,7 +83,8 @@
             "c4f36ff7105c2dd1",
             "de949c9780005117",
             "c44d0cb54ec5e706",
-            "4fd321bd9fa719f3"
+            "4fd321bd9fa719f3",
+            "f60d5eacebf59c8f"
         ],
         "x": 14,
         "y": 779,
@@ -126,11 +127,13 @@
             "33b1db5a2a8af09d",
             "3729f57de4a75fbf",
             "b56e0ed724bfefc0",
-            "0c72fe59acc5f30e"
+            "0c72fe59acc5f30e",
+            "6650408d269637c4",
+            "0dc39dc2f82350ce"
         ],
-        "x": 34,
+        "x": -46,
         "y": 19,
-        "w": 712,
+        "w": 1452,
         "h": 142
     },
     {
@@ -151,7 +154,7 @@
         ],
         "x": 1008,
         "y": 193,
-        "w": 3896,
+        "w": 3936,
         "h": 2367.5
     },
     {
@@ -334,11 +337,15 @@
             "32dfcf20406c9b9a",
             "9f151e324008585b",
             "78b656eeda23dc5a",
-            "1f5722b7aff1a710"
+            "1f5722b7aff1a710",
+            "762e2c70acd9ebe0",
+            "cc7307e6a7789f15",
+            "b1fb472a0a5e24a7",
+            "a5d3ec26a3634e1e"
         ],
         "x": 1034,
         "y": 219,
-        "w": 3844,
+        "w": 3884,
         "h": 2315.5
     },
     {
@@ -504,7 +511,7 @@
         ],
         "x": 3474,
         "y": 279,
-        "w": 1378,
+        "w": 1418,
         "h": 668
     },
     {
@@ -532,7 +539,7 @@
         ],
         "x": 4254,
         "y": 719,
-        "w": 572,
+        "w": 612,
         "h": 202
     },
     {
@@ -731,7 +738,8 @@
         "y": 1060,
         "wires": [
             [
-                "e0f5c4a53f48610b"
+                "e0f5c4a53f48610b",
+                "f60d5eacebf59c8f"
             ]
         ]
     },
@@ -843,7 +851,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 400,
+        "x": 1080,
         "y": 60,
         "wires": [
             [
@@ -864,7 +872,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 1320,
         "y": 60,
         "wires": [
             []
@@ -881,18 +889,18 @@
                 "p": "payload"
             }
         ],
-        "repeat": "0.1",
+        "repeat": "",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "device.callsign",
         "payloadType": "global",
-        "x": 180,
+        "x": 100,
         "y": 60,
         "wires": [
             [
-                "644c4e9fd6d1aafc"
+                "0dc39dc2f82350ce"
             ]
         ]
     },
@@ -1566,7 +1574,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: gain",
-        "func": "var payload = parseFloat(msg.payload).toFixed(2);\nif (payload !== global.get(\"device.tx.gain\")){\n    global.set(\"device.tx.gain\", payload);\n    global.set(\"settings.GAIN\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
+        "func": "var payload = parseFloat(msg.payload).toFixed(2);\nif (payload !== global.get(\"device.tx.gain\")){\n    global.set(\"device.tx.gain\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1735,7 +1743,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
         "name": "Global: constel",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.constel\")){\n    global.set(\"device.tx.dvbs2.constel\", payload);\n    global.set(\"settings.MODE\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.constel\")){\n    global.set(\"device.tx.dvbs2.constel\", payload);\n    // global.set(\"settings.MODE\", payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3070,12 +3078,12 @@
         "multiple": false,
         "options": [
             {
-                "label": "fixed",
+                "label": "",
                 "value": "fixed",
                 "type": "str"
             },
             {
-                "label": "variable",
+                "label": "",
                 "value": "variable",
                 "type": "str"
             }
@@ -3098,7 +3106,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: FecMode",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fecmode\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nif(payload === \"variable\"){\n    msg.fec = \"1/4\";\n}\nmsg.defaultFEC = true;\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fecmode\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3109,7 +3117,8 @@
         "y": 1380,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "762e2c70acd9ebe0"
             ]
         ]
     },
@@ -3119,7 +3128,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Gain",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/gain`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.gain\", payload);\nglobal.set(\"settings.GAIN\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/gain`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.gain\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3140,18 +3149,20 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Fec",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fec\", payload);\nglobal.set(\"settings.FEC\", payload);\nreturn msg;\n",
+        "func": "\nglobal.set(\"deviceChange\", true);\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\nglobal.set(\"stop\", true);\n\nglobal.set(\"device.tx.dvbs2.fec\", payload);\nglobal.set(\"settings.FEC\", payload);\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"bitratechange\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1810,
+        "x": 1870,
         "y": 1320,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "b1fb472a0a5e24a7",
+                "cc7307e6a7789f15"
             ]
         ]
     },
@@ -3161,7 +3172,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: SampleRate",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.sr\", payload);\nglobal.set(\"settings.SR\", payload/1000);\nreturn msg;\n",
+        "func": "global.set(\"deviceChange\", true);\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"device.tx.dvbs2.sr\", payload);\nglobal.set(\"settings.SR\", payload/1000);\nglobal.set(\"bitratechange\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3203,7 +3214,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Stream Mode",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\n// global.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3274,7 +3285,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Send: Constellation",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.constel\", payload);\nglobal.set(\"settings.MODE\", payload);\nreturn msg;\n",
+        "func": "global.set(\"deviceChange\", true);\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.constel\", payload);\nglobal.set(\"settings.MODE\", payload);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"bitratechange\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3741,7 +3752,7 @@
         "g": "e6bb4e6e08658367",
         "name": "125KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 46,
+        "order": 48,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -3816,7 +3827,7 @@
         "g": "e6bb4e6e08658367",
         "name": "250KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 48,
+        "order": 50,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -3845,7 +3856,7 @@
         "g": "e6bb4e6e08658367",
         "name": "333KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 51,
+        "order": 53,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -3969,7 +3980,7 @@
         "g": "e6bb4e6e08658367",
         "name": "Last Run",
         "group": "4f22c4dbc8bc16dd",
-        "order": 57,
+        "order": 59,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4149,7 +4160,7 @@
         "g": "e6bb4e6e08658367",
         "name": "500KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 53,
+        "order": 55,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4222,7 +4233,7 @@
         "g": "e6bb4e6e08658367",
         "name": "1000KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 55,
+        "order": 57,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4366,7 +4377,7 @@
         "g": "e6bb4e6e08658367",
         "name": "66KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 44,
+        "order": 46,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4395,7 +4406,7 @@
         "g": "e6bb4e6e08658367",
         "name": "33KS",
         "group": "4f22c4dbc8bc16dd",
-        "order": 42,
+        "order": 44,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4664,11 +4675,11 @@
         "order": 5,
         "width": 3,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "label": "RESTORE STATE",
         "tooltip": "",
         "color": "",
-        "bgcolor": "",
+        "bgcolor": "{{payload}}",
         "className": "",
         "icon": "",
         "payload": "",
@@ -4852,7 +4863,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "ffmpeg process safegaurd",
-        "func": "let ffmpegPID = global.get(\"pid\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    msg.payload = `${parseInt(global.get(\"settings.SR\"))} ${global.get(\"settings.MODE\")} ${global.get(\"settings.FEC\")} ${global.get(\"settings.IMAGESIZE\")} ${global.get(\"settings.FPS\")} ${global.get(\"settings.AUDIO\")} ${global.get(\"settings.CODEC\")} ${global.get(\"settings.TSBITRATE\")} ${global.get(\"device.tx.frequency\")} ${global.get(\"settings.VBITRATE\")} ${global.get(\"settings.ABITRATE\")}`;\n    return msg;\n}\nreturn;\n",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    msg.payload = `${parseInt(global.get(\"settings.SR\"))} ${global.get(\"settings.MODE\")} ${fec} ${global.get(\"settings.IMAGESIZE\")} ${global.get(\"settings.FPS\")} ${global.get(\"settings.AUDIO\")} ${global.get(\"settings.CODEC\")} ${global.get(\"settings.TSBITRATE\")} ${global.get(\"device.tx.dvbs2.fecmode\")} ${global.get(\"device.tx.frequency\")} ${global.get(\"settings.VBITRATE\")} ${global.get(\"settings.ABITRATE\")}`;\n    return msg;\n}\nreturn;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4972,7 +4983,7 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "command": "ffplayudp.bat",
+        "command": "/scripts/ffplayudp.bat",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -5185,7 +5196,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "device.tx.dvbs2.constel",
         "payloadType": "global",
@@ -5272,7 +5283,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "THEN restore device settings",
-        "func": "let jsonDeviceSettings = global.get(\"device\");\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"mute\", \"1\");\nreturn msg;",
+        "func": "let jsonDeviceSettings = global.get(\"device\");\nmsg.payload = jsonDeviceSettings;\n// global.set(\"mute\", \"1\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5957,7 +5968,7 @@
         "g": "32dfcf20406c9b9a",
         "name": "Terminal Profile",
         "group": "4f22c4dbc8bc16dd",
-        "order": 39,
+        "order": 41,
         "width": 5,
         "height": 1,
         "passthru": false,
@@ -6259,7 +6270,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "FIRST set stream mode",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings;\nreturn msg;",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"state_color\", \"\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6365,18 +6376,25 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "",
-        "props": [],
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "1",
+        "onceDelay": "3",
         "topic": "",
+        "payload": "true",
+        "payloadType": "str",
         "x": 1190,
         "y": 300,
         "wires": [
             [
-                "7d6077cea86f2378",
-                "08c32461acb9a75f"
+                "08c32461acb9a75f",
+                "6b0cd6504e13d973",
+                "8c7733a45d32bf17"
             ]
         ]
     },
@@ -6723,7 +6741,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "name": "Pluto connection status",
-        "func": "let status=msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\"\n}\nif (status == \"node-red:common.status.connected\") {\n    human_status = \"Connected\"\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\"\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status=human_status;\nmsg.kleur = fill;\nreturn msg;",
+        "func": "let status=msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n}\nif (status == \"node-red:common.status.connected\") {\n    human_status = \"Connected\";\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status=human_status;\nmsg.kleur = fill;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -6972,7 +6990,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "group": "4f22c4dbc8bc16dd",
-        "order": 60,
+        "order": 62,
         "width": 11,
         "height": 1,
         "name": "Codec panel spacer",
@@ -7597,13 +7615,13 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "filename": "imagesize",
+        "filename": "shared/imagesize",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 4320,
+        "x": 4350,
         "y": 580,
         "wires": [
             []
@@ -7778,13 +7796,13 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "filename": "codec",
+        "filename": "shared/codec",
         "filenameType": "str",
         "appendNewline": false,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 4330,
+        "x": 4360,
         "y": 360,
         "wires": [
             []
@@ -7871,14 +7889,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "516b3edadca50bf7",
         "name": "",
-        "filename": "imagesize",
+        "filename": "shared/imagesize",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 4500,
+        "x": 4530,
         "y": 800,
         "wires": [
             [
@@ -7899,7 +7917,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4680,
+        "x": 4720,
         "y": 800,
         "wires": [
             []
@@ -7931,14 +7949,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "516b3edadca50bf7",
         "name": "",
-        "filename": "vbitrate",
+        "filename": "shared/vbitrate",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 4500,
+        "x": 4520,
         "y": 840,
         "wires": [
             [
@@ -7959,7 +7977,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4700,
+        "x": 4740,
         "y": 840,
         "wires": [
             []
@@ -7991,14 +8009,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "516b3edadca50bf7",
         "name": "",
-        "filename": "abitrate",
+        "filename": "shared/abitrate",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 4500,
+        "x": 4520,
         "y": 880,
         "wires": [
             [
@@ -8019,7 +8037,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4700,
+        "x": 4740,
         "y": 880,
         "wires": [
             []
@@ -8051,14 +8069,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "516b3edadca50bf7",
         "name": "",
-        "filename": "codec",
+        "filename": "shared/codec",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": true,
-        "x": 4490,
+        "x": 4520,
         "y": 760,
         "wires": [
             [
@@ -8079,14 +8097,164 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4660,
+        "x": 4700,
         "y": 760,
         "wires": [
             []
         ]
     },
     {
-        "id": "4d7f3afe5d943275",
+        "id": "6650408d269637c4",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "name": "FIRST set stream mode",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.callsign;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 60,
+        "wires": [
+            [
+                "644c4e9fd6d1aafc"
+            ]
+        ]
+    },
+    {
+        "id": "0dc39dc2f82350ce",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 310,
+        "y": 60,
+        "wires": [
+            [
+                "6650408d269637c4"
+            ]
+        ]
+    },
+    {
+        "id": "762e2c70acd9ebe0",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "variable fecmode 1/4 setter",
+        "func": "if (msg.fec) {\n    global.set(\"deviceChange\", true);\n    let payload = msg.fec;\n    let topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\n    global.set(\"stop\", true);\n    global.set(\"device.tx.dvbs2.fec\", payload);\n    // global.set(\"settings.FEC\", payload);\n    msg.topic = topic\n    msg.payload = payload\n    return msg;\n}\nif(msg.defaultFEC){\n    global.set(\"deviceChange\", true);\n    let payload = global.get(\"settings.FEC\");\n    let topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fec`;\n    global.set(\"stop\", true);\n    global.set(\"device.tx.dvbs2.fec\", payload);\n    msg.topic = topic\n    msg.payload = payload\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2460,
+        "y": 1220,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "cc7307e6a7789f15",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2760,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "f60d5eacebf59c8f",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9c3a6dbecd18c092",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 39,
+        "width": 2,
+        "height": 1,
+        "name": "",
+        "label": "FEC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 690,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "b1fb472a0a5e24a7",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "fixed fecmode setter",
+        "func": "let topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nmsg.topic = topic\nmsg.payload = \"fixed\";\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fecmode\", \"fixed\");\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2440,
+        "y": 1320,
+        "wires": [
+            [
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "a5d3ec26a3634e1e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "color injector",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "state_color",
+        "payloadType": "global",
+        "x": 1180,
+        "y": 260,
+        "wires": [
+            [
+                "7d6077cea86f2378"
+            ]
+        ]
+    },
+    {
+        "id": "7e6d33ec1be1f770",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8096,7 +8264,7 @@
         "height": 1
     },
     {
-        "id": "bcc9a044e4b4e202",
+        "id": "525d218372b2f472",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8106,7 +8274,7 @@
         "height": 1
     },
     {
-        "id": "286f4b7454c5dd9a",
+        "id": "7fc266be8df4d3eb",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8116,7 +8284,7 @@
         "height": 1
     },
     {
-        "id": "b911dba6b1c144bf",
+        "id": "c5adb919cde47b10",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8126,7 +8294,7 @@
         "height": 1
     },
     {
-        "id": "0eac820e9888e06f",
+        "id": "7aa9543d5b7be945",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8136,7 +8304,7 @@
         "height": 1
     },
     {
-        "id": "28913ab429a2bd4c",
+        "id": "11a6994fcc352c9c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8146,7 +8314,7 @@
         "height": 1
     },
     {
-        "id": "d4e7903884f2b170",
+        "id": "3e92339fa9526e50",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8156,7 +8324,7 @@
         "height": 1
     },
     {
-        "id": "08fba452f6f2763b",
+        "id": "57309405e7f80b32",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8166,7 +8334,7 @@
         "height": 1
     },
     {
-        "id": "d44fff37543a96d3",
+        "id": "be280a09bd5a2eb9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8176,7 +8344,7 @@
         "height": 1
     },
     {
-        "id": "a8a2709188b0cfb6",
+        "id": "a17d43ea168be78e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8186,7 +8354,7 @@
         "height": 1
     },
     {
-        "id": "45193c174ed8d627",
+        "id": "921d5dfca733974e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8196,7 +8364,7 @@
         "height": 1
     },
     {
-        "id": "38a26ff7925f97c8",
+        "id": "10b4928955edd423",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8206,7 +8374,7 @@
         "height": 1
     },
     {
-        "id": "3ae7d51a44a583bb",
+        "id": "cff5b54fa209edfe",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8216,7 +8384,7 @@
         "height": 1
     },
     {
-        "id": "58c286ecae237617",
+        "id": "ff531a0214b57575",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8226,7 +8394,7 @@
         "height": 1
     },
     {
-        "id": "1bcdfae8da343b30",
+        "id": "0e895db5d126a4eb",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8236,7 +8404,7 @@
         "height": 1
     },
     {
-        "id": "3b0acc6591690563",
+        "id": "9c346ac328b1fe6d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8246,7 +8414,7 @@
         "height": 1
     },
     {
-        "id": "db6149fd0e9da90a",
+        "id": "9bbbeb03fb58e28f",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8256,7 +8424,7 @@
         "height": 1
     },
     {
-        "id": "ef6a645d020211aa",
+        "id": "e71a23123ae67529",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8266,7 +8434,7 @@
         "height": 1
     },
     {
-        "id": "efaccb86d0602a35",
+        "id": "fa53062315aab226",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8276,7 +8444,7 @@
         "height": 1
     },
     {
-        "id": "4997f74ae42fe39a",
+        "id": "590134fd33675922",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8286,7 +8454,7 @@
         "height": 1
     },
     {
-        "id": "e8b67dc6437be1da",
+        "id": "f10d4e85b6a258b0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8296,7 +8464,7 @@
         "height": 1
     },
     {
-        "id": "efc8452374a2646c",
+        "id": "7a6ecbf540b3cc0e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8306,7 +8474,7 @@
         "height": 1
     },
     {
-        "id": "8e768d2c879ed0a8",
+        "id": "a1ea5af1c390570c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8316,7 +8484,7 @@
         "height": 1
     },
     {
-        "id": "33c986d6f30491fb",
+        "id": "a22f9bdaa067b7bf",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8326,7 +8494,7 @@
         "height": 1
     },
     {
-        "id": "a4a24edba3a1ebeb",
+        "id": "a1c24673745f3fed",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8336,7 +8504,7 @@
         "height": 1
     },
     {
-        "id": "b82e7615595720ae",
+        "id": "5307657d71d1fa13",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8346,7 +8514,7 @@
         "height": 1
     },
     {
-        "id": "d8f167dcf6b550a1",
+        "id": "a14e3c5ffe564344",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8356,7 +8524,7 @@
         "height": 1
     },
     {
-        "id": "42b7be04ffd7bc07",
+        "id": "6d2c036e6235ee8b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8366,7 +8534,7 @@
         "height": 1
     },
     {
-        "id": "dc61d69285f5a9a3",
+        "id": "21599391a3e03451",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8376,7 +8544,7 @@
         "height": 1
     },
     {
-        "id": "feeb5cd2ccb55734",
+        "id": "be8b404fcb4e5ba4",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8386,7 +8554,7 @@
         "height": 1
     },
     {
-        "id": "8152d99d37797908",
+        "id": "274c9701aeba38d0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8396,7 +8564,7 @@
         "height": 1
     },
     {
-        "id": "75b4c28979091ac2",
+        "id": "6dbe219c40410782",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8406,7 +8574,7 @@
         "height": 1
     },
     {
-        "id": "57fa11b3ed1fe538",
+        "id": "341d5ef409787c87",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8416,7 +8584,7 @@
         "height": 1
     },
     {
-        "id": "f1040c893fbea83c",
+        "id": "6510105860c00183",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8426,7 +8594,7 @@
         "height": 1
     },
     {
-        "id": "77a3ddfe44d80957",
+        "id": "296deaa821d5f06d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8436,7 +8604,7 @@
         "height": 1
     },
     {
-        "id": "0d89c4851f2db18d",
+        "id": "aa86ffbc6c5aaa6e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8446,7 +8614,7 @@
         "height": 1
     },
     {
-        "id": "bd0f804f1b050219",
+        "id": "ac44f0170933aa1b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8456,7 +8624,7 @@
         "height": 1
     },
     {
-        "id": "4a8cdb592b6f4124",
+        "id": "20b726eb6f266734",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8466,7 +8634,7 @@
         "height": 1
     },
     {
-        "id": "abaf223f06936bf2",
+        "id": "f63849487875eb8a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8476,7 +8644,7 @@
         "height": 1
     },
     {
-        "id": "ce2b407e967dc007",
+        "id": "98240d915ca8be44",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8486,7 +8654,7 @@
         "height": 1
     },
     {
-        "id": "8edadb30ff707c88",
+        "id": "f2e1bf9962e4ee8d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8496,7 +8664,7 @@
         "height": 1
     },
     {
-        "id": "c326e263ca995af6",
+        "id": "6c6afe6404e7e93b",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8506,7 +8674,7 @@
         "height": 1
     },
     {
-        "id": "55da7f7033a27a07",
+        "id": "696f15f2083a694d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8516,7 +8684,7 @@
         "height": 1
     },
     {
-        "id": "0f592479d8cad86f",
+        "id": "feb5d64f5b8a20d7",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8526,7 +8694,7 @@
         "height": 1
     },
     {
-        "id": "1b6c0e25b5d241ec",
+        "id": "17edd29789388ad4",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8536,7 +8704,7 @@
         "height": 1
     },
     {
-        "id": "c3a2284b962b87f5",
+        "id": "9cc93868825b7b7d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8546,17 +8714,17 @@
         "height": 1
     },
     {
-        "id": "4309833b5799de15",
+        "id": "d12fde6cb45de3bd",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
         "order": 38,
-        "width": 4,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "26612012268061ee",
+        "id": "eabba68d7a0d957c",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8566,17 +8734,17 @@
         "height": 1
     },
     {
-        "id": "6cc89582959e32f7",
+        "id": "062bc3098bdea2a0",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
-        "order": 41,
+        "order": 42,
         "width": 1,
         "height": 1
     },
     {
-        "id": "53e5fc5cca87fcab",
+        "id": "c887ca472dbb48f2",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8586,7 +8754,7 @@
         "height": 1
     },
     {
-        "id": "6b21289bfa187645",
+        "id": "d8c079d5b1805fb4",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8596,7 +8764,7 @@
         "height": 1
     },
     {
-        "id": "68d0452313e84bf1",
+        "id": "66bbbd0b37de2537",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8606,7 +8774,7 @@
         "height": 1
     },
     {
-        "id": "b7b7dff066a2a09d",
+        "id": "d6f4633bdf0cdb37",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8616,17 +8784,17 @@
         "height": 1
     },
     {
-        "id": "22c2b59fbce41053",
+        "id": "c62f78fc43671dfe",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
-        "order": 50,
+        "order": 51,
         "width": 1,
         "height": 1
     },
     {
-        "id": "7c16ddfa24fe51fc",
+        "id": "73897b21c42c0656",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8636,7 +8804,7 @@
         "height": 1
     },
     {
-        "id": "f2f3df52880f27ee",
+        "id": "910ee9ee13267c62",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8646,7 +8814,7 @@
         "height": 1
     },
     {
-        "id": "4ab339a71123adad",
+        "id": "125c095c6ac7dff7",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8656,7 +8824,7 @@
         "height": 1
     },
     {
-        "id": "3028758a10f1a214",
+        "id": "8cf47df1cf61e7d4",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8666,17 +8834,17 @@
         "height": 1
     },
     {
-        "id": "a4f4e439219e18c0",
+        "id": "aba17a798c6530be",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "4f22c4dbc8bc16dd",
-        "order": 59,
+        "order": 60,
         "width": 1,
         "height": 1
     },
     {
-        "id": "3df5b448d0c9cfd3",
+        "id": "48451dfd7692bafc",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -8686,10 +8854,20 @@
         "height": 1
     },
     {
+        "id": "1302056eece37aa5",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 63,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "16855981254e7e93",
         "type": "mqtt-broker",
         "name": "Pluto_tuin",
-        "broker": "192.168.2.1",
+        "broker": "192.168.1.111",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
