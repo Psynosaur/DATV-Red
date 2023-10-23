@@ -1,1 +1,1 @@
-start ..\custom\ffplay udp://127.0.0.1:8888
+start ..\ffmpeg\ffplay udp://127.0.0.1:8888
