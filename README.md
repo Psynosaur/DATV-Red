@@ -21,11 +21,15 @@
 
 7. Once you have imported the flow please run `.\install_dependencies.bat` to ensure the flow has all its dependencies.
 
-8. Open this [link](http://127.0.0.1:1880/ui/)
+8. Open this [link](http://127.0.0.1:1880/ui/) and install from browser by click this icon
 
-9. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw)
+   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/f5a2950f-0524-47bf-87e0-bdaa8be0e7ef)
 
-10. Have fun
+
+
+10. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw)
+
+11. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/0c5f3dba-f538-403c-8cb7-11d5318c5295)
 
