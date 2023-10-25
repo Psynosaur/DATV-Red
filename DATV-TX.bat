@@ -523,6 +523,9 @@ GoTo FREESR
 
 :FREESR
 REM Videobitrate calculation
+REM Adjust TSBITRATE for FRAME short and Pilots on
+if "%FRAME%"=="short" set /a TSBITRATE = (1000 * %TSBITRATE% * 95 / 100 / 1000)
+if "%PILOTS%"=="1" set /a TSBITRATE = (1000 * %TSBITRATE% * 98 / 100 / 1000)
 
 REM Up to 35K
 if %SR% GTR 20 if %SR% LSS 36 set /a VBITRATE = (1000 * %TSBITRATE% * 50 / 100 / 1000) - %ABITRATE%

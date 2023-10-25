@@ -39,6 +39,7 @@
 
     var fft_colour = 'blue';
     var band_colour = 'blue';
+    var background_colour = 'black';
     var signals = [];
     var freq_info = [];
 
@@ -52,6 +53,10 @@
 
         if (localStorage.wb_band_colour) {
             band_colour = localStorage.wb_band_colour;
+        }
+
+        if (localStorage.background_colour) {
+            background_colour = localStorage.background_colour;
         }
 
         if (localStorage.wb_fft_speed) {
@@ -70,26 +75,6 @@
         color = "#" + color; // prepend #
         return color;
     }
-      
-
-    function colourNameToHex(colour)
-        {
-            var colours = {
-                "blue":"#0000ff",
-                "cyan":"#00ffff",
-                "green":"#008000",
-                "lime":"#00ff00",
-                "magenta":"#ff00ff",
-                "red":"#ff0000",
-                "white":"#ffffff",
-                "yellow":"#ffff00"
-            };
-
-            if (typeof colours[colour.toLowerCase()] != 'undefined')
-                return colours[colour.toLowerCase()];
-
-            return false;
-        }
     
     var fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
     /* const urlParams = new URLSearchParams(window.location.search);
@@ -97,13 +82,30 @@
     /* This controls the pluto via HTTP request to the node-red API endpoint 'setRadio' */
     var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW, busy;
     var busy = false;
+    var activeColor, activeXd1, activeYd,activeXd2;
+    var activeColor_1, activeXd1_1, activeYd_1,activeXd2_1;
     function on_canvas_click(ev) {
         var x = ev.clientX - ctx.canvas.offsetLeft;
         var y = ev.clientY - ctx.canvas.offsetTop;
         /* console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${canvasClickBW}`) */
-        // block must be highlighted or box drawn for fire of request
+        /* block must be highlighted or box drawn for fire of request */
         if(uplink !== undefined && canvasClickBW !== undefined){
-            // Tune pluto channel mode
+            /* Tune minitiouner on local pc with multicast message */
+            if (ev.ctrlKey && ev.altKey) {
+                lastUplink = uplink;
+                lastCanvasClickBW = canvasClickBW;
+                fetch(`/setTune?` + new URLSearchParams({
+                    downlink,
+                    SR: canvasClickBW,
+                }));
+                activeColor_1 = activeColor;
+                activeXd1_1 = activeXd1;
+                /* clicking on a signal sets the busyFetch to 'true', so tune bar sits on the top row */
+                activeYd_1 = canvasHeight * (7.02 / 8);
+                activeXd2_1 = activeXd2;
+                return;
+            }
+            /* Channel calibration mode */
             if (ev.altKey && ev.shiftKey) {
                 lastUplink = uplink;
                 lastCanvasClickBW = canvasClickBW;
@@ -150,22 +152,87 @@
                     busy: busy
                 }));
             /* } */
+            
+            /* set busy state as per time of click, outer busy variable changes on every render FFT */
+            let busyFetch = busy;
+            /* we ask the node-red api, is the pluto transmitting? */
+            fetch('/status')
+            .then(res =>  res.text())
+            .then(text => {
+                console.log(text);
+                if(text === "0"){
+                    /* we do not set the tune bar since you clicked on a active signal... */
+                    if(busyFetch) return;
+                    activeColor_1 = activeColor;
+                    activeXd1_1 = activeXd1;
+                    activeYd_1 = activeYd ;
+                    activeXd2_1 = activeXd2;
+                }
+                 /* When we are not transmitting we set the tune bar */
+                if(text === "1"){
+                    activeColor_1 = activeColor;
+                    activeXd1_1 = activeXd1;
+                    /* clicking on a signal sets the busyFetch to 'true', so tune bar sits on the top row */
+                    activeYd_1 = !busyFetch ? activeYd : canvasHeight * (7.02 / 8);
+                    activeXd2_1 = activeXd2;
+                }
+            })
+            
         }
     }
+
     /* On load */
     $(function () {
         canvasHeight = 500;
         canvasHeightLast = canvasHeight;
+        /* JQuery */
         canvasWidth = $("#fft-col").width();
 
         el = document.getElementById('c');
+        el.backgroun
+        /* JQuery */
         canvas_jqel = $("#c");
        
         initCanvas();
 
+        /* Event handlers */
+        document.getElementById("fft-colour-select").onchange = function() {
+            let backRGB = this.value;
+            fft_colour =  `${backRGB}`;
+            if (storageSupport) {
+                localStorage.wb_fft_colour = fft_colour;
+            }
+        }
+
+        document.getElementById("band-colour-select").onchange = function() {
+            backRGB = this.value;
+            band_colour =  `${backRGB}`;
+            if (storageSupport) {
+                localStorage.wb_band_colour = band_colour;
+            }
+        }
+        document.getElementById("background-colour-select").onchange = function() {
+            backRGB = this.value;
+            background_colour =  `${backRGB}`;
+            if (storageSupport) {
+                localStorage.background_colour = background_colour;
+            }
+        }
+        /* Change fft speed handler */
+        document.getElementById("fft-speed-select").onchange = function() {
+            let value = this.value;
+            ws_name = value;
+            render_interval = render_interval_map[ws_name];
+            clearInterval(render_timer);
+            render_timer = setInterval(render_fft, render_interval);
+            fft_ws.changeName(ws_name);
+            if (storageSupport) {
+                localStorage.wb_fft_speed = ws_name;
+            }
+        }
+
         /* We add canvas click event handler */
         ctx.canvas.addEventListener('click', on_canvas_click, false);
-
         updateFFT(null);
 
         /* Hide fullscreen link for iOS */
@@ -174,46 +241,25 @@
             $("#fullscreen-link").hide();
         }
 
-        /* Change colour handler */
-        $("#fft-colour-select").change(function () {
-            fft_colour = $(this).children("option:selected").val();
-            if (storageSupport) {
-                localStorage.wb_fft_colour = fft_colour;
-            }
-        });
-
-        $("#band-colour-select").change(function () {
-            band_colour = $(this).children("option:selected").val();
-            if (storageSupport) {
-                localStorage.wb_band_colour = band_colour;
-            }
-        });
-
-        /* Change colour handler */
-        $("#fft-speed-select").change(function () {
-            ws_name = $(this).children("option:selected").val();
-            render_interval = render_interval_map[ws_name];
-            clearInterval(render_timer);
-            render_timer = setInterval(render_fft, render_interval);
-            fft_ws.changeName(ws_name);
-            if (storageSupport) {
-                localStorage.wb_fft_speed = ws_name;
-            }
-        });
 
         /* If we loaded value from localStorage then we probably need to set the colour */
         if (storageSupport && localStorage.wb_fft_colour) {
-            $("#fft-colour-select").val(fft_colour);
+            document.getElementById("fft-colour-select").value = fft_colour;
         }
 
          /* If we loaded value from localStorage then we probably need to set the colour */
          if (storageSupport && localStorage.wb_band_colour) {
-            $("#band-colour-select").val(band_colour);
+            document.getElementById("band-colour-select").value = band_colour;
+        }
+
+         /* If we loaded value from localStorage then we probably need to set the colour */
+         if (storageSupport && localStorage.background_colour) {
+            document.getElementById("background-colour-select").value = background_colour;
         }
 
         /* If we loaded value from localStorage then we probably need to set the fft speed */
         if (storageSupport && localStorage.wb_fft_speed) {
-            $("#fft-speed-select").val(ws_name);
+            document.getElementById("fft-speed-select").value = ws_name;
         }
 
 
@@ -251,7 +297,7 @@
             }
         });
     });
-
+    /* JQuery */
     function initCanvas() {
         $("#c").attr("width", canvasWidth);
         $("#c").attr("height", canvasHeight);
@@ -293,14 +339,19 @@
 
         /* Clear Screen */
         ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-        ctx.save();
 
-        /* Draw Dashed Vertical Lines and headers */
+        ctx.save();
+        
+        /* draw our spectrum colour */
+        ctx.fillStyle = background_colour;
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+        /* Draw Dashed Vertical Lines and top headers */
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'grey';
+        ctx.strokeStyle = background_colour === "black" ? 'grey' : 'black';
         ctx.setLineDash([5, 20]);
         ctx.font = "15px Arial";
-        ctx.fillStyle = "white";
+        ctx.fillStyle = background_colour === "black" ? 'white' : 'black';
         ctx.textAlign = "center";
         for (i = 0; i < 18; i += 2) {
             /* Draw vertical line */
@@ -314,10 +365,10 @@
 
         /* Draw Horizontal Lines */
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'grey';
+        ctx.strokeStyle = background_colour === "black" ? 'grey' : 'black';
         ctx.setLineDash([5, 10]);
         ctx.font = "12px Arial";
-        ctx.fillStyle = "white";
+        ctx.fillStyle = invertColor(background_colour);
         ctx.textAlign = "center";
         for (i = 1; i <= 4; i++) {
             linePos = (i * (canvasHeight / 4)) - (canvasHeight / 6);
@@ -334,7 +385,7 @@
 
         /* Draw Minor Horizontal Lines */
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'grey';
+        ctx.strokeStyle = background_colour === "black" ? 'grey' : 'black';
         ctx.setLineDash([1, 10]);
         for (i = 1; i < 20; i++) {
             if (i % 5 != 0) {
@@ -350,7 +401,7 @@
 
         /* Draw Band Splits */
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'grey';
+        ctx.strokeStyle = background_colour === "black" ? 'white' : 'black';
 
         function draw_divider(frequency, height) {
             ctx.beginPath();
@@ -382,7 +433,7 @@
                     bandwidth: bandwidth
                 });
             }
-
+           
             ctx.fillRect(((center_frequency - (rolloff * bandwidth)) - _start_freq) * (canvasWidth / 9), canvasHeight * line_height, 2 * (rolloff * bandwidth) * (canvasWidth / 9), 10);
         }
 
@@ -404,12 +455,14 @@
             resetCanvasVariables();
             draw_channel(f, 0.125, (7.025 / 8));
         }
-
+        /* draw active channel */
+        ctx.fillStyle = invertColor(band_colour);
+        ctx.fillRect(activeXd1_1, activeYd_1, activeXd2_1 - activeXd1_1, 10)
         ctx.restore();
 
         /* Annotate Bands - Text */
         ctx.font = "19px Arial";
-        ctx.fillStyle = "white";
+        ctx.fillStyle = background_colour === "black" ? 'white' : 'black';
         ctx.textAlign = "center";
         ctx.fillText("A71A DATV Beacon", ((491.5) - _start_freq) * (canvasWidth / 9), canvasHeight - 45);
         ctx.fillText("10491.500", ((491.5) - _start_freq) * (canvasWidth / 9), canvasHeight - 28);
@@ -450,7 +503,7 @@
             ctx.restore();
         } else {
             ctx.font = "15px Arial";
-            ctx.fillStyle = "white";
+            ctx.fillStyle = invertColor(background_colour);
             ctx.textAlign = "center";
             ctx.fillText("Loading..", (canvasWidth / 2) + (canvasWidth / 35), (3 * (canvasHeight / 4)) - ((1.1 / 6) * canvasHeight));
             ctx.restore();
@@ -469,7 +522,7 @@
             }
 
             ctx.font = "bold 14px Arial";
-            ctx.fillStyle = "white";
+            ctx.fillStyle = invertColor(background_colour);
             ctx.textAlign = "center";
             ctx.fillText(
                 signals_decoded[i].name,
@@ -505,9 +558,6 @@
     }
     render_timer = setInterval(render_fft, render_interval);
 
-    function update_stats(num) {
-        $("#stats").text("Wideband viewers: " + num);
-    }
 
     function align_symbolrate(width) {
         //console.log(width);
@@ -703,7 +753,7 @@
                         }
 
                         ctx.font = "14px Arial";
-                        ctx.fillStyle = "white";
+                        ctx.fillStyle = background_colour === "black" ? 'white' : 'black';
                         ctx.textAlign = "center";
                         if (!is_overpower(beacon_strength, strength_signal, signal_bw)) {
                             ctx.fillText(
@@ -721,7 +771,7 @@
                             ctx.restore();
 
                             ctx.lineWidth = 2;
-                            ctx.strokeStyle = 'white';
+                            ctx.strokeStyle = background_colour === "black" ? 'white' : 'black';
                             ctx.setLineDash([4, 4]);
                             ctx.beginPath();
                             ctx.moveTo((start_signal / fft_data.length) * canvasWidth, canvasHeight * (1 - ((beacon_strength - (1.0 * scale_db)) / 65536)));
@@ -747,7 +797,7 @@
             strength_signal = acc / acc_i;
 
             ctx.font = "14px Arial";
-            ctx.fillStyle = "white";
+            ctx.fillStyle = background_colour === "black" ? 'white' : 'black';
             ctx.textAlign = "center";
             ctx.fillText(
                 "[out-of-band]",
@@ -775,7 +825,7 @@
                     mouse_x < signals[i].end &&
                     mouse_y > signals[i].top) {
                     ctx.lineWidth = 1;
-                    ctx.strokeStyle = 'white';
+                    ctx.strokeStyle = background_colour === "black" ? 'white' : 'black';
 
                     ctx.beginPath();
                     ctx.moveTo(signals[i].start, canvasHeight * (7 / 8));
@@ -795,17 +845,20 @@
                     /* As long as we have a beacon, and for signals other than the beacon, display relative power on mouseover */
                     if ((beacon_strength > 0) && (signals[i].start > canvasWidth / 8)) {
                         ctx.font = (signals[i].symbolrate < 500 ? "11px" : "12px") + " Arial";
-                        ctx.fillStyle = "yellow";
+                        ctx.fillStyle = background_colour === "black" ? 'white' : 'black';
                         ctx.textAlign = "center";
                         if((Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4) !== 10491.5){
                             canvasClickBW = signals[i].symbolrate / 1000;
                             uplink = Math.round(parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4) / 4;
                             downlink = Math.round(parseFloat(signals[i].frequency).toFixed(2) * 4) / 4;
                             busy = true;
+                            activeXd1 = signals[i].start;
+                            activeXd2 = signals[i].end;
                         }
                         db_per_pixel = ((canvasHeight * 7 / 8) - (canvasHeight / 12)) / 15; // 15dB screen window
                         beacon_strength_pixel = canvasHeight - ((beacon_strength / 65536) * canvasHeight);
-                        let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} / ${((beacon_strength_pixel - signals[i].top) / db_per_pixel).toFixed(1)} dB(b)`;
+                        /* let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} / ${((beacon_strength_pixel - signals[i].top) / db_per_pixel).toFixed(1)} dB(b)`; */
+                        let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} dB`;
                         ctx.fillText(mer,
                             signals[i].start - ((signals[i].start - signals[i].end) / 2),
                             (canvasHeight * 7 / 8) - (7 * ((canvasHeight * 7 / 8) - signals[i].top) / 8));
@@ -830,7 +883,7 @@
 
                     ctx.save();
                     ctx.lineWidth = 3;
-                    ctx.strokeStyle = 'white';
+                    ctx.strokeStyle = background_colour === "black" ? 'white' : 'black';
                     ctx.beginPath();
                     ctx.moveTo(signal_selected.start, canvasHeight * (7 / 8));
                     ctx.lineTo(signal_selected.start, signal_selected.top);
@@ -868,9 +921,12 @@
                     uplink = 1910.50 + freq_info[i].center_frequency;
                     canvasClickBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
                     busy= false;
-                    /* console.log(`Band color ${band_colour} : HEX ${colourNameToHex(band_colour)} invert: #${invertColor(colourNameToHex(band_colour))}`) */
-                    ctx.fillStyle = invertColor(colourNameToHex(band_colour));
+                    ctx.fillStyle = invertColor(band_colour); 
                     ctx.fillRect(xd1, yd, xd2 - xd1, 10);
+                    activeColor = invertColor(band_colour); 
+                    activeXd1 = xd1;
+                    activeXd2 = xd2;
+                    activeYd = yd;
                     display_triggered = true;
                     break;
                 }
@@ -947,4 +1003,4 @@
     window.addEventListener("orientationchange", checkOrientation, false);
     // Android doesn't always fire orientationChange on 180 degree turns
     setInterval(checkOrientation, 2000);
-    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Shift + click (333KS), ALT + click (250KS) on channel bars, CTRL + click: Tunes onboard Longmynd client on signal or channel bars: <a  href="https://youtu.be/-ZdQOVg26_0" target="_blank">channel calibration</a></span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><select id="fft-colour-select"><option value="blue" selected="selected" title="Spectrum color">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select><label style="color: white;padding: 3px;" for="band-colour-select">Bands</label><select id="band-colour-select"><option value="blue" selected="selected">Blue<option value="cyan">Cyan<option value="green">Green<option value="lime">Lime<option value="magenta">Magenta<option value="red">Red<option value="white">White<option value="yellow">Yellow</select></div></div></div></div>
+    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, CTRL + click: Tunes onboard Longmynd, CTRL + ALT + click: Minitiouner <a  href="https://youtu.be/-ZdQOVg26_0" target="_blank">channel calibration</a></span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><input type="color" id="fft-colour-select" value="$(fft_colour)"><label style="color: white;padding: 3px" for="band-colour-select">Bands</label><input type="color" id="band-colour-select" value="$(band_colour)"><select id="background-colour-select"><option value="black" selected="selected">Black<option value="white">White</select></div></div></div></div>
