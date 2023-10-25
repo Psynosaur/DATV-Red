@@ -31,7 +31,7 @@
 
 11. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/0c5f3dba-f538-403c-8cb7-11d5318c5295)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/1d45bcee-2cd3-4fc5-9372-32039c018df9)
 
 If you want buy me a coffee:
 
