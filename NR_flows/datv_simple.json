@@ -2,199 +2,418 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V1.99",
+        "label": "DATV Simple V1.993-c",
         "disabled": false,
-        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd\r\n - Fix bugs for CTRL click\r\n - rx has seperate endpoint on API\r\n - uplink correction\r\n - Channel busy, you shall not PASS!!\r\n - add device config, \r\n - fixed longmynd frequency and sr messages we send in KHz and KS\r\n - spectrum watchdog only watches you when transmitting . . .\r\n - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n - Fixed state injectors\r\n   - restores state after pluto reboot  \r\n - If Restore state is Orange, PRESS IT!\r\n - Channel calibration.\r\n   - [How To](https://youtu.be/-ZdQOVg26_0)\r\n  - V1.9.9\r\n    - TS analysis - just for checking that TS is okay... \r\n      - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n      - There is room for more information gathering here as ffpbrobe is very verbose.\r\n    - Spectrum tuning bar has got a memory\r\n    - Constellation rate calculation changes, as per DL5OCD_Michael\r\n    - Tunes minitioune software by CTRL+ALT clicking\r\n    - bugfixes\r\n    - Consume Open Tuner websocket status, not useful atm...\r\n    - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n    - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n    - latest ffmpeg build\r\n    - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n  - V2.0 planned\r\n    - Setup from GUI(bye config-tx.ini)\r\n    - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n",
+        "info": " - It hath the spectrum\r\n - I clickith and it tunith\r\n - I clickith and it setith stuff\r\n - more control\r\n - refactor code\r\n - we no longer need all the files...\r\n - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n - Rx and Tx offsets\r\n - CTRL click tunes longmynd\r\n - Fix bugs for CTRL click\r\n - rx has seperate endpoint on API\r\n - uplink correction\r\n - Channel busy, you shall not PASS!!\r\n - add device config, \r\n - fixed longmynd frequency and sr messages we send in KHz and KS\r\n - spectrum watchdog only watches you when transmitting . . .\r\n - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n - Fixed state injectors\r\n   - restores state after pluto reboot  \r\n - If Restore state is Orange, PRESS IT!\r\n - Channel calibration.\r\n   - [How To](https://youtu.be/-ZdQOVg26_0)\r\n  - V1.9.9\r\n    - TS analysis - just for checking that TS is okay... \r\n      - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n      - There is room for more information gathering here as ffpbrobe is very verbose.\r\n    - Spectrum tuning bar has got a memory\r\n    - Constellation rate calculation changes, as per DL5OCD_Michael\r\n    - Tunes minitioune software by CTRL+ALT clicking\r\n    - bugfixes\r\n    - Consume Open Tuner websocket status, not useful atm...\r\n    - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n    - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n    - latest ffmpeg build\r\n    - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n  - V1.993-c(chat)\r\n    - Minitioune spawn routine improvements.\r\n      - killing node red does not kill it. . .\r\n      - instead of spawing each time we deploy changes...\r\n    - Rx top tune bar\r\n    - Tx tune bar\r\n    - Spectrum has better memory...\r\n    - Bitrate calculation changes as per DL5OCD\r\n      - Changed the function to use lookup tables\r\n    - ffplay switch, off by default.\r\n    - rebuild ffmpeg, with vvc...\r\n    - Chat added\r\n      - This prompted a reshuffle of GUI\r\n    - Planning\r\n  - V2.0 planned\r\n    - Setup from GUI(bye config-tx.ini)\r\n    - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n",
         "env": []
     },
     {
-        "id": "9c3a6dbecd18c092",
+        "id": "516b3edadca50bf7",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
-        "name": "Read device",
-        "style": {
-            "stroke": "#92d04f",
-            "label": true,
-            "fill": "#e3f3d3",
-            "color": "#000000"
-        },
-        "nodes": [
-            "36a9e71117a34327",
-            "babe629c1afb5e8b",
-            "45967ab8c3bd9a21",
-            "74fb79f38c7d1d72",
-            "d2b51c2f7d254def",
-            "18d422fe182d6186",
-            "306b57e47411d35c",
-            "23773127332c2b1f",
-            "9aa8ef50bbbe8e2d",
-            "d26972d34559fd63",
-            "a27d9eec9ce16ab7",
-            "b601d6596401a754",
-            "b6d03834b636d44d",
-            "9cea687107707a6b",
-            "50bf46056b71ec3a",
-            "5d39969ea562b92d",
-            "18b3a285bc3b304a",
-            "59e507f64ad42e32",
-            "4ddefda4dc462586",
-            "a3b043862df5d1c9",
-            "203d8eabee6242e7",
-            "33155f6018ceeffa",
-            "7a4a8d639646cff4",
-            "96d158d7fdc5ee78",
-            "746af9f95f7438cd",
-            "9fb89f4342f8baf0",
-            "e2ddf0eaa1468069",
-            "91114b46796f2205",
-            "aeded232cbae2ef0",
-            "4dc0d6bc0972a150",
-            "8bcc3bb6537a078d",
-            "56ad120991eb3c83",
-            "2e28b17c64c14184",
-            "04d27b36a3ee9934",
-            "76bed5f0ebc81a4c",
-            "25a924b7dc1d4576",
-            "c25d1cacc8057d1d",
-            "0b6d33db8fc071c9",
-            "ac88fa94a49129ec",
-            "347c8041af1a52e0",
-            "92bdb03cfb54e314",
-            "54cbda477035a37f",
-            "295347c7270ee5f9",
-            "689b33376ddc8653",
-            "e0f5c4a53f48610b",
-            "4b23c7a819f12eb7",
-            "8ec0b8acdb25a6b7",
-            "1cc9bf09772f06d3",
-            "54e338fa6a48fd5b",
-            "45ea934ddc9664a3",
-            "12de00c45ec62557",
-            "ae61c1e19f8634d0",
-            "8a6e91746db5e484",
-            "31eb287a0ca0a45c",
-            "508bccc9de4506fc",
-            "2acfb18cb9db9a02",
-            "8e34088eda2b7263",
-            "b733d75a1c79f1a2",
-            "c8042db5402565df",
-            "e1cd38d2156ae7ba",
-            "0813517cbc9b99f3",
-            "c4f36ff7105c2dd1",
-            "de949c9780005117",
-            "c44d0cb54ec5e706",
-            "4fd321bd9fa719f3",
-            "f60d5eacebf59c8f"
-        ],
-        "x": 14,
-        "y": 1059,
-        "w": 972,
-        "h": 1542
-    },
-    {
-        "id": "28611a179255d92b",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Spectrum ",
-        "style": {
-            "label": true,
-            "color": "#001f60",
-            "fill": "#92d04f"
-        },
-        "nodes": [
-            "b115e827f5958c33",
-            "dcae1df31f4c48c6",
-            "2d8d13aaf93f40dc",
-            "2fccdd25faa09e10",
-            "542c8a5bb4913303",
-            "185cc616489b2615",
-            "5a74b55c01f09bf7",
-            "df0fb204fd14a618"
-        ],
-        "x": 54,
-        "y": 239,
-        "w": 1078,
-        "h": 722
-    },
-    {
-        "id": "ba42e703170bee84",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Pluto and callsign setup",
+        "g": "1f5722b7aff1a710",
+        "name": "Check profile attribute changes from preset loading",
         "style": {
             "label": true
         },
         "nodes": [
-            "644c4e9fd6d1aafc",
-            "33b1db5a2a8af09d",
-            "3729f57de4a75fbf",
-            "b56e0ed724bfefc0",
-            "0c72fe59acc5f30e",
-            "6650408d269637c4",
-            "0dc39dc2f82350ce"
+            "e0a8b11837a3a291",
+            "4c5bde857e7964a8",
+            "2a88de9371c58247",
+            "bc75f00bd265544f",
+            "6c91e490a62106d5",
+            "2598c63498a7d271",
+            "9067de7ba141cd15",
+            "d4cacb1bf63ac8fb",
+            "39cfefa0e8ccb9b9",
+            "540d6ebea9628a71",
+            "4bfadd6d4acf437d",
+            "f6370190fe6ad34e"
         ],
-        "x": -46,
-        "y": 19,
-        "w": 1452,
+        "x": 5054,
+        "y": 719,
+        "w": 612,
+        "h": 202
+    },
+    {
+        "id": "92c95af69a0592d1",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "minitiouner manager (CTRL + CLICK)",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "93e49a0d26636e17",
+            "274b304d8404d31e",
+            "3a1ea47d1bb87edc",
+            "25f28cc77302135e",
+            "d7eb35aa7c9a4908",
+            "58a19d39b1eb3028",
+            "748c39ac026e286f",
+            "8c74bea29b3244b0",
+            "cdb49e4080a5ecb2",
+            "865c9cd7fad69b04",
+            "03deb776667356fc",
+            "f5725b8f8885fb91",
+            "c8e4e5eb867b6e88",
+            "048ae9d864757a44",
+            "7daf6fdd23e69a4c"
+        ],
+        "x": 2734,
+        "y": 2539,
+        "w": 1872,
+        "h": 242
+    },
+    {
+        "id": "eb1929e7f191e020",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Minitioune path",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fa64203cbbfc748d",
+            "f59601c8ef54fb30",
+            "9077d20ca65ab2fd",
+            "f6a666d0271a5d24",
+            "63bd7ee216c6cf79"
+        ],
+        "x": 5354,
+        "y": 1539,
+        "w": 1192,
+        "h": 82
+    },
+    {
+        "id": "0514d7b9722f644b",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "TS stream address",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1aa57bcff3051b25",
+            "d0d8193cbbe6f9f6",
+            "3b2bfc1de615d1c2",
+            "e48b23e1d46a182a",
+            "1b33b2ee0e91bf0a"
+        ],
+        "x": 5354,
+        "y": 1339,
+        "w": 1192,
+        "h": 82
+    },
+    {
+        "id": "faddbd496d5afa18",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Minitiouner UDP control",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "678fdf9668503af2",
+            "1c92b6bf73c98823",
+            "f410cc2d0716c94e",
+            "42fadc716a7bbdd3",
+            "95edb2da87d8257d"
+        ],
+        "x": 5354,
+        "y": 1439,
+        "w": 1192,
+        "h": 82
+    },
+    {
+        "id": "6230aabbd2e27dba",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "V2 Stuff - Setup related",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ce7363465aea09c2",
+            "81e222ea9f35567c",
+            "9d36e0103e48d0eb",
+            "6c240bebc70161fa",
+            "92680e051846903d",
+            "061c529da56f288b",
+            "d5144c0538d61e55",
+            "6cdbc7e33d7543c1",
+            "912db50690e71312",
+            "52589d675ecb5bd3"
+        ],
+        "x": 5354,
+        "y": 1139,
+        "w": 1192,
+        "h": 182
+    },
+    {
+        "id": "f6218c30fc4ec8b7",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "TS analyse with ffprobe",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6575451e79e0ad67",
+            "ef4d188e14a5bed7",
+            "de0df3db418f176f",
+            "b61cc3d9e4fb5593",
+            "a773a2941ec99d3d",
+            "92f5f62ed5cadc7c",
+            "428a0fc47da7621b"
+        ],
+        "x": 5354,
+        "y": 971.5,
+        "w": 1192,
+        "h": 149.5
+    },
+    {
+        "id": "4b15878090b5548b",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Channel calibration",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "40caf32a1fc66903",
+            "f34bfe124eab12e8",
+            "78db13f139016718",
+            "7aa0b41ed418f215",
+            "eb77e66d5c0acdae",
+            "cffbb4b1eb45b8da",
+            "538b8437c0ff15ad",
+            "fca0dc49e0dbc8c8",
+            "edea5b446673c7e5",
+            "778857993c3190e4",
+            "8879551bc103b8c4",
+            "6c953890d626accb",
+            "09f981f156e98728",
+            "2e0709eeb3596e1a",
+            "231152bfc003a87e"
+        ],
+        "x": 3254,
+        "y": 679,
+        "w": 1012,
+        "h": 262
+    },
+    {
+        "id": "1f5722b7aff1a710",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Profile Setup",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "f9186ed78accdb6c",
+            "a0addd449f41ee70",
+            "3c2665b335deadcc",
+            "142bd58e14cabe24",
+            "034d4cfc3008e95a",
+            "1bb882ca67278b69",
+            "6e2b3c9e08662125",
+            "ae40a9e5bdd0d113",
+            "5989fbe4c1133db2",
+            "b003500f8ea3ffe1",
+            "d2a7c63d9b2fe699",
+            "320ab26158363e57",
+            "9c6e205117c83338",
+            "6bfbf0101b2cd3a4",
+            "34feacf8cac79e5e",
+            "8c06bae5f257a948",
+            "a34ba6d8846e44b2",
+            "072a53bc4325b8e2",
+            "da44a9637b5774a0",
+            "3db47b10f2ad0660",
+            "9afe5b50e0c2e439",
+            "3eb70786a69e6c70",
+            "f1c89523da4ca9da",
+            "906644f41d307cdf",
+            "1411feb53b899df2",
+            "df2ac54020efb6b0",
+            "b8a3969009536bb0",
+            "516b3edadca50bf7"
+        ],
+        "x": 4274,
+        "y": 279,
+        "w": 1418,
+        "h": 668
+    },
+    {
+        "id": "78b656eeda23dc5a",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "UI variable elements",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c140f8f622e33238",
+            "b2786302ea5b87d8",
+            "8105dd1d410bdd4b",
+            "43c746e7299a60f3",
+            "23f54550ba5b6a79",
+            "5d929a20d665af8d",
+            "332cd73b70ec7dca",
+            "b62a3f484010816e",
+            "9d65ce1e866729e6",
+            "27cbad3062794d58"
+        ],
+        "x": 3594,
+        "y": 279,
+        "w": 552,
+        "h": 262
+    },
+    {
+        "id": "27cbad3062794d58",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78b656eeda23dc5a",
+        "group": "9ed1d9a126995072",
+        "order": 52,
+        "width": 0,
+        "height": 0,
+        "name": "spacer_1",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 3980,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9ed1d9a126995072",
+        "type": "ui_group",
+        "name": "Radio controls",
+        "tab": "9b3296db2e0c849f",
+        "order": 8,
+        "disp": false,
+        "width": "19",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9b3296db2e0c849f",
+        "type": "ui_tab",
+        "name": "Transmission and profiles",
+        "icon": "fa-fire",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9f151e324008585b",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Device settings loader",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "dc87a28301ce8d90",
+            "d88296547a44f159",
+            "3b59a3e0f9422294",
+            "a49d494221eac856"
+        ],
+        "x": 3434,
+        "y": 559,
+        "w": 712,
+        "h": 82
+    },
+    {
+        "id": "32dfcf20406c9b9a",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "FFMPEG KILLER",
+        "style": {
+            "fill": "#ff3f3f",
+            "label": true
+        },
+        "nodes": [
+            "873a04942564e509",
+            "c4c1592e68a08ac2",
+            "be766117a7d2334f",
+            "5c8e87753e4ad083",
+            "923832cf30d7070e",
+            "4d9019e6505648e5",
+            "0c94d661261c1f6e",
+            "c326e0457b39d881",
+            "b24692049485a46b",
+            "f79b05ded58d1157",
+            "ae8f84a8936bf21e",
+            "918410b673d9453b"
+        ],
+        "x": 3094,
+        "y": 1999,
+        "w": 1212,
+        "h": 509.5
+    },
+    {
+        "id": "359e81623396a0cb",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "Device settings saver",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3208e4f72b88b92e",
+            "0c5e1df9f4cacd67",
+            "c708b213a5701d8c",
+            "99a4c83c076987df",
+            "c76b9f49508d0e3f"
+        ],
+        "x": 2394,
+        "y": 499,
+        "w": 992,
         "h": 142
     },
     {
-        "id": "3cbecfd0821bcfcc",
+        "id": "1473030260740438",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "e6bb4e6e08658367"
-        ],
-        "x": 1708,
-        "y": 193,
-        "w": 4890,
-        "h": 2640
-    },
-    {
-        "id": "185cc616489b2615",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "28611a179255d92b",
-        "name": "Radio HTTP API",
+        "g": "e6bb4e6e08658367",
+        "name": "Bitrate calculator",
         "style": {
             "label": true
         },
         "nodes": [
-            "117e420d4df518b1",
-            "2a5a3cc2d63b2942",
-            "6e96b284f2323a85",
-            "ec3c6b8075f4f83f",
-            "6154ee8d719adfbd",
-            "7d18f3e7511a4c0f",
-            "11531a3595ef0f5a",
-            "e56ed07756258705",
-            "8764be884d895f57",
-            "2c6310aae8f397fd",
-            "b828f6a6.47d708",
-            "1052941d.efad6c",
-            "64b76a53a5576a2f",
-            "63698f5f30341a43",
-            "e1eb05d953534ef4",
-            "22865d9dc7aa2c4c",
-            "9917109abc4fd1ea",
-            "4781b40508c8aa40",
-            "515e9264fb253fbc",
-            "2f37f6fa43572da4",
-            "3d529b46ee563149"
+            "dd4535e1d6b65679",
+            "ac482a3670a2a148",
+            "8c336280fd0fcc92",
+            "8751a0dd93a8ed60",
+            "d791940d6fb69cd4",
+            "1827c9f76c07664e"
         ],
-        "x": 94,
-        "y": 399,
-        "w": 1012,
-        "h": 482
+        "x": 2394,
+        "y": 299,
+        "w": 1112,
+        "h": 182
     },
     {
         "id": "e6bb4e6e08658367",
@@ -340,29 +559,33 @@
             "645cda7b921399b2",
             "64a9de4a4bd4dab6",
             "faf5a12234cf3d6a",
-            "1473030260740438",
-            "359e81623396a0cb",
-            "32dfcf20406c9b9a",
-            "9f151e324008585b",
-            "78b656eeda23dc5a",
-            "1f5722b7aff1a710",
             "762e2c70acd9ebe0",
             "b1fb472a0a5e24a7",
             "a5d3ec26a3634e1e",
-            "4b15878090b5548b",
             "378dce373fcfc379",
             "1d72e11925395b60",
             "6e64d146147821e7",
-            "f6218c30fc4ec8b7",
-            "6230aabbd2e27dba",
-            "faddbd496d5afa18",
-            "0514d7b9722f644b",
-            "eb1929e7f191e020",
-            "92c95af69a0592d1",
             "c6afd7e65035c339",
             "23c3f4773474e955",
             "7fb0cafd2acd88b7",
-            "e4fe047c88b9b919"
+            "e4fe047c88b9b919",
+            "517a7337244c67a7",
+            "34a5dcd51ab8d855",
+            "0566516b8c2f5f60",
+            "4823c6eed9e03e46",
+            "92c95af69a0592d1",
+            "eb1929e7f191e020",
+            "0514d7b9722f644b",
+            "faddbd496d5afa18",
+            "6230aabbd2e27dba",
+            "f6218c30fc4ec8b7",
+            "4b15878090b5548b",
+            "1f5722b7aff1a710",
+            "78b656eeda23dc5a",
+            "9f151e324008585b",
+            "32dfcf20406c9b9a",
+            "359e81623396a0cb",
+            "1473030260740438"
         ],
         "x": 1734,
         "y": 219,
@@ -370,369 +593,197 @@
         "h": 2588
     },
     {
-        "id": "1473030260740438",
+        "id": "185cc616489b2615",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Bitrate calculator",
+        "g": "28611a179255d92b",
+        "name": "Radio HTTP API",
         "style": {
             "label": true
         },
         "nodes": [
-            "dd4535e1d6b65679",
-            "ac482a3670a2a148",
-            "8c336280fd0fcc92",
-            "8751a0dd93a8ed60",
-            "d791940d6fb69cd4",
-            "1827c9f76c07664e"
+            "117e420d4df518b1",
+            "2a5a3cc2d63b2942",
+            "6e96b284f2323a85",
+            "ec3c6b8075f4f83f",
+            "6154ee8d719adfbd",
+            "7d18f3e7511a4c0f",
+            "11531a3595ef0f5a",
+            "e56ed07756258705",
+            "8764be884d895f57",
+            "2c6310aae8f397fd",
+            "b828f6a6.47d708",
+            "1052941d.efad6c",
+            "64b76a53a5576a2f",
+            "63698f5f30341a43",
+            "e1eb05d953534ef4",
+            "22865d9dc7aa2c4c",
+            "9917109abc4fd1ea",
+            "4781b40508c8aa40",
+            "515e9264fb253fbc",
+            "2f37f6fa43572da4",
+            "3d529b46ee563149"
         ],
-        "x": 2394,
-        "y": 299,
-        "w": 1112,
-        "h": 182
+        "x": 94,
+        "y": 399,
+        "w": 1012,
+        "h": 482
     },
     {
-        "id": "359e81623396a0cb",
+        "id": "3cbecfd0821bcfcc",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Device settings saver",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e6bb4e6e08658367"
+        ],
+        "x": 1708,
+        "y": 193,
+        "w": 4890,
+        "h": 2640
+    },
+    {
+        "id": "ba42e703170bee84",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Pluto and callsign setup",
         "style": {
             "label": true
         },
         "nodes": [
-            "3208e4f72b88b92e",
-            "0c5e1df9f4cacd67",
-            "c708b213a5701d8c",
-            "99a4c83c076987df",
-            "c76b9f49508d0e3f"
+            "644c4e9fd6d1aafc",
+            "33b1db5a2a8af09d",
+            "3729f57de4a75fbf",
+            "b56e0ed724bfefc0",
+            "0c72fe59acc5f30e",
+            "6650408d269637c4",
+            "0dc39dc2f82350ce"
         ],
-        "x": 2394,
-        "y": 499,
-        "w": 992,
+        "x": -46,
+        "y": 19,
+        "w": 1452,
         "h": 142
     },
     {
-        "id": "32dfcf20406c9b9a",
+        "id": "28611a179255d92b",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "FFMPEG KILLER",
+        "name": "Spectrum ",
         "style": {
-            "fill": "#ff3f3f",
-            "label": true
-        },
-        "nodes": [
-            "873a04942564e509",
-            "c4c1592e68a08ac2",
-            "be766117a7d2334f",
-            "5c8e87753e4ad083",
-            "923832cf30d7070e",
-            "4d9019e6505648e5",
-            "0c94d661261c1f6e",
-            "c326e0457b39d881",
-            "b24692049485a46b",
-            "f79b05ded58d1157",
-            "ae8f84a8936bf21e",
-            "918410b673d9453b"
-        ],
-        "x": 3094,
-        "y": 1999,
-        "w": 1212,
-        "h": 509.5
-    },
-    {
-        "id": "9f151e324008585b",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Device settings loader",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "dc87a28301ce8d90",
-            "d88296547a44f159",
-            "3b59a3e0f9422294",
-            "a49d494221eac856"
-        ],
-        "x": 3434,
-        "y": 559,
-        "w": 712,
-        "h": 82
-    },
-    {
-        "id": "78b656eeda23dc5a",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "UI variable elements",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "c140f8f622e33238",
-            "b2786302ea5b87d8",
-            "8105dd1d410bdd4b",
-            "43c746e7299a60f3",
-            "23f54550ba5b6a79",
-            "5d929a20d665af8d",
-            "332cd73b70ec7dca",
-            "b62a3f484010816e",
-            "9d65ce1e866729e6",
-            "27cbad3062794d58"
-        ],
-        "x": 3594,
-        "y": 279,
-        "w": 552,
-        "h": 262
-    },
-    {
-        "id": "1f5722b7aff1a710",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Profile Setup",
-        "style": {
-            "stroke": "#000000",
             "label": true,
-            "color": "#ffffff"
+            "color": "#001f60",
+            "fill": "#92d04f"
         },
         "nodes": [
-            "f9186ed78accdb6c",
-            "d8316c32c9a501d4",
-            "a0addd449f41ee70",
-            "3c2665b335deadcc",
-            "142bd58e14cabe24",
-            "034d4cfc3008e95a",
-            "1bb882ca67278b69",
-            "6e2b3c9e08662125",
-            "ae40a9e5bdd0d113",
-            "5989fbe4c1133db2",
-            "b003500f8ea3ffe1",
-            "d2a7c63d9b2fe699",
-            "320ab26158363e57",
-            "9c6e205117c83338",
-            "6bfbf0101b2cd3a4",
-            "34feacf8cac79e5e",
-            "832b9a47eae8dabb",
-            "8c06bae5f257a948",
-            "a34ba6d8846e44b2",
-            "072a53bc4325b8e2",
-            "da44a9637b5774a0",
-            "3db47b10f2ad0660",
-            "9afe5b50e0c2e439",
-            "3eb70786a69e6c70",
-            "f1c89523da4ca9da",
-            "906644f41d307cdf",
-            "1411feb53b899df2",
-            "df2ac54020efb6b0",
-            "b8a3969009536bb0",
-            "516b3edadca50bf7"
+            "b115e827f5958c33",
+            "dcae1df31f4c48c6",
+            "2d8d13aaf93f40dc",
+            "2fccdd25faa09e10",
+            "542c8a5bb4913303",
+            "5a74b55c01f09bf7",
+            "df0fb204fd14a618",
+            "31f91a40fbe9635c",
+            "24353fa1e84c365f",
+            "0e2c3433f42c932c",
+            "4de0745ac50ff8b8",
+            "185cc616489b2615"
         ],
-        "x": 4274,
-        "y": 279,
-        "w": 1418,
-        "h": 668
+        "x": 54,
+        "y": 239,
+        "w": 1078,
+        "h": 722
     },
     {
-        "id": "4b15878090b5548b",
+        "id": "9c3a6dbecd18c092",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Channel calibration",
+        "name": "Read device",
         "style": {
-            "label": true
+            "stroke": "#92d04f",
+            "label": true,
+            "fill": "#e3f3d3",
+            "color": "#000000"
         },
         "nodes": [
-            "40caf32a1fc66903",
-            "f34bfe124eab12e8",
-            "78db13f139016718",
-            "7aa0b41ed418f215",
-            "eb77e66d5c0acdae",
-            "cffbb4b1eb45b8da",
-            "538b8437c0ff15ad",
-            "fca0dc49e0dbc8c8",
-            "edea5b446673c7e5",
-            "778857993c3190e4",
-            "8879551bc103b8c4",
-            "6c953890d626accb",
-            "09f981f156e98728",
-            "2e0709eeb3596e1a",
-            "231152bfc003a87e"
+            "36a9e71117a34327",
+            "babe629c1afb5e8b",
+            "45967ab8c3bd9a21",
+            "74fb79f38c7d1d72",
+            "d2b51c2f7d254def",
+            "18d422fe182d6186",
+            "306b57e47411d35c",
+            "23773127332c2b1f",
+            "9aa8ef50bbbe8e2d",
+            "d26972d34559fd63",
+            "a27d9eec9ce16ab7",
+            "b601d6596401a754",
+            "b6d03834b636d44d",
+            "9cea687107707a6b",
+            "50bf46056b71ec3a",
+            "5d39969ea562b92d",
+            "18b3a285bc3b304a",
+            "59e507f64ad42e32",
+            "4ddefda4dc462586",
+            "a3b043862df5d1c9",
+            "203d8eabee6242e7",
+            "33155f6018ceeffa",
+            "7a4a8d639646cff4",
+            "96d158d7fdc5ee78",
+            "746af9f95f7438cd",
+            "9fb89f4342f8baf0",
+            "e2ddf0eaa1468069",
+            "91114b46796f2205",
+            "aeded232cbae2ef0",
+            "4dc0d6bc0972a150",
+            "8bcc3bb6537a078d",
+            "56ad120991eb3c83",
+            "2e28b17c64c14184",
+            "04d27b36a3ee9934",
+            "76bed5f0ebc81a4c",
+            "25a924b7dc1d4576",
+            "c25d1cacc8057d1d",
+            "0b6d33db8fc071c9",
+            "ac88fa94a49129ec",
+            "347c8041af1a52e0",
+            "92bdb03cfb54e314",
+            "54cbda477035a37f",
+            "295347c7270ee5f9",
+            "689b33376ddc8653",
+            "e0f5c4a53f48610b",
+            "4b23c7a819f12eb7",
+            "8ec0b8acdb25a6b7",
+            "1cc9bf09772f06d3",
+            "54e338fa6a48fd5b",
+            "45ea934ddc9664a3",
+            "12de00c45ec62557",
+            "ae61c1e19f8634d0",
+            "8a6e91746db5e484",
+            "31eb287a0ca0a45c",
+            "508bccc9de4506fc",
+            "2acfb18cb9db9a02",
+            "8e34088eda2b7263",
+            "b733d75a1c79f1a2",
+            "c8042db5402565df",
+            "e1cd38d2156ae7ba",
+            "0813517cbc9b99f3",
+            "c4f36ff7105c2dd1",
+            "de949c9780005117",
+            "c44d0cb54ec5e706",
+            "4fd321bd9fa719f3",
+            "f60d5eacebf59c8f"
         ],
-        "x": 3254,
-        "y": 679,
-        "w": 1012,
-        "h": 262
-    },
-    {
-        "id": "f6218c30fc4ec8b7",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "TS analyse with ffprobe",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "6575451e79e0ad67",
-            "ef4d188e14a5bed7",
-            "de0df3db418f176f",
-            "b61cc3d9e4fb5593",
-            "a773a2941ec99d3d",
-            "92f5f62ed5cadc7c",
-            "428a0fc47da7621b"
-        ],
-        "x": 5354,
-        "y": 971.5,
-        "w": 1192,
-        "h": 149.5
-    },
-    {
-        "id": "6230aabbd2e27dba",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "V2 Stuff - Setup related",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "ce7363465aea09c2",
-            "81e222ea9f35567c",
-            "9d36e0103e48d0eb",
-            "6c240bebc70161fa",
-            "92680e051846903d",
-            "061c529da56f288b",
-            "d5144c0538d61e55",
-            "6cdbc7e33d7543c1",
-            "912db50690e71312",
-            "52589d675ecb5bd3"
-        ],
-        "x": 5354,
-        "y": 1139,
-        "w": 1192,
-        "h": 182
-    },
-    {
-        "id": "faddbd496d5afa18",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Minitiouner UDP control",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "678fdf9668503af2",
-            "1c92b6bf73c98823",
-            "f410cc2d0716c94e",
-            "42fadc716a7bbdd3",
-            "95edb2da87d8257d"
-        ],
-        "x": 5354,
-        "y": 1439,
-        "w": 1192,
-        "h": 82
-    },
-    {
-        "id": "0514d7b9722f644b",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "TS stream address",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "1aa57bcff3051b25",
-            "d0d8193cbbe6f9f6",
-            "3b2bfc1de615d1c2",
-            "e48b23e1d46a182a",
-            "1b33b2ee0e91bf0a"
-        ],
-        "x": 5354,
-        "y": 1339,
-        "w": 1192,
-        "h": 82
-    },
-    {
-        "id": "eb1929e7f191e020",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "Minitioune path",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "fa64203cbbfc748d",
-            "f59601c8ef54fb30",
-            "9077d20ca65ab2fd",
-            "f6a666d0271a5d24",
-            "63bd7ee216c6cf79"
-        ],
-        "x": 5354,
-        "y": 1539,
-        "w": 1192,
-        "h": 82
-    },
-    {
-        "id": "92c95af69a0592d1",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e6bb4e6e08658367",
-        "name": "minitiouner manager (CTRL + CLICK)",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "93e49a0d26636e17",
-            "274b304d8404d31e",
-            "3a1ea47d1bb87edc",
-            "25f28cc77302135e",
-            "d7eb35aa7c9a4908",
-            "58a19d39b1eb3028",
-            "748c39ac026e286f",
-            "8c74bea29b3244b0",
-            "cdb49e4080a5ecb2",
-            "865c9cd7fad69b04",
-            "03deb776667356fc",
-            "f5725b8f8885fb91"
-        ],
-        "x": 2754,
-        "y": 2539,
-        "w": 1852,
-        "h": 242
-    },
-    {
-        "id": "516b3edadca50bf7",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1f5722b7aff1a710",
-        "name": "Check profile attribute changes from preset loading",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "e0a8b11837a3a291",
-            "4c5bde857e7964a8",
-            "2a88de9371c58247",
-            "bc75f00bd265544f",
-            "6c91e490a62106d5",
-            "2598c63498a7d271",
-            "9067de7ba141cd15",
-            "d4cacb1bf63ac8fb",
-            "39cfefa0e8ccb9b9",
-            "540d6ebea9628a71",
-            "4bfadd6d4acf437d",
-            "f6370190fe6ad34e"
-        ],
-        "x": 5054,
-        "y": 719,
-        "w": 612,
-        "h": 202
+        "x": 14,
+        "y": 1059,
+        "w": 972,
+        "h": 1542
     },
     {
         "id": "36a9e71117a34327",
@@ -766,9 +817,9 @@
         "order": 3,
         "width": 7,
         "height": 1,
-        "name": "",
-        "label": "Frequency",
-        "format": "{{msg.payload}}",
+        "name": "Frequency",
+        "label": "<font size=3>Frequency",
+        "format": "<font size=3>{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -807,8 +858,8 @@
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 37,
+        "group": "806d30964cf41d9d",
+        "order": 4,
         "width": 2,
         "height": 1,
         "name": "",
@@ -1009,7 +1060,7 @@
         "g": "9c3a6dbecd18c092",
         "group": "806d30964cf41d9d",
         "order": 3,
-        "width": 3,
+        "width": "2",
         "height": 1,
         "name": "",
         "label": "Queue",
@@ -1034,7 +1085,7 @@
         "tooltip": "",
         "group": "bc7afc94660c6b76",
         "order": 3,
-        "width": 2,
+        "width": "3",
         "height": 1,
         "passthru": true,
         "mode": "text",
@@ -2303,14 +2354,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "28611a179255d92b",
         "name": "",
-        "filename": "wb/index.html",
+        "filename": "wb/spectrum.html",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 380,
+        "x": 390,
         "y": 320,
         "wires": [
             [
@@ -2327,7 +2378,7 @@
         "name": "spectrum iframe",
         "order": 1,
         "width": 32,
-        "height": 10,
+        "height": 11,
         "url": "/spectrum",
         "origin": "*",
         "scale": "93",
@@ -2531,8 +2582,8 @@
         "wires": [
             [
                 "b828f6a6.47d708",
-                "2a5a3cc2d63b2942",
                 "2c6310aae8f397fd",
+                "2a5a3cc2d63b2942",
                 "8764be884d895f57"
             ]
         ]
@@ -2596,7 +2647,8 @@
         "y": 520,
         "wires": [
             [
-                "6154ee8d719adfbd"
+                "6154ee8d719adfbd",
+                "865c9cd7fad69b04"
             ]
         ]
     },
@@ -2875,7 +2927,7 @@
         "type": "ui_dropdown",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "name": "",
+        "name": "Channel",
         "label": "Channel",
         "tooltip": "",
         "place": "",
@@ -2889,7 +2941,7 @@
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
-        "className": "",
+        "className": "channel",
         "x": 2380,
         "y": 1620,
         "wires": [
@@ -2937,7 +2989,7 @@
         "place": "Select option",
         "group": "9ed1d9a126995072",
         "order": 33,
-        "width": 8,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -2986,12 +3038,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "",
-        "label": "SampleRate",
+        "label": "SR",
         "tooltip": "",
         "place": "Samplerate",
         "group": "4f22c4dbc8bc16dd",
-        "order": 12,
-        "width": 5,
+        "order": 9,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3051,7 +3103,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2390,
+        "x": 2370,
         "y": 1680,
         "wires": [
             [
@@ -3065,12 +3117,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "",
-        "label": "Fec",
+        "label": "FEC",
         "tooltip": "",
         "place": "Select option",
         "group": "4f22c4dbc8bc16dd",
-        "order": 17,
-        "width": 5,
+        "order": 11,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3097,8 +3149,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 35,
-        "width": 8,
+        "order": 34,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3261,12 +3313,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "",
-        "label": "Constellation",
+        "label": "MOD",
         "tooltip": "",
         "place": "Select option",
         "group": "4f22c4dbc8bc16dd",
-        "order": 14,
-        "width": 5,
+        "order": 10,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3296,7 +3348,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2390,
+        "x": 2370,
         "y": 1920,
         "wires": [
             [
@@ -3336,8 +3388,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 45,
-        "width": 8,
+        "order": 41,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3396,8 +3448,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 38,
-        "width": 8,
+        "order": 35,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3475,10 +3527,10 @@
         "name": "",
         "group": "806d30964cf41d9d",
         "order": 6,
-        "width": 3,
+        "width": "3",
         "height": 1,
         "passthru": false,
-        "label": "Reboot Pluto",
+        "label": "Reboot",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -3488,7 +3540,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 2390,
+        "x": 2380,
         "y": 1260,
         "wires": [
             [
@@ -3506,8 +3558,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 43,
-        "width": 8,
+        "order": 40,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3566,8 +3618,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 48,
-        "width": 8,
+        "order": 42,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3626,8 +3678,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 40,
-        "width": 8,
+        "order": 39,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3776,9 +3828,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "125KS",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 48,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 3,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "125KS",
@@ -3851,9 +3903,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "250KS",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 50,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 4,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "250KS",
@@ -3880,9 +3932,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "333KS",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 53,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 5,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "333KS",
@@ -4004,9 +4056,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Last Run",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 59,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 8,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "Last Run",
@@ -4184,9 +4236,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "500KS",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 55,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 6,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "500KS",
@@ -4257,9 +4309,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "1000KS",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 57,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 7,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "1000KS",
@@ -4401,9 +4453,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "66KS",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 46,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 2,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "66KS",
@@ -4430,9 +4482,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "33KS",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 44,
-        "width": 2,
+        "group": "da031ac17a307778",
+        "order": 1,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "33KS",
@@ -4698,10 +4750,10 @@
         "name": "",
         "group": "806d30964cf41d9d",
         "order": 5,
-        "width": 3,
+        "width": "3",
         "height": 1,
         "passthru": false,
-        "label": "RESTORE STATE",
+        "label": "RESTORE",
         "tooltip": "",
         "color": "",
         "bgcolor": "{{payload}}",
@@ -4711,7 +4763,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1870,
+        "x": 1850,
         "y": 400,
         "wires": [
             [
@@ -4819,7 +4871,7 @@
         "append": "",
         "useSpawn": "false",
         "timer": "",
-        "winHide": false,
+        "winHide": true,
         "oldrc": false,
         "name": "DVB-S GUI",
         "x": 4810,
@@ -4836,9 +4888,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "Custom profile",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 34,
-        "width": 5,
+        "group": "7954d85ae8701623",
+        "order": 4,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "label": "Custom profile",
@@ -5031,8 +5083,8 @@
         "g": "92c95af69a0592d1",
         "name": "",
         "group": "6140f866127cd620",
-        "order": 3,
-        "width": 4,
+        "order": 4,
+        "width": "2",
         "height": 1,
         "passthru": true,
         "label": "Ffplay",
@@ -5045,8 +5097,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2830,
-        "y": 2640,
+        "x": 2810,
+        "y": 2600,
         "wires": [
             [
                 "865c9cd7fad69b04"
@@ -5126,12 +5178,12 @@
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
-        "group": "9ed1d9a126995072",
-        "order": 50,
-        "width": 17,
-        "height": 1,
-        "name": "",
-        "label": "<font color={{textColor}}>ffmpeg output",
+        "group": "7954d85ae8701623",
+        "order": 3,
+        "width": "17",
+        "height": "1",
+        "name": "ffmpeg out",
+        "label": "<font size=3><font color={{textColor}}>ffmpeg output",
         "format": "<font size=3><font color={{fcolor}}>{{msg.payload}}",
         "layout": "col-center",
         "className": "",
@@ -5139,7 +5191,7 @@
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
-        "x": 5250,
+        "x": 5270,
         "y": 1360,
         "wires": []
     },
@@ -5191,7 +5243,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "FEC watchdog",
-        "func": "let constel = msg.payload;\nlet fec = global.get(\"device.tx.dvbs2.fec\");\nswitch (constel) {\n    case \"qpsk\":\n        msg.payload = fec;\n        msg.options = [\"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"8psk\":\n        msg.payload = fec;\n        msg.options = [\"3/5\", \"2/3\", \"3/4\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"16apsk\":\n        msg.payload = fec;\n        msg.options = [\"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"32apsk\":\n        msg.payload = fec;\n        msg.options = [\"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n}\n",
+        "func": "let constel = msg.payload;\nlet fec = global.get(\"device.tx.dvbs2.fec\");\nswitch (constel) {\n    case \"qpsk\":\n        msg.payload = fec;\n        msg.options = [\"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"8psk\":\n        msg.payload = fec;\n        msg.options = [\"3/5\", \"2/3\", \"3/4\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"16apsk\":\n        msg.payload = fec;\n        msg.options = [\"2/3\", \"3/4\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n    case \"32apsk\":\n        msg.payload = fec;\n        msg.options = [\"3/4\", \"5/6\", \"8/9\", \"9/10\"];\n        return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5362,9 +5414,9 @@
         "y": 900,
         "wires": [
             [
+                "c25d1cacc8057d1d",
                 "bdfdc40f3409d5eb",
-                "5af92414e3f29873",
-                "c25d1cacc8057d1d"
+                "5af92414e3f29873"
             ]
         ]
     },
@@ -5392,8 +5444,8 @@
         "y": 1200,
         "wires": [
             [
-                "e91e846502f35c90",
-                "92bdb03cfb54e314"
+                "92bdb03cfb54e314",
+                "e91e846502f35c90"
             ]
         ]
     },
@@ -5477,9 +5529,9 @@
         "y": 1560,
         "wires": [
             [
+                "18d422fe182d6186",
                 "be4a04a5a054f988",
-                "37b18a222ae30d52",
-                "18d422fe182d6186"
+                "37b18a222ae30d52"
             ]
         ]
     },
@@ -5747,7 +5799,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1473030260740438",
         "name": "Calculate bitrate function",
-        "func": "if (msg.payload) {\n  global.set(\"bitratechange\", false);\n  let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n  global.set(\"settings.SR\", sr);\n  let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n  let videoBitRate = 0;\n  let fec = global.get(\"device.tx.dvbs2.fec\");\n  let numerator = parseInt(fec.substr(0, 1));\n  let denominator = parseInt(fec.substr(2, 2));\n  let fecCalculated = numerator / denominator;\n  let currentConstellation = global.get(\"device.tx.dvbs2.constel\");\n\n  let constelModeMultiplier = // just a big nested if statement...\n    currentConstellation === \"qpsk\"\n      ? 2\n      : currentConstellation === \"8psk\"\n        ? 3\n        : currentConstellation === \"16apsk\"\n          ? 4\n          : 5;\n\n  let TSBitRate =\n    (((constelModeMultiplier * sr * 188) / 204) * fecCalculated * 1075) / 1000;\n  global.set(\"settings.TSBITRATE\", TSBitRate.toFixed(2));\n  if (sr > 20 && sr < 36)\n    videoBitRate = (1000 * TSBitRate * 50) / 100 / 1000 - audioBitRate;\n  if (sr > 35 && sr < 67)\n    videoBitRate = (1000 * TSBitRate * 60) / 100 / 1000 - audioBitRate;\n  if (sr > 66 && sr < 126)\n    videoBitRate = (1000 * TSBitRate * 68) / 100 / 1000 - audioBitRate;\n  if (sr > 125 && sr < 251)\n    videoBitRate = (1000 * TSBitRate * 76) / 100 / 1000 - audioBitRate;\n  if (sr > 250 && sr < 334)\n    videoBitRate = (1000 * TSBitRate * 80) / 100 / 1000 - audioBitRate;\n  if (sr > 333 && sr < 501)\n    videoBitRate = (1000 * TSBitRate * 82) / 100 / 1000 - audioBitRate;\n  if (sr > 500 && sr < 1001)\n    videoBitRate = (1000 * TSBitRate * 86) / 100 / 1000 - audioBitRate;\n  if (sr > 1000 && sr < 1501)\n    videoBitRate = (1000 * TSBitRate * 87) / 100 / 1000 - audioBitRate;\n  if (sr > 1500 && sr < 3001)\n    videoBitRate = (1000 * TSBitRate * 87) / 100 / 1000 - audioBitRate;\n  switch (currentConstellation) {\n    case \"qpsk\":\n      if (fec === \"1/4\") videoBitRate = (videoBitRate * 90) / 100;\n      if (fec === \"1/3\") videoBitRate = (videoBitRate * 94) / 100;\n      if (fec === \"2/5\") videoBitRate = (videoBitRate * 96) / 100;\n      if (fec === \"1/2\") videoBitRate = (videoBitRate * 98) / 100;\n      if (fec === \"3/5\") videoBitRate = (videoBitRate * 99) / 100;\n      if (fec === \"2/3\") videoBitRate = (videoBitRate * 100) / 100;\n      if (fec === \"3/4\") videoBitRate = (videoBitRate * 101) / 100;\n      if (fec === \"4/5\") videoBitRate = (videoBitRate * 101) / 100;\n      if (fec === \"5/6\") videoBitRate = (videoBitRate * 102) / 100;\n      if (fec === \"8/9\") videoBitRate = (videoBitRate * 104) / 100;\n      if (fec === \"9/10\") videoBitRate = (videoBitRate * 105) / 100;\n      if (videoBitRate > 150 && videoBitRate < 200)\n        videoBitRate = (videoBitRate * 92) / 100;\n      if (videoBitRate > 80 && videoBitRate < 151)\n        videoBitRate = (videoBitRate * 90) / 100;\n      if (videoBitRate > 10 && videoBitRate < 81)\n        videoBitRate = (videoBitRate * 68) / 100;\n      break;\n    case \"8psk\":\n      if (fec === \"3/5\") videoBitRate = (videoBitRate * 102) / 100;\n      if (fec === \"2/3\") videoBitRate = (videoBitRate * 104) / 100;\n      if (fec === \"3/4\") videoBitRate = (videoBitRate * 104) / 100;\n      if (fec === \"5/6\") videoBitRate == (videoBitRate * 105) / 100;\n      if (fec === \"8/9\") videoBitRate = (videoBitRate * 106) / 100;\n      if (fec === \"9/10\") videoBitRate = (videoBitRate * 106) / 100;\n      break;\n    case \"16apsk\":\n      if (fec === \"2/3\") videoBitRate = (videoBitRate * 106) / 100;\n      if (fec === \"3/4\") videoBitRate = (videoBitRate * 107) / 100;\n      if (fec === \"5/6\") videoBitRate == (videoBitRate * 108) / 100;\n      if (fec === \"8/9\") videoBitRate = (videoBitRate * 108) / 100;\n      if (fec === \"9/10\") videoBitRate = (videoBitRate * 109) / 100;\n      break;\n    case \"32apsk\":\n      if (fec === \"3/4\") videoBitRate = (videoBitRate * 111) / 100;\n      if (fec === \"5/6\") videoBitRate == (videoBitRate * 112) / 100;\n      if (fec === \"8/9\") videoBitRate = (videoBitRate * 112) / 100;\n      if (fec === \"9/10\") videoBitRate = (videoBitRate * 114) / 100;\n      break;\n  }\n  msg.payload = TSBitRate.toFixed(2);\n  global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n  msg.vidbr = videoBitRate?.toFixed(2);\n  return msg;\n}\n",
+        "func": "if (msg.payload) {\n  global.set(\"bitratechange\", false);\n  let symbolRate = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n  global.set(\"settings.SR\", symbolRate);\n\n  let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n  let videoBitRate = 0;\n  let fec = global.get(\"device.tx.dvbs2.fec\");\n  let numerator = parseInt(fec.substr(0, 1));\n  let denominator = parseInt(fec.substr(2, 2));\n  let fecCalculated = numerator / denominator;\n\n  let modulation = global.get(\"device.tx.dvbs2.constel\");\n  let modulationMultiplier = {\n    qpsk: 2,\n    \"8psk\": 3,\n    \"16apsk\": 4,\n    \"32apsk\": 5\n  }[modulation];\n\n  let transportStreamBitRate =\n    (((modulationMultiplier * symbolRate * 188) / 204) * fecCalculated * 1075) / 1000;\n\n  // This is a lookup table :)\n  const fecMultiplier = {\n    \"qpsk\": {\n      \"1/4\": 9895,\n      \"1/3\": 9935,\n      \"2/5\": 9960,\n      \"1/2\": 9978,\n      \"3/5\": 9994,\n      \"2/3\": 10010,\n      \"3/4\": 10009,\n      \"4/5\": 10017,\n      \"5/6\": 10021,\n      \"8/9\": 10028,\n      \"9/10\": 10030\n    },\n    \"8psk\": {\n      \"3/5\": 9980,\n      \"2/3\": 9988,\n      \"3/4\": 9995,\n      \"5/6\": 10005,\n      \"8/9\": 10015,\n      \"9/10\": 10016\n    },\n    \"16apsk\": {\n      \"2/3\": 9980,\n      \"3/4\": 9981,\n      \"5/6\": 9992,\n      \"8/9\": 10001,\n      \"9/10\": 10002\n    },\n    \"32apsk\": {\n      \"3/4\": 9967,\n      \"5/6\": 9977,\n      \"8/9\": 9987,\n      \"9/10\": 9988\n    }\n  }[modulation];/* here we do a lookup :) */\n\n  if (fecMultiplier && fecMultiplier[fec]) {\n    transportStreamBitRate = (1000 * transportStreamBitRate * fecMultiplier[fec] /* here we do a lookup :) */) / 100 / 100 / 1000;\n  }\n  if (symbolRate > 20 && symbolRate < 3001) {\n    let srMultiplier = {\n      21: 50,\n      36: 60,\n      67: 68,\n      126: 76,\n      251: 80,\n      334: 82,\n      501: 86,\n      1001: 87,\n      1501: 88\n    };\n    for (const srLimit in srMultiplier) {\n      if (symbolRate > parseInt(srLimit)) {\n        videoBitRate = (1000 * transportStreamBitRate * srMultiplier[srLimit]/* here we do a lookup :) */) / 100 / 1000 - audioBitRate;\n      }\n    }\n  }\n  // This is a lookup table :)\n  let videoRateMultiplier = {\n    \"qpsk\": {\n      \"1/4\": 85,\n      \"1/3\": 87,\n      \"2/5\": 99,\n      \"1/2\": 99,\n      \"3/5\": 100,\n      \"2/3\": 100,\n      \"3/4\": 100,\n      \"4/5\": 101,\n      \"5/6\": 101,\n      \"8/9\": 101,\n      \"9/10\": 102\n    },\n    \"8psk\": {\n      \"3/5\": 101,\n      \"2/3\": 101,\n      \"3/4\": 101,\n      \"5/6\": 102,\n      \"8/9\": 102,\n      \"9/10\": 102\n    },\n    \"16apsk\": {\n      \"2/3\": 102,\n      \"3/4\": 102,\n      \"5/6\": 102,\n      \"8/9\": 102,\n      \"9/10\": 102\n    },\n    \"32apsk\": {\n      \"3/4\": 102,\n      \"5/6\": 102,\n      \"8/9\": 103,\n      \"9/10\": 103\n    }\n  }[modulation];/* here we do a lookup :) */\n\n  if (videoRateMultiplier && videoRateMultiplier[fec]) {\n    videoBitRate = (videoBitRate * videoRateMultiplier[fec]/* here we do a lookup :) */) / 100;\n    // msg.log = `FEC : ${fec}, transportStreamBitRate: ${transportStreamBitRate}, fecMultiplier[fec]: ${fecMultiplier[fec]}, videoBitRate: ${videoBitRate}, videoRateMultiplier[fec]: ${videoRateMultiplier[fec]}`;\n  }\n  // video rate limiter?\n  if (videoBitRate > 10 && videoBitRate < 200 && modulation === \"qpsk\") {\n    let rateModifier = {\n      51: 55,\n      101: 70,\n      200: 85\n    };\n    for (const rateLimit in rateModifier) {\n      if (videoBitRate > parseInt(rateLimit)) {\n        videoBitRate = (videoBitRate * rateModifier[rateLimit]) / 100;\n      }\n    }\n  }\n\n  global.set(\"settings.TSBITRATE\", transportStreamBitRate.toFixed(2));\n  global.set(\"settings.VBITRATE\", videoBitRate?.toFixed(2));\n  return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5842,7 +5894,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3100,
+        "x": 3120,
         "y": 340,
         "wires": [
             [
@@ -5992,9 +6044,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "32dfcf20406c9b9a",
         "name": "Terminal Profile",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 41,
-        "width": 5,
+        "group": "7954d85ae8701623",
+        "order": 5,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "label": "STOP {{msg.payload}}",
@@ -6272,7 +6324,7 @@
         "tooltip": "",
         "group": "bc7afc94660c6b76",
         "order": 4,
-        "width": 4,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "mode": "text",
@@ -6417,9 +6469,9 @@
         "y": 300,
         "wires": [
             [
-                "08c32461acb9a75f",
                 "6b0cd6504e13d973",
-                "8c7733a45d32bf17"
+                "8c7733a45d32bf17",
+                "08c32461acb9a75f"
             ]
         ]
     },
@@ -6789,7 +6841,7 @@
         "name": "",
         "group": "bc7afc94660c6b76",
         "order": 2,
-        "width": 3,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "label": "{{human_status}}",
@@ -6815,7 +6867,7 @@
         "g": "78b656eeda23dc5a",
         "group": "bc7afc94660c6b76",
         "order": 1,
-        "width": 3,
+        "width": "2",
         "height": 1,
         "name": "",
         "label": "Pluto",
@@ -6835,13 +6887,13 @@
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 4,
-        "width": 5,
+        "group": "7954d85ae8701623",
+        "order": 2,
+        "width": "5",
         "height": 1,
-        "name": "",
-        "label": "Video bitrate",
-        "format": "{{msg.payload}} kb/s",
+        "name": "Video bitrate",
+        "label": "<font size=3>Video bitrate",
+        "format": "<font size=3>{{msg.payload}} kb/s",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -6857,13 +6909,13 @@
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 2,
-        "width": 5,
+        "group": "7954d85ae8701623",
+        "order": 1,
+        "width": "4",
         "height": 1,
-        "name": "",
-        "label": "TS bitrate",
-        "format": "{{msg.payload}} kb/s",
+        "name": "TS bitrate",
+        "label": "<font size=3>TS bitrate",
+        "format": "<font size=3>{{msg.payload}} kb/s",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -6949,39 +7001,17 @@
         "wires": []
     },
     {
-        "id": "27cbad3062794d58",
-        "type": "ui_text",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "78b656eeda23dc5a",
-        "group": "9ed1d9a126995072",
-        "order": 52,
-        "width": 0,
-        "height": 0,
-        "name": "spacer_1",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 3980,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "f9186ed78accdb6c",
         "type": "ui_dropdown",
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "label": "Hardware Codec",
+        "label": "HW",
         "tooltip": "",
-        "place": "Select option",
+        "place": "Select...",
         "group": "4f22c4dbc8bc16dd",
-        "order": 29,
-        "width": 5,
+        "order": 2,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -7001,7 +7031,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4670,
+        "x": 4630,
         "y": 320,
         "wires": [
             [
@@ -7010,39 +7040,17 @@
         ]
     },
     {
-        "id": "d8316c32c9a501d4",
-        "type": "ui_text",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1f5722b7aff1a710",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 62,
-        "width": 11,
-        "height": 1,
-        "name": "Codec panel spacer",
-        "label": "",
-        "format": "",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 4780,
-        "y": 800,
-        "wires": []
-    },
-    {
         "id": "a0addd449f41ee70",
         "type": "ui_dropdown",
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "label": "Software codec",
+        "label": "SW",
         "tooltip": "",
-        "place": "Select option",
+        "place": "Select...",
         "group": "4f22c4dbc8bc16dd",
-        "order": 27,
-        "width": 5,
+        "order": 3,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -7072,7 +7080,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4660,
+        "x": 4630,
         "y": 400,
         "wires": [
             [
@@ -7086,12 +7094,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "label": "Framerate",
+        "label": "FPS",
         "tooltip": "",
         "place": "",
         "group": "4f22c4dbc8bc16dd",
-        "order": 19,
-        "width": 5,
+        "order": 5,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -7146,7 +7154,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4650,
+        "x": 4630,
         "y": 460,
         "wires": [
             [
@@ -7160,12 +7168,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "label": "Audio",
+        "label": "ACH",
         "tooltip": "",
         "place": "Select option",
         "group": "4f22c4dbc8bc16dd",
-        "order": 22,
-        "width": 5,
+        "order": 6,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -7199,8 +7207,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "group": "4f22c4dbc8bc16dd",
-        "order": 9,
-        "width": 5,
+        "order": 1,
+        "width": "3",
         "height": 1,
         "name": "",
         "label": "Codec",
@@ -7327,12 +7335,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "label": "Image Size",
+        "label": "Image",
         "tooltip": "",
         "place": "",
         "group": "4f22c4dbc8bc16dd",
-        "order": 32,
-        "width": 5,
+        "order": 8,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -7392,7 +7400,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4650,
+        "x": 4630,
         "y": 580,
         "wires": [
             [
@@ -7435,12 +7443,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "label": "Audio bitrate kb/s",
+        "label": "ABR",
         "tooltip": "",
         "place": "Select option",
         "group": "4f22c4dbc8bc16dd",
-        "order": 24,
-        "width": 5,
+        "order": 7,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -7510,7 +7518,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4670,
+        "x": 4630,
         "y": 660,
         "wires": [
             [
@@ -7587,28 +7595,6 @@
         ]
     },
     {
-        "id": "832b9a47eae8dabb",
-        "type": "ui_text",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1f5722b7aff1a710",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 7,
-        "width": 5,
-        "height": 1,
-        "name": "",
-        "label": "Imagesize",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 4610,
-        "y": 740,
-        "wires": []
-    },
-    {
         "id": "8c06bae5f257a948",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
@@ -7629,9 +7615,7 @@
         "x": 4390,
         "y": 740,
         "wires": [
-            [
-                "832b9a47eae8dabb"
-            ]
+            []
         ]
     },
     {
@@ -8196,8 +8180,8 @@
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
         "g": "9c3a6dbecd18c092",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 39,
+        "group": "9ed1d9a126995072",
+        "order": 36,
         "width": 2,
         "height": 1,
         "name": "",
@@ -8433,8 +8417,8 @@
         "y": 900,
         "wires": [
             [
-                "edea5b446673c7e5",
-                "dffe1e50bcaeb0a5"
+                "dffe1e50bcaeb0a5",
+                "edea5b446673c7e5"
             ]
         ]
     },
@@ -8964,7 +8948,7 @@
         "label": "TS rx sream IP",
         "tooltip": "",
         "group": "6140f866127cd620",
-        "order": 5,
+        "order": 2,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -9134,15 +9118,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "ffplay ip and title setter",
-        "func": "let title = global.set(\"ffplay_title\", \"\\\"Press '9' and '0'for volume down and up, 'm' for mute, right arrow key `->` to seek to latest frame\\\"\")\nmsg.payload = `${global.get(\"device.rx.tsip\")} ${global.get(\"ffplay_title\")}`;\nreturn msg;",
+        "func": "let title = global.get('ffplay_title');\ntitle = `\\\"${title}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\nglobal.set(\"ffplay_title\", \"\");\nmsg.payload = `${global.get(\"device.rx.tsip\")} ${title}`;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4620,
-        "y": 1720,
+        "x": 4520,
+        "y": 1680,
         "wires": [
             [
                 "023820f309b020da"
@@ -9157,9 +9141,9 @@
         "name": "",
         "label": "rx config for device control",
         "tooltip": "",
-        "group": "da031ac17a307778",
+        "group": "6140f866127cd620",
         "order": 1,
-        "width": 4,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "mode": "text",
@@ -9353,7 +9337,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 2,
-        "x": 4410,
+        "x": 3850,
         "y": 1680,
         "wires": [
             [
@@ -9377,8 +9361,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Powershell to check if minitioune is running",
-        "x": 3110,
-        "y": 2640,
+        "x": 3070,
+        "y": 2600,
         "wires": [
             [
                 "8c74bea29b3244b0"
@@ -9410,14 +9394,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3450,
-        "y": 2640,
+        "x": 3490,
+        "y": 2600,
         "wires": [
             [
-                "6e64d146147821e7"
+                "517a7337244c67a7"
             ],
             [
-                "cdb49e4080a5ecb2"
+                "c8e4e5eb867b6e88"
             ]
         ]
     },
@@ -9481,9 +9465,9 @@
         "name": "",
         "label": "minitioune path",
         "tooltip": "",
-        "group": "da031ac17a307778",
+        "group": "2275ce4aba6ae57e",
         "order": 2,
-        "width": 12,
+        "width": "10",
         "height": 1,
         "passthru": false,
         "mode": "text",
@@ -9595,9 +9579,9 @@
         "command": "",
         "addpay": "payload",
         "append": "",
-        "useSpawn": "true",
+        "useSpawn": "false",
         "timer": "",
-        "winHide": false,
+        "winHide": true,
         "oldrc": false,
         "name": "Open Minitiouner",
         "x": 3950,
@@ -9687,7 +9671,7 @@
         "y": 2740,
         "wires": [
             [
-                "378dce373fcfc379"
+                "34a5dcd51ab8d855"
             ],
             [
                 "58a19d39b1eb3028"
@@ -9767,8 +9751,8 @@
         "y": 1020,
         "wires": [
             [
-                "92f5f62ed5cadc7c",
-                "428a0fc47da7621b"
+                "428a0fc47da7621b",
+                "92f5f62ed5cadc7c"
             ]
         ]
     },
@@ -9864,11 +9848,11 @@
         "g": "f6218c30fc4ec8b7",
         "name": "",
         "group": "6140f866127cd620",
-        "order": 1,
-        "width": 4,
+        "order": 3,
+        "width": "3",
         "height": 1,
         "passthru": true,
-        "label": "TS analyse",
+        "label": "Rx Ts analyse",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -9878,7 +9862,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 5450,
+        "x": 5460,
         "y": 1020,
         "wires": [
             [
@@ -9893,7 +9877,7 @@
         "g": "e6bb4e6e08658367",
         "name": "",
         "scope": [
-            "023820f309b020da"
+            "25f28cc77302135e"
         ],
         "x": 4420,
         "y": 2160,
@@ -9918,7 +9902,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 5200,
-        "y": 2220,
+        "y": 2180,
         "wires": []
     },
     {
@@ -9974,6 +9958,260 @@
         "wires": []
     },
     {
+        "id": "c8e4e5eb867b6e88",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "92c95af69a0592d1",
+        "name": "check minitiouner path defined",
+        "property": "device.minitioune_path",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "nempty"
+            },
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2910,
+        "y": 2660,
+        "wires": [
+            [
+                "cdb49e4080a5ecb2"
+            ],
+            [
+                "7daf6fdd23e69a4c"
+            ]
+        ]
+    },
+    {
+        "id": "048ae9d864757a44",
+        "type": "ui_toast",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "92c95af69a0592d1",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "check path",
+        "x": 3450,
+        "y": 2660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7daf6fdd23e69a4c",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "92c95af69a0592d1",
+        "name": "set dialog text",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "please define minitiouner path",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3220,
+        "y": 2660,
+        "wires": [
+            [
+                "048ae9d864757a44"
+            ]
+        ]
+    },
+    {
+        "id": "517a7337244c67a7",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "use ffplay check",
+        "property": "use_ffplay",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 3560,
+        "y": 1680,
+        "wires": [
+            [
+                "6e64d146147821e7"
+            ]
+        ]
+    },
+    {
+        "id": "34a5dcd51ab8d855",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "use ffplay check",
+        "property": "use_ffplay",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 4320,
+        "y": 1960,
+        "wires": [
+            [
+                "378dce373fcfc379"
+            ]
+        ]
+    },
+    {
+        "id": "0566516b8c2f5f60",
+        "type": "ui_switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "",
+        "label": "ffplay",
+        "tooltip": "",
+        "group": "6140f866127cd620",
+        "order": 5,
+        "width": "2",
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 5450,
+        "y": 1680,
+        "wires": [
+            [
+                "4823c6eed9e03e46"
+            ]
+        ]
+    },
+    {
+        "id": "4823c6eed9e03e46",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bb4e6e08658367",
+        "name": "open ffplay",
+        "func": "let payload = msg.payload\nif(payload){\n    global.set(\"use_ffplay\", true);\n    return;\n}\nglobal.set(\"use_ffplay\", false);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 5650,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4de0745ac50ff8b8",
+        "type": "ui_iframe",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28611a179255d92b",
+        "group": "d2e4abefdc42e427",
+        "name": "",
+        "order": 1,
+        "width": "13",
+        "height": "8",
+        "url": "/chat",
+        "origin": "*",
+        "scale": 100,
+        "x": 810,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31f91a40fbe9635c",
+        "type": "http response",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28611a179255d92b",
+        "name": "",
+        "x": 1030,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "24353fa1e84c365f",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28611a179255d92b",
+        "name": "",
+        "filename": "wb/chat.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "31f91a40fbe9635c"
+            ]
+        ]
+    },
+    {
+        "id": "0e2c3433f42c932c",
+        "type": "http in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28611a179255d92b",
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 600,
+        "y": 280,
+        "wires": [
+            [
+                "24353fa1e84c365f"
+            ]
+        ]
+    },
+    {
         "id": "b9bffb3cd2c084ad",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
@@ -10014,37 +10252,7 @@
         "height": 1
     },
     {
-        "id": "3638b19c1a460fb5",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "806d30964cf41d9d",
-        "order": 4,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "50073a09ae24b2a9",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "6140f866127cd620",
-        "order": 2,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "a9cd5ccc12f3c6db",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "6140f866127cd620",
-        "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "8aad0e7e40a08115",
+        "id": "62c4e0cdb5acd075",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10054,7 +10262,7 @@
         "height": 1
     },
     {
-        "id": "2f10a19bb2d62489",
+        "id": "ef74ce46a469746e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10064,17 +10272,17 @@
         "height": 1
     },
     {
-        "id": "8905d3d0f5d1355d",
+        "id": "4360fdb1f88f5697",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "9ed1d9a126995072",
-        "order": 8,
-        "width": 1,
-        "height": 1
+        "order": 37,
+        "width": "4",
+        "height": "1"
     },
     {
-        "id": "ad01b00a0224d672",
+        "id": "87b7561050ce40a9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10084,7 +10292,7 @@
         "height": 1
     },
     {
-        "id": "55bded8697c6a630",
+        "id": "833f0fd48ff3b6ad",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10094,7 +10302,7 @@
         "height": 1
     },
     {
-        "id": "19b3baa049d982f3",
+        "id": "0f99334ba7c73d6e",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10104,7 +10312,7 @@
         "height": 1
     },
     {
-        "id": "4184525e778914b5",
+        "id": "2708f4ae08a79029",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10114,7 +10322,7 @@
         "height": 1
     },
     {
-        "id": "e5995c42a6a33eda",
+        "id": "a8a6a06de2fd5bbd",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10124,7 +10332,7 @@
         "height": 1
     },
     {
-        "id": "9fa4b1db7f5f0e35",
+        "id": "f9edff00db35e27d",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10134,7 +10342,7 @@
         "height": 1
     },
     {
-        "id": "c4302badc7865f6a",
+        "id": "665027bbbf524e20",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10144,7 +10352,7 @@
         "height": 1
     },
     {
-        "id": "338d5607de2dc51a",
+        "id": "76f479a35d36d305",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
@@ -10154,482 +10362,22 @@
         "height": 1
     },
     {
-        "id": "12615e31730bcd89",
+        "id": "95684ac48753e400",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "9ed1d9a126995072",
-        "order": 34,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "22cea3694fc37f92",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 36,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "381ba7cabe50d9d4",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 37,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "cc33b8166d6ecc27",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 39,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "a02fef3780f06cfd",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 41,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "2fdc699f77443263",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 42,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "e00183d413cfc49d",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 44,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "cb41a5fb964ce5bd",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 46,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d5605f854656cf80",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 47,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "6d4f828ec3ea1076",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 49,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "c2b053e4c9fd8c45",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 51,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "63b1ed2c3bd2ba3e",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "7c0252a553bd93db",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "b78fddf6a7cc1446",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d8beb09eda4afcf1",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "8e4fe97ca9c4683d",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
         "order": 8,
         "width": 1,
         "height": 1
     },
     {
-        "id": "87d9275b27abc595",
+        "id": "9c5a4f77bacbda3a",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 10,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "5fe882a6621d930c",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 11,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "f80af0020696c955",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "e6dd08d01dcfa394",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 15,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "ca2ab8d3e084594d",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 16,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d6e621910f49b4d1",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 18,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "5e6781d81ba2a8f0",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 20,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "ee655127dbf34e4a",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 21,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9493cfe64cf30e41",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 23,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "be1e6a6297dc546a",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 25,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "b31a7f2789e7607f",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 26,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "bd24d88dc1d5bbb4",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 28,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d6856d3ba998b8d2",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 30,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "e957eb6f5d8db567",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 31,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "23ca2103c2fd2280",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 33,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "be90e480a8cb395f",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 35,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "4631fe162a355209",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 36,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "88f1fe1ebd77e2e1",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
+        "group": "9ed1d9a126995072",
         "order": 38,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "4f438c9638b87486",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 40,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "41906a3f4d7bc338",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 42,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "55e51f193b6def13",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 43,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9488691fa6deb7c1",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 45,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "31f9c67372155719",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 47,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "3a26758d8add078d",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 49,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "549703d507277a49",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 51,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "cf0b10c5d6a7e875",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 52,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "45914e32f95f0a13",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 54,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "1b89a801620e10bb",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 56,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "2c370bdacfc48c9f",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 58,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d43bbae02f4dd3ae",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 60,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "cb4a2ba1c726f919",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 61,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "0b417415e756c766",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 63,
         "width": 1,
         "height": 1
     },
@@ -10660,28 +10408,6 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
-    },
-    {
-        "id": "9ed1d9a126995072",
-        "type": "ui_group",
-        "name": "Radio controls",
-        "tab": "9b3296db2e0c849f",
-        "order": 6,
-        "disp": false,
-        "width": "19",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "4f22c4dbc8bc16dd",
-        "type": "ui_group",
-        "name": "ffmpeg profiler",
-        "tab": "9b3296db2e0c849f",
-        "order": 7,
-        "disp": true,
-        "width": "13",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "806d30964cf41d9d",
@@ -10721,7 +10447,40 @@
         "type": "ui_group",
         "name": "Spectrum window",
         "tab": "9b3296db2e0c849f",
-        "order": 3,
+        "order": 5,
+        "disp": false,
+        "width": "32",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f22c4dbc8bc16dd",
+        "type": "ui_group",
+        "name": "profile settings bar",
+        "tab": "9b3296db2e0c849f",
+        "order": 7,
+        "disp": false,
+        "width": "32",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da031ac17a307778",
+        "type": "ui_group",
+        "name": "preset bar",
+        "tab": "9b3296db2e0c849f",
+        "order": 4,
+        "disp": false,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7954d85ae8701623",
+        "type": "ui_group",
+        "name": "Profile info bar",
+        "tab": "9b3296db2e0c849f",
+        "order": 6,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -10732,20 +10491,9 @@
         "type": "ui_group",
         "name": "Rx buttons",
         "tab": "9b3296db2e0c849f",
-        "order": 4,
+        "order": 3,
         "disp": false,
         "width": 16,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "da031ac17a307778",
-        "type": "ui_group",
-        "name": "minitiouner",
-        "tab": "9b3296db2e0c849f",
-        "order": 5,
-        "disp": false,
-        "width": "16",
         "collapse": false,
         "className": ""
     },
@@ -10759,13 +10507,26 @@
         "subprotocol": ""
     },
     {
-        "id": "9b3296db2e0c849f",
-        "type": "ui_tab",
-        "name": "Transmission and profiles",
-        "icon": "fa-fire",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
+        "id": "2275ce4aba6ae57e",
+        "type": "ui_group",
+        "name": "mnitiouner",
+        "tab": "3fcae860e82945fc",
+        "order": 2,
+        "disp": false,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d2e4abefdc42e427",
+        "type": "ui_group",
+        "name": "Chat",
+        "tab": "9b3296db2e0c849f",
+        "order": 9,
+        "disp": false,
+        "width": "13",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "3fcae860e82945fc",
