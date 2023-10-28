@@ -26,12 +26,11 @@
    ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/f5a2950f-0524-47bf-87e0-bdaa8be0e7ef)
 
 
-10. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw)
+10. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
 11. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/4e1dd0d1-cbde-4a40-906f-bffb9a4c7979)
-
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/2cc3e390-4712-4921-a5fa-b8de1b5fee50)
 
 If you want buy me a coffee:
 
