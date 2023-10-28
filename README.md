@@ -30,12 +30,11 @@
 
 11. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/2cc3e390-4712-4921-a5fa-b8de1b5fee50)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/029e09e3-673f-4aff-948c-446625b9d4fe)
 
 If you want buy me a coffee:
 
   [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
-
 
 ## Thanks 
 Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
@@ -44,7 +43,6 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7e3df566-6321-43ee-9fdd-a078e82543e4)
 
-
 ## Check libx265 performance 
 
  Run this bat file.
@@ -52,11 +50,8 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
     .\scripts\ffmpeg_bench_libx265.bat
 
  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7b0f2884-7064-4dcd-bbbf-fffbaf93f032)
-
  
 If you get higher than 25fps, you should be okay... 
-
-
 
 ## Motivation
 DATV transmissions normally have the following programs open:
