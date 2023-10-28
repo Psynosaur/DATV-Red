@@ -9084,7 +9084,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "ffplay ip and title setter",
-        "func": "let title = global.get('ffplay_title');\nlet ontop = global.get('ffplay_ontop') ? \"-alwaysontop\" : \"\";\ntitle = `\\\"${title}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\nglobal.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nmsg.payload = `${global.get(\"device.rx.tsip\")} ${title} ${hor} ${vert} ${volume} ${ontop} `;\nreturn msg;",
+        "func": "let title = global.get('ffplay_title');\nlet ontop = global.get('ffplay_ontop') === \"ON\" ? \"-alwaysontop\" : \"\";\ntitle = `\\\"${title}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\nglobal.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nmsg.payload = `${global.get(\"device.rx.tsip\")} ${title} ${hor} ${vert} ${volume} ${ontop} `;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -10010,13 +10010,13 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "use ffplay check",
-        "property": "use_ffplay",
+        "property": "device.rx.ffplay",
         "propertyType": "global",
         "rules": [
             {
                 "t": "eq",
-                "v": "1",
-                "vt": "num"
+                "v": "ON",
+                "vt": "str"
             }
         ],
         "checkall": "true",
@@ -10036,12 +10036,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "use ffplay check",
-        "property": "use_ffplay",
+        "property": "device.rx.ffplay",
         "propertyType": "global",
         "rules": [
             {
                 "t": "eq",
-                "v": "1",
+                "v": "ON",
                 "vt": "str"
             }
         ],
@@ -10097,7 +10097,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "open ffplay",
-        "func": "let payload = msg.payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.rx.ffplay\", payload);\nreturn;\n",
+        "func": "let payload = msg.payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.rx.ffplay\",  payload ? \"ON\" : \"OFF\");\nreturn;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10219,7 +10219,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bb4e6e08658367",
         "name": "ffplay ontop",
-        "func": "let payload = msg.payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.rx.ffplay_ontop\", payload);\nreturn;",
+        "func": "let payload = msg.payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.rx.ffplay_ontop\",  payload ? \"ON\" : \"OFF\");\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10439,12 +10439,12 @@
                 "p": "payload"
             }
         ],
-        "repeat": "0.5",
+        "repeat": "",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "device.rx.ffplay_size",
+        "payload": "device.rx.ffplay",
         "payloadType": "global",
         "x": 5270,
         "y": 1680,
@@ -10465,7 +10465,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "0.5",
+        "repeat": "",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
