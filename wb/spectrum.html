@@ -141,6 +141,7 @@
             }
             /* Channel calibration mode */
             if (ev.altKey && ev.shiftKey) {
+                if(busy) return
                 lastUplink = uplink;
                 lastCanvasClickBW = canvasClickBW;
                 fetch(`/setTx?` + new URLSearchParams({

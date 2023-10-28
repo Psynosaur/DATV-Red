@@ -2,6 +2,10 @@
 setlocal enabledelayedexpansion
 SET ADDR=%1
 SET TITLE=%2
+SET WIDTH=%3
+SET HEIGHT=%4
+SET VOLUME=%5
+SET ONTOP=%6
 SET BASEDIR=%~dp0
-start %BASEDIR%..\ffmpeg\ffplay udp://@%ADDR% -window_title %TITLE% -volume 15 -seek_interval 3 -x 1280 -y 720 -hide_banner 
+start %BASEDIR%..\ffmpeg\ffplay udp://@%ADDR% -window_title %TITLE% -volume %VOLUME% -seek_interval 3 -x %WIDTH% -y %HEIGHT% -hide_banner %ONTOP%
 @REM -alwaysontop
