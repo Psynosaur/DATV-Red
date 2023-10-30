@@ -45,7 +45,7 @@
     var freq_info = [];
 
     /* This controls the pluto via HTTP request to the node-red API endpoint 'setRadio' */
-    var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW, busy;
+    var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
     var busy = false;
     var activeColor, activeXd1, activeYd,activeXd2;
     var activeColor_1, activeXd1_1, activeYd_1, activeXd2_1;
@@ -124,7 +124,31 @@
     function on_canvas_click(ev) {
         let magicSpaceUnderSignal = canvasHeight * (7.02 / 8);
         let magicSpaceAboveSignal = canvasHeight * (1.59 / 8);
-        /* console.log(`${x} : ${y} : Uplink : ${uplink} : SR : ${canvasClickBW}`) */
+        /* console.log(`Uplink: ${uplink} : SR : ${canvasClickBW}`) */
+        
+        /* we clicked on the beacon... */
+        if(uplink === undefined && canvasClickBW === undefined && busy){
+            /* Tune minitiouner on local pc with multicast message */
+            if (ev.ctrlKey && ev.altKey) {
+                lastCanvasClickBW = canvasClickBW;
+                fetch(`/setTune?` + new URLSearchParams({
+                    downlink: 10491.5,
+                    SR: 1.5
+                }));
+                /* RX tuning bar */
+                setRxClickState(activeColor, 43, magicSpaceAboveSignal, 362);
+                return;
+            }
+            if (ev.ctrlKey) {
+                fetch(`/setRx?` + new URLSearchParams({
+                    downlink: 10491.5,
+                    SR: 1.5
+                }));
+                /* RX tuning bar */
+                setRxClickState(activeColor, 43, magicSpaceAboveSignal, 362);
+                return;
+            }
+        }
         /* block must be highlighted or box drawn for fire of request */
         if(uplink !== undefined && canvasClickBW !== undefined){
             /* Tune minitiouner on local pc with multicast message */
@@ -197,7 +221,7 @@
             fetch('/status')
             .then(res =>  res.text())
             .then(text => {
-                console.log(`Text:${text}`)
+                console.log(`Muted: ${text}`)
                 if(text === "0"){
                     /* we do not set the tune bar since you clicked on a active signal... */
                     return;
@@ -918,6 +942,7 @@
                             signals[i].start - ((signals[i].start - signals[i].end) / 2),
                             (canvasHeight * 7 / 8) - (7 * ((canvasHeight * 7 / 8) - signals[i].top) / 8));
                     }
+                    busy = true;
                     ctx.restore();
                     return;
                 }
