@@ -31,7 +31,7 @@
 11. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/029e09e3-673f-4aff-948c-446625b9d4fe)
-[Discord](https://discord.gg/szQKjRZvuZ) channel for latest developments. . . (yes its better than IRC)
+[Discord](https://discord.gg/szQKjRZvuZ) channel for latest developments. . . 
 
 If you want buy me a coffee:
 
