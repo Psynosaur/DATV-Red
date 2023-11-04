@@ -1,0 +1,40 @@
+<script type="text/x-red" data-template-name="sum">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="fa fa-tasks"></i> Topic</label>
+        <input type="text" id="node-input-topic" placeholder="Topic">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="average">
+    <p>Calculate the sum of incoming <code>msg.payload</code> values from across a number of different <code>msg.topic</code>.</p>
+    <p>Incoming <code>msg.topic</code> has to be used to separate and identify values.
+    Messages not containing a valid numeric value will be rejected.</p>
+    <p>Will return the current sum of all different <code>msg.topic</code> values as <code>msg.payload</code>.
+    Every other properties of incoming message will be pushed through.</p>
+    <p>The sum can be reset with an incoming message that contains <code>msg.reset</code>.
+    Then all stored data will be removed and the initial sum starts at zero again.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType("sum", {
+      category: "function",
+      defaults: {
+        name: {value:""},
+        topic: {value:""}
+      },
+      color:"#e2d96e",
+      inputs: 1,
+      outputs: 1,
+      icon: "font-awesome/fa-plus-square-o",
+      label: function() {
+        return this.name || "sum";
+      },
+      labelStyle: function() {
+        return this.name ? "node_label_italic" : "";
+      }
+    });
+</script>
