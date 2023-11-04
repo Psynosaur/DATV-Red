@@ -4,31 +4,15 @@
 - **VERY IMPORTANT** at least passive cooling on the PlutoSDR in the form of heatsinks, or it might explode ¯\_(ツ)_/¯
   - Mine with big chungus metal block heatsink goes upto 45°C
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
-- **Node-Red** running on Windows
 
 ## Setup and use
 1. Download [this repository](https://github.com/Psynosaur/DATV-Simple/archive/refs/heads/main.zip) and extract to folder `DATV-Simple` and open in file explorer
 
-2. **VERY IMPORTANT**
-   - Setup `config-tx.ini` by chaning values for your setup, this will soon be obsolete
+2. double click `DATV-Start.cmd`
 
-4. **PLEASE IGNORE IF Node-Red is installed!**
-   - Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
-   
-5. Run node red using shortcut in folder
+3. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
-6. Please check this setup video: [setup](https://www.youtube.com/watch?v=H9hI2qRMb-A) for importing the flow
-
-7. Once you have imported the flow please run `.\install_dependencies.bat` to ensure the flow has all its dependencies.
-
-8. Open this [link](http://127.0.0.1:1880/ui/) and install from browser by click this icon
-
-   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/f5a2950f-0524-47bf-87e0-bdaa8be0e7ef)
-
-
-10. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
-
-11. Have fun
+4. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/daa3c083-87ae-4f42-96bd-d85f42420806)
 
@@ -43,7 +27,7 @@ Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy proj
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/af519898-57da-49eb-90d9-a9364fd632de)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/43f58192-bda8-46ee-b5a8-b5b300147a29)
 
 ## Check libx265 performance 
 
