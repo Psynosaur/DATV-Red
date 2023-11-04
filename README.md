@@ -10,7 +10,7 @@
 1. Download [this repository](https://github.com/Psynosaur/DATV-Simple/archive/refs/heads/main.zip) and extract to folder `DATV-Simple` and open in file explorer
 
 2. **VERY IMPORTANT**
-   - Setup `config-tx.ini` by chaning values for your setup 
+   - Setup `config-tx.ini` by chaning values for your setup, this will soon be obsolete
 
 4. **PLEASE IGNORE IF Node-Red is installed!**
    - Run `.\install_node_red_RUN_AS_ADMIN.bat` to install Node-Red for Windows
@@ -30,7 +30,8 @@
 
 11. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/029e09e3-673f-4aff-948c-446625b9d4fe)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/daa3c083-87ae-4f42-96bd-d85f42420806)
+
 [Discord](https://discord.gg/szQKjRZvuZ) channel for latest developments. . . 
 
 If you want buy me a coffee:
@@ -42,7 +43,7 @@ Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy proj
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7e3df566-6321-43ee-9fdd-a078e82543e4)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/af519898-57da-49eb-90d9-a9364fd632de)
 
 ## Check libx265 performance 
 
