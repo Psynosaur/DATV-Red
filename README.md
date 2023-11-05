@@ -34,16 +34,6 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/43f58192-bda8-46ee-b5a8-b5b300147a29)
 
-## Check libx265 performance 
-
- Run this bat file.
-
-    .\scripts\ffmpeg_bench_libx265.bat
-
- ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/7b0f2884-7064-4dcd-bbbf-fffbaf93f032)
- 
-If you get higher than 25fps, you should be okay... 
-
 ## Motivation
 DATV transmissions normally have the following programs open:
  1. OBS
