@@ -11,7 +11,9 @@
 2. double click `DATV-Start.cmd`
 
 3. setup mqtt broker `pluto connection`
-   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/a6d07612-692a-47a5-a356-7e71cf7dbfbe)
+   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/c9e03aea-d291-4022-81ff-b52c1128ae33) ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/dcd03cdb-fde8-4e59-a787-fcf5a7589f56)
+
+
 
 4. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
