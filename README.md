@@ -6,13 +6,16 @@
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 
 ## Setup and use
-1. Download [this repository](https://github.com/Psynosaur/DATV-Simple/archive/refs/heads/main.zip) and extract to folder `DATV-Simple` and open in file explorer
+1. Download [latest relase](https://github.com/Psynosaur/DATV-Simple/releases/download/release-v2.2/DATV-Simple.zip) and extract to folder `DATV-Simple` and open in file explorer
 
 2. double click `DATV-Start.cmd`
 
-3. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+3. setup mqtt broker `pluto connection`
+   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/a6d07612-692a-47a5-a356-7e71cf7dbfbe)
 
-4. Have fun
+4. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+
+5. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/daa3c083-87ae-4f42-96bd-d85f42420806)
 
