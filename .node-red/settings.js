@@ -53,7 +53,7 @@ module.exports = {
      * the user's home directory. To use a different location, the following
      * property can be used
      */
-    userDir: 'F:/Radio/QO-100/DATV-Simple/.node-red/',
+    // userDir: 'F:/Radio/QO-100/DATV-Simple/.node-red/',
 
     /** Node-RED scans the `nodes` directory in the userDir to find local node files.
      * The following property can be used to specify an additional directory to scan.
