@@ -19,7 +19,7 @@
 
 5. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/daa3c083-87ae-4f42-96bd-d85f42420806)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/24dcd240-e742-4776-a6a5-986730f174c4)
 
 [Discord](https://discord.gg/szQKjRZvuZ) channel for latest developments. . . 
 
