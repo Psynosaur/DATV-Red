@@ -23,7 +23,8 @@
         },
         "menu-menu-item-sidebar": false,
         "debug": {
-            "clearType": "all"
+            "clearType": "all",
+            "filter": "filterCurrent"
         }
     }
 }

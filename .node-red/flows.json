@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V2.2",
+        "label": "DATV Simple V2.3",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n",
         "env": []
     },
     {
@@ -22,12 +22,13 @@
             "b56e0ed724bfefc0",
             "0c72fe59acc5f30e",
             "6650408d269637c4",
-            "0dc39dc2f82350ce"
+            "0dc39dc2f82350ce",
+            "f5a47dd605642e35"
         ],
         "x": 34,
         "y": 39,
         "w": 972,
-        "h": 142
+        "h": 162
     },
     {
         "id": "28611a179255d92b",
@@ -519,7 +520,6 @@
             "6bdd18a478266cdb",
             "e41f78ecb41096ea",
             "26d4847d4e66ef33",
-            "cea8ea667bfe40bc",
             "b12e26636bc4a755",
             "4ecaf72037fc5448",
             "321917da5c241be6",
@@ -532,14 +532,10 @@
             "29f59051e6cbe148",
             "380f24164e357a8f",
             "66d128c2a339f3cb",
-            "2c41079701a39f16",
             "aed175dfbecd5c12",
             "a6736166225853ff",
             "0024149327ace021",
             "870adb347b148820",
-            "e32557c99c41cfd8",
-            "7daa019359e5db60",
-            "e78462f2e1867d95",
             "da2d9235ea59d48e",
             "0e9c3a491a2a469e",
             "59cffb16faf16e25",
@@ -554,10 +550,10 @@
             "181bc2bec72e1d2d",
             "e5b0fa3224166063"
         ],
-        "x": 3814,
-        "y": 1059,
-        "w": 2052,
-        "h": 642
+        "x": 3834,
+        "y": 1079,
+        "w": 2032,
+        "h": 402
     },
     {
         "id": "d320c7a134a3a36a",
@@ -938,7 +934,7 @@
             }
         },
         "site": {
-            "name": "DATV-Simple V2.2",
+            "name": "DATV-Simple V2.3",
             "hideToolbar": "false",
             "allowSwipe": "true",
             "lockMenu": "false",
@@ -2181,7 +2177,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "ba42e703170bee84",
         "name": "",
-        "topic": "cmd/pluto/call",
+        "topic": "",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -2190,8 +2186,8 @@
         "correl": "",
         "expiry": "",
         "broker": "16855981254e7e93",
-        "x": 480,
-        "y": 140,
+        "x": 590,
+        "y": 160,
         "wires": []
     },
     {
@@ -2751,7 +2747,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: queue",
-        "func": "var payload = parseInt(msg.payload);\nif (payload !== global.get(\"queue\")) {\n    global.set(\"queue\", payload);\n}\nif (payload > 25) {\n    msg.fcolor = \"#d81706\";\n    msg.payload = \"overflow\";\n    return msg;\n}\nif (payload > 0) {\n    msg.fcolor = \"#0e7c1a\";\n    msg.payload = \"nominal\";\n    return msg;\n}\n\nmsg.payload = \"underflow\";\nmsg.fcolor = \"#ff9e07\";\nreturn msg;",
+        "func": "var payload = parseInt(msg.payload);\nif (payload !== global.get(\"queue\")) {\n    global.set(\"queue\", payload);\n}\nif (payload > 50) {\n    msg.fcolor = \"#d81706\";\n    msg.payload = \"overflow\";\n    return msg;\n}\nif (payload > 0) {\n    msg.fcolor = \"#0e7c1a\";\n    msg.payload = \"nominal\";\n    return msg;\n}\n\nmsg.payload = \"underflow\";\nmsg.fcolor = \"#ff9e07\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2879,24 +2875,39 @@
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
         "g": "ba42e703170bee84",
-        "name": "",
+        "name": "pluto mqtt connection details",
         "props": [
+            {
+                "p": "action",
+                "v": "connect",
+                "vt": "str"
+            },
+            {
+                "p": "broker",
+                "v": "{\"broker\":\"192.168.2.1\",\"port\":1883,\"username\":\"root\",\"password\":\"analog\",\"force\":true}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
             {
                 "p": "payload"
             }
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "cmd/pluto/call",
         "payload": "ZS1SCI",
         "payloadType": "str",
-        "x": 210,
+        "x": 200,
         "y": 140,
         "wires": [
             [
-                "b56e0ed724bfefc0"
+                "b56e0ed724bfefc0",
+                "f5a47dd605642e35"
             ]
         ]
     },
@@ -4167,17 +4178,6 @@
         "wires": []
     },
     {
-        "id": "cea8ea667bfe40bc",
-        "type": "comment",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "78f7e24f56d510ed",
-        "name": "Ensures only one ffmepg process",
-        "info": "",
-        "x": 4670,
-        "y": 1480,
-        "wires": []
-    },
-    {
         "id": "8fc50c918238bbb1",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
@@ -4616,11 +4616,10 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 4400,
-        "y": 1540,
+        "y": 1440,
         "wires": [
             [
-                "932baa0f165b71a2",
-                "e78462f2e1867d95"
+                "932baa0f165b71a2"
             ]
         ]
     },
@@ -4629,16 +4628,16 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
-        "name": "powershell - ffmpeg command builder",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    // let codec = global.get(\"settings.CODEC\") === \"libvvenc\" ? `libvvenc -vvenc-params bitrate=${vvcBitRate}:framerate=${global.get(\"settings.FPS\")}:size=${global.get(\"settings.IMAGESIZE\")} ` : global.get(\"settings.CODEC\");\n    let vvcBitRate = (videoBitrate * 1000); // to Mega\n    let codec = global.get(\"settings.CODEC\") === \"libvvenc\" ? `libvvenc -preset faster -vvenc-params bitrate=${vvcBitRate} ` : global.get(\"settings.CODEC\");\n    let offset = -0.650;\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = 10;\n    let rt_buffer = 300;\n    let buffer_size = videoBitrate * 1;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = 150;\n    let max_delay = 1000;\n    let max_interleave_delta = 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095; \n    let mpegts_transport_stream_id = 4095; \n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = 50;\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n    let str = escapeShellArg(\n        `\n        -itsoffset ${offset} \n        -f dshow -thread_queue_size ${thread_queue}K \n        -rtbufsize ${rt_buffer}M \n        -i video=\\\"${global.get(\"settings.video_device\")}\\\" -f dshow \n        -thread_queue_size ${thread_queue}K \n        -rtbufsize ${rt_buffer}M \n        -i audio=\\\"${global.get(\"settings.audio_device\")}\\\" \n        -ar ${global.get(\"settings.ABITRATE\")}K \n        -vcodec ${codec} \n        -s ${global.get(\"settings.IMAGESIZE\")} \n        -b:v ${global.get(\"settings.VBITRATE\")}K \n        -r ${global.get(\"settings.FPS\")} \n        -minrate ${global.get(\"settings.VBITRATE\")}K \n        -maxrate ${global.get(\"settings.VBITRATE\")}K \n        -bufsize ${buffer_size}K -g ${keyframe_interval} \n        -acodec libfdk_aac \n        -ac ${global.get(\"settings.AUDIO\")} \n        -b:a ${global.get(\"settings.ABITRATE\")}k \n        -f mpegts -muxrate ${tsRate}K \n        -streamid 0:${video_pid} \n        -streamid 1:${audio_pid} \n        -max_delay ${max_delay}K \n        -max_interleave_delta ${max_interleave_delta}M \n        -pcr_period ${pcr_period} \n        -pat_period ${pat_period} \n        -mpegts_service_id ${mpegts_service_id} \n        -mpegts_original_network_id ${mpegts_original_network_id} \n        -mpegts_transport_stream_id ${mpegts_transport_stream_id} \n        -mpegts_pmt_start_pid ${mpegts_pmt_start_pid} \n        -mpegts_start_pid ${mpegts_start_pid} \n        -metadata service_provider=${service_provider} \n        -metadata service_name=${global.get(\"device.callsign\")} \n        -af aresample=async=1 \n        \\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316\"&\"overrun_nonfatal=1\"&\"fifo_size=${fifo_size}M\\\"\n        `);\n    // we also need to replace '(' and ')' by escaping it with '`(' and '`)' since these are special operators in powershell\n    // don't ask me how I figured this out, it was early and I was high. . .\n    msg.payload = str.substring(1, str.length-1).replace(\"(\", \"`(\").replace(\")\", \"`)\").replace(\"\\n\", \"\");\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n/* This escapes the string for powershell usage */\nfunction escapeShellArg(arg) {\n    return `'${arg.replace(/'/g, `'\\\\''`)}'`;\n}",
+        "name": "ffmpeg command builder",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let vvcBitRate = Math.round(videoBitrate * 990); // to Mega\n    let codec = global.get(\"settings.CODEC\")\n    switch (codec) {\n        case 'libvvenc':\n            codec = `libvvenc -preset faster -vvenc-params bitrate=${vvcBitRate}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -preset medium`;\n            break;\n        case 'liboam-av1':\n            codec = `liboam-av1 -crf 30 -usage realtime`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc -preset p7 -tune hq`;\n            break;\n    }\n    let offset = -0.650;\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = 10;\n    let rt_buffer = 300;\n    let buffer_size = videoBitrate * 1;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = 150;\n    let max_delay = 1000;\n    let max_interleave_delta = 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = 50;\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n    let str = \n        `-itsoffset ${offset} ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `-ar ${global.get(\"settings.ABITRATE\")}K ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +\n        `-r ${global.get(\"settings.FPS\")} ` +\n        `-maxrate ${global.get(\"settings.VBITRATE\")}K ` +\n        `-minrate ${global.get(\"settings.VBITRATE\")}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        `-acodec libfdk_aac ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts -muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-mpegts_service_id ${mpegts_service_id} ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-metadata service_name=${global.get(\"device.callsign\")} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4730,
-        "y": 1540,
+        "x": 4650,
+        "y": 1440,
         "wires": [
             [
                 "870adb347b148820"
@@ -4786,8 +4785,8 @@
         "topic": "",
         "payload": "ffmpeg_cmd",
         "payloadType": "global",
-        "x": 4700,
-        "y": 1400,
+        "x": 4640,
+        "y": 1260,
         "wires": [
             [
                 "6c2ed6b6c40e42db"
@@ -4813,8 +4812,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 4950,
-        "y": 1400,
+        "x": 4970,
+        "y": 1260,
         "wires": [
             [
                 "66d128c2a339f3cb"
@@ -4839,7 +4838,7 @@
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
-        "x": 5530,
+        "x": 5470,
         "y": 1300,
         "wires": []
     },
@@ -4856,8 +4855,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5310,
-        "y": 1460,
+        "x": 5210,
+        "y": 1340,
         "wires": [
             [
                 "29f59051e6cbe148"
@@ -4877,7 +4876,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5180,
+        "x": 5200,
         "y": 1260,
         "wires": [
             [
@@ -5459,7 +5458,7 @@
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
         "g": "359e81623396a0cb",
-        "position": "top left",
+        "position": "bottom left",
         "displayTime": "3",
         "highlight": "green",
         "sendall": true,
@@ -9958,8 +9957,8 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
-        "name": "function 4",
-        "func": "let mute = global.get(\"mute\");\nif (mute === \"0\") {\n    msg.payload = mute;\n    return msg;\n}\nif(mute === \"1\"){\n    msg.payload = mute;\n    return msg;\n}\n",
+        "name": "get mute",
+        "func": "let mute = global.get(\"mute\");\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10541,17 +10540,6 @@
         ]
     },
     {
-        "id": "2c41079701a39f16",
-        "type": "comment",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "78f7e24f56d510ed",
-        "name": "to be re-used for saved profiles later",
-        "info": "",
-        "x": 4660,
-        "y": 1100,
-        "wires": []
-    },
-    {
         "id": "2d69c56629fd6ada",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
@@ -10906,47 +10894,6 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
-        "command": "powershell ffmpeg/ffmpeg.exe",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "true",
-        "timer": "",
-        "winHide": true,
-        "oldrc": false,
-        "name": "Load custom",
-        "x": 5050,
-        "y": 1460,
-        "wires": [
-            [],
-            [
-                "380f24164e357a8f"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "e32557c99c41cfd8",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "78f7e24f56d510ed",
-        "name": "debug 15",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 5520,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "7daa019359e5db60",
-        "type": "exec",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "78f7e24f56d510ed",
         "command": "ffmpeg\\ffmpeg.exe ",
         "addpay": "payload",
         "append": "",
@@ -10954,38 +10901,15 @@
         "timer": "",
         "winHide": true,
         "oldrc": false,
-        "name": "Load custom normal command line(not working)",
-        "x": 5240,
-        "y": 1360,
+        "name": "Load custom",
+        "x": 4970,
+        "y": 1340,
         "wires": [
             [],
             [
-                "e32557c99c41cfd8"
+                "380f24164e357a8f"
             ],
             []
-        ]
-    },
-    {
-        "id": "e78462f2e1867d95",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "78f7e24f56d510ed",
-        "name": "command line",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    // msg.payload = `${parseInt(global.get(\"settings.SR\"))} ${global.get(\"settings.MODE\")} ${fec} ${global.get(\"settings.IMAGESIZE\")} ${global.get(\"settings.FPS\")} ${global.get(\"settings.AUDIO\")} ${global.get(\"settings.CODEC\")} ${global.get(\"settings.TSBITRATE\")} ${vbr} ${global.get(\"device.tx.dvbs2.fecmode\")} ${global.get(\"device.tx.frequency\")} ${global.get(\"settings.VBITRATE\")} ${global.get(\"settings.ABITRATE\")}`;\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let offset = \"-0.650\";\n    let thread_queue = 10;\n    let rt_buffer = 300;\n    let buffer_size = videoBitrate * 1;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = 150;\n    let max_delay = 1000;\n    let max_interleave_delta = 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = 50;\n    // let str = escapeShellArg(\n    //     `-itsoffset ${offset} -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i video=\\\"${global.get(\"video_device\")}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i audio=\\\"${global.get(\"auido_device\")}\\\" -ar ${global.get(\"settings.ABITRATE\")}K -vcodec ${global.get(\"settings.CODEC\")} -s ${global.get(\"settings.IMAGESIZE\")} -b:v ${global.get(\"settings.VBITRATE\")}K -r ${global.get(\"settings.FPS\")} -minrate ${global.get(\"settings.VBITRATE\")}K -maxrate ${global.get(\"settings.VBITRATE\")}K -bufsize ${buffer_size}K -g ${keyframe_interval} -acodec libfdk_aac -ac ${global.get(\"settings.AUDIO\")} -b:a ${global.get(\"settings.ABITRATE\")}k -f mpegts -muxrate ${global.get(\"settings.TSBITRATE\")}K -streamid 0:${video_pid} -streamid 1:${audio_pid} -max_delay ${max_delay}K -max_interleave_delta ${max_interleave_delta}M -pcr_period ${pcr_period} -pat_period ${pat_period} -mpegts_service_id ${mpegts_service_id} -mpegts_original_network_id ${mpegts_original_network_id} -mpegts_transport_stream_id ${mpegts_transport_stream_id} -mpegts_pmt_start_pid ${mpegts_pmt_start_pid} -mpegts_start_pid ${mpegts_start_pid} -metadata service_provider=${service_provider} -metadata service_name=${global.get(\"device.callsign\")} -af aresample=async=1 \\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316\"&\"overrun_nonfatal=1\"&\"fifo_size=${fifo_size}M\\\"`);\n    let strCMD = escapeShellArg(` -itsoffset ${offset} -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i video='${global.get(\"video_device\")}' -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i audio=\\\"${global.get(\"auido_device\")}\\\" -ar ${global.get(\"settings.ABITRATE\")}K -vcodec ${global.get(\"settings.CODEC\")} -s ${global.get(\"settings.IMAGESIZE\")} -b:v ${global.get(\"settings.VBITRATE\")}K -r ${global.get(\"settings.FPS\")} -minrate ${global.get(\"settings.VBITRATE\")}K -maxrate ${global.get(\"settings.VBITRATE\")}K -bufsize ${buffer_size}K -g ${keyframe_interval} -acodec libfdk_aac -ac ${global.get(\"settings.AUDIO\")} -b:a ${global.get(\"settings.ABITRATE\")}k -f mpegts -muxrate ${global.get(\"settings.TSBITRATE\")}K -streamid 0:${video_pid} -streamid 1:${audio_pid} -max_delay ${max_delay}K -max_interleave_delta ${max_interleave_delta}M -pcr_period ${pcr_period} -pat_period ${pat_period} -mpegts_service_id ${mpegts_service_id} -mpegts_original_network_id ${mpegts_original_network_id} -mpegts_transport_stream_id ${mpegts_transport_stream_id} -mpegts_pmt_start_pid ${mpegts_pmt_start_pid} -mpegts_start_pid ${mpegts_start_pid} -metadata service_provider=${service_provider} -metadata service_name=${global.get(\"device.callsign\")} -af aresample=async=1 \\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`);\n    msg.payload = strCMD.substring(1, strCMD.length-1);\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n// return;\nfunction escapeShellArg(arg) {\n    return `'${arg.replace(/'/g, `'\\\\''`)}'`;\n}",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4840,
-        "y": 1320,
-        "wires": [
-            [
-                "7daa019359e5db60",
-                "e32557c99c41cfd8"
-            ]
         ]
     },
     {
@@ -11154,7 +11078,7 @@
         "to": "",
         "reg": false,
         "x": 5760,
-        "y": 1580,
+        "y": 1140,
         "wires": [
             [
                 "cec2f56be1fccf51"
@@ -11182,7 +11106,7 @@
         "to": "",
         "reg": false,
         "x": 5760,
-        "y": 1620,
+        "y": 1200,
         "wires": [
             [
                 "89b95ad3b6453036"
@@ -11210,7 +11134,7 @@
         "to": "",
         "reg": false,
         "x": 5770,
-        "y": 1660,
+        "y": 1260,
         "wires": [
             [
                 "c5ceed661f8529ce"
@@ -11395,12 +11319,30 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3900,
+        "x": 3940,
         "y": 1260,
         "wires": [
             [
                 "181bc2bec72e1d2d"
             ]
         ]
+    },
+    {
+        "id": "f5a47dd605642e35",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 140,
+        "wires": []
     }
 ]
