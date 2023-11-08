@@ -6,7 +6,7 @@
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 
 ## Setup and use
-1. Download [latest relase](https://github.com/Psynosaur/DATV-Simple/releases/download/release-v2.2/DATV-Simple.zip) and extract to folder `DATV-Simple` and open in file explorer
+1. Download [latest release](https://github.com/Psynosaur/DATV-Simple/releases) and extract to folder `DATV-Simple` and open in file explorer
 
 2. setup mqtt broker in `pluto.json` file
    
@@ -38,11 +38,11 @@ If you want buy me a coffee:
   [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
 ## Thanks 
-Batch files in this project are from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
+Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/43f58192-bda8-46ee-b5a8-b5b300147a29)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/6718292b-fee6-44af-8273-f52b30c44cf1)
 
 
 ## Change the scaling settings for the app to accomodate 1080p monitors.
