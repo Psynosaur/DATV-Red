@@ -8,9 +8,7 @@
 ## Setup and use
 1. Download [latest relase](https://github.com/Psynosaur/DATV-Simple/releases/download/release-v2.2/DATV-Simple.zip) and extract to folder `DATV-Simple` and open in file explorer
 
-2. double click `DATV-Start.cmd`
-
-3. setup mqtt broker in `pluto.json` file
+2. setup mqtt broker in `pluto.json` file
    
    ```json
     {
@@ -25,10 +23,11 @@
       "payload": "ZS1SCI"
     }
    ```
+3. double click `DATV-Start.cmd`
 
-5. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+4. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
-6. Have fun
+5. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/24dcd240-e742-4776-a6a5-986730f174c4)
 
