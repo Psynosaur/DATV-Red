@@ -222,7 +222,7 @@
             fetch('/status')
             .then(res =>  res.text())
             .then(text => {
-                console.log(`Muted: ${text}`)
+                console.dir(text)
                 if(text === "0"){
                     /* we do not set the tune bar since you clicked on a active signal... */
                     return;
