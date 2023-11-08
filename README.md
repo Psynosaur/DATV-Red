@@ -14,13 +14,13 @@
     {
       "action": "connect",
       "broker": {
-        "broker": "192.168.2.1",
+        "broker": "192.168.2.1", /* IP address of pluto */
         "port": 1883,
         "username": "root",
         "password": "analog"
       },
       "topic" : "cmd/pluto/call",
-      "payload": "ZS1SCI"
+      "payload": "ZS1SCI" /* Your callsign */
     }
    ```
 3. double click `DATV-Start.cmd`
