@@ -33,7 +33,7 @@
 
 [Discord](https://discord.gg/szQKjRZvuZ) channel for latest developments. . . 
 
-If you want buy me a coffee:
+If you'd like to buy me a coffee ☕️☕️☕:
 
   [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
