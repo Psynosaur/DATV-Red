@@ -47,6 +47,8 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
 
 ## Change the scaling settings for the app to accomodate 1080p monitors.
 
+- go to [flow editor](http://127.0.0.1:1880/)
+
  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/10d683ec-f646-4d97-9545-08e60bdc5114)
  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/ffa637ad-ef4f-4cd2-84bc-50d3cb666540)
  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/4d631029-4853-4bc2-a96b-32aaacccc085) 
