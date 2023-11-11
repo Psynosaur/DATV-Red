@@ -31,8 +31,6 @@
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/24dcd240-e742-4776-a6a5-986730f174c4)
 
-[Discord](https://discord.gg/szQKjRZvuZ) channel for latest developments. . . 
-
 If you'd like to buy me a coffee ☕️☕️☕:
 
   [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
