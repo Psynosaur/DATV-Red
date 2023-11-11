@@ -14,26 +14,27 @@
     {
       "action": "connect",
       "broker": {
-        "broker": "192.168.2.1",
+        "broker": "192.168.2.1", /* IP address of pluto */
         "port": 1883,
         "username": "root",
         "password": "analog"
       },
       "topic" : "cmd/pluto/call",
-      "payload": "ZS1SCI"
+      "payload": "ZS1SCI" /* Your callsign */
     }
    ```
 3. double click `DATV-Start.cmd`
 
-4. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+4. Press the `set call` button to set your call sign and reboot pluto
+  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/59a106a8-2063-4f72-ae8d-886202121e3d)
 
-5. Have fun
+5. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+
+6. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/24dcd240-e742-4776-a6a5-986730f174c4)
 
-[Discord](https://discord.gg/szQKjRZvuZ) channel for latest developments. . . 
-
-If you want buy me a coffee:
+If you'd like to buy me a coffee ☕️☕️☕:
 
   [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
@@ -46,6 +47,8 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
 
 
 ## Change the scaling settings for the app to accomodate 1080p monitors.
+
+- go to [flow editor](http://127.0.0.1:1880/)
 
  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/10d683ec-f646-4d97-9545-08e60bdc5114)
  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/ffa637ad-ef4f-4cd2-84bc-50d3cb666540)
