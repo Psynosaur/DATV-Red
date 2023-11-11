@@ -1,1 +1,0 @@
-# nexe.ps1 -i npm\node_modules\node-red\red.js -o red -t windows --build

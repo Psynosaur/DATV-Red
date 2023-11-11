@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V2.4.1",
+        "label": "DATV Simple V2.4.2",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n   \r\n\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n\r\n\r\n\r\n",
         "env": []
     },
     {
@@ -17,21 +17,20 @@
             "fill": "#001f60"
         },
         "nodes": [
-            "644c4e9fd6d1aafc",
-            "33b1db5a2a8af09d",
-            "3729f57de4a75fbf",
             "0c72fe59acc5f30e",
-            "6650408d269637c4",
-            "0dc39dc2f82350ce",
-            "f5a47dd605642e35",
             "25874e1909171caa",
             "8d24e6025fe47ef5",
-            "cdc147736509f758"
+            "cdc147736509f758",
+            "a7dfa23e416d0533",
+            "140f70c9bf342365",
+            "2f35ec1420f48a0f",
+            "5a68f1d90ea138d2",
+            "ce9b5ccdb8569209"
         ],
-        "x": 34,
-        "y": 39,
+        "x": 54,
+        "y": 19,
         "w": 972,
-        "h": 182
+        "h": 202
     },
     {
         "id": "28611a179255d92b",
@@ -58,7 +57,7 @@
             "185cc616489b2615"
         ],
         "x": 34,
-        "y": 219,
+        "y": 259,
         "w": 1078,
         "h": 722
     },
@@ -81,12 +80,13 @@
             "a5d3ec26a3634e1e",
             "8c7733a45d32bf17",
             "4d60c65180806536",
+            "98580b7a29e56897",
             "cd7a771d4df1122f"
         ],
-        "x": 34,
-        "y": 2619,
+        "x": 1154,
+        "y": 479,
         "w": 692,
-        "h": 382
+        "h": 422
     },
     {
         "id": "92c95af69a0592d1",
@@ -121,8 +121,8 @@
             "517a7337244c67a7",
             "03deb776667356fc"
         ],
-        "x": 3234,
-        "y": 1979,
+        "x": 74,
+        "y": 2619,
         "w": 2372,
         "h": 362
     },
@@ -142,8 +142,8 @@
             "f6a666d0271a5d24",
             "63bd7ee216c6cf79"
         ],
-        "x": 4234,
-        "y": 979,
+        "x": 3214,
+        "y": 1959,
         "w": 1192,
         "h": 82
     },
@@ -163,8 +163,8 @@
             "e48b23e1d46a182a",
             "1b33b2ee0e91bf0a"
         ],
-        "x": 4234,
-        "y": 779,
+        "x": 3214,
+        "y": 1759,
         "w": 1192,
         "h": 82
     },
@@ -184,8 +184,8 @@
             "42fadc716a7bbdd3",
             "95edb2da87d8257d"
         ],
-        "x": 4234,
-        "y": 879,
+        "x": 3214,
+        "y": 1859,
         "w": 1192,
         "h": 82
     },
@@ -212,12 +212,14 @@
             "2d69c56629fd6ada",
             "3c7d7c35ead08295",
             "40fa6e863c8479b7",
-            "3d8ee5b781b696ce"
+            "3d8ee5b781b696ce",
+            "1a213daf8dd78831",
+            "6e36be08ede45d50"
         ],
-        "x": 4234,
-        "y": 519,
+        "x": 3214,
+        "y": 1479,
         "w": 1332,
-        "h": 222
+        "h": 282
     },
     {
         "id": "f6218c30fc4ec8b7",
@@ -237,8 +239,8 @@
             "92f5f62ed5cadc7c",
             "428a0fc47da7621b"
         ],
-        "x": 4234,
-        "y": 331.5,
+        "x": 3214,
+        "y": 1311.5,
         "w": 1192,
         "h": 149.5
     },
@@ -268,8 +270,8 @@
             "2e0709eeb3596e1a",
             "231152bfc003a87e"
         ],
-        "x": 4234,
-        "y": 59,
+        "x": 3214,
+        "y": 1039,
         "w": 1012,
         "h": 262
     },
@@ -337,7 +339,7 @@
             "6516226d49e7b99a"
         ],
         "x": 1154,
-        "y": 239,
+        "y": 259,
         "w": 732,
         "h": 202
     },
@@ -400,8 +402,8 @@
             "1827c9f76c07664e"
         ],
         "x": 1154,
-        "y": 39,
-        "w": 1112,
+        "y": 79,
+        "w": 1172,
         "h": 162
     },
     {
@@ -449,8 +451,8 @@
             "cfdd9fffb83031de",
             "de67b561ba5031e9"
         ],
-        "x": 4454,
-        "y": 1519,
+        "x": 3314,
+        "y": 619,
         "w": 592,
         "h": 402
     },
@@ -486,11 +488,13 @@
             "0d83df21a3badfd8",
             "ba28f83345465e97",
             "e7122ff60e30d850",
-            "bd7080b9d634eebf"
+            "bd7080b9d634eebf",
+            "dc1201bc61b55d34",
+            "de9023ef02fb7ae5"
         ],
         "x": 3314,
         "y": 291.5,
-        "w": 372,
+        "w": 532,
         "h": 157
     },
     {
@@ -520,8 +524,8 @@
             "e4fe047c88b9b919",
             "7fb0cafd2acd88b7"
         ],
-        "x": 3234,
-        "y": 1519,
+        "x": 2494,
+        "y": 2619,
         "w": 1192,
         "h": 329.5
     },
@@ -568,12 +572,11 @@
             "e733dc0c81143d51",
             "181bc2bec72e1d2d",
             "e5b0fa3224166063",
-            "0ca83149c55f1e84",
             "767df388fc1df0e3",
             "2bc31358161b2eb4"
         ],
-        "x": 3234,
-        "y": 1079,
+        "x": 3194,
+        "y": 2059,
         "w": 2052,
         "h": 402
     },
@@ -660,10 +663,12 @@
             "9cb8fc791809bfd9",
             "32e18f58d4f086f8",
             "1decf932a1bf2fcd",
-            "ba4a435e3fbcd377"
+            "ba4a435e3fbcd377",
+            "c45d59c4569dc4cc",
+            "a944ecbfc565c58b"
         ],
         "x": 34,
-        "y": 959,
+        "y": 999,
         "w": 1152,
         "h": 1622
     },
@@ -704,8 +709,8 @@
             "70cb26f62de94a5d",
             "93d8b2c69bdc7792"
         ],
-        "x": 1754,
-        "y": 879,
+        "x": 1734,
+        "y": 939,
         "w": 232,
         "h": 1582
     },
@@ -743,9 +748,9 @@
             "204d7697c1384266",
             "d233942edd1dc8df"
         ],
-        "x": 1354,
-        "y": 879,
-        "w": 372,
+        "x": 1314,
+        "y": 939,
+        "w": 412,
         "h": 1582
     },
     {
@@ -794,12 +799,56 @@
             "b1b6fc76c723e0f1",
             "7b06e3153449eb9a",
             "d533bf0f097fedc4",
-            "8a16f1f5708afd9e"
+            "8a16f1f5708afd9e",
+            "f7a31bdb75d1c530",
+            "5c31dbeab217c8e9"
         ],
-        "x": 2014,
-        "y": 879,
+        "x": 1994,
+        "y": 939,
         "w": 1152,
         "h": 1582
+    },
+    {
+        "id": "e318cfe9287a04d2",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "dvbs_gui_path",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "9dc824c56f4f3a2c",
+            "93f563206f98cde4",
+            "a53750444a663bac",
+            "8c34e9751735e69f",
+            "06596bd1203529e7"
+        ],
+        "x": 74,
+        "y": 3299,
+        "w": 1012,
+        "h": 82
+    },
+    {
+        "id": "c2b7b0fa41ef89a9",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "dvbs_gui_path",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "e4d49de5ef76b48c",
+            "973c10af4dbfb52e",
+            "ad88d2145d494f9b",
+            "01a78b3718cabe4e",
+            "ef1c0706f051616b"
+        ],
+        "x": 74,
+        "y": 3399,
+        "w": 1012,
+        "h": 82
     },
     {
         "id": "185cc616489b2615",
@@ -834,9 +883,28 @@
             "4781b40508c8aa40"
         ],
         "x": 74,
-        "y": 379,
+        "y": 419,
         "w": 1012,
         "h": 482
+    },
+    {
+        "id": "5c31dbeab217c8e9",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "pass mode bug fix",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "50c309ece9e67b71",
+            "0776d1539b28a948",
+            "f8b6ea291e46f876"
+        ],
+        "x": 2394,
+        "y": 2339,
+        "w": 652,
+        "h": 142
     },
     {
         "id": "9b3296db2e0c849f",
@@ -928,7 +996,7 @@
             }
         },
         "site": {
-            "name": "DATV-Simple V2.4.1",
+            "name": "DATV-Simple V2.4.2",
             "hideToolbar": "false",
             "allowSwipe": "true",
             "lockMenu": "false",
@@ -975,7 +1043,7 @@
         "tab": "3fcae860e82945fc",
         "order": 1,
         "disp": false,
-        "width": 21,
+        "width": "15",
         "collapse": false,
         "className": ""
     },
@@ -1022,35 +1090,6 @@
         "hidden": false
     },
     {
-        "id": "d2ba6f390d31ae4c",
-        "type": "ui_group",
-        "name": "RX",
-        "tab": "4cac2351dd0ee0d3",
-        "order": 2,
-        "disp": true,
-        "width": "12",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "84e1a77ae884007b",
-        "type": "ui_group",
-        "name": "TX",
-        "tab": "4cac2351dd0ee0d3",
-        "order": 1,
-        "disp": true,
-        "width": "18",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "4cac2351dd0ee0d3",
-        "type": "ui_tab",
-        "name": "Tab 3",
-        "icon": "dashboard",
-        "order": 3
-    },
-    {
         "id": "6140f866127cd620",
         "type": "ui_group",
         "name": "Rx buttons",
@@ -1060,12 +1099,6 @@
         "width": 16,
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "bff8eab5758dfec4",
-        "type": "websocket-listener",
-        "path": "/",
-        "wholemsg": "false"
     },
     {
         "id": "3e6a59708bbf6e6c",
@@ -1092,7 +1125,7 @@
         "type": "ui_group",
         "name": "Chat",
         "tab": "9b3296db2e0c849f",
-        "order": 10,
+        "order": 9,
         "disp": false,
         "width": "15",
         "collapse": false,
@@ -1119,56 +1152,6 @@
         "width": "13",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "b9bffb3cd2c084ad",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 6,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "50ed1ebafdae4490",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "efb38ee96ec62cca",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 10,
-        "width": 21,
-        "height": 1
-    },
-    {
-        "id": "73175ccad5bbdfba",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "e8adab232b1d4dce",
-        "order": 12,
-        "width": 18,
-        "height": 1
-    },
-    {
-        "id": "3cbb5a7675367ab2",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "bc7afc94660c6b76",
-        "order": 6,
-        "width": 1,
-        "height": 1
     },
     {
         "id": "32565fabbb076144",
@@ -1366,7 +1349,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1720,
+        "y": 1760,
         "wires": [
             [
                 "74fb79f38c7d1d72",
@@ -1393,7 +1376,7 @@
         "fontSize": "17",
         "color": "#ffffff",
         "x": 730,
-        "y": 1520,
+        "y": 1560,
         "wires": []
     },
     {
@@ -1411,7 +1394,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1480,
+        "y": 1520,
         "wires": [
             [
                 "babe629c1afb5e8b",
@@ -1438,7 +1421,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 710,
-        "y": 1760,
+        "y": 1800,
         "wires": []
     },
     {
@@ -1456,7 +1439,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1400,
+        "y": 1440,
         "wires": [
             [
                 "54cbda477035a37f"
@@ -1482,7 +1465,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 710,
-        "y": 1440,
+        "y": 1480,
         "wires": []
     },
     {
@@ -1500,7 +1483,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1640,
+        "y": 1680,
         "wires": [
             [
                 "54e338fa6a48fd5b"
@@ -1522,7 +1505,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1560,
+        "y": 1600,
         "wires": [
             [
                 "1cc9bf09772f06d3"
@@ -1544,7 +1527,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1240,
+        "y": 1280,
         "wires": [
             [
                 "e0f5c4a53f48610b",
@@ -1568,10 +1551,11 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1320,
+        "y": 1360,
         "wires": [
             [
-                "295347c7270ee5f9"
+                "295347c7270ee5f9",
+                "1969a0cddc042f2e"
             ]
         ]
     },
@@ -1589,7 +1573,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1720,
+        "y": 1760,
         "wires": [
             [
                 "f0c209e940860820"
@@ -1611,7 +1595,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             [
                 "b6d03834b636d44d",
@@ -1640,80 +1624,8 @@
         "fontSize": "1",
         "color": "#000000",
         "x": 710,
-        "y": 1840,
+        "y": 1880,
         "wires": []
-    },
-    {
-        "id": "644c4e9fd6d1aafc",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
-        "name": "",
-        "label": "Call name",
-        "tooltip": "",
-        "group": "bc7afc94660c6b76",
-        "order": 3,
-        "width": 3,
-        "height": 1,
-        "passthru": true,
-        "mode": "text",
-        "delay": "500",
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 760,
-        "y": 80,
-        "wires": [
-            [
-                "33b1db5a2a8af09d"
-            ]
-        ]
-    },
-    {
-        "id": "33b1db5a2a8af09d",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
-        "name": "",
-        "func": "let callsign = msg.payload\nglobal.set(\"cmdPath\", `cmd/pluto/${callsign}`)\nglobal.set(\"device.callsign\", callsign);\nglobal.set(\"call\", callsign);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 920,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3729f57de4a75fbf",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "device.callsign",
-        "payloadType": "global",
-        "x": 180,
-        "y": 80,
-        "wires": [
-            [
-                "0dc39dc2f82350ce"
-            ]
-        ]
     },
     {
         "id": "9cea687107707a6b",
@@ -1729,7 +1641,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1720,
+        "y": 1760,
         "wires": [
             [
                 "36a9e71117a34327"
@@ -1755,7 +1667,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 130,
-        "y": 1600,
+        "y": 1640,
         "wires": [
             [
                 "9cea687107707a6b",
@@ -1794,7 +1706,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1640,
+        "y": 1680,
         "wires": [
             [
                 "306b57e47411d35c"
@@ -1815,7 +1727,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 1320,
+        "y": 1360,
         "wires": [
             [
                 "d26972d34559fd63"
@@ -1836,7 +1748,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1400,
+        "y": 1440,
         "wires": [
             [
                 "d2b51c2f7d254def"
@@ -1857,7 +1769,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1240,
+        "y": 1280,
         "wires": [
             [
                 "9aa8ef50bbbe8e2d"
@@ -1878,7 +1790,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1480,
+        "y": 1520,
         "wires": [
             [
                 "45967ab8c3bd9a21"
@@ -1899,7 +1811,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1560,
+        "y": 1600,
         "wires": [
             [
                 "23773127332c2b1f"
@@ -1920,7 +1832,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             [
                 "b601d6596401a754"
@@ -1942,7 +1854,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1920,
+        "y": 1960,
         "wires": [
             [
                 "45ea934ddc9664a3",
@@ -1964,7 +1876,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1920,
+        "y": 1960,
         "wires": [
             [
                 "7a4a8d639646cff4"
@@ -1986,10 +1898,11 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 2000,
+        "y": 2040,
         "wires": [
             [
-                "12de00c45ec62557"
+                "12de00c45ec62557",
+                "ce96de0f7dba91c5"
             ]
         ]
     },
@@ -2007,7 +1920,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 2000,
+        "y": 2040,
         "wires": [
             [
                 "746af9f95f7438cd"
@@ -2029,10 +1942,11 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 2080,
+        "y": 2120,
         "wires": [
             [
-                "ae61c1e19f8634d0"
+                "ae61c1e19f8634d0",
+                "16a3685e614e0995"
             ]
         ]
     },
@@ -2050,7 +1964,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 2080,
+        "y": 2120,
         "wires": [
             [
                 "e2ddf0eaa1468069"
@@ -2065,7 +1979,7 @@
         "name": "",
         "group": "e8adab232b1d4dce",
         "order": 1,
-        "width": 21,
+        "width": "15",
         "height": 3,
         "label": "Queue",
         "chartType": "line",
@@ -2097,7 +2011,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 710,
-        "y": 1880,
+        "y": 1920,
         "wires": [
             []
         ]
@@ -2117,7 +2031,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 2160,
+        "y": 2200,
         "wires": [
             [
                 "8a6e91746db5e484"
@@ -2138,7 +2052,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 2160,
+        "y": 2200,
         "wires": [
             [
                 "4dc0d6bc0972a150"
@@ -2160,7 +2074,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 2240,
+        "y": 2280,
         "wires": [
             [
                 "31eb287a0ca0a45c"
@@ -2181,7 +2095,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 2240,
+        "y": 2280,
         "wires": [
             [
                 "56ad120991eb3c83"
@@ -2202,7 +2116,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 2320,
+        "y": 2360,
         "wires": [
             [
                 "76bed5f0ebc81a4c"
@@ -2224,7 +2138,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 2320,
+        "y": 2360,
         "wires": [
             [
                 "508bccc9de4506fc"
@@ -2246,10 +2160,12 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
-                "689b33376ddc8653"
+                "689b33376ddc8653",
+                "c25d1cacc8057d1d",
+                "bdfdc40f3409d5eb"
             ]
         ]
     },
@@ -2272,7 +2188,7 @@
         "fontSize": "17",
         "color": "#ffffff",
         "x": 720,
-        "y": 1200,
+        "y": 1240,
         "wires": []
     },
     {
@@ -2289,7 +2205,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 1160,
+        "y": 1200,
         "wires": [
             [
                 "25a924b7dc1d4576"
@@ -2310,7 +2226,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1080,
+        "y": 1120,
         "wires": [
             [
                 "347c8041af1a52e0"
@@ -2332,11 +2248,12 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 1080,
+        "y": 1120,
         "wires": [
             [
                 "92bdb03cfb54e314",
-                "4b23c7a819f12eb7"
+                "4b23c7a819f12eb7",
+                "462c1bee49073de7"
             ]
         ]
     },
@@ -2359,7 +2276,7 @@
         "fontSize": "17",
         "color": "#ffffff",
         "x": 710,
-        "y": 1120,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2376,7 +2293,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1400,
+        "y": 1440,
         "wires": [
             [
                 "18d422fe182d6186",
@@ -2388,6 +2305,7 @@
         "id": "295347c7270ee5f9",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "d320c7a134a3a36a",
         "name": "Global: fecmode",
         "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.fecmode\")){\n    global.set(\"device.tx.dvbs2.fecmode\", payload);\n    return msg;\n}",
@@ -2398,17 +2316,16 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 1320,
+        "y": 1360,
         "wires": [
-            [
-                "1969a0cddc042f2e"
-            ]
+            []
         ]
     },
     {
         "id": "689b33376ddc8653",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "d320c7a134a3a36a",
         "name": "Global: nco",
         "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.nco\")){\n    global.set(\"device.tx.nco\", payload );\n    msg.payload = payload;\n    return msg;\n}",
@@ -2419,18 +2336,16 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1160,
+        "y": 1200,
         "wires": [
-            [
-                "c25d1cacc8057d1d",
-                "bdfdc40f3409d5eb"
-            ]
+            []
         ]
     },
     {
         "id": "4b23c7a819f12eb7",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "d320c7a134a3a36a",
         "name": "Global: digitalgain",
         "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.digitalgain\")){\n    global.set(\"device.tx.dvbs2.digitalgain\", payload);\n    return msg;\n}\n",
@@ -2440,18 +2355,17 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 1080,
+        "x": 890,
+        "y": 1120,
         "wires": [
-            [
-                "462c1bee49073de7"
-            ]
+            []
         ]
     },
     {
         "id": "e0f5c4a53f48610b",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "d320c7a134a3a36a",
         "name": "Global: fec",
         "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.fec\")){\n    global.set(\"device.tx.dvbs2.fec\", payload);\n    global.set(\"settings.FEC\", payload);\n    // global.set(\"bitratechange\", true);\n    return msg;\n}\n",
@@ -2462,7 +2376,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1240,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -2481,7 +2395,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 1480,
+        "y": 1520,
         "wires": [
             [
                 "dffe1e50bcaeb0a5"
@@ -2502,7 +2416,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 1560,
+        "y": 1600,
         "wires": [
             [
                 "aa6d588a480f161c"
@@ -2523,7 +2437,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1640,
+        "y": 1680,
         "wires": [
             [
                 "2e677684d13ac6e0"
@@ -2534,9 +2448,10 @@
         "id": "45ea934ddc9664a3",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "d320c7a134a3a36a",
         "name": "Global: constel",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.constel\")){\n    global.set(\"device.tx.dvbs2.constel\", payload);\n    // global.set(\"deviceChange\", true);\n    // global.set(\"settings.MODE\", payload);\n    return msg;\n}",
+        "func": "let payload = msg.payload;\n\nif (payload !== global.get(\"device.tx.dvbs2.constel\")) {\n    global.set(\"device.tx.dvbs2.constel\", payload);\n    // global.set(\"deviceChange\", true);\n    // global.set(\"settings.MODE\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2544,7 +2459,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 1940,
+        "y": 1980,
         "wires": [
             []
         ]
@@ -2553,6 +2468,7 @@
         "id": "12de00c45ec62557",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "d320c7a134a3a36a",
         "name": "Global: frame",
         "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.frame\")){\n    global.set(\"device.tx.dvbs2.frame\", payload);\n    return msg;\n}\n",
@@ -2563,7 +2479,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 2000,
+        "y": 2040,
         "wires": [
             [
                 "ce96de0f7dba91c5"
@@ -2584,10 +2500,10 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 2080,
+        "y": 2120,
         "wires": [
             [
-                "16a3685e614e0995"
+                "c45d59c4569dc4cc"
             ]
         ]
     },
@@ -2605,7 +2521,7 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 2160,
+        "y": 2200,
         "wires": [
             [
                 "70cb26f62de94a5d"
@@ -2626,7 +2542,7 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 2240,
+        "y": 2280,
         "wires": [
             [
                 "93d8b2c69bdc7792"
@@ -2647,7 +2563,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 2320,
+        "y": 2360,
         "wires": [
             [
                 "33a0bcca85522580"
@@ -2669,7 +2585,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 2420,
+        "y": 2460,
         "wires": [
             [
                 "c8042db5402565df",
@@ -2684,7 +2600,7 @@
         "g": "d320c7a134a3a36a",
         "group": "bc7afc94660c6b76",
         "order": 5,
-        "width": 4,
+        "width": "3",
         "height": 1,
         "name": "",
         "label": "TS",
@@ -2696,7 +2612,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 710,
-        "y": 2460,
+        "y": 2500,
         "wires": []
     },
     {
@@ -2713,7 +2629,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 2420,
+        "y": 2460,
         "wires": [
             [
                 "b733d75a1c79f1a2"
@@ -2734,7 +2650,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 2420,
+        "y": 2460,
         "wires": [
             []
         ]
@@ -2753,7 +2669,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 1800,
+        "y": 1840,
         "wires": [
             [
                 "0813517cbc9b99f3"
@@ -2779,7 +2695,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 890,
-        "y": 1800,
+        "y": 1840,
         "wires": []
     },
     {
@@ -2796,7 +2712,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "4fd321bd9fa719f3"
@@ -2818,7 +2734,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 580,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "c4f36ff7105c2dd1"
@@ -2839,7 +2755,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "de949c9780005117"
@@ -2865,7 +2781,7 @@
         "fontSize": "17",
         "color": "#ffffff",
         "x": 730,
-        "y": 1040,
+        "y": 1080,
         "wires": []
     },
     {
@@ -2878,10 +2794,10 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "1",
+        "onceDelay": "0.1",
         "topic": "",
-        "x": 140,
-        "y": 160,
+        "x": 160,
+        "y": 100,
         "wires": [
             [
                 "8d24e6025fe47ef5"
@@ -2909,8 +2825,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1830,
-        "y": 1640,
+        "x": 1810,
+        "y": 1700,
         "wires": [
             [
                 "88c17ad9f892b06d"
@@ -2938,8 +2854,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1830,
-        "y": 1700,
+        "x": 1810,
+        "y": 1760,
         "wires": [
             [
                 "b6da9101dce07fd1"
@@ -2959,8 +2875,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 1640,
+        "x": 2100,
+        "y": 1700,
         "wires": [
             [
                 "37b18a222ae30d52"
@@ -2980,8 +2896,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 1700,
+        "x": 2100,
+        "y": 1760,
         "wires": [
             [
                 "be4a04a5a054f988",
@@ -3010,8 +2926,8 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1830,
-        "y": 2060,
+        "x": 1810,
+        "y": 2120,
         "wires": [
             [
                 "aa4a256618f7c4a6"
@@ -3039,8 +2955,8 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1830,
-        "y": 2000,
+        "x": 1810,
+        "y": 2060,
         "wires": [
             [
                 "af45e1bfc3e75ecb"
@@ -3060,8 +2976,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 2000,
+        "x": 2100,
+        "y": 2060,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3081,8 +2997,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2400,
-        "y": 2060,
+        "x": 2380,
+        "y": 2120,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3109,8 +3025,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "channel",
-        "x": 1840,
-        "y": 1820,
+        "x": 1820,
+        "y": 1880,
         "wires": [
             [
                 "807128449158f2eb"
@@ -3137,8 +3053,8 @@
         "max": "0",
         "step": "-0.25",
         "className": "",
-        "x": 1840,
-        "y": 1760,
+        "x": 1820,
+        "y": 1820,
         "wires": [
             [
                 "37b18a222ae30d52"
@@ -3191,8 +3107,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1830,
-        "y": 1940,
+        "x": 1810,
+        "y": 2000,
         "wires": [
             [
                 "edf4a8f5daf0b0ab"
@@ -3270,8 +3186,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1830,
-        "y": 1880,
+        "x": 1810,
+        "y": 1940,
         "wires": [
             [
                 "89b95ad3b6453036"
@@ -3298,8 +3214,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1830,
-        "y": 1520,
+        "x": 1810,
+        "y": 1580,
         "wires": [
             [
                 "cec2f56be1fccf51"
@@ -3337,8 +3253,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1840,
-        "y": 1580,
+        "x": 1820,
+        "y": 1640,
         "wires": [
             [
                 "152082051caa1d1d"
@@ -3358,8 +3274,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 1580,
+        "x": 2100,
+        "y": 1640,
         "wires": [
             [
                 "8a16f1f5708afd9e",
@@ -3380,8 +3296,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2510,
-        "y": 1680,
+        "x": 2490,
+        "y": 1740,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3401,8 +3317,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2110,
-        "y": 1520,
+        "x": 2090,
+        "y": 1580,
         "wires": [
             [
                 "8a16f1f5708afd9e",
@@ -3423,8 +3339,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 1880,
+        "x": 2110,
+        "y": 1940,
         "wires": [
             [
                 "8a16f1f5708afd9e",
@@ -3445,8 +3361,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 1820,
+        "x": 2110,
+        "y": 1880,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3466,12 +3382,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
-        "y": 1940,
+        "x": 2120,
+        "y": 2000,
         "wires": [
             [
-                "8a16f1f5708afd9e",
-                "cd7a771d4df1122f"
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -3516,8 +3431,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1830,
-        "y": 2120,
+        "x": 1810,
+        "y": 2180,
         "wires": [
             [
                 "c5ceed661f8529ce",
@@ -3531,18 +3446,19 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: Constellation",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"stop\", true);\nglobal.set(\"device.tx.dvbs2.constel\", payload);\nglobal.set(\"settings.MODE\", payload);\nmsg.topic = topic;\nmsg.payload = payload;\n// global.set(\"deviceChange\", true);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/constel`;\nglobal.set(\"stop\", true);\nglobal.set(\"device.tx.dvbs2.constel\", payload);\nglobal.set(\"settings.MODE\", payload);\nmsg.topic = topic;\nmsg.payload = payload;\n\nlet mode = global.get(\"device.tx.stream.mode\");\nif (mode === \"dvbs2-ts\") {\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    if ((payload === \"8psk\" || payload === \"16apsk\" || payload === \"32apsk\") && (fec === \"1/4\" || fec === \"1/3\" || fec === \"2/5\" || fec === \"1/2\")) {\n        msg.test = \"error\";\n    }\n    if ((payload === \"16apsk\" || payload === \"32apsk\") && (fec === \"1/4\" || fec === \"1/3\" || fec === \"2/5\" || fec === \"1/2\" || fec === \"3/5\")) {\n        msg.test = \"error\";\n    }\n    if ((payload === \"32apsk\") && (fec === \"1/4\" || fec === \"1/3\" || fec === \"2/5\" || fec === \"1/2\" || fec === \"3/5\" || fec === \"2/3\")) {\n        msg.test = \"error\";\n    }\n}\n\n// global.set(\"deviceChange\", true);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 2120,
+        "x": 2110,
+        "y": 2180,
         "wires": [
             [
-                "8a16f1f5708afd9e"
+                "8a16f1f5708afd9e",
+                "50c309ece9e67b71"
             ]
         ]
     },
@@ -3577,8 +3493,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1830,
-        "y": 2180,
+        "x": 1810,
+        "y": 2240,
         "wires": [
             [
                 "0c74362e749bcdc4",
@@ -3599,8 +3515,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2110,
-        "y": 2180,
+        "x": 2090,
+        "y": 2240,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3638,8 +3554,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1830,
-        "y": 2240,
+        "x": 1810,
+        "y": 2300,
         "wires": [
             [
                 "4a50af4869a33baa"
@@ -3659,8 +3575,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2110,
-        "y": 2240,
+        "x": 2090,
+        "y": 2300,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3680,8 +3596,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 1460,
+        "x": 2100,
+        "y": 1520,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3709,8 +3625,8 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1840,
-        "y": 1460,
+        "x": 1820,
+        "y": 1520,
         "wires": [
             [
                 "14e5a286770d3cd0"
@@ -3748,8 +3664,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1840,
-        "y": 2300,
+        "x": 1820,
+        "y": 2360,
         "wires": [
             [
                 "b1b6fc76c723e0f1"
@@ -3769,8 +3685,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 2300,
+        "x": 2110,
+        "y": 2360,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3808,8 +3724,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1870,
-        "y": 2360,
+        "x": 1850,
+        "y": 2420,
         "wires": [
             [
                 "7b06e3153449eb9a"
@@ -3829,8 +3745,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
-        "y": 2360,
+        "x": 2120,
+        "y": 2420,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3913,8 +3829,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1850,
-        "y": 2420,
+        "x": 1830,
+        "y": 2480,
         "wires": [
             [
                 "d533bf0f097fedc4"
@@ -3934,8 +3850,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2160,
-        "y": 2420,
+        "x": 2140,
+        "y": 2480,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -3962,8 +3878,8 @@
         "max": "3",
         "step": "0.01",
         "className": "",
-        "x": 1860,
-        "y": 1400,
+        "x": 1840,
+        "y": 1460,
         "wires": [
             [
                 "e91e846502f35c90"
@@ -3983,8 +3899,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2210,
-        "y": 1400,
+        "x": 2190,
+        "y": 1460,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -4012,8 +3928,8 @@
         "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3780,
-        "y": 1200,
+        "x": 3740,
+        "y": 2180,
         "wires": [
             [
                 "863b303484773cde"
@@ -4041,8 +3957,8 @@
         "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3780,
-        "y": 1240,
+        "x": 3740,
+        "y": 2220,
         "wires": [
             [
                 "863b303484773cde"
@@ -4070,8 +3986,8 @@
         "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3780,
-        "y": 1280,
+        "x": 3740,
+        "y": 2260,
         "wires": [
             [
                 "863b303484773cde"
@@ -4093,8 +4009,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 3010,
-        "y": 1340,
+        "x": 2990,
+        "y": 1400,
         "wires": []
     },
     {
@@ -4110,8 +4026,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3520,
-        "y": 1120,
+        "x": 3480,
+        "y": 2100,
         "wires": [
             [
                 "6bdd18a478266cdb",
@@ -4135,8 +4051,8 @@
         "scope": [
             "870adb347b148820"
         ],
-        "x": 3320,
-        "y": 1120,
+        "x": 3280,
+        "y": 2100,
         "wires": [
             [
                 "a6736166225853ff"
@@ -4164,10 +4080,10 @@
         "repeat": "0.1",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "x": 1450,
-        "y": 2040,
+        "y": 2100,
         "wires": [
             [
                 "f3b56d13d111f207"
@@ -4195,8 +4111,8 @@
         "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3780,
-        "y": 1320,
+        "x": 3740,
+        "y": 2300,
         "wires": [
             [
                 "863b303484773cde"
@@ -4224,8 +4140,8 @@
         "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3780,
-        "y": 1360,
+        "x": 3740,
+        "y": 2340,
         "wires": [
             [
                 "863b303484773cde"
@@ -4245,8 +4161,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2160,
-        "y": 2060,
+        "x": 2140,
+        "y": 2120,
         "wires": [
             [
                 "55bca069bdb08ee7"
@@ -4274,8 +4190,8 @@
         "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3780,
-        "y": 1160,
+        "x": 3740,
+        "y": 2140,
         "wires": [
             [
                 "863b303484773cde"
@@ -4303,8 +4219,8 @@
         "payloadType": "num",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3780,
-        "y": 1120,
+        "x": 3740,
+        "y": 2100,
         "wires": [
             [
                 "863b303484773cde"
@@ -4324,8 +4240,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4060,
-        "y": 1180,
+        "x": 4020,
+        "y": 2160,
         "wires": [
             [
                 "475f01a383d6b75e"
@@ -4353,8 +4269,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1830,
-        "y": 1280,
+        "x": 1810,
+        "y": 1340,
         "wires": [
             [
                 "5d8a44d8d3dfd931"
@@ -4382,8 +4298,8 @@
         "payloadType": "global",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1830,
-        "y": 1340,
+        "x": 1810,
+        "y": 1400,
         "wires": [
             [
                 "33dc958065cdada2"
@@ -4403,8 +4319,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
-        "y": 1280,
+        "x": 2120,
+        "y": 1340,
         "wires": [
             [
                 "e91e846502f35c90"
@@ -4424,8 +4340,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
-        "y": 1340,
+        "x": 2120,
+        "y": 1400,
         "wires": [
             [
                 "e91e846502f35c90"
@@ -4502,8 +4418,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 330,
-        "y": 2760,
+        "x": 1450,
+        "y": 620,
         "wires": [
             [
                 "6b0cd6504e13d973",
@@ -4518,8 +4434,8 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "stream.mode must be set, or else digital mode setting reboots pluto",
         "info": "",
-        "x": 460,
-        "y": 2660,
+        "x": 1580,
+        "y": 520,
         "wires": []
     },
     {
@@ -4542,8 +4458,8 @@
         "max": "50000",
         "step": "250",
         "className": "",
-        "x": 1830,
-        "y": 1100,
+        "x": 1810,
+        "y": 1160,
         "wires": [
             [
                 "5af92414e3f29873"
@@ -4563,8 +4479,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2290,
-        "y": 1220,
+        "x": 2270,
+        "y": 1280,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -4587,13 +4503,13 @@
         "color": "",
         "bgcolor": "{{p9_color}}",
         "className": "",
-        "icon": "",
+        "icon": "fa-play-circle-o fa-2x",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3800,
-        "y": 1440,
+        "x": 3760,
+        "y": 2420,
         "wires": [
             [
                 "932baa0f165b71a2"
@@ -4606,19 +4522,18 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "ffmpeg command builder",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let codec = global.get(\"settings.CODEC\")\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    let shapingString = `-minrate ${global.get(\"settings.VBITRATE\")}K -maxrate ${global.get(\"settings.VBITRATE\")}K`;\n    switch (codec) {\n        case 'libx264':\n            codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libvvenc':\n            let vvcBitRate = Math.round(videoBitrate * 990); // to Mega-ish\n            codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            break;\n        case 'libaom-av1':\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case 'h264_nvenc':\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;     \n    }\n    let offset = -0.650;\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = 10;\n    let rt_buffer = 300;\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = 150;\n    let max_delay = symbol_rate < 36 ? 2000: 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = 50;\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n    let str =\n        `-itsoffset ${offset} ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `-ar ${global.get(\"settings.ABITRATE\")}K ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +        \n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        `-acodec libfdk_aac ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts -muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-metadata service_name=${global.get(\"device.callsign\")} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let codec = global.get(\"settings.CODEC\")\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    let shapingString = `-minrate ${global.get(\"settings.VBITRATE\")}K -maxrate ${global.get(\"settings.VBITRATE\")}K`;\n    switch (codec) {\n        case 'libx264':\n            codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libvvenc':\n            let vvcBitRate = Math.round(videoBitrate * 990); // to Mega-ish\n            codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            break;\n        case 'libaom-av1':\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case 'h264_nvenc':\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;     \n    }\n    let offset = global.get(\"settings.audio_delay\");\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = global.get(\"settings.keyframe_interval\");\n    let max_delay = symbol_rate < 36 ? 2000: 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n    let str =\n        `-itsoffset ${offset} ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `-ar ${global.get(\"settings.ABITRATE\")}K ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +        \n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        `-acodec libfdk_aac ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts -muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-metadata service_name=${global.get(\"device.callsign\")} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n        // Loopback for local testing without txing...\n        // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4050,
-        "y": 1440,
+        "x": 4010,
+        "y": 2420,
         "wires": [
             [
-                "870adb347b148820",
-                "0ca83149c55f1e84"
+                "870adb347b148820"
             ]
         ]
     },
@@ -4643,8 +4558,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1830,
-        "y": 1160,
+        "x": 1810,
+        "y": 1220,
         "wires": [
             [
                 "68e079e44b9dd5c2"
@@ -4672,8 +4587,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1830,
-        "y": 1220,
+        "x": 1810,
+        "y": 1280,
         "wires": [
             [
                 "524de1980547eaea"
@@ -4693,8 +4608,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2110,
-        "y": 1160,
+        "x": 2090,
+        "y": 1220,
         "wires": [
             [
                 "5af92414e3f29873"
@@ -4714,8 +4629,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
-        "y": 1220,
+        "x": 2100,
+        "y": 1280,
         "wires": [
             [
                 "5af92414e3f29873"
@@ -4735,8 +4650,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "ffplay",
-        "x": 4070,
-        "y": 1740,
+        "x": 3330,
+        "y": 2840,
         "wires": [
             [],
             [],
@@ -4763,8 +4678,8 @@
         "topic": "",
         "payload": "ffmpeg_cmd",
         "payloadType": "global",
-        "x": 4040,
-        "y": 1260,
+        "x": 4000,
+        "y": 2240,
         "wires": [
             [
                 "6c2ed6b6c40e42db"
@@ -4781,7 +4696,7 @@
         "tooltip": "",
         "group": "e8adab232b1d4dce",
         "order": 2,
-        "width": 21,
+        "width": "15",
         "height": 1,
         "passthru": true,
         "mode": "text",
@@ -4790,8 +4705,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 4370,
-        "y": 1260,
+        "x": 4330,
+        "y": 2240,
         "wires": [
             [
                 "66d128c2a339f3cb"
@@ -4816,8 +4731,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
-        "x": 4870,
-        "y": 1300,
+        "x": 4830,
+        "y": 2280,
         "wires": []
     },
     {
@@ -4833,8 +4748,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4610,
-        "y": 1340,
+        "x": 4570,
+        "y": 2320,
         "wires": [
             [
                 "29f59051e6cbe148"
@@ -4854,8 +4769,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4600,
-        "y": 1260,
+        "x": 4560,
+        "y": 2240,
         "wires": [
             [
                 "29f59051e6cbe148"
@@ -4876,7 +4791,7 @@
         "finalize": "",
         "libs": [],
         "x": 1620,
-        "y": 1460,
+        "y": 1520,
         "wires": [
             [
                 "ddf60892397fbc68",
@@ -4898,12 +4813,12 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "device.tx.dvbs2.constel",
         "payloadType": "global",
         "x": 1500,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "f38c438a231661c6"
@@ -4924,7 +4839,7 @@
         "finalize": "",
         "libs": [],
         "x": 1610,
-        "y": 2040,
+        "y": 2100,
         "wires": [
             [
                 "508ff50f2a470219",
@@ -4945,8 +4860,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 490,
-        "y": 2960,
+        "x": 1490,
+        "y": 560,
         "wires": [
             [
                 "b800a9f107cb3124"
@@ -4966,8 +4881,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 2820,
+        "x": 1320,
+        "y": 860,
         "wires": [
             [
                 "30575829e5293823",
@@ -5010,7 +4925,7 @@
         "to": "",
         "reg": false,
         "x": 1610,
-        "y": 1200,
+        "y": 1260,
         "wires": [
             [
                 "bdfdc40f3409d5eb",
@@ -5039,7 +4954,7 @@
         "to": "",
         "reg": false,
         "x": 1640,
-        "y": 1300,
+        "y": 1360,
         "wires": [
             [
                 "92bdb03cfb54e314",
@@ -5068,7 +4983,7 @@
         "to": "",
         "reg": false,
         "x": 1650,
-        "y": 1520,
+        "y": 1580,
         "wires": [
             [
                 "cec2f56be1fccf51"
@@ -5096,7 +5011,7 @@
         "to": "",
         "reg": false,
         "x": 1640,
-        "y": 1580,
+        "y": 1640,
         "wires": [
             [
                 "152082051caa1d1d"
@@ -5124,7 +5039,7 @@
         "to": "",
         "reg": false,
         "x": 1650,
-        "y": 1760,
+        "y": 1820,
         "wires": [
             [
                 "18d422fe182d6186",
@@ -5154,7 +5069,7 @@
         "to": "",
         "reg": false,
         "x": 1640,
-        "y": 1820,
+        "y": 1880,
         "wires": [
             [
                 "dffe1e50bcaeb0a5",
@@ -5183,7 +5098,7 @@
         "to": "",
         "reg": false,
         "x": 1640,
-        "y": 2120,
+        "y": 2180,
         "wires": [
             [
                 "f38c438a231661c6",
@@ -5212,7 +5127,7 @@
         "to": "",
         "reg": false,
         "x": 1650,
-        "y": 2180,
+        "y": 2240,
         "wires": [
             [
                 "ce96de0f7dba91c5",
@@ -5241,7 +5156,7 @@
         "to": "",
         "reg": false,
         "x": 1650,
-        "y": 2240,
+        "y": 2300,
         "wires": [
             [
                 "16a3685e614e0995",
@@ -5270,7 +5185,7 @@
         "to": "",
         "reg": false,
         "x": 1630,
-        "y": 2300,
+        "y": 2360,
         "wires": [
             [
                 "70cb26f62de94a5d",
@@ -5299,7 +5214,7 @@
         "to": "",
         "reg": false,
         "x": 1620,
-        "y": 2360,
+        "y": 2420,
         "wires": [
             [
                 "93d8b2c69bdc7792",
@@ -5328,7 +5243,7 @@
         "to": "",
         "reg": false,
         "x": 1640,
-        "y": 2420,
+        "y": 2480,
         "wires": [
             [
                 "33a0bcca85522580",
@@ -5357,7 +5272,7 @@
         "to": "",
         "reg": false,
         "x": 1620,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [
                 "7f859a7a7ee27404",
@@ -5495,13 +5410,13 @@
         "color": "",
         "bgcolor": "Darkred",
         "className": "",
-        "icon": "",
+        "icon": "fa-stop-circle-o fa-2x",
         "payload": "1",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3560,
-        "y": 1560,
+        "x": 2820,
+        "y": 2660,
         "wires": [
             [
                 "aa4a256618f7c4a6",
@@ -5522,8 +5437,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill ffmpeg",
-        "x": 4080,
-        "y": 1620,
+        "x": 3340,
+        "y": 2720,
         "wires": [
             [],
             [],
@@ -5543,8 +5458,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Kill PID",
-        "x": 4080,
-        "y": 1680,
+        "x": 3340,
+        "y": 2780,
         "wires": [
             [],
             [],
@@ -5558,8 +5473,8 @@
         "g": "72ddf00d98862ef3",
         "name": "Process kill commands would differ on Linux",
         "info": "",
-        "x": 4190,
-        "y": 1560,
+        "x": 3450,
+        "y": 2660,
         "wires": []
     },
     {
@@ -5575,8 +5490,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3840,
-        "y": 1620,
+        "x": 3100,
+        "y": 2720,
         "wires": [
             [
                 "c4c1592e68a08ac2",
@@ -5603,8 +5518,8 @@
         "topic": "",
         "payload": "pid",
         "payloadType": "global",
-        "x": 3350,
-        "y": 1560,
+        "x": 2610,
+        "y": 2660,
         "wires": [
             [
                 "c4c1592e68a08ac2"
@@ -5624,8 +5539,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3680,
-        "y": 1720,
+        "x": 2940,
+        "y": 2820,
         "wires": [
             [
                 "aa4a256618f7c4a6",
@@ -5651,8 +5566,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 3380,
-        "y": 1720,
+        "x": 2640,
+        "y": 2820,
         "wires": [
             [
                 "f79b05ded58d1157"
@@ -5680,7 +5595,7 @@
         "to": "",
         "reg": false,
         "x": 1650,
-        "y": 1880,
+        "y": 1940,
         "wires": [
             [
                 "aa6d588a480f161c",
@@ -5694,15 +5609,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Pass to Pluto",
-        "func": "let payload = msg.payload\nlet topic = \"cmd/pluto/\" + global.get(\"call\")+ \"/tx/dvbs2/tssourceaddress\"\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.tssourceaddress\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload\nlet topic =  `${global.get(\"cmdPath\")}/tx/dvbs2/tssourceaddress`;\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.tssourceaddress\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2110,
-        "y": 1040,
+        "x": 2090,
+        "y": 1100,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -5728,8 +5643,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1840,
-        "y": 1040,
+        "x": 1820,
+        "y": 1100,
         "wires": [
             [
                 "7f859a7a7ee27404"
@@ -5749,11 +5664,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 2700,
+        "x": 1710,
+        "y": 560,
         "wires": [
             [
-                "35c6cd1a805aeca5"
+                "35c6cd1a805aeca5",
+                "98580b7a29e56897"
             ]
         ]
     },
@@ -5778,7 +5694,7 @@
         "to": "",
         "reg": false,
         "x": 1620,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "2e677684d13ac6e0",
@@ -5813,8 +5729,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 2740,
+        "x": 1700,
+        "y": 620,
         "wires": [
             [
                 "55bca069bdb08ee7"
@@ -5839,8 +5755,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "str",
-        "x": 130,
-        "y": 2700,
+        "x": 1250,
+        "y": 560,
         "wires": [
             [
                 "6b0cd6504e13d973",
@@ -5867,8 +5783,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1840,
-        "y": 980,
+        "x": 1820,
+        "y": 1040,
         "wires": [
             [
                 "d57c9c3c32e5a58b"
@@ -5888,8 +5804,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 980,
+        "x": 2110,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -5915,7 +5831,7 @@
         "to": "",
         "reg": false,
         "x": 1640,
-        "y": 980,
+        "y": 1040,
         "wires": [
             [
                 "dc1c3fa4fcdb0856"
@@ -5941,8 +5857,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1840,
-        "y": 920,
+        "x": 1820,
+        "y": 980,
         "wires": [
             [
                 "1b201451fae7fae6"
@@ -5970,7 +5886,7 @@
         "to": "",
         "reg": false,
         "x": 1640,
-        "y": 920,
+        "y": 980,
         "wires": [
             [
                 "a010bf6559579ac1"
@@ -5990,8 +5906,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 920,
+        "x": 2110,
+        "y": 980,
         "wires": [
             []
         ]
@@ -6014,8 +5930,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2730,
-        "y": 920,
+        "x": 2710,
+        "y": 980,
         "wires": []
     },
     {
@@ -6031,8 +5947,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2370,
-        "y": 920,
+        "x": 2350,
+        "y": 980,
         "wires": [
             [
                 "8a16f1f5708afd9e",
@@ -6052,8 +5968,8 @@
         "constant": "1000",
         "round": true,
         "decimals": "2",
-        "x": 2560,
-        "y": 920,
+        "x": 2540,
+        "y": 980,
         "wires": [
             [
                 "645cda7b921399b2"
@@ -6156,7 +6072,7 @@
             "347c8041af1a52e0"
         ],
         "x": 1240,
-        "y": 280,
+        "y": 300,
         "wires": [
             [
                 "b2786302ea5b87d8"
@@ -6177,7 +6093,7 @@
         "finalize": "",
         "libs": [],
         "x": 1430,
-        "y": 280,
+        "y": 300,
         "wires": [
             [
                 "8105dd1d410bdd4b"
@@ -6206,7 +6122,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1610,
-        "y": 280,
+        "y": 300,
         "wires": [
             []
         ]
@@ -6230,7 +6146,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 1790,
-        "y": 280,
+        "y": 300,
         "wires": []
     },
     {
@@ -6252,7 +6168,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1530,
-        "y": 340,
+        "y": 360,
         "wires": []
     },
     {
@@ -6274,7 +6190,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1780,
-        "y": 400,
+        "y": 420,
         "wires": []
     },
     {
@@ -6296,7 +6212,7 @@
         "payload": "settings.VBITRATE",
         "payloadType": "global",
         "x": 1320,
-        "y": 340,
+        "y": 360,
         "wires": [
             [
                 "23f54550ba5b6a79"
@@ -6322,7 +6238,7 @@
         "payload": "device.tx.dvbs2.ts.bitrate",
         "payloadType": "global",
         "x": 1330,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "8d58e07463dad267"
@@ -7131,48 +7047,6 @@
         ]
     },
     {
-        "id": "6650408d269637c4",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
-        "name": "set our callsign",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.callsign;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 80,
-        "wires": [
-            [
-                "644c4e9fd6d1aafc"
-            ]
-        ]
-    },
-    {
-        "id": "0dc39dc2f82350ce",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
-        "name": "",
-        "filename": "device.json",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 390,
-        "y": 80,
-        "wires": [
-            [
-                "6650408d269637c4"
-            ]
-        ]
-    },
-    {
         "id": "762e2c70acd9ebe0",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
@@ -7185,8 +7059,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2450,
-        "y": 1580,
+        "x": 2430,
+        "y": 1640,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -7212,13 +7086,14 @@
         "fontSize": "",
         "color": "#000000",
         "x": 710,
-        "y": 1280,
+        "y": 1320,
         "wires": []
     },
     {
         "id": "b1fb472a0a5e24a7",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "44bb8f59b40e58cf",
         "name": "fixed fecmode setter",
         "func": "let topic = `${global.get(\"cmdPath\")}/tx/dvbs2/fecmode`;\nmsg.topic = topic\nmsg.payload = \"fixed\";\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.fecmode\", \"fixed\");\nreturn msg;\n",
@@ -7228,8 +7103,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2320,
-        "y": 1520,
+        "x": 2360,
+        "y": 1580,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -7254,8 +7129,8 @@
         "topic": "",
         "payload": "state_color",
         "payloadType": "global",
-        "x": 160,
-        "y": 2760,
+        "x": 1280,
+        "y": 620,
         "wires": [
             [
                 "7d6077cea86f2378"
@@ -7282,8 +7157,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4520,
-        "y": 100,
+        "x": 3500,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -7306,8 +7181,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 4330,
-        "y": 100,
+        "x": 3310,
+        "y": 1080,
         "wires": [
             [
                 "40caf32a1fc66903"
@@ -7332,8 +7207,8 @@
         "topic": "",
         "payload": "[]",
         "payloadType": "json",
-        "x": 4330,
-        "y": 160,
+        "x": 3310,
+        "y": 1140,
         "wires": [
             [
                 "7aa0b41ed418f215"
@@ -7360,8 +7235,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4540,
-        "y": 160,
+        "x": 3520,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -7384,8 +7259,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 4350,
-        "y": 220,
+        "x": 3330,
+        "y": 1200,
         "wires": [
             [
                 "cffbb4b1eb45b8da"
@@ -7412,8 +7287,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4540,
-        "y": 220,
+        "x": 3520,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -7431,8 +7306,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4720,
-        "y": 280,
+        "x": 3700,
+        "y": 1260,
         "wires": [
             [
                 "dffe1e50bcaeb0a5",
@@ -7452,8 +7327,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 4840,
-        "y": 220,
+        "x": 3820,
+        "y": 1200,
         "wires": [
             [
                 "231152bfc003a87e"
@@ -7473,8 +7348,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5010,
-        "y": 280,
+        "x": 3990,
+        "y": 1260,
         "wires": [
             [
                 "fca0dc49e0dbc8c8"
@@ -7499,8 +7374,8 @@
         "topic": "",
         "payload": "tune_done",
         "payloadType": "global",
-        "x": 4400,
-        "y": 280,
+        "x": 3380,
+        "y": 1260,
         "wires": [
             [
                 "538b8437c0ff15ad"
@@ -7525,8 +7400,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 4710,
-        "y": 100,
+        "x": 3690,
+        "y": 1080,
         "wires": [
             [
                 "6c953890d626accb"
@@ -7546,8 +7421,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 4880,
-        "y": 100,
+        "x": 3860,
+        "y": 1080,
         "wires": [
             [
                 "09f981f156e98728"
@@ -7567,8 +7442,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5100,
-        "y": 100,
+        "x": 4080,
+        "y": 1080,
         "wires": [
             [
                 "dffe1e50bcaeb0a5"
@@ -7591,8 +7466,8 @@
         "className": "",
         "topic": "",
         "name": "Channel calibration complete!",
-        "x": 5090,
-        "y": 160,
+        "x": 4070,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -7617,8 +7492,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4820,
-        "y": 160,
+        "x": 3800,
+        "y": 1140,
         "wires": [
             [
                 "2e0709eeb3596e1a"
@@ -7638,8 +7513,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4980,
-        "y": 600,
+        "x": 3960,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -7662,8 +7537,8 @@
         "topic": "",
         "payload": "[]",
         "payloadType": "json",
-        "x": 4600,
-        "y": 700,
+        "x": 3580,
+        "y": 1680,
         "wires": [
             [
                 "52589d675ecb5bd3",
@@ -7691,8 +7566,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4790,
-        "y": 700,
+        "x": 3770,
+        "y": 1680,
         "wires": [
             []
         ]
@@ -7710,8 +7585,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "find devices",
-        "x": 4750,
-        "y": 600,
+        "x": 3730,
+        "y": 1580,
         "wires": [
             [],
             [
@@ -7743,8 +7618,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 4330,
-        "y": 620,
+        "x": 3310,
+        "y": 1600,
         "wires": [
             [
                 "3c7d7c35ead08295"
@@ -7759,20 +7634,26 @@
         "name": "",
         "label": "Audio Device",
         "tooltip": "",
-        "place": "Select option",
+        "place": "",
         "group": "e8adab232b1d4dce",
         "order": 13,
-        "width": 21,
+        "width": "15",
         "height": 1,
         "passthru": false,
         "multiple": false,
-        "options": [],
+        "options": [
+            {
+                "label": "",
+                "value": "{{msg.payload}}",
+                "type": "str"
+            }
+        ],
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 5230,
-        "y": 600,
+        "x": 4210,
+        "y": 1580,
         "wires": [
             [
                 "d5144c0538d61e55"
@@ -7792,8 +7673,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4980,
-        "y": 660,
+        "x": 3960,
+        "y": 1640,
         "wires": [
             [
                 "92680e051846903d",
@@ -7812,7 +7693,7 @@
         "place": "Select option",
         "group": "e8adab232b1d4dce",
         "order": 14,
-        "width": 21,
+        "width": "15",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -7821,8 +7702,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 5230,
-        "y": 680,
+        "x": 4210,
+        "y": 1660,
         "wires": [
             [
                 "6cdbc7e33d7543c1"
@@ -7856,8 +7737,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5460,
-        "y": 600,
+        "x": 4440,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -7889,8 +7770,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5460,
-        "y": 680,
+        "x": 4440,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -7914,8 +7795,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 5030,
-        "y": 820,
+        "x": 4010,
+        "y": 1800,
         "wires": [
             [
                 "1b33b2ee0e91bf0a"
@@ -7935,8 +7816,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5330,
-        "y": 820,
+        "x": 4310,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -7954,8 +7835,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4780,
-        "y": 820,
+        "x": 3760,
+        "y": 1800,
         "wires": [
             [
                 "e48b23e1d46a182a"
@@ -7975,8 +7856,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 4550,
-        "y": 820,
+        "x": 3530,
+        "y": 1800,
         "wires": [
             [
                 "3b2bfc1de615d1c2"
@@ -8001,8 +7882,8 @@
         "topic": "",
         "payload": "device.rx.tsip",
         "payloadType": "global",
-        "x": 4330,
-        "y": 820,
+        "x": 3310,
+        "y": 1800,
         "wires": [
             [
                 "d0d8193cbbe6f9f6"
@@ -8022,8 +7903,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3620,
-        "y": 1780,
+        "x": 2880,
+        "y": 2880,
         "wires": [
             [
                 "023820f309b020da"
@@ -8049,8 +7930,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 5050,
-        "y": 920,
+        "x": 4030,
+        "y": 1900,
         "wires": [
             [
                 "95edb2da87d8257d"
@@ -8070,8 +7951,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5330,
-        "y": 920,
+        "x": 4310,
+        "y": 1900,
         "wires": [
             []
         ]
@@ -8089,8 +7970,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4800,
-        "y": 920,
+        "x": 3780,
+        "y": 1900,
         "wires": [
             [
                 "42fadc716a7bbdd3"
@@ -8110,8 +7991,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 4550,
-        "y": 920,
+        "x": 3530,
+        "y": 1900,
         "wires": [
             [
                 "f410cc2d0716c94e"
@@ -8136,8 +8017,8 @@
         "topic": "",
         "payload": "device.rx.configIP",
         "payloadType": "global",
-        "x": 4350,
-        "y": 920,
+        "x": 3330,
+        "y": 1900,
         "wires": [
             [
                 "1c92b6bf73c98823"
@@ -8157,8 +8038,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "kill ffplay",
-        "x": 4080,
-        "y": 1800,
+        "x": 3340,
+        "y": 2900,
         "wires": [
             [],
             [],
@@ -8185,8 +8066,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 2,
-        "x": 3350,
-        "y": 1800,
+        "x": 2610,
+        "y": 2900,
         "wires": [
             [
                 "918410b673d9453b"
@@ -8209,8 +8090,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Powershell to check if minitioune is running",
-        "x": 3850,
-        "y": 2120,
+        "x": 690,
+        "y": 2760,
         "wires": [
             [
                 "8c74bea29b3244b0"
@@ -8242,8 +8123,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 4290,
-        "y": 2120,
+        "x": 1130,
+        "y": 2760,
         "wires": [
             [
                 "517a7337244c67a7"
@@ -8269,8 +8150,8 @@
         "className": "",
         "topic": "",
         "name": "Minitiouner isn't running, open?",
-        "x": 4190,
-        "y": 2300,
+        "x": 1030,
+        "y": 2940,
         "wires": [
             [
                 "3a1ea47d1bb87edc"
@@ -8297,8 +8178,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3920,
-        "y": 2300,
+        "x": 760,
+        "y": 2940,
         "wires": [
             [
                 "d7eb35aa7c9a4908"
@@ -8324,8 +8205,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 5020,
-        "y": 1020,
+        "x": 4000,
+        "y": 2000,
         "wires": [
             [
                 "fa64203cbbfc748d"
@@ -8345,8 +8226,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5330,
-        "y": 1020,
+        "x": 4310,
+        "y": 2000,
         "wires": [
             []
         ]
@@ -8364,8 +8245,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4760,
-        "y": 1020,
+        "x": 3740,
+        "y": 2000,
         "wires": [
             [
                 "f59601c8ef54fb30"
@@ -8385,8 +8266,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 4550,
-        "y": 1020,
+        "x": 3530,
+        "y": 2000,
         "wires": [
             [
                 "9077d20ca65ab2fd"
@@ -8411,8 +8292,8 @@
         "topic": "",
         "payload": "device.minitioune_path",
         "payloadType": "global",
-        "x": 4360,
-        "y": 1020,
+        "x": 3340,
+        "y": 2000,
         "wires": [
             [
                 "f6a666d0271a5d24"
@@ -8432,8 +8313,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Open Minitiouner",
-        "x": 4910,
-        "y": 2200,
+        "x": 1750,
+        "y": 2840,
         "wires": [
             [],
             [],
@@ -8462,8 +8343,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4670,
-        "y": 2300,
+        "x": 1510,
+        "y": 2940,
         "wires": [
             [
                 "25f28cc77302135e",
@@ -8489,8 +8370,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 4460,
-        "y": 2300,
+        "x": 1300,
+        "y": 2940,
         "wires": [
             [
                 "274b304d8404d31e"
@@ -8515,8 +8396,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 2,
-        "x": 4960,
-        "y": 2300,
+        "x": 1800,
+        "y": 2940,
         "wires": [
             [
                 "34a5dcd51ab8d855"
@@ -8539,8 +8420,8 @@
         "outport": "",
         "base64": false,
         "multicast": "false",
-        "x": 5530,
-        "y": 2300,
+        "x": 2370,
+        "y": 2940,
         "wires": []
     },
     {
@@ -8556,8 +8437,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5280,
-        "y": 2300,
+        "x": 2120,
+        "y": 2940,
         "wires": [
             [
                 "748c39ac026e286f"
@@ -8578,8 +8459,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 5280,
-        "y": 380,
+        "x": 4260,
+        "y": 1360,
         "wires": []
     },
     {
@@ -8595,8 +8476,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5080,
-        "y": 380,
+        "x": 4060,
+        "y": 1360,
         "wires": [
             [
                 "428a0fc47da7621b",
@@ -8617,8 +8498,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4860,
-        "y": 380,
+        "x": 3840,
+        "y": 1360,
         "wires": [
             [
                 "a773a2941ec99d3d"
@@ -8641,8 +8522,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 5310,
-        "y": 440,
+        "x": 4290,
+        "y": 1420,
         "wires": []
     },
     {
@@ -8658,8 +8539,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "ffprobe",
-        "x": 4630,
-        "y": 380,
+        "x": 3610,
+        "y": 1360,
         "wires": [
             [
                 "b61cc3d9e4fb5593"
@@ -8681,8 +8562,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4500,
-        "y": 380,
+        "x": 3480,
+        "y": 1360,
         "wires": [
             [
                 "de0df3db418f176f"
@@ -8710,8 +8591,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 4330,
-        "y": 380,
+        "x": 3310,
+        "y": 1360,
         "wires": [
             [
                 "ef4d188e14a5bed7"
@@ -8725,8 +8606,8 @@
         "g": "92c95af69a0592d1",
         "name": "if our spawned minitiouner dies, kill ffplay",
         "info": "",
-        "x": 4920,
-        "y": 2120,
+        "x": 1760,
+        "y": 2760,
         "wires": []
     },
     {
@@ -8748,8 +8629,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3950,
-        "y": 2200,
+        "x": 790,
+        "y": 2840,
         "wires": [
             [
                 "cdb49e4080a5ecb2"
@@ -8775,8 +8656,8 @@
         "className": "",
         "topic": "",
         "name": "check path",
-        "x": 4490,
-        "y": 2200,
+        "x": 1330,
+        "y": 2840,
         "wires": [
             []
         ]
@@ -8801,8 +8682,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4280,
-        "y": 2200,
+        "x": 1120,
+        "y": 2840,
         "wires": [
             [
                 "048ae9d864757a44"
@@ -8827,8 +8708,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 4560,
-        "y": 2080,
+        "x": 1400,
+        "y": 2720,
         "wires": [
             [
                 "6e64d146147821e7"
@@ -8853,8 +8734,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 5240,
-        "y": 2180,
+        "x": 2080,
+        "y": 2820,
         "wires": [
             [
                 "378dce373fcfc379"
@@ -8888,8 +8769,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 4760,
-        "y": 1560,
+        "x": 3620,
+        "y": 660,
         "wires": [
             [
                 "4823c6eed9e03e46"
@@ -8909,8 +8790,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4940,
-        "y": 1560,
+        "x": 3800,
+        "y": 660,
         "wires": [
             []
         ]
@@ -8942,8 +8823,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 4770,
-        "y": 1640,
+        "x": 3630,
+        "y": 740,
         "wires": [
             [
                 "c99bca3dafb85e2c"
@@ -8963,8 +8844,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4950,
-        "y": 1640,
+        "x": 3810,
+        "y": 740,
         "wires": [
             []
         ]
@@ -9040,8 +8921,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4760,
-        "y": 1720,
+        "x": 3620,
+        "y": 820,
         "wires": [
             [
                 "ade9869b5330a585"
@@ -9061,8 +8942,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4940,
-        "y": 1720,
+        "x": 3800,
+        "y": 820,
         "wires": [
             []
         ]
@@ -9085,8 +8966,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_size",
         "payloadType": "global",
-        "x": 4570,
-        "y": 1720,
+        "x": 3430,
+        "y": 820,
         "wires": [
             [
                 "0b68cbbed95acffe"
@@ -9106,8 +8987,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4950,
-        "y": 1800,
+        "x": 3810,
+        "y": 900,
         "wires": [
             []
         ]
@@ -9130,8 +9011,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_volume",
         "payloadType": "global",
-        "x": 4580,
-        "y": 1800,
+        "x": 3440,
+        "y": 900,
         "wires": [
             [
                 "a7b99958c4999cf0"
@@ -9158,8 +9039,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 4780,
-        "y": 1800,
+        "x": 3640,
+        "y": 900,
         "wires": [
             [
                 "17d14c187e03e78d"
@@ -9184,8 +9065,8 @@
         "topic": "",
         "payload": "device.rx.ffplay",
         "payloadType": "global",
-        "x": 4570,
-        "y": 1560,
+        "x": 3430,
+        "y": 660,
         "wires": [
             [
                 "0566516b8c2f5f60"
@@ -9210,8 +9091,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_ontop",
         "payloadType": "global",
-        "x": 4570,
-        "y": 1640,
+        "x": 3430,
+        "y": 740,
         "wires": [
             [
                 "e29b0f596d18b958"
@@ -9232,8 +9113,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3500,
-        "y": 2300,
+        "x": 340,
+        "y": 2940,
         "wires": [
             [
                 "f5b8169559eb4b73"
@@ -9254,8 +9135,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3620,
-        "y": 2200,
+        "x": 460,
+        "y": 2840,
         "wires": []
     },
     {
@@ -9271,8 +9152,8 @@
         "multicast": "true",
         "group": "232.0.0.11",
         "datatype": "utf8",
-        "x": 3350,
-        "y": 2200,
+        "x": 190,
+        "y": 2840,
         "wires": [
             [
                 "f5b8169559eb4b73"
@@ -9298,7 +9179,7 @@
         "payload": "bitratechange",
         "payloadType": "global",
         "x": 1310,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "ac482a3670a2a148"
@@ -9311,7 +9192,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1473030260740438",
         "name": "Calculate bitrate function",
-        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let codec = global.get(\"settings.CODEC\");\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n\n    if (sr > 20 && sr < 36)\n        videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    if (sr > 35 && sr < 67)\n        videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    if (sr > 66 && sr < 126)\n        videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    if (sr > 125 && sr < 251)\n        videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    if (sr > 250 && sr < 334)\n        videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    if (sr > 333 && sr < 501)\n        videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    if (sr > 500 && sr < 1001)\n        videoBitRate = (TSBitRate * 0.87) - audioBitRate;\n    if (sr > 1000 && sr < 1501)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    if (sr > 1500 && sr < 3001)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = (videoBitRate * 0.80);\n            if (fec === \"1/3\") videoBitRate = (videoBitRate * 0.87);\n            if (fec === \"2/5\") videoBitRate = (videoBitRate * 0.91);\n            if (fec === \"1/2\") videoBitRate = (videoBitRate * 0.94);\n            if (fec === \"3/5\") videoBitRate = (videoBitRate * 0.96);\n            if (fec === \"2/3\") videoBitRate = (videoBitRate * 0.98);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.02;\n            break;\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.03;\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.04;\n            break;\n    }\n    // if (codec === \"libvvenc\") videoBitRate = videoBitRate * 0.95;   \n    global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    global.set(\"settings.VBITRATE\", videoBitRate.toFixed(2));\n    return msg;\n}\n",
+        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let codec = global.get(\"settings.CODEC\");\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n\n    if (sr > 20 && sr < 36)\n        videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    if (sr > 35 && sr < 67)\n        videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    if (sr > 66 && sr < 126)\n        videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    if (sr > 125 && sr < 251)\n        videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    if (sr > 250 && sr < 334)\n        videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    if (sr > 333 && sr < 501)\n        videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    if (sr > 500 && sr < 1001)\n        videoBitRate = (TSBitRate * 0.87) - audioBitRate;\n    if (sr > 1000 && sr < 1501)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    if (sr > 1500 && sr < 3001)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = (videoBitRate * 0.80);\n            if (fec === \"1/3\") videoBitRate = (videoBitRate * 0.87);\n            if (fec === \"2/5\") videoBitRate = (videoBitRate * 0.91);\n            if (fec === \"1/2\") videoBitRate = (videoBitRate * 0.94);\n            if (fec === \"3/5\") videoBitRate = (videoBitRate * 0.96);\n            if (fec === \"2/3\") videoBitRate = (videoBitRate * 0.98);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.02;\n            break;\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.03;\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.04;\n            break;\n    }\n    // if (codec === \"libvvenc\") videoBitRate = videoBitRate * 0.95;   \n    global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    global.set(\"settings.VBITRATE\", Number(videoBitRate.toFixed(2)));\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9319,7 +9200,7 @@
         "finalize": "",
         "libs": [],
         "x": 1550,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "8c336280fd0fcc92"
@@ -9340,7 +9221,7 @@
         "finalize": "",
         "libs": [],
         "x": 1790,
-        "y": 120,
+        "y": 160,
         "wires": [
             [
                 "8751a0dd93a8ed60",
@@ -9360,8 +9241,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1970,
-        "y": 160,
+        "x": 1990,
+        "y": 200,
         "wires": [
             []
         ]
@@ -9382,8 +9263,8 @@
         "className": "bit",
         "topic": "",
         "name": "Bitrate settings changed",
-        "x": 2130,
-        "y": 80,
+        "x": 2190,
+        "y": 160,
         "wires": []
     },
     {
@@ -9406,8 +9287,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
-        "y": 80,
+        "x": 2000,
+        "y": 120,
         "wires": [
             [
                 "d791940d6fb69cd4"
@@ -9425,7 +9306,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 140,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "2d8d13aaf93f40dc"
@@ -9439,7 +9320,7 @@
         "g": "28611a179255d92b",
         "name": "",
         "x": 550,
-        "y": 300,
+        "y": 340,
         "wires": []
     },
     {
@@ -9456,7 +9337,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 370,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "dcae1df31f4c48c6"
@@ -9477,7 +9358,7 @@
         "origin": "*",
         "scale": "93",
         "x": 360,
-        "y": 340,
+        "y": 380,
         "wires": [
             []
         ]
@@ -9490,7 +9371,7 @@
         "name": "Spectrum comments",
         "info": "This was hacked together on a Saterday afternoon usign the javascript available on the [batc](https://eshail.batc.org.uk/wb) site\nSince path referencing cannot work this way, I had to include all the JS and CSS imports in one html file, minified ofc.\nThis works...",
         "x": 370,
-        "y": 260,
+        "y": 300,
         "wires": []
     },
     {
@@ -9503,7 +9384,7 @@
         "server": "",
         "client": "3e6a59708bbf6e6c",
         "x": 170,
-        "y": 900,
+        "y": 940,
         "wires": [
             [
                 "df0fb204fd14a618"
@@ -9524,7 +9405,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 480,
-        "y": 900,
+        "y": 940,
         "wires": []
     },
     {
@@ -9534,7 +9415,7 @@
         "g": "28611a179255d92b",
         "name": "",
         "x": 1010,
-        "y": 260,
+        "y": 300,
         "wires": []
     },
     {
@@ -9551,7 +9432,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 770,
-        "y": 260,
+        "y": 300,
         "wires": [
             [
                 "31f91a40fbe9635c"
@@ -9569,7 +9450,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 580,
-        "y": 260,
+        "y": 300,
         "wires": [
             [
                 "24353fa1e84c365f"
@@ -9590,7 +9471,7 @@
         "origin": "*",
         "scale": 100,
         "x": 810,
-        "y": 300,
+        "y": 340,
         "wires": [
             []
         ]
@@ -9606,7 +9487,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 420,
+        "y": 460,
         "wires": [
             [
                 "b828f6a6.47d708",
@@ -9630,7 +9511,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 420,
+        "y": 460,
         "wires": [
             [
                 "6e96b284f2323a85"
@@ -9651,7 +9532,7 @@
         "finalize": "",
         "libs": [],
         "x": 840,
-        "y": 420,
+        "y": 460,
         "wires": [
             [
                 "ec3c6b8075f4f83f",
@@ -9678,7 +9559,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1010,
-        "y": 420,
+        "y": 460,
         "wires": []
     },
     {
@@ -9698,7 +9579,7 @@
         "topic": "Longmynd",
         "name": "Longmynd",
         "x": 830,
-        "y": 500,
+        "y": 540,
         "wires": []
     },
     {
@@ -9718,7 +9599,7 @@
         "topic": "",
         "name": "",
         "x": 730,
-        "y": 640,
+        "y": 680,
         "wires": [
             []
         ]
@@ -9744,7 +9625,7 @@
         "to": "",
         "reg": false,
         "x": 920,
-        "y": 600,
+        "y": 640,
         "wires": [
             [
                 "aa4a256618f7c4a6"
@@ -9765,7 +9646,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 640,
+        "y": 680,
         "wires": [
             [
                 "7d18f3e7511a4c0f"
@@ -9786,7 +9667,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 500,
+        "y": 540,
         "wires": [
             [
                 "6154ee8d719adfbd",
@@ -9808,7 +9689,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 460,
+        "y": 500,
         "wires": [
             [
                 "64a9de4a4bd4dab6"
@@ -9824,7 +9705,7 @@
         "statusCode": "",
         "headers": {},
         "x": 390,
-        "y": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -9838,7 +9719,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 160,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "e56ed07756258705",
@@ -9862,7 +9743,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "807128449158f2eb"
@@ -9883,7 +9764,7 @@
         "finalize": "",
         "libs": [],
         "x": 640,
-        "y": 600,
+        "y": 640,
         "wires": [
             [
                 "11531a3595ef0f5a",
@@ -9902,7 +9783,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 740,
+        "y": 780,
         "wires": [
             [
                 "9917109abc4fd1ea"
@@ -9922,7 +9803,7 @@
         "template": "{{payload}}",
         "output": "str",
         "x": 640,
-        "y": 740,
+        "y": 780,
         "wires": [
             [
                 "4781b40508c8aa40"
@@ -9943,7 +9824,7 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 740,
+        "y": 780,
         "wires": [
             [
                 "22865d9dc7aa2c4c"
@@ -9964,7 +9845,7 @@
         "finalize": "",
         "libs": [],
         "x": 550,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "df0fb204fd14a618",
@@ -9987,7 +9868,7 @@
         "base64": false,
         "multicast": "multi",
         "x": 790,
-        "y": 820,
+        "y": 860,
         "wires": []
     },
     {
@@ -10001,7 +9882,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 820,
+        "y": 860,
         "wires": [
             [
                 "b828f6a6.47d708",
@@ -10017,30 +9898,9 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "we read device ",
         "info": "",
-        "x": 160,
-        "y": 2860,
+        "x": 1280,
+        "y": 720,
         "wires": []
-    },
-    {
-        "id": "cd7a771d4df1122f",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4bfefaeb7f82f4c6",
-        "name": "",
-        "filename": "device.json",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 250,
-        "y": 2960,
-        "wires": [
-            [
-                "30312ad9e7c5689b"
-            ]
-        ]
     },
     {
         "id": "20fcf5f8b61db48f",
@@ -10055,8 +9915,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3020,
-        "y": 1600,
+        "x": 3000,
+        "y": 1660,
         "wires": [
             [
                 "8a16f1f5708afd9e"
@@ -10081,8 +9941,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 2620,
-        "y": 1820,
+        "x": 2600,
+        "y": 1880,
         "wires": [
             [
                 "20fcf5f8b61db48f"
@@ -10096,14 +9956,15 @@
         "g": "44bb8f59b40e58cf",
         "name": "the pluto doesn't report this change, yet frequency is off...",
         "info": "",
-        "x": 2630,
-        "y": 1780,
+        "x": 2610,
+        "y": 1840,
         "wires": []
     },
     {
         "id": "a944ecbfc565c58b",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
         "name": "check queue",
         "func": "if(msg.payload){    \n    let now = Date.now();\n    global.set(\"last_queue_check\", now);\n    global.set(\"queue_colour\", \"\");\n    if (global.get(\"last_queue\") - now < -2000){\n        global.set(\"queue_colour\", \"red\");\n    }\n    msg.payload = global.get(\"last_queue\") - now;\n    return msg;\n}\n",
         "outputs": 1,
@@ -10112,8 +9973,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
-        "y": 1900,
+        "x": 1030,
+        "y": 1980,
         "wires": [
             []
         ]
@@ -10137,7 +9998,7 @@
         "payload": "1",
         "payloadType": "str",
         "x": 1050,
-        "y": 1880,
+        "y": 1920,
         "wires": [
             [
                 "a944ecbfc565c58b"
@@ -10158,7 +10019,7 @@
         "finalize": "",
         "libs": [],
         "x": 870,
-        "y": 1880,
+        "y": 1920,
         "wires": [
             []
         ]
@@ -10182,7 +10043,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 540,
-        "y": 1780,
+        "y": 1820,
         "wires": [
             [
                 "b6d03834b636d44d"
@@ -10210,7 +10071,7 @@
         "to": "",
         "reg": false,
         "x": 1050,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -10238,7 +10099,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 860,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             [
                 "b22449c1178f10d2"
@@ -10272,8 +10133,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 4780,
-        "y": 1880,
+        "x": 3640,
+        "y": 980,
         "wires": [
             [
                 "cfdd9fffb83031de"
@@ -10293,8 +10154,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4940,
-        "y": 1880,
+        "x": 3800,
+        "y": 980,
         "wires": [
             []
         ]
@@ -10317,8 +10178,8 @@
         "topic": "",
         "payload": "device.rx.use_minitioune",
         "payloadType": "global",
-        "x": 4570,
-        "y": 1880,
+        "x": 3430,
+        "y": 980,
         "wires": [
             [
                 "5aec87e336f5bf99"
@@ -10348,8 +10209,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3540,
-        "y": 2060,
+        "x": 380,
+        "y": 2700,
         "wires": [
             [
                 "865c9cd7fad69b04"
@@ -10382,8 +10243,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3540,
-        "y": 2140,
+        "x": 380,
+        "y": 2780,
         "wires": [
             [
                 "865c9cd7fad69b04"
@@ -10414,8 +10275,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 4330,
-        "y": 2020,
+        "x": 1170,
+        "y": 2660,
         "wires": [
             [
                 "517a7337244c67a7"
@@ -10437,7 +10298,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 570,
-        "y": 2540,
+        "y": 2580,
         "wires": [
             [
                 "ba4a435e3fbcd377"
@@ -10458,7 +10319,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 2540,
+        "y": 2580,
         "wires": [
             [
                 "32e18f58d4f086f8"
@@ -10479,7 +10340,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 2540,
+        "y": 2580,
         "wires": [
             []
         ]
@@ -10498,7 +10359,7 @@
         "finalize": "",
         "libs": [],
         "x": 1570,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "5d929a20d665af8d"
@@ -10539,8 +10400,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4800,
-        "y": 660,
+        "x": 3780,
+        "y": 1640,
         "wires": [
             []
         ]
@@ -10558,8 +10419,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4300,
-        "y": 1660,
+        "x": 3560,
+        "y": 2760,
         "wires": [
             []
         ]
@@ -10585,8 +10446,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3770,
-        "y": 1400,
+        "x": 3730,
+        "y": 2380,
         "wires": [
             [
                 "86a53ceb1364b3e0"
@@ -10680,7 +10541,7 @@
         "y": 340,
         "wires": [
             [
-                "ba28f83345465e97"
+                "de9023ef02fb7ae5"
             ]
         ]
     },
@@ -10689,15 +10550,15 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bc3a23f88991a3",
-        "command": "scripts\\vlc_run.bat",
-        "addpay": "",
+        "command": "",
+        "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
         "name": "VLC",
-        "x": 3570,
+        "x": 3770,
         "y": 340,
         "wires": [
             [],
@@ -10710,15 +10571,15 @@
         "type": "exec",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bc3a23f88991a3",
-        "command": "scripts\\dvbs_gui.lnk",
-        "addpay": "",
+        "command": "",
+        "addpay": "payload",
         "append": "",
         "useSpawn": "false",
         "timer": "",
         "winHide": true,
         "oldrc": false,
         "name": "DVB-S GUI",
-        "x": 3590,
+        "x": 3750,
         "y": 400,
         "wires": [
             [],
@@ -10751,7 +10612,7 @@
         "y": 400,
         "wires": [
             [
-                "e7122ff60e30d850"
+                "dc1201bc61b55d34"
             ]
         ]
     },
@@ -10764,8 +10625,8 @@
         "scope": [
             "25f28cc77302135e"
         ],
-        "x": 3320,
-        "y": 1660,
+        "x": 2580,
+        "y": 2760,
         "wires": [
             [
                 "e4fe047c88b9b919"
@@ -10786,8 +10647,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3540,
-        "y": 1660,
+        "x": 2800,
+        "y": 2760,
         "wires": [
             [
                 "7fb0cafd2acd88b7"
@@ -10809,8 +10670,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3740,
-        "y": 1660,
+        "x": 3000,
+        "y": 2760,
         "wires": []
     },
     {
@@ -10825,7 +10686,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 1460,
+        "x": 1420,
         "y": 1460,
         "wires": [
             [
@@ -10852,7 +10713,7 @@
         "fontSize": "2",
         "color": "#000000",
         "x": 1770,
-        "y": 360,
+        "y": 380,
         "wires": []
     },
     {
@@ -10868,8 +10729,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "Load custom",
-        "x": 4370,
-        "y": 1340,
+        "x": 4330,
+        "y": 2320,
         "wires": [
             [],
             [
@@ -10898,8 +10759,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4530,
-        "y": 620,
+        "x": 3510,
+        "y": 1600,
         "wires": [
             [
                 "81e222ea9f35567c"
@@ -10924,11 +10785,11 @@
         "topic": "",
         "payload": "settings.video_device",
         "payloadType": "global",
-        "x": 5010,
-        "y": 700,
+        "x": 3770,
+        "y": 1720,
         "wires": [
             [
-                "061c529da56f288b"
+                "6e36be08ede45d50"
             ]
         ]
     },
@@ -10950,11 +10811,11 @@
         "topic": "",
         "payload": "settings.audio_device",
         "payloadType": "global",
-        "x": 5050,
-        "y": 560,
+        "x": 3770,
+        "y": 1520,
         "wires": [
             [
-                "92680e051846903d"
+                "1a213daf8dd78831"
             ]
         ]
     },
@@ -10971,8 +10832,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 4470,
-        "y": 1140,
+        "x": 4430,
+        "y": 2120,
         "wires": [
             [
                 "0e9c3a491a2a469e"
@@ -10992,8 +10853,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4680,
-        "y": 1140,
+        "x": 4640,
+        "y": 2120,
         "wires": [
             [
                 "59cffb16faf16e25"
@@ -11013,8 +10874,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4910,
-        "y": 1140,
+        "x": 4870,
+        "y": 2120,
         "wires": [
             [
                 "32d2cf35c427d5be",
@@ -11045,8 +10906,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5160,
-        "y": 1140,
+        "x": 5120,
+        "y": 2120,
         "wires": [
             [
                 "cec2f56be1fccf51"
@@ -11073,8 +10934,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5160,
-        "y": 1200,
+        "x": 5120,
+        "y": 2180,
         "wires": [
             [
                 "89b95ad3b6453036"
@@ -11101,8 +10962,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5170,
-        "y": 1260,
+        "x": 5130,
+        "y": 2240,
         "wires": [
             [
                 "c5ceed661f8529ce"
@@ -11132,8 +10993,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 4280,
-        "y": 1180,
+        "x": 4240,
+        "y": 2160,
         "wires": [
             [
                 "da2d9235ea59d48e"
@@ -11155,8 +11016,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 4470,
-        "y": 1200,
+        "x": 4430,
+        "y": 2180,
         "wires": [
             [
                 "e733dc0c81143d51"
@@ -11183,8 +11044,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4000,
-        "y": 1360,
+        "x": 3960,
+        "y": 2340,
         "wires": [
             [
                 "181bc2bec72e1d2d"
@@ -11207,8 +11068,8 @@
         "className": "",
         "topic": "",
         "name": "Profile saved",
-        "x": 4830,
-        "y": 1200,
+        "x": 4790,
+        "y": 2180,
         "wires": []
     },
     {
@@ -11231,8 +11092,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4640,
-        "y": 1200,
+        "x": 4600,
+        "y": 2180,
         "wires": [
             [
                 "fc3424b338c6f01a",
@@ -11253,8 +11114,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3550,
-        "y": 1200,
+        "x": 3510,
+        "y": 2180,
         "wires": [
             [
                 "37c0f70c56da77c5",
@@ -11287,31 +11148,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3340,
-        "y": 1260,
+        "x": 3300,
+        "y": 2240,
         "wires": [
             [
                 "181bc2bec72e1d2d"
             ]
         ]
-    },
-    {
-        "id": "f5a47dd605642e35",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 140,
-        "wires": []
     },
     {
         "id": "6516226d49e7b99a",
@@ -11332,7 +11175,7 @@
         "fontSize": "2",
         "color": "#000000",
         "x": 1770,
-        "y": 320,
+        "y": 340,
         "wires": []
     },
     {
@@ -11344,24 +11187,7 @@
         "statusCode": "",
         "headers": {},
         "x": 810,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "0ca83149c55f1e84",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "78f7e24f56d510ed",
-        "name": "debug 17",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4480,
-        "y": 1440,
+        "y": 780,
         "wires": []
     },
     {
@@ -11379,7 +11205,7 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 830,
+        "x": 870,
         "y": 180,
         "wires": [],
         "inputLabels": [
@@ -11399,8 +11225,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 300,
-        "y": 160,
+        "x": 320,
+        "y": 100,
         "wires": [
             [
                 "cdc147736509f758"
@@ -11413,19 +11239,21 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "ba42e703170bee84",
         "name": "transform json to broker message",
-        "func": "let file = JSON.parse(msg.payload);\nmsg.action = file.action;\nmsg.broker = file.broker;\nmsg.topic = file.topic;\nmsg.payload = file.payload;\nreturn msg;",
+        "func": "let file = JSON.parse(msg.payload);\nmsg.action = file.action;\nmsg.broker = file.broker;\nmsg.topic = file.topic;\nmsg.payload = file.payload;\nglobal.set(\"device.callsign\", file.payload )\n// global.set(\"device.tx.dvbs2.tssourceaddress\", )\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 160,
+        "x": 580,
+        "y": 100,
         "wires": [
             [
                 "25874e1909171caa",
-                "f5a47dd605642e35"
+                "a7dfa23e416d0533",
+                "140f70c9bf342365",
+                "2f35ec1420f48a0f"
             ]
         ]
     },
@@ -11449,8 +11277,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5170,
-        "y": 1340,
+        "x": 5130,
+        "y": 2320,
         "wires": [
             [
                 "37b18a222ae30d52"
@@ -11477,11 +11305,1023 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5180,
-        "y": 1380,
+        "x": 5140,
+        "y": 2360,
         "wires": [
             [
                 "807128449158f2eb"
+            ]
+        ]
+    },
+    {
+        "id": "a7dfa23e416d0533",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "group": "bc7afc94660c6b76",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "Callsign",
+        "label": "Callsign",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 880,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "140f70c9bf342365",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "name": "Set command path",
+        "func": "let callsign = msg.payload\nglobal.set(\"cmdPath\", `cmd/pluto/${callsign}`)\nglobal.set(\"device.callsign\", callsign);\n// global.set(\"call\", callsign);\n// global.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98580b7a29e56897",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "delay restore after MODE set",
+        "pauseType": "delay",
+        "timeout": "0.5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1700,
+        "y": 680,
+        "wires": [
+            [
+                "cd7a771d4df1122f"
+            ]
+        ]
+    },
+    {
+        "id": "cd7a771d4df1122f",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1570,
+        "y": 800,
+        "wires": [
+            [
+                "30312ad9e7c5689b"
+            ]
+        ]
+    },
+    {
+        "id": "f7a31bdb75d1c530",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2920,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "50c309ece9e67b71",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "5c31dbeab217c8e9",
+        "name": "Set lowest fec",
+        "func": "if (msg.test === \"error\") {\n    if(msg.payload === \"8psk\"){\n        msg.payload = \"3/5\";\n    }\n    if (msg.payload === \"16apsk\") {\n        msg.payload = \"2/3\";\n    }\n    if (msg.payload === \"32apsk\") {\n        msg.payload = \"3/4\";\n    }\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2500,
+        "y": 2380,
+        "wires": [
+            [
+                "f8b6ea291e46f876",
+                "cec2f56be1fccf51"
+            ]
+        ]
+    },
+    {
+        "id": "0776d1539b28a948",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "5c31dbeab217c8e9",
+        "name": "set the MODE too, after we get into lowest FEC state",
+        "func": "if (msg.test === \"error\") {\n    msg.payload = \"dvbs2-ts\";\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2820,
+        "y": 2440,
+        "wires": [
+            [
+                "f7a31bdb75d1c530",
+                "edf4a8f5daf0b0ab"
+            ]
+        ]
+    },
+    {
+        "id": "f8b6ea291e46f876",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "5c31dbeab217c8e9",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2680,
+        "y": 2380,
+        "wires": [
+            [
+                "0776d1539b28a948"
+            ]
+        ]
+    },
+    {
+        "id": "c45d59c4569dc4cc",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 2480,
+        "wires": []
+    },
+    {
+        "id": "2f35ec1420f48a0f",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "name": "MQTT on start",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5a68f1d90ea138d2",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "name": "set call sign",
+        "func": "let payload = global.get(\"device.callsign\");\nlet message = {};\nmessage.topic = `cmd/pluto/call`;\nmessage.payload = payload;\nreturn message;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "25874e1909171caa"
+            ]
+        ]
+    },
+    {
+        "id": "ce9b5ccdb8569209",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "ba42e703170bee84",
+        "name": "Set call",
+        "group": "bc7afc94660c6b76",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Set call",
+        "tooltip": "Warning! Reboots pluto",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "5a68f1d90ea138d2"
+            ]
+        ]
+    },
+    {
+        "id": "9707e10f88d44a13",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set audio delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.audio_delay",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 3040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bda9d0fa12b73a7b",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Audio delay",
+        "label": "Audio delay in seconds",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 450,
+        "y": 3040,
+        "wires": [
+            [
+                "9707e10f88d44a13"
+            ]
+        ]
+    },
+    {
+        "id": "392a6eae45b5fb89",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "keyframe interval",
+        "label": "keyframe interval",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 470,
+        "y": 3160,
+        "wires": [
+            [
+                "98cb6cc1dd98ba17"
+            ]
+        ]
+    },
+    {
+        "id": "98cb6cc1dd98ba17",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set keyframe interval",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.keyframe_interval",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 3160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "268823098bee16e3",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Thread queue",
+        "label": "Thread queue",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 460,
+        "y": 3080,
+        "wires": [
+            [
+                "7de98b3ad530b9ed"
+            ]
+        ]
+    },
+    {
+        "id": "7de98b3ad530b9ed",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set thread queue",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.thread_queue",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 3080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3867abc64be57709",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "RT buffer",
+        "label": "RT buffer",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 440,
+        "y": 3200,
+        "wires": [
+            [
+                "5742c2b6848b86ca"
+            ]
+        ]
+    },
+    {
+        "id": "5742c2b6848b86ca",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set rt buffer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.rt_buffer",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 3200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4f4bb8ab484614c",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.thread_queue",
+        "payloadType": "global",
+        "x": 230,
+        "y": 3080,
+        "wires": [
+            [
+                "268823098bee16e3"
+            ]
+        ]
+    },
+    {
+        "id": "1476c7ae3ee7429f",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.audio_delay",
+        "payloadType": "global",
+        "x": 220,
+        "y": 3040,
+        "wires": [
+            [
+                "bda9d0fa12b73a7b"
+            ]
+        ]
+    },
+    {
+        "id": "53d1251376ea744d",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.keyframe_interval",
+        "payloadType": "global",
+        "x": 220,
+        "y": 3160,
+        "wires": [
+            [
+                "392a6eae45b5fb89"
+            ]
+        ]
+    },
+    {
+        "id": "adec478022684111",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.rt_buffer",
+        "payloadType": "global",
+        "x": 190,
+        "y": 3200,
+        "wires": [
+            [
+                "3867abc64be57709"
+            ]
+        ]
+    },
+    {
+        "id": "4d3826e743c485db",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "FIFO size",
+        "label": "FIFO size",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 440,
+        "y": 3240,
+        "wires": [
+            [
+                "c79482819129c76e"
+            ]
+        ]
+    },
+    {
+        "id": "c79482819129c76e",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set FIFO size",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.fifo_size",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 3240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0cd2e5a31c4cd6b",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.fifo_size",
+        "payloadType": "global",
+        "x": 190,
+        "y": 3240,
+        "wires": [
+            [
+                "4d3826e743c485db"
+            ]
+        ]
+    },
+    {
+        "id": "9dc824c56f4f3a2c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e318cfe9287a04d2",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.dvbs_gui_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 3340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93f563206f98cde4",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e318cfe9287a04d2",
+        "name": "",
+        "label": "dvbs_gui_path",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 800,
+        "y": 3340,
+        "wires": [
+            [
+                "9dc824c56f4f3a2c"
+            ]
+        ]
+    },
+    {
+        "id": "a53750444a663bac",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e318cfe9287a04d2",
+        "name": "dvbs_gui_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.dvbs_gui_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 3340,
+        "wires": [
+            [
+                "93f563206f98cde4"
+            ]
+        ]
+    },
+    {
+        "id": "8c34e9751735e69f",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e318cfe9287a04d2",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 390,
+        "y": 3340,
+        "wires": [
+            [
+                "a53750444a663bac"
+            ]
+        ]
+    },
+    {
+        "id": "06596bd1203529e7",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e318cfe9287a04d2",
+        "name": "dvbs_gui_path",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device.dvbs_gui_path",
+        "payloadType": "global",
+        "x": 200,
+        "y": 3340,
+        "wires": [
+            [
+                "8c34e9751735e69f"
+            ]
+        ]
+    },
+    {
+        "id": "dc1201bc61b55d34",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bc3a23f88991a3",
+        "name": "path",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "device.dvbs_gui_path",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3570,
+        "y": 400,
+        "wires": [
+            [
+                "e7122ff60e30d850"
+            ]
+        ]
+    },
+    {
+        "id": "e4d49de5ef76b48c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "c2b7b0fa41ef89a9",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.vlc_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 3440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "973c10af4dbfb52e",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "c2b7b0fa41ef89a9",
+        "name": "",
+        "label": "vlc_path",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 780,
+        "y": 3440,
+        "wires": [
+            [
+                "e4d49de5ef76b48c"
+            ]
+        ]
+    },
+    {
+        "id": "ad88d2145d494f9b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "c2b7b0fa41ef89a9",
+        "name": "dvbs_gui_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.vlc_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 3440,
+        "wires": [
+            [
+                "973c10af4dbfb52e"
+            ]
+        ]
+    },
+    {
+        "id": "01a78b3718cabe4e",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "c2b7b0fa41ef89a9",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 390,
+        "y": 3440,
+        "wires": [
+            [
+                "ad88d2145d494f9b"
+            ]
+        ]
+    },
+    {
+        "id": "ef1c0706f051616b",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "c2b7b0fa41ef89a9",
+        "name": "vlc_path",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device.vlc_path",
+        "payloadType": "global",
+        "x": 180,
+        "y": 3440,
+        "wires": [
+            [
+                "01a78b3718cabe4e"
+            ]
+        ]
+    },
+    {
+        "id": "de9023ef02fb7ae5",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bc3a23f88991a3",
+        "name": "vlc",
+        "func": "let path = `\\\"${global.get(\"device.vlc_path\")}\\\" udp://@${global.get(\"device.rx.tsip\")}`;\nmsg.payload = path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3570,
+        "y": 340,
+        "wires": [
+            [
+                "ba28f83345465e97",
+                "d30a9ca0b164d0b6"
+            ]
+        ]
+    },
+    {
+        "id": "d30a9ca0b164d0b6",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4020,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1a213daf8dd78831",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "6230aabbd2e27dba",
+        "name": "push config item to options list",
+        "func": "let device = msg.payload;\nlet array = [];\narray.push(device);\nmsg.options = array;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4010,
+        "y": 1520,
+        "wires": [
+            [
+                "92680e051846903d"
+            ]
+        ]
+    },
+    {
+        "id": "6e36be08ede45d50",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "6230aabbd2e27dba",
+        "name": "push config item to options list",
+        "func": "let device = msg.payload;\nlet array = [];\narray.push(device);\nmsg.options = array;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4050,
+        "y": 1720,
+        "wires": [
+            [
+                "061c529da56f288b"
             ]
         ]
     }
