@@ -2,6 +2,7 @@
 SET BASEDIR=%~dp0
 cd %BASEDIR%
 ECHO Please wait, programs starting...
+powershell Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force
 powershell .\setCallsign.ps1
 start "Node Red" .\npm\node-red.cmd --settings .\.node-red\settings.js --userDir .\.node-red\
 TIMEOUT /T 4 /NOBREAK
