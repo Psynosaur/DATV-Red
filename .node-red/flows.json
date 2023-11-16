@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V2.4.3",
+        "label": "DATV Simple V2.4.4",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n\r\n\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n     - Fixes `powershell` script permissions\r\n     - This should remedy blank stats in app\r\n     - Clicking signal tunes minitiouner\r\n     - Tx parameters can now only be set by click on channel bars\r\n     - Removed unused state check `API`\r\n     - Fixed toggle button states\r\n       - Use minitiouner\r\n       - Use ffplay\r\n       - ffplay on top\r\n     - Rebooting and power kill handling\r\n       - Press restore when pluto connects\r\n       - this is mostly automatic \r\n     - INPUT mode\r\n     - Audio channels\r\n     - UDP and RTMP addressess\r\n     - Added back db below beacon on Spectrum\r\n\r\n\r\n",
         "env": []
     },
     {
@@ -81,12 +81,16 @@
             "8c7733a45d32bf17",
             "4d60c65180806536",
             "98580b7a29e56897",
-            "cd7a771d4df1122f"
+            "cd7a771d4df1122f",
+            "61748e994293d03b",
+            "da0526f09e2cf48c",
+            "c667113f68ae72fa",
+            "a56122d1643df6cf"
         ],
         "x": 1154,
-        "y": 479,
-        "w": 692,
-        "h": 422
+        "y": 459,
+        "w": 712,
+        "h": 482
     },
     {
         "id": "92c95af69a0592d1",
@@ -290,7 +294,6 @@
             "f9186ed78accdb6c",
             "a0addd449f41ee70",
             "3c2665b335deadcc",
-            "142bd58e14cabe24",
             "034d4cfc3008e95a",
             "1bb882ca67278b69",
             "6e2b3c9e08662125",
@@ -309,7 +312,8 @@
             "9afe5b50e0c2e439",
             "3eb70786a69e6c70",
             "f1c89523da4ca9da",
-            "1411feb53b899df2"
+            "1411feb53b899df2",
+            "7e30ac73bb50c7aa"
         ],
         "x": 2034,
         "y": 239,
@@ -336,12 +340,14 @@
             "b62a3f484010816e",
             "9d65ce1e866729e6",
             "8d58e07463dad267",
-            "6516226d49e7b99a"
+            "6516226d49e7b99a",
+            "ecb0e81ee3028514",
+            "3ee02849882f8ff7"
         ],
         "x": 1154,
-        "y": 259,
+        "y": 199,
         "w": 732,
-        "h": 202
+        "h": 242
     },
     {
         "id": "9f151e324008585b",
@@ -402,7 +408,7 @@
             "1827c9f76c07664e"
         ],
         "x": 1154,
-        "y": 79,
+        "y": 19,
         "w": 1172,
         "h": 162
     },
@@ -648,7 +654,6 @@
             "b733d75a1c79f1a2",
             "c8042db5402565df",
             "8e34088eda2b7263",
-            "e1cd38d2156ae7ba",
             "2acfb18cb9db9a02",
             "0813517cbc9b99f3",
             "c4f36ff7105c2dd1",
@@ -664,7 +669,6 @@
             "32e18f58d4f086f8",
             "1decf932a1bf2fcd",
             "ba4a435e3fbcd377",
-            "c45d59c4569dc4cc",
             "a944ecbfc565c58b"
         ],
         "x": 34,
@@ -996,7 +1000,7 @@
             }
         },
         "site": {
-            "name": "DATV-Simple V2.4.3",
+            "name": "DATV-Simple V2.4.5",
             "hideToolbar": "false",
             "allowSwipe": "true",
             "lockMenu": "false",
@@ -2502,9 +2506,7 @@
         "x": 730,
         "y": 2120,
         "wires": [
-            [
-                "c45d59c4569dc4cc"
-            ]
+            []
         ]
     },
     {
@@ -2588,8 +2590,7 @@
         "y": 2460,
         "wires": [
             [
-                "c8042db5402565df",
-                "e1cd38d2156ae7ba"
+                "c8042db5402565df"
             ]
         ]
     },
@@ -2611,8 +2612,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 710,
-        "y": 2500,
+        "x": 730,
+        "y": 2460,
         "wires": []
     },
     {
@@ -2634,25 +2635,6 @@
             [
                 "b733d75a1c79f1a2"
             ]
-        ]
-    },
-    {
-        "id": "e1cd38d2156ae7ba",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "Global: tssourceaddress",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.dvbs2.tssourceaddress\")){\n    global.set(\"device.tx.dvbs2.tssourceaddress\", payload);\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 2460,
-        "wires": [
-            []
         ]
     },
     {
@@ -3876,7 +3858,7 @@
         "topicType": "msg",
         "min": "-20",
         "max": "3",
-        "step": "0.01",
+        "step": "1",
         "className": "",
         "x": 1840,
         "y": 1460,
@@ -4419,7 +4401,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1450,
-        "y": 620,
+        "y": 600,
         "wires": [
             [
                 "6b0cd6504e13d973",
@@ -4435,7 +4417,7 @@
         "name": "stream.mode must be set, or else digital mode setting reboots pluto",
         "info": "",
         "x": 1580,
-        "y": 520,
+        "y": 500,
         "wires": []
     },
     {
@@ -4512,7 +4494,8 @@
         "y": 2420,
         "wires": [
             [
-                "932baa0f165b71a2"
+                "932baa0f165b71a2",
+                "3cab7aa5b4106a59"
             ]
         ]
     },
@@ -4520,9 +4503,10 @@
         "id": "932baa0f165b71a2",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "78f7e24f56d510ed",
         "name": "ffmpeg command builder",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let codec = global.get(\"settings.CODEC\")\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    let shapingString = `-minrate ${global.get(\"settings.VBITRATE\")}K -maxrate ${global.get(\"settings.VBITRATE\")}K`;\n    switch (codec) {\n        case 'libx264':\n            codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libvvenc':\n            let vvcBitRate = Math.round(videoBitrate * 800 ); // to Mega-ish\n            codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}:framerate=${global.get(\"settings.FPS\")}:size=${global.get(\"settings.IMAGESIZE\")}`;\n            break;\n        case 'libaom-av1':\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case 'h264_nvenc':\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;     \n    }\n    let offset = global.get(\"settings.audio_delay\");\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = global.get(\"settings.keyframe_interval\");\n    let max_delay = symbol_rate < 36 ? 2000: 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n    let str =\n        `-itsoffset ${offset} ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `-ar ${global.get(\"settings.ABITRATE\")}K ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +        \n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        `-acodec libfdk_aac ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts -muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-metadata service_name=${global.get(\"device.callsign\")} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n        // Loopback for local testing without txing...\n        // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let codec = global.get(\"settings.CODEC\")\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    let shapingString = `-minrate ${global.get(\"settings.VBITRATE\")}K -maxrate ${global.get(\"settings.VBITRATE\")}K`;\n    switch (codec) {\n        case 'libx264':\n            codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libvvenc':\n            let vvcBitRate = Math.round(videoBitrate * 800 ); // to Mega-ish\n            codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}:framerate=${global.get(\"settings.FPS\")}:size=${global.get(\"settings.IMAGESIZE\")}`;\n            break;\n        case 'libaom-av1':\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case 'h264_nvenc':\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;     \n    }\n    let offset = global.get(\"settings.audio_delay\");\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = global.get(\"settings.keyframe_interval\");\n    let max_delay = symbol_rate < 36 ? 2000: 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n    let str =\n        `-itsoffset ${offset} ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        `-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `-ar ${global.get(\"settings.ABITRATE\")}K ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +        \n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        `-acodec libfdk_aac ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts -muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-metadata service_name=${global.get(\"device.callsign\")} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n        // Loopback for local testing without txing...\n        // `\\\"udp://${global.get(\"device.rx.tsip\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4861,7 +4845,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 1490,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "b800a9f107cb3124"
@@ -4882,7 +4866,7 @@
         "finalize": "",
         "libs": [],
         "x": 1320,
-        "y": 860,
+        "y": 840,
         "wires": [
             [
                 "30575829e5293823",
@@ -5350,6 +5334,7 @@
         "id": "99a4c83c076987df",
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "359e81623396a0cb",
         "position": "bottom left",
         "displayTime": "3",
@@ -5665,7 +5650,7 @@
         "finalize": "",
         "libs": [],
         "x": 1710,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "35c6cd1a805aeca5",
@@ -5729,8 +5714,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1700,
-        "y": 620,
+        "x": 1740,
+        "y": 580,
         "wires": [
             [
                 "55bca069bdb08ee7"
@@ -5741,6 +5726,7 @@
         "id": "2b527baf8d8b1450",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "4bfefaeb7f82f4c6",
         "name": "",
         "props": [
@@ -5756,7 +5742,7 @@
         "payload": "true",
         "payloadType": "str",
         "x": 1250,
-        "y": 560,
+        "y": 540,
         "wires": [
             [
                 "6b0cd6504e13d973",
@@ -6072,7 +6058,7 @@
             "347c8041af1a52e0"
         ],
         "x": 1240,
-        "y": 300,
+        "y": 280,
         "wires": [
             [
                 "b2786302ea5b87d8"
@@ -6085,7 +6071,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "name": "Pluto connection status",
-        "func": "let status=msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n}\nif (status == \"node-red:common.status.connected\") {\n    human_status = \"Connected\";\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status=human_status;\nmsg.kleur = fill;\nreturn msg;",
+        "func": "let status=msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (status == \"node-red:common.status.connected\") {\n    human_status = \"Connected\";\n    if(global.get(\"first_load\")){\n        global.set(\"restore\", true);\n    }\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status=human_status;\nmsg.kleur = fill;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -6093,7 +6079,7 @@
         "finalize": "",
         "libs": [],
         "x": 1430,
-        "y": 300,
+        "y": 280,
         "wires": [
             [
                 "8105dd1d410bdd4b"
@@ -6122,7 +6108,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1610,
-        "y": 300,
+        "y": 280,
         "wires": [
             []
         ]
@@ -6146,7 +6132,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 1790,
-        "y": 300,
+        "y": 280,
         "wires": []
     },
     {
@@ -6168,7 +6154,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1530,
-        "y": 360,
+        "y": 340,
         "wires": []
     },
     {
@@ -6190,7 +6176,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1780,
-        "y": 420,
+        "y": 400,
         "wires": []
     },
     {
@@ -6212,7 +6198,7 @@
         "payload": "settings.VBITRATE",
         "payloadType": "global",
         "x": 1320,
-        "y": 360,
+        "y": 340,
         "wires": [
             [
                 "23f54550ba5b6a79"
@@ -6238,7 +6224,7 @@
         "payload": "device.tx.dvbs2.ts.bitrate",
         "payloadType": "global",
         "x": 1330,
-        "y": 420,
+        "y": 400,
         "wires": [
             [
                 "8d58e07463dad267"
@@ -6404,45 +6390,6 @@
         "wires": [
             [
                 "6e2b3c9e08662125"
-            ]
-        ]
-    },
-    {
-        "id": "142bd58e14cabe24",
-        "type": "ui_dropdown",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1f5722b7aff1a710",
-        "name": "",
-        "label": "ACH",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "4f22c4dbc8bc16dd",
-        "order": 5,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Mono",
-                "value": "1",
-                "type": "str"
-            },
-            {
-                "label": "Stereo",
-                "value": "2",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 2390,
-        "y": 480,
-        "wires": [
-            [
-                "ae40a9e5bdd0d113"
             ]
         ]
     },
@@ -6930,7 +6877,7 @@
         "y": 480,
         "wires": [
             [
-                "142bd58e14cabe24"
+                "7e30ac73bb50c7aa"
             ]
         ]
     },
@@ -7130,7 +7077,7 @@
         "payload": "state_color",
         "payloadType": "global",
         "x": 1280,
-        "y": 620,
+        "y": 600,
         "wires": [
             [
                 "7d6077cea86f2378"
@@ -9179,7 +9126,7 @@
         "payload": "bitratechange",
         "payloadType": "global",
         "x": 1310,
-        "y": 160,
+        "y": 100,
         "wires": [
             [
                 "ac482a3670a2a148"
@@ -9200,7 +9147,7 @@
         "finalize": "",
         "libs": [],
         "x": 1550,
-        "y": 160,
+        "y": 100,
         "wires": [
             [
                 "8c336280fd0fcc92"
@@ -9221,7 +9168,7 @@
         "finalize": "",
         "libs": [],
         "x": 1790,
-        "y": 160,
+        "y": 100,
         "wires": [
             [
                 "8751a0dd93a8ed60",
@@ -9242,7 +9189,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 1990,
-        "y": 200,
+        "y": 140,
         "wires": [
             []
         ]
@@ -9264,7 +9211,7 @@
         "topic": "",
         "name": "Bitrate settings changed",
         "x": 2190,
-        "y": 160,
+        "y": 100,
         "wires": []
     },
     {
@@ -9288,7 +9235,7 @@
         "to": "",
         "reg": false,
         "x": 2000,
-        "y": 120,
+        "y": 60,
         "wires": [
             [
                 "d791940d6fb69cd4"
@@ -9776,6 +9723,7 @@
         "id": "e1eb05d953534ef4",
         "type": "http in",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "185cc616489b2615",
         "name": "",
         "url": "/status",
@@ -9794,6 +9742,7 @@
         "id": "22865d9dc7aa2c4c",
         "type": "template",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "185cc616489b2615",
         "name": "",
         "field": "payload",
@@ -9814,6 +9763,7 @@
         "id": "9917109abc4fd1ea",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "185cc616489b2615",
         "name": "get mute",
         "func": "let mute = global.get(\"mute\");\nmsg.payload = mute;\nreturn msg;\n\n",
@@ -9899,7 +9849,7 @@
         "name": "we read device ",
         "info": "",
         "x": 1280,
-        "y": 720,
+        "y": 700,
         "wires": []
     },
     {
@@ -10359,7 +10309,7 @@
         "finalize": "",
         "libs": [],
         "x": 1570,
-        "y": 420,
+        "y": 400,
         "wires": [
             [
                 "5d929a20d665af8d"
@@ -10713,7 +10663,7 @@
         "fontSize": "2",
         "color": "#000000",
         "x": 1770,
-        "y": 380,
+        "y": 360,
         "wires": []
     },
     {
@@ -11175,13 +11125,14 @@
         "fontSize": "2",
         "color": "#000000",
         "x": 1770,
-        "y": 340,
+        "y": 320,
         "wires": []
     },
     {
         "id": "4781b40508c8aa40",
         "type": "http response",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "185cc616489b2615",
         "name": "",
         "statusCode": "",
@@ -11373,7 +11324,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1700,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "cd7a771d4df1122f"
@@ -11394,7 +11345,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 1570,
-        "y": 800,
+        "y": 780,
         "wires": [
             [
                 "30312ad9e7c5689b"
@@ -11488,23 +11439,6 @@
                 "0776d1539b28a948"
             ]
         ]
-    },
-    {
-        "id": "c45d59c4569dc4cc",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 2480,
-        "wires": []
     },
     {
         "id": "2f35ec1420f48a0f",
@@ -12322,6 +12256,586 @@
         "wires": [
             [
                 "061c529da56f288b"
+            ]
+        ]
+    },
+    {
+        "id": "ecb0e81ee3028514",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78b656eeda23dc5a",
+        "name": "set first_load",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1270,
+        "y": 240,
+        "wires": [
+            [
+                "3ee02849882f8ff7"
+            ]
+        ]
+    },
+    {
+        "id": "3ee02849882f8ff7",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78b656eeda23dc5a",
+        "name": "set first_load",
+        "rules": [
+            {
+                "t": "set",
+                "p": "first_load",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1450,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "61748e994293d03b",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "first_load",
+        "payloadType": "global",
+        "x": 1290,
+        "y": 900,
+        "wires": [
+            [
+                "da0526f09e2cf48c"
+            ]
+        ]
+    },
+    {
+        "id": "da0526f09e2cf48c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "press button when connected",
+        "func": "if (msg.payload) {\n    if (global.get(\"restore\")) {\n        global.set(\"first_load\", false);\n        global.set(\"restore\", false);\n        msg.payload = \"Press button\";\n        return msg;\n    }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 900,
+        "wires": [
+            [
+                "c667113f68ae72fa"
+            ]
+        ]
+    },
+    {
+        "id": "c667113f68ae72fa",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1300,
+        "y": 760,
+        "wires": [
+            [
+                "a56122d1643df6cf",
+                "6b0cd6504e13d973",
+                "8c7733a45d32bf17"
+            ]
+        ]
+    },
+    {
+        "id": "a56122d1643df6cf",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "Auto restore",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1750,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "3cab7aa5b4106a59",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "ffmpeg command builder",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let codec = global.get(\"settings.CODEC\")\n    let input = global.get(\"settings.input_choice\")\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    let shapingString = `-minrate ${global.get(\"settings.VBITRATE\")}k -maxrate ${global.get(\"settings.VBITRATE\")}k`;\n    switch (codec) {\n        case 'libx264':\n            codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libvvenc':\n            let vvcBitRate = (videoBitrate * 800); // to Mega-ish\n            codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}:framerate=${global.get(\"settings.FPS\")}:size=${global.get(\"settings.IMAGESIZE\")}`;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            break;\n        case 'libaom-av1':\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case 'h264_nvenc':\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n    let offset = global.get(\"settings.audio_delay\");\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = global.get(\"settings.keyframe_interval\");\n    let max_delay = symbol_rate < 36 ? 2000 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n\n    switch (input) {\n        case 'dshow':\n            input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\"settings.video_device\")}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\"settings.audio_device\")}\\\" `;\n            break;\n        case 'udp':\n            input = `-i udp://${global.get(\"settings.udp_ip_port\")} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case 'rtmp':\n            input = `-f flv -listen 1 -i rtmp://${global.get(\"settings.rtmp_ip_port\")}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n    let str =\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.ABITRATE\")}K ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts ` +\n        `-muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-metadata service_name=${global.get(\"device.callsign\")} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4010,
+        "y": 2520,
+        "wires": [
+            [
+                "870adb347b148820"
+            ]
+        ]
+    },
+    {
+        "id": "7f3d237a25e7a435",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.audio_codec",
+        "payloadType": "global",
+        "x": 980,
+        "y": 3040,
+        "wires": [
+            [
+                "68abb4393d028775"
+            ]
+        ]
+    },
+    {
+        "id": "68abb4393d028775",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "AUDIO codec",
+        "label": "AUDIO codec",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "e8adab232b1d4dce",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "AAC",
+                "value": "aac",
+                "type": "str"
+            },
+            {
+                "label": "AAC+",
+                "value": "libfdk_aac",
+                "type": "str"
+            },
+            {
+                "label": "AC3",
+                "value": "ac3",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1240,
+        "y": 3040,
+        "wires": [
+            [
+                "06b559ab4aca15cf"
+            ]
+        ]
+    },
+    {
+        "id": "06b559ab4aca15cf",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set AUDIO codec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.audio_codec",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 3040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f532c25947db01e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.input_choice",
+        "payloadType": "global",
+        "x": 1000,
+        "y": 3100,
+        "wires": [
+            [
+                "2e0d409b4b551cdb"
+            ]
+        ]
+    },
+    {
+        "id": "2e0d409b4b551cdb",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "INPUT choice",
+        "label": "INPUT choice",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "e8adab232b1d4dce",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "DSHOW",
+                "value": "dshow",
+                "type": "str"
+            },
+            {
+                "label": "UDP",
+                "value": "udp",
+                "type": "str"
+            },
+            {
+                "label": "RTMP",
+                "value": "rtmp",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1260,
+        "y": 3100,
+        "wires": [
+            [
+                "a7a765ba72c31ee8"
+            ]
+        ]
+    },
+    {
+        "id": "a7a765ba72c31ee8",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set INPUT choice",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.input_choice",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1490,
+        "y": 3100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e30ac73bb50c7aa",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "label": "ACH",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4f22c4dbc8bc16dd",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Mono",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Stereo",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "5.1",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "7.1",
+                "value": "8",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 2390,
+        "y": 480,
+        "wires": [
+            [
+                "ae40a9e5bdd0d113"
+            ]
+        ]
+    },
+    {
+        "id": "7a6a3cfb847eed62",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.udp_ip_port",
+        "payloadType": "global",
+        "x": 1020,
+        "y": 3160,
+        "wires": [
+            [
+                "d155c2f4a4a95ddf"
+            ]
+        ]
+    },
+    {
+        "id": "d155c2f4a4a95ddf",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "UDP ip:port",
+        "label": "UDP ip:port",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1241.765625,
+        "y": 3159.36328125,
+        "wires": [
+            [
+                "4b0e4ceac0843b6c"
+            ]
+        ]
+    },
+    {
+        "id": "4b0e4ceac0843b6c",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set udp ip:port",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.udp_ip_port",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1481.765625,
+        "y": 3159.36328125,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "793fd51eda4da3b4",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set rtmp ip:port",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.rtmp_ip_port",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 3220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17889543320f7239",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "RTMP ip:port",
+        "label": "RTMP ip:port",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1250,
+        "y": 3220,
+        "wires": [
+            [
+                "793fd51eda4da3b4"
+            ]
+        ]
+    },
+    {
+        "id": "bb9f89e948bdda86",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.rtmp_ip_port",
+        "payloadType": "global",
+        "x": 1000,
+        "y": 3220,
+        "wires": [
+            [
+                "17889543320f7239"
             ]
         ]
     }

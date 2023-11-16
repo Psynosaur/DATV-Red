@@ -127,18 +127,8 @@
         /* console.log(`Uplink: ${uplink} : SR : ${canvasClickBW}`) */
         
         /* we clicked on the beacon... */
-        if(uplink === undefined && canvasClickBW === undefined && busy){
-            /* Tune minitiouner on local pc with multicast message */
-            if (ev.ctrlKey && ev.altKey) {
-                lastCanvasClickBW = canvasClickBW;
-                fetch(`/setTune?` + new URLSearchParams({
-                    downlink: 10491.5,
-                    SR: 1.5
-                }));
-                /* RX tuning bar */
-                setRxClickState(activeColor, 43, magicSpaceAboveSignal, 362);
-                return;
-            }
+        if (uplink === undefined && canvasClickBW === undefined && busy) {
+            /* Tune longmynd on pluto */
             if (ev.ctrlKey) {
                 fetch(`/setRx?` + new URLSearchParams({
                     downlink: 10491.5,
@@ -148,36 +138,17 @@
                 setRxClickState(activeColor, 43, magicSpaceAboveSignal, 362);
                 return;
             }
+            /* Tune minitiouner on local pc with multicast message */
+            lastCanvasClickBW = canvasClickBW;
+            fetch(`/setTune?` + new URLSearchParams({
+                downlink: 10491.5,
+                SR: 1.5
+            }));
+            setRxClickState(activeColor, 43, magicSpaceAboveSignal, 362);
             return;
         }
         /* block must be highlighted or box drawn for fire of request */
-        if(uplink !== undefined && canvasClickBW !== undefined){
-            /* Tune minitiouner on local pc with multicast message */
-            if (ev.ctrlKey && ev.altKey) {
-                lastUplink = uplink;
-                lastCanvasClickBW = canvasClickBW;
-                fetch(`/setTune?` + new URLSearchParams({
-                    downlink,
-                    SR: canvasClickBW,
-                }));
-                /* RX tuning bar */
-                setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
-                return;
-            }
-            /* Channel calibration mode */
-            if (ev.altKey && ev.shiftKey) {
-                if(busy) return
-                lastUplink = uplink;
-                lastCanvasClickBW = canvasClickBW;
-                fetch(`/setTx?` + new URLSearchParams({
-                    uplink,
-                    downlink,
-                    SR: canvasClickBW,
-                    busy: false,
-                    tune: true
-                }));
-                return;
-            }
+        if (uplink !== undefined && canvasClickBW !== undefined && busy) {
             if (ev.ctrlKey) {
                 // send commands to onboard longmynd / OpenTuner...
                 // 333KS on > 500KS channel
@@ -196,6 +167,45 @@
                 setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
                 return;
             }
+            lastUplink = uplink;
+            lastCanvasClickBW = canvasClickBW;
+            fetch(`/setTune?` + new URLSearchParams({
+                downlink,
+                SR: canvasClickBW,
+            }));
+            /* RX tuning bar */
+            setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
+            return;
+        }
+        /* block must be highlighted or box drawn for fire of request */
+        if(uplink !== undefined && canvasClickBW !== undefined && !busy){
+            /* Tune minitiouner on local pc with multicast message */
+            /* if (ev.ctrlKey && ev.altKey) {
+                lastUplink = uplink;
+                lastCanvasClickBW = canvasClickBW;
+                fetch(`/setTune?` + new URLSearchParams({
+                    downlink,
+                    SR: canvasClickBW,
+                }));
+                // RX tuning bar 
+                setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
+                return;
+            } */
+            /* Channel calibration mode */
+            if (ev.altKey && ev.shiftKey) {
+                if(busy) return
+                lastUplink = uplink;
+                lastCanvasClickBW = canvasClickBW;
+                fetch(`/setTx?` + new URLSearchParams({
+                    uplink,
+                    downlink,
+                    SR: canvasClickBW,
+                    busy: false,
+                    tune: true
+                }));
+                return;
+            }
+           
             // 333KS on > 500KS channel
             if (ev.shiftKey && canvasClickBW > 0.333) {
                 canvasClickBW = 0.333;
@@ -213,36 +223,6 @@
                 SR: canvasClickBW,
                 busy: busy
             }));
-            
-            
-            /* set busy state as per time of click, outer busy variable changes on every render FFT */
-            let busyFetch = busy;
-            /* we ask the node-red api, is the pluto transmitting? */
-            /* only when busy is set eg, clicking on signal */
-            fetch('/status')
-            .then(res =>  res.text())
-            .then(text => {
-                console.dir(text)
-                if(text === "0"){
-                    /* we do not set the tune bar since you clicked on a active signal... */
-                    return;
-                }
-                /* When we are not transmitting we set the tune bar */
-                if(text === "1"){
-                    activeColor_1_tx = activeColor;
-                    activeXd1_1_tx = activeXd1;
-                    /* clicking on a signal sets the busyFetch to 'true', so tune bar sits on the top row */
-                    activeYd_1_tx = !busyFetch ? activeYd : magicSpaceUnderSignal;
-                    activeXd2_1_tx = activeXd2;
-                    if (storageSupport) {
-                        localStorage.activeColor_1_tx = activeColor_1_tx;
-                        localStorage.activeXd1_1_tx = activeXd1_1_tx;
-                        localStorage.activeYd_1_tx = activeYd_1_tx;
-                        localStorage.activeXd2_1_tx = activeXd2_1_tx;
-                    }
-                }
-            });         
-            if(busyFetch) return;
             activeColor_1_tx = activeColor;
             activeXd1_1_tx = activeXd1;
             activeYd_1_tx = activeYd ;
@@ -253,6 +233,36 @@
                 localStorage.activeYd_1_tx = activeYd_1_tx;
                 localStorage.activeXd2_1_tx = activeXd2_1_tx;
             }
+            
+            /* set busy state as per time of click, outer busy variable changes on every render FFT */
+            /* let busyFetch = busy; */
+            /* we ask the node-red api, is the pluto transmitting? */
+            /* only when busy is set eg, clicking on signal */
+            /* fetch('/status')
+            .then(res =>  res.text())
+            .then(text => {
+                console.dir(text)
+                if(text === "0"){
+                    // we do not set the tune bar since you clicked on a active signal... 
+                    return;
+                }
+                // When we are not transmitting we set the tune bar 
+                if(text === "1"){
+                    activeColor_1_tx = activeColor;
+                    activeXd1_1_tx = activeXd1;
+                    // clicking on a signal sets the busyFetch to 'true', so tune bar sits on the top row 
+                    activeYd_1_tx = !busyFetch ? activeYd : magicSpaceUnderSignal;
+                    activeXd2_1_tx = activeXd2;
+                    if (storageSupport) {
+                        localStorage.activeColor_1_tx = activeColor_1_tx;
+                        localStorage.activeXd1_1_tx = activeXd1_1_tx;
+                        localStorage.activeYd_1_tx = activeYd_1_tx;
+                        localStorage.activeXd2_1_tx = activeXd2_1_tx;
+                    }
+                }
+            });          */
+            /* if(busyFetch) return; */
+            
         }
     }
 
@@ -937,8 +947,8 @@
                         }
                         db_per_pixel = ((canvasHeight * 7 / 8) - (canvasHeight / 12)) / 15; // 15dB screen window
                         beacon_strength_pixel = canvasHeight - ((beacon_strength / 65536) * canvasHeight);
-                        /* let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} / ${((beacon_strength_pixel - signals[i].top) / db_per_pixel).toFixed(1)} dB(b)`; */
-                        let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} dB`;
+                        let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} / ${((beacon_strength_pixel - signals[i].top) / db_per_pixel).toFixed(1)} dBb`;
+                        /* let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} dB`; */
                         ctx.fillText(mer,
                             signals[i].start - ((signals[i].start - signals[i].end) / 2),
                             (canvasHeight * 7 / 8) - (7 * ((canvasHeight * 7 / 8) - signals[i].top) / 8));
@@ -1084,4 +1094,4 @@
     window.addEventListener("orientationchange", checkOrientation, false);
     // Android doesn't always fire orientationChange on 180 degree turns
     setInterval(checkOrientation, 2000);
-    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, CTRL + click: Tunes onboard Longmynd, CTRL + ALT + click: Minitiouner <a  href="https://youtu.be/-ZdQOVg26_0" target="_blank">channel calibration</a></span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><input type="color" id="fft-colour-select" value="$(fft_colour)"><label style="color: white;padding: 3px" for="band-colour-select">Bands</label><input type="color" id="band-colour-select" value="$(band_colour)"><select id="background-colour-select"><option value="black" selected="selected">Black<option value="white">White</select></div></div></div></div>
+    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, CTRL + click: Tunes onboard Longmynd, clicking signal tunes Minitiouner <a  href="https://youtu.be/-ZdQOVg26_0" target="_blank">channel calibration</a></span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><input type="color" id="fft-colour-select" value="$(fft_colour)"><label style="color: white;padding: 3px" for="band-colour-select">Bands</label><input type="color" id="band-colour-select" value="$(band_colour)"><select id="background-colour-select"><option value="black" selected="selected">Black<option value="white">White</select></div></div></div></div>
