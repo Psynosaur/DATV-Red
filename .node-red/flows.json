@@ -4,7 +4,7 @@
         "type": "tab",
         "label": "DATV Simple V2.4.5",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n     - Fixes `powershell` script permissions\r\n     - This should remedy blank stats in app\r\n     - Clicking signal tunes minitiouner\r\n     - Tx parameters can now only be set by click on channel bars\r\n     - Removed unused state check `API`\r\n     - Fixed toggle button states\r\n       - Use minitiouner\r\n       - Use ffplay\r\n       - ffplay on top\r\n     - Rebooting and power kill handling\r\n       - Press restore when pluto connects\r\n       - this is mostly automatic \r\n     - INPUT mode\r\n     - Audio channels\r\n     - UDP and RTMP addressess\r\n     - Added back db below beacon on Spectrum\r\n\r\n\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n     - Fixes `powershell` script permissions\r\n     - This should remedy blank stats in app\r\n     - Clicking signal tunes minitiouner\r\n     - Tx parameters can now only be set by click on channel bars\r\n     - Removed unused state check `API`\r\n     - Fixed toggle button states\r\n       - Use minitiouner\r\n       - Use ffplay\r\n       - ffplay on top\r\n     - Rebooting and power kill handling\r\n       - Press restore when pluto connects\r\n       - this is mostly automatic \r\n     - INPUT mode\r\n     - Audio channels\r\n     - UDP and RTMP addressess\r\n     - Added back db below beacon on spectrum\r\n     - Audio sample rate added\r\n     - Fixed ffplay powershell checking\r\n     - calculation node update   \r\n     - even better startup restore\r\n\r\n",
         "env": []
     },
     {
@@ -474,11 +474,12 @@
         "nodes": [
             "26345a392c75d93d",
             "2a2a4d68c3558cc9",
-            "152b6c29f84ec7c6"
+            "152b6c29f84ec7c6",
+            "ae913dfdb8f9519a"
         ],
         "x": 3314,
         "y": 491.5,
-        "w": 712,
+        "w": 992,
         "h": 97
     },
     {
@@ -637,7 +638,6 @@
             "ac88fa94a49129ec",
             "347c8041af1a52e0",
             "92bdb03cfb54e314",
-            "54cbda477035a37f",
             "295347c7270ee5f9",
             "689b33376ddc8653",
             "4b23c7a819f12eb7",
@@ -669,7 +669,8 @@
             "32e18f58d4f086f8",
             "1decf932a1bf2fcd",
             "ba4a435e3fbcd377",
-            "a944ecbfc565c58b"
+            "a944ecbfc565c58b",
+            "54cbda477035a37f"
         ],
         "x": 34,
         "y": 999,
@@ -1468,8 +1469,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 710,
-        "y": 1480,
+        "x": 930,
+        "y": 1440,
         "wires": []
     },
     {
@@ -2284,28 +2285,6 @@
         "wires": []
     },
     {
-        "id": "54cbda477035a37f",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "Global: gain",
-        "func": "var payload = parseFloat(msg.payload).toFixed(2);\nif (payload !== global.get(\"device.tx.gain\")){\n    global.set(\"device.tx.gain\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 730,
-        "y": 1440,
-        "wires": [
-            [
-                "18d422fe182d6186",
-                "be4a04a5a054f988"
-            ]
-        ]
-    },
-    {
         "id": "295347c7270ee5f9",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
@@ -2391,7 +2370,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: frequency",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.frequency\")) {\n    if (global.get(\"tune\")) {\n        let tune_table = global.get(\"tune_table\");\n        tune_table.push(Number(msg.payload))\n        global.set(\"tune_table\", tune_table);\n        global.set(\"tune\", false);\n    }\n    global.set(\"device.tx.frequency\", payload);\n    return msg;\n}\n\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.frequency\")) {\n    if (global.get(\"tune\")) {\n        let tune_table = global.get(\"tune_table\");\n        tune_table.push(Number(msg.payload))\n        global.set(\"tune_table\", tune_table);\n        global.set(\"tune\", false);\n    }\n    // global.set(\"device.tx.frequency\", payload);\n    return msg;\n}\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3271,7 +3250,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: Gain",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/gain`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.gain\", payload);\nglobal.set(\"settings.gain\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/gain`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.gain\", Number(payload));\nglobal.set(\"settings.gain\", Number(payload));\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -4844,7 +4823,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1490,
+        "x": 1510,
         "y": 540,
         "wires": [
             [
@@ -5732,9 +5711,8 @@
         "id": "2b527baf8d8b1450",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "4bfefaeb7f82f4c6",
-        "name": "",
+        "name": "inject on first load",
         "props": [
             {
                 "p": "payload"
@@ -5747,7 +5725,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "str",
-        "x": 1250,
+        "x": 1290,
         "y": 540,
         "wires": [
             [
@@ -6241,6 +6219,7 @@
         "id": "f9186ed78accdb6c",
         "type": "ui_dropdown",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "1f5722b7aff1a710",
         "name": "",
         "label": "HW",
@@ -6282,34 +6261,44 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
         "name": "",
-        "label": "SW",
+        "label": "Codec",
         "tooltip": "",
         "place": "Select...",
         "group": "4f22c4dbc8bc16dd",
         "order": 3,
-        "width": 3,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
         "options": [
             {
-                "label": "",
+                "label": "SW - libx264",
                 "value": "libx264",
                 "type": "str"
             },
             {
-                "label": "",
+                "label": "SW - libx265",
                 "value": "libx265",
                 "type": "str"
             },
             {
-                "label": "",
+                "label": "SW - libvvenc",
                 "value": "libvvenc",
                 "type": "str"
             },
             {
-                "label": "",
+                "label": "SW - libaom-av1",
                 "value": "libaom-av1",
+                "type": "str"
+            },
+            {
+                "label": "HW - h264_nvenc",
+                "value": "h264_nvenc",
+                "type": "str"
+            },
+            {
+                "label": "HW - hevc_nvenc",
+                "value": "hevc_nvenc",
                 "type": "str"
             }
         ],
@@ -9005,7 +8994,7 @@
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
         "g": "158a8e642f8da366",
-        "name": "ffplay size",
+        "name": "use ffplay",
         "props": [
             {
                 "p": "payload"
@@ -9145,7 +9134,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1473030260740438",
         "name": "Calculate bitrate function",
-        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let codec = global.get(\"settings.CODEC\");\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n\n    if (sr > 20 && sr < 36)\n        videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    if (sr > 35 && sr < 67)\n        videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    if (sr > 66 && sr < 126)\n        videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    if (sr > 125 && sr < 251)\n        videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    if (sr > 250 && sr < 334)\n        videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    if (sr > 333 && sr < 501)\n        videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    if (sr > 500 && sr < 1001)\n        videoBitRate = (TSBitRate * 0.87) - audioBitRate;\n    if (sr > 1000 && sr < 1501)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    if (sr > 1500 && sr < 3001)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = (videoBitRate * 0.80);\n            if (fec === \"1/3\") videoBitRate = (videoBitRate * 0.87);\n            if (fec === \"2/5\") videoBitRate = (videoBitRate * 0.91);\n            if (fec === \"1/2\") videoBitRate = (videoBitRate * 0.94);\n            if (fec === \"3/5\") videoBitRate = (videoBitRate * 0.96);\n            if (fec === \"2/3\") videoBitRate = (videoBitRate * 0.98);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.02;\n            break;\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.03;\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.04;\n            break;\n    }\n    // if (codec === \"libvvenc\") videoBitRate = videoBitRate * 0.95;   \n    global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    global.set(\"settings.VBITRATE\", Number(videoBitRate.toFixed(2)));\n    return msg;\n}\n",
+        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let codec = global.get(\"settings.CODEC\");\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n\n    if (sr > 20 && sr < 36)\n        videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    if (sr > 35 && sr < 67)\n        videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    if (sr > 66 && sr < 126)\n        videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    if (sr > 125 && sr < 251)\n        videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    if (sr > 250 && sr < 334)\n        videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    if (sr > 333 && sr < 501)\n        videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    if (sr > 500 && sr < 1001)\n        videoBitRate = (TSBitRate * 0.87) - audioBitRate;\n    if (sr > 1000 && sr < 1501)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    if (sr > 1500 && sr < 3001)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = (videoBitRate * 0.80);\n            if (fec === \"1/3\") videoBitRate = (videoBitRate * 0.87);\n            if (fec === \"2/5\") videoBitRate = (videoBitRate * 0.91);\n            if (fec === \"1/2\") videoBitRate = (videoBitRate * 0.94);\n            if (fec === \"3/5\") videoBitRate = (videoBitRate * 0.96);\n            if (fec === \"2/3\") videoBitRate = (videoBitRate * 0.98);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.02;\n            break;\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.03;\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.04;\n            break;\n    }\n    if (videoBitRate > 1 && videoBitRate < 61) videoBitRate = (videoBitRate * 0.5);\n    if (videoBitRate > 60 && videoBitRate < 101) videoBitRate = (videoBitRate * 0.7);\n    // if (codec === \"libvvenc\") videoBitRate = videoBitRate * 0.95;   \n    global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    global.set(\"settings.VBITRATE\", Number(videoBitRate.toFixed(2)));\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10423,7 +10412,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3890,
+        "x": 4170,
         "y": 540,
         "wires": [
             []
@@ -10442,7 +10431,7 @@
         "winHide": true,
         "oldrc": false,
         "name": "find ffplay window",
-        "x": 3630,
+        "x": 3890,
         "y": 540,
         "wires": [
             [
@@ -10458,17 +10447,23 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "05f20235a9c45346",
         "name": "check for ffplay",
-        "props": [],
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
         "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "device.rx.ffplay",
+        "payloadType": "global",
         "x": 3440,
         "y": 540,
         "wires": [
             [
-                "2a2a4d68c3558cc9"
+                "ae913dfdb8f9519a"
             ]
         ]
     },
@@ -12356,7 +12351,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1520,
+        "x": 1640,
         "y": 900,
         "wires": [
             [
@@ -12371,7 +12366,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "0",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -12382,7 +12377,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1300,
+        "x": 1340,
         "y": 760,
         "wires": [
             [
@@ -12968,6 +12963,49 @@
         "y": 3260,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ae913dfdb8f9519a",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "05f20235a9c45346",
+        "name": "only run when using ffplay",
+        "func": "if(msg.payload){\n  return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3650,
+        "y": 540,
+        "wires": [
+            [
+                "2a2a4d68c3558cc9"
+            ]
+        ]
+    },
+    {
+        "id": "54cbda477035a37f",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "Global: gain",
+        "func": "var payload = parseFloat(msg.payload).toFixed(2);\nif (payload !== global.get(\"device.tx.gain\")){\n    // global.set(\"device.tx.gain\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 1440,
+        "wires": [
+            [
+                "18d422fe182d6186",
+                "be4a04a5a054f988"
+            ]
         ]
     }
 ]
