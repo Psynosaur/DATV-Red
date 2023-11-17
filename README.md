@@ -8,7 +8,9 @@
 ## Setup and use
 1. Download [latest release](https://github.com/Psynosaur/DATV-Simple/releases) and extract to folder `DATV-Simple` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
 
-2. setup mqtt broker in `pluto.json` file
+2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Simple`
+
+3. Setup mqtt broker in `pluto.json` file
    
    ```json
     {
@@ -23,14 +25,14 @@
       "payload": "ZS1SCI" /* Your callsign */
     }
    ```
-3. double click `DATV-Start.cmd`
+4. Double click `DATV-Start.cmd`
 
-4. Press the `set call` button to set your call sign and reboot pluto
+5. Press the `set call` button to set your call sign and reboot pluto
   ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/59a106a8-2063-4f72-ae8d-886202121e3d)
 
-5. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+6. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
-6. Have fun
+7. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/24dcd240-e742-4776-a6a5-986730f174c4)
 
