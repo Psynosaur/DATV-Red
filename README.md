@@ -34,7 +34,8 @@
 
 7. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/24dcd240-e742-4776-a6a5-986730f174c4)
+![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/b44b10b4-16cf-4f26-9870-aa05610a9f09)
+
 
 If you'd like to buy me a coffee ☕️☕️☕:
 
@@ -48,31 +49,14 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/6718292b-fee6-44af-8273-f52b30c44cf1)
 
 
-## Change the scaling settings for the app to accomodate 1080p monitors.
-
-- go to [flow editor](http://127.0.0.1:1880/)
-
- ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/10d683ec-f646-4d97-9545-08e60bdc5114)
- ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/ffa637ad-ef4f-4cd2-84bc-50d3cb666540)
- ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/4d631029-4853-4bc2-a96b-32aaacccc085) 
- 
- Change both horizontal and vertical to 37
-
- ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/8745f94d-b2a9-43a2-ad0d-7806f23afd1e)
-
-
-
-
 ## Motivation
 DATV transmissions normally have the following programs open:
  1. OBS
  2. DATV-Easy/FreeStreamCoder (ffmpeg maker...) < - - - **DATV-Simple**
  3. Panel for operating PlutoSDR  < - - - - - - - - - - - - - - **DATV-Simple**                
- 4. OpenTuner / Minitioune < - - - - - We could use opentuner / quicktune spectrum as means to drive tx settings?
- 5. QuickTune / Chat
+ 4. OpenTuner / Minitioune < - - - - - - - - - - - - - - **DATV-Simple** tunes Minitioune, perhaps OT too [Tom](https://github.com/tomvdb) ?
+ 5. QuickTune / Chat < - - - - - - - - - - - - - - - - - - **DATV-Simple**
 
-So that is five programs and their child windows we need open just to have TX and RX.
 
-I'd like to make that 3 or perhaps even less, it would be nice to run this on any operating system
 
 
