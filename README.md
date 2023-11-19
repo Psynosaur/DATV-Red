@@ -46,8 +46,6 @@ Batch files previously used in this project were from DL5OCD Michael and his [DA
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/6718292b-fee6-44af-8273-f52b30c44cf1)
-
 
 ## Motivation
 DATV transmissions normally have the following programs open:
