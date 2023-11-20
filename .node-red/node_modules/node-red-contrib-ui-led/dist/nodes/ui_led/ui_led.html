@@ -1,0 +1,869 @@
+<script type="text/javascript">
+(function () {
+    'use strict';
+
+    var guaranteeInt = function (value, fallback, base) {
+        if (base === void 0) { base = 10; }
+        var maybeInt = tryForInt(value, base);
+        if (typeof maybeInt === 'number') {
+            return maybeInt;
+        }
+        return fallback;
+    };
+    var tryForInt = function (value, base) {
+        if (base === void 0) { base = 10; }
+        if (typeof value === 'number') {
+            return Math.floor(value);
+        }
+        if (typeof value === 'string') {
+            try {
+                return parseInt(value, base);
+            }
+            catch (_error) {
+                return undefined;
+            }
+        }
+        return undefined;
+    };
+
+    var groupId = 'node-input-group';
+    var sizeId = 'node-input-size';
+    var widthId = 'node-input-width';
+    var heightId = 'node-input-height';
+    var labelId = 'node-input-label';
+    var labelPlacementId = 'node-input-labelPlacement';
+    var labelAlignmentId = 'node-input-labelAlignment';
+    var shapeId = 'node-input-shape';
+    var showGlowId = 'node-input-showGlow';
+    var showPreviewId = 'showPreview';
+    var showPreviewShowingClass = 'showingPreview';
+    var previewId = 'ui_led-preview';
+    var previewsContainerClass = 'previewsContainer';
+    var previewContainerClass = 'previewContainer';
+    var colorForValueEditContainerId = 'node-input-colorForValue-container';
+    var contextPrefix = 'node-input-colorForValue';
+    var rowHandleClass = contextPrefix + '-handle';
+    var colorFieldClass = contextPrefix + '-color';
+    var valueFieldClass = contextPrefix + 'value';
+    var valueTypeFieldClass = contextPrefix + '-valueType';
+    var inputErrorClass = 'input-error';
+    var addColorForValueId = 'node-input-add-color';
+
+    var WidthAutosize = 0;
+    function getSelectedGroupNodeDef(node, RED) {
+        var _a;
+        var group = ((_a = $('#' + groupId)
+            .val()) === null || _a === void 0 ? void 0 : _a.toString()) || node.group;
+        if (!group) {
+            return undefined;
+        }
+        return RED.nodes.node(group);
+    }
+    var willFitInGroup = function (width, groupNode) {
+        if (width === WidthAutosize) {
+            return true;
+        }
+        if (!groupNode) {
+            return true;
+        }
+        if (width > groupNode.width) {
+            return false;
+        }
+        return true;
+    };
+    var willFitWithLabel = function (width, label, groupNode) {
+        if (label.length === 0) {
+            return true;
+        }
+        if (groupNode && groupNode.width === 1) {
+            return false;
+        }
+        if (width === 1) {
+            return false;
+        }
+        return true;
+    };
+    var validateWidthFactory = function (RED) {
+        return function (newValue) {
+            var newWidthValue;
+            if (typeof newValue === 'number') {
+                newWidthValue = newValue;
+            }
+            else if (typeof newValue === 'string') {
+                newWidthValue = parseInt(newValue, 10);
+            }
+            else {
+                return false;
+            }
+            var groupNode = getSelectedGroupNodeDef(this, RED);
+            var fitsInGroup = willFitInGroup(newWidthValue, groupNode);
+            var fitsWithLabel = willFitWithLabel(newWidthValue, this.label, groupNode);
+            $('#node-input-size').toggleClass('input-error', !fitsInGroup);
+            $('#node-input-label').toggleClass('input-error', !fitsWithLabel);
+            return fitsInGroup;
+        };
+    };
+    var validateLabelFactory = function (RED) {
+        return function (newValue) {
+            if (newValue.length === 0) {
+                return true;
+            }
+            var groupNode = getSelectedGroupNodeDef(this, RED);
+            var width = guaranteeInt(this.width, WidthAutosize);
+            var fitsWithLabel = willFitWithLabel(width, newValue, groupNode);
+            $('#node-input-label').toggleClass('input-error', !fitsWithLabel);
+            return fitsWithLabel;
+        };
+    };
+    var validateColorForValueFactory = function (RED) {
+        return function (newValue) {
+            var useNewValue;
+            if (typeof newValue === 'string') {
+                useNewValue = JSON.parse(newValue);
+            }
+            else {
+                useNewValue = newValue;
+            }
+            // TODO: check for duplicate values
+            for (var index = 0; index < useNewValue.length; index++) {
+                var colorForValue = useNewValue[index];
+                if (!colorForValue.color || colorForValue.color.length === 0) {
+                    return false;
+                }
+                // We're allowing undefined as a valid value
+                // if (colorForValue.value === undefined) {
+                //     return false;
+                // }
+                if (!colorForValue.valueType) {
+                    // || colorForValue.color.valueType === 0) {
+                    return false;
+                }
+                if (!RED.validators.typedInput(colorForValue.valueType)) {
+                    // console.log('Typed', colorForValue.valueType)
+                    return false;
+                }
+            }
+            return true;
+        };
+    };
+    var getColorForValueFromContainer = function (containerId) {
+        if (containerId === void 0) { containerId = colorForValueEditContainerId; }
+        var colorsElement = $('#' + containerId).children();
+        return colorsElement
+            .map(function (index, element) {
+            var _a, _b, _c;
+            var jElement = $(element);
+            var color = ((_a = jElement
+                .find('.' + colorFieldClass)
+                .val()) === null || _a === void 0 ? void 0 : _a.toString()) || '';
+            var value = ((_b = jElement
+                .find('.' + valueFieldClass)
+                .val()) === null || _b === void 0 ? void 0 : _b.toString()) || 'null';
+            var valueType = (((_c = jElement
+                .find('.' + valueTypeFieldClass)
+                .val()) === null || _c === void 0 ? void 0 : _c.toString()) || 'str');
+            return {
+                color: color,
+                value: value,
+                valueType: valueType
+            };
+        })
+            .toArray();
+    };
+    var getGroupId = function () {
+        return $('#' + groupId).val();
+    };
+
+    var colorForValueDefault = [
+        {
+            color: 'red',
+            value: false,
+            valueType: 'bool'
+        },
+        {
+            color: 'green',
+            value: true,
+            valueType: 'bool'
+        }
+    ];
+    var defaultsFactory = function (RED) {
+        return {
+            order: { value: 0 },
+            group: { value: 'ui_group', type: 'ui_group', required: true },
+            width: {
+                value: 0,
+                validate: validateWidthFactory(RED)
+            },
+            height: { value: 0 },
+            label: {
+                value: '',
+                validate: validateLabelFactory(RED)
+            },
+            labelPlacement: { value: 'left' },
+            labelAlignment: { value: 'left' },
+            colorForValue: {
+                required: true,
+                // TODO: switch to object sorted by value
+                value: colorForValueDefault,
+                validate: validateColorForValueFactory(RED)
+            },
+            allowColorForValueInMessage: { value: false },
+            shape: { value: 'circle' },
+            showGlow: { value: true },
+            name: { value: '' }
+        };
+    };
+
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+
+    function __makeTemplateObject(cooked, raw) {
+        if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+        return cooked;
+    }
+
+    var Values = [
+        { name: 'aqua', hex: '#00FFFF' },
+        { name: 'aliceblue', hex: '#F0F8FF' },
+        { name: 'antiquewhite', hex: '#FAEBD7' },
+        { name: 'black', hex: '#000000' },
+        { name: 'blue', hex: '#0000FF' },
+        { name: 'cyan', hex: '#00FFFF' },
+        { name: 'darkblue', hex: '#00008B' },
+        { name: 'darkcyan', hex: '#008B8B' },
+        { name: 'darkgreen', hex: '#006400' },
+        { name: 'darkturquoise', hex: '#00CED1' },
+        { name: 'deepskyblue', hex: '#00BFFF' },
+        { name: 'green', hex: '#008000' },
+        { name: 'lime', hex: '#00FF00' },
+        { name: 'mediumblue', hex: '#0000CD' },
+        { name: 'mediumspringgreen', hex: '#00FA9A' },
+        { name: 'navy', hex: '#000080' },
+        { name: 'springgreen', hex: '#00FF7F' },
+        { name: 'teal', hex: '#008080' },
+        { name: 'midnightblue', hex: '#191970' },
+        { name: 'dodgerblue', hex: '#1E90FF' },
+        { name: 'lightseagreen', hex: '#20B2AA' },
+        { name: 'forestgreen', hex: '#228B22' },
+        { name: 'seagreen', hex: '#2E8B57' },
+        { name: 'darkslategray', hex: '#2F4F4F' },
+        { name: 'darkslategrey', hex: '#2F4F4F' },
+        { name: 'limegreen', hex: '#32CD32' },
+        { name: 'mediumseagreen', hex: '#3CB371' },
+        { name: 'turquoise', hex: '#40E0D0' },
+        { name: 'royalblue', hex: '#4169E1' },
+        { name: 'steelblue', hex: '#4682B4' },
+        { name: 'darkslateblue', hex: '#483D8B' },
+        { name: 'mediumturquoise', hex: '#48D1CC' },
+        { name: 'indigo', hex: '#4B0082' },
+        { name: 'darkolivegreen', hex: '#556B2F' },
+        { name: 'cadetblue', hex: '#5F9EA0' },
+        { name: 'cornflowerblue', hex: '#6495ED' },
+        { name: 'mediumaquamarine', hex: '#66CDAA' },
+        { name: 'dimgray', hex: '#696969' },
+        { name: 'dimgrey', hex: '#696969' },
+        { name: 'slateblue', hex: '#6A5ACD' },
+        { name: 'olivedrab', hex: '#6B8E23' },
+        { name: 'slategray', hex: '#708090' },
+        { name: 'slategrey', hex: '#708090' },
+        { name: 'lightslategray', hex: '#778899' },
+        { name: 'lightslategrey', hex: '#778899' },
+        { name: 'mediumslateblue', hex: '#7B68EE' },
+        { name: 'lawngreen', hex: '#7CFC00' },
+        { name: 'aquamarine', hex: '#7FFFD4' },
+        { name: 'chartreuse', hex: '#7FFF00' },
+        { name: 'gray', hex: '#808080' },
+        { name: 'grey', hex: '#808080' },
+        { name: 'maroon', hex: '#800000' },
+        { name: 'olive', hex: '#808000' },
+        { name: 'purple', hex: '#800080' },
+        { name: 'lightskyblue', hex: '#87CEFA' },
+        { name: 'skyblue', hex: '#87CEEB' },
+        { name: 'blueviolet', hex: '#8A2BE2' },
+        { name: 'darkmagenta', hex: '#8B008B' },
+        { name: 'darkred', hex: '#8B0000' },
+        { name: 'saddlebrown', hex: '#8B4513' },
+        { name: 'darkseagreen', hex: '#8FBC8F' },
+        { name: 'lightgreen', hex: '#90EE90' },
+        { name: 'mediumpurple', hex: '#9370DB' },
+        { name: 'darkviolet', hex: '#9400D3' },
+        { name: 'palegreen', hex: '#98FB98' },
+        { name: 'darkorchid', hex: '#9932CC' },
+        { name: 'yellowgreen', hex: '#9ACD32' },
+        { name: 'sienna', hex: '#A0522D' },
+        { name: 'brown', hex: '#A52A2A' },
+        { name: 'darkgray', hex: '#A9A9A9' },
+        { name: 'darkgrey', hex: '#A9A9A9' },
+        { name: 'greenyellow', hex: '#ADFF2F' },
+        { name: 'lightblue', hex: '#ADD8E6' },
+        { name: 'paleturquoise', hex: '#AFEEEE' },
+        { name: 'lightsteelblue', hex: '#B0C4DE' },
+        { name: 'powderblue', hex: '#B0E0E6' },
+        { name: 'firebrick', hex: '#B22222' },
+        { name: 'darkgoldenrod', hex: '#B8860B' },
+        { name: 'mediumorchid', hex: '#BA55D3' },
+        { name: 'rosybrown', hex: '#BC8F8F' },
+        { name: 'darkkhaki', hex: '#BDB76B' },
+        { name: 'silver', hex: '#C0C0C0' },
+        { name: 'mediumvioletred', hex: '#C71585' },
+        { name: 'indianred', hex: '#CD5C5C' },
+        { name: 'peru', hex: '#CD853F' },
+        { name: 'chocolate', hex: '#D2691E' },
+        { name: 'tan', hex: '#D2B48C' },
+        { name: 'lightgray', hex: '#D3D3D3' },
+        { name: 'lightgrey', hex: '#D3D3D3' },
+        { name: 'thistle', hex: '#D8BFD8' },
+        { name: 'goldenrod', hex: '#DAA520' },
+        { name: 'orchid', hex: '#DA70D6' },
+        { name: 'palevioletred', hex: '#DB7093' },
+        { name: 'crimson', hex: '#DC143C' },
+        { name: 'gainsboro', hex: '#DCDCDC' },
+        { name: 'plum', hex: '#DDA0DD' },
+        { name: 'burlywood', hex: '#DEB887' },
+        { name: 'lightcyan', hex: '#E0FFFF' },
+        { name: 'lavender', hex: '#E6E6FA' },
+        { name: 'darksalmon', hex: '#E9967A' },
+        { name: 'palegoldenrod', hex: '#EEE8AA' },
+        { name: 'violet', hex: '#EE82EE' },
+        { name: 'azure', hex: '#F0FFFF' },
+        { name: 'honeydew', hex: '#F0FFF0' },
+        { name: 'khaki', hex: '#F0E68C' },
+        { name: 'lightcoral', hex: '#F08080' },
+        { name: 'sandybrown', hex: '#F4A460' },
+        { name: 'beige', hex: '#F5F5DC' },
+        { name: 'mintcream', hex: '#F5FFFA' },
+        { name: 'wheat', hex: '#F5DEB3' },
+        { name: 'whitesmoke', hex: '#F5F5F5' },
+        { name: 'ghostwhite', hex: '#F8F8FF' },
+        { name: 'lightgoldenrodyellow', hex: '#FAFAD2' },
+        { name: 'linen', hex: '#FAF0E6' },
+        { name: 'salmon', hex: '#FA8072' },
+        { name: 'oldlace', hex: '#FDF5E6' },
+        { name: 'bisque', hex: '#FFE4C4' },
+        { name: 'blanchedalmond', hex: '#FFEBCD' },
+        { name: 'coral', hex: '#FF7F50' },
+        { name: 'cornsilk', hex: '#FFF8DC' },
+        { name: 'darkorange', hex: '#FF8C00' },
+        { name: 'deeppink', hex: '#FF1493' },
+        { name: 'floralwhite', hex: '#FFFAF0' },
+        { name: 'fuchsia', hex: '#FF00FF' },
+        { name: 'gold', hex: '#FFD700' },
+        { name: 'hotpink', hex: '#FF69B4' },
+        { name: 'ivory', hex: '#FFFFF0' },
+        { name: 'lavenderblush', hex: '#FFF0F5' },
+        { name: 'lemonchiffon', hex: '#FFFACD' },
+        { name: 'lightpink', hex: '#FFB6C1' },
+        { name: 'lightsalmon', hex: '#FFA07A' },
+        { name: 'lightyellow', hex: '#FFFFE0' },
+        { name: 'magenta', hex: '#FF00FF' },
+        { name: 'mistyrose', hex: '#FFE4E1' },
+        { name: 'moccasin', hex: '#FFE4B5' },
+        { name: 'navajowhite', hex: '#FFDEAD' },
+        { name: 'orange', hex: '#FFA500' },
+        { name: 'orangered', hex: '#FF4500' },
+        { name: 'papayawhip', hex: '#FFEFD5' },
+        { name: 'peachpuff', hex: '#FFDAB9' },
+        { name: 'pink', hex: '#FFC0CB' },
+        { name: 'red', hex: '#FF0000' },
+        { name: 'seashell', hex: '#FFF5EE' },
+        { name: 'snow', hex: '#FFFAFA' },
+        { name: 'tomato', hex: '#FF6347' },
+        { name: 'white', hex: '#FFFFFF' },
+        { name: 'yellow', hex: '#FFFF00' }
+    ];
+    var HexForNameMapDefault = {};
+    var HexForNameMap = Values.reduce(function (map, object) {
+        map[object.name] = object.hex;
+        return map;
+    }, HexForNameMapDefault);
+    var hexForName = function (name) {
+        var normalized = name.toLowerCase();
+        return HexForNameMap[normalized];
+    };
+    var NameForHexMapDefault = {};
+    var NameForHexMap = Values.reduce(function (map, object) {
+        map[object.hex] = object.name;
+        return map;
+    }, NameForHexMapDefault);
+    var nameForHex = function (hex) {
+        var normalized = hex.toUpperCase();
+        if (!normalized.startsWith('#')) {
+            normalized = '#' + normalized;
+        }
+        return NameForHexMap[normalized];
+    };
+
+    var glowSize = 7;
+    var ledStyle = function (color, glow, sizeMultiplier) {
+        if (glow) {
+            return "\n      background-color: " + color + ";\n      box-shadow:\n        #0000009e 0 0px 1px 0px,\n        " + color + " 0 0px " + glowSize * sizeMultiplier + "px " + Math.floor((glowSize * sizeMultiplier) / 3) + "px,\n    inset #00000017 0 -1px 1px 0px;";
+        }
+        else {
+            // TODO: duplicate code because of execution scope, fix this shit :|
+            return "\n      background-color: " + color + "; \n      box-shadow:\n        #0000009e 0 0px 1px 0px,\n        inset #ffffff8c 0px 1px 2px,\n        inset #00000033 0 -1px 1px 0px,\n        inset " + color + " 0 -1px 2px;";
+        }
+    };
+    // HACK: workaround because ratio trick isn't working consistently across browsers
+    var nodeRedDashboardUICardVerticalPadding = 3 * 2;
+    // const nodeRedDashboardUICardHorizontalPadding = 6 * 2
+    var nodeRedDashboardUICardHeight = function (sizeMultiplier) {
+        var height = 48 + (sizeMultiplier - 1) * 54;
+        if (height >= 4) {
+            height -= 6; // For some reason the difference between 3 and 4 is 48
+        }
+        return height - nodeRedDashboardUICardVerticalPadding;
+    };
+    var ledElement = function (controlClass, ledId, shape, color, glow, sizeMultiplier) {
+        var ledContainerPadding = (glowSize + 4) * sizeMultiplier;
+        var length = nodeRedDashboardUICardHeight(sizeMultiplier) - ledContainerPadding * 2;
+        // TODO: if show glow is turned off we should not include this padding for the glow?
+        var ledContentsStyle = String.raw(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    div.", ".led_contents {\n      min-height: ", "px;\n      min-width: ", "px;\n      height: ", "px;\n      width: ", "px;\n      max-height: ", "px;\n      max-width: ", "px;\n      text-align: center;\n      margin: ", "px;\n      ", "\n    }"], ["\n    div.", ".led_contents {\n      min-height: ", "px;\n      min-width: ", "px;\n      height: ", "px;\n      width: ", "px;\n      max-height: ", "px;\n      max-width: ", "px;\n      text-align: center;\n      margin: ", "px;\n      ", "\n    }"])), controlClass, length, length, length, length, length, length, ledContainerPadding, shape === 'circle' ? "border-radius: 50%;" : '');
+        var ledCurveShineReflectionStyle = String.raw(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    .", ".curveShine {\n      width: 70%; \n      height: 70%; \n      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,255,31,0) 60%);'\n    }"], ["\n    .", ".curveShine {\n      width: 70%; \n      height: 70%; \n      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,255,31,0) 60%);'\n    }"])), controlClass);
+        var styles = String.raw(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n        ", "\n        ", "\n    "], ["\n        ", "\n        ", "\n    "])), ledContentsStyle, ledCurveShineReflectionStyle);
+        var ledCurveReflection = String.raw(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n        <div class='", " curveShine'></div>"], ["\n        <div class='", " curveShine'></div>"])), controlClass);
+        var ledContentsElement = String.raw(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n    <div \n      class='", " led_contents' \n      id='", "' \n      style='", "'>\n      ", "\n    </div>"], ["\n    <div \n      class='", " led_contents' \n      id='", "' \n      style='", "'>\n      ", "\n    </div>"])), controlClass, ledId, ledStyle(color, glow, sizeMultiplier),  '');
+        return String.raw(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n    <style>\n        ", "\n    </style>\n    ", ""], ["\n    <style>\n        ", "\n    </style>\n    ", ""])), styles, ledContentsElement);
+    };
+    var control = function (controlClass, ledId, label, labelPlacement, labelAlignment, shape, color, glow, sizeMultiplier) {
+        var hasName = function () {
+            return typeof label === 'string' && label !== '';
+        };
+        var name = function () {
+            if (hasName()) {
+                return "<span class=\"name\">" + label + "</span>";
+            }
+            return '';
+        };
+        var optionalName = function (display) {
+            if (display) {
+                return name();
+            }
+            return '';
+        };
+        var controlStyle = String.raw(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n    div.", ".control {\n      display: flex;\n      flex-direction: row;\n      flex-wrap: nowrap;\n\n      justify-content: ", ";\n      align-items: center;\n\n      height: 100%;\n      width: 100%;\n      position: relative;\n\n      overflow: hidden;\n    }"], ["\n    div.", ".control {\n      display: flex;\n      flex-direction: row;\n      flex-wrap: nowrap;\n\n      justify-content: ", ";\n      align-items: center;\n\n      height: 100%;\n      width: 100%;\n      position: relative;\n\n      overflow: hidden;\n    }"])), controlClass, hasName() ? 'space-between' : 'center');
+        var labelStyle = String.raw(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n    div.", " > span.name {\n      text-align: ", ";\n      margin-left: 6px;\n      margin-right: 6px;\n      overflow-wrap: break-word;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      flex-grow: 1;\n    }"], ["\n    div.", " > span.name {\n      text-align: ", ";\n      margin-left: 6px;\n      margin-right: 6px;\n      overflow-wrap: break-word;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      flex-grow: 1;\n    }"])), controlClass, labelAlignment);
+        var style = String.raw(templateObject_9 || (templateObject_9 = __makeTemplateObject(["<style>\n      ", "\n      ", "\n    </style>"], ["<style>\n      ", "\n      ", "\n    </style>"])), controlStyle, labelStyle);
+        var allElements = String.raw(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n    <div class=\"", " control\">\n      ", "\n      ", "\n      ", "\n    </div>"], ["\n    <div class=\"", " control\">\n      ", "\n      ", "\n      ", "\n    </div>"])), controlClass, optionalName(labelPlacement !== 'right'), ledElement(controlClass, ledId, shape, color, glow, sizeMultiplier), optionalName(labelPlacement === 'right'));
+        return style + allElements;
+    };
+    var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10;
+
+    // | 're'
+    // | 'date'
+    // | 'jsonata'
+    // | 'env'
+    var SupportedValueTypes = [
+        'str',
+        'num',
+        'bool',
+        'json',
+        'bin'
+    ]; // TODO: add further support
+
+    var label = function () {
+        return this.name || 'led';
+    };
+    var labelStyle = function () {
+        return this.name ? 'node_label_italic' : '';
+    };
+    var preview = function (config) {
+        var previewsContainerStyle = String.raw(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n    .", " {\n      width: calc(100% - 6px * 2);\n      justify-content: space-around;\n      height: ", "; \n      display: flex; \n      flex-direction: row;\n      background-color: #f7f7f7;\n      box-shadow: inset black 0px 0px 2px 0px;\n      padding: 6px;\n      overflow-x: scroll; \n      border: 1px solid #00000026;\n    }\n    .", " {\n      justify-content: center;\n      height: 100%;\n      display: flex; \n      flex-direction: row;\n      min-width: ", ";\n      width: ", ";\n      max-width: ", ";\n      padding-left: 3px;\n      padding-right: 3px;\n      background-color: white;\n      border: 1px solid #d3d3d3;\n      border-radius: 5px;\n    }\n  "], ["\n    .", " {\n      width: calc(100% - 6px * 2);\n      justify-content: space-around;\n      height: ", "; \n      display: flex; \n      flex-direction: row;\n      background-color: #f7f7f7;\n      box-shadow: inset black 0px 0px 2px 0px;\n      padding: 6px;\n      overflow-x: scroll; \n      border: 1px solid #00000026;\n    }\n    .", " {\n      justify-content: center;\n      height: 100%;\n      display: flex; \n      flex-direction: row;\n      min-width: ", ";\n      width: ", ";\n      max-width: ", ";\n      padding-left: 3px;\n      padding-right: 3px;\n      background-color: white;\n      border: 1px solid #d3d3d3;\n      border-radius: 5px;\n    }\n  "])), previewsContainerClass, config.height !== 0 ? 42 * config.height + 8 + "px" : '50px', previewContainerClass, config.width === 0 ? "42px" : '', config.width !== 0 ? config.width * 42 + "px" : '100%', config.maxWidth !== 0 ? config.maxWidth * 42 + "px" : '');
+        return String.raw(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n    <style>\n      ", "\n    </style>\n    <div class='", "'>\n      <div class='", "'>\n        ", "\n      </div>\n      <div class='", "'>\n        ", "\n      </div>\n    </div>\n"], ["\n    <style>\n      ", "\n    </style>\n    <div class='", "'>\n      <div class='", "'>\n        ",
+            "\n      </div>\n      <div class='", "'>\n        ",
+            "\n      </div>\n    </div>\n"])), previewsContainerStyle, previewsContainerClass, previewContainerClass, control('preview-no_glow', '', config.label, config.labelPlacement, config.labelAlignment, config.shape, 'gray', false, config.height !== 0 ? config.height : 1), previewContainerClass, control('preview-glow', '', config.label, config.labelPlacement, config.labelAlignment, config.shape, config.color, config.showGlow ? true : false, config.height !== 0 ? config.height : 1));
+    };
+    var generateValueFormRow = function (index, value, fieldKeyUpValidateNotEmpty) {
+        var requiredFieldClasses = [];
+        var containerId = 'ValueFormRow-' + index;
+        //   const elementByClassInContainer = (elementClass) => {
+        //     return '#' + containerId + ' .' + elementClass
+        //   }
+        var container = $('<li id="' + contextPrefix + '-' + containerId + '" />', {
+            style: 'background: #fff; margin:0; padding:8px 0px 0px; border-bottom: 1px solid #ccc;'
+        });
+        var row = $('<div/>', {
+            style: 'width: 100%; display: flex; flex-direction: row; align-items: center; padding-bottom: 8px;'
+        }).appendTo(container);
+        $('<i/>', {
+            class: rowHandleClass + ' fa fa-bars',
+            style: 'color: #eee; cursor: move; margin-left: 3px;'
+        }).appendTo(row);
+        var valueWrapper = $('<div/>', {
+            style: 'min-width:30%; flex-grow:1; margin-left:10px;'
+        });
+        var valueField = $('<input/>', {
+            type: 'text',
+            class: valueFieldClass,
+            // style: "min-width: 30%; flex-grow: 1; margin-left: 30px;",
+            style: 'width: 100%',
+            placeholder: 'Value',
+            value: value.value
+        }).appendTo(valueWrapper);
+        var valueTypeField = $('<input/>', {
+            type: 'hidden',
+            class: valueTypeFieldClass,
+            value: value.valueType
+        }).appendTo(valueWrapper);
+        valueWrapper.appendTo(row);
+        valueField.typedInput({
+            default: 'bool',
+            typeField: valueTypeField,
+            types: SupportedValueTypes
+        });
+        var rowColorFieldClass = colorFieldClass;
+        if (!value.color) {
+            rowColorFieldClass = rowColorFieldClass + ' ' + inputErrorClass;
+        }
+        var colorFields = $('<div/>', {
+            style: 'border: 1px solid #ccc; border-radius: 5px; margin-left:10px; display: flex; flex-direction: row;'
+        }).appendTo(row);
+        var convertOrFallback = function (value, convert) {
+            var converted = convert(value);
+            if (converted === undefined) {
+                return value;
+            }
+            return converted;
+        };
+        var colorString = value.color || 'green';
+        var colorField = $('<input/>', {
+            class: rowColorFieldClass,
+            type: 'color',
+            style: 'width: 30px; border-width: 0;',
+            value: convertOrFallback(colorString, hexForName)
+        }).appendTo(colorFields);
+        var colorTextField = $('<input/>', {
+            class: rowColorFieldClass,
+            type: 'text',
+            style: 'flex-grow: 1; margin-left: 1px;; border-width: 0;',
+            placeholder: 'Color',
+            required: true,
+            value: convertOrFallback(colorString, nameForHex)
+        }).appendTo(colorFields);
+        colorField.on('change', function () {
+            if (colorTextField !== undefined && colorField !== undefined) {
+                colorTextField.val(convertOrFallback(colorField.val(), nameForHex));
+            }
+        });
+        colorTextField.on('change', function () {
+            if (colorField !== undefined && colorTextField !== undefined) {
+                colorField.val(convertOrFallback(colorTextField.val(), hexForName));
+            }
+        });
+        requiredFieldClasses.push(colorFieldClass);
+        colorTextField.keyup(fieldKeyUpValidateNotEmpty);
+        var deleteButton = $('<a/>', {
+            href: '#',
+            class: 'editor-button editor-button-small',
+            style: 'margin-left:13px; width: 20px; margin-right: 10px; right: 0px'
+        }).appendTo(row);
+        $('<i/>', {
+            class: 'fa fa-remove',
+            style: ''
+        }).appendTo(deleteButton);
+        deleteButton.click(function () {
+            for (var requiredIndex = 0; requiredIndex < requiredFieldClasses.length; requiredIndex++) {
+                container
+                    .find('.' + requiredFieldClasses[requiredIndex])
+                    .removeAttr('required');
+            }
+            container.css({ background: '#fee' });
+            container.fadeOut(300, function () {
+                $(this).remove();
+            });
+        });
+        $('#' + colorForValueEditContainerId).append(container);
+    };
+    var templateObject_1$1, templateObject_2$1;
+
+    var togglePreview = function (showPreviewToggleId, previewContainerId) {
+        if (showPreviewToggleId === void 0) { showPreviewToggleId = showPreviewId; }
+        if (previewContainerId === void 0) { previewContainerId = previewId; }
+        var showPreviewToggle = $('#' + showPreviewToggleId);
+        var preview = $('#' + previewContainerId);
+        if (showPreviewToggle.hasClass(showPreviewShowingClass)) {
+            showPreviewToggle.removeClass(showPreviewShowingClass);
+            preview.css('display', 'none');
+        }
+        else {
+            showPreviewToggle.addClass(showPreviewShowingClass);
+            preview.css('display', '');
+        }
+    };
+    var updatePreview = function (config) {
+        $('#' + previewId).html(preview(config));
+    };
+    var setupPreviewUpdating = function (node, RED) {
+        var latestGroup = RED.nodes.node(getGroupId());
+        // TODO: update on group change in case group width is different
+        var latestConfig = {
+            color: node.colorForValue.length > 0 ? node.colorForValue[0].color : 'green',
+            width: guaranteeInt(node.width, 0),
+            maxWidth: latestGroup !== undefined ? latestGroup.width : 0,
+            height: guaranteeInt(node.height, 0),
+            shape: node.shape,
+            showGlow: node.showGlow,
+            label: node.label,
+            labelPlacement: node.labelPlacement || 'left',
+            labelAlignment: node.labelAlignment || 'left'
+        };
+        var doUpdatePreview = function () {
+            updatePreview(latestConfig);
+        };
+        doUpdatePreview();
+        $('#' + widthId).on('change', function (event) {
+            latestConfig.width = parseInt(event.target.value, 10);
+            doUpdatePreview();
+        });
+        $('#' + heightId).on('change', function (event) {
+            latestConfig.height = parseInt(event.target.value, 10);
+            doUpdatePreview();
+        });
+        $('#' + labelId).on('change', function (event) {
+            latestConfig.label = event.target.value;
+            doUpdatePreview();
+        });
+        $('#' + labelPlacementId).on('change', function (event) {
+            latestConfig.labelPlacement = event.target
+                .value;
+            doUpdatePreview();
+        });
+        $('#' + labelAlignmentId).on('change', function (event) {
+            latestConfig.labelAlignment = event.target
+                .value;
+            doUpdatePreview();
+        });
+        $('#' + shapeId).on('change', function (event) {
+            latestConfig.shape = event.target.value;
+            doUpdatePreview();
+        });
+        $('#' + showGlowId).on('change', function (event) {
+            latestConfig.showGlow = event.target.checked;
+            doUpdatePreview();
+        });
+        var colorChanged = function (color) {
+            latestConfig.color =
+                color !== undefined && color.length > 0 ? color : 'green';
+            doUpdatePreview();
+        };
+        var colorInputChanged = function (event) {
+            colorChanged(event.target.value);
+        };
+        var listChanged = function (list) {
+            if (list.firstChild === null) {
+                colorChanged('green');
+                return;
+            }
+            for (var _i = 0, _a = $(list).children().toArray(); _i < _a.length; _i++) {
+                var child = _a[_i];
+                if (child === list.firstChild) {
+                    var colorInput = $(child).find('.' + colorFieldClass);
+                    colorChanged(colorInput.val());
+                    $(child).on('change', colorInputChanged);
+                }
+                else {
+                    $(child).off('change', colorInputChanged);
+                }
+            }
+        };
+        $('#' + colorForValueEditContainerId).on('DOMSubtreeModified', function (event) {
+            listChanged(event.target);
+        });
+    };
+    var addColorForValue = function () {
+        generateValueFormRow($('#' + colorForValueEditContainerId).children().length + 1, {}, fieldKeyUpValidateNotEmpty);
+        // TODO: scroll to new element
+        $('#' + colorForValueEditContainerId).scrollTop($('#' + colorForValueEditContainerId).get(0).scrollHeight);
+    };
+    var setChecked = function (query, checked) {
+        $(query).prop('checked', checked);
+    };
+    var fieldKeyUpValidateNotEmpty = function () {
+        var value = $(this).val();
+        if (value && $(this).hasClass(inputErrorClass)) {
+            $(this).removeClass(inputErrorClass);
+        }
+        else {
+            if (!value) {
+                $(this).addClass(inputErrorClass);
+            }
+        }
+    };
+
+    var setupColorForValue = function (node) {
+        for (var index = 0; index < node.colorForValue.length; index++) {
+            var rowValue = node.colorForValue[index];
+            generateValueFormRow(index + 1, rowValue, fieldKeyUpValidateNotEmpty);
+        }
+        $('#' + colorForValueEditContainerId).sortable({
+            axis: 'y',
+            handle: '.' + rowHandleClass,
+            cursor: 'move'
+        });
+        $('#' + addColorForValueId).on('click', addColorForValue);
+    };
+    var oneditprepare = function () {
+        $('#' + sizeId).elementSizer({
+            width: '#' + widthId,
+            height: '#' + heightId,
+            group: '#' + groupId
+        });
+        if (typeof this.colorForValue === 'undefined') {
+            this.colorForValue = colorForValueDefault;
+        }
+        if (typeof this.shape === 'undefined') {
+            this.shape = 'circle';
+            $('#' + shapeId).val('circle');
+        }
+        if (typeof this.showGlow === 'undefined') {
+            this.showGlow = true;
+            setChecked('#' + showGlowId, this.showGlow);
+        }
+        setupColorForValue(this);
+        $('#' + showPreviewId).on('click', function () {
+            togglePreview();
+        });
+        setupPreviewUpdating(this, RED);
+    };
+    var oneditsave = function () {
+        this.colorForValue = getColorForValueFromContainer();
+    };
+    RED.nodes.registerType('ui_led', {
+        category: 'dashboard',
+        paletteLabel: 'led',
+        color: 'rgb(63, 173, 181)',
+        defaults: defaultsFactory(RED),
+        inputs: 1,
+        inputLabels: 'value',
+        outputs: 0,
+        align: 'right',
+        label: label,
+        labelStyle: labelStyle,
+        icon: 'ui_led.png',
+        oneditprepare: oneditprepare,
+        oneditsave: oneditsave
+    });
+
+}());
+</script>
+<script type="text/html" data-template-name="ui_led">
+  <style>
+    .showingPreview {
+      background-color: #dadada !important;
+    }
+    img.preview-no_glow, img.preview-glow {
+      max-width: unset !important;
+    }
+  </style>
+  <div class="form-row">
+    <label for="node-input-group" class="basic_input"><i class="fa fa-table"></i> <span data-i18n="node-red:udp.label.group"></span></span></label>
+    <input type="text" id="node-input-group">
+  </div>
+
+  <div class="form-row">
+    <label><i class="fa fa-object-group"></i> Size</label>
+    <input type="hidden" id="node-input-width">
+    <input type="hidden" id="node-input-height">
+    <button class="editor-button" id="node-input-size"></button>
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-label"><i class="icon-tag"></i>  <span data-i18n="editor:editor.label"></span></label>
+    <input type="text" id="node-input-label" data-i18n="[placeholder]editor:editor.defaultLabel">
+  </div>
+
+  <div class="form-row" style="display: flex; flex-direction: row; width: 100%;">
+    <div style="flex-grow: 1; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
+      <label for="node-input-labelPlacement"><i class="icon-tag"></i> Label Placement</label>
+      <select id="node-input-labelPlacement" style="width: unset;">
+          <option value="left">left</option>
+          <option value="right">right</option>
+      </select>
+    </div>
+    <div style="flex-grow: 1; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
+      <label for="node-input-labelAlignment"><i class="icon-tag"></i> Label Alignment</label>
+      <select id="node-input-labelAlignment" style="width: unset;">
+          <option value="left">left</option>
+          <option value="center">center</option>
+          <option value="right">right</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row" style="display: flex; flex-direction: row; width: 100%;">
+    <div style="flex-grow: 1; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly;">
+      <label for="node-input-shape"><i class="icon-tag"></i> Shape</label>
+      <select id="node-input-shape" style="width: unset;">
+          <option value="circle">circle</option>
+          <option value="square">square</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row" style="display: flex; flex-direction: row; width: 100%;">
+    <div style="flex-grow: 1; display: flex; flex-direction: row;">
+      <label for="node-input-showGlow" style="flex-grow: 1; margin-bottom: unset;">Show glow effect around LED</label>
+      <input type="checkbox" id="node-input-showGlow" style="width: unset;">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div style="flex-grow: 1; display: flex; flex-direction: row;">
+      <a href="#" class="editor-button editor-button-small" id="showPreview" style="margin-right: 5px; min-width: calc(36px + 5px * 2);"><span>Preview</span></a>
+      <div id="ui_led-preview" style="flex-grow: 1; display: none; max-width: calc(100% - (36px + 5px * 2));"></div>
+    </div>
+  </div>
+
+  <div class="form-row node-input-colorForValue-container-row" style="margin-bottom:0px; width:100%; min-width:520px; display: flex; flex-direction: column;">
+    <label style="vertical-align:top; width: 100%;"><i class="fa fa-list-alt"></i> Colors for value of msg.payload</label>
+    <div style="display:inline-block; width: 100%; border:1px solid #ccc; border-radius:5px; box-sizing:border-box;">
+      <div style="width:100%; display: inline-block; background-color:#f3f3f3; padding-top:10px; padding-bottom:10px; border-top:0px solid; border-radius:5px 5px 0 0; border-bottom:1px solid #ccc;">
+          <div style="display:flex; flex-direction: row;">
+            <div style="width:32px;"></div>
+            <div style="flex-grow:1; text-align:center; float:left;">msg.payload</div>
+            <div style="flex-grow:1; text-align:center; float:left;">Color</div>
+            <div style="width:32px;"></div>
+          </div>
+      </div>
+      <div id="node-input-colorForValue-container-div" style=" height:257px; padding:5px; overflow-y:scroll;">
+        <ol id="node-input-colorForValue-container" style=" list-style-type:none; margin:0;"></ol>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <a href="#" class="editor-button editor-button-small" id="node-input-add-color" style="margin-top:4px;"><i class="fa fa-plus"></i> <span>Color</span></a>
+  </div>
+
+  <div class="form-row" style="display: flex; flex-direction: row; width: 100%;">
+    <div style="flex-grow: 1; display: flex; flex-direction: row; margin-right: 16px;">
+      <label for="node-input-allowColorForValueInMessage" style="flex-grow: 1; margin-bottom: unset;">Allow Color For Value map in msg</label>
+      <input type="checkbox" id="node-input-allowColorForValueInMessage" style="width: unset;">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-name" style="width: 100px;"><i class="fa fa-tag"></i> <span data-i18n="editor:common.label.name"></span></label>
+    <input type="text" id="node-input-name" data-i18n="[placeholder]editor:common.label.name">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="ui_led">
+  <p>A simple LED status indicator for the Node-RED Dashboard</p>
+  <p>
+    The <code>msg.payload</code> value is looked up in the
+    <b>Color for value of msg.payload</b> table and the first matching entry's
+    color lights up the LED. If no matching value is found the LED reverts back
+    to it's invalid, off state and turns gray and unlit.
+  </p>
+</script>

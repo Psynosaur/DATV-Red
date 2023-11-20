@@ -1,7 +1,7 @@
 {
   "action": "connect",
   "broker": {
-    "broker": "192.168.2.1",
+    "broker": "192.168.1.111",
     "port": 1883,
     "username": "root",
     "password": "analog"
