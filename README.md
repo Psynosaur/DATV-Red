@@ -28,7 +28,7 @@
 4. Double click `DATV-Start.cmd`
 
 5. Press the `set call` button to set your call sign and reboot pluto
-  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/59a106a8-2063-4f72-ae8d-886202121e3d)
+  <img width="545" alt="image" src="https://github.com/Psynosaur/DATV-Simple/assets/26934113/350529b3-5a15-48f4-87f2-6a722fce3751">
 
 6. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
