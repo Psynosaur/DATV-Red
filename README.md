@@ -16,16 +16,16 @@ DATV transmissions normally have the following programs open:
 
 ## **Capabilities of project**
   - Encoding of TS data (Tx) 
-  - Tuning of onboard longmynd server, `requires USB hub` refer to [wiki](https://github.com/F5OEO/pluto-ori-ps/wiki) (Rx)
+  - Tuning of onboard longmynd server, `requires USB hub` refer to [wiki](https://github.com/F5OEO/pluto-ori-ps/wiki#hardware) (Rx)
     - No further software dependencies, work in progress
   - Operation of PlutoSDR RF modulator parameters (Tx)
   - Sends UDP payload to `Minitioune` software control address (Rx)
     - Tunes Minitiouner radio using `Minitioune` software
     - OpenTuner support pending
     - for other tuner configs
-      - Submit a [issue](https://github.com/Psynosaur/DATV-Simple/issues/new) and specify you Rx tuner setup requirements   
+      - Learn `node-red` and build it yourself `:)` 
   - Optional chat (QoL)
-  - Optional SONOFF tasmota support
+  - Optional SONOFF tasmota support (QoL)
     - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
     - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
 
@@ -60,9 +60,7 @@ DATV transmissions normally have the following programs open:
 
 ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/a37f9ae6-9c41-4a3a-ac5d-13f4de2cca0b)
 
-If you'd like to buy me a coffee ☕️☕️☕:
-
-  [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
+If you'd like to say thanks, please make a [donation](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
 ## Thanks 
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
