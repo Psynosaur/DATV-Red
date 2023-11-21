@@ -20,9 +20,9 @@ DATV transmissions normally have the following programs open:
     - No further software dependencies, work in progress
   - Operation of PlutoSDR RF modulator parameters (Tx)
   - Sends UDP payload to `Minitioune` software control address (Rx)
-    - Tunes Minitiouner radio on using `Minitioune` software
+    - Tunes Minitiouner radio using `Minitioune` software
     - OpenTuner support pending
-    - Could add other tuner configs
+    - for other tuner configs
       - Submit a [issue](https://github.com/Psynosaur/DATV-Simple/issues/new) and specify you Rx tuner setup requirements   
   - Optional chat (QoL)
   - Optional SONOFF tasmota support
