@@ -4,6 +4,7 @@
 - **VERY IMPORTANT**
   - Heatsinks on the plutoSDR's microchips 
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
+- Firmware flashing [walk through video](https://www.youtube.com/watch?v=g8_ktz4kCkY)
 
 ## Motivation
 DATV transmissions normally have the following programs open:
