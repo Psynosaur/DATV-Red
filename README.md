@@ -23,7 +23,7 @@ DATV transmissions normally have the following programs open:
     - Tunes Minitiouner radio using `Minitioune` software
     - OpenTuner support pending
     - for other tuner configs
-      - Learn `node-red` and build it yourself `:)` 
+      - Learn `node-red` and build it yourself `:)`
   - Optional chat (QoL)
   - Optional SONOFF tasmota support (QoL)
     - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
