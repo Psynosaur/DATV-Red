@@ -14,7 +14,7 @@ DATV transmissions normally have the following programs open:
  4. ~OpenTuner / Minitioune~
  5. ~QuickTune / Chat~
 
-## **Capabilities of project**
+## **Capabilities of DATV-Red**
   - Encoding of TS data (Tx) 
   - Tuning of onboard longmynd server, `requires USB hub` refer to [wiki](https://github.com/F5OEO/pluto-ori-ps/wiki#hardware) (Rx)
     - No further software dependencies, work in progress
@@ -28,6 +28,14 @@ DATV transmissions normally have the following programs open:
   - Optional SONOFF tasmota support (QoL)
     - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
     - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
+  - Cross-platform (due in final release)
+    - Linux `Pop-Os` and `Ubuntu` 
+      - Just change `settings.json` with your audio and video settings...
+      - select `UDP` or `RTMP` as input
+      - change ffmpeg paths to linux syntax `./ffmpeg/ffmpeg`
+        - ffplay
+        - ffmpeg
+        - ffprobe   
 
 ## Setup and use
 1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
