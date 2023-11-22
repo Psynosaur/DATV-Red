@@ -42,19 +42,19 @@ DATV transmissions normally have the following programs open:
 
 2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Red`
 
-3. Setup mqtt broker in `pluto.json` file
+3. Setup mqtt broker in `pluto.json` file change `broker` for pluto and `payload` for callsign
    
    ```json
     {
       "action": "connect",
       "broker": {
-        "broker": "192.168.2.1", /* IP address of pluto */
+        "broker": "192.168.2.1", 
         "port": 1883,
         "username": "root",
         "password": "analog"
       },
       "topic" : "cmd/pluto/call",
-      "payload": "ZS1SCI" /* Your callsign */
+      "payload": "ZS1SCI"
     }
    ```
 4. Double click `DATV-Start.cmd`
