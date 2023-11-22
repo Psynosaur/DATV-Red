@@ -1,4 +1,4 @@
-# DATV-Simple
+# DATV-Red
 
 ## Prerequisite 
 - **VERY IMPORTANT**
@@ -30,9 +30,9 @@ DATV transmissions normally have the following programs open:
     - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
 
 ## Setup and use
-1. Download [latest release](https://github.com/Psynosaur/DATV-Simple/releases) and extract to folder `DATV-Simple` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
+1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
 
-2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Simple`
+2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Red`
 
 3. Setup mqtt broker in `pluto.json` file
    
@@ -52,13 +52,13 @@ DATV transmissions normally have the following programs open:
 4. Double click `DATV-Start.cmd`
 
 5. Press the `set call` button to set your call sign and reboot pluto
-  <img width="545" alt="image" src="https://github.com/Psynosaur/DATV-Simple/assets/26934113/350529b3-5a15-48f4-87f2-6a722fce3751">
+  <img width="545" alt="image" src="https://github.com/Psynosaur/DATV-Red/assets/26934113/350529b3-5a15-48f4-87f2-6a722fce3751">
 
 6. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
 7. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/a37f9ae6-9c41-4a3a-ac5d-13f4de2cca0b)
+![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/a37f9ae6-9c41-4a3a-ac5d-13f4de2cca0b)
 
 If you'd like to say thanks, please make a [donation](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
