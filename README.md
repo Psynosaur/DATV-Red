@@ -28,7 +28,7 @@ DATV transmissions normally have the following programs open:
   - Optional SONOFF tasmota support (QoL)
     - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
     - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
-  - Cross-platform (due in final release)
+  - Cross-platform (due in **final** release)
     - Linux `Pop-Os` and `Ubuntu` 
       - Just change `settings.json` with your audio and video settings...
       - select `UDP` or `RTMP` as input
