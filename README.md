@@ -66,12 +66,13 @@ DATV transmissions normally have the following programs open:
 
 7. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/a37f9ae6-9c41-4a3a-ac5d-13f4de2cca0b)
-
-If you'd like to say thanks, please make a [donation](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
+![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/37bf87b2-a4d8-4640-afd4-f91e18a2c899)
 
 ## Thanks 
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
+
+## Supporting my hobby
+If you'd like to say thanks, please feel free to buy me some [time](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
