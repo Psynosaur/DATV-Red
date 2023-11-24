@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<script>
+  // let plutoAdrress = "192.168.2.1";
+  let plutoAdrress = "192.168.1.111";
+  let dateFormat = 'DD-MM-YYYY HH:mm:ss:SSS'
+  let callsign = 'ZS1SCI'
+</script>
+<style>
+  :root {
+    --textColor: #ffffff;
+    --backGroundColor: #000000;
+    --fontSize: 36px;
+    --fontFamily: 'Arial Regular';
+  }
+</style>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Clock for OBS and PlutoSDR ON AIR tracker</title>
+
+</head>
+
+<body translate="no">
+  <div id="output" style="
+    display: inline-block;
+		font-family: var(--fontFamily);
+		font-size: var(--fontSize);
+    text-align: center;
+		color: var(--textColor); 
+		border-radius: 3px; 
+		padding: 5px; 
+    align-items: center;
+		background-color: var(--backGroundColor);
+    width: 800px;
+    ">
+  </div>
+  <div id="stats" style="
+    display: inline-block;
+		font-family: var(--fontFamily);
+		font-size: var(--fontSize);
+    text-align: center;
+		color: var(--textColor); 
+		border-radius: 3px; 
+		padding: 5px; 
+    align-items: left;
+		background-color: var(--backGroundColor);
+    width: 800px;
+    ">
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script>
+    let urlParams;
+    let intervalFunction;
+    let onAir = 1;
+    let firstTransmission = false;
+    let transmissionStart = moment();
+    let end = moment();
+    let txTime = moment.duration(0, 'seconds');
+    let output = document.getElementById("output");
+    let stats = document.getElementById("stats");
+    let temp = "";
+    let frequency = "";
+    let gain = "";
+    let nco = "";
+    let queue = "";
+    let fec = "";
+    let bitrate = "";
+    let url = `ws://${plutoAdrress}:9001`
+    const options = {
+      // Clean session
+      clean: true,
+      connectTimeout: 4000,
+      // Authentication
+      clientId: 'pluto',
+      username: 'root',
+      password: 'analog',
+    }
+    const client = mqtt.connect(url, options)
+    client.on('connect', function () {
+      // console.log('Connected')
+      // Subscribe to a topic
+      client.subscribe(`dt/pluto/${callsign}/tx/mute`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/frequency`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/gain`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/nco`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/temperature_ad`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/queue`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/fec`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
+    })
+
+    console.log(client);
+
+    (function () {
+      let match,
+        pl = /\+/g,
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query = window.location.search.substring(1);
+      urlParams = {};
+      while (match = search.exec(query))
+        urlParams[decode(match[1])] = decode(match[2]);
+    })();
+
+    if (urlParams["style"]) output.setAttribute("style", urlParams["style"]);
+    if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyStyle"]);
+
+    client.on('message', function (topic, message) {
+          // message is Buffer
+          if (topic === `dt/pluto/${callsign}/tx/mute`) {
+            const r = parseInt(message.toString());
+            if (r === 1) firstTransmission = false;
+            if (r === 0) {
+              if (!firstTransmission) {
+                firstTransmission = true;
+                transmissionStart = moment();
+              };
+            };
+            onAir = r;
+          }
+          if (topic === `dt/pluto/${callsign}/temperature_ad`) {
+            temp = `${parseInt(message.toString()) / 1000}°C`;
+          }
+          if (topic === `dt/pluto/${callsign}/tx/frequency`) {
+            frequency = `${parseInt(message.toString())} Hz`;
+          }
+          if (topic === `dt/pluto/${callsign}/tx/gain`) {
+            gain = `${parseInt(message.toString())} dBm`;
+          }
+          if (topic === `dt/pluto/${callsign}/tx/nco`) {
+            nco = `${parseInt(message.toString())} Hz`;
+          }
+          if (topic === `dt/pluto/${callsign}/tx/dvbs2/queue`) {
+            queue = `${parseInt(message.toString())} frames`;
+          }
+          if (topic === `dt/pluto/${callsign}/tx/dvbs2/fec`) {
+            fec = `${message.toString()}`;
+          }
+          if (topic === `dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`) {
+            bitrate = `${parseInt(message.toString()) / 1000} kbits/s`;
+          }
+         
+          // client.end()
+        });
+    setInterval(
+      intervalFunction = function () {
+        end = moment();
+        txTime = parseInt(onAir) === 0 ? moment.utc(end.diff(transmissionStart)).format('mm:ss') : "00:00";
+        output.innerText = `ON AIR : ${txTime} : ${moment.utc().format(urlParams["format"] || dateFormat)}  `
+        stats.innerText = `FPGA: ${temp}\nFrequency: ${frequency}\nGain ${gain}\nNCO: ${nco}\nQueue: ${queue}\nBit Rate: ${bitrate}\nFEC: ${fec}`;
+      }, 1);
+
+    intervalFunction();
+  </script>
+</body>
+
+</html>

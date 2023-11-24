@@ -1,5 +1,6 @@
 {
   "tasmota_switch_url" : "http://192.168.1.132",
-  "use_switch": false,
-  "use_chat": true
+  "use_switch": true,
+  "use_chat": true,
+  "use_longmynd": true
 }

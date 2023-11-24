@@ -2,15 +2,31 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV Simple V2.5",
+        "label": "DATV-Red V3",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n   \r\n    \r\n\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Rename project\r\n   - Removes connection between this software and the rest...\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n   - change `settings.json` \r\n    - \"audio_device\": \"plughw:Loopback,1\"\r\n    - \"video_device\": \"/dev/video0\"\r\n   - Input type UDP\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it.\r\n - Rx timer for onboard longmynd\r\n\r\n    \r\n\r\n",
         "env": []
     },
     {
         "id": "d7c58eb9e7b65abb",
         "type": "tab",
-        "label": "DATV RX Pluto",
+        "label": "DATV Reception",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "27bb1861e8b5803b",
+        "type": "tab",
+        "label": "Chat",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "30d0afc93dfb235a",
+        "type": "tab",
+        "label": "Sonoff Basic tasmota",
         "disabled": false,
         "info": "",
         "env": []
@@ -104,7 +120,7 @@
         ],
         "x": 54,
         "y": 19,
-        "w": 972,
+        "w": 992,
         "h": 202
     },
     {
@@ -130,7 +146,7 @@
         "x": 48,
         "y": 239,
         "w": 1004,
-        "h": 482
+        "h": 488
     },
     {
         "id": "4bfefaeb7f82f4c6",
@@ -414,11 +430,12 @@
             "ecb0e81ee3028514",
             "3ee02849882f8ff7",
             "2c05d3340409c69d",
-            "679eb4e7914de8fa"
+            "679eb4e7914de8fa",
+            "5e18e8622dc024cf"
         ],
         "x": 1154,
         "y": 199,
-        "w": 732,
+        "w": 752,
         "h": 242
     },
     {
@@ -438,7 +455,7 @@
         ],
         "x": 3454,
         "y": 39,
-        "w": 712,
+        "w": 772,
         "h": 82
     },
     {
@@ -937,7 +954,7 @@
             "68abb4393d028775",
             "06b559ab4aca15cf"
         ],
-        "x": 794,
+        "x": 894,
         "y": 2939,
         "w": 772,
         "h": 82
@@ -960,7 +977,7 @@
             "2e0d409b4b551cdb",
             "a7a765ba72c31ee8"
         ],
-        "x": 794,
+        "x": 894,
         "y": 2994.5908203125,
         "w": 772,
         "h": 82
@@ -983,7 +1000,7 @@
             "d155c2f4a4a95ddf",
             "4b0e4ceac0843b6c"
         ],
-        "x": 794,
+        "x": 894,
         "y": 3050.181640625,
         "w": 733.765625,
         "h": 82.63671875
@@ -1006,7 +1023,7 @@
             "17889543320f7239",
             "793fd51eda4da3b4"
         ],
-        "x": 794,
+        "x": 894,
         "y": 3106.4091796875,
         "w": 752,
         "h": 82
@@ -1029,7 +1046,7 @@
             "afc105ffdbfd6b67",
             "edaef66bea244028"
         ],
-        "x": 794,
+        "x": 894,
         "y": 3162,
         "w": 752,
         "h": 82
@@ -1239,81 +1256,9 @@
             "9e98ce68a58f2283"
         ],
         "x": 54,
-        "y": 3839,
+        "y": 4139,
         "w": 1012,
         "h": 82
-    },
-    {
-        "id": "ad7e5ffb72188b4e",
-        "type": "group",
-        "z": "d7c58eb9e7b65abb",
-        "name": "Display RX parameters",
-        "style": {
-            "stroke": "#bfdbef",
-            "fill": "#bfdbef",
-            "label": true,
-            "label-position": "sw",
-            "color": "#000000"
-        },
-        "nodes": [
-            "1a1b56533b7099e6",
-            "7ef5df84abcea6ef",
-            "80df44d523cf6fb3",
-            "5aeaf491922457b1",
-            "4e342c0c8303aa44",
-            "7eb0336efb127684",
-            "c08bc51a894d262e",
-            "cc295c934bb4be42",
-            "3ee83309b7c60ce6",
-            "fbadbc406f2250f8",
-            "f6ef465dd5037ab9",
-            "e26186773e77c7d7",
-            "c445724468e5eee3",
-            "7b716cd2051f3dfd",
-            "7eac445141314da4",
-            "6ed10429f1f77968",
-            "9d2607d0b067c8a5",
-            "ceed3238855470f9",
-            "fd75ce73f90f3897",
-            "ef1c70fe71ed1e99",
-            "58e863a2f2c3bca5",
-            "b95afb21d173822f",
-            "65e7265f536b7371",
-            "62587bd01f2eddd4",
-            "3f3a177e7fd8606a",
-            "6b9b563a5762c7b4",
-            "9ccafb64a91eebb9",
-            "5fd27bc7e53bf26e",
-            "fe32f9d88f4a500f",
-            "e4550b0658e8dda9",
-            "c976ace452d1059f",
-            "1facaa16d95af5bd",
-            "55ed3e51ca0bc354",
-            "e7953b157ef05c17",
-            "7099c8e1196a7139",
-            "0bc834734cec7b86",
-            "8b56d8d464463ef0",
-            "80528ea20d50cd4a",
-            "6addcc9fb4c8dafa",
-            "1183c0833fda3d74",
-            "a5d239c45dea85e1",
-            "cd6d6d2557a4a7de",
-            "c74f6eb9ad0470b8",
-            "aa18fe6dd4ac0299",
-            "f3a9382bc4aea5a2",
-            "41116104860cd283",
-            "017e750722d50fa5",
-            "49109a540ffe32af",
-            "8b83d336adb14855",
-            "0e66d5d1d53eb868",
-            "c4309a90c3787cc3",
-            "8d2e2e03337cd6ed",
-            "6a472a91f5b893b8",
-            "6b4f4caadbd1eef3",
-            "77ed502a1d9da528"
-        ],
-        "x": 34,
-        "y": 479
     },
     {
         "id": "95c60cbc844f0f03",
@@ -1343,10 +1288,126 @@
             "40e93f131ed29ccd",
             "f46d32abeabe83a5",
             "1eb7d3a28526dc87",
-            "c0a33906022c7b10"
+            "c0a33906022c7b10",
+            "92e743f7fa12eef8",
+            "ab828a5dc2d55ada",
+            "51a832f2b02817b3",
+            "9850f6ec613dd67d"
+        ],
+        "x": 14,
+        "y": 19
+    },
+    {
+        "id": "9286ad1292f976c7",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "GSE",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#6f2fa0",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "fcc82dc0c60388f5",
+            "bb8dee7ad47db69c",
+            "44f0b7da719f1757",
+            "3b86358ac5d8c435",
+            "1de281946f74c19b",
+            "6f6601d609b6460d",
+            "01840b0f91ef20b4",
+            "1ca63cc42b3ba5f8",
+            "5db94457ba6ae6b6",
+            "9dc994ba008186e4",
+            "41df24c97592fd90",
+            "0bd56278afe23f51",
+            "4c0b0ccf968a8497",
+            "19b9271d7a62e4a5",
+            "2f1edd8276585605",
+            "2ecb46ec465f3a11",
+            "5635c4cc49824c04",
+            "71e2bcf77d069c8e",
+            "077274631b0e7dfe",
+            "3e176cd4bd9a502b",
+            "4cbca64d40e28578",
+            "cdf1aaaf980ac998",
+            "d508b43091f81d07",
+            "361d78ea269b5bbd",
+            "3cb48bb52bd5e53f",
+            "ce3c8a12ea185160",
+            "73b256567fa9437e"
+        ],
+        "x": 1834,
+        "y": 3059,
+        "w": 692,
+        "h": 542
+    },
+    {
+        "id": "28abab7559f98f4e",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "ffplay_path",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "77d1845d8d7e97dd",
+            "7c666d4b66bdb1c1",
+            "382c0ba4ac25e933",
+            "0a50edd1ec52ac77",
+            "946bfb2b2f258664"
         ],
         "x": 54,
-        "y": 59
+        "y": 3939,
+        "w": 1012,
+        "h": 82
+    },
+    {
+        "id": "913f7262750bf555",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "ffprobe_path",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "a65e0da8e66d8647",
+            "08bb407e7555f53c",
+            "05d216119b33b43c",
+            "46ec28f7e9f10da5",
+            "6de336ee9abcbda7"
+        ],
+        "x": 54,
+        "y": 4039,
+        "w": 1012,
+        "h": 82
+    },
+    {
+        "id": "23d61d1ab03c6348",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "style": {
+            "stroke": "#30363d",
+            "stroke-opacity": "1",
+            "fill": "#010409",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#e6edf3"
+        },
+        "nodes": [
+            "fe4ad701ef35c7ff",
+            "c1f5dcd1636803b3",
+            "83b62f5224016f4c",
+            "5538dd0dd8c2d484",
+            "6be46c0407607ba9"
+        ],
+        "x": 34,
+        "y": 3839,
+        "w": 1072,
+        "h": 82
     },
     {
         "id": "185cc616489b2615",
@@ -1373,12 +1434,14 @@
             "63698f5f30341a43",
             "515e9264fb253fbc",
             "2f37f6fa43572da4",
-            "3d529b46ee563149"
+            "3d529b46ee563149",
+            "c82484c6378aaa4e",
+            "39bfd14afebfca3c"
         ],
         "x": 74,
         "y": 319,
         "w": 952,
-        "h": 342
+        "h": 382
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -1403,7 +1466,7 @@
         "id": "9b3296db2e0c849f",
         "type": "ui_tab",
         "name": "Transmission and profiles",
-        "icon": "fa-fire",
+        "icon": "fa-spinner fa-pulse",
         "order": 1,
         "disabled": false,
         "hidden": false
@@ -1415,7 +1478,7 @@
             "name": "theme-custom",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
+                "baseColor": "#931010",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -1430,18 +1493,18 @@
             "customTheme": {
                 "name": "Custom Dark",
                 "default": "#4B7930",
-                "baseColor": "#2666a1",
+                "baseColor": "#800800",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#2666a1",
-                    "value": "#2666a1",
+                    "default": "#7c1a13",
+                    "value": "#800800",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#2666a1",
+                    "value": "#800800",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -1453,7 +1516,7 @@
                     "edited": true
                 },
                 "group-textColor": {
-                    "value": "#418dd2",
+                    "value": "#cc0d00",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1469,7 +1532,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#2666a1",
+                    "value": "#800800",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -1485,11 +1548,11 @@
                 "accents": "blue",
                 "warn": "red",
                 "background": "grey",
-                "palette": "light"
+                "palette": "dark"
             }
         },
         "site": {
-            "name": "DATV-Simple V2.5",
+            "name": "DATV-Red V3",
             "hideToolbar": "false",
             "allowSwipe": "true",
             "lockMenu": "false",
@@ -1512,7 +1575,7 @@
         "type": "ui_group",
         "name": "Radio controls",
         "tab": "9b3296db2e0c849f",
-        "order": 9,
+        "order": 6,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -1534,7 +1597,7 @@
         "type": "ui_group",
         "name": "Spectrum window",
         "tab": "9b3296db2e0c849f",
-        "order": 6,
+        "order": 7,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -1566,7 +1629,7 @@
         "id": "3fcae860e82945fc",
         "type": "ui_tab",
         "name": "Stats and settings",
-        "icon": "dashboard",
+        "icon": "fa-sliders",
         "order": 2,
         "disabled": false,
         "hidden": false
@@ -1605,9 +1668,10 @@
     {
         "id": "d2e4abefdc42e427",
         "type": "ui_group",
+        "d": true,
         "name": "Chat",
         "tab": "9b3296db2e0c849f",
-        "order": 10,
+        "order": 11,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -1698,33 +1762,13 @@
         "height": 1
     },
     {
-        "id": "c3b106058155b776",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "235bdacf6041386f",
-        "order": 12,
-        "width": "1",
-        "height": "1"
-    },
-    {
         "id": "71cd991b73f952d9",
         "type": "ui_spacer",
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "235bdacf6041386f",
-        "order": 21,
+        "order": 22,
         "width": 1,
-        "height": 1
-    },
-    {
-        "id": "3f3b199a15646061",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "235bdacf6041386f",
-        "order": 28,
-        "width": 2,
         "height": 1
     },
     {
@@ -1743,7 +1787,7 @@
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "235bdacf6041386f",
-        "order": 17,
+        "order": 16,
         "width": 1,
         "height": 1
     },
@@ -1753,29 +1797,9 @@
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "235bdacf6041386f",
-        "order": 9,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d27bbd41ade6edb4",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "235bdacf6041386f",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "1ce4d3e4934b375f",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "9ed1d9a126995072",
-        "order": 8,
-        "width": 1,
-        "height": 1
+        "order": 12,
+        "width": "1",
+        "height": "1"
     },
     {
         "id": "f159d7b3654c561c",
@@ -1793,7 +1817,7 @@
         "z": "2ec6a7ddfe0cd173",
         "name": "spacer",
         "group": "7954d85ae8701623",
-        "order": 3,
+        "order": 4,
         "width": "4",
         "height": "1"
     },
@@ -1808,47 +1832,104 @@
         "height": "1"
     },
     {
-        "id": "05c97bb8f8fb8ca1",
-        "type": "mqtt-broker",
-        "name": "pluto-json",
-        "broker": "172.22.22.89",
-        "port": "",
-        "tls": "",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "65d91b75202c3b55",
         "type": "ui_group",
         "name": "RX",
         "tab": "9b3296db2e0c849f",
-        "order": 5,
+        "order": 9,
         "disp": false,
-        "width": 15,
+        "width": "16",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "815f12b2b7505f7e",
+        "type": "ui_spacer",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spacer",
+        "group": "9ed1d9a126995072",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d81fd296c3fbb409",
+        "type": "ui_tab",
+        "name": "GSE",
+        "icon": "fa-signal",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "91cddc460b9c86f1",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "d81fd296c3fbb409",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "412db789527c277d",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "235bdacf6041386f",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c9432c41e4afe7e0",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "65d91b75202c3b55",
+        "order": 6,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "a4a37989805c1f8e",
+        "type": "ui_group",
+        "name": "RX 2",
+        "tab": "9b3296db2e0c849f",
+        "order": 10,
+        "disp": false,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "60dc608a8e13e309",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
+        "order": 2,
+        "width": "13",
+        "height": "1"
+    },
+    {
+        "id": "1d0d55cb8f9c1bff",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
+        "order": 6,
+        "width": "3",
+        "height": "1"
+    },
+    {
+        "id": "28d0dedfd904e16b",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
+        "order": 3,
+        "width": "2",
+        "height": "1"
     },
     {
         "id": "8920ad34.ac04a",
@@ -2902,7 +2983,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: mode",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.stream.mode\")){\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\n",
+        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.stream.mode\")){\n    // global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3220,7 +3301,7 @@
         "g": "c927282dfd987c70",
         "name": "+dBm",
         "group": "235bdacf6041386f",
-        "order": 16,
+        "order": 18,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -3249,7 +3330,7 @@
         "g": "c927282dfd987c70",
         "name": "-dBm",
         "group": "235bdacf6041386f",
-        "order": 15,
+        "order": 17,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -3325,7 +3406,7 @@
         "width": 3,
         "height": 1,
         "passthru": false,
-        "label": "Stop",
+        "label": "RF OFF",
         "tooltip": "Stop transmission",
         "color": "",
         "bgcolor": "{{stop_button_color}}",
@@ -3335,7 +3416,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1810,
+        "x": 1820,
         "y": 2160,
         "wires": [
             [
@@ -3354,7 +3435,7 @@
         "width": 3,
         "height": 1,
         "passthru": false,
-        "label": "Start",
+        "label": "RF ON",
         "tooltip": "Start transmission",
         "color": "",
         "bgcolor": "{{start_button_color}}",
@@ -3364,7 +3445,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 1810,
+        "x": 1820,
         "y": 2100,
         "wires": [
             [
@@ -3451,7 +3532,7 @@
         "label": "Gain",
         "tooltip": "",
         "group": "235bdacf6041386f",
-        "order": 14,
+        "order": 15,
         "width": "4",
         "height": 1,
         "passthru": false,
@@ -3480,7 +3561,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 1,
+        "order": 3,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -3520,7 +3601,8 @@
         "y": 2040,
         "wires": [
             [
-                "edf4a8f5daf0b0ab"
+                "edf4a8f5daf0b0ab",
+                "077274631b0e7dfe"
             ]
         ]
     },
@@ -3534,7 +3616,7 @@
         "tooltip": "",
         "place": "Samplerate",
         "group": "235bdacf6041386f",
-        "order": 8,
+        "order": 10,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -3613,7 +3695,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "235bdacf6041386f",
-        "order": 10,
+        "order": 11,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -3641,7 +3723,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 4,
+        "order": 7,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -3791,7 +3873,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
+        "x": 2140,
         "y": 2040,
         "wires": [
             [
@@ -3809,7 +3891,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "235bdacf6041386f",
-        "order": 11,
+        "order": 13,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -3881,7 +3963,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 6,
+        "order": 9,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -3942,7 +4024,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 3,
+        "order": 6,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -4052,7 +4134,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 5,
+        "order": 8,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -4112,7 +4194,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 7,
+        "order": 10,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -4172,7 +4254,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "9ed1d9a126995072",
-        "order": 2,
+        "order": 5,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -4619,7 +4701,7 @@
         "height": 1,
         "passthru": false,
         "label": "profile 1",
-        "tooltip": "<font size=4>{{p1_color}}",
+        "tooltip": "",
         "color": "",
         "bgcolor": "{{p1_color}}",
         "className": "",
@@ -4901,13 +4983,13 @@
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
-        "name": "Custom profile",
+        "name": "Start encoder",
         "group": "235bdacf6041386f",
-        "order": 19,
+        "order": 20,
         "width": 3,
         "height": 1,
         "passthru": false,
-        "label": "Start profile",
+        "label": "Start encoder",
         "tooltip": "",
         "color": "",
         "bgcolor": "{{p9_color}}",
@@ -5101,7 +5183,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "group": "7954d85ae8701623",
-        "order": 2,
+        "order": 3,
         "width": 17,
         "height": 1,
         "name": "ffmpeg out",
@@ -5213,7 +5295,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "5ed3848da82bcc9a",
         "name": "button animations",
-        "func": "// We are not transmitting state...\nmsg.start_button_color = \"\";\nmsg.start_animation = \"fa-hand-paper-o fa-2x\";\nmsg.stop_button_color = \"\";\nmsg.stop_animation = \"fa-stop-circle fa-2x\";\nif(global.get(\"mute\") === \"0\") {\n    // We are transmitting state...\n    msg.start_button_color =\"green\";\n    msg.start_animation = \"fa-spinner fa-spin fa-2x\";\n    msg.stop_button_color = \"darkred\";\n    msg.stop_animation = \"fa-stop-circle fa-2x\";\n}\nreturn msg;",
+        "func": "// We are not transmitting state...\nmsg.start_button_color = \"\";\nmsg.start_animation = \"fa-wifi fa-2x\";\nmsg.stop_button_color = \"\";\nmsg.stop_animation = \"fa-times fa-2x\";\nif(global.get(\"mute\") === \"0\") {\n    // We are transmitting state...\n    msg.start_button_color =\"green\";\n    msg.start_animation = \"fa-spinner fa-spin fa-2x\";\n    msg.stop_button_color = \"darkred\";\n    msg.stop_animation = \"fa-times fa-2x\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5246,8 +5328,7 @@
         "y": 540,
         "wires": [
             [
-                "b800a9f107cb3124",
-                "000aadf55c9c61da"
+                "b800a9f107cb3124"
             ]
         ]
     },
@@ -5780,13 +5861,13 @@
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
-        "name": "Terminal Profile",
+        "name": "Stop encoder",
         "group": "235bdacf6041386f",
-        "order": 20,
+        "order": 21,
         "width": 3,
         "height": 1,
         "passthru": false,
-        "label": "STOP {{msg.payload}}",
+        "label": "Stop {{msg.payload}}",
         "tooltip": "Kill ffmpeg steaming process",
         "color": "",
         "bgcolor": "Darkred",
@@ -5796,7 +5877,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2820,
+        "x": 2810,
         "y": 2660,
         "wires": [
             [
@@ -5864,7 +5945,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "get active ffmpeg process id",
-        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\")) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false);\n    global.set(\"ffmpeg_cmd\", \"\");\n    return msg;\n}",
+        "func": "let payload = msg.payload;\nif (payload === \"1\" && global.get(\"ProfileButtonsActive\")) {\n    msg.backgroundcolor = \"\";\n    let pid = global.get(\"pid\");\n    msg.payload = pid;\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false);\n    global.set(\"ffmpeg_cmd\", \"\");\n    msg.ffmpeg = \"clear\";\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -6038,7 +6119,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "4bfefaeb7f82f4c6",
         "name": "FIRST set stream mode",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"state_color\", \"\");\nreturn msg;",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nglobal.set(\"state_color\", \"\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6050,7 +6131,8 @@
         "wires": [
             [
                 "35c6cd1a805aeca5",
-                "98580b7a29e56897"
+                "98580b7a29e56897",
+                "000aadf55c9c61da"
             ]
         ]
     },
@@ -6118,7 +6200,7 @@
         "to": "",
         "reg": false,
         "x": 1780,
-        "y": 580,
+        "y": 600,
         "wires": [
             [
                 "55bca069bdb08ee7"
@@ -6129,6 +6211,7 @@
         "id": "2b527baf8d8b1450",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "4bfefaeb7f82f4c6",
         "name": "inject on first load",
         "props": [
@@ -6138,12 +6221,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": "1",
         "topic": "",
         "payload": "true",
         "payloadType": "str",
-        "x": 1330,
+        "x": 1320,
         "y": 540,
         "wires": [
             [
@@ -6436,17 +6519,17 @@
         "id": "a49d494221eac856",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "9f151e324008585b",
-        "name": "debug 3",
+        "name": "Settings loader",
         "active": true,
-        "tosidebar": true,
-        "console": false,
+        "tosidebar": false,
+        "console": true,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4060,
+        "x": 4090,
         "y": 80,
         "wires": []
     },
@@ -6543,7 +6626,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "group": "7954d85ae8701623",
-        "order": 5,
+        "order": 2,
         "width": 4,
         "height": 1,
         "name": "Video bitrate",
@@ -6565,7 +6648,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "group": "7954d85ae8701623",
-        "order": 4,
+        "order": 1,
         "width": 3,
         "height": 1,
         "name": "TS bitrate",
@@ -6643,8 +6726,8 @@
         "tooltip": "",
         "place": "Select...",
         "group": "235bdacf6041386f",
-        "order": 22,
-        "width": 5,
+        "order": 23,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -6702,7 +6785,7 @@
         "tooltip": "",
         "place": "",
         "group": "235bdacf6041386f",
-        "order": 23,
+        "order": 25,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -6881,8 +6964,8 @@
         "tooltip": "",
         "place": "",
         "group": "235bdacf6041386f",
-        "order": 27,
-        "width": 4,
+        "order": 24,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -6988,7 +7071,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "235bdacf6041386f",
-        "order": 25,
+        "order": 27,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -8169,15 +8252,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "ffplay ip and title setter",
-        "func": "let title = global.get('ffplay_title');\nlet ontop = global.get('device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\n// title = `\\\"${title}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\ntitle = `test`;\nglobal.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nmsg.payload = `${global.get(\"device.rx.tsip\")} ${title} ${hor} ${vert} ${volume} ${global.get(\"ffplay_top_exit\")} ${global.get(\"ffplay_left_exit\")} ${ontop}`;\n// msg.payload = \n// `udp://@${global.get(\"device.rx.tsip\")} ` + \n// `-window_title ${title} ` + \n// `-volume ${volume} ` + \n// `-seek_interval 3 ` + \n// `-x ${hor} `+ \n// `-y ${vert} ` + \n// `-hide_banner ` + \n// `-top ${global.get(\"ffplay_top_exit\")} ` + \n// `-left ${global.get(\"ffplay_left_exit\")} ` + \n// `${ontop}`\nreturn msg;",
+        "func": "let title = global.get('ffplay_title');\n\n\nlet ontop = global.get('device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\ntitle = `\\\"${title}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\n// title = `test`;\nglobal.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nmsg.payload = `${global.get(\"device.rx.tsip\")} ${title} ${hor} ${vert} ${volume} ${global.get(\"ffplay_top_exit\")} ${global.get(\"ffplay_left_exit\")} ${ontop}`;\n// msg.payload = \n// `udp://@${global.get(\"device.rx.tsip\")} ` + \n// `-window_title ${title} ` + \n// `-volume ${volume} ` + \n// `-seek_interval 3 ` + \n// `-x ${hor} `+ \n// `-y ${vert} ` + \n// `-hide_banner ` + \n// `-top ${global.get(\"ffplay_top_exit\")} ` + \n// `-left ${global.get(\"ffplay_left_exit\")} ` + \n// `${ontop}`\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2880,
-        "y": 2880,
+        "x": 3020,
+        "y": 2860,
         "wires": [
             [
                 "023820f309b020da"
@@ -8831,7 +8914,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "f6218c30fc4ec8b7",
         "name": "",
-        "group": "6140f866127cd620",
+        "group": "e8adab232b1d4dce",
         "order": 2,
         "width": 2,
         "height": 1,
@@ -9650,7 +9733,6 @@
         "id": "df0fb204fd14a618",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "28611a179255d92b",
         "name": "debug 10",
         "active": true,
@@ -9681,7 +9763,8 @@
                 "b828f6a6.47d708",
                 "2c6310aae8f397fd",
                 "2a5a3cc2d63b2942",
-                "8764be884d895f57"
+                "8764be884d895f57",
+                "c82484c6378aaa4e"
             ]
         ]
     },
@@ -9712,7 +9795,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
         "name": "Send: longmynd rx sr",
-        "func": "let payload = msg.payload;\nlet topic = \"cmd/longmynd/sr\";\nmsg.topic = topic;\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = \"cmd/longmynd/sr\";\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"rx_time\", 0);\nglobal.set(\"rx_locked\", false);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -9731,6 +9814,7 @@
         "id": "6154ee8d719adfbd",
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "185cc616489b2615",
         "position": "bottom left",
         "displayTime": "3",
@@ -9846,7 +9930,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
         "name": "CTRL click for RX frequency",
-        "func": "let freq = Number(msg.payload.downlink);\nfreq = freq * 1000000;\nmsg.payload = freq; \nreturn msg;",
+        "func": "let freq = Number(msg.payload.downlink);\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nglobal.set(\"ffplay_title\", `Freq: ${freq} MHz, SR: ${sr}kS/s `);\nfreq = freq * 1000000;\nmsg.payload = freq; \nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9950,11 +10034,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
+        "x": 590,
         "y": 620,
         "wires": [
             [
-                "df0fb204fd14a618",
                 "2f37f6fa43572da4",
                 "33ec5c8c097de479"
             ]
@@ -9988,12 +10071,10 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 620,
+        "y": 440,
         "wires": [
             [
-                "b828f6a6.47d708",
-                "515e9264fb253fbc",
-                "df0fb204fd14a618"
+                "b828f6a6.47d708"
             ]
         ]
     },
@@ -10637,9 +10718,9 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bc3a23f88991a3",
         "name": "",
-        "group": "e8adab232b1d4dce",
-        "order": 4,
-        "width": 3,
+        "group": "6140f866127cd620",
+        "order": 2,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "VLC",
@@ -11298,7 +11379,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "ba42e703170bee84",
         "name": "transform json to broker message",
-        "func": "let file = JSON.parse(msg.payload);\nmsg.action = file.action;\nmsg.broker = file.broker;\nmsg.topic = file.topic;\nmsg.payload = file.payload;\nglobal.set(\"callsign\", file.payload )\n// global.set(\"device.tx.dvbs2.tssourceaddress\", )\nreturn msg;",
+        "func": "let file = JSON.parse(msg.payload);\nmsg.action = file.action;\nmsg.broker = file.broker;\nmsg.topic = file.topic;\nmsg.payload = file.payload;\nglobal.set(\"callsign\", file.payload )\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -11552,18 +11633,17 @@
         "id": "2f35ec1420f48a0f",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "ba42e703170bee84",
         "name": "MQTT on start",
         "active": true,
-        "tosidebar": true,
-        "console": false,
+        "tosidebar": false,
+        "console": true,
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
+        "x": 910,
         "y": 60,
         "wires": []
     },
@@ -11581,7 +11661,7 @@
         "finalize": "",
         "libs": [],
         "x": 650,
-        "y": 160,
+        "y": 180,
         "wires": [
             [
                 "25874e1909171caa"
@@ -11610,7 +11690,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 500,
-        "y": 160,
+        "y": 180,
         "wires": [
             [
                 "5a68f1d90ea138d2"
@@ -12472,7 +12552,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "",
         "pauseType": "delay",
-        "timeout": "0",
+        "timeout": "1",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -12497,18 +12577,17 @@
         "id": "a56122d1643df6cf",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "4bfefaeb7f82f4c6",
         "name": "Auto restore",
         "active": true,
-        "tosidebar": true,
-        "console": false,
+        "tosidebar": false,
+        "console": true,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1790,
+        "x": 1800,
         "y": 740,
         "wires": []
     },
@@ -12518,7 +12597,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "ffmpeg command builder",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let codec = global.get(\"settings.CODEC\")\n    let input = global.get(\"settings.input_choice\")\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    let shapingString = `-minrate ${global.get(\"settings.VBITRATE\")}k -maxrate ${global.get(\"settings.VBITRATE\")}k`;\n    switch (codec) {\n        case 'libx264':\n            codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libvvenc':\n            let vvcBitRate = (videoBitrate * 800); // to Mega-ish\n            codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}:framerate=${global.get(\"settings.FPS\")}:size=${global.get(\"settings.IMAGESIZE\")}`;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            break;\n        case 'libaom-av1':\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case 'h264_nvenc':\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n    let offset = global.get(\"settings.audio_delay\");\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = global.get(\"settings.keyframe_interval\");\n    let max_delay = symbol_rate < 36 ? 2000 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n\n    switch (input) {\n        case 'dshow':\n            input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\"settings.video_device\")}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\"settings.audio_device\")}\\\" `;\n            break;\n        case 'udp':\n            input = `-i udp://${global.get(\"settings.udp_ip_port\")} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case 'rtmp':\n            input = `-f flv -listen 1 -i rtmp://${global.get(\"settings.rtmp_ip_port\")}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n    let str =\n        `${global.get(\"device.ffmpeg_path\")} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts ` +\n        `-muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? global.get(\"device.tx.dvbs2.fec\") : global.get(\"settings.FEC\");\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    /* \n        In here be dragons...\n     */\n    let videoBitrate = global.get(\"settings.VBITRATE\");\n    let tsRate = global.get(\"settings.TSBITRATE\");\n    let codec = global.get(\"settings.CODEC\")\n    let input = global.get(\"settings.input_choice\")\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    let shapingString = `-minrate ${global.get(\"settings.VBITRATE\")}k -maxrate ${global.get(\"settings.VBITRATE\")}k`;\n    switch (codec) {\n        case 'libx264':\n            codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libx265':\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case 'libvvenc':\n            let vvcBitRate = (videoBitrate * 800); // to Mega-ish\n            codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}:framerate=${global.get(\"settings.FPS\")}:size=${global.get(\"settings.IMAGESIZE\")}`;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            break;\n        case 'libaom-av1':\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case 'h264_nvenc':\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case 'hevc_nvenc':\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n    let offset = global.get(\"settings.audio_delay\");\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    let keyframe_interval = global.get(\"settings.keyframe_interval\");\n    let max_delay = symbol_rate < 36 ? 2000 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /* \n        This is the big ffmpeg variable string\n        do note the space ' ' at the end of each line...\n    */\n\n    switch (input) {\n        case 'dshow':\n            input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\"settings.video_device\")}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\"settings.audio_device\")}\\\" `;\n            break;\n        case 'udp':\n            input = `-i udp://${global.get(\"settings.udp_ip_port\")} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case 'rtmp':\n            input = `-f flv -listen 1 -i rtmp://${global.get(\"settings.rtmp_ip_port\")}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n    let str =\n        `${global.get(\"device.ffmpeg_path\")} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${global.get(\"settings.VBITRATE\")}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts ` +\n        `-muxrate ${tsRate}K ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -12551,7 +12630,7 @@
         "topic": "",
         "payload": "settings.audio_codec",
         "payloadType": "global",
-        "x": 960,
+        "x": 1060,
         "y": 2980,
         "wires": [
             [
@@ -12595,7 +12674,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1220,
+        "x": 1320,
         "y": 2980,
         "wires": [
             [
@@ -12630,7 +12709,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1450,
+        "x": 1550,
         "y": 2980,
         "wires": [
             []
@@ -12654,7 +12733,7 @@
         "topic": "",
         "payload": "settings.input_choice",
         "payloadType": "global",
-        "x": 960,
+        "x": 1060,
         "y": 3035.5908203125,
         "wires": [
             [
@@ -12698,7 +12777,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1220,
+        "x": 1320,
         "y": 3035.5908203125,
         "wires": [
             [
@@ -12733,7 +12812,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1450,
+        "x": 1550,
         "y": 3035.5908203125,
         "wires": [
             []
@@ -12749,7 +12828,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "235bdacf6041386f",
-        "order": 24,
+        "order": 26,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -12806,7 +12885,7 @@
         "topic": "",
         "payload": "settings.udp_ip_port",
         "payloadType": "global",
-        "x": 960,
+        "x": 1060,
         "y": 3091.818359375,
         "wires": [
             [
@@ -12833,7 +12912,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1181.765625,
+        "x": 1281.765625,
         "y": 3091.181640625,
         "wires": [
             [
@@ -12868,7 +12947,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1421.765625,
+        "x": 1521.765625,
         "y": 3091.181640625,
         "wires": [
             []
@@ -12901,7 +12980,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1440,
+        "x": 1540,
         "y": 3147.4091796875,
         "wires": [
             []
@@ -12926,7 +13005,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1210,
+        "x": 1310,
         "y": 3147.4091796875,
         "wires": [
             [
@@ -12952,7 +13031,7 @@
         "topic": "",
         "payload": "settings.rtmp_ip_port",
         "payloadType": "global",
-        "x": 960,
+        "x": 1060,
         "y": 3147.4091796875,
         "wires": [
             [
@@ -12978,7 +13057,7 @@
         "topic": "",
         "payload": "settings.audio_sample_rate",
         "payloadType": "global",
-        "x": 980,
+        "x": 1080,
         "y": 3203,
         "wires": [
             [
@@ -12996,7 +13075,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "235bdacf6041386f",
-        "order": 26,
+        "order": 28,
         "width": 3,
         "height": 1,
         "passthru": true,
@@ -13047,7 +13126,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1210,
+        "x": 1310,
         "y": 3203,
         "wires": [
             [
@@ -13082,7 +13161,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1440,
+        "x": 1540,
         "y": 3203,
         "wires": [
             []
@@ -13257,8 +13336,8 @@
         "order": 2,
         "width": "4",
         "height": 1,
-        "name": "Tx Controls",
-        "label": "<b><font size=4><font color=\"#2666A1\"}>Tx controls",
+        "name": "Modulator controls",
+        "label": "<b><font size=4><font color=\"#CC0D00\"}>Modulator controls",
         "format": "",
         "layout": "row-left",
         "className": "",
@@ -13266,7 +13345,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1770,
+        "x": 1790,
         "y": 320,
         "wires": []
     },
@@ -13276,11 +13355,11 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "group": "235bdacf6041386f",
-        "order": 18,
+        "order": 19,
         "width": "6",
         "height": 1,
-        "name": "Profile controls",
-        "label": "<b><font size=4><font color=\"#2666A1\"}>Profile controls",
+        "name": "Encoder controls",
+        "label": "<b><font size=4><font color=\"#CC0D00\"}>Encoder controls",
         "format": "",
         "layout": "row-spread",
         "className": "",
@@ -13288,7 +13367,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1780,
+        "x": 1790,
         "y": 360,
         "wires": []
     },
@@ -13301,7 +13380,7 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": "0.2",
         "topic": "",
         "x": 130,
@@ -13367,7 +13446,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "c930b0c6a1dc1c8f",
         "name": "read dashboard settings",
-        "func": "let tasmota_settings = JSON.parse(msg.payload);\nmsg.payload = tasmota_settings.use_chat;\nreturn msg;",
+        "func": "let dashboard = JSON.parse(msg.payload);\nmsg.payload = dashboard.use_chat;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13391,7 +13470,7 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "x": 130,
@@ -13428,15 +13507,15 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "f0ff4e31142fa565",
-        "name": "read tasmota settings",
-        "func": "let tasmota_settings = JSON.parse(msg.payload);\nif (tasmota_settings.use_switch){\n    let url = `${tasmota_settings.tasmota_switch_url}/?m=1&o=1`;\n    msg.url = url;\n    msg.payload = true;\n    return msg;\n}\nmsg.payload = false;\nreturn msg;",
+        "name": "read dashboard settings",
+        "func": "let dashboard = JSON.parse(msg.payload);\nmsg.payload = dashboard.use_switch;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 510,
         "y": 3780,
         "wires": [
             [
@@ -13495,16 +13574,16 @@
         "id": "000aadf55c9c61da",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "name": "JSON stream mode",
+        "name": "JSON restore",
         "active": true,
-        "tosidebar": true,
-        "console": false,
+        "tosidebar": false,
+        "console": true,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2070,
+        "x": 2060,
         "y": 240,
         "wires": []
     },
@@ -13541,7 +13620,7 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 3880,
+        "y": 4180,
         "wires": [
             []
         ]
@@ -13566,7 +13645,7 @@
         "className": "",
         "topicType": "msg",
         "x": 770,
-        "y": 3880,
+        "y": 4180,
         "wires": [
             [
                 "30437f33c9972f90"
@@ -13587,7 +13666,7 @@
         "finalize": "",
         "libs": [],
         "x": 580,
-        "y": 3880,
+        "y": 4180,
         "wires": [
             [
                 "c5f093958cc5103e"
@@ -13608,7 +13687,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 370,
-        "y": 3880,
+        "y": 4180,
         "wires": [
             [
                 "21bcf98d22dabf77"
@@ -13634,7 +13713,7 @@
         "payload": "device.ffmpeg_path",
         "payloadType": "global",
         "x": 170,
-        "y": 3880,
+        "y": 4180,
         "wires": [
             [
                 "3eac291a53cd9871"
@@ -13712,6 +13791,1165 @@
         ]
     },
     {
+        "id": "5e18e8622dc024cf",
+        "type": "ui_text",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78b656eeda23dc5a",
+        "group": "9ed1d9a126995072",
+        "order": 1,
+        "width": "4",
+        "height": 1,
+        "name": "Modulator controls",
+        "label": "<b><font size=4><font color=\"#CC0D00\"}>Modulator controls",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1770,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c82484c6378aaa4e",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "check minitioune",
+        "property": "device.rx.use_minitioune",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "515e9264fb253fbc",
+                "df0fb204fd14a618"
+            ]
+        ]
+    },
+    {
+        "id": "fcc82dc0c60388f5",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Network",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.network",
+        "payloadType": "global",
+        "x": 1940,
+        "y": 3140,
+        "wires": [
+            [
+                "bb8dee7ad47db69c"
+            ]
+        ]
+    },
+    {
+        "id": "bb8dee7ad47db69c",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Network",
+        "label": "Network",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2160,
+        "y": 3140,
+        "wires": [
+            [
+                "44f0b7da719f1757"
+            ]
+        ]
+    },
+    {
+        "id": "44f0b7da719f1757",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set network",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.network",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2370,
+        "y": 3140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b86358ac5d8c435",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "PC1 UDP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.pc1",
+        "payloadType": "global",
+        "x": 1950,
+        "y": 3200,
+        "wires": [
+            [
+                "6f6601d609b6460d"
+            ]
+        ]
+    },
+    {
+        "id": "1de281946f74c19b",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set PC1 UDP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.pc1",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2370,
+        "y": 3200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f6601d609b6460d",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "PC1 UDP",
+        "label": "PC1 UDP",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2160,
+        "y": 3200,
+        "wires": [
+            [
+                "1de281946f74c19b"
+            ]
+        ]
+    },
+    {
+        "id": "01840b0f91ef20b4",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "PC2 TCP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.pc2",
+        "payloadType": "global",
+        "x": 1950,
+        "y": 3260,
+        "wires": [
+            [
+                "1ca63cc42b3ba5f8"
+            ]
+        ]
+    },
+    {
+        "id": "1ca63cc42b3ba5f8",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "PC2 TCP",
+        "label": "PC2 TCP",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2160,
+        "y": 3260,
+        "wires": [
+            [
+                "5db94457ba6ae6b6"
+            ]
+        ]
+    },
+    {
+        "id": "5db94457ba6ae6b6",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set PC2 TCP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.pc2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2370,
+        "y": 3260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dc994ba008186e4",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portstart UDP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.portstart_udp",
+        "payloadType": "global",
+        "x": 1960,
+        "y": 3320,
+        "wires": [
+            [
+                "41df24c97592fd90"
+            ]
+        ]
+    },
+    {
+        "id": "41df24c97592fd90",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portstart UDP",
+        "label": "Portstart UDP",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2180,
+        "y": 3320,
+        "wires": [
+            [
+                "0bd56278afe23f51"
+            ]
+        ]
+    },
+    {
+        "id": "0bd56278afe23f51",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set Portstart UDP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.portstart_udp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2390,
+        "y": 3320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c0b0ccf968a8497",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set Portend UDP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.portend_udp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2390,
+        "y": 3380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19b9271d7a62e4a5",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portend UDP",
+        "label": "Portend UDP",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2170,
+        "y": 3380,
+        "wires": [
+            [
+                "4c0b0ccf968a8497"
+            ]
+        ]
+    },
+    {
+        "id": "2f1edd8276585605",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portend UDP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.portend_udp",
+        "payloadType": "global",
+        "x": 1960,
+        "y": 3380,
+        "wires": [
+            [
+                "19b9271d7a62e4a5"
+            ]
+        ]
+    },
+    {
+        "id": "2ecb46ec465f3a11",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Tunnel IP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.tunip",
+        "payloadType": "global",
+        "x": 1950,
+        "y": 3560,
+        "wires": [
+            [
+                "5635c4cc49824c04"
+            ]
+        ]
+    },
+    {
+        "id": "5635c4cc49824c04",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Tunnel IP",
+        "label": "Tunnel IP",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2160,
+        "y": 3560,
+        "wires": [
+            [
+                "71e2bcf77d069c8e"
+            ]
+        ]
+    },
+    {
+        "id": "71e2bcf77d069c8e",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set Tunnel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.tunip",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2370,
+        "y": 3560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "077274631b0e7dfe",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Send GSE init",
+        "func": "if (msg.payload == \"dvbs2-gse\") {\n\n   let payload1 = `-t nat -F`;\n   let payload2 = `-F`;\n   let payload3 = `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`;\n   let payload4 = `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`;\n   let payload5 = `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`;\n   let payload6 = `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`;\n   let payload7 = `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`;\n   //let payload7 = `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.port\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.port\")}`;\n   let payload8 = `${global.get(\"settings.tunip\")}`;\n\n   let message1 = {};\n   let message2 = {};\n   let message3 = {};\n   let message4 = {};\n   let message5 = {};\n   let message6 = {};\n   let message7 = {};\n   let message8 = {};\n\n   message1.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message2.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message3.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message4.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message5.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message6.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message7.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message8.topic = `${global.get(\"cmdPath\")}/ip/tunadress`;\n\n   message1.payload = payload1;\n   message2.payload = payload2;\n   message3.payload = payload3;\n   message4.payload = payload4;\n   message5.payload = payload5;\n   message6.payload = payload6;\n   message7.payload = payload7;\n   message8.payload = payload8;\n\n   return [[message1, message2, message3, message4, message5, message6, message7, message8]];\n\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 3100,
+        "wires": [
+            [
+                "4cbca64d40e28578",
+                "8a16f1f5708afd9e"
+            ]
+        ]
+    },
+    {
+        "id": "3e176cd4bd9a502b",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "debug GSE",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2410,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "4cbca64d40e28578",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2200,
+        "y": 3100,
+        "wires": [
+            [
+                "3e176cd4bd9a502b"
+            ]
+        ]
+    },
+    {
+        "id": "cdf1aaaf980ac998",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portstart TCP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.portstart_tcp",
+        "payloadType": "global",
+        "x": 1960,
+        "y": 3440,
+        "wires": [
+            [
+                "d508b43091f81d07"
+            ]
+        ]
+    },
+    {
+        "id": "d508b43091f81d07",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portstart TCP",
+        "label": "Portstart TCP",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2180,
+        "y": 3440,
+        "wires": [
+            [
+                "361d78ea269b5bbd"
+            ]
+        ]
+    },
+    {
+        "id": "361d78ea269b5bbd",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set Portstart TCP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.portstart_tcp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2390,
+        "y": 3440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cb48bb52bd5e53f",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "set Portend TCP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.portend_tcp",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2380,
+        "y": 3500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce3c8a12ea185160",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portend TCP",
+        "label": "Portend TCP",
+        "tooltip": "",
+        "group": "91cddc460b9c86f1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2170,
+        "y": 3500,
+        "wires": [
+            [
+                "3cb48bb52bd5e53f"
+            ]
+        ]
+    },
+    {
+        "id": "73b256567fa9437e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Portend TCP",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.portend_tcp",
+        "payloadType": "global",
+        "x": 1960,
+        "y": 3500,
+        "wires": [
+            [
+                "ce3c8a12ea185160"
+            ]
+        ]
+    },
+    {
+        "id": "77d1845d8d7e97dd",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28abab7559f98f4e",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.ffplay_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 3980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c666d4b66bdb1c1",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28abab7559f98f4e",
+        "name": "",
+        "label": "ffplay_path",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 770,
+        "y": 3980,
+        "wires": [
+            [
+                "77d1845d8d7e97dd"
+            ]
+        ]
+    },
+    {
+        "id": "382c0ba4ac25e933",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28abab7559f98f4e",
+        "name": "dvbs_gui_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffplay_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 3980,
+        "wires": [
+            [
+                "7c666d4b66bdb1c1"
+            ]
+        ]
+    },
+    {
+        "id": "0a50edd1ec52ac77",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28abab7559f98f4e",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 370,
+        "y": 3980,
+        "wires": [
+            [
+                "382c0ba4ac25e933"
+            ]
+        ]
+    },
+    {
+        "id": "946bfb2b2f258664",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "28abab7559f98f4e",
+        "name": "ffplay_path",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device.ffplay_path",
+        "payloadType": "global",
+        "x": 170,
+        "y": 3980,
+        "wires": [
+            [
+                "0a50edd1ec52ac77"
+            ]
+        ]
+    },
+    {
+        "id": "a65e0da8e66d8647",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "913f7262750bf555",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.ffprobe_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 4080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08bb407e7555f53c",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "913f7262750bf555",
+        "name": "",
+        "label": "ffmpeg_path",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 770,
+        "y": 4080,
+        "wires": [
+            [
+                "a65e0da8e66d8647"
+            ]
+        ]
+    },
+    {
+        "id": "05d216119b33b43c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "913f7262750bf555",
+        "name": "dvbs_gui_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffprobe_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 4080,
+        "wires": [
+            [
+                "08bb407e7555f53c"
+            ]
+        ]
+    },
+    {
+        "id": "46ec28f7e9f10da5",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "913f7262750bf555",
+        "name": "",
+        "filename": "device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 370,
+        "y": 4080,
+        "wires": [
+            [
+                "05d216119b33b43c"
+            ]
+        ]
+    },
+    {
+        "id": "6de336ee9abcbda7",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "913f7262750bf555",
+        "name": "ffmpeg_path",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device.ffprobe_path",
+        "payloadType": "global",
+        "x": 170,
+        "y": 4080,
+        "wires": [
+            [
+                "46ec28f7e9f10da5"
+            ]
+        ]
+    },
+    {
+        "id": "39bfd14afebfca3c",
+        "type": "catch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "",
+        "scope": [
+            "748c39ac026e286f",
+            "2f37f6fa43572da4"
+        ],
+        "uncaught": false,
+        "x": 810,
+        "y": 660,
+        "wires": [
+            [
+                "2f37f6fa43572da4"
+            ]
+        ]
+    },
+    {
+        "id": "fe4ad701ef35c7ff",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "23d61d1ab03c6348",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 3880,
+        "wires": [
+            [
+                "c1f5dcd1636803b3"
+            ]
+        ]
+    },
+    {
+        "id": "c1f5dcd1636803b3",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "23d61d1ab03c6348",
+        "name": "",
+        "filename": "dashboard.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 300,
+        "y": 3880,
+        "wires": [
+            [
+                "83b62f5224016f4c"
+            ]
+        ]
+    },
+    {
+        "id": "83b62f5224016f4c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "23d61d1ab03c6348",
+        "name": "read dashboard settings",
+        "func": "let dashboard = JSON.parse(msg.payload);\nmsg.payload = dashboard.use_longmynd;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 3880,
+        "wires": [
+            [
+                "5538dd0dd8c2d484"
+            ]
+        ]
+    },
+    {
+        "id": "5538dd0dd8c2d484",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "23d61d1ab03c6348",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "use_longmynd",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 3880,
+        "wires": [
+            [
+                "6be46c0407607ba9"
+            ]
+        ]
+    },
+    {
+        "id": "6be46c0407607ba9",
+        "type": "subflow:15d7457.fcac4bb",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "23d61d1ab03c6348",
+        "name": "",
+        "env": [
+            {
+                "name": "flowId",
+                "value": "d7c58eb9e7b65abb",
+                "type": "str"
+            }
+        ],
+        "x": 980,
+        "y": 3880,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "4c448d00f7a9bc91",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
@@ -13747,7 +14985,7 @@
         "expiry": "",
         "broker": "064bde8eca01e996",
         "x": 1290,
-        "y": 240,
+        "y": 160,
         "wires": []
     },
     {
@@ -13763,7 +15001,7 @@
         "finalize": "",
         "libs": [],
         "x": 1070,
-        "y": 100,
+        "y": 120,
         "wires": [
             [
                 "092f35ea1c391fe9"
@@ -13774,7 +15012,6 @@
         "id": "7ef5df84abcea6ef",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -13788,7 +15025,8 @@
         "y": 520,
         "wires": [
             [
-                "1a1b56533b7099e6"
+                "1a1b56533b7099e6",
+                "3bbc8686923145ef"
             ]
         ]
     },
@@ -13796,7 +15034,6 @@
         "id": "80df44d523cf6fb3",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "Frequency",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/carrier_frequency\"\nreturn msg;",
         "outputs": 1,
@@ -13817,7 +15054,6 @@
         "id": "5aeaf491922457b1",
         "type": "inject",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "props": [
             {
@@ -13849,7 +15085,8 @@
                 "aa18fe6dd4ac0299",
                 "8b83d336adb14855",
                 "0e66d5d1d53eb868",
-                "6a472a91f5b893b8"
+                "6a472a91f5b893b8",
+                "cd41c1f3c4201336"
             ]
         ]
     },
@@ -13857,7 +15094,6 @@
         "id": "7eb0336efb127684",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -13871,7 +15107,8 @@
         "y": 580,
         "wires": [
             [
-                "4e342c0c8303aa44"
+                "4e342c0c8303aa44",
+                "c85d70eeb6386caa"
             ]
         ]
     },
@@ -13879,7 +15116,6 @@
         "id": "c08bc51a894d262e",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX Symbolrate",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/symbolrate\"\nreturn msg;",
         "outputs": 1,
@@ -13899,7 +15135,6 @@
         "id": "3ee83309b7c60ce6",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -13913,7 +15148,7 @@
         "y": 640,
         "wires": [
             [
-                "cc295c934bb4be42"
+                "397dacd9b7a65182"
             ]
         ]
     },
@@ -13921,7 +15156,6 @@
         "id": "fbadbc406f2250f8",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "Provider Name",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/provider_name\"\nreturn msg;",
         "outputs": 1,
@@ -13941,7 +15175,6 @@
         "id": "e26186773e77c7d7",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -13955,7 +15188,8 @@
         "y": 700,
         "wires": [
             [
-                "f6ef465dd5037ab9"
+                "f6ef465dd5037ab9",
+                "92f28d11dced1f70"
             ]
         ]
     },
@@ -13963,7 +15197,6 @@
         "id": "c445724468e5eee3",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX ServiceName",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/service_name\"\nreturn msg;",
         "outputs": 1,
@@ -13983,7 +15216,6 @@
         "id": "7b716cd2051f3dfd",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -13997,6 +15229,7 @@
         "y": 760,
         "wires": [
             [
+                "f273b41f331e91e0",
                 "5fd27bc7e53bf26e"
             ]
         ]
@@ -14005,7 +15238,6 @@
         "id": "7eac445141314da4",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX Mer",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/mer\"\nreturn msg;",
         "outputs": 1,
@@ -14025,7 +15257,6 @@
         "id": "6ed10429f1f77968",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -14039,7 +15270,8 @@
         "y": 820,
         "wires": [
             [
-                "9ccafb64a91eebb9"
+                "9ccafb64a91eebb9",
+                "cc4ddaef1b0abcbe"
             ]
         ]
     },
@@ -14047,7 +15279,6 @@
         "id": "9d2607d0b067c8a5",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX State",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/rx_state\"\nreturn msg;",
         "outputs": 1,
@@ -14067,7 +15298,6 @@
         "id": "fd75ce73f90f3897",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -14082,7 +15312,9 @@
         "wires": [
             [
                 "6addcc9fb4c8dafa",
-                "ceed3238855470f9"
+                "ceed3238855470f9",
+                "63789b768da8586e",
+                "2f94fc61ece80fe5"
             ]
         ]
     },
@@ -14090,7 +15322,6 @@
         "id": "ef1c70fe71ed1e99",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX Fec",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/fec\"\nreturn msg;",
         "outputs": 1,
@@ -14110,7 +15341,6 @@
         "id": "b95afb21d173822f",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -14125,7 +15355,8 @@
         "wires": [
             [
                 "58e863a2f2c3bca5",
-                "0bc834734cec7b86"
+                "0bc834734cec7b86",
+                "c7d5d5429530b8d7"
             ]
         ]
     },
@@ -14133,7 +15364,6 @@
         "id": "65e7265f536b7371",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX Modulation",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/modulation\"\nreturn msg;",
         "outputs": 1,
@@ -14161,8 +15391,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 240,
+        "x": 1070,
+        "y": 200,
         "wires": [
             [
                 "092f35ea1c391fe9"
@@ -14173,7 +15403,6 @@
         "id": "62587bd01f2eddd4",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -14187,7 +15416,8 @@
         "y": 1120,
         "wires": [
             [
-                "fe32f9d88f4a500f"
+                "214b7bfa90308e80",
+                "53178e5be4834dc9"
             ]
         ]
     },
@@ -14195,7 +15425,6 @@
         "id": "3f3a177e7fd8606a",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX Margin db",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/margin_db\"\nreturn msg;",
         "outputs": 1,
@@ -14217,14 +15446,14 @@
         "z": "d7c58eb9e7b65abb",
         "g": "95c60cbc844f0f03",
         "name": "ON",
-        "func": "let run = msg.payload\nlet topic = \"cmd/pluto/ZS1SCI/system/longmynd\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "func": "let run = msg.payload\nlet topic = `${global.get(\"cmdPath\")}/system/longmynd`\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 430,
         "y": 380,
         "wires": [
             [
@@ -14258,10 +15487,10 @@
         "id": "6b9b563a5762c7b4",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "Reset RX data",
         "func": "msg.payload=\"\"\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -14321,7 +15550,6 @@
         "id": "e4550b0658e8dda9",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX Short Frame",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/short_frame\"\nreturn msg;",
         "outputs": 1,
@@ -14341,7 +15569,6 @@
         "id": "c976ace452d1059f",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "RX Pilots",
         "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/pilots\"\nreturn msg;",
         "outputs": 1,
@@ -14361,7 +15588,6 @@
         "id": "1facaa16d95af5bd",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -14383,7 +15609,6 @@
         "id": "55ed3e51ca0bc354",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -14405,7 +15630,6 @@
         "id": "0bc834734cec7b86",
         "type": "change",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "rules": [
             {
@@ -14422,7 +15646,7 @@
         "to": "",
         "reg": false,
         "x": 860,
-        "y": 1060,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -14431,7 +15655,6 @@
         "id": "8b56d8d464463ef0",
         "type": "change",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "QPSK_Min_C/N",
         "rules": [
             {
@@ -14539,7 +15762,7 @@
                 "pt": "msg",
                 "from": "none",
                 "fromt": "str",
-                "to": "- - - -",
+                "to": "- -",
                 "tot": "str"
             }
         ],
@@ -14560,7 +15783,6 @@
         "id": "80528ea20d50cd4a",
         "type": "change",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "8PSK_Min_C/N",
         "rules": [
             {
@@ -14644,7 +15866,6 @@
         "id": "6addcc9fb4c8dafa",
         "type": "switch",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "switch C/N tables",
         "property": "constellation_mode",
         "propertyType": "flow",
@@ -14679,7 +15900,7 @@
         "repair": false,
         "outputs": 5,
         "x": 830,
-        "y": 940,
+        "y": 960,
         "wires": [
             [
                 "8b56d8d464463ef0"
@@ -14702,7 +15923,6 @@
         "id": "1183c0833fda3d74",
         "type": "change",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "16APSK_Min_C/N",
         "rules": [
             {
@@ -14786,7 +16006,6 @@
         "id": "a5d239c45dea85e1",
         "type": "change",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "32APSK_Min_C/N",
         "rules": [
             {
@@ -14861,7 +16080,6 @@
         "id": "c74f6eb9ad0470b8",
         "type": "change",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "None",
         "rules": [
             {
@@ -14891,7 +16109,6 @@
         "id": "aa18fe6dd4ac0299",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "LDPC Errors",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/longmynd/ldpc_errors\"\nreturn msg;",
         "outputs": 1,
@@ -14911,7 +16128,6 @@
         "id": "f3a9382bc4aea5a2",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -14997,8 +16213,8 @@
         "label": "Tuner port",
         "tooltip": "",
         "group": "65d91b75202c3b55",
-        "order": 14,
-        "width": 5,
+        "order": 8,
+        "width": "4",
         "height": 1,
         "passthru": true,
         "decouple": "false",
@@ -15015,7 +16231,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 680,
+        "x": 670,
         "y": 280,
         "wires": [
             [
@@ -15033,10 +16249,10 @@
         "label": "Tuner on/off",
         "tooltip": "",
         "group": "65d91b75202c3b55",
-        "order": 1,
+        "order": 2,
         "width": 4,
         "height": 1,
-        "passthru": false,
+        "passthru": true,
         "decouple": "false",
         "topic": "payload",
         "topicType": "msg",
@@ -15051,7 +16267,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 150,
+        "x": 270,
         "y": 380,
         "wires": [
             [
@@ -15068,10 +16284,10 @@
         "name": "",
         "group": "65d91b75202c3b55",
         "order": 21,
-        "width": 4,
+        "width": "2",
         "height": 1,
         "passthru": false,
-        "label": "Reset RX Settings",
+        "label": "Reset RX",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -15081,7 +16297,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
+        "x": 140,
         "y": 160,
         "wires": [
             [
@@ -15099,9 +16315,9 @@
         "label": "Symbol Rate",
         "tooltip": "",
         "place": "",
-        "group": "65d91b75202c3b55",
-        "order": 19,
-        "width": 6,
+        "group": "a4a37989805c1f8e",
+        "order": 5,
+        "width": "5",
         "height": 1,
         "passthru": true,
         "multiple": false,
@@ -15151,8 +16367,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 720,
-        "y": 100,
+        "x": 680,
+        "y": 160,
         "wires": [
             [
                 "757e04c57fef3f65"
@@ -15165,168 +16381,22 @@
         "z": "d7c58eb9e7b65abb",
         "g": "95c60cbc844f0f03",
         "name": "",
-        "label": "Frequency",
+        "label": "Set Frequency",
         "tooltip": "",
         "place": "",
-        "group": "65d91b75202c3b55",
-        "order": 17,
+        "group": "a4a37989805c1f8e",
+        "order": 4,
         "width": 6,
         "height": 1,
         "passthru": false,
         "multiple": false,
-        "options": [
-            {
-                "label": "437 Mhz",
-                "value": "437000000",
-                "type": "str"
-            },
-            {
-                "label": "1280 Mhz",
-                "value": "1280000000",
-                "type": "str"
-            },
-            {
-                "label": "CH1 333KS",
-                "value": "2403249920",
-                "type": "str"
-            },
-            {
-                "label": "CH2 125KS",
-                "value": "2403500030",
-                "type": "str"
-            },
-            {
-                "label": "CH3 333KS 1MS",
-                "value": "2403749886",
-                "type": "str"
-            },
-            {
-                "label": "CH4 125KS",
-                "value": "2404000000",
-                "type": "str"
-            },
-            {
-                "label": "CH5 333KS",
-                "value": "2404250110",
-                "type": "str"
-            },
-            {
-                "label": "CH6 125KS",
-                "value": "2404499966",
-                "type": "str"
-            },
-            {
-                "label": "CH7 333KS",
-                "value": "2404750080",
-                "type": "str"
-            },
-            {
-                "label": "CH8 125KS",
-                "value": "2404999936",
-                "type": "str"
-            },
-            {
-                "label": "CH9 333KS 1MS",
-                "value": "2405250046",
-                "type": "str"
-            },
-            {
-                "label": "CH10 125KS",
-                "value": "2405499902",
-                "type": "str"
-            },
-            {
-                "label": "CH11 333KS",
-                "value": "2405750016",
-                "type": "str"
-            },
-            {
-                "label": "CH12 125KS",
-                "value": "2406000126",
-                "type": "str"
-            },
-            {
-                "label": "CH13 333KS",
-                "value": "2406249982",
-                "type": "str"
-            },
-            {
-                "label": "CH14 125KS",
-                "value": "2406500096",
-                "type": "str"
-            },
-            {
-                "label": "CH15 333KS 1MS",
-                "value": "2406749952",
-                "type": "str"
-            },
-            {
-                "label": "CH16 125KS",
-                "value": "2407000062",
-                "type": "str"
-            },
-            {
-                "label": "CH17 333KS",
-                "value": "2407249918",
-                "type": "str"
-            },
-            {
-                "label": "CH18 125KS",
-                "value": "2407500032",
-                "type": "str"
-            },
-            {
-                "label": "CH19 333KS",
-                "value": "2407749888",
-                "type": "str"
-            },
-            {
-                "label": "CH20 125KS",
-                "value": "2407999998",
-                "type": "str"
-            },
-            {
-                "label": "CH21 333KS",
-                "value": "2408250112",
-                "type": "str"
-            },
-            {
-                "label": "CH22 125KS",
-                "value": "2408499968",
-                "type": "str"
-            },
-            {
-                "label": "CH23 333KS",
-                "value": "2408750078",
-                "type": "str"
-            },
-            {
-                "label": "CH24 125KS",
-                "value": "2408999936",
-                "type": "str"
-            },
-            {
-                "label": "CH25 333KS",
-                "value": "2409250048",
-                "type": "str"
-            },
-            {
-                "label": "CH26 125KS",
-                "value": "2409499902",
-                "type": "str"
-            },
-            {
-                "label": "CH27 333KS",
-                "value": "2409750014",
-                "type": "str"
-            }
-        ],
+        "options": [],
         "payload": "",
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 790,
-        "y": 160,
+        "x": 660,
+        "y": 220,
         "wires": [
             [
                 "4c448d00f7a9bc91"
@@ -15337,17 +16407,16 @@
         "id": "1a1b56533b7099e6",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 5,
-        "width": 4,
+        "order": 12,
+        "width": "4",
         "height": 1,
         "name": "RX Actual Frequency",
-        "label": "",
+        "label": "Frequency",
         "format": "  {{value | number:0}}  MHz",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#008080",
@@ -15359,17 +16428,16 @@
         "id": "4e342c0c8303aa44",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 6,
+        "order": 13,
         "width": 3,
         "height": 1,
         "name": "RX Symbol Rate",
         "label": "",
-        "format": "SR   {{msg.payload}} kS/s",
-        "layout": "col-center",
+        "format": "SR {{msg.payload}} kS/s",
+        "layout": "row-spread",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#008080",
@@ -15381,105 +16449,100 @@
         "id": "cc295c934bb4be42",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 18,
-        "width": 6,
+        "order": 19,
+        "width": "5",
         "height": 1,
         "name": "RX provider Name",
         "label": "Prov. Name :",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
+        "layout": "row-spread",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
-        "x": 830,
-        "y": 640,
+        "x": 1010,
+        "y": 660,
         "wires": []
     },
     {
         "id": "f6ef465dd5037ab9",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 16,
-        "width": 6,
+        "order": 18,
+        "width": "5",
         "height": 1,
         "name": "RX Service Name",
         "label": "Service Name :",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
+        "layout": "row-spread",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#ffffff",
         "x": 830,
-        "y": 700,
+        "y": 720,
         "wires": []
     },
     {
         "id": "ceed3238855470f9",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 8,
-        "width": 3,
+        "order": 15,
+        "width": "2",
         "height": 1,
         "name": "RX Actual Fec",
         "label": "",
         "format": "FEC  {{msg.payload}}",
-        "layout": "row-left",
+        "layout": "row-spread",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#008080",
         "x": 820,
-        "y": 880,
+        "y": 900,
         "wires": []
     },
     {
         "id": "58e863a2f2c3bca5",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 7,
-        "width": 3,
+        "order": 14,
+        "width": "3",
         "height": 1,
         "name": "RX Modulation",
         "label": "",
-        "format": "MOD   {{msg.payload}}",
-        "layout": "row-left",
+        "format": "MOD {{msg.payload}}",
+        "layout": "row-spread",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#008080",
         "x": 820,
-        "y": 1020,
+        "y": 1040,
         "wires": []
     },
     {
         "id": "cd6d6d2557a4a7de",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 13,
-        "width": 5,
+        "order": 17,
+        "width": "3",
         "height": 1,
         "name": "Display_min_C/N",
-        "label": "C/N needed :",
+        "label": "Min C/N :",
         "format": "{{msg.payload}} dB",
         "layout": "row-spread",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#008080",
@@ -15493,7 +16556,7 @@
         "z": "d7c58eb9e7b65abb",
         "g": "95c60cbc844f0f03",
         "group": "65d91b75202c3b55",
-        "order": 15,
+        "order": 9,
         "width": 2,
         "height": 1,
         "name": "Tuner port",
@@ -15501,7 +16564,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#008080",
@@ -15513,31 +16576,29 @@
         "id": "017e750722d50fa5",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "65d91b75202c3b55",
-        "order": 20,
-        "width": 5,
+        "order": 11,
+        "width": "4",
         "height": 1,
         "name": "TS Out",
         "label": "TS Out :",
-        "format": "{{msg.payload}}:1234",
+        "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": "14",
         "color": "#008080",
         "x": 800,
-        "y": 1360,
+        "y": 1400,
         "wires": []
     },
     {
         "id": "49109a540ffe32af",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "group": "9ed1d9a126995072",
-        "order": 1,
+        "order": 4,
         "width": 1,
         "height": 1,
         "name": "Label RX status frame",
@@ -15557,10 +16618,9 @@
         "id": "5fd27bc7e53bf26e",
         "type": "ui_gauge",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
-        "name": "MER",
-        "group": "65d91b75202c3b55",
-        "order": 9,
+        "name": "Gauge - MER",
+        "group": "a4a37989805c1f8e",
+        "order": 7,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -15578,18 +16638,17 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 790,
-        "y": 760,
+        "x": 850,
+        "y": 780,
         "wires": []
     },
     {
         "id": "fe32f9d88f4a500f",
         "type": "ui_gauge",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
-        "name": "Margin",
-        "group": "65d91b75202c3b55",
-        "order": 12,
+        "name": "Gauge - Margin",
+        "group": "a4a37989805c1f8e",
+        "order": 11,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -15607,18 +16666,17 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 790,
-        "y": 1120,
+        "x": 920,
+        "y": 1140,
         "wires": []
     },
     {
         "id": "41116104860cd283",
         "type": "ui_gauge",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
-        "name": "",
-        "group": "65d91b75202c3b55",
-        "order": 10,
+        "name": "Gauge - LDPC Errors",
+        "group": "a4a37989805c1f8e",
+        "order": 8,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -15636,7 +16694,7 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 810,
+        "x": 990,
         "y": 1300,
         "wires": []
     },
@@ -15653,7 +16711,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
+        "x": 420,
         "y": 280,
         "wires": [
             [
@@ -15665,9 +16723,8 @@
         "id": "8b83d336adb14855",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "Get TSIP_OUT",
-        "func": "let tsip_out = \"230.0.0.2\"\nmsg.payload = tsip_out;\nreturn msg;",
+        "func": "let tsip_out = global.get(\"device.rx.tsip\");\nmsg.payload = tsip_out;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15686,14 +16743,13 @@
         "id": "9ccafb64a91eebb9",
         "type": "ui_led",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
-        "order": 2,
+        "order": 3,
         "group": "65d91b75202c3b55",
-        "width": 3,
+        "width": "2",
         "height": 1,
-        "label": "Carrier lock",
-        "labelPlacement": "right",
-        "labelAlignment": "left",
+        "label": "Carrier",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
         "colorForValue": [
             {
                 "color": "#ff0000",
@@ -15711,21 +16767,20 @@
         "showGlow": false,
         "name": "Carrier lock",
         "x": 810,
-        "y": 820,
+        "y": 840,
         "wires": []
     },
     {
         "id": "e7953b157ef05c17",
         "type": "ui_led",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "order": 4,
         "group": "65d91b75202c3b55",
-        "width": 3,
+        "width": "2",
         "height": 1,
-        "label": "RX Pilots",
-        "labelPlacement": "right",
-        "labelAlignment": "left",
+        "label": "Pilots",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
         "colorForValue": [
             {
                 "color": "#ff0000",
@@ -15738,21 +16793,20 @@
         "showGlow": false,
         "name": "RX Pilots",
         "x": 800,
-        "y": 1240,
+        "y": 1260,
         "wires": []
     },
     {
         "id": "7099c8e1196a7139",
         "type": "ui_led",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
-        "order": 3,
+        "order": 5,
         "group": "65d91b75202c3b55",
-        "width": 4,
+        "width": "3",
         "height": 1,
-        "label": "RX Short Frame",
-        "labelPlacement": "right",
-        "labelAlignment": "left",
+        "label": "Short Frame",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
         "colorForValue": [
             {
                 "color": "#ff0000",
@@ -15765,14 +16819,13 @@
         "showGlow": false,
         "name": "RX Short Frame",
         "x": 820,
-        "y": 1180,
+        "y": 1200,
         "wires": []
     },
     {
         "id": "0e66d5d1d53eb868",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "Null packets",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/longmynd/ts_null\"\nreturn msg;",
         "outputs": 1,
@@ -15781,8 +16834,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 1460,
+        "x": 350,
+        "y": 1480,
         "wires": [
             [
                 "c4309a90c3787cc3"
@@ -15793,7 +16846,6 @@
         "id": "c4309a90c3787cc3",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -15807,7 +16859,7 @@
         "y": 1460,
         "wires": [
             [
-                "8d2e2e03337cd6ed"
+                "a47fbb74d9f716d7"
             ]
         ]
     },
@@ -15815,10 +16867,9 @@
         "id": "8d2e2e03337cd6ed",
         "type": "ui_gauge",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
-        "name": "",
-        "group": "65d91b75202c3b55",
-        "order": 11,
+        "name": "Gauge - Null packets",
+        "group": "a4a37989805c1f8e",
+        "order": 9,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -15836,7 +16887,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 830,
+        "x": 940,
         "y": 1460,
         "wires": []
     },
@@ -15844,7 +16895,6 @@
         "id": "6a472a91f5b893b8",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "Null packets",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/longmynd/bch_errors\"\nreturn msg;",
         "outputs": 1,
@@ -15853,8 +16903,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 1520,
+        "x": 350,
+        "y": 1540,
         "wires": [
             [
                 "6b4f4caadbd1eef3"
@@ -15865,7 +16915,6 @@
         "id": "6b4f4caadbd1eef3",
         "type": "mqtt in",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -15876,10 +16925,10 @@
         "rh": 0,
         "inputs": 1,
         "x": 590,
-        "y": 1520,
+        "y": 1540,
         "wires": [
             [
-                "77ed502a1d9da528"
+                "3bbe3be39cb3acad"
             ]
         ]
     },
@@ -15887,10 +16936,9 @@
         "id": "77ed502a1d9da528",
         "type": "ui_gauge",
         "z": "d7c58eb9e7b65abb",
-        "g": "ad7e5ffb72188b4e",
-        "name": "",
-        "group": "65d91b75202c3b55",
-        "order": 11,
+        "name": "Gauge - BCH errors ",
+        "group": "a4a37989805c1f8e",
+        "order": 10,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -15908,17 +16956,949 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 830,
-        "y": 1520,
+        "x": 940,
+        "y": 1540,
         "wires": []
     },
     {
-        "type": "tab",
-        "label": "Sonoff Basic tasmota",
-        "id": "30d0afc93dfb235a",
-        "info": "",
-        "disabled": false,
-        "env": []
+        "id": "023a87237f50095c",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "group": "65d91b75202c3b55",
+        "order": 1,
+        "width": "3",
+        "height": 1,
+        "name": "Rx controls",
+        "label": "<b><font size=4><font color=\"#CC0D00\"}>RX Longmynd",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1150,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a47fbb74d9f716d7",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 740,
+        "y": 1460,
+        "wires": [
+            [
+                "8d2e2e03337cd6ed"
+            ]
+        ]
+    },
+    {
+        "id": "3bbc8686923145ef",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "freq",
+        "rules": [
+            {
+                "t": "set",
+                "p": "freq",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c85d70eeb6386caa",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "sr",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sr",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50cc94d7164c1a3d",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "provider",
+        "rules": [
+            {
+                "t": "set",
+                "p": "provider",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "rx_provider",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92f28d11dced1f70",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "service",
+        "rules": [
+            {
+                "t": "set",
+                "p": "service",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "rx_service",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f273b41f331e91e0",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "mer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mer",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63789b768da8586e",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "fec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fec",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7d5d5429530b8d7",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "mod",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mod",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "214b7bfa90308e80",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "margin",
+        "rules": [
+            {
+                "t": "set",
+                "p": "margin",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1090,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6e02394155b93b8",
+        "type": "debug",
+        "z": "d7c58eb9e7b65abb",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "2f94fc61ece80fe5",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "FEC to percent",
+        "func": "let numbers = msg.payload.split(\"/\");\nlet top = numbers[0]\nlet bottom = numbers[1]\n\nmsg.payload = Number(top/bottom*100).toFixed(1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 780,
+        "wires": [
+            [
+                "8a6332d6de097ac7",
+                "65ae32fd188ce551"
+            ]
+        ]
+    },
+    {
+        "id": "8a6332d6de097ac7",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "d": true,
+        "group": "65d91b75202c3b55",
+        "order": 16,
+        "width": 3,
+        "height": 1,
+        "name": "RX Actual Fec",
+        "label": "",
+        "format": "FEC {{msg.payload}} %",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "14",
+        "color": "#008080",
+        "x": 1340,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "65ae32fd188ce551",
+        "type": "ui_chart",
+        "z": "d7c58eb9e7b65abb",
+        "d": true,
+        "name": "",
+        "group": "65d91b75202c3b55",
+        "order": 20,
+        "width": "16",
+        "height": "3",
+        "label": "FEC",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "25",
+        "ymax": "90",
+        "removeOlder": "30",
+        "removeOlderPoints": "30",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1310,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd41c1f3c4201336",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "lna gain",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/lna_gain\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1600,
+        "wires": [
+            [
+                "041124d9f596f263"
+            ]
+        ]
+    },
+    {
+        "id": "d1ee79702e448262",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "group": "65d91b75202c3b55",
+        "order": 10,
+        "width": "3",
+        "height": 1,
+        "name": "Lna gain",
+        "label": "Lna gain",
+        "format": "{{value/10 | number:1}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "14",
+        "color": "#008080",
+        "x": 720,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "53178e5be4834dc9",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 720,
+        "y": 1140,
+        "wires": [
+            [
+                "fe32f9d88f4a500f"
+            ]
+        ]
+    },
+    {
+        "id": "3bbe3be39cb3acad",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 740,
+        "y": 1540,
+        "wires": [
+            [
+                "77ed502a1d9da528"
+            ]
+        ]
+    },
+    {
+        "id": "fedb4b781ede71ba",
+        "type": "inject",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "rx_time",
+        "payloadType": "global",
+        "x": 1120,
+        "y": 1620,
+        "wires": [
+            [
+                "0ef0c870b966b6a8"
+            ]
+        ]
+    },
+    {
+        "id": "0ef0c870b966b6a8",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "Count time",
+        "func": "let txTime = msg.payload;\nif (txTime === 0) return msg;\nlet now = Date.now();\nmsg.payload = Math.round((now - txTime)/1000);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 1620,
+        "wires": [
+            [
+                "52752582e58d6348"
+            ]
+        ]
+    },
+    {
+        "id": "52752582e58d6348",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "group": "65d91b75202c3b55",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "name": "Rx time",
+        "label": "Rx time",
+        "format": "<font color=\"#33cc33\"}>{{msg.payload}}s",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1460,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "da68bec334fc010b",
+        "type": "ui_button",
+        "z": "d7c58eb9e7b65abb",
+        "name": "SignalReport",
+        "group": "65d91b75202c3b55",
+        "order": 22,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "SignalReport",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 1780,
+        "wires": [
+            [
+                "8b74e5e219711233"
+            ]
+        ]
+    },
+    {
+        "id": "32bc79c700bb824b",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "generate signal report",
+        "func": "let freq = (Number(flow.get(\"freq\"))*1000 + Math.abs(Number(global.get('device.rx.offset'))))/1e6;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/${flow.get(\"provider\")} - D${flow.get(\"margin\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")} - ${freq} 1.2m offset`;\nlet payload = `echo ${sigreport}|clip`;\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1800,
+        "wires": [
+            [
+                "2d249c596e884cd8"
+            ]
+        ]
+    },
+    {
+        "id": "2d249c596e884cd8",
+        "type": "exec",
+        "z": "d7c58eb9e7b65abb",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copy to clipboard",
+        "x": 930,
+        "y": 1780,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8b74e5e219711233",
+        "type": "OS",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "x": 550,
+        "y": 1880,
+        "wires": [
+            [
+                "f6e02394155b93b8",
+                "32bc79c700bb824b"
+            ]
+        ]
+    },
+    {
+        "id": "cc4ddaef1b0abcbe",
+        "type": "switch",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "demod_s2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "demod_s2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1270,
+        "y": 1300,
+        "wires": [
+            [
+                "2d5cefd5dd394252"
+            ],
+            [
+                "221278234561429f"
+            ]
+        ]
+    },
+    {
+        "id": "2d5cefd5dd394252",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rx_time",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "rx_locked",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1520,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b479daca5e94725e",
+        "type": "inject",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1190,
+        "y": 1220,
+        "wires": [
+            [
+                "4de21ed20e4b931f"
+            ]
+        ]
+    },
+    {
+        "id": "4de21ed20e4b931f",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rx_locked",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "221278234561429f",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "function 9",
+        "func": "if(!global.get(\"rx_locked\")){\n    global.set(\"rx_locked\", true);\n    let now = Date.now();\n    global.set(\"rx_time\", now); \n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92e743f7fa12eef8",
+        "type": "inject",
+        "z": "d7c58eb9e7b65abb",
+        "g": "95c60cbc844f0f03",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "ab828a5dc2d55ada"
+            ]
+        ]
+    },
+    {
+        "id": "ab828a5dc2d55ada",
+        "type": "file in",
+        "z": "d7c58eb9e7b65abb",
+        "g": "95c60cbc844f0f03",
+        "name": "",
+        "filename": "channels.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "51a832f2b02817b3"
+            ]
+        ]
+    },
+    {
+        "id": "51a832f2b02817b3",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "g": "95c60cbc844f0f03",
+        "name": "send channel options",
+        "func": "let payload = msg.payload;\nmsg.payload = global.get(\"device.tx.frequency\");\nmsg.options = JSON.parse(payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 60,
+        "wires": [
+            [
+                "1eb7d3a28526dc87"
+            ]
+        ]
+    },
+    {
+        "id": "9850f6ec613dd67d",
+        "type": "inject",
+        "z": "d7c58eb9e7b65abb",
+        "g": "95c60cbc844f0f03",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "f46d32abeabe83a5"
+            ]
+        ]
+    },
+    {
+        "id": "f0a96e21b1852116",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "group": "a4a37989805c1f8e",
+        "order": 1,
+        "width": "3",
+        "height": 1,
+        "name": "Rx controls",
+        "label": "<b><font size=4><font color=\"#CC0D00\"}>RX Longmynd",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1190,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "397dacd9b7a65182",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "Truncate long provider names",
+        "func": "let provider = truncate(msg.payload, 17);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 660,
+        "wires": [
+            [
+                "cc295c934bb4be42",
+                "50cc94d7164c1a3d"
+            ]
+        ]
+    },
+    {
+        "id": "041124d9f596f263",
+        "type": "mqtt in",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 1600,
+        "wires": [
+            [
+                "d1ee79702e448262"
+            ]
+        ]
+    },
+    {
+        "id": "0e2c3433f42c932c",
+        "type": "http in",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "24353fa1e84c365f"
+            ]
+        ]
+    },
+    {
+        "id": "24353fa1e84c365f",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "filename": "wb/chat.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 350,
+        "y": 60,
+        "wires": [
+            [
+                "31f91a40fbe9635c"
+            ]
+        ]
+    },
+    {
+        "id": "4de0745ac50ff8b8",
+        "type": "ui_iframe",
+        "z": "27bb1861e8b5803b",
+        "group": "d2e4abefdc42e427",
+        "name": "chat iframe",
+        "order": 1,
+        "width": 32,
+        "height": 8,
+        "url": "/chat",
+        "origin": "*",
+        "scale": 100,
+        "x": 350,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31f91a40fbe9635c",
+        "type": "http response",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "x": 490,
+        "y": 60,
+        "wires": []
     },
     {
         "id": "a8596f60466f8cf4",
@@ -15928,7 +17908,7 @@
         "label": "AMP",
         "tooltip": "",
         "group": "7954d85ae8701623",
-        "order": 6,
+        "order": 5,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -15946,8 +17926,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 350,
-        "y": 100,
+        "x": 170,
+        "y": 120,
         "wires": [
             [
                 "9bf743083e2493eb",
@@ -15994,8 +17974,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1450,
-        "y": 80,
+        "x": 1470,
+        "y": 160,
         "wires": []
     },
     {
@@ -16132,7 +18112,7 @@
         "id": "cf17c69c227b6825",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "name": "function 6",
+        "name": "parse http response",
         "func": "let tasmota_state = JSON.parse(msg.payload);\nif(tasmota_state.Status.Power === 1){\n    msg.payload = true;\n    return msg;\n}\nmsg.payload = false;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -16140,7 +18120,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1100,
+        "x": 1140,
         "y": 280,
         "wires": [
             [
@@ -16200,8 +18180,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
-        "y": 20,
+        "x": 200,
+        "y": 40,
         "wires": [
             [
                 "a8596f60466f8cf4"
@@ -16221,80 +18201,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1380,
+        "x": 1390,
         "y": 280,
-        "wires": []
-    },
-    {
-        "type": "tab",
-        "label": "Chat",
-        "id": "27bb1861e8b5803b",
-        "info": "",
-        "disabled": false,
-        "env": []
-    },
-    {
-        "id": "0e2c3433f42c932c",
-        "type": "http in",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "url": "/chat",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 160,
-        "y": 60,
-        "wires": [
-            [
-                "24353fa1e84c365f"
-            ]
-        ]
-    },
-    {
-        "id": "24353fa1e84c365f",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "filename": "wb/chat.html",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 350,
-        "y": 60,
-        "wires": [
-            [
-                "31f91a40fbe9635c"
-            ]
-        ]
-    },
-    {
-        "id": "4de0745ac50ff8b8",
-        "type": "ui_iframe",
-        "z": "27bb1861e8b5803b",
-        "group": "d2e4abefdc42e427",
-        "name": "chat iframe",
-        "order": 1,
-        "width": 32,
-        "height": 8,
-        "url": "/chat",
-        "origin": "*",
-        "scale": 100,
-        "x": 390,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "31f91a40fbe9635c",
-        "type": "http response",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "x": 590,
-        "y": 60,
         "wires": []
     }
 ]

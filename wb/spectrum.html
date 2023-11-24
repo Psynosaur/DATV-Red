@@ -38,8 +38,8 @@
 
     var beacon_strength = 0;
 
-    var fft_colour = '#0087DD';
-    var band_colour = '#0087DD';
+    var fft_colour = '#c10b0b';
+    var band_colour = '#c10b0b';
     var background_colour = 'black';
     var signals = [];
     var freq_info = [];
@@ -129,55 +129,32 @@
         /* we clicked on the beacon... */
         if (uplink === undefined && canvasClickBW === undefined && busy) {
             /* Tune longmynd on pluto */
-            if (ev.ctrlKey) {
-                fetch(`/setRx?` + new URLSearchParams({
-                    downlink: 10491.5,
-                    SR: 1.5
-                }));
-                /* RX tuning bar */
-                setRxClickState(activeColor, 43, magicSpaceAboveSignal, 362);
-                return;
-            }
-            /* Tune minitiouner on local pc with multicast message */
-            lastCanvasClickBW = canvasClickBW;
-            fetch(`/setTune?` + new URLSearchParams({
+            fetch(`/setRx?` + new URLSearchParams({
                 downlink: 10491.5,
                 SR: 1.5
             }));
-            setRxClickState(activeColor, 43, magicSpaceAboveSignal, 362);
+            /* RX tuning bar */
+            setRxClickState(activeColor, 43, magicSpaceAboveSignal, 275);
             return;
         }
-        /* block must be highlighted or box drawn for fire of request */
+         /* we clicked on a signal... */
         if (uplink !== undefined && canvasClickBW !== undefined && busy) {
-            if (ev.ctrlKey) {
-                // send commands to onboard longmynd / OpenTuner...
-                // 333KS on > 500KS channel
-                if (ev.shiftKey && canvasClickBW > 0.333) {
-                    canvasClickBW = 0.333;
-                }
-                // 250KS on mid channels
-                if (ev.altKey && canvasClickBW >= 0.333) {
-                    canvasClickBW = 0.25;
-                }
-                fetch(`/setRx?` + new URLSearchParams({
-                    downlink: downlink,
-                    SR: canvasClickBW
-                }));
-                /* RX tuning bar */
-                setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
-                return;
+            if (ev.shiftKey && canvasClickBW > 0.333) {
+                canvasClickBW = 0.333;
             }
-            lastUplink = uplink;
-            lastCanvasClickBW = canvasClickBW;
-            fetch(`/setTune?` + new URLSearchParams({
-                downlink,
-                SR: canvasClickBW,
+            // 250KS on mid channels
+            if (ev.altKey && canvasClickBW >= 0.333) {
+                canvasClickBW = 0.25;
+            }
+            fetch(`/setRx?` + new URLSearchParams({
+                downlink: downlink,
+                SR: canvasClickBW
             }));
             /* RX tuning bar */
             setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
             return;
         }
-        /* block must be highlighted or box drawn for fire of request */
+         /* we clicked on a channel bar... */
         if(uplink !== undefined && canvasClickBW !== undefined && !busy){
             /* Tune minitiouner on local pc with multicast message */
             /* if (ev.ctrlKey && ev.altKey) {
@@ -1094,4 +1071,4 @@
     window.addEventListener("orientationchange", checkOrientation, false);
     // Android doesn't always fire orientationChange on 180 degree turns
     setInterval(checkOrientation, 2000);
-    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, CTRL + click: Tunes onboard Longmynd, clicking signal tunes Minitiouner <a  href="https://youtu.be/-ZdQOVg26_0" target="_blank">channel calibration</a></span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><input type="color" id="fft-colour-select" value="$(fft_colour)"><label style="color: white;padding: 3px" for="band-colour-select">Bands</label><input type="color" id="band-colour-select" value="$(band_colour)"><select id="background-colour-select"><option value="black" selected="selected">Black<option value="white">White</select></div></div></div></div>
+    </script><body class="bg-dark"><div id="content" role="main"><div class="row"><div id="fft-col" class="col-xl-12"><canvas height="1" id="c" width="1"></canvas><div id="under-canvas"><span style="color: white;float: left;">Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, clicking on signal tunes your RX setup <a  href="https://youtu.be/-ZdQOVg26_0" target="_blank">channel calibration</a></span><span id="fullscreen-link-span"><label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label><select id="fft-speed-select"><option value="fft" selected="selected">Slow<option value="fft_fast">Fast</select><label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><input type="color" id="fft-colour-select" value="$(fft_colour)"><label style="color: white;padding: 3px" for="band-colour-select">Bands</label><input type="color" id="band-colour-select" value="$(band_colour)"><select id="background-colour-select"><option value="black" selected="selected">Black<option value="white">White</select></div></div></div></div>
