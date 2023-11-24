@@ -66,7 +66,7 @@ DATV transmissions normally have the following programs open:
 
 7. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/515cc20c-a98b-4765-ad4d-75e32fd84ccb)
+![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/ce54c99a-6871-4d15-8524-62d1b6515510)
 
 
 ## Thanks 
