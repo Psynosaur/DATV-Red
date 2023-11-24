@@ -1,60 +1,81 @@
-# DATV-Simple
+# DATV-Red
 
 ## Prerequisite 
-- **VERY IMPORTANT** at least passive cooling on the PlutoSDR in the form of heatsinks, or it might explode ¯\_(ツ)_/¯
-  - Mine with big chungus metal block heatsink goes upto 45°C
+- **VERY IMPORTANT**
+  - Heatsinks on the plutoSDR's microchips 
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
+- Firmware flashing [walk through video](https://www.youtube.com/watch?v=g8_ktz4kCkY)
+
+## Motivation
+DATV transmissions normally have the following programs open:
+ 1. OBS
+ 2. ~DATV-Easy/FreeStreamCoder/your own scripts (encoder)~
+ 3. ~Operating PlutoSDR via `HTTP`~  
+ 4. ~OpenTuner / Minitioune~
+ 5. ~QuickTune / Chat~
+
+## **Capabilities of DATV-Red**
+  - Encoding of TS data (Tx) 
+  - Tuning of onboard longmynd server, `requires USB hub` refer to [wiki](https://github.com/F5OEO/pluto-ori-ps/wiki#hardware) (Rx)
+    - No further software dependencies, work in progress
+  - Operation of PlutoSDR RF modulator parameters (Tx)
+  - Sends UDP payload to `Minitioune` software control address (Rx)
+    - Tunes Minitiouner radio using `Minitioune` software
+    - OpenTuner support pending
+    - for other tuner configs
+      - Learn `node-red` and build it yourself `:)`
+  - Optional chat (QoL)
+  - Optional SONOFF tasmota support (QoL)
+    - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
+    - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
+  - Cross-platform (due in **final** release)
+    - Linux `Pop-Os` and `Ubuntu` 
+      - Just change `settings.json` with your audio and video settings...
+      - select `UDP` or `RTMP` as input
+      - change ffmpeg paths to linux syntax `./ffmpeg/ffmpeg`
+        - ffplay
+        - ffmpeg
+        - ffprobe   
 
 ## Setup and use
-1. Download [latest release](https://github.com/Psynosaur/DATV-Simple/releases) and extract to folder `DATV-Simple` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
+1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
 
-2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Simple`
+2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Red`
 
-3. Setup mqtt broker in `pluto.json` file
+3. Setup mqtt broker in `pluto.json` file change `broker` for pluto and `payload` for callsign
    
    ```json
     {
       "action": "connect",
       "broker": {
-        "broker": "192.168.2.1", /* IP address of pluto */
+        "broker": "192.168.2.1", 
         "port": 1883,
         "username": "root",
         "password": "analog"
       },
       "topic" : "cmd/pluto/call",
-      "payload": "ZS1SCI" /* Your callsign */
+      "payload": "ZS1SCI"
     }
    ```
 4. Double click `DATV-Start.cmd`
 
 5. Press the `set call` button to set your call sign and reboot pluto
-  ![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/59a106a8-2063-4f72-ae8d-886202121e3d)
+ ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/414b3359-f798-4938-bc17-af7d0bc135b1)
 
 6. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
 7. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Simple/assets/26934113/b44b10b4-16cf-4f26-9870-aa05610a9f09)
+![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/ce54c99a-6871-4d15-8524-62d1b6515510)
 
-
-If you'd like to buy me a coffee ☕️☕️☕:
-
-  [paypal.me/zs1sci](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
 ## Thanks 
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
+Thank you to all the testers, **DL5OCD**, **HB9DUG**, **DL2GHM**, **ZS6YI** and all others
 
-## Motivation
-DATV transmissions normally have the following programs open:
- 1. OBS
- 2. DATV-Easy/FreeStreamCoder (ffmpeg maker...) < - - - **DATV-Simple**
- 3. Panel for operating PlutoSDR  < - - - - - - - - - - - - - - **DATV-Simple**                
- 4. OpenTuner / Minitioune < - - - - - - - - - - - - - - **DATV-Simple** tunes Minitioune, perhaps OT too [Tom](https://github.com/tomvdb) ?
- 5. QuickTune / Chat < - - - - - - - - - - - - - - - - - - **DATV-Simple**
-
-
-
+## Supporting my hobby
+If you'd like to say thanks, please feel free to buy me some [time](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
