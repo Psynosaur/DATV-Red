@@ -60,13 +60,14 @@ DATV transmissions normally have the following programs open:
 4. Double click `DATV-Start.cmd`
 
 5. Press the `set call` button to set your call sign and reboot pluto
-  <img width="545" alt="image" src="https://github.com/Psynosaur/DATV-Red/assets/26934113/350529b3-5a15-48f4-87f2-6a722fce3751">
+ ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/414b3359-f798-4938-bc17-af7d0bc135b1)
 
 6. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
 7. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/37bf87b2-a4d8-4640-afd4-f91e18a2c899)
+![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/515cc20c-a98b-4765-ad4d-75e32fd84ccb)
+
 
 ## Thanks 
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
