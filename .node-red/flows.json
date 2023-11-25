@@ -1288,14 +1288,16 @@
             "40e93f131ed29ccd",
             "f46d32abeabe83a5",
             "1eb7d3a28526dc87",
-            "c0a33906022c7b10",
             "92e743f7fa12eef8",
             "ab828a5dc2d55ada",
             "51a832f2b02817b3",
-            "9850f6ec613dd67d"
+            "9850f6ec613dd67d",
+            "ddcdf74a1e7fe17b"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 1352,
+        "h": 410
     },
     {
         "id": "9286ad1292f976c7",
@@ -3194,7 +3196,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: temp",
-        "func": "var payload = parseFloat(msg.payload)/1000;\nif (payload !== global.get(\"temp\") && payload > 0){\n    global.set(\"temp\", payload);\n    msg.payload = payload;\n    return msg;\n}\n",
+        "func": "var payload = parseFloat(msg.payload)/1000;\nif (payload !== global.get(\"temp\") && payload > 0){\n    global.set(\"temp\", payload);\n    msg.payload = payload.toFixed(2);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -12509,7 +12511,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "1",
+        "repeat": "0.1",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -14372,8 +14374,7 @@
         "y": 3100,
         "wires": [
             [
-                "4cbca64d40e28578",
-                "8a16f1f5708afd9e"
+                "4cbca64d40e28578"
             ]
         ]
     },
@@ -14417,7 +14418,8 @@
         "y": 3100,
         "wires": [
             [
-                "3e176cd4bd9a502b"
+                "3e176cd4bd9a502b",
+                "8a16f1f5708afd9e"
             ]
         ]
     },
@@ -15457,8 +15459,7 @@
         "y": 380,
         "wires": [
             [
-                "092f35ea1c391fe9",
-                "c0a33906022c7b10"
+                "092f35ea1c391fe9"
             ]
         ]
     },
@@ -15525,10 +15526,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -15536,13 +15533,13 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
+        "payload": "off",
+        "payloadType": "str",
         "x": 150,
         "y": 280,
         "wires": [
             [
-                "c0a33906022c7b10"
+                "978d405470af5b94"
             ]
         ]
     },
@@ -16088,7 +16085,7 @@
                 "pt": "msg",
                 "from": "none",
                 "fromt": "str",
-                "to": "- - - -",
+                "to": "- -",
                 "tot": "str"
             }
         ],
@@ -16156,7 +16153,7 @@
                 "t": "change",
                 "p": "payload",
                 "pt": "msg",
-                "from": "0",
+                "from": "off",
                 "fromt": "num",
                 "to": "Top",
                 "tot": "str"
@@ -16165,7 +16162,7 @@
                 "t": "change",
                 "p": "payload",
                 "pt": "msg",
-                "from": "1",
+                "from": "on",
                 "fromt": "num",
                 "to": "Bottom",
                 "tot": "str"
@@ -16176,11 +16173,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
-        "y": 340,
+        "x": 660,
+        "y": 300,
         "wires": [
             [
-                "7b3cab5a067f0a35"
+                "ddcdf74a1e7fe17b"
             ]
         ]
     },
@@ -16221,17 +16218,17 @@
         "topic": "topic",
         "topicType": "msg",
         "style": "",
-        "onvalue": "1",
+        "onvalue": "on",
         "onvalueType": "str",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "0",
+        "offvalue": "off",
         "offvalueType": "str",
         "officon": "",
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 670,
+        "x": 390,
         "y": 280,
         "wires": [
             [
@@ -16568,8 +16565,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#008080",
-        "x": 1230,
-        "y": 340,
+        "x": 1110,
+        "y": 300,
         "wires": []
     },
     {
@@ -16697,27 +16694,6 @@
         "x": 990,
         "y": 1300,
         "wires": []
-    },
-    {
-        "id": "c0a33906022c7b10",
-        "type": "function",
-        "z": "d7c58eb9e7b65abb",
-        "g": "95c60cbc844f0f03",
-        "name": "Get RX_PORT",
-        "func": "let rxport = env.get(\"RX_PORT\");\nmsg.payload = rxport;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 280,
-        "wires": [
-            [
-                "978d405470af5b94"
-            ]
-        ]
     },
     {
         "id": "8b83d336adb14855",
@@ -17345,10 +17321,10 @@
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
         "order": 10,
-        "width": "3",
+        "width": "2",
         "height": 1,
         "name": "Lna gain",
-        "label": "Lna gain",
+        "label": "LNA",
         "format": "{{value/10 | number:1}}",
         "layout": "row-spread",
         "className": "",
@@ -17833,6 +17809,34 @@
         "wires": [
             [
                 "d1ee79702e448262"
+            ]
+        ]
+    },
+    {
+        "id": "ddcdf74a1e7fe17b",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "g": "95c60cbc844f0f03",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "rx_port",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 300,
+        "wires": [
+            [
+                "7b3cab5a067f0a35"
             ]
         ]
     },
