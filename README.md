@@ -22,10 +22,10 @@ DATV transmissions normally have the following programs open:
   - **DBV-GSE** (Tx & Rx)
     - You can view eachothers dashboard on tunnel IPs
     - Anything that can be done on a normal `LAN`...   
-  - Sends UDP payload to `Minitioune` software control address (Rx)
+  - (**Windows**) Sends UDP payload to `Minitioune` software control address (Rx)
     - Tunes Minitiouner radio using `Minitioune` software
     - OpenTuner support pending
-    - for other tuner configs
+    - for other tuner configs, anything can be added(mutlichannel, multic tuner, etc...)
       - Learn `node-red` and build it yourself `:)`
   - Optional chat (QoL)
   - Optional SONOFF tasmota support (QoL)
