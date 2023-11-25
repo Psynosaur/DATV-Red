@@ -19,6 +19,9 @@ DATV transmissions normally have the following programs open:
   - Tuning of onboard longmynd server, `requires USB hub` refer to [wiki](https://github.com/F5OEO/pluto-ori-ps/wiki#hardware) (Rx)
     - No further software dependencies, work in progress
   - Operation of PlutoSDR RF modulator parameters (Tx)
+  - **DBV-GSE** (Tx & Rx)
+    - You can view eachothers dashboard on tunnel IPs
+    - Anything that can be done on a normal `LAN`...   
   - Sends UDP payload to `Minitioune` software control address (Rx)
     - Tunes Minitiouner radio using `Minitioune` software
     - OpenTuner support pending
