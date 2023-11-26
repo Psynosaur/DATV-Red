@@ -1,0 +1,1 @@
+SUBSYSTEM=="video4linux", ATTR{index}=="0", ATTR{name}=="OBS Virtual Camera", SYMLINK+="obs_vc"
