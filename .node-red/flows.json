@@ -336,7 +336,7 @@
         ],
         "x": 3214,
         "y": 1311.5,
-        "w": 1192,
+        "w": 1182,
         "h": 149.5
     },
     {
@@ -434,9 +434,9 @@
             "679eb4e7914de8fa",
             "5e18e8622dc024cf"
         ],
-        "x": 1154,
+        "x": 1144,
         "y": 199,
-        "w": 752,
+        "w": 762,
         "h": 242
     },
     {
@@ -621,7 +621,8 @@
             "7fb0cafd2acd88b7",
             "3e90d102d97d90d1",
             "1de26d5def9ca4f5",
-            "ec867dfd3be3e114"
+            "ec867dfd3be3e114",
+            "51fccee0eccc4b77"
         ],
         "x": 2494,
         "y": 2619,
@@ -1548,7 +1549,8 @@
             "2f37f6fa43572da4",
             "3d529b46ee563149",
             "c82484c6378aaa4e",
-            "39bfd14afebfca3c"
+            "39bfd14afebfca3c",
+            "af0afe1e86d6e2ce"
         ],
         "x": 74,
         "y": 319,
@@ -4874,7 +4876,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "send profile settings",
-        "func": "// if some saving flag is set do saving stuff\nif (global.get(\"saving\")) {\n    global.set(\"saving\", false);\n    let jsonSettings = global.get(\"settings\");\n    msg.loading = \"0\";\n    msg.filename = `profiles\\\\p${msg.payload}.json`\n    msg.payload = jsonSettings;\n    return msg;\n}\n// if not then just load the profile\nlet ffmpegPID = global.get(\"pid\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    if (msg.payload <= 7) {\n        msg.loading = \"1\";\n        msg.filename = `profiles\\\\p${msg.payload}.json`\n        return msg;\n    }\n}",
+        "func": "// if some saving flag is set do saving stuff\nif (global.get(\"saving\")) {\n    global.set(\"saving\", false);\n    let jsonSettings = global.get(\"settings\");\n    msg.loading = \"0\";\n    msg.filename = `profiles\\\\p${msg.payload}.json`\n    if (global.get(\"platform\") === \"linux\") msg.filename = `profiles/p${msg.payload}.json`\n    msg.payload = jsonSettings;\n    return msg;\n}\n// if not then just load the profile\nlet ffmpegPID = global.get(\"pid\");\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    if (msg.payload <= 7) {\n        msg.loading = \"1\";\n        msg.filename = `profiles\\\\p${msg.payload}.json`\n        if (global.get(\"platform\") === \"linux\") msg.filename = `profiles/p${msg.payload}.json`\n        return msg;\n    }\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8348,7 +8350,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "ffplay ip and title setter",
-        "func": "let title = global.get('ffplay_title');\n\nlet ontop = global.get('device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\ntitle = `\\\"${title}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\n// title = `test`;\nglobal.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nlet path = `start ${global.get(\"device.ffplay_path\")}`;\nif (global.get(\"platform\") === \"linux\") path = `gnome-terminal -e \\\"${global.get(\"device.ffplay_path_linux\")}`;\nmsg.payload = `${path} udp://@${global.get(\"device.rx.tsip\")} -window_title ${title} -volume ${volume} -seek_interval 3  -x ${hor} -y ${vert} -hide_banner -top ${global.get(\"ffplay_top_exit\")} -left ${global.get(\"ffplay_left_exit\")} ${ontop}${global.get(\"platform\") === \"linux\" ? `\\\"`: ``}`;\n// msg.payload = \n// `udp://@${global.get(\"device.rx.tsip\")} ` + \n// `-window_title ${title} ` + \n// `-volume ${volume} ` + \n// `-seek_interval 3 ` + \n// `-x ${hor} `+ \n// `-y ${vert} ` + \n// `-hide_banner ` + \n// `-top ${global.get(\"ffplay_top_exit\")} ` + \n// `-left ${global.get(\"ffplay_left_exit\")} ` + \n// `${ontop}`\nreturn msg;",
+        "func": "let title = global.get('ffplay_title');\nlet titleWindows = global.get('ffplay_title');\n\nlet ontop = global.get('device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\ntitle = `${title}_:_Press_\\'9\\',\\'0\\'_for_volume_down_and_up,_\\'m\\'_for_mute,_right_arrow_key_\\\\'->\\\\'_to_seek_to_latest_frame`;\ntitleWindows = `\\\"${titleWindows}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\n// title = `test`;\n// global.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nlet path = `start ${global.get(\"device.ffplay_path\")}`;\nif (global.get(\"platform\") === \"linux\") path = `gnome-terminal -e \\\"${global.get(\"device.ffplay_path_linux\")}`;\nmsg.payload = `${path} udp://@${global.get(\"device.rx.tsip\")} -window_title ${title} -volume ${volume} -seek_interval 3  -x ${hor} -y ${vert} -hide_banner -top ${global.get(\"ffplay_top_exit\")} -left ${global.get(\"ffplay_left_exit\")} ${ontop}${global.get(\"platform\") === \"linux\" ? `\\\"`: ``}`;\n// msg.payload = \n// `udp://@${global.get(\"device.rx.tsip\")} ` + \n// `-window_title ${title} ` + \n// `-volume ${volume} ` + \n// `-seek_interval 3 ` + \n// `-x ${hor} `+ \n// `-y ${vert} ` + \n// `-hide_banner ` + \n// `-top ${global.get(\"ffplay_top_exit\")} ` + \n// `-left ${global.get(\"ffplay_left_exit\")} ` + \n// `${ontop}`\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8359,7 +8361,8 @@
         "y": 2960,
         "wires": [
             [
-                "023820f309b020da"
+                "023820f309b020da",
+                "51fccee0eccc4b77"
             ]
         ]
     },
@@ -9838,7 +9841,8 @@
                 "2c6310aae8f397fd",
                 "2a5a3cc2d63b2942",
                 "8764be884d895f57",
-                "c82484c6378aaa4e"
+                "c82484c6378aaa4e",
+                "df0fb204fd14a618"
             ]
         ]
     },
@@ -10004,7 +10008,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
         "name": "CTRL click for RX frequency",
-        "func": "let freq = Number(msg.payload.downlink);\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nglobal.set(\"ffplay_title\", `Freq: ${freq} MHz, SR: ${sr}kS/s `);\nfreq = freq * 1000000;\nmsg.payload = freq; \nreturn msg;",
+        "func": "let freq = Number(msg.payload.downlink);\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq} MHz, SR: ${sr}kS/s `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_MHz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq * 1000000;\nmsg.payload = freq; \nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10015,7 +10019,8 @@
         "y": 400,
         "wires": [
             [
-                "64a9de4a4bd4dab6"
+                "64a9de4a4bd4dab6",
+                "af0afe1e86d6e2ce"
             ]
         ]
     },
@@ -13862,7 +13867,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 350,
+        "x": 330,
         "y": 620,
         "wires": [
             [
@@ -15902,6 +15907,42 @@
                 "4cbca64d40e28578"
             ]
         ]
+    },
+    {
+        "id": "51fccee0eccc4b77",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "72ddf00d98862ef3",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3500,
+        "y": 2960,
+        "wires": []
+    },
+    {
+        "id": "af0afe1e86d6e2ce",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 400,
+        "wires": []
     },
     {
         "id": "4c448d00f7a9bc91",

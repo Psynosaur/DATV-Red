@@ -5,8 +5,8 @@
 BASEDIR=$(pwd)
 cd $BASEDIR
 
-echo "This installs all needed components for DATV-NotSoEasy..."
-echo "Run this script as root!!!"
+echo "This installs all needed components for DATV-Red..."
+echo "Run this script as root (sudo ./install)!!!"
 
 echo "If your system is now connected to the Internet, press Enter to continue, else press q to exit."
 read CONTINUE
@@ -15,23 +15,12 @@ echo "Installation aborted, end."
 exit
 fi
 
-echo "Should the delivered FFMPEG-Version be copied to your system? Yes (1), No (0)"
-read COPY
-if [ "$COPY" = "1" ]; then
-cd ffmpeg
-cp ./ffmpeg /usr/local/bin
-cp ./ffplay /usr/local/bin
-fi
+cd .. && cd ffmpeg && chmod +x * && cd ..
+chmod +x DATV-Start.sh
 
-apt-get install -y xfce4-terminal
-
-snap install mqtt-explorer
 
 snap install node --classic
-
 apt-get install -y xclip
-
-apt-get install -y mosquitto-clients
 
 apt-get install -y v4l-utils
 
@@ -59,7 +48,7 @@ cp ./99-obs-vc.rules /etc/udev/rules.d
 systemctl restart udev
 fi
 
-Echo "Installation complete. Have fun...."
+echo "Installation complete. Have fun...."
 exit
 
 
