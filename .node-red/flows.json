@@ -336,7 +336,7 @@
         ],
         "x": 3214,
         "y": 1311.5,
-        "w": 1182,
+        "w": 1192,
         "h": 149.5
     },
     {
@@ -434,9 +434,9 @@
             "679eb4e7914de8fa",
             "5e18e8622dc024cf"
         ],
-        "x": 1144,
+        "x": 1154,
         "y": 199,
-        "w": 762,
+        "w": 752,
         "h": 242
     },
     {
@@ -8350,7 +8350,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "ffplay ip and title setter",
-        "func": "let title = global.get('ffplay_title');\nlet titleWindows = global.get('ffplay_title');\n\nlet ontop = global.get('device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\ntitle = `${title}_:_Press_\\'9\\',\\'0\\'_for_volume_down_and_up,_\\'m\\'_for_mute,_right_arrow_key_\\\\'->\\\\'_to_seek_to_latest_frame`;\ntitleWindows = `\\\"${titleWindows}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\n// title = `test`;\n// global.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nlet path = `start ${global.get(\"device.ffplay_path\")}`;\nif (global.get(\"platform\") === \"linux\") path = `gnome-terminal -e \\\"${global.get(\"device.ffplay_path_linux\")}`;\nmsg.payload = `${path} udp://@${global.get(\"device.rx.tsip\")} -window_title ${title} -volume ${volume} -seek_interval 3  -x ${hor} -y ${vert} -hide_banner -top ${global.get(\"ffplay_top_exit\")} -left ${global.get(\"ffplay_left_exit\")} ${ontop}${global.get(\"platform\") === \"linux\" ? `\\\"`: ``}`;\n// msg.payload = \n// `udp://@${global.get(\"device.rx.tsip\")} ` + \n// `-window_title ${title} ` + \n// `-volume ${volume} ` + \n// `-seek_interval 3 ` + \n// `-x ${hor} `+ \n// `-y ${vert} ` + \n// `-hide_banner ` + \n// `-top ${global.get(\"ffplay_top_exit\")} ` + \n// `-left ${global.get(\"ffplay_left_exit\")} ` + \n// `${ontop}`\nreturn msg;",
+        "func": "let title = global.get('ffplay_title');\nlet titleWindows = global.get('ffplay_title');\n\nlet ontop = global.get('device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\ntitle = `${title}_:_Press_\\'9\\',\\'0\\'_for_volume_down_and_up,_\\'m\\'_for_mute,_right_arrow_key_\\\\'->\\\\'_to_seek_to_latest_frame`;\ntitleWindows = `\\\"${titleWindows}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\nlet titleStr = titleWindows;\nif (global.get(\"platform\") === \"linux\") titleStr = title;\n// title = `test`;\n// global.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nlet path = `start ${global.get(\"device.ffplay_path\")}`;\nif (global.get(\"platform\") === \"linux\") path = `gnome-terminal -e \\\"${global.get(\"device.ffplay_path_linux\")}`;\nmsg.payload = `${path} udp://@${global.get(\"device.rx.tsip\")} -window_title ${titleStr} -volume ${volume} -seek_interval 3  -x ${hor} -y ${vert} -hide_banner -top ${global.get(\"ffplay_top_exit\")} -left ${global.get(\"ffplay_left_exit\")} ${ontop}${global.get(\"platform\") === \"linux\" ? `\\\"`: ``}`;\n// msg.payload = \n// `udp://@${global.get(\"device.rx.tsip\")} ` + \n// `-window_title ${title} ` + \n// `-volume ${volume} ` + \n// `-seek_interval 3 ` + \n// `-x ${hor} `+ \n// `-y ${vert} ` + \n// `-hide_banner ` + \n// `-top ${global.get(\"ffplay_top_exit\")} ` + \n// `-left ${global.get(\"ffplay_left_exit\")} ` + \n// `${ontop}`\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
