@@ -27,6 +27,10 @@ apt-get install -y xfce4-terminal
 
 snap install mqtt-explorer
 
+snap install node --classic
+
+apt-get install -y xclip
+
 apt-get install -y mosquitto-clients
 
 apt-get install -y v4l-utils
