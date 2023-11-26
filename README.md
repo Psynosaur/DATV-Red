@@ -31,14 +31,8 @@ DATV transmissions normally have the following programs open:
   - Optional SONOFF tasmota support (QoL)
     - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
     - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
-  - Cross-platform (due in **final** release)
-    - Linux `Pop-Os` and `Ubuntu` 
-      - Just change `settings.json` with your audio and video settings...
-      - select `UDP` or `RTMP` as input
-      - change ffmpeg paths to linux syntax `./ffmpeg/ffmpeg`
-        - ffplay
-        - ffmpeg
-        - ffprobe   
+  - Cross-platform
+   
 
 ## Setup and use
 1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
@@ -65,9 +59,11 @@ DATV transmissions normally have the following programs open:
 5. Press the `set call` button to set your call sign and reboot pluto
  ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/414b3359-f798-4938-bc17-af7d0bc135b1)
 
-6. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+6. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
 
-7. Have fun
+7. Watch this intro video on [channel calibration](https://youtu.be/-ZdQOVg26_0) and then [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+
+8. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/ce54c99a-6871-4d15-8524-62d1b6515510)
 
