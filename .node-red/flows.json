@@ -145,7 +145,7 @@
         ],
         "x": 48,
         "y": 239,
-        "w": 1004,
+        "w": 1024,
         "h": 488
     },
     {
@@ -793,7 +793,6 @@
             "bdfdc40f3409d5eb",
             "2d16a7785c1bb3dd",
             "b019a1fc7eadfd0f",
-            "45b5b704879d30fe",
             "dc1c3fa4fcdb0856",
             "a010bf6559579ac1",
             "70cb26f62de94a5d",
@@ -1299,7 +1298,9 @@
             "ddcdf74a1e7fe17b"
         ],
         "x": 14,
-        "y": 19
+        "y": 19,
+        "w": 1352,
+        "h": 410
     },
     {
         "id": "9286ad1292f976c7",
@@ -1554,7 +1555,7 @@
         ],
         "x": 74,
         "y": 319,
-        "w": 952,
+        "w": 972,
         "h": 382
     },
     {
@@ -5889,8 +5890,7 @@
         "y": 1140,
         "wires": [
             [
-                "7f859a7a7ee27404",
-                "45b5b704879d30fe"
+                "7f859a7a7ee27404"
             ]
         ]
     },
@@ -6168,46 +6168,19 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
-        "name": "Pass to Pluto",
-        "func": "let payload = msg.payload\nlet topic =  `${global.get(\"cmdPath\")}/tx/dvbs2/tssourceaddress`;\nmsg.topic = topic\nmsg.payload = payload\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.tssourceaddress\", payload);\nreturn msg;\n",
+        "name": "Broker address plus 8282",
+        "func": "let ts_input = `${global.get(\"broker_address\")}:8282`;\nlet topic =  `${global.get(\"cmdPath\")}/tx/dvbs2/tssourceaddress`;\nmsg.topic = topic\nmsg.payload = ts_input;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.tssourceaddress\", ts_input);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2090,
+        "x": 2130,
         "y": 1140,
         "wires": [
             [
                 "8a16f1f5708afd9e"
-            ]
-        ]
-    },
-    {
-        "id": "45b5b704879d30fe",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "c927282dfd987c70",
-        "name": "",
-        "label": "TSInput",
-        "tooltip": "",
-        "group": "806d30964cf41d9d",
-        "order": 4,
-        "width": "4",
-        "height": 1,
-        "passthru": false,
-        "mode": "text",
-        "delay": "500",
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 1820,
-        "y": 1140,
-        "wires": [
-            [
-                "7f859a7a7ee27404"
             ]
         ]
     },
@@ -11518,7 +11491,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "ba42e703170bee84",
         "name": "Set command path",
-        "func": "let callsign = msg.payload\nglobal.set(\"cmdPath\", `cmd/pluto/${callsign}`)\nglobal.set(\"callsign\", callsign);\n// global.set(\"call\", callsign);\n// global.set(\"deviceChange\", true);\nreturn msg;",
+        "func": "let callsign = msg.payload\nglobal.set(\"cmdPath\", `cmd/pluto/${callsign}`)\nglobal.set(\"callsign\", callsign);\nglobal.set(\"broker_address\", msg.broker.broker)\n// global.set(\"call\", callsign);\n// global.set(\"deviceChange\", true);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15931,7 +15904,7 @@
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
-        "name": "debug 22",
+        "name": "ffplay title setter",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -15940,7 +15913,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
+        "x": 920,
         "y": 400,
         "wires": []
     },
