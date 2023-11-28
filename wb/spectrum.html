@@ -63,6 +63,13 @@
         var channel_coords = {};
         var beacon_strength = 0;
 
+        var highlighted_channel = {};
+        let tuned_channels = [];
+
+        /* for (let j = 0; j < rx_count; j++) {
+            tuned_channels.push(highlighted_channel);
+        } */
+
         var fft_colour = '#c10b0b';
         var band_colour = '#c10b0b';
         var background_colour = 'black';
@@ -81,6 +88,12 @@
             storageSupport = true;
             if (localStorage.wb_fft_colour) {
                 fft_colour = localStorage.wb_fft_colour;
+            }
+            if (localStorage.highlighted_channel) {
+                highlighted_channel = localStorage.highlighted_channel;
+            }
+            if (localStorage.tuned_channels) {
+                tuned_channels = JSON.parse(localStorage.tuned_channels);
             }
             if (localStorage.wb_band_colour) {
                 band_colour = localStorage.wb_band_colour;
@@ -146,15 +159,28 @@
                 localStorage.activeXd2_1 = activeXd2_1;
             }
         }
+        function setRxChannelState(channel) {
+            let jsonChannel = JSON.stringify(channel);
+            /* console.log(`update object in array at pos ${channel.number}`) */
+            let someArray = tuned_channels;
+            if (storageSupport) {
+                localStorage.highlighted_channel = jsonChannel;
+                for (let j = 0; j < rx_count; j++) {
+                    if (channel.number - 1 === j) {
+                        console.log(`update object in array at pos ${j}`)
+                        someArray[j] = jsonChannel;
+                    }
+                }
+                tuned_channels = someArray;
+                localStorage.tuned_channels = JSON.stringify(someArray);
+                console.log(`kaas bra  ${ someArray}`)
+            }
+            return;
+        }
         function on_canvas_click(ev) {
             let magicSpaceUnderSignal = canvasHeight * (7.02 / 8);
             let magicSpaceAboveSignal = canvasHeight * (1.59 / 8);
-            /* console.log(`Uplink: ${uplink} : SR : ${canvasClickBW}`) */
-            console.log("channel clicked " + channelClicked);
-            console.log("channel uplink " + uplink);
-            console.log("channel canvasClickBW " + canvasClickBW);
             /* we clicked on the beacon... */
-            /* console.log(channel_coords); */
             if (uplink === undefined && canvasClickBW === undefined && busy) {
                 /* Tune longmynd on pluto */
                 fetch(`/setRx?` + new URLSearchParams({
@@ -162,12 +188,13 @@
                     SR: 1.5,
                     channel: channelClicked
                 }));
-                console.log(channel_coords);
+                /* console.log(channel_coords); */
                 /* RX tuning bar */
                 if (channelClicked === rx_count + 1) {
-                    setRxClickState(activeColor, 43, magicSpaceAboveSignal, 275);
+                    setRxClickState(activeColor, 43, magicSpaceUnderSignal, 275);
                     return;
                 }
+                setRxChannelState(highlighted_channel);
             }
             /* we clicked on a signal... */
             if (uplink !== undefined && canvasClickBW !== undefined && busy) {
@@ -185,24 +212,13 @@
                 }));
                 /* RX tuning bar */
                 if (channelClicked === rx_count + 1) {
-                    setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
+                    setRxClickState(activeColor, activeXd1, magicSpaceUnderSignal, activeXd2);
                     return;
                 }
+                setRxChannelState(highlighted_channel);
             }
             /* we clicked on a channel bar... */
             if (uplink !== undefined && canvasClickBW !== undefined && !busy) {
-                /* Tune minitiouner on local pc with multicast message */
-                /* if (ev.ctrlKey && ev.altKey) {
-                    lastUplink = uplink;
-                    lastCanvasClickBW = canvasClickBW;
-                    fetch(`/setTune?` + new URLSearchParams({
-                        downlink,
-                        SR: canvasClickBW,
-                    }));
-                    // RX tuning bar 
-                    setRxClickState(activeColor, activeXd1, magicSpaceAboveSignal, activeXd2);
-                    return;
-                } */
                 /* Channel calibration mode */
                 if (ev.altKey && ev.shiftKey) {
                     if (busy) return
@@ -431,7 +447,7 @@
 
         function updateFFT(data) {
             var i;
-
+            let obj;
             const _start_freq = 490.5;
 
             /* Clear Screen */
@@ -557,8 +573,17 @@
             ctx.fillStyle = invertColor(band_colour);
             ctx.textAlign = "center";
             ctx.fillText('RX', activeXd1_1 - 20, activeYd_1);
-            /* ctx.fillRect(channel_coords.x1, channel_coords.y1, channel_coords.x2 - channel_coords.x1, 50); */
             ctx.fillRect(activeXd1_1, activeYd_1, activeXd2_1 - activeXd1_1, 10);
+
+            for (let j = 0; j < tuned_channels.length; j++) {
+                    obj = JSON.parse(tuned_channels[j]);
+                    ctx.fillStyle = invertColor(band_colour);
+                    ctx.textAlign = "center";
+                    ctx.fillText(`CH${j+1}`, obj.x1 - 20,  obj.y1 + obj.height/2);
+                    ctx.fillRect(obj.x1, obj.y1, obj.width, obj.height);
+            }
+            
+
             ctx.fillText('TX', activeXd1_1_tx - 20, activeYd_1_tx);
             ctx.fillRect(activeXd1_1_tx, activeYd_1_tx, activeXd2_1_tx - activeXd1_1_tx, 10)
             ctx.restore();
@@ -925,6 +950,7 @@
             let channelSpace =  Math.floor(((canvasHeight * (4 / 8)) - (canvasHeight * (1 / 100))) / rx_count); 
             let channel_lines = [];
             let top_line_y = 0;
+            let square = {};
             if (mouse_y < (canvasHeight * 7 / 8)) {
                 for (i = 0; i < signals.length; i++) {
                     if (mouse_x > signals[i].start &&
@@ -963,6 +989,13 @@
                                 ctx.globalAlpha = 0.2;
                                 ctx.fillStyle = invertColor(band_colour);
                                 ctx.fillRect(channel_coords.x1, channel_coords.y1, signals[i].end - signals[i].start, channelSpace);
+                                square['number'] = channelClicked;
+                                square['x1'] = channel_coords.x1;
+                                square['y1'] = channel_coords.y1;
+                                square['width'] = signals[i].end - signals[i].start;
+                                square['height'] = channelSpace;
+                                /* console.log(square) */
+                                highlighted_channel = square;
                                 ctx.globalAlpha = 1.0;
                             }
                        
