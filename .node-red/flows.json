@@ -1137,7 +1137,8 @@
             "271665e5c1e86ae2",
             "74e7eb9fa07e7e53",
             "df0fb204fd14a618",
-            "1eba27791287fb18"
+            "1eba27791287fb18",
+            "463481925ac847f1"
         ],
         "x": 74,
         "y": 319,
@@ -8822,12 +8823,10 @@
         "wires": [
             [
                 "b828f6a6.47d708",
-                "2c6310aae8f397fd",
-                "2a5a3cc2d63b2942",
-                "8764be884d895f57",
                 "c82484c6378aaa4e",
                 "df0fb204fd14a618",
-                "1eba27791287fb18"
+                "1eba27791287fb18",
+                "463481925ac847f1"
             ]
         ]
     },
@@ -8844,7 +8843,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 660,
         "y": 360,
         "wires": [
             [
@@ -8865,7 +8864,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
+        "x": 900,
         "y": 360,
         "wires": [
             [
@@ -8890,7 +8889,7 @@
         "className": "",
         "topic": "Longmynd",
         "name": "Longmynd",
-        "x": 830,
+        "x": 890,
         "y": 440,
         "wires": []
     },
@@ -8978,7 +8977,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
+        "x": 670,
         "y": 440,
         "wires": [
             [
@@ -9000,7 +8999,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 660,
         "y": 400,
         "wires": [
             [
@@ -12346,8 +12345,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 350,
-        "y": 620,
+        "x": 390,
+        "y": 400,
         "wires": [
             [
                 "515e9264fb253fbc"
@@ -13897,7 +13896,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
+        "x": 980,
         "y": 400,
         "wires": []
     },
@@ -15324,7 +15323,7 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
-        "name": "function 6",
+        "name": "only pass non longmynd channels",
         "func": "if (global.get(\"receivers\").length >= msg.payload.channel) {\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
@@ -15332,11 +15331,34 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 160,
+        "x": 240,
         "y": 620,
         "wires": [
             [
                 "515e9264fb253fbc"
+            ]
+        ]
+    },
+    {
+        "id": "463481925ac847f1",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "only pass if last channel",
+        "func": "if (global.get(\"receivers\").length < msg.payload.channel) {\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "2a5a3cc2d63b2942",
+                "2c6310aae8f397fd",
+                "8764be884d895f57"
             ]
         ]
     },
