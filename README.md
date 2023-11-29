@@ -32,6 +32,9 @@ DATV transmissions normally have the following programs open:
     - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
     - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
   - Cross-platform
+  - **No internet needed**
+    - Can be **completely** mobile/local if you have a `Raspberry Pi 4` and an `Airspy R2`
+    - Please see Tom ZR6TG's [post](https://www.zr6tg.co.za/2022/06/29/offline-oscar-100-wideband-spectrum-monitor-with-sdr) on setup
    
 
 ## Setup and use
