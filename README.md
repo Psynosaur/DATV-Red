@@ -25,8 +25,8 @@ DATV transmissions normally have the following programs open:
   - (**Windows**) Sends UDP payload to `Minitioune` software control address (Rx)
     - Tunes Minitiouner radio using `Minitioune` software
     - OpenTuner support pending
-    - for other tuner configs, anything can be added(mutlichannel, multic tuner, etc...)
-      - Learn `node-red` and build it yourself `:)`
+    - Open a issue and tag it with `enhancement`
+      - Provide **as much detail** of your receivers steering command  
   - Optional chat (QoL)
   - Optional SONOFF tasmota support (QoL)
     - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
