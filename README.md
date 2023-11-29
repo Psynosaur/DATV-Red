@@ -5,44 +5,14 @@
   - Heatsinks on the plutoSDR's microchips 
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 - Firmware flashing [walk through video](https://www.youtube.com/watch?v=g8_ktz4kCkY)
-
-## Motivation
-DATV transmissions normally have the following programs open:
- 1. OBS
- 2. ~DATV-Easy/FreeStreamCoder/your own scripts (encoder)~
- 3. ~Operating PlutoSDR via `HTTP`~  
- 4. ~OpenTuner / Minitioune~
- 5. ~QuickTune / Chat~
-
-## **Capabilities of DATV-Red**
-  - Encoding of TS data (Tx) 
-  - Tuning of onboard longmynd server, `requires USB hub` refer to [wiki](https://github.com/F5OEO/pluto-ori-ps/wiki#hardware) (Rx)
-    - No further software dependencies, work in progress
-  - Operation of PlutoSDR RF modulator parameters (Tx)
-  - **DBV-GSE** (Tx & Rx)
-    - You can view eachothers dashboard on tunnel IPs
-    - Anything that can be done on a normal `LAN`...   
-  - (**Windows**) Sends UDP payload to `Minitioune` software control address (Rx)
-    - Tunes Minitiouner radio using `Minitioune` software
-    - OpenTuner support pending
-    - Open a issue and tag it with `enhancement`
-      - Provide **as much detail** of your receivers steering command  
-  - Optional chat (QoL)
-  - Optional SONOFF tasmota support (QoL)
-    - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
-    - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
-  - Cross-platform
-  - **No internet needed**
-    - Can be **completely** mobile/local if you have a `Raspberry Pi 4` and an `Airspy R2`
-    - Please see Tom ZR6TG's [post](https://www.zr6tg.co.za/2022/06/29/offline-oscar-100-wideband-spectrum-monitor-with-sdr) on setup
-   
+-  
 
 ## Setup and use
 1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
 
-2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Red`
+2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Red` or `/home/user/DATV-Red/`
 
-3. Setup mqtt broker in `pluto.json` file change `broker` for pluto and `payload` for callsign
+3. Setup mqtt broker in address in `settings\pluto.json` and change `broker.broker` address for pluto and `payload` for callsign
    
    ```json
     {
@@ -69,6 +39,36 @@ DATV transmissions normally have the following programs open:
 8. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/65d57631-6960-48eb-8100-5dca78ddf5e8)
+
+## Motivation
+DATV transmissions normally have the following programs open:
+ 1. OBS
+ 2. ~DATV-Easy/FreeStreamCoder/your own scripts (encoder)~
+ 3. ~Operating PlutoSDR via `HTTP`~  
+ 4. ~OpenTuner / Minitioune~
+ 5. ~QuickTune / Chat~
+
+## **Capabilities of DATV-Red**
+  - Encoding of TS data (Tx) 
+  - Tuning of onboard longmynd server, `requires USB hub` refer to [wiki](https://github.com/F5OEO/pluto-ori-ps/wiki#hardware) (Rx)
+    - No further software dependencies
+  - Operation of PlutoSDR RF modulator parameters (Tx)
+  - **DBV-GSE** (Tx & Rx)
+    - You can view eachothers dashboard on tunnel IPs
+    - Anything that can be done on a normal `LAN`...   
+  - (**Windows**) Sends UDP payload to `Minitioune` software control address (Rx)
+    - Tunes Minitiouner radio using `Minitioune` software
+    - OpenTuner support pending
+    - Open a issue and tag it with `enhancement`
+      - Provide **as much detail** of your receivers steering command  
+  - Optional chat (QoL)
+  - Optional SONOFF tasmota support (QoL)
+    - WiFi operation, since `Tx` and toggling power of PA are not things that happen together.
+    - My SONOFF basic is right next to amp, no issues with interference on `2.435GHz`
+  - Cross-platform
+  - **No internet needed**
+    - Can be **completely** mobile/local if you have a `Raspberry Pi 4` and an `Airspy R2`
+    - Please see Tom ZR6TG's [post](https://www.zr6tg.co.za/2022/06/29/offline-oscar-100-wideband-spectrum-monitor-with-sdr) on setup
 
 ## Thanks 
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
