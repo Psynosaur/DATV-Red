@@ -65,8 +65,7 @@ DATV transmissions normally have the following programs open:
 
 8. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/ce54c99a-6871-4d15-8524-62d1b6515510)
-
+![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/65d57631-6960-48eb-8100-5dca78ddf5e8)
 
 ## Thanks 
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
