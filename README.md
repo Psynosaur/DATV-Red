@@ -75,7 +75,7 @@ Batch files previously used in this project were from DL5OCD Michael and his [DA
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
 
-Thank you to all the testers, **DL5OCD**, **HB9DUG**, **DL2GHM**, **ZS6YI** and all others
+Thank you to all the testers, **DL5OCD**, **HB9DUG**, **DL2GHM** and all others
 
 ## Supporting my hobby
 If you'd like to say thanks, please feel free to buy me some [time](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
