@@ -42,7 +42,15 @@
     {
         "id": "9d964f25dcc4d750",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Local RX spectrum",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2c54979685d14cb",
+        "type": "tab",
+        "label": "Spectrum",
         "disabled": false,
         "info": "",
         "env": []
@@ -137,7 +145,7 @@
         ],
         "x": 54,
         "y": 19,
-        "w": 1042,
+        "w": 1052,
         "h": 202
     },
     {
@@ -151,17 +159,12 @@
             "fill": "#92d04f"
         },
         "nodes": [
-            "b115e827f5958c33",
-            "dcae1df31f4c48c6",
-            "2d8d13aaf93f40dc",
-            "2fccdd25faa09e10",
-            "542c8a5bb4913303",
             "185cc616489b2615"
         ],
         "x": 48,
-        "y": 239,
+        "y": 267,
         "w": 1170,
-        "h": 728
+        "h": 700
     },
     {
         "id": "4bfefaeb7f82f4c6",
@@ -192,9 +195,9 @@
             "d15f5b546e05bf5b",
             "000aadf55c9c61da"
         ],
-        "x": 1184,
+        "x": 1194,
         "y": 419,
-        "w": 762,
+        "w": 752,
         "h": 542
     },
     {
@@ -393,9 +396,9 @@
             "679eb4e7914de8fa",
             "5e18e8622dc024cf"
         ],
-        "x": 1144,
+        "x": 1154,
         "y": 199,
-        "w": 762,
+        "w": 752,
         "h": 242
     },
     {
@@ -763,7 +766,7 @@
         ],
         "x": 1294,
         "y": 979,
-        "w": 442,
+        "w": 432,
         "h": 1582
     },
     {
@@ -1196,6 +1199,24 @@
         "y": 319,
         "w": 792,
         "h": 162
+    },
+    {
+        "id": "e6a3ecf34e7cea7c",
+        "type": "group",
+        "z": "e2c54979685d14cb",
+        "name": "old spectrum",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "109faf60df3867c0",
+            "10dbef2665a872eb",
+            "8bf647b3812030b1"
+        ],
+        "x": 174,
+        "y": 119,
+        "w": 592,
+        "h": 82
     },
     {
         "id": "9b3296db2e0c849f",
@@ -8711,85 +8732,6 @@
                 "d791940d6fb69cd4"
             ]
         ]
-    },
-    {
-        "id": "b115e827f5958c33",
-        "type": "http in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "28611a179255d92b",
-        "name": "",
-        "url": "/spectrum",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 160,
-        "y": 280,
-        "wires": [
-            [
-                "2d8d13aaf93f40dc"
-            ]
-        ]
-    },
-    {
-        "id": "dcae1df31f4c48c6",
-        "type": "http response",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "28611a179255d92b",
-        "name": "",
-        "x": 570,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "2d8d13aaf93f40dc",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "28611a179255d92b",
-        "name": "",
-        "filename": "wb/spectrum.html",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 390,
-        "y": 280,
-        "wires": [
-            [
-                "dcae1df31f4c48c6"
-            ]
-        ]
-    },
-    {
-        "id": "2fccdd25faa09e10",
-        "type": "ui_iframe",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "28611a179255d92b",
-        "group": "235bdacf6041386f",
-        "name": "spectrum iframe",
-        "order": 1,
-        "width": "25",
-        "height": 11,
-        "url": "/spectrum",
-        "origin": "*",
-        "scale": "93",
-        "x": 720,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "542c8a5bb4913303",
-        "type": "comment",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "28611a179255d92b",
-        "name": "Spectrum comments",
-        "info": "This was hacked together on a Saterday afternoon usign the javascript available on the [batc](https://eshail.batc.org.uk/wb) site\nSince path referencing cannot work this way, I had to include all the JS and CSS imports in one html file, minified ofc.\nThis works...",
-        "x": 910,
-        "y": 280,
-        "wires": []
     },
     {
         "id": "5a74b55c01f09bf7",
@@ -19758,6 +19700,51 @@
         ]
     },
     {
+        "id": "ea2bc7648bc298ea",
+        "type": "inject",
+        "z": "b51f622713176100",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "device.rx.frequency",
+        "payloadType": "global",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "95ed79896dfef17a"
+            ]
+        ]
+    },
+    {
+        "id": "95ed79896dfef17a",
+        "type": "function",
+        "z": "b51f622713176100",
+        "name": "function 22",
+        "func": "let payload = msg.payload / 1000;\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 180,
+        "wires": [
+            [
+                "30794624a6a04c15"
+            ]
+        ]
+    },
+    {
         "id": "1e0841f1.ac68fe",
         "type": "http in",
         "z": "9d964f25dcc4d750",
@@ -20011,7 +19998,7 @@
         "id": "79f35d51926b0efe",
         "type": "template",
         "z": "9d964f25dcc4d750",
-        "name": "spectrum",
+        "name": "colormap",
         "field": "payload.colormap",
         "fieldType": "msg",
         "format": "handlebars",
@@ -20320,5 +20307,651 @@
                 "68c88da0b6e854ca"
             ]
         ]
+    },
+    {
+        "id": "01cd46f702ab295a",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "name": "",
+        "url": "/spektrum_test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [
+                "f395b1bb7fa9dff7"
+            ]
+        ]
+    },
+    {
+        "id": "a2f61b33b4086437",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "",
+        "url": "/mysitepost",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 760,
+        "wires": [
+            [
+                "492852a3d570d20d",
+                "d45428aae21def9a"
+            ]
+        ]
+    },
+    {
+        "id": "492852a3d570d20d",
+        "type": "debug",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "mysitepost",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 870,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7f647a9c84525ac3",
+        "type": "http response",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "",
+        "x": 890,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6735e9454db335a1",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "bootstrap",
+        "field": "payload.bootstrap",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 1020,
+        "y": 420,
+        "wires": [
+            [
+                "8c6754f51801dffd"
+            ]
+        ]
+    },
+    {
+        "id": "f7591f90facf0e0b",
+        "type": "http response",
+        "z": "e2c54979685d14cb",
+        "name": "",
+        "x": 1710,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "2acadfcfdd128dd9",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas height=\"1\" id=\"c\" width=\"1\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">\n                        Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, clicking on\n                        signal tunes your RX setup <a href=\"https://youtu.be/-ZdQOVg26_0\" target=\"_blank\">channel\n                            calibration</a></span><span id=\"fullscreen-link-span\">\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT speed</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">Spectrum</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">Bands</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "output": "str",
+        "x": 1510,
+        "y": 580,
+        "wires": [
+            [
+                "f7591f90facf0e0b"
+            ]
+        ]
+    },
+    {
+        "id": "a3a3f738b71585c4",
+        "type": "comment",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "Login Form",
+        "info": "",
+        "x": 390,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "5f96b310ef19c4ab",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "return msg.payload to client",
+        "func": "msg.payload = 'The following data was submitted and available in the msg.payload: '+msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 720,
+        "wires": [
+            [
+                "7f647a9c84525ac3"
+            ]
+        ]
+    },
+    {
+        "id": "f3881f9ce69994fe",
+        "type": "comment",
+        "z": "e2c54979685d14cb",
+        "name": "Inject msg object properties",
+        "info": "",
+        "x": 420,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d45428aae21def9a",
+        "type": "json",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "",
+        "x": 430,
+        "y": 720,
+        "wires": [
+            [
+                "5f96b310ef19c4ab"
+            ]
+        ]
+    },
+    {
+        "id": "770908f50346ea21",
+        "type": "comment",
+        "z": "e2c54979685d14cb",
+        "name": "Website",
+        "info": "",
+        "x": 190,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d34a3ba937961a60",
+        "type": "comment",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "Form Submission",
+        "info": "",
+        "x": 220,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "94cb70739e986757",
+        "type": "comment",
+        "z": "e2c54979685d14cb",
+        "name": "Node-RED Public Site - README",
+        "info": "This Flow demonstrates how to create\na simple frontend webpage with Node-RED.\n\nThe public facing page consists of the \nclient side JavaScript, CSS and HTML. \n\nThe important technique is how the mustache \ntemplates are used. Each template will set the\n\"property\" relative to the content. \n\nThe CSS node sets the \"msg.payload.style\" property.\nThe JavaScript node sets the \"msg.payload.script\" property.\nThe HTML node then includes these properties \n<script>{{{payload.script}}}</script>\n<style>{{{payload.style}}}</style>\n\n\nThis example was created by http://www.InternetofLEGO.com\n\n",
+        "x": 350,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c45e701da3354b62",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "name": "",
+        "filename": "wb/spectrum_internet/style.css",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "566cd2394e33219b"
+            ]
+        ]
+    },
+    {
+        "id": "566cd2394e33219b",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "name": "style.css",
+        "field": "payload.style",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 1100,
+        "y": 300,
+        "wires": [
+            [
+                "84fa266a165b46e6"
+            ]
+        ]
+    },
+    {
+        "id": "751903a68cb127b4",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "",
+        "filename": "wb/spectrum_internet/bootstrap.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 760,
+        "y": 420,
+        "wires": [
+            [
+                "6735e9454db335a1"
+            ]
+        ]
+    },
+    {
+        "id": "8ce52ac72c2e855d",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "jquery",
+        "field": "payload.jquery",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 1010,
+        "y": 460,
+        "wires": [
+            [
+                "3b7ee3b87112425f"
+            ]
+        ]
+    },
+    {
+        "id": "3508c720f7e42ea3",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "",
+        "filename": "wb/spectrum_internet/jquery.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 750,
+        "y": 460,
+        "wires": [
+            [
+                "8ce52ac72c2e855d"
+            ]
+        ]
+    },
+    {
+        "id": "46beab7ba343f23f",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "name": "",
+        "filename": "wb/spectrum_internet/websocket.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 780,
+        "y": 520,
+        "wires": [
+            [
+                "822ca2b96e4f3d64"
+            ]
+        ]
+    },
+    {
+        "id": "822ca2b96e4f3d64",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "name": "websocket",
+        "field": "payload.websocket",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 1030,
+        "y": 520,
+        "wires": [
+            [
+                "08dd20aa4336d75c"
+            ]
+        ]
+    },
+    {
+        "id": "a81b49509d41a0f2",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "",
+        "filename": "wb/spectrum_internet/bootstrap.css",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 760,
+        "y": 580,
+        "wires": [
+            [
+                "280899c0de7ae4c4"
+            ]
+        ]
+    },
+    {
+        "id": "280899c0de7ae4c4",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "bootstrap_css",
+        "field": "payload.bootstrap_css",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            [
+                "ec162bd6db11c979"
+            ]
+        ]
+    },
+    {
+        "id": "9c867256e71c4952",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "name": "",
+        "filename": "wb/spectrum_internet/script.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 750,
+        "y": 640,
+        "wires": [
+            [
+                "5652811db02929c2"
+            ]
+        ]
+    },
+    {
+        "id": "5652811db02929c2",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "name": "script",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 1030,
+        "y": 640,
+        "wires": [
+            [
+                "a61938e5f879256b"
+            ]
+        ]
+    },
+    {
+        "id": "384f97b2f1d21955",
+        "type": "debug",
+        "z": "e2c54979685d14cb",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "84fa266a165b46e6",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "name": "function 15",
+        "func": "msg.style = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 360,
+        "wires": [
+            [
+                "751903a68cb127b4",
+                "46beab7ba343f23f"
+            ]
+        ]
+    },
+    {
+        "id": "f395b1bb7fa9dff7",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "name": "function 16",
+        "func": "msg.url = \"spektrum_test\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 440,
+        "wires": [
+            [
+                "c45e701da3354b62"
+            ]
+        ]
+    },
+    {
+        "id": "8c6754f51801dffd",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "function 17",
+        "func": "msg.bootstrap = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1218,
+        "y": 414,
+        "wires": [
+            [
+                "3508c720f7e42ea3"
+            ]
+        ]
+    },
+    {
+        "id": "3b7ee3b87112425f",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "function 18",
+        "func": "msg.jquery = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 480,
+        "wires": [
+            [
+                "46beab7ba343f23f"
+            ]
+        ]
+    },
+    {
+        "id": "08dd20aa4336d75c",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "name": "function 19",
+        "func": "msg.websocket = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1189,
+        "y": 521,
+        "wires": [
+            [
+                "a81b49509d41a0f2",
+                "9c867256e71c4952"
+            ]
+        ]
+    },
+    {
+        "id": "ec162bd6db11c979",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "name": "function 20",
+        "func": "msg.bootstrap_css = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1203,
+        "y": 577,
+        "wires": [
+            [
+                "9c867256e71c4952"
+            ]
+        ]
+    },
+    {
+        "id": "a61938e5f879256b",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "name": "function 21",
+        "func": "msg.script = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1213,
+        "y": 718,
+        "wires": [
+            [
+                "2acadfcfdd128dd9",
+                "384f97b2f1d21955"
+            ]
+        ]
+    },
+    {
+        "id": "bbf9e870bbb3141b",
+        "type": "ui_iframe",
+        "z": "e2c54979685d14cb",
+        "group": "235bdacf6041386f",
+        "name": "spectrum iframe",
+        "order": 1,
+        "width": "25",
+        "height": "10",
+        "url": "/spektrum_test",
+        "origin": "*",
+        "scale": "93",
+        "x": 1460,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "109faf60df3867c0",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "g": "e6a3ecf34e7cea7c",
+        "name": "",
+        "url": "/spectrum",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 160,
+        "wires": [
+            [
+                "10dbef2665a872eb"
+            ]
+        ]
+    },
+    {
+        "id": "10dbef2665a872eb",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "g": "e6a3ecf34e7cea7c",
+        "name": "",
+        "filename": "wb/spectrum.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "8bf647b3812030b1"
+            ]
+        ]
+    },
+    {
+        "id": "8bf647b3812030b1",
+        "type": "http response",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "g": "e6a3ecf34e7cea7c",
+        "name": "",
+        "x": 690,
+        "y": 160,
+        "wires": []
     }
 ]

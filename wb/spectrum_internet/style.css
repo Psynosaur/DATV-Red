@@ -1,0 +1,96 @@
+body {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  #logo-row {
+    margin-top: 10px;
+    height: 75px;
+  }
+  #logo-row > div {
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    vertical-align: middle;
+  }
+  .logo {
+    max-height: 100%;
+    max-width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #page-title {
+    margin-top: 15px;
+    padding-left: 0.5rem;
+    margin-bottom: 15px;
+  }
+  #top-description {
+    line-height: 1.0;
+    padding-left: 0.5rem;
+  }
+  #c {
+    background-color: black;
+  }
+  #under-canvas {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: #010101;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  #stats {
+    float: left;
+  }
+  #bandplan-link {
+    display: inline-block;
+  }
+  #fft-colour-select {
+    margin-left: 3px;
+  }
+  #fullscreen-link {
+    margin-left: 3px;
+  }
+  #fullscreen-link-span {
+    float: right;
+  }
+  #chat {
+    height: 580px;
+  }
+  #under-chat {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: #010101;
+    font-weight: bold;
+    margin-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  #chat-page-link {
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    float: left;
+  }
+  #chat-logs-link {
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    float: right;
+  }
+  #footer {
+    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    clear: both;
+    color: #999999;
+  }

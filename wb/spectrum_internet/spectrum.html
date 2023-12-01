@@ -1,0 +1,41 @@
+
+<html lang="en">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>
+<meta content="QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK" name="description">
+<meta content="BATC & AMSAT-UK" name="author">
+<style>{{bootstrap_css}}</style>
+<style>{{style}}</style>
+<script>{{boostrap}}</script>
+<script>{{jquery}}</script>
+<script>{{websocket}}</script>
+<script>{{script}}</script>
+<body class="bg-dark">
+    <div id="content" role="main">
+        <div class="row">
+            <div id="fft-col" class="col-xl-12">
+                <canvas height="500" id="c" width="1280"></canvas>
+                <div id="under-canvas">
+                    <span style="color: white;float: left;">
+                        Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, clicking on
+                        signal tunes your RX setup <a href="https://youtu.be/-ZdQOVg26_0" target="_blank">channel
+                            calibration</a></span><span id="fullscreen-link-span">
+                        <label style="color: white;padding: 3px" for="fft-speed-select">FFT speed</label>
+                        <select id="fft-speed-select">
+                            <option value="fft" selected="selected">Slow
+                            <option value="fft_fast">Fast
+                        </select>
+                        <label style="color: white;padding: 3px" for="fft-colour-select">Spectrum</label><input
+                            type="color" id="fft-colour-select" value="$(fft_colour)"><label
+                            style="color: white;padding: 3px" for="band-colour-select">Bands</label><input
+                            type="color" id="band-colour-select" value="$(band_colour)"><select
+                            id="background-colour-select">
+                            <option value="black" selected="selected">Black
+                            <option value="white">White
+                        </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
