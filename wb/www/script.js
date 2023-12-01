@@ -1,9 +1,8 @@
 "use strict";
 
 var spectrum, logger, ws;
-
 function connectWebSocket(spectrum) {
-  ws = new WebSocket("ws://192.168.1.111:7681/websocket");
+  ws = new WebSocket(`ws://${pluto_url}:7681/websocket`);
 
   spectrum.setWebSocket(ws);
 
@@ -66,9 +65,11 @@ function main() {
     spectrumPercent: 65,
     logger: "log",
   });
-
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const url = urlParams.get('url')
   // Connect to websocket
-  connectWebSocket(spectrum);
+  connectWebSocket(spectrum, url);
 
   // Bind keypress handler
   window.addEventListener("keydown", function (e) {

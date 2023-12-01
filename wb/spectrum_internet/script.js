@@ -1,20 +1,14 @@
 let fft_url = "";
 var ctx;
-async function getJSON() {
-  return fetch("/config")
+async function getJSON(url) {
+  return fetch(`${url}/config`)
     .then((response) => response.json())
     .then((responseJson) => {
       return responseJson;
     });
 }
-async function getConfig() {
-  const json = await this.getJSON();
-  /* if (typeof (Storage) !== "undefined") {
-                    storageSupport = true;
-                    if (localStorage.fft_url) {
-                        fft_url = localStorage.fft_url;
-                    }
-                } */
+async function getConfig(url) {
+  const json = await this.getJSON(url);
   return json;
 }
 var canvas_element;
@@ -24,21 +18,12 @@ var canvasWidth;
 var canvasHeight;
 var canvasHeightLast;
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    /* 
-      - Code to execute when only the HTML document is loaded.
-      - This doesn't wait for stylesheets, 
-        images, and subframes to finish loading. 
-    */
-        
-  });
-
-
 (async () => {
-  var config = await getConfig();
+
+  var url = static ? 'http://127.0.0.1:1880' : '';  
+  var config = await getConfig(url);
   var rx_count = config.receivers.length;
   var ws_url = config.selected;
-  
   /* var ws_url = "ws://44.149.67.245:82/wideband/"; */
   /* ws://46.41.2.20:7681 */
   var ws_name = "fft";
@@ -200,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (uplink === undefined && canvasClickBW === undefined && busy) {
       /* Tune longmynd on pluto */
       fetch(
-        `/setRx?` +
+        `${url}/setRx?` +
           new URLSearchParams({
             downlink: 10491.5,
             SR: 1.5,
@@ -210,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       /* console.log(channel_coords); */
       /* RX tuning bar */
       if (channelClicked === rx_count + 1) {
-        setRxClickState(activeColor, 43, magicSpaceUnderSignal, 275);
+        setRxClickState(activeColor, 43, magicSpaceUnderSignal, 256);
         return;
       }
       setRxChannelState(highlighted_channel);
@@ -225,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         canvasClickBW = 0.25;
       }
       fetch(
-        `/setRx?` +
+        `${url}/setRx?` +
           new URLSearchParams({
             downlink: downlink,
             SR: canvasClickBW,
@@ -252,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         lastUplink = uplink;
         lastCanvasClickBW = canvasClickBW;
         fetch(
-          `/setTx?` +
+          `${url}/setTx?` +
             new URLSearchParams({
               uplink,
               downlink,
@@ -276,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       lastCanvasClickBW = canvasClickBW;
 
       fetch(
-        `/setTx?` +
+        `${url}/setTx?` +
           new URLSearchParams({
             uplink,
             downlink,
@@ -327,11 +312,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   function loadAll() {
-    canvasHeight = 500;
+    canvasHeight = 475;
     canvasHeightLast = canvasHeight;
     /* JQuery */
    
-    canvasWidth = 1400;
+    canvasWidth = 1300;
     canvas_element = document.getElementById("c");
     console.info("ele");
     console.dir(canvas_element);
@@ -671,22 +656,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ctx.fillText(
       "A71A DATV Beacon",
       (491.5 - _start_freq) * (canvasWidth / 9),
-      canvasHeight - 45
+      canvasHeight - 42
     );
     ctx.fillText(
       "10491.500",
       (491.5 - _start_freq) * (canvasWidth / 9),
-      canvasHeight - 28
+      canvasHeight - 25
     );
     ctx.fillText(
       "(1.5MS/s QPSK, 4/5)",
       (491.5 - _start_freq) * (canvasWidth / 9),
-      canvasHeight - 12
+      canvasHeight - 9
     );
     ctx.fillText(
       "Click to tune wide & narrow channels",
       (494.75 - _start_freq) * (canvasWidth / 9),
-      canvasHeight - 6
+      canvasHeight - 5
     );
 
     /* ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 15), canvasHeight - 6);
@@ -695,7 +680,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ctx.fillText(
       "Narrow channels",
       (498.25 - _start_freq) * (canvasWidth / 9),
-      canvasHeight - 12
+      canvasHeight - 9
     );
     ctx.restore();
 
@@ -1086,7 +1071,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       (canvasHeight * (4 / 8) - canvasHeight * (1 / 100)) / rx_count
     );
     let channel_lines = [];
-    let top_line_y = 0;
+    let top_line_y = 5;
     let square = {};
     if (mouse_y < (canvasHeight * 7) / 8) {
       for (i = 0; i < signals.length; i++) {

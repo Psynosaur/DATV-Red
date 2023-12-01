@@ -10,14 +10,5 @@
     "dvb_mode": "Auto",
     "wide_scan": "0",
     "low_sr": "0"
-  },
-  {
-    "type": "WinterHill",
-    "ip_address": "192.168.1.45",
-    "port": "9921",
-    "offset": "9750000",
-    "rx_socket": "A",
-    "lnb_volts": "0",
-    "lnb_22khz": "Off"
   }
 ]

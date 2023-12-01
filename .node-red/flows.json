@@ -50,7 +50,7 @@
     {
         "id": "e2c54979685d14cb",
         "type": "tab",
-        "label": "Spectrum",
+        "label": "Internet_spectrum_source",
         "disabled": false,
         "info": "",
         "env": []
@@ -1213,10 +1213,109 @@
             "10dbef2665a872eb",
             "8bf647b3812030b1"
         ],
-        "x": 174,
+        "x": 34,
         "y": 119,
         "w": 592,
         "h": 82
+    },
+    {
+        "id": "9b97da84f20d2dc4",
+        "type": "group",
+        "z": "e2c54979685d14cb",
+        "name": "refactored spectrum",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "01cd46f702ab295a",
+            "f7591f90facf0e0b",
+            "2acadfcfdd128dd9",
+            "c45e701da3354b62",
+            "566cd2394e33219b",
+            "46beab7ba343f23f",
+            "822ca2b96e4f3d64",
+            "9c867256e71c4952",
+            "5652811db02929c2",
+            "84fa266a165b46e6",
+            "f395b1bb7fa9dff7",
+            "08dd20aa4336d75c",
+            "a61938e5f879256b",
+            "bbf9e870bbb3141b"
+        ],
+        "x": 34,
+        "y": 259,
+        "w": 1372,
+        "h": 202
+    },
+    {
+        "id": "2e4963908c2bd3e0",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "name": "Rx spectrum controls",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "470e4d8abf29a205",
+            "b47b8870b7c9bd24",
+            "bb77722b6c2658e8",
+            "76a4409f6b3b9de1",
+            "77dc98e0de74c888",
+            "aa44e5106814ab9f",
+            "30794624a6a04c15",
+            "961e1c567115d1ee",
+            "0a9fe9e2623385cb",
+            "e20cdda5e23374dd",
+            "7e7a4a60225bb7e1",
+            "3ba43ff973399e13",
+            "b82cad0a3cddc877",
+            "f72c1ae9d1dc7d89",
+            "7d69601736a74273",
+            "12159992489b0591",
+            "bff2bb43c29c79e5"
+        ],
+        "x": 34,
+        "y": 479,
+        "w": 1012,
+        "h": 382
+    },
+    {
+        "id": "2406e32417780de0",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "name": "plutos www folder",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1e0841f1.ac68fe",
+            "b2f5bdf9.e09f1",
+            "d2c0bc2a.05a02",
+            "f3b55ea2.f4d51",
+            "e5e2b6286078ea70",
+            "b48f255275eca72c",
+            "e052b91f64f6eeab",
+            "79f35d51926b0efe",
+            "de0e60933695f58d",
+            "9648ba331aa59ceb",
+            "43f4f730e4b29392",
+            "ef1a9f2e55057480",
+            "f8332e1870dc4199",
+            "7eaceb95a084b02b",
+            "5b8734bb249bed14",
+            "541fbfaf914a0185",
+            "4dbfb098ed6ce8ef",
+            "fad658d5d37f9a7e",
+            "843fb2fa39feec7b",
+            "6a7ab5a29fc8f204",
+            "29e85f0be33d52d7",
+            "bf3faef62708eeee",
+            "2131639cdf6f62a5"
+        ],
+        "x": 54,
+        "y": 99,
+        "w": 1512,
+        "h": 282
     },
     {
         "id": "9b3296db2e0c849f",
@@ -19226,9 +19325,567 @@
         ]
     },
     {
+        "id": "1e0841f1.ac68fe",
+        "type": "http in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "url": "/spektrum",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "4dbfb098ed6ce8ef"
+            ]
+        ]
+    },
+    {
+        "id": "5de0bbd4.6c8574",
+        "type": "http in",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "",
+        "url": "/mysitepost",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 1840,
+        "wires": [
+            [
+                "80321000.f2dc5",
+                "75913f37.78e6e"
+            ]
+        ]
+    },
+    {
+        "id": "80321000.f2dc5",
+        "type": "debug",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "mysitepost",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 850,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "8de9647.b8a9a98",
+        "type": "http response",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "",
+        "x": 870,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "b2f5bdf9.e09f1",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "spectrum",
+        "field": "payload.spectrum",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 880,
+        "y": 180,
+        "wires": [
+            [
+                "fad658d5d37f9a7e"
+            ]
+        ]
+    },
+    {
+        "id": "d2c0bc2a.05a02",
+        "type": "http response",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "x": 1490,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f3b55ea2.f4d51",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>var pluto_url = \"{{pluto}}\";</script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
+        "x": 1310,
+        "y": 240,
+        "wires": [
+            [
+                "d2c0bc2a.05a02"
+            ]
+        ]
+    },
+    {
+        "id": "57316751.8bd948",
+        "type": "comment",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "Login Form",
+        "info": "",
+        "x": 370,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "ad88b28c.bc842",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "return msg.payload to client",
+        "func": "msg.payload = 'The following data was submitted and available in the msg.payload: '+msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1800,
+        "wires": [
+            [
+                "8de9647.b8a9a98"
+            ]
+        ]
+    },
+    {
+        "id": "75913f37.78e6e",
+        "type": "json",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "",
+        "x": 410,
+        "y": 1800,
+        "wires": [
+            [
+                "ad88b28c.bc842"
+            ]
+        ]
+    },
+    {
+        "id": "111485fa.14c4aa",
+        "type": "comment",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "Form Submission",
+        "info": "",
+        "x": 200,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "e5e2b6286078ea70",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "wb/www/style.css",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "b48f255275eca72c"
+            ]
+        ]
+    },
+    {
+        "id": "b48f255275eca72c",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "style.css",
+        "field": "payload.style",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 880,
+        "y": 140,
+        "wires": [
+            [
+                "541fbfaf914a0185"
+            ]
+        ]
+    },
+    {
+        "id": "e052b91f64f6eeab",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "wb/www/spectrum.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 540,
+        "y": 180,
+        "wires": [
+            [
+                "b2f5bdf9.e09f1"
+            ]
+        ]
+    },
+    {
+        "id": "79f35d51926b0efe",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "colormap",
+        "field": "payload.colormap",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 880,
+        "y": 220,
+        "wires": [
+            [
+                "843fb2fa39feec7b"
+            ]
+        ]
+    },
+    {
+        "id": "de0e60933695f58d",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "wb/www/colormap.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 540,
+        "y": 220,
+        "wires": [
+            [
+                "79f35d51926b0efe"
+            ]
+        ]
+    },
+    {
+        "id": "9648ba331aa59ceb",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "wb/www/mqtt.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "43f4f730e4b29392"
+            ]
+        ]
+    },
+    {
+        "id": "43f4f730e4b29392",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "mqtt",
+        "field": "payload.mqtt",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [
+                "6a7ab5a29fc8f204"
+            ]
+        ]
+    },
+    {
+        "id": "ef1a9f2e55057480",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "wb/www/vendor/paho/js/paho-mqtt-min.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [
+                "f8332e1870dc4199"
+            ]
+        ]
+    },
+    {
+        "id": "f8332e1870dc4199",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "vendor",
+        "field": "payload.vendor",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 870,
+        "y": 300,
+        "wires": [
+            [
+                "29e85f0be33d52d7"
+            ]
+        ]
+    },
+    {
+        "id": "7eaceb95a084b02b",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "wb/www/script.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "5b8734bb249bed14"
+            ]
+        ]
+    },
+    {
+        "id": "5b8734bb249bed14",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "script",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 870,
+        "y": 340,
+        "wires": [
+            [
+                "bf3faef62708eeee"
+            ]
+        ]
+    },
+    {
+        "id": "541fbfaf914a0185",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.style",
+        "func": "msg.style = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 140,
+        "wires": [
+            [
+                "e052b91f64f6eeab"
+            ]
+        ]
+    },
+    {
+        "id": "4dbfb098ed6ce8ef",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "function 9",
+        "func": "msg.url = `/spektrum?url=${global.get(\"broker_address\")}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "e5e2b6286078ea70"
+            ]
+        ]
+    },
+    {
+        "id": "fad658d5d37f9a7e",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.spectrum",
+        "func": "msg.spectrum = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 180,
+        "wires": [
+            [
+                "de0e60933695f58d"
+            ]
+        ]
+    },
+    {
+        "id": "843fb2fa39feec7b",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.colormap",
+        "func": "msg.colormap = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 220,
+        "wires": [
+            [
+                "9648ba331aa59ceb"
+            ]
+        ]
+    },
+    {
+        "id": "6a7ab5a29fc8f204",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.mqtt",
+        "func": "msg.mqtt = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 260,
+        "wires": [
+            [
+                "ef1a9f2e55057480"
+            ]
+        ]
+    },
+    {
+        "id": "29e85f0be33d52d7",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.vendor",
+        "func": "msg.vendor = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 300,
+        "wires": [
+            [
+                "7eaceb95a084b02b"
+            ]
+        ]
+    },
+    {
+        "id": "bf3faef62708eeee",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.script",
+        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 340,
+        "wires": [
+            [
+                "f3b55ea2.f4d51"
+            ]
+        ]
+    },
+    {
+        "id": "470e4d8abf29a205",
+        "type": "mqtt out",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "064bde8eca01e996",
+        "x": 970,
+        "y": 720,
+        "wires": []
+    },
+    {
         "id": "b47b8870b7c9bd24",
         "type": "function",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "webfft ON",
         "func": "let payload = \"webfft\";\nlet topic = `${global.get(\"cmdPath\")}/rx/stream/mode`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
         "outputs": 1,
@@ -19237,8 +19894,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 120,
+        "x": 340,
+        "y": 600,
         "wires": [
             [
                 "77dc98e0de74c888"
@@ -19248,7 +19905,8 @@
     {
         "id": "bb77722b6c2658e8",
         "type": "inject",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "config once",
         "props": [
             {
@@ -19262,8 +19920,8 @@
         "topic": "",
         "payload": "webfft",
         "payloadType": "str",
-        "x": 190,
-        "y": 120,
+        "x": 170,
+        "y": 600,
         "wires": [
             [
                 "b47b8870b7c9bd24"
@@ -19273,17 +19931,19 @@
     {
         "id": "76a4409f6b3b9de1",
         "type": "comment",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "Spectrum plot on the web interface",
         "info": "$(mosquitto_pub -t $cmd_root/rx/stream/mode -m webfft)\n\n$(mosquitto_pub -t $cmd_root/rx/frequency -m 745.000e6)\n$(mosquitto_pub -t $cmd_root/rx/gain -m 45.0)\n",
-        "x": 240,
-        "y": 40,
+        "x": 340,
+        "y": 520,
         "wires": []
     },
     {
         "id": "77dc98e0de74c888",
         "type": "mqtt out",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "",
         "topic": "",
         "qos": "",
@@ -19294,32 +19954,15 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 570,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "470e4d8abf29a205",
-        "type": "mqtt out",
-        "z": "b51f622713176100",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "064bde8eca01e996",
-        "x": 990,
-        "y": 260,
+        "x": 490,
+        "y": 600,
         "wires": []
     },
     {
         "id": "aa44e5106814ab9f",
         "type": "function",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "Gain :",
         "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/gain`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
         "outputs": 1,
@@ -19328,8 +19971,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 300,
+        "x": 770,
+        "y": 760,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -19337,74 +19980,12 @@
         ]
     },
     {
-        "id": "2131639cdf6f62a5",
-        "type": "ui_iframe",
-        "z": "b51f622713176100",
-        "group": "bd40e71dca80ef04",
-        "name": "",
-        "order": 1,
-        "width": "32",
-        "height": "5",
-        "url": "/spektrum",
-        "origin": "*",
-        "scale": 100,
-        "x": 610,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cd48ff4289d66051",
-        "type": "inject",
-        "z": "b51f622713176100",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 360,
-        "wires": [
-            [
-                "92402daf96ce8f82"
-            ]
-        ]
-    },
-    {
-        "id": "92402daf96ce8f82",
-        "type": "function",
-        "z": "b51f622713176100",
-        "name": "function 6",
-        "func": "// msg.url = `http://${global.get(\"broker_address\")}`\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 360,
-        "wires": [
-            [
-                "2131639cdf6f62a5"
-            ]
-        ]
-    },
-    {
         "id": "30794624a6a04c15",
         "type": "ui_slider",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "",
-        "label": "Rx {{value}} MHz",
+        "label": "Rx {{value | number:2}}  MHz",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
         "order": 4,
@@ -19418,8 +19999,8 @@
         "max": "755",
         "step": "0.01",
         "className": "",
-        "x": 510,
-        "y": 240,
+        "x": 610,
+        "y": 680,
         "wires": [
             [
                 "7d69601736a74273"
@@ -19429,7 +20010,8 @@
     {
         "id": "961e1c567115d1ee",
         "type": "ui_numeric",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "",
         "label": "Rx gain",
         "tooltip": "",
@@ -19446,8 +20028,8 @@
         "max": "60",
         "step": "1",
         "className": "",
-        "x": 520,
-        "y": 300,
+        "x": 620,
+        "y": 760,
         "wires": [
             [
                 "aa44e5106814ab9f"
@@ -19457,7 +20039,8 @@
     {
         "id": "0a9fe9e2623385cb",
         "type": "function",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "symbol rate",
         "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/sr`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
         "outputs": 1,
@@ -19466,8 +20049,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 540,
+        "x": 790,
+        "y": 820,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -19477,7 +20060,8 @@
     {
         "id": "e20cdda5e23374dd",
         "type": "inject",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "Initial sr",
         "props": [
             {
@@ -19491,8 +20075,8 @@
         "topic": "",
         "payload": "10500000",
         "payloadType": "str",
-        "x": 210,
-        "y": 540,
+        "x": 430,
+        "y": 820,
         "wires": [
             [
                 "7e7a4a60225bb7e1"
@@ -19502,7 +20086,8 @@
     {
         "id": "7e7a4a60225bb7e1",
         "type": "ui_dropdown",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "",
         "label": "Symbol rates",
         "tooltip": "DO NOT CHANGE WHILST TXING!!",
@@ -19564,8 +20149,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 390,
-        "y": 540,
+        "x": 630,
+        "y": 820,
         "wires": [
             [
                 "0a9fe9e2623385cb"
@@ -19573,30 +20158,10 @@
         ]
     },
     {
-        "id": "12159992489b0591",
-        "type": "mqtt in",
-        "z": "b51f622713176100",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 370,
-        "y": 240,
-        "wires": [
-            [
-                "30794624a6a04c15"
-            ]
-        ]
-    },
-    {
         "id": "3ba43ff973399e13",
         "type": "inject",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "",
         "props": [
             {
@@ -19610,18 +20175,20 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 50,
-        "y": 300,
+        "x": 130,
+        "y": 720,
         "wires": [
             [
-                "b82cad0a3cddc877"
+                "b82cad0a3cddc877",
+                "bff2bb43c29c79e5"
             ]
         ]
     },
     {
         "id": "b82cad0a3cddc877",
         "type": "function",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "rx gain",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/stream/gain\"\nreturn msg;\n\n",
         "outputs": 1,
@@ -19630,8 +20197,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 300,
+        "x": 290,
+        "y": 760,
         "wires": [
             [
                 "f72c1ae9d1dc7d89"
@@ -19641,7 +20208,8 @@
     {
         "id": "f72c1ae9d1dc7d89",
         "type": "mqtt in",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -19651,8 +20219,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 350,
-        "y": 300,
+        "x": 450,
+        "y": 760,
         "wires": [
             [
                 "961e1c567115d1ee"
@@ -19660,29 +20228,10 @@
         ]
     },
     {
-        "id": "bff2bb43c29c79e5",
-        "type": "function",
-        "z": "b51f622713176100",
-        "name": "rx frequency ",
-        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/stream/frequency\"\nreturn msg;\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 230,
-        "y": 240,
-        "wires": [
-            [
-                "12159992489b0591"
-            ]
-        ]
-    },
-    {
         "id": "7d69601736a74273",
         "type": "function",
-        "z": "b51f622713176100",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "Frequency",
         "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nreturn msg;",
         "outputs": 1,
@@ -19691,8 +20240,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 240,
+        "x": 790,
+        "y": 680,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -19700,44 +20249,21 @@
         ]
     },
     {
-        "id": "ea2bc7648bc298ea",
-        "type": "inject",
-        "z": "b51f622713176100",
+        "id": "12159992489b0591",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "0.1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
         "topic": "",
-        "payload": "device.rx.frequency",
-        "payloadType": "global",
-        "x": 300,
-        "y": 180,
-        "wires": [
-            [
-                "95ed79896dfef17a"
-            ]
-        ]
-    },
-    {
-        "id": "95ed79896dfef17a",
-        "type": "function",
-        "z": "b51f622713176100",
-        "name": "function 22",
-        "func": "let payload = msg.payload / 1000;\nmsg.payload = payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 180,
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 450,
+        "y": 680,
         "wires": [
             [
                 "30794624a6a04c15"
@@ -19745,580 +20271,57 @@
         ]
     },
     {
-        "id": "1e0841f1.ac68fe",
-        "type": "http in",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "url": "/spektrum",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 380,
-        "y": 320,
-        "wires": [
-            [
-                "4dbfb098ed6ce8ef"
-            ]
-        ]
-    },
-    {
-        "id": "5de0bbd4.6c8574",
-        "type": "http in",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "url": "/mysitepost",
-        "method": "post",
-        "swaggerDoc": "",
-        "x": 390,
-        "y": 520,
-        "wires": [
-            [
-                "80321000.f2dc5",
-                "75913f37.78e6e"
-            ]
-        ]
-    },
-    {
-        "id": "80321000.f2dc5",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "mysitepost",
-        "active": true,
-        "console": "false",
-        "complete": "payload",
-        "x": 1030,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "8de9647.b8a9a98",
-        "type": "http response",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "x": 1050,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "b2f5bdf9.e09f1",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "name": "spectrum",
-        "field": "payload.spectrum",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1180,
-        "y": 180,
-        "wires": [
-            [
-                "fad658d5d37f9a7e"
-            ]
-        ]
-    },
-    {
-        "id": "d2c0bc2a.05a02",
-        "type": "http response",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "x": 1870,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "f3b55ea2.f4d51",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "name": "HTML",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
-        "x": 1670,
-        "y": 340,
-        "wires": [
-            [
-                "d2c0bc2a.05a02"
-            ]
-        ]
-    },
-    {
-        "id": "57316751.8bd948",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "Login Form",
-        "info": "",
-        "x": 550,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "ad88b28c.bc842",
+        "id": "bff2bb43c29c79e5",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "return msg.payload to client",
-        "func": "msg.payload = 'The following data was submitted and available in the msg.payload: '+msg.payload;\nreturn msg;",
+        "g": "2e4963908c2bd3e0",
+        "name": "rx frequency ",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/stream/frequency\"\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 480,
+        "x": 310,
+        "y": 680,
         "wires": [
             [
-                "8de9647.b8a9a98"
+                "12159992489b0591"
             ]
         ]
     },
     {
-        "id": "42a9d329.9cdf6c",
-        "type": "comment",
+        "id": "2131639cdf6f62a5",
+        "type": "ui_iframe",
         "z": "9d964f25dcc4d750",
-        "name": "Inject msg object properties",
-        "info": "",
-        "x": 580,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "75913f37.78e6e",
-        "type": "json",
-        "z": "9d964f25dcc4d750",
-        "d": true,
+        "g": "2406e32417780de0",
+        "group": "bd40e71dca80ef04",
         "name": "",
-        "x": 590,
-        "y": 480,
+        "order": 1,
+        "width": "32",
+        "height": "5",
+        "url": "/spektrum",
+        "origin": "*",
+        "scale": 100,
+        "x": 330,
+        "y": 320,
         "wires": [
-            [
-                "ad88b28c.bc842"
-            ]
-        ]
-    },
-    {
-        "id": "86c08a83.385758",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "name": "Website",
-        "info": "",
-        "x": 350,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "111485fa.14c4aa",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "Form Submission",
-        "info": "",
-        "x": 380,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "3c029955.901626",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "name": "Node-RED Public Site - README",
-        "info": "This Flow demonstrates how to create\na simple frontend webpage with Node-RED.\n\nThe public facing page consists of the \nclient side JavaScript, CSS and HTML. \n\nThe important technique is how the mustache \ntemplates are used. Each template will set the\n\"property\" relative to the content. \n\nThe CSS node sets the \"msg.payload.style\" property.\nThe JavaScript node sets the \"msg.payload.script\" property.\nThe HTML node then includes these properties \n<script>{{{payload.script}}}</script>\n<style>{{{payload.style}}}</style>\n\n\nThis example was created by http://www.InternetofLEGO.com\n\n",
-        "x": 510,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "e5e2b6286078ea70",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "filename": "wb/www/style.css",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 950,
-        "y": 60,
-        "wires": [
-            [
-                "b48f255275eca72c"
-            ]
-        ]
-    },
-    {
-        "id": "b48f255275eca72c",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "name": "style.css",
-        "field": "payload.style",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1140,
-        "y": 60,
-        "wires": [
-            [
-                "541fbfaf914a0185"
-            ]
-        ]
-    },
-    {
-        "id": "e052b91f64f6eeab",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "filename": "wb/www/spectrum.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 960,
-        "y": 180,
-        "wires": [
-            [
-                "b2f5bdf9.e09f1"
-            ]
-        ]
-    },
-    {
-        "id": "79f35d51926b0efe",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "name": "colormap",
-        "field": "payload.colormap",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1180,
-        "y": 240,
-        "wires": [
-            [
-                "843fb2fa39feec7b"
-            ]
-        ]
-    },
-    {
-        "id": "de0e60933695f58d",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "filename": "wb/www/colormap.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 980,
-        "y": 240,
-        "wires": [
-            [
-                "79f35d51926b0efe"
-            ]
-        ]
-    },
-    {
-        "id": "9648ba331aa59ceb",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "filename": "wb/www/mqtt.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 960,
-        "y": 280,
-        "wires": [
-            [
-                "43f4f730e4b29392"
-            ]
-        ]
-    },
-    {
-        "id": "43f4f730e4b29392",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "name": "mqtt",
-        "field": "payload.mqtt",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1170,
-        "y": 280,
-        "wires": [
-            [
-                "6a7ab5a29fc8f204"
-            ]
-        ]
-    },
-    {
-        "id": "ef1a9f2e55057480",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "filename": "wb/www/vendor/paho/js/paho-mqtt-min.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 960,
-        "y": 340,
-        "wires": [
-            [
-                "f8332e1870dc4199"
-            ]
-        ]
-    },
-    {
-        "id": "f8332e1870dc4199",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "name": "vendor",
-        "field": "payload.vendor",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1190,
-        "y": 340,
-        "wires": [
-            [
-                "29e85f0be33d52d7"
-            ]
-        ]
-    },
-    {
-        "id": "7eaceb95a084b02b",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "filename": "wb/www/script.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 960,
-        "y": 400,
-        "wires": [
-            [
-                "5b8734bb249bed14"
-            ]
-        ]
-    },
-    {
-        "id": "5b8734bb249bed14",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "name": "script",
-        "field": "payload.script",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1190,
-        "y": 400,
-        "wires": [
-            [
-                "bf3faef62708eeee"
-            ]
-        ]
-    },
-    {
-        "id": "68c88da0b6e854ca",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "name": "debug 21",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1680,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "541fbfaf914a0185",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "name": "function 8",
-        "func": "msg.style = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 920,
-        "y": 120,
-        "wires": [
-            [
-                "e052b91f64f6eeab"
-            ]
-        ]
-    },
-    {
-        "id": "4dbfb098ed6ce8ef",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "name": "function 9",
-        "func": "msg.url = \"spektrum\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 200,
-        "wires": [
-            [
-                "e5e2b6286078ea70"
-            ]
-        ]
-    },
-    {
-        "id": "fad658d5d37f9a7e",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "name": "function 10",
-        "func": "msg.spectrum = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1378,
-        "y": 174,
-        "wires": [
-            [
-                "de0e60933695f58d"
-            ]
-        ]
-    },
-    {
-        "id": "843fb2fa39feec7b",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "name": "function 11",
-        "func": "msg.colormap = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1370,
-        "y": 240,
-        "wires": [
-            [
-                "9648ba331aa59ceb"
-            ]
-        ]
-    },
-    {
-        "id": "6a7ab5a29fc8f204",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "name": "function 12",
-        "func": "msg.mqtt = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1349,
-        "y": 281,
-        "wires": [
-            [
-                "ef1a9f2e55057480"
-            ]
-        ]
-    },
-    {
-        "id": "29e85f0be33d52d7",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "name": "function 13",
-        "func": "msg.vendor = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1363,
-        "y": 337,
-        "wires": [
-            [
-                "7eaceb95a084b02b"
-            ]
-        ]
-    },
-    {
-        "id": "bf3faef62708eeee",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "name": "function 14",
-        "func": "msg.script = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1373,
-        "y": 478,
-        "wires": [
-            [
-                "f3b55ea2.f4d51",
-                "68c88da0b6e854ca"
-            ]
+            []
         ]
     },
     {
         "id": "01cd46f702ab295a",
         "type": "http in",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "",
         "url": "/spektrum_test",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 230,
-        "y": 560,
+        "x": 150,
+        "y": 300,
         "wires": [
             [
                 "f395b1bb7fa9dff7"
@@ -20326,88 +20329,29 @@
         ]
     },
     {
-        "id": "a2f61b33b4086437",
-        "type": "http in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "",
-        "url": "/mysitepost",
-        "method": "post",
-        "swaggerDoc": "",
-        "x": 230,
-        "y": 760,
-        "wires": [
-            [
-                "492852a3d570d20d",
-                "d45428aae21def9a"
-            ]
-        ]
-    },
-    {
-        "id": "492852a3d570d20d",
-        "type": "debug",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "mysitepost",
-        "active": true,
-        "console": "false",
-        "complete": "payload",
-        "x": 870,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "7f647a9c84525ac3",
-        "type": "http response",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "",
-        "x": 890,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "6735e9454db335a1",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "bootstrap",
-        "field": "payload.bootstrap",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1020,
-        "y": 420,
-        "wires": [
-            [
-                "8c6754f51801dffd"
-            ]
-        ]
-    },
-    {
         "id": "f7591f90facf0e0b",
         "type": "http response",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "",
-        "x": 1710,
-        "y": 460,
+        "x": 1330,
+        "y": 360,
         "wires": []
     },
     {
         "id": "2acadfcfdd128dd9",
         "type": "template",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "HTML",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas height=\"1\" id=\"c\" width=\"1\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">\n                        Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, clicking on\n                        signal tunes your RX setup <a href=\"https://youtu.be/-ZdQOVg26_0\" target=\"_blank\">channel\n                            calibration</a></span><span id=\"fullscreen-link-span\">\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT speed</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">Spectrum</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">Bands</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas height=\"1\" id=\"c\" width=\"1\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">\n                        Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, clicking on\n                        signal tunes your RX setup <a href=\"https://youtu.be/-ZdQOVg26_0\" target=\"_blank\">channel\n                            calibration</a></span><span id=\"fullscreen-link-span\">\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT speed</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">Spectrum</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">Bands</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
         "output": "str",
-        "x": 1510,
-        "y": 580,
+        "x": 1190,
+        "y": 360,
         "wires": [
             [
                 "f7591f90facf0e0b"
@@ -20415,96 +20359,10 @@
         ]
     },
     {
-        "id": "a3a3f738b71585c4",
-        "type": "comment",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "Login Form",
-        "info": "",
-        "x": 390,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "5f96b310ef19c4ab",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "return msg.payload to client",
-        "func": "msg.payload = 'The following data was submitted and available in the msg.payload: '+msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 720,
-        "wires": [
-            [
-                "7f647a9c84525ac3"
-            ]
-        ]
-    },
-    {
-        "id": "f3881f9ce69994fe",
-        "type": "comment",
-        "z": "e2c54979685d14cb",
-        "name": "Inject msg object properties",
-        "info": "",
-        "x": 420,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "d45428aae21def9a",
-        "type": "json",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "",
-        "x": 430,
-        "y": 720,
-        "wires": [
-            [
-                "5f96b310ef19c4ab"
-            ]
-        ]
-    },
-    {
-        "id": "770908f50346ea21",
-        "type": "comment",
-        "z": "e2c54979685d14cb",
-        "name": "Website",
-        "info": "",
-        "x": 190,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "d34a3ba937961a60",
-        "type": "comment",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "Form Submission",
-        "info": "",
-        "x": 220,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "94cb70739e986757",
-        "type": "comment",
-        "z": "e2c54979685d14cb",
-        "name": "Node-RED Public Site - README",
-        "info": "This Flow demonstrates how to create\na simple frontend webpage with Node-RED.\n\nThe public facing page consists of the \nclient side JavaScript, CSS and HTML. \n\nThe important technique is how the mustache \ntemplates are used. Each template will set the\n\"property\" relative to the content. \n\nThe CSS node sets the \"msg.payload.style\" property.\nThe JavaScript node sets the \"msg.payload.script\" property.\nThe HTML node then includes these properties \n<script>{{{payload.script}}}</script>\n<style>{{{payload.style}}}</style>\n\n\nThis example was created by http://www.InternetofLEGO.com\n\n",
-        "x": 350,
-        "y": 340,
-        "wires": []
-    },
-    {
         "id": "c45e701da3354b62",
         "type": "file in",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "",
         "filename": "wb/spectrum_internet/style.css",
         "filenameType": "str",
@@ -20513,7 +20371,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 830,
+        "x": 530,
         "y": 300,
         "wires": [
             [
@@ -20525,6 +20383,7 @@
         "id": "566cd2394e33219b",
         "type": "template",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "style.css",
         "field": "payload.style",
         "fieldType": "msg",
@@ -20532,7 +20391,7 @@
         "syntax": "plain",
         "template": "{{msg.payload}}",
         "output": "str",
-        "x": 1100,
+        "x": 760,
         "y": 300,
         "wires": [
             [
@@ -20541,71 +20400,10 @@
         ]
     },
     {
-        "id": "751903a68cb127b4",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "",
-        "filename": "wb/spectrum_internet/bootstrap.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 760,
-        "y": 420,
-        "wires": [
-            [
-                "6735e9454db335a1"
-            ]
-        ]
-    },
-    {
-        "id": "8ce52ac72c2e855d",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "jquery",
-        "field": "payload.jquery",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1010,
-        "y": 460,
-        "wires": [
-            [
-                "3b7ee3b87112425f"
-            ]
-        ]
-    },
-    {
-        "id": "3508c720f7e42ea3",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "",
-        "filename": "wb/spectrum_internet/jquery.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 750,
-        "y": 460,
-        "wires": [
-            [
-                "8ce52ac72c2e855d"
-            ]
-        ]
-    },
-    {
         "id": "46beab7ba343f23f",
         "type": "file in",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "",
         "filename": "wb/spectrum_internet/websocket.js",
         "filenameType": "str",
@@ -20614,8 +20412,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 780,
-        "y": 520,
+        "x": 540,
+        "y": 360,
         "wires": [
             [
                 "822ca2b96e4f3d64"
@@ -20626,6 +20424,7 @@
         "id": "822ca2b96e4f3d64",
         "type": "template",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "websocket",
         "field": "payload.websocket",
         "fieldType": "msg",
@@ -20633,8 +20432,8 @@
         "syntax": "plain",
         "template": "{{msg.payload}}",
         "output": "str",
-        "x": 1030,
-        "y": 520,
+        "x": 770,
+        "y": 360,
         "wires": [
             [
                 "08dd20aa4336d75c"
@@ -20642,50 +20441,10 @@
         ]
     },
     {
-        "id": "a81b49509d41a0f2",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "",
-        "filename": "wb/spectrum_internet/bootstrap.css",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 760,
-        "y": 580,
-        "wires": [
-            [
-                "280899c0de7ae4c4"
-            ]
-        ]
-    },
-    {
-        "id": "280899c0de7ae4c4",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "bootstrap_css",
-        "field": "payload.bootstrap_css",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 1000,
-        "y": 580,
-        "wires": [
-            [
-                "ec162bd6db11c979"
-            ]
-        ]
-    },
-    {
         "id": "9c867256e71c4952",
         "type": "file in",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "",
         "filename": "wb/spectrum_internet/script.js",
         "filenameType": "str",
@@ -20694,8 +20453,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 750,
-        "y": 640,
+        "x": 530,
+        "y": 420,
         "wires": [
             [
                 "5652811db02929c2"
@@ -20706,6 +20465,7 @@
         "id": "5652811db02929c2",
         "type": "template",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "script",
         "field": "payload.script",
         "fieldType": "msg",
@@ -20713,8 +20473,8 @@
         "syntax": "plain",
         "template": "{{msg.payload}}",
         "output": "str",
-        "x": 1030,
-        "y": 640,
+        "x": 750,
+        "y": 420,
         "wires": [
             [
                 "a61938e5f879256b"
@@ -20722,27 +20482,11 @@
         ]
     },
     {
-        "id": "384f97b2f1d21955",
-        "type": "debug",
-        "z": "e2c54979685d14cb",
-        "name": "debug 24",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1520,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "84fa266a165b46e6",
         "type": "function",
         "z": "e2c54979685d14cb",
-        "name": "function 15",
+        "g": "9b97da84f20d2dc4",
+        "name": "set msg.style",
         "func": "msg.style = msg.payload;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -20750,11 +20494,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 360,
+        "x": 950,
+        "y": 300,
         "wires": [
             [
-                "751903a68cb127b4",
                 "46beab7ba343f23f"
             ]
         ]
@@ -20763,7 +20506,8 @@
         "id": "f395b1bb7fa9dff7",
         "type": "function",
         "z": "e2c54979685d14cb",
-        "name": "function 16",
+        "g": "9b97da84f20d2dc4",
+        "name": "set url",
         "func": "msg.url = \"spektrum_test\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -20771,8 +20515,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 440,
+        "x": 310,
+        "y": 300,
         "wires": [
             [
                 "c45e701da3354b62"
@@ -20780,52 +20524,11 @@
         ]
     },
     {
-        "id": "8c6754f51801dffd",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "function 17",
-        "func": "msg.bootstrap = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1218,
-        "y": 414,
-        "wires": [
-            [
-                "3508c720f7e42ea3"
-            ]
-        ]
-    },
-    {
-        "id": "3b7ee3b87112425f",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "function 18",
-        "func": "msg.jquery = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1210,
-        "y": 480,
-        "wires": [
-            [
-                "46beab7ba343f23f"
-            ]
-        ]
-    },
-    {
         "id": "08dd20aa4336d75c",
         "type": "function",
         "z": "e2c54979685d14cb",
-        "name": "function 19",
+        "g": "9b97da84f20d2dc4",
+        "name": "set msg.websocket",
         "func": "msg.websocket = msg.payload;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -20833,30 +20536,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1189,
-        "y": 521,
-        "wires": [
-            [
-                "a81b49509d41a0f2",
-                "9c867256e71c4952"
-            ]
-        ]
-    },
-    {
-        "id": "ec162bd6db11c979",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "name": "function 20",
-        "func": "msg.bootstrap_css = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1203,
-        "y": 577,
+        "x": 970,
+        "y": 360,
         "wires": [
             [
                 "9c867256e71c4952"
@@ -20867,7 +20548,8 @@
         "id": "a61938e5f879256b",
         "type": "function",
         "z": "e2c54979685d14cb",
-        "name": "function 21",
+        "g": "9b97da84f20d2dc4",
+        "name": "set msg.script",
         "func": "msg.script = msg.payload;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -20875,12 +20557,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1213,
-        "y": 718,
+        "x": 960,
+        "y": 420,
         "wires": [
             [
-                "2acadfcfdd128dd9",
-                "384f97b2f1d21955"
+                "2acadfcfdd128dd9"
             ]
         ]
     },
@@ -20888,6 +20569,7 @@
         "id": "bbf9e870bbb3141b",
         "type": "ui_iframe",
         "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "group": "235bdacf6041386f",
         "name": "spectrum iframe",
         "order": 1,
@@ -20895,9 +20577,9 @@
         "height": "10",
         "url": "/spektrum_test",
         "origin": "*",
-        "scale": "93",
-        "x": 1460,
-        "y": 360,
+        "scale": "100",
+        "x": 1180,
+        "y": 300,
         "wires": [
             []
         ]
@@ -20913,7 +20595,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 280,
+        "x": 140,
         "y": 160,
         "wires": [
             [
@@ -20935,7 +20617,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 510,
+        "x": 370,
         "y": 160,
         "wires": [
             [
@@ -20950,7 +20632,7 @@
         "d": true,
         "g": "e6a3ecf34e7cea7c",
         "name": "",
-        "x": 690,
+        "x": 550,
         "y": 160,
         "wires": []
     }
