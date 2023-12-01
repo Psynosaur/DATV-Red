@@ -64,8 +64,10 @@
         var beacon_strength = 0;
 
         var highlighted_channel = {};
-        let tuned_channels = [];
-
+        let tuned_channels = Array(rx_count).fill({});
+        function isEmpty(obj) {
+            return Object.keys(obj).length === 0;
+        }
         /* for (let j = 0; j < rx_count; j++) {
             tuned_channels.push(highlighted_channel);
         } */
@@ -94,6 +96,7 @@
             }
             if (localStorage.tuned_channels) {
                 tuned_channels = JSON.parse(localStorage.tuned_channels);
+                if(tuned_channels.length !== rx_count) tuned_channels = [];
             }
             if (localStorage.wb_band_colour) {
                 band_colour = localStorage.wb_band_colour;
@@ -178,7 +181,7 @@
             return;
         }
         function on_canvas_click(ev) {
-            let magicSpaceUnderSignal = canvasHeight * (7.02 / 8);
+            let magicSpaceUnderSignal = canvasHeight * (4 / 8);
             let magicSpaceAboveSignal = canvasHeight * (1.59 / 8);
             /* we clicked on the beacon... */
             if (uplink === undefined && canvasClickBW === undefined && busy) {
@@ -576,11 +579,19 @@
             ctx.fillRect(activeXd1_1, activeYd_1, activeXd2_1 - activeXd1_1, 10);
 
             for (let j = 0; j < tuned_channels.length; j++) {
+                    if(isEmpty(tuned_channels[j])){
+                        console.log("not drawing")
+                        break;
+                    } ;
                     obj = JSON.parse(tuned_channels[j]);
                     ctx.fillStyle = invertColor(band_colour);
+                    ctx.font = "13px Arial";
                     ctx.textAlign = "center";
                     ctx.fillText(`CH${j+1}`, obj.x1 - 20,  obj.y1 + obj.height/2);
+                    ctx.globalAlpha = 0.4;
                     ctx.fillRect(obj.x1, obj.y1, obj.width, obj.height);
+                    ctx.globalAlpha = 1;
+                    /* console.log("drawing") */
             }
             
 
@@ -977,7 +988,7 @@
                             /* channel lines */
                             channel_lines.push(channelSpace * (rx + 1));
                             ctx.font = "13px" + " Arial";
-                            ctx.fillText(`CH${rx+1}`, signals[i].start - 20,  channelSpace * (rx + 1) - channelSpace/4);
+                            ctx.fillText(`CH${rx+1}`, signals[i].start - 20,  channelSpace * (rx) + channelSpace/2);
                             if(mouse_x > signals[i].start 
                             && mouse_x < signals[i].end 
                             && mouse_y > channel_lines[rx] 
