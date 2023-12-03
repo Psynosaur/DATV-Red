@@ -8,7 +8,7 @@
 <style>
   :root {
     --textColor: #ffffff;
-    --backGroundColor: #000000;
+    --backGroundColor: #ffffff00;
     --fontSize: 36px;
     --fontFamily: 'Arial Regular';
   }
@@ -26,11 +26,11 @@
     display: inline-block;
 		font-family: var(--fontFamily);
 		font-size: var(--fontSize);
-    text-align: center;
+    text-align: left;
 		color: var(--textColor); 
 		border-radius: 3px; 
 		padding: 5px; 
-    align-items: center;
+    align-items: left;
 		background-color: var(--backGroundColor);
     width: 800px;
     ">
@@ -39,7 +39,7 @@
     display: inline-block;
 		font-family: var(--fontFamily);
 		font-size: var(--fontSize);
-    text-align: center;
+    text-align: left;
 		color: var(--textColor); 
 		border-radius: 3px; 
 		padding: 5px; 
@@ -68,6 +68,7 @@
     let queue = "";
     let fec = "";
     let bitrate = "";
+    let constel = "";
     let url = `ws://${plutoAdrress}:9001`
     const options = {
       // Clean session
@@ -88,6 +89,7 @@
       client.subscribe(`dt/pluto/${callsign}/tx/nco`, () => { })
       client.subscribe(`dt/pluto/${callsign}/temperature_ad`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/queue`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/constel`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/fec`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
@@ -110,48 +112,59 @@
     if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyStyle"]);
 
     client.on('message', function (topic, message) {
-          // message is Buffer
-          if (topic === `dt/pluto/${callsign}/tx/mute`) {
-            const r = parseInt(message.toString());
-            if (r === 1) firstTransmission = false;
-            if (r === 0) {
-              if (!firstTransmission) {
-                firstTransmission = true;
-                transmissionStart = moment();
-              };
-            };
-            onAir = r;
-          }
-          if (topic === `dt/pluto/${callsign}/temperature_ad`) {
-            temp = `${parseInt(message.toString()) / 1000}°C`;
-          }
-          if (topic === `dt/pluto/${callsign}/tx/frequency`) {
-            frequency = `${parseInt(message.toString())} Hz`;
-          }
-          if (topic === `dt/pluto/${callsign}/tx/gain`) {
-            gain = `${parseInt(message.toString())} dBm`;
-          }
-          if (topic === `dt/pluto/${callsign}/tx/nco`) {
-            nco = `${parseInt(message.toString())} Hz`;
-          }
-          if (topic === `dt/pluto/${callsign}/tx/dvbs2/queue`) {
-            queue = `${parseInt(message.toString())} frames`;
-          }
-          if (topic === `dt/pluto/${callsign}/tx/dvbs2/fec`) {
-            fec = `${message.toString()}`;
-          }
-          if (topic === `dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`) {
-            bitrate = `${parseInt(message.toString()) / 1000} kbits/s`;
-          }
-         
-          // client.end()
-        });
+      // message is Buffer
+      if (topic === `dt/pluto/${callsign}/tx/mute`) {
+        const r = parseInt(message.toString());
+        if (r === 1) firstTransmission = false;
+        if (r === 0) {
+          if (!firstTransmission) {
+            firstTransmission = true;
+            transmissionStart = moment();
+          };
+        };
+        onAir = r;
+      }
+      if (topic === `dt/pluto/${callsign}/temperature_ad`) {
+        temp = `${parseInt(message.toString()) / 1000}°C`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/frequency`) {
+        frequency = `${parseInt(message.toString())} Hz`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/gain`) {
+        gain = `${parseInt(message.toString())} dBm`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/nco`) {
+        nco = `${parseInt(message.toString())} Hz`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/dvbs2/queue`) {
+        queue = `${parseInt(message.toString())} frames`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/dvbs2/fec`) {
+        fec = `${message.toString()}`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`) {
+        bitrate = `${parseInt(message.toString()) / 1000} kbits/s`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/dvbs2/constel`) {
+        constel = `${message.toString()}`;
+      }
+
+      // client.end()
+    });
     setInterval(
       intervalFunction = function () {
         end = moment();
         txTime = parseInt(onAir) === 0 ? moment.utc(end.diff(transmissionStart)).format('mm:ss') : "00:00";
         output.innerText = `ON AIR : ${txTime} : ${moment.utc().format(urlParams["format"] || dateFormat)}  `
-        stats.innerText = `FPGA: ${temp}\nFrequency: ${frequency}\nGain ${gain}\nNCO: ${nco}\nQueue: ${queue}\nBit Rate: ${bitrate}\nFEC: ${fec}`;
+        stats.innerText =
+          `\nTS Bit Rate: ${bitrate}` +
+          `\nFrequency: ${frequency}` +
+          `\nConstel: ${constel.toUpperCase()}` +
+          `\nFEC: ${fec}` +
+          `\nGain ${gain}` +
+          `\nNCO: ${nco}` +
+          `\nBBFRAME Queue: ${queue}` +
+          `\nTuner: ${temp}`;
       }, 1);
 
     intervalFunction();

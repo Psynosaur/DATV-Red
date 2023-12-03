@@ -261,12 +261,14 @@
             "79ca0ff5d731c280",
             "5422df2970623734",
             "6fdf3a4e90a1a7d1",
-            "5c9a646ff82923e6"
+            "5c9a646ff82923e6",
+            "2b1a75997781caab",
+            "88e8c5a8e4d381e5"
         ],
-        "x": 3554,
-        "y": 1459,
-        "w": 1392,
-        "h": 302
+        "x": 3514,
+        "y": 1539,
+        "w": 1332,
+        "h": 362
     },
     {
         "id": "f6218c30fc4ec8b7",
@@ -749,15 +751,15 @@
             "570136a8608a39a6",
             "5f939f9512d4ba6e",
             "5937fb0a3c880ee7",
-            "35c6cd1a805aeca5",
             "4e9c1f576e08279b",
             "204d7697c1384266",
             "d233942edd1dc8df",
-            "2b4b283274423aba"
+            "2b4b283274423aba",
+            "35c6cd1a805aeca5"
         ],
-        "x": 1374,
+        "x": 1394,
         "y": 1079,
-        "w": 432,
+        "w": 452,
         "h": 1582
     },
     {
@@ -814,7 +816,11 @@
             "1b8ee9dbe0155dcd",
             "e5b15ef8662e723b",
             "34093316d4a4742b",
-            "2b25acbe5bad144e"
+            "2b25acbe5bad144e",
+            "c20ffdd3c22ba8da",
+            "0d29c855caae3889",
+            "cf798b4f51cbac85",
+            "343e66e2cb1a67c3"
         ],
         "x": 2254,
         "y": 979,
@@ -1172,7 +1178,6 @@
             "30794624a6a04c15",
             "961e1c567115d1ee",
             "0a9fe9e2623385cb",
-            "e20cdda5e23374dd",
             "7e7a4a60225bb7e1",
             "3ba43ff973399e13",
             "b82cad0a3cddc877",
@@ -1180,12 +1185,12 @@
             "7d69601736a74273",
             "12159992489b0591",
             "bff2bb43c29c79e5",
-            "21554bc0efe1836b"
+            "21554bc0efe1836b",
+            "e688634a9f60c746",
+            "818602f620560caa"
         ],
-        "x": 54,
-        "y": 419,
-        "w": 1012,
-        "h": 382
+        "x": 74,
+        "y": 419
     },
     {
         "id": "2406e32417780de0",
@@ -1221,9 +1226,7 @@
             "2131639cdf6f62a5"
         ],
         "x": 54,
-        "y": 99,
-        "w": 1512,
-        "h": 282
+        "y": 99
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -1506,7 +1509,7 @@
         "type": "ui_group",
         "name": "Spectrum window",
         "tab": "9b3296db2e0c849f",
-        "order": 7,
+        "order": 8,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -1580,7 +1583,7 @@
         "d": true,
         "name": "Chat",
         "tab": "9b3296db2e0c849f",
-        "order": 11,
+        "order": 12,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -1591,7 +1594,7 @@
         "type": "ui_group",
         "name": "ffmpeg info bar",
         "tab": "9b3296db2e0c849f",
-        "order": 8,
+        "order": 9,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -1705,7 +1708,7 @@
         "type": "ui_group",
         "name": "RX",
         "tab": "9b3296db2e0c849f",
-        "order": 9,
+        "order": 10,
         "disp": false,
         "width": "16",
         "collapse": false,
@@ -1756,7 +1759,7 @@
         "type": "ui_group",
         "name": "RX 2",
         "tab": "9b3296db2e0c849f",
-        "order": 10,
+        "order": 11,
         "disp": false,
         "width": "16",
         "collapse": false,
@@ -1891,7 +1894,7 @@
         "type": "ui_group",
         "name": "Spectrum plot of the signal at Pluto RX port",
         "tab": "9b3296db2e0c849f",
-        "order": 12,
+        "order": 7,
         "disp": false,
         "width": "32",
         "collapse": false,
@@ -2950,7 +2953,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: mode",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.stream.mode\")){\n    // global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\n",
+        "func": "\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3433,8 +3436,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2400,
-        "y": 2200,
+        "x": 2380,
+        "y": 2220,
         "wires": [
             [
                 "1b8ee9dbe0155dcd"
@@ -3529,7 +3532,7 @@
         "place": "Select option",
         "group": "9ed1d9a126995072",
         "order": 3,
-        "width": 4,
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -3564,12 +3567,13 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2010,
-        "y": 2200,
+        "x": 2030,
+        "y": 2180,
         "wires": [
             [
                 "fb34b1c186040d75",
-                "1d6a50722e33c015"
+                "1d6a50722e33c015",
+                "c20ffdd3c22ba8da"
             ]
         ]
     },
@@ -3691,7 +3695,7 @@
         "place": "Select option",
         "group": "9ed1d9a126995072",
         "order": 7,
-        "width": "3",
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -4142,7 +4146,7 @@
         "place": "Select option",
         "group": "9ed1d9a126995072",
         "order": 10,
-        "width": "4",
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -4202,7 +4206,7 @@
         "place": "Select option",
         "group": "9ed1d9a126995072",
         "order": 5,
-        "width": "3",
+        "width": "4",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -5855,45 +5859,9 @@
         "y": 460,
         "wires": [
             [
-                "35c6cd1a805aeca5",
                 "98580b7a29e56897",
-                "000aadf55c9c61da"
-            ]
-        ]
-    },
-    {
-        "id": "35c6cd1a805aeca5",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "5ed3848da82bcc9a",
-        "name": "tx.stream.mode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.tx.stream.mode",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "restore",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1700,
-        "y": 2140,
-        "wires": [
-            [
-                "2e677684d13ac6e0",
-                "1d6a50722e33c015"
+                "000aadf55c9c61da",
+                "35c6cd1a805aeca5"
             ]
         ]
     },
@@ -6148,7 +6116,7 @@
             [
                 "faf5a12234cf3d6a",
                 "1b8ee9dbe0155dcd",
-                "34093316d4a4742b"
+                "343e66e2cb1a67c3"
             ]
         ]
     },
@@ -7502,8 +7470,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4300,
-        "y": 1580,
+        "x": 4260,
+        "y": 1720,
         "wires": [
             []
         ]
@@ -7521,8 +7489,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "find devices",
-        "x": 4070,
-        "y": 1580,
+        "x": 4030,
+        "y": 1720,
         "wires": [
             [],
             [
@@ -7554,8 +7522,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3650,
-        "y": 1520,
+        "x": 3610,
+        "y": 1660,
         "wires": [
             [
                 "5c9a646ff82923e6"
@@ -7588,8 +7556,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4550,
-        "y": 1580,
+        "x": 4510,
+        "y": 1720,
         "wires": [
             [
                 "d5144c0538d61e55"
@@ -7609,8 +7577,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4300,
-        "y": 1640,
+        "x": 4260,
+        "y": 1780,
         "wires": [
             [
                 "92680e051846903d",
@@ -7638,8 +7606,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 4550,
-        "y": 1660,
+        "x": 4510,
+        "y": 1800,
         "wires": [
             [
                 "6cdbc7e33d7543c1"
@@ -7673,8 +7641,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4780,
-        "y": 1580,
+        "x": 4740,
+        "y": 1720,
         "wires": [
             []
         ]
@@ -7706,8 +7674,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4780,
-        "y": 1660,
+        "x": 4740,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -9848,8 +9816,8 @@
         "topic": "",
         "payload": "settings.video_device",
         "payloadType": "global",
-        "x": 4110,
-        "y": 1720,
+        "x": 4070,
+        "y": 1860,
         "wires": [
             [
                 "6e36be08ede45d50"
@@ -9874,8 +9842,8 @@
         "topic": "",
         "payload": "settings.audio_device",
         "payloadType": "global",
-        "x": 4110,
-        "y": 1520,
+        "x": 4070,
+        "y": 1660,
         "wires": [
             [
                 "1a213daf8dd78831"
@@ -11126,8 +11094,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4350,
-        "y": 1520,
+        "x": 4310,
+        "y": 1660,
         "wires": [
             [
                 "92680e051846903d"
@@ -11147,8 +11115,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4390,
-        "y": 1720,
+        "x": 4350,
+        "y": 1860,
         "wires": [
             [
                 "061c529da56f288b"
@@ -14975,7 +14943,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "settings.audio_device_linux",
+                "p": "settings.video_device_linux",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -14993,8 +14961,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4840,
-        "y": 1540,
+        "x": 4100,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -15026,8 +14994,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4840,
-        "y": 1500,
+        "x": 4100,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -15051,8 +15019,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 4650,
-        "y": 1500,
+        "x": 3910,
+        "y": 1580,
         "wires": [
             [
                 "4fe9cd48590dddd9"
@@ -15078,8 +15046,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 4650,
-        "y": 1540,
+        "x": 3910,
+        "y": 1620,
         "wires": [
             [
                 "350b02626581dd9b"
@@ -15104,8 +15072,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 3730,
-        "y": 1620,
+        "x": 3690,
+        "y": 1760,
         "wires": [
             [
                 "6fdf3a4e90a1a7d1"
@@ -15125,8 +15093,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3900,
-        "y": 1520,
+        "x": 3860,
+        "y": 1660,
         "wires": [
             [
                 "81e222ea9f35567c"
@@ -15139,8 +15107,8 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "6230aabbd2e27dba",
         "name": "",
-        "x": 3690,
-        "y": 1560,
+        "x": 3650,
+        "y": 1700,
         "wires": [
             [
                 "5422df2970623734"
@@ -15498,7 +15466,9 @@
         "y": 2160,
         "wires": [
             [
-                "1b8ee9dbe0155dcd"
+                "1b8ee9dbe0155dcd",
+                "c20ffdd3c22ba8da",
+                "2e677684d13ac6e0"
             ]
         ]
     },
@@ -15533,7 +15503,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2040,
+        "x": 2020,
         "y": 2120,
         "wires": [
             [
@@ -15568,11 +15538,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 2120,
+        "x": 1740,
+        "y": 2140,
         "wires": [
             [
-                "7d0cac41101d2058"
+                "7d0cac41101d2058",
+                "e1d2a880c9ca99a4"
             ]
         ]
     },
@@ -15964,6 +15935,199 @@
         "wires": [
             [
                 "807128449158f2eb"
+            ]
+        ]
+    },
+    {
+        "id": "35c6cd1a805aeca5",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "5ed3848da82bcc9a",
+        "name": "tx.stream.mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.stream.mode",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "restore",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 2180,
+        "wires": [
+            [
+                "2e677684d13ac6e0",
+                "1d6a50722e33c015"
+            ]
+        ]
+    },
+    {
+        "id": "c20ffdd3c22ba8da",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "mode?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2570,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "0d29c855caae3889",
+        "type": "ui_switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "",
+        "label": "Tune rx to longmynd freq",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 2530,
+        "y": 1020,
+        "wires": [
+            [
+                "cf798b4f51cbac85"
+            ]
+        ]
+    },
+    {
+        "id": "cf798b4f51cbac85",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tune_rx_freq",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2800,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "343e66e2cb1a67c3",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "",
+        "property": "tune_rx_freq",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2890,
+        "y": 1080,
+        "wires": [
+            [
+                "34093316d4a4742b"
+            ]
+        ]
+    },
+    {
+        "id": "2b1a75997781caab",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "6230aabbd2e27dba",
+        "name": "audio device linux",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.audio_device_linux",
+        "payloadType": "global",
+        "x": 3650,
+        "y": 1580,
+        "wires": [
+            [
+                "2da73cb53fcec181"
+            ]
+        ]
+    },
+    {
+        "id": "88e8c5a8e4d381e5",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "6230aabbd2e27dba",
+        "name": "video device linux",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.video_device_linux",
+        "payloadType": "global",
+        "x": 3670,
+        "y": 1620,
+        "wires": [
+            [
+                "79ca0ff5d731c280"
             ]
         ]
     },
@@ -17592,27 +17756,6 @@
         "wires": []
     },
     {
-        "id": "49109a540ffe32af",
-        "type": "ui_text",
-        "z": "d7c58eb9e7b65abb",
-        "group": "9ed1d9a126995072",
-        "order": 4,
-        "width": 1,
-        "height": 1,
-        "name": "Label RX status frame",
-        "label": " ",
-        "format": "RX",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1180,
-        "y": 520,
-        "wires": []
-    },
-    {
         "id": "5fd27bc7e53bf26e",
         "type": "ui_gauge",
         "z": "d7c58eb9e7b65abb",
@@ -19029,8 +19172,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1470,
-        "y": 160,
+        "x": 1490,
+        "y": 80,
         "wires": []
     },
     {
@@ -19073,8 +19216,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 140,
+        "x": 360,
+        "y": 120,
         "wires": [
             []
         ]
@@ -19115,7 +19258,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 910,
+        "x": 950,
         "y": 280,
         "wires": [
             [
@@ -19135,7 +19278,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
+        "x": 740,
         "y": 280,
         "wires": [
             [
@@ -19155,7 +19298,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
+        "x": 1180,
         "y": 280,
         "wires": [
             [
@@ -19187,7 +19330,7 @@
         "id": "f90b10e6825765f0",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "name": "set toggle state",
+        "name": "set current toggle state",
         "func": "let state = msg.button_state\nmsg.payload = state;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -19195,8 +19338,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 200,
-        "y": 40,
+        "x": 180,
+        "y": 220,
         "wires": [
             [
                 "a8596f60466f8cf4"
@@ -19224,7 +19367,7 @@
         "id": "eef90d12fe67652d",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "name": "set path",
+        "name": "settings file path",
         "func": "msg.filename = \"settings\\\\dashboard.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/dashboard.json\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -19232,8 +19375,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 400,
+        "x": 360,
+        "y": 280,
         "wires": [
             [
                 "70dc135bb18e2bd6"
@@ -19252,8 +19395,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 400,
-        "y": 460,
+        "x": 540,
+        "y": 280,
         "wires": [
             [
                 "ce64bf27f1fae6be"
@@ -19264,7 +19407,7 @@
         "id": "60df7c8dc6d1de55",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "name": "set path",
+        "name": "settings file path",
         "func": "msg.filename = \"settings\\\\dashboard.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/dashboard.json\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -19272,8 +19415,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 220,
+        "x": 340,
+        "y": 80,
         "wires": [
             [
                 "caa457b0361bf0ba"
@@ -19292,8 +19435,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 440,
-        "y": 280,
+        "x": 520,
+        "y": 80,
         "wires": [
             [
                 "2d87948c62090044"
@@ -19853,7 +19996,7 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 990,
+        "x": 970,
         "y": 660,
         "wires": []
     },
@@ -19947,8 +20090,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 700,
+        "x": 770,
+        "y": 660,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -19976,7 +20119,7 @@
         "step": "0.01",
         "className": "",
         "x": 630,
-        "y": 620,
+        "y": 600,
         "wires": [
             [
                 "7d69601736a74273"
@@ -20005,7 +20148,7 @@
         "step": "1",
         "className": "",
         "x": 640,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "aa44e5106814ab9f"
@@ -20034,32 +20177,6 @@
         ]
     },
     {
-        "id": "e20cdda5e23374dd",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "Initial sr",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "10500000",
-        "payloadType": "str",
-        "x": 450,
-        "y": 760,
-        "wires": [
-            [
-                "7e7a4a60225bb7e1"
-            ]
-        ]
-    },
-    {
         "id": "7e7a4a60225bb7e1",
         "type": "ui_dropdown",
         "z": "9d964f25dcc4d750",
@@ -20072,7 +20189,7 @@
         "order": 3,
         "width": "6",
         "height": "1",
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -20151,12 +20268,13 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 150,
-        "y": 660,
+        "x": 210,
+        "y": 600,
         "wires": [
             [
                 "b82cad0a3cddc877",
-                "bff2bb43c29c79e5"
+                "bff2bb43c29c79e5",
+                "e688634a9f60c746"
             ]
         ]
     },
@@ -20173,8 +20291,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 700,
+        "x": 350,
+        "y": 660,
         "wires": [
             [
                 "f72c1ae9d1dc7d89"
@@ -20195,8 +20313,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 470,
-        "y": 700,
+        "x": 510,
+        "y": 660,
         "wires": [
             [
                 "961e1c567115d1ee",
@@ -20217,8 +20335,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 620,
+        "x": 790,
+        "y": 600,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -20239,8 +20357,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 470,
-        "y": 620,
+        "x": 510,
+        "y": 600,
         "wires": [
             [
                 "30794624a6a04c15"
@@ -20260,8 +20378,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 620,
+        "x": 370,
+        "y": 600,
         "wires": [
             [
                 "12159992489b0591"
@@ -20305,6 +20423,49 @@
         "wires": []
     },
     {
+        "id": "e688634a9f60c746",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "rx gain",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/sr\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 720,
+        "wires": [
+            [
+                "818602f620560caa"
+            ]
+        ]
+    },
+    {
+        "id": "818602f620560caa",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 490,
+        "y": 720,
+        "wires": [
+            [
+                "7e7a4a60225bb7e1"
+            ]
+        ]
+    },
+    {
         "id": "01cd46f702ab295a",
         "type": "http in",
         "z": "e2c54979685d14cb",
@@ -20342,7 +20503,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas height=\"1\" id=\"c\" width=\"1\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">\n                        Shift (333KS) or ALT (250KS) + click: Tunes pluto tx and profile settings, clicking on\n                        signal tunes your RX setup <a href=\"https://youtu.be/-ZdQOVg26_0\" target=\"_blank\">channel\n                            calibration</a></span><span id=\"fullscreen-link-span\">\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT speed</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">Spectrum</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">Bands</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">\n                        Shift (333KS) / ALT (250KS) + click: Tunes channel settings, click on\n                        signal to tune your RX setup<a style=\"color:#C10B0B\" href=\"https://youtu.be/-ZdQOVg26_0\" target=\"_blank\">channel\n                            calibration</a></span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
         "output": "str",
         "x": 1190,
         "y": 360,
@@ -20568,7 +20729,7 @@
         "name": "spectrum iframe",
         "order": 1,
         "width": "25",
-        "height": "10",
+        "height": "11",
         "url": "/spektrum_test",
         "origin": "*",
         "scale": "100",

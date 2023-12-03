@@ -65,11 +65,9 @@ function main() {
     spectrumPercent: 65,
     logger: "log",
   });
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const url = urlParams.get('url')
+
   // Connect to websocket
-  connectWebSocket(spectrum, url);
+  connectWebSocket(spectrum);
 
   // Bind keypress handler
   window.addEventListener("keydown", function (e) {

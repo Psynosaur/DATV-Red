@@ -780,12 +780,12 @@ Spectrum.prototype.onDrag = function (event) {
 
 function Spectrum(id, options) {
   // Handle options
-  this.centerHz = options && options.centerHz ? options.centerHz : 0;
+  this.centerHz = options && options.centerHz ? options.centerHz : 745000000;
   this.spanHz = options && options.spanHz ? options.spanHz : 0;
   this.gain = options && options.gain ? options.gain : 0;
   this.fps = options && options.fps ? options.fps : 60;
   this.wf_size = options && options.wf_size ? options.wf_size : 0;
-  this.wf_rows = options && options.wf_rows ? options.wf_rows : 4096;
+  this.wf_rows = options && options.wf_rows ? options.wf_rows : 4096+4096;
   this.spectrumPercent =
     options && options.spectrumPercent ? options.spectrumPercent : 40;
   this.spectrumPercentStep =

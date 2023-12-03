@@ -195,7 +195,7 @@ var canvasHeightLast;
       /* console.log(channel_coords); */
       /* RX tuning bar */
       if (channelClicked === rx_count + 1) {
-        setRxClickState(activeColor, 43, magicSpaceUnderSignal, 256);
+        setRxClickState(activeColor, 43, magicSpaceUnderSignal, canvasWidth * 1/5);
         return;
       }
       setRxChannelState(highlighted_channel);
@@ -312,11 +312,11 @@ var canvasHeightLast;
   }
 
   function loadAll() {
-    canvasHeight = 475;
+    canvasHeight = document.body.clientHeight-50;
     canvasHeightLast = canvasHeight;
     /* JQuery */
    
-    canvasWidth = 1300;
+    canvasWidth = document.body.clientWidth-10;
     canvas_element = document.getElementById("c");
     console.info("ele");
     console.dir(canvas_element);
@@ -1328,22 +1328,24 @@ var canvasHeightLast;
   };
   var previousHeight = window.innerHeight;
   var previousWidth = window.innerWidth;
-//   var checkResize = function () {
-//     if (
-//       !checkFullScreen() &&
-//       (previousHeight != window.innerHeight ||
-//         previousWidth != window.innerWidth)
-//     ) {
-//       canvasHeight =
-//         $("#fft-col").height() < canvasHeightLast
-//           ? $("#fft-col").height()
-//           : canvasHeightLast;
-//       canvasWidth = $("#fft-col").width();
-//       initCanvas();
-//       previousHeight = window.innerHeight;
-//       previousWidth = window.innerWidth;
-//     }
-//   };
+  var checkResize = function () {
+    if (
+      !checkFullScreen() &&
+      (previousHeight != window.innerHeight ||
+        previousWidth != window.innerWidth)
+    ) {
+      let width =  document.body.clientWidth-20;
+      let height =  document.body.clientHeight;
+      canvasHeight =
+      height < canvasHeightLast
+          ? height
+          : canvasHeightLast;
+      canvasWidth = width;
+      initCanvas(canvas_element);
+      previousHeight = window.innerHeight;
+      previousWidth = window.innerWidth;
+    }
+  };
   window.addEventListener("fullscreenchange", function () {
     if (checkFullScreen()) {
       setTimeout(function () {
@@ -1359,7 +1361,7 @@ var canvasHeightLast;
       initCanvas();
     }
   });
-//   window.addEventListener("resize", checkResize, false);
+  window.addEventListener("resize", checkResize, false);
   window.addEventListener("orientationchange", checkOrientation, false);
   // Android doesn't always fire orientationChange on 180 degree turns
   setInterval(checkOrientation, 2000);
