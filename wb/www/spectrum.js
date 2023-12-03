@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2019 Jeppe Ledet-Pedersen
  * This software is released under the MIT license.
@@ -5,7 +6,7 @@
  */
 
 "use strict";
-let xd1,xd2,yd;
+let xd1, xd2, yd;
 Spectrum.prototype.squeeze = function (value, out_min, out_max) {
   if (value <= this.min_db) return out_min;
   else if (value >= this.max_db) return out_max;
@@ -94,11 +95,10 @@ Spectrum.prototype.drawChannels = function (ctx) {
   ctx.fillStyle = "red";
   const rolloff = 1.35 / 2.0;
   const _start_freq = 491.5;
-  
+
   var width = ctx.canvas.width;
   var height = ctx.canvas.height;
   function draw_channel(center_frequency, bandwidth, line_height) {
-    
     if (typeof freq_info !== "undefined") {
       if (freq_info.length == 44) freq_info = []; // hack to avoid continued push(). better to precompute all points and draw.
       freq_info.push({
@@ -135,64 +135,79 @@ Spectrum.prototype.drawChannels = function (ctx) {
   for (var f = 492.75; f <= 499.25; f = f + 0.25) {
     draw_channel(f, 0.125, 7.425 / 30);
   }
-  
 
   /* Annotate Bands - Text */
   ctx.font = "19px Arial";
-  ctx.fillStyle = 'white';
+  ctx.fillStyle = "white";
   ctx.textAlign = "center";
   // ctx.fillText("A71A DATV Beacon", ((491.5) - _start_freq) * (width / 9), height - 45);
   // ctx.fillText("10491.500", ((491.5) - _start_freq) * (width / 9), height - 28);
   // ctx.fillText("(1.5MS/s QPSK, 4/5)", ((491.5) - _start_freq) * (width / 9), height - 12);
-  ctx.fillText("Click to tune wide & narrow channels", ((494.75) - _start_freq) * (width / 9), height - 6);
+  ctx.fillText(
+    "Click to tune wide & narrow channels",
+    (494.75 - _start_freq) * (width / 9),
+    height - 6
+  );
 
   /* ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 15), canvasHeight - 6);
   ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 6.42), canvasHeight - 6); */
 
-  ctx.fillText("Narrow channels", ((498.25) - _start_freq) * (width / 9), 100);
+  ctx.fillText("Narrow channels", (498.25 - _start_freq) * (width / 9), 100);
   ctx.restore();
-  
-}
+};
 function render_frequency_info(ctx, mouse_x, mouse_y) {
-    var display_triggered = false;
-    // var width = ctx.canvas.width;
-    var height = ctx.canvas.height;
-    
-    var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
-    if (mouse_y > (height * 1 / 8)) {
-        for (var i = 0; i < freq_info.length; i++) {
-            xd1 = freq_info[i].x1;
-            xd2 = freq_info[i].x2;
-            yd = freq_info[i].y;
-            if ((mouse_x > xd1 - 1) && (mouse_x < xd2 + 1) &&
-                (mouse_y > yd - 5) && (mouse_y < yd + 5)) {
-                ctx.canvas.title = "Downlink: " + (10000.00 + freq_info[i].center_frequency) +
-                    " MHz\nUplink: " + (1910.50 + freq_info[i].center_frequency) +
-                    " MHz\nSymbol Rate: " + ((freq_info[i].bandwidth == 0.125) ? "125/66/33 Ksps" :
-                        (freq_info[i].bandwidth == 0.333) ? (freq_info[i].center_frequency < 497.0 ? "500/333/250 Ksps" : "333/250 Ksps") : "1 Msps");
-                downlink = 10000.00 + freq_info[i].center_frequency;
-                uplink = 1910.50 + freq_info[i].center_frequency;
-                // canvasClickBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
-                // busy = false;
-                ctx.fillStyle = 'white';
-                ctx.fillRect(xd1, yd, xd2 - xd1, 5);
-                // activeColor = invertColor(band_colour);
-                // activeXd1 = xd1;
-                // activeXd2 = xd2;
-                // activeYd = yd;
-                display_triggered = true;
-                break;
-            }
-        }
+  var display_triggered = false;
+  // var width = ctx.canvas.width;
+  var height = ctx.canvas.height;
+
+  var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
+  if (mouse_y > (height * 1) / 8) {
+    for (var i = 0; i < freq_info.length; i++) {
+      xd1 = freq_info[i].x1;
+      xd2 = freq_info[i].x2;
+      yd = freq_info[i].y;
+      if (
+        mouse_x > xd1 - 1 &&
+        mouse_x < xd2 + 1 &&
+        mouse_y > yd - 5 &&
+        mouse_y < yd + 5
+      ) {
+        ctx.canvas.title =
+          "Downlink: " +
+          (10000.0 + freq_info[i].center_frequency) +
+          " MHz\nUplink: " +
+          (1910.5 + freq_info[i].center_frequency) +
+          " MHz\nSymbol Rate: " +
+          (freq_info[i].bandwidth == 0.125
+            ? "125/66/33 Ksps"
+            : freq_info[i].bandwidth == 0.333
+            ? freq_info[i].center_frequency < 497.0
+              ? "500/333/250 Ksps"
+              : "333/250 Ksps"
+            : "1 Msps");
+        downlink = 10000.0 + freq_info[i].center_frequency;
+        uplink = 1910.5 + freq_info[i].center_frequency;
+        // canvasClickBW = uplink < 2407.5 && freq_info[i].bandwidth == 0.333 ? 0.5 : freq_info[i].bandwidth;
+        // busy = false;
+        ctx.fillStyle = "white";
+        ctx.fillRect(xd1, yd, xd2 - xd1, 5);
+        // activeColor = invertColor(band_colour);
+        // activeXd1 = xd1;
+        // activeXd2 = xd2;
+        // activeYd = yd;
+        display_triggered = true;
+        break;
+      }
     }
-    if (!display_triggered) {
-        ctx.canvas.title = "";
-    }
+  }
+  if (!display_triggered) {
+    ctx.canvas.title = "";
+  }
 }
 Spectrum.prototype.drawSpectrum = function (bins) {
   var width = this.ctx.canvas.width;
   var height = this.ctx.canvas.height;
-    // detect_signals(bins, this.ctx, width, height);
+  // detect_signals(bins, this.ctx, width, height);
   // Fill with black
   this.ctx.fillStyle = "black";
   this.ctx.fillRect(0, 0, width, height);
@@ -248,54 +263,55 @@ Spectrum.prototype.drawSpectrum = function (bins) {
   this.ctx.fillStyle = this.gradient;
   this.ctx.fill();
   // this.drawChannels(this.ctx);
-  
+
   // Copy axes from offscreen canvas
   this.ctx.drawImage(this.ctx_axes.canvas, 0, 0);
 };
 
 function render_signal_selected_box(mouse_clicked_x, mouse_clicked_y) {
-  if (mouse_y < (canvasHeight * 7 / 8)) {
-      for (i = 0; i < signals.length; i++) {
-          if (mouse_clicked_x > signals[i].start &&
-              mouse_clicked_x < signals[i].end &&
-              mouse_clicked_y > signals[i].top) {
-              signal_selected = signals[i];
+  if (mouse_y < (canvasHeight * 7) / 8) {
+    for (i = 0; i < signals.length; i++) {
+      if (
+        mouse_clicked_x > signals[i].start &&
+        mouse_clicked_x < signals[i].end &&
+        mouse_clicked_y > signals[i].top
+      ) {
+        signal_selected = signals[i];
 
-              ctx.save();
-              ctx.lineWidth = 3;
-              ctx.strokeStyle = background_colour === "black" ? 'white' : 'black';
-              ctx.beginPath();
-              ctx.moveTo(signal_selected.start, canvasHeight * (7 / 8));
-              ctx.lineTo(signal_selected.start, signal_selected.top);
-              ctx.stroke();
-              ctx.beginPath();
-              ctx.moveTo(signal_selected.start, signal_selected.top);
-              ctx.lineTo(signal_selected.end, signal_selected.top);
-              ctx.stroke();
-              ctx.beginPath();
-              ctx.moveTo(signal_selected.end, canvasHeight * (7 / 8));
-              ctx.lineTo(signal_selected.end, signal_selected.top);
-              ctx.stroke();
-              ctx.restore();
+        ctx.save();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = background_colour === "black" ? "white" : "black";
+        ctx.beginPath();
+        ctx.moveTo(signal_selected.start, canvasHeight * (7 / 8));
+        ctx.lineTo(signal_selected.start, signal_selected.top);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(signal_selected.start, signal_selected.top);
+        ctx.lineTo(signal_selected.end, signal_selected.top);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(signal_selected.end, canvasHeight * (7 / 8));
+        ctx.lineTo(signal_selected.end, signal_selected.top);
+        ctx.stroke();
+        ctx.restore();
 
-              return;
-          }
+        return;
       }
+    }
   }
 }
-
 
 Spectrum.prototype.detect_movement = function (event) {
   // mouse_in_canvas = false;
   // if (mouse_in_canvas) {
-    let mouse_x, mouse_y;
-    const el_boundingRectangle = this.ctx.canvas.getBoundingClientRect();
-    mouse_x = event.clientX - el_boundingRectangle.left;
-    mouse_y = event.clientY - el_boundingRectangle.top;
-    console.log(`x:${mouse_x}, y:${mouse_y}`)
-    render_frequency_info(this.ctx, mouse_x, mouse_y);
-    console.log(`x:${mouse_x}, y:${mouse_y}`)
-    // render_signal_box(mouse_x, mouse_y);
+  let mouse_x, mouse_y;
+  const el_boundingRectangle = this.ctx.canvas.getBoundingClientRect();
+  mouse_x = event.clientX - el_boundingRectangle.left;
+  mouse_y = event.clientY - el_boundingRectangle.top;
+  console.log(`x:${mouse_x}, y:${mouse_y}`);
+  render_frequency_info(this.ctx, mouse_x, mouse_y);
+  console.log(`x:${mouse_x}, y:${mouse_y}`);
+  // render_signal_box(mouse_x, mouse_y);
   // }
 
   if (typeof signal_selected !== "undefined" && signal_selected != null) {
@@ -303,7 +319,7 @@ Spectrum.prototype.detect_movement = function (event) {
   }
 
   // console.dir(signals);
-}
+};
 
 function print_symbolrate(symrate) {
   if (symrate < 0.7) {
@@ -405,7 +421,8 @@ Spectrum.prototype.updateAxes = function () {
       }
 
       var freq = this.centerHz + (this.spanHz / 10) * (i - 5);
-      if (this.centerHz + this.spanHz > 1e6) freq = freq / 1e6 + "M";
+      if (this.centerHz + this.spanHz > 1e6)
+        freq = Number(freq / 1e6).toFixed(2) + "M";
       else if (this.centerHz + this.spanHz > 1e3) freq = freq / 1e3 + "k";
       this.ctx_axes.fillText(freq, x + adjust, height - 3);
     }
@@ -418,7 +435,7 @@ Spectrum.prototype.updateAxes = function () {
   }
 };
 
-Spectrum.prototype.addData = function (data) {
+Spectrum.prototype.addData = async function (data) {
   this.databin = new Uint16Array(data);
 
   if (!this.paused) {
@@ -780,12 +797,12 @@ Spectrum.prototype.onDrag = function (event) {
 
 function Spectrum(id, options) {
   // Handle options
-  this.centerHz = options && options.centerHz ? options.centerHz : 745000000;
+  this.centerHz = options && options.centerHz ? options.centerHz : 0;
   this.spanHz = options && options.spanHz ? options.spanHz : 0;
   this.gain = options && options.gain ? options.gain : 0;
   this.fps = options && options.fps ? options.fps : 60;
   this.wf_size = options && options.wf_size ? options.wf_size : 0;
-  this.wf_rows = options && options.wf_rows ? options.wf_rows : 4096+4096;
+  this.wf_rows = options && options.wf_rows ? options.wf_rows : 4096 + 4096;
   this.spectrumPercent =
     options && options.spectrumPercent ? options.spectrumPercent : 40;
   this.spectrumPercentStep =

@@ -39,7 +39,7 @@ var canvasHeightLast;
   const render_interval_map = {
     /* ms */
     fft: 250,
-    fft_fast: 25,
+    fft_fast: 100,
   };
   var render_interval = render_interval_map[ws_name];
   var render_busy = false;

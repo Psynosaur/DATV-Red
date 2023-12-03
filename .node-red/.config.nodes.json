@@ -429,7 +429,7 @@
     },
     "node-red-contrib-calc": {
         "name": "node-red-contrib-calc",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "local": true,
         "user": true,
         "nodes": {
@@ -471,44 +471,6 @@
             }
         }
     },
-    "node-red-contrib-string": {
-        "name": "node-red-contrib-string",
-        "version": "1.0.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "string": {
-                "name": "string",
-                "types": [
-                    "string"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-string",
-                "file": "F:\\Radio\\QO-100\\DATV-Red\\.node-red\\node_modules\\node-red-contrib-string\\string\\string.js"
-            }
-        }
-    },
-    "node-red-contrib-sum": {
-        "name": "node-red-contrib-sum",
-        "version": "0.1.1",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "sum": {
-                "name": "sum",
-                "types": [
-                    "sum"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-sum",
-                "file": "F:\\Radio\\QO-100\\DATV-Red\\.node-red\\node_modules\\node-red-contrib-sum\\sum.js"
-            }
-        }
-    },
     "node-red-contrib-ui-led": {
         "name": "node-red-contrib-ui-led",
         "version": "0.4.11",
@@ -530,7 +492,7 @@
     },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
-        "version": "3.6.0",
+        "version": "3.6.1",
         "local": true,
         "user": true,
         "nodes": {

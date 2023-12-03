@@ -4,7 +4,7 @@
         "type": "tab",
         "label": "DATV-Red V3.14_pi",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n    \r\n\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n\r\nV3.3\r\n - Fixed spectrum MQTT client\r\n   - Spans and frequencies are labeled\r\n - Fixed linux start up bugs\r\n   - works again\r\n - Inject OS type before all else...\r\n \r\n    \r\n\r\n",
         "env": []
     },
     {
@@ -113,32 +113,6 @@
             }
         ],
         "color": "#DDAA99"
-    },
-    {
-        "id": "ba42e703170bee84",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Pluto and callsign setup",
-        "style": {
-            "label": true,
-            "fill": "#001f60"
-        },
-        "nodes": [
-            "0c72fe59acc5f30e",
-            "25874e1909171caa",
-            "8d24e6025fe47ef5",
-            "cdc147736509f758",
-            "a7dfa23e416d0533",
-            "140f70c9bf342365",
-            "2f35ec1420f48a0f",
-            "5a68f1d90ea138d2",
-            "ce9b5ccdb8569209",
-            "7917bd339452fd2f"
-        ],
-        "x": 54,
-        "y": 19,
-        "w": 1052,
-        "h": 202
     },
     {
         "id": "28611a179255d92b",
@@ -404,15 +378,14 @@
             "fill": "#001f60"
         },
         "nodes": [
-            "dc87a28301ce8d90",
             "3b59a3e0f9422294",
             "a49d494221eac856",
             "7c8f9cb24f9b6c61",
             "fd4311919bb382bd"
         ],
-        "x": 3454,
+        "x": 3594,
         "y": 39,
-        "w": 872,
+        "w": 732,
         "h": 82
     },
     {
@@ -455,7 +428,7 @@
             "1827c9f76c07664e",
             "a5ba752e39a5ed64"
         ],
-        "x": 1154,
+        "x": 1234,
         "y": 19,
         "w": 1172,
         "h": 182
@@ -536,7 +509,8 @@
             "6e64d146147821e7",
             "3e90d102d97d90d1",
             "1de26d5def9ca4f5",
-            "ec867dfd3be3e114"
+            "ec867dfd3be3e114",
+            "d7e44f153065aff1"
         ],
         "x": 2474,
         "y": 2839,
@@ -633,12 +607,9 @@
             "e2ddf0eaa1468069",
             "91114b46796f2205",
             "aeded232cbae2ef0",
-            "4dc0d6bc0972a150",
             "8bcc3bb6537a078d",
-            "56ad120991eb3c83",
             "2e28b17c64c14184",
             "04d27b36a3ee9934",
-            "76bed5f0ebc81a4c",
             "25a924b7dc1d4576",
             "c25d1cacc8057d1d",
             "0b6d33db8fc071c9",
@@ -651,7 +622,6 @@
             "8a6e91746db5e484",
             "31eb287a0ca0a45c",
             "508bccc9de4506fc",
-            "b733d75a1c79f1a2",
             "c8042db5402565df",
             "8e34088eda2b7263",
             "2acfb18cb9db9a02",
@@ -665,20 +635,24 @@
             "728cb5ecbddc04f0",
             "b22449c1178f10d2",
             "9cb8fc791809bfd9",
-            "32e18f58d4f086f8",
             "1decf932a1bf2fcd",
             "ba4a435e3fbcd377",
             "a944ecbfc565c58b",
             "54cbda477035a37f",
             "04e9fefc43a9ccbf",
-            "850a280f13dbdd1a",
             "c663427b8e7b5e29",
-            "d9d419bf2f3c91f9"
+            "d9d419bf2f3c91f9",
+            "b733d75a1c79f1a2",
+            "850a280f13dbdd1a",
+            "32e18f58d4f086f8",
+            "76bed5f0ebc81a4c",
+            "56ad120991eb3c83",
+            "4dc0d6bc0972a150"
         ],
         "x": 34,
         "y": 1139,
         "w": 1192,
-        "h": 1622
+        "h": 1082
     },
     {
         "id": "c927282dfd987c70",
@@ -927,29 +901,6 @@
         "h": 82
     },
     {
-        "id": "7dfec9f6e2908fab",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "style": {
-            "stroke": "#30363d",
-            "stroke-opacity": "1",
-            "fill": "#010409",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#e6edf3"
-        },
-        "nodes": [
-            "804a1873f1bbe26f",
-            "42bc7dd8aab51b22",
-            "85a46cf1a97d17bc"
-        ],
-        "x": 34,
-        "y": 4519,
-        "w": 622,
-        "h": 82
-    },
-    {
         "id": "a01b8f8a522d73dd",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1176,7 +1127,6 @@
             "77dc98e0de74c888",
             "aa44e5106814ab9f",
             "30794624a6a04c15",
-            "961e1c567115d1ee",
             "0a9fe9e2623385cb",
             "7e7a4a60225bb7e1",
             "3ba43ff973399e13",
@@ -1187,10 +1137,17 @@
             "bff2bb43c29c79e5",
             "21554bc0efe1836b",
             "e688634a9f60c746",
-            "818602f620560caa"
+            "818602f620560caa",
+            "6adfe6d609aeb90a",
+            "f999e537938234c5",
+            "5493fb3252e35009",
+            "4497dbfe8502fab3",
+            "6d2ec666c4cd744e"
         ],
         "x": 74,
-        "y": 419
+        "y": 379,
+        "w": 1312,
+        "h": 442
     },
     {
         "id": "2406e32417780de0",
@@ -1223,10 +1180,41 @@
             "6a7ab5a29fc8f204",
             "29e85f0be33d52d7",
             "bf3faef62708eeee",
-            "2131639cdf6f62a5"
+            "2131639cdf6f62a5",
+            "b5cfddf388cbc440"
         ],
         "x": 54,
-        "y": 99
+        "y": 99,
+        "w": 1512,
+        "h": 282
+    },
+    {
+        "id": "1d8e778f40edcc21",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Pluto and callsign setup",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "25874e1909171caa",
+            "8d24e6025fe47ef5",
+            "cdc147736509f758",
+            "a7dfa23e416d0533",
+            "140f70c9bf342365",
+            "2f35ec1420f48a0f",
+            "5a68f1d90ea138d2",
+            "ce9b5ccdb8569209",
+            "7917bd339452fd2f",
+            "804a1873f1bbe26f",
+            "42bc7dd8aab51b22",
+            "85a46cf1a97d17bc"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 1192,
+        "h": 202
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -2026,7 +2014,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1900,
+        "y": 1580,
         "wires": [
             [
                 "74fb79f38c7d1d72",
@@ -2053,7 +2041,7 @@
         "fontSize": "17",
         "color": "#ffffff",
         "x": 710,
-        "y": 1700,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2071,7 +2059,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1660,
+        "y": 1420,
         "wires": [
             [
                 "babe629c1afb5e8b",
@@ -2098,7 +2086,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 690,
-        "y": 1940,
+        "y": 1620,
         "wires": []
     },
     {
@@ -2116,7 +2104,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1580,
+        "y": 1380,
         "wires": [
             [
                 "54cbda477035a37f"
@@ -2138,7 +2126,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1820,
+        "y": 1540,
         "wires": [
             [
                 "54e338fa6a48fd5b"
@@ -2160,7 +2148,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1740,
+        "y": 1500,
         "wires": [
             [
                 "1cc9bf09772f06d3"
@@ -2182,7 +2170,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1420,
+        "y": 1300,
         "wires": [
             [
                 "ddf60892397fbc68"
@@ -2204,7 +2192,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1500,
+        "y": 1340,
         "wires": [
             [
                 "1969a0cddc042f2e"
@@ -2225,7 +2213,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 1900,
+        "y": 1580,
         "wires": [
             [
                 "f0c209e940860820"
@@ -2247,7 +2235,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 2020,
+        "y": 1720,
         "wires": [
             [
                 "b6d03834b636d44d",
@@ -2276,7 +2264,7 @@
         "fontSize": "1",
         "color": "#000000",
         "x": 690,
-        "y": 2020,
+        "y": 1720,
         "wires": []
     },
     {
@@ -2293,7 +2281,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 1900,
+        "y": 1580,
         "wires": [
             [
                 "36a9e71117a34327"
@@ -2359,7 +2347,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 1820,
+        "y": 1540,
         "wires": [
             [
                 "306b57e47411d35c"
@@ -2380,7 +2368,7 @@
         "finalize": "",
         "libs": [],
         "x": 320,
-        "y": 1500,
+        "y": 1340,
         "wires": [
             [
                 "d26972d34559fd63"
@@ -2401,7 +2389,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 1580,
+        "y": 1380,
         "wires": [
             [
                 "d2b51c2f7d254def"
@@ -2422,7 +2410,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 1420,
+        "y": 1300,
         "wires": [
             [
                 "9aa8ef50bbbe8e2d"
@@ -2443,7 +2431,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 1660,
+        "y": 1420,
         "wires": [
             [
                 "45967ab8c3bd9a21"
@@ -2464,7 +2452,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 1740,
+        "y": 1500,
         "wires": [
             [
                 "23773127332c2b1f"
@@ -2485,7 +2473,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 2020,
+        "y": 1700,
         "wires": [
             [
                 "b601d6596401a754"
@@ -2507,7 +2495,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 2100,
+        "y": 1860,
         "wires": [
             [
                 "f38c438a231661c6"
@@ -2528,7 +2516,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2100,
+        "y": 1860,
         "wires": [
             [
                 "7a4a8d639646cff4"
@@ -2550,7 +2538,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 2180,
+        "y": 1900,
         "wires": [
             [
                 "ce96de0f7dba91c5"
@@ -2571,7 +2559,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 2180,
+        "y": 1900,
         "wires": [
             [
                 "746af9f95f7438cd"
@@ -2593,11 +2581,11 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 2260,
+        "y": 1940,
         "wires": [
             [
-                "ae61c1e19f8634d0",
-                "16a3685e614e0995"
+                "16a3685e614e0995",
+                "ae61c1e19f8634d0"
             ]
         ]
     },
@@ -2615,7 +2603,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 2260,
+        "y": 1940,
         "wires": [
             [
                 "e2ddf0eaa1468069"
@@ -2662,31 +2650,9 @@
         "useDifferentColor": false,
         "className": "",
         "x": 690,
-        "y": 2060,
+        "y": 1760,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "4dc0d6bc0972a150",
-        "type": "mqtt in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 530,
-        "y": 2340,
-        "wires": [
-            [
-                "8a6e91746db5e484"
-            ]
         ]
     },
     {
@@ -2703,32 +2669,10 @@
         "finalize": "",
         "libs": [],
         "x": 340,
-        "y": 2340,
+        "y": 1980,
         "wires": [
             [
                 "4dc0d6bc0972a150"
-            ]
-        ]
-    },
-    {
-        "id": "56ad120991eb3c83",
-        "type": "mqtt in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 530,
-        "y": 2420,
-        "wires": [
-            [
-                "31eb287a0ca0a45c"
             ]
         ]
     },
@@ -2746,7 +2690,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 2420,
+        "y": 2020,
         "wires": [
             [
                 "56ad120991eb3c83"
@@ -2767,32 +2711,10 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 2500,
+        "y": 2060,
         "wires": [
             [
                 "76bed5f0ebc81a4c"
-            ]
-        ]
-    },
-    {
-        "id": "76bed5f0ebc81a4c",
-        "type": "mqtt in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 530,
-        "y": 2500,
-        "wires": [
-            [
-                "508bccc9de4506fc"
             ]
         ]
     },
@@ -2811,7 +2733,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1340,
+        "y": 1260,
         "wires": [
             [
                 "c25d1cacc8057d1d",
@@ -2855,7 +2777,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 1340,
+        "y": 1260,
         "wires": [
             [
                 "25a924b7dc1d4576"
@@ -2876,7 +2798,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 1260,
+        "y": 1220,
         "wires": [
             [
                 "347c8041af1a52e0"
@@ -2898,7 +2820,7 @@
         "rh": 0,
         "inputs": 1,
         "x": 530,
-        "y": 1260,
+        "y": 1220,
         "wires": [
             [
                 "462c1bee49073de7"
@@ -2919,7 +2841,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1660,
+        "y": 1420,
         "wires": [
             [
                 "dffe1e50bcaeb0a5"
@@ -2940,7 +2862,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 1740,
+        "y": 1500,
         "wires": [
             [
                 "aa6d588a480f161c"
@@ -2961,7 +2883,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 1820,
+        "y": 1540,
         "wires": [
             [
                 "2e677684d13ac6e0"
@@ -2982,7 +2904,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 2260,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -3001,7 +2923,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 2340,
+        "y": 1980,
         "wires": [
             [
                 "70cb26f62de94a5d"
@@ -3022,7 +2944,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 2420,
+        "y": 2020,
         "wires": [
             [
                 "93d8b2c69bdc7792"
@@ -3043,32 +2965,10 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 2500,
+        "y": 2060,
         "wires": [
             [
                 "33a0bcca85522580"
-            ]
-        ]
-    },
-    {
-        "id": "b733d75a1c79f1a2",
-        "type": "mqtt in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 530,
-        "y": 2600,
-        "wires": [
-            [
-                "c8042db5402565df"
             ]
         ]
     },
@@ -3090,8 +2990,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 710,
-        "y": 2600,
+        "x": 690,
+        "y": 2100,
         "wires": []
     },
     {
@@ -3107,8 +3007,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 2600,
+        "x": 330,
+        "y": 2100,
         "wires": [
             [
                 "b733d75a1c79f1a2"
@@ -3129,7 +3029,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 1980,
+        "y": 1680,
         "wires": [
             [
                 "0813517cbc9b99f3"
@@ -3155,7 +3055,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 870,
-        "y": 1980,
+        "y": 1680,
         "wires": []
     },
     {
@@ -3243,26 +3143,6 @@
         "x": 710,
         "y": 1220,
         "wires": []
-    },
-    {
-        "id": "0c72fe59acc5f30e",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
-        "name": "load once",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0.01",
-        "topic": "",
-        "x": 160,
-        "y": 100,
-        "wires": [
-            [
-                "7917bd339452fd2f"
-            ]
-        ]
     },
     {
         "id": "5f71534b6c02e324",
@@ -6141,32 +6021,6 @@
         ]
     },
     {
-        "id": "dc87a28301ce8d90",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "9f151e324008585b",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 3550,
-        "y": 80,
-        "wires": [
-            [
-                "7c8f9cb24f9b6c61"
-            ]
-        ]
-    },
-    {
         "id": "3b59a3e0f9422294",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
@@ -7697,7 +7551,8 @@
         "y": 3140,
         "wires": [
             [
-                "023820f309b020da"
+                "023820f309b020da",
+                "d7e44f153065aff1"
             ]
         ]
     },
@@ -8705,7 +8560,7 @@
         "topic": "",
         "payload": "bitratechange",
         "payloadType": "global",
-        "x": 1310,
+        "x": 1390,
         "y": 100,
         "wires": [
             [
@@ -8728,7 +8583,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1550,
+        "x": 1630,
         "y": 60,
         "wires": [
             [
@@ -8749,7 +8604,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1790,
+        "x": 1870,
         "y": 100,
         "wires": [
             [
@@ -8770,7 +8625,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2060,
+        "x": 2140,
         "y": 140,
         "wires": [
             []
@@ -8792,7 +8647,7 @@
         "className": "bit",
         "topic": "",
         "name": "Bitrate settings changed",
-        "x": 2190,
+        "x": 2270,
         "y": 100,
         "wires": []
     },
@@ -8816,7 +8671,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2000,
+        "x": 2080,
         "y": 60,
         "wires": [
             [
@@ -9276,7 +9131,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 2100,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -9300,7 +9155,7 @@
         "payload": "1",
         "payloadType": "str",
         "x": 870,
-        "y": 2100,
+        "y": 1800,
         "wires": [
             [
                 "a944ecbfc565c58b"
@@ -9321,7 +9176,7 @@
         "finalize": "",
         "libs": [],
         "x": 850,
-        "y": 2060,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -9345,7 +9200,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 500,
-        "y": 1960,
+        "y": 1660,
         "wires": [
             [
                 "b6d03834b636d44d"
@@ -9373,7 +9228,7 @@
         "to": "",
         "reg": false,
         "x": 1030,
-        "y": 2020,
+        "y": 1720,
         "wires": [
             []
         ]
@@ -9401,7 +9256,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 840,
-        "y": 2020,
+        "y": 1720,
         "wires": [
             [
                 "b22449c1178f10d2"
@@ -9544,28 +9399,6 @@
         ]
     },
     {
-        "id": "32e18f58d4f086f8",
-        "type": "mqtt in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 530,
-        "y": 2660,
-        "wires": [
-            [
-                "ba4a435e3fbcd377"
-            ]
-        ]
-    },
-    {
         "id": "1decf932a1bf2fcd",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
@@ -9578,8 +9411,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 2640,
+        "x": 350,
+        "y": 2140,
         "wires": [
             [
                 "32e18f58d4f086f8"
@@ -9600,7 +9433,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 2640,
+        "y": 2140,
         "wires": [
             []
         ]
@@ -10191,7 +10024,7 @@
         "id": "25874e1909171caa",
         "type": "mqtt out",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "",
         "topic": "",
         "qos": "",
@@ -10202,8 +10035,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 930,
-        "y": 180,
+        "x": 1030,
+        "y": 200,
         "wires": [],
         "inputLabels": [
             "pluto mqtt broker IN"
@@ -10213,7 +10046,7 @@
         "id": "8d24e6025fe47ef5",
         "type": "file in",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -10222,8 +10055,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 460,
-        "y": 100,
+        "x": 560,
+        "y": 120,
         "wires": [
             [
                 "cdc147736509f758",
@@ -10235,7 +10068,7 @@
         "id": "cdc147736509f758",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "transform json to broker message",
         "func": "let file = JSON.parse(msg.payload);\nmsg.action = file.action;\nmsg.broker = file.broker;\nmsg.topic = file.topic;\nmsg.payload = file.payload;\nglobal.set(\"callsign\", file.payload )\nreturn msg;",
         "outputs": 1,
@@ -10244,8 +10077,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 100,
+        "x": 780,
+        "y": 120,
         "wires": [
             [
                 "25874e1909171caa",
@@ -10315,7 +10148,7 @@
         "id": "a7dfa23e416d0533",
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "group": "bc7afc94660c6b76",
         "order": 3,
         "width": 3,
@@ -10329,15 +10162,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 940,
-        "y": 100,
+        "x": 1040,
+        "y": 120,
         "wires": []
     },
     {
         "id": "140f70c9bf342365",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "Set command path",
         "func": "let callsign = msg.payload\nglobal.set(\"cmdPath\", `cmd/pluto/${callsign}`)\nglobal.set(\"callsign\", callsign);\nglobal.set(\"broker_address\", msg.broker.broker)\n// global.set(\"call\", callsign);\n// global.set(\"deviceChange\", true);\nreturn msg;",
         "outputs": 1,
@@ -10346,8 +10179,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 140,
+        "x": 1070,
+        "y": 160,
         "wires": [
             []
         ]
@@ -10470,7 +10303,7 @@
         "id": "2f35ec1420f48a0f",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "MQTT on start",
         "active": true,
         "tosidebar": false,
@@ -10480,15 +10313,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 60,
+        "x": 1070,
+        "y": 80,
         "wires": []
     },
     {
         "id": "5a68f1d90ea138d2",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "set call sign",
         "func": "let payload = global.get(\"callsign\");\nlet message = {};\nmessage.topic = `cmd/pluto/call`;\nmessage.payload = payload;\nreturn message;\n",
         "outputs": 1,
@@ -10497,8 +10330,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 180,
+        "x": 810,
+        "y": 200,
         "wires": [
             [
                 "25874e1909171caa"
@@ -10509,7 +10342,7 @@
         "id": "ce9b5ccdb8569209",
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "Set call",
         "group": "bc7afc94660c6b76",
         "order": 4,
@@ -10526,8 +10359,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 560,
-        "y": 180,
+        "x": 660,
+        "y": 200,
         "wires": [
             [
                 "5a68f1d90ea138d2"
@@ -11730,7 +11563,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "settings.audio_sample_rate",
         "payloadType": "global",
@@ -11858,7 +11691,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 1580,
+        "y": 1380,
         "wires": [
             [
                 "be4a04a5a054f988"
@@ -13535,66 +13368,6 @@
         ]
     },
     {
-        "id": "804a1873f1bbe26f",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "7dfec9f6e2908fab",
-        "name": "",
-        "props": [],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "x": 130,
-        "y": 4560,
-        "wires": [
-            [
-                "42bc7dd8aab51b22"
-            ]
-        ]
-    },
-    {
-        "id": "42bc7dd8aab51b22",
-        "type": "OS",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "7dfec9f6e2908fab",
-        "name": "",
-        "x": 330,
-        "y": 4560,
-        "wires": [
-            [
-                "85a46cf1a97d17bc"
-            ]
-        ]
-    },
-    {
-        "id": "85a46cf1a97d17bc",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "7dfec9f6e2908fab",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "platform",
-                "pt": "global",
-                "to": "payload.platform",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 540,
-        "y": 4560,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "3e90d102d97d90d1",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
@@ -13912,7 +13685,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "0d9e815c3c9d7d4a",
         "name": "return config object",
-        "func": "let payload = JSON.parse(msg.payload);\npayload.selected = global.get(\"device.fft_url\");\npayload.receivers = global.get(\"receivers\")\nmsg.payload = payload;\nreturn msg;",
+        "func": "let payload = JSON.parse(msg.payload);\npayload.selected = global.get(\"device.fft_url\");\npayload.receivers = global.get(\"receivers\")\npayload.rx_sr = global.get(\"device.rx.sr\");\npayload.rx_freq = Number(global.get(\"device.rx.frequency\"))*1000;\nmsg.payload = payload;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14025,17 +13798,17 @@
         "id": "7917bd339452fd2f",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "ba42e703170bee84",
+        "g": "1d8e778f40edcc21",
         "name": "set path",
-        "func": "msg.filename = \"settings\\\\pluto.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/pluto.json\";\nreturn msg;",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/pluto.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\pluto.json\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 100,
+        "x": 420,
+        "y": 120,
         "wires": [
             [
                 "8d24e6025fe47ef5"
@@ -14118,7 +13891,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1920,
+        "x": 2000,
         "y": 160,
         "wires": [
             [
@@ -15627,32 +15400,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 2720,
+        "x": 350,
+        "y": 2180,
         "wires": [
             [
                 "850a280f13dbdd1a"
             ]
-        ]
-    },
-    {
-        "id": "850a280f13dbdd1a",
-        "type": "mqtt in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "d320c7a134a3a36a",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 530,
-        "y": 2720,
-        "wires": [
-            []
         ]
     },
     {
@@ -16128,6 +15881,216 @@
         "wires": [
             [
                 "79ca0ff5d731c280"
+            ]
+        ]
+    },
+    {
+        "id": "d7e44f153065aff1",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "72ddf00d98862ef3",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3240,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "804a1873f1bbe26f",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d8e778f40edcc21",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.0001",
+        "topic": "",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "42bc7dd8aab51b22"
+            ]
+        ]
+    },
+    {
+        "id": "42bc7dd8aab51b22",
+        "type": "OS",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d8e778f40edcc21",
+        "name": "",
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "85a46cf1a97d17bc"
+            ]
+        ]
+    },
+    {
+        "id": "85a46cf1a97d17bc",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d8e778f40edcc21",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "platform",
+                "pt": "global",
+                "to": "payload.platform",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "7917bd339452fd2f",
+                "7c8f9cb24f9b6c61"
+            ]
+        ]
+    },
+    {
+        "id": "b733d75a1c79f1a2",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 2100,
+        "wires": [
+            [
+                "c8042db5402565df"
+            ]
+        ]
+    },
+    {
+        "id": "850a280f13dbdd1a",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32e18f58d4f086f8",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 2140,
+        "wires": [
+            [
+                "ba4a435e3fbcd377"
+            ]
+        ]
+    },
+    {
+        "id": "76bed5f0ebc81a4c",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 2060,
+        "wires": [
+            [
+                "508bccc9de4506fc"
+            ]
+        ]
+    },
+    {
+        "id": "56ad120991eb3c83",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 2020,
+        "wires": [
+            [
+                "31eb287a0ca0a45c"
+            ]
+        ]
+    },
+    {
+        "id": "4dc0d6bc0972a150",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 530,
+        "y": 1980,
+        "wires": [
+            [
+                "8a6e91746db5e484"
             ]
         ]
     },
@@ -19408,7 +19371,7 @@
         "type": "function",
         "z": "30d0afc93dfb235a",
         "name": "settings file path",
-        "func": "msg.filename = \"settings\\\\dashboard.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/dashboard.json\";\nreturn msg;",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/dashboard.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\dashboard.json\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19542,7 +19505,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>var pluto_url = \"{{pluto}}\";</script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>\n         var pluto_url = \"{{pluto}}\";\n         var callsign = \"{{callsign}}\";\n         </script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
         "x": 1310,
         "y": 240,
         "wires": [
@@ -19758,15 +19721,15 @@
         "z": "9d964f25dcc4d750",
         "g": "2406e32417780de0",
         "name": "",
-        "filename": "wb/www/vendor/paho/js/paho-mqtt-min.js",
+        "filename": "wb/www/vendor/mqtt.min.js",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 600,
-        "y": 300,
+        "x": 220,
+        "y": 260,
         "wires": [
             [
                 "f8332e1870dc4199"
@@ -19935,6 +19898,7 @@
         "y": 260,
         "wires": [
             [
+                "b5cfddf388cbc440",
                 "ef1a9f2e55057480"
             ]
         ]
@@ -19966,7 +19930,7 @@
         "z": "9d964f25dcc4d750",
         "g": "2406e32417780de0",
         "name": "set msg.script",
-        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nreturn msg;",
+        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -20118,40 +20082,11 @@
         "max": "755",
         "step": "0.01",
         "className": "",
-        "x": 630,
-        "y": 600,
+        "x": 930,
+        "y": 420,
         "wires": [
             [
                 "7d69601736a74273"
-            ]
-        ]
-    },
-    {
-        "id": "961e1c567115d1ee",
-        "type": "ui_numeric",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "label": "Rx gain",
-        "tooltip": "",
-        "group": "bd40e71dca80ef04",
-        "order": 2,
-        "width": "4",
-        "height": "1",
-        "wrap": false,
-        "passthru": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "60",
-        "step": "1",
-        "className": "",
-        "x": 640,
-        "y": 660,
-        "wires": [
-            [
-                "aa44e5106814ab9f"
             ]
         ]
     },
@@ -20169,7 +20104,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 760,
+        "y": 720,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -20243,7 +20178,7 @@
         "topicType": "msg",
         "className": "",
         "x": 650,
-        "y": 760,
+        "y": 720,
         "wires": [
             [
                 "0a9fe9e2623385cb"
@@ -20284,7 +20219,7 @@
         "z": "9d964f25dcc4d750",
         "g": "2e4963908c2bd3e0",
         "name": "rx gain",
-        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/stream/gain\"\nreturn msg;\n\n",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/gain\"\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -20317,8 +20252,8 @@
         "y": 660,
         "wires": [
             [
-                "961e1c567115d1ee",
-                "21554bc0efe1836b"
+                "21554bc0efe1836b",
+                "6adfe6d609aeb90a"
             ]
         ]
     },
@@ -20328,7 +20263,7 @@
         "z": "9d964f25dcc4d750",
         "g": "2e4963908c2bd3e0",
         "name": "Frequency",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nreturn msg;",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nmsg.rx_freq = (payload * 1000);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -20339,7 +20274,8 @@
         "y": 600,
         "wires": [
             [
-                "470e4d8abf29a205"
+                "470e4d8abf29a205",
+                "5493fb3252e35009"
             ]
         ]
     },
@@ -20361,7 +20297,7 @@
         "y": 600,
         "wires": [
             [
-                "30794624a6a04c15"
+                "4497dbfe8502fab3"
             ]
         ]
     },
@@ -20371,7 +20307,7 @@
         "z": "9d964f25dcc4d750",
         "g": "2e4963908c2bd3e0",
         "name": "rx frequency ",
-        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/stream/frequency\"\nreturn msg;\n\n",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/frequency\"\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -20428,7 +20364,7 @@
         "z": "9d964f25dcc4d750",
         "g": "2e4963908c2bd3e0",
         "name": "rx gain",
-        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/sr\"\nreturn msg;\n\n",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/sr\"\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -20461,7 +20397,150 @@
         "y": 720,
         "wires": [
             [
-                "7e7a4a60225bb7e1"
+                "7e7a4a60225bb7e1",
+                "f999e537938234c5"
+            ]
+        ]
+    },
+    {
+        "id": "6adfe6d609aeb90a",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "label": "Gain {{value | number:2}} dB",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "65",
+        "step": "1",
+        "className": "",
+        "x": 650,
+        "y": 660,
+        "wires": [
+            [
+                "aa44e5106814ab9f"
+            ]
+        ]
+    },
+    {
+        "id": "f999e537938234c5",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device.rx.sr",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 780,
+        "wires": [
+            [
+                "6d2ec666c4cd744e"
+            ]
+        ]
+    },
+    {
+        "id": "5493fb3252e35009",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device.rx.frequency",
+                "pt": "global",
+                "to": "rx_freq",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4497dbfe8502fab3",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "function 10",
+        "func": "let payload = msg.payload;\nmsg.payload = (payload / 1000000);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 440,
+        "wires": [
+            [
+                "30794624a6a04c15"
+            ]
+        ]
+    },
+    {
+        "id": "6d2ec666c4cd744e",
+        "type": "debug",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b5cfddf388cbc440",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "wb/www/vendor/paho/js/paho-mqtt-min.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "f8332e1870dc4199"
             ]
         ]
     },
