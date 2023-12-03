@@ -1,8 +1,6 @@
 # DATV-Red
 
 ## Prerequisite 
-- **VERY IMPORTANT**
-  - Heatsinks on the plutoSDR's microchips 
 - Please upgrade to [FW 0303](https://github.com/Psynosaur/DATV-Red/wiki#flashing-steps) first
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
 - Firmware flashing [walk through video](https://www.youtube.com/watch?v=g8_ktz4kCkY)
