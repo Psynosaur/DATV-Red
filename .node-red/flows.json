@@ -4,7 +4,7 @@
         "type": "tab",
         "label": "DATV-Red V3.14_pi",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n\r\nV3.3\r\n - Fixed spectrum MQTT client\r\n   - Spans and frequencies are labeled\r\n - Fixed linux start up bugs\r\n   - works again\r\n - Inject OS type before all else...\r\n \r\n    \r\n\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n\r\nV3.3\r\n - Fixed spectrum MQTT client\r\n   - Spans and frequencies are labeled\r\n - Fixed linux start up bugs\r\n   - works again\r\n - Inject OS type before all else...\r\n - Double unmute bug is no more a thing on start up.\r\n \r\n \r\n    \r\n\r\n",
         "env": []
     },
     {
@@ -159,9 +159,12 @@
             "b9e877b123e7e841",
             "d2ec5f39f4c3a7c7",
             "d15f5b546e05bf5b",
-            "000aadf55c9c61da"
+            "000aadf55c9c61da",
+            "a8ded79652836a82",
+            "d558ecd264feb081",
+            "6afa3d5787c3c8dd"
         ],
-        "x": 1294,
+        "x": 1574,
         "y": 359,
         "w": 752,
         "h": 542
@@ -333,8 +336,8 @@
             "7e30ac73bb50c7aa",
             "e59f80f27660af9f"
         ],
-        "x": 2154,
-        "y": 219,
+        "x": 2454,
+        "y": 239,
         "w": 1252,
         "h": 342
     },
@@ -363,8 +366,8 @@
             "679eb4e7914de8fa",
             "5e18e8622dc024cf"
         ],
-        "x": 2174,
-        "y": 579,
+        "x": 2574,
+        "y": 699,
         "w": 752,
         "h": 242
     },
@@ -502,7 +505,6 @@
             "023820f309b020da",
             "c4c1592e68a08ac2",
             "0c94d661261c1f6e",
-            "c326e0457b39d881",
             "f79b05ded58d1157",
             "ae8f84a8936bf21e",
             "378dce373fcfc379",
@@ -512,9 +514,9 @@
             "ec867dfd3be3e114",
             "d7e44f153065aff1"
         ],
-        "x": 2474,
+        "x": 2494,
         "y": 2839,
-        "w": 912,
+        "w": 892,
         "h": 362
     },
     {
@@ -733,7 +735,7 @@
         ],
         "x": 1394,
         "y": 1079,
-        "w": 452,
+        "w": 492,
         "h": 1582
     },
     {
@@ -1078,9 +1080,7 @@
             "8bf647b3812030b1"
         ],
         "x": 34,
-        "y": 119,
-        "w": 592,
-        "h": 82
+        "y": 119
     },
     {
         "id": "9b97da84f20d2dc4",
@@ -1107,9 +1107,7 @@
             "bbf9e870bbb3141b"
         ],
         "x": 34,
-        "y": 259,
-        "w": 1372,
-        "h": 202
+        "y": 259
     },
     {
         "id": "2e4963908c2bd3e0",
@@ -1135,18 +1133,16 @@
             "7d69601736a74273",
             "12159992489b0591",
             "bff2bb43c29c79e5",
-            "21554bc0efe1836b",
             "e688634a9f60c746",
             "818602f620560caa",
             "6adfe6d609aeb90a",
             "f999e537938234c5",
             "5493fb3252e35009",
-            "4497dbfe8502fab3",
-            "6d2ec666c4cd744e"
+            "4497dbfe8502fab3"
         ],
         "x": 74,
         "y": 379,
-        "w": 1312,
+        "w": 1082,
         "h": 442
     },
     {
@@ -2205,7 +2201,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: mute",
-        "func": "let mute = msg.payload;\nif (mute !== global.get(\"mute\") && global.get(\"device.tx.stream.mode\") !== \"pass\") {\n    global.set(\"mute\", mute)\n    return msg;\n}\n",
+        "func": "let mute = msg.payload;\n\nglobal.set(\"mute\", mute)\nmsg.payload = mute;\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3316,7 +3312,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2380,
+        "x": 2400,
         "y": 2220,
         "wires": [
             [
@@ -3337,11 +3333,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2680,
+        "x": 2920,
         "y": 2260,
         "wires": [
             [
-                "1b8ee9dbe0155dcd"
+                "1b8ee9dbe0155dcd",
+                "c20ffdd3c22ba8da"
             ]
         ]
     },
@@ -3452,8 +3449,7 @@
         "wires": [
             [
                 "fb34b1c186040d75",
-                "1d6a50722e33c015",
-                "c20ffdd3c22ba8da"
+                "1d6a50722e33c015"
             ]
         ]
     },
@@ -4453,7 +4449,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2440,
+        "x": 2460,
         "y": 2260,
         "wires": [
             [
@@ -4661,11 +4657,10 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1590,
+        "x": 1870,
         "y": 560,
         "wires": [
             [
-                "8c7733a45d32bf17",
                 "d70f91cbc7395561"
             ]
         ]
@@ -5041,8 +5036,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
-        "y": 2240,
+        "x": 1770,
+        "y": 2260,
         "wires": [
             [
                 "508ff50f2a470219",
@@ -5056,14 +5051,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "4bfefaeb7f82f4c6",
         "name": "THEN restore device settings",
-        "func": "let jsonDeviceSettings = global.get(\"device\");\nmsg.payload = jsonDeviceSettings;\n// global.set(\"mute\", \"1\");\nreturn msg;",
+        "func": "let jsonDeviceSettings = global.get(\"device\");\nmsg.payload = jsonDeviceSettings;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1460,
+        "x": 1740,
         "y": 800,
         "wires": [
             [
@@ -5599,50 +5594,24 @@
         ]
     },
     {
-        "id": "c326e0457b39d881",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "72ddf00d98862ef3",
-        "name": "active pid",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "0.1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "pid",
-        "payloadType": "global",
-        "x": 2590,
-        "y": 2880,
-        "wires": [
-            [
-                "c4c1592e68a08ac2"
-            ]
-        ]
-    },
-    {
         "id": "f79b05ded58d1157",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "then we should stop the transmission and profile",
-        "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\";\n    return msg;\n}",
+        "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\" ;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2980,
-        "y": 2940,
+        "x": 3080,
+        "y": 2920,
         "wires": [
             [
-                "aa4a256618f7c4a6",
-                "0c94d661261c1f6e"
+                "0c94d661261c1f6e",
+                "aa4a256618f7c4a6"
             ]
         ]
     },
@@ -5662,7 +5631,7 @@
         "repeat": "0.1",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "5",
         "topic": "",
         "x": 2640,
         "y": 2940,
@@ -5735,7 +5704,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1870,
+        "x": 2150,
         "y": 460,
         "wires": [
             [
@@ -5772,11 +5741,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1880,
+        "x": 2160,
         "y": 560,
         "wires": [
             [
-                "55bca069bdb08ee7"
+                "aa4a256618f7c4a6",
+                "fd45eaf559f851a8"
             ]
         ]
     },
@@ -5799,7 +5769,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "str",
-        "x": 1420,
+        "x": 1700,
         "y": 500,
         "wires": [
             [
@@ -6068,8 +6038,8 @@
         "scope": [
             "347c8041af1a52e0"
         ],
-        "x": 2260,
-        "y": 660,
+        "x": 2660,
+        "y": 780,
         "wires": [
             [
                 "b2786302ea5b87d8"
@@ -6089,8 +6059,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2450,
-        "y": 660,
+        "x": 2850,
+        "y": 780,
         "wires": [
             [
                 "8105dd1d410bdd4b"
@@ -6118,8 +6088,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 660,
+        "x": 3030,
+        "y": 780,
         "wires": [
             []
         ]
@@ -6142,8 +6112,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 2770,
-        "y": 660,
+        "x": 3170,
+        "y": 780,
         "wires": []
     },
     {
@@ -6164,8 +6134,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2550,
-        "y": 720,
+        "x": 2950,
+        "y": 840,
         "wires": []
     },
     {
@@ -6186,8 +6156,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2800,
-        "y": 780,
+        "x": 3200,
+        "y": 900,
         "wires": []
     },
     {
@@ -6208,8 +6178,8 @@
         "topic": "",
         "payload": "settings.VBITRATE",
         "payloadType": "global",
-        "x": 2340,
-        "y": 720,
+        "x": 2740,
+        "y": 840,
         "wires": [
             [
                 "23f54550ba5b6a79"
@@ -6234,8 +6204,8 @@
         "topic": "",
         "payload": "device.tx.dvbs2.ts.bitrate",
         "payloadType": "global",
-        "x": 2350,
-        "y": 780,
+        "x": 2750,
+        "y": 900,
         "wires": [
             [
                 "8d58e07463dad267"
@@ -6293,8 +6263,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2550,
-        "y": 280,
+        "x": 2850,
+        "y": 300,
         "wires": [
             [
                 "1bb882ca67278b69"
@@ -6367,8 +6337,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 340,
+        "x": 2810,
+        "y": 360,
         "wires": [
             [
                 "6e2b3c9e08662125"
@@ -6388,8 +6358,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2720,
-        "y": 280,
+        "x": 3020,
+        "y": 300,
         "wires": [
             [
                 "5989fbe4c1133db2"
@@ -6416,8 +6386,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
-        "y": 340,
+        "x": 3030,
+        "y": 360,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6444,8 +6414,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2740,
-        "y": 400,
+        "x": 3040,
+        "y": 420,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6472,8 +6442,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2850,
-        "y": 280,
+        "x": 3150,
+        "y": 300,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6551,8 +6521,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 460,
+        "x": 2810,
+        "y": 480,
         "wires": [
             [
                 "d2a7c63d9b2fe699"
@@ -6579,8 +6549,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
-        "y": 460,
+        "x": 3030,
+        "y": 480,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6663,8 +6633,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 520,
+        "x": 2810,
+        "y": 540,
         "wires": [
             [
                 "9c6e205117c83338"
@@ -6691,8 +6661,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
-        "y": 520,
+        "x": 3030,
+        "y": 540,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6712,8 +6682,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2990,
-        "y": 340,
+        "x": 3290,
+        "y": 360,
         "wires": [
             [
                 "3eb70786a69e6c70",
@@ -6733,8 +6703,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 3320,
-        "y": 340,
+        "x": 3620,
+        "y": 360,
         "wires": [
             []
         ]
@@ -6757,8 +6727,8 @@
         "topic": "",
         "payload": "settings.IMAGESIZE",
         "payloadType": "global",
-        "x": 2270,
-        "y": 460,
+        "x": 2570,
+        "y": 480,
         "wires": [
             [
                 "b003500f8ea3ffe1"
@@ -6783,8 +6753,8 @@
         "topic": "",
         "payload": "settings.ABITRATE",
         "payloadType": "global",
-        "x": 2280,
-        "y": 520,
+        "x": 2580,
+        "y": 540,
         "wires": [
             [
                 "320ab26158363e57"
@@ -6809,8 +6779,8 @@
         "topic": "",
         "payload": "settings.AUDIO",
         "payloadType": "global",
-        "x": 2280,
-        "y": 400,
+        "x": 2580,
+        "y": 420,
         "wires": [
             [
                 "7e30ac73bb50c7aa"
@@ -6835,8 +6805,8 @@
         "topic": "",
         "payload": "settings.FPS",
         "payloadType": "global",
-        "x": 2250,
-        "y": 340,
+        "x": 2550,
+        "y": 360,
         "wires": [
             [
                 "3c2665b335deadcc"
@@ -6870,8 +6840,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3190,
-        "y": 260,
+        "x": 3490,
+        "y": 280,
         "wires": [
             []
         ]
@@ -6894,8 +6864,8 @@
         "topic": "",
         "payload": "settings.CODEC",
         "payloadType": "global",
-        "x": 2310,
-        "y": 280,
+        "x": 2610,
+        "y": 300,
         "wires": [
             [
                 "a0addd449f41ee70"
@@ -6961,7 +6931,7 @@
         "topic": "",
         "payload": "state_color",
         "payloadType": "global",
-        "x": 1420,
+        "x": 1700,
         "y": 560,
         "wires": [
             [
@@ -8803,6 +8773,7 @@
         "id": "7d18f3e7511a4c0f",
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "553167af0b3221c1",
         "position": "dialog",
         "displayTime": "3",
@@ -8825,6 +8796,7 @@
         "id": "11531a3595ef0f5a",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "553167af0b3221c1",
         "name": "Kill transmission",
         "rules": [
@@ -8853,6 +8825,7 @@
         "id": "e56ed07756258705",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "553167af0b3221c1",
         "name": "busy watchdog",
         "func": "let busy = msg.payload.busy;\nif (busy === \"true\" && global.get(\"mute\") === \"0\") {\n    let freq = parseFloat(global.get(\"device.tx.frequency\")).toFixed(2);\n    let uplink = Math.round(Number(freq) / 1000000 * 4) / 4;\n    let payload =\n        Number(uplink) === Number(msg.payload.uplink) ?\n            \"You're transmitting on this channel... Hold CTRL and click to tune RX\" :\n            \"This channel is busy and you're transmitting... Hold CTRL and click to tune RX\";\n    msg.payload = payload;\n    return msg;\n}",
@@ -8974,7 +8947,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "553167af0b3221c1",
         "name": "spectrum click tx symbol rate if different",
-        "func": "let busy = msg.payload.busy;\nif (busy === \"true\" && global.get(\"mute\") === \"0\") return;\n\nlet sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000;\nif (`${sr}` !== global.get(\"device.tx.dvbs2.sr\")){\n    msg.payload = sr; \n    return msg;\n}",
+        "func": "let busy = msg.payload.busy;\nif (global.get(\"mute\") === \"0\") return;\n\nlet sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000;\nif (`${sr}` !== global.get(\"device.tx.dvbs2.sr\")){\n    msg.payload = sr; \n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9055,7 +9028,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "we read device ",
         "info": "",
-        "x": 1420,
+        "x": 1700,
         "y": 660,
         "wires": []
     },
@@ -9451,8 +9424,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2590,
-        "y": 780,
+        "x": 2990,
+        "y": 900,
         "wires": [
             [
                 "5d929a20d665af8d"
@@ -10203,8 +10176,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1840,
-        "y": 620,
+        "x": 2160,
+        "y": 640,
         "wires": [
             [
                 "d2ec5f39f4c3a7c7"
@@ -10974,8 +10947,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 2290,
-        "y": 620,
+        "x": 2690,
+        "y": 740,
         "wires": [
             [
                 "3ee02849882f8ff7"
@@ -11002,8 +10975,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 620,
+        "x": 2870,
+        "y": 740,
         "wires": [
             []
         ]
@@ -11026,7 +10999,7 @@
         "topic": "",
         "payload": "first_load",
         "payloadType": "global",
-        "x": 1430,
+        "x": 1710,
         "y": 860,
         "wires": [
             [
@@ -11047,7 +11020,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1780,
+        "x": 2060,
         "y": 860,
         "wires": [
             [
@@ -11073,13 +11046,13 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1480,
-        "y": 720,
+        "x": 1680,
+        "y": 760,
         "wires": [
             [
                 "a56122d1643df6cf",
-                "8c7733a45d32bf17",
-                "d70f91cbc7395561"
+                "d70f91cbc7395561",
+                "a8ded79652836a82"
             ]
         ]
     },
@@ -11097,7 +11070,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1900,
+        "x": 2180,
         "y": 700,
         "wires": []
     },
@@ -11369,8 +11342,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 400,
+        "x": 2810,
+        "y": 420,
         "wires": [
             [
                 "ae40a9e5bdd0d113"
@@ -11833,8 +11806,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2810,
-        "y": 700,
+        "x": 3210,
+        "y": 820,
         "wires": []
     },
     {
@@ -11855,8 +11828,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2810,
-        "y": 740,
+        "x": 3210,
+        "y": 860,
         "wires": []
     },
     {
@@ -11942,7 +11915,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1900,
+        "x": 2180,
         "y": 520,
         "wires": []
     },
@@ -12091,8 +12064,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2790,
-        "y": 620,
+        "x": 3190,
+        "y": 740,
         "wires": []
     },
     {
@@ -13828,8 +13801,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3180,
-        "y": 340,
+        "x": 3480,
+        "y": 360,
         "wires": [
             [
                 "34feacf8cac79e5e"
@@ -14200,7 +14173,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
+        "x": 1760,
         "y": 460,
         "wires": [
             [
@@ -14221,7 +14194,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1640,
+        "x": 1920,
         "y": 460,
         "wires": [
             [
@@ -14236,7 +14209,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "stream.mode must be set, or else digital mode setting reboots pluto",
         "info": "",
-        "x": 1780,
+        "x": 2060,
         "y": 400,
         "wires": []
     },
@@ -14253,7 +14226,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1680,
+        "x": 1960,
         "y": 760,
         "wires": [
             [
@@ -14274,7 +14247,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1860,
+        "x": 2140,
         "y": 760,
         "wires": [
             [
@@ -15228,19 +15201,18 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: Stream Mode",
-        "func": "if(msg.restore){\n    let payload = msg.payload;\n    let topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\n    // global.set(\"bitratechange\", true);\n    msg.topic = topic;\n    msg.payload = payload;\n    // global.set(\"deviceChange\", true);\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\nglobal.set(\"stop\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n\n",
+        "func": "if(msg.restore){\n    let payload = msg.payload;\n    let topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\n    // global.set(\"bitratechange\", true);\n    msg.topic = topic;\n    msg.payload = payload;\n    // global.set(\"deviceChange\", true);\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\n// global.set(\"stop\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2420,
+        "x": 2400,
         "y": 2160,
         "wires": [
             [
                 "1b8ee9dbe0155dcd",
-                "c20ffdd3c22ba8da",
                 "2e677684d13ac6e0"
             ]
         ]
@@ -15741,8 +15713,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2570,
-        "y": 2200,
+        "x": 3230,
+        "y": 2180,
         "wires": []
     },
     {
@@ -16093,6 +16065,87 @@
                 "8a6e91746db5e484"
             ]
         ]
+    },
+    {
+        "id": "a8ded79652836a82",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "Mute",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"callsign\")+ \"/tx/mute\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 620,
+        "wires": [
+            [
+                "d558ecd264feb081"
+            ]
+        ]
+    },
+    {
+        "id": "d558ecd264feb081",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 1770,
+        "y": 620,
+        "wires": [
+            [
+                "6afa3d5787c3c8dd"
+            ]
+        ]
+    },
+    {
+        "id": "6afa3d5787c3c8dd",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "Global: mute",
+        "func": "let mute = msg.payload;\nif (mute === 0) {\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 620,
+        "wires": [
+            [
+                "8c7733a45d32bf17"
+            ]
+        ]
+    },
+    {
+        "id": "fd45eaf559f851a8",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "itsme",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2480,
+        "y": 660,
+        "wires": []
     },
     {
         "id": "4c448d00f7a9bc91",
@@ -20154,7 +20207,7 @@
             },
             {
                 "label": "",
-                "value": "15999999",
+                "value": "16000000",
                 "type": "str"
             },
             {
@@ -20252,7 +20305,6 @@
         "y": 660,
         "wires": [
             [
-                "21554bc0efe1836b",
                 "6adfe6d609aeb90a"
             ]
         ]
@@ -20340,23 +20392,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "21554bc0efe1836b",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "debug 24",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 540,
-        "wires": []
     },
     {
         "id": "e688634a9f60c746",
@@ -20453,9 +20488,7 @@
         "x": 1000,
         "y": 780,
         "wires": [
-            [
-                "6d2ec666c4cd744e"
-            ]
+            []
         ]
     },
     {
@@ -20504,23 +20537,6 @@
                 "30794624a6a04c15"
             ]
         ]
-    },
-    {
-        "id": "6d2ec666c4cd744e",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "debug 26",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 680,
-        "wires": []
     },
     {
         "id": "b5cfddf388cbc440",

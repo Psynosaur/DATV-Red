@@ -159,9 +159,12 @@
             "b9e877b123e7e841",
             "d2ec5f39f4c3a7c7",
             "d15f5b546e05bf5b",
-            "000aadf55c9c61da"
+            "000aadf55c9c61da",
+            "a8ded79652836a82",
+            "d558ecd264feb081",
+            "6afa3d5787c3c8dd"
         ],
-        "x": 1294,
+        "x": 1574,
         "y": 359,
         "w": 752,
         "h": 542
@@ -333,8 +336,8 @@
             "7e30ac73bb50c7aa",
             "e59f80f27660af9f"
         ],
-        "x": 2154,
-        "y": 219,
+        "x": 2454,
+        "y": 239,
         "w": 1252,
         "h": 342
     },
@@ -363,8 +366,8 @@
             "679eb4e7914de8fa",
             "5e18e8622dc024cf"
         ],
-        "x": 2174,
-        "y": 579,
+        "x": 2574,
+        "y": 699,
         "w": 752,
         "h": 242
     },
@@ -502,7 +505,6 @@
             "023820f309b020da",
             "c4c1592e68a08ac2",
             "0c94d661261c1f6e",
-            "c326e0457b39d881",
             "f79b05ded58d1157",
             "ae8f84a8936bf21e",
             "378dce373fcfc379",
@@ -512,9 +514,9 @@
             "ec867dfd3be3e114",
             "d7e44f153065aff1"
         ],
-        "x": 2474,
+        "x": 2494,
         "y": 2839,
-        "w": 912,
+        "w": 892,
         "h": 362
     },
     {
@@ -733,7 +735,7 @@
         ],
         "x": 1394,
         "y": 1079,
-        "w": 452,
+        "w": 492,
         "h": 1582
     },
     {
@@ -1078,9 +1080,7 @@
             "8bf647b3812030b1"
         ],
         "x": 34,
-        "y": 119,
-        "w": 592,
-        "h": 82
+        "y": 119
     },
     {
         "id": "9b97da84f20d2dc4",
@@ -1107,9 +1107,7 @@
             "bbf9e870bbb3141b"
         ],
         "x": 34,
-        "y": 259,
-        "w": 1372,
-        "h": 202
+        "y": 259
     },
     {
         "id": "2e4963908c2bd3e0",
@@ -1135,18 +1133,16 @@
             "7d69601736a74273",
             "12159992489b0591",
             "bff2bb43c29c79e5",
-            "21554bc0efe1836b",
             "e688634a9f60c746",
             "818602f620560caa",
             "6adfe6d609aeb90a",
             "f999e537938234c5",
             "5493fb3252e35009",
-            "4497dbfe8502fab3",
-            "6d2ec666c4cd744e"
+            "4497dbfe8502fab3"
         ],
         "x": 74,
         "y": 379,
-        "w": 1312,
+        "w": 1082,
         "h": 442
     },
     {
@@ -1889,11 +1885,6 @@
         "className": ""
     },
     {
-        "id": "ca76a6f8f74b6621",
-        "type": "local-storage",
-        "name": "node"
-    },
-    {
         "id": "8920ad34.ac04a",
         "type": "http request",
         "z": "15d7457.fcac4bb",
@@ -2210,7 +2201,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: mute",
-        "func": "let mute = msg.payload;\nif (mute !== global.get(\"mute\") && global.get(\"device.tx.stream.mode\") !== \"pass\") {\n    global.set(\"mute\", mute)\n    return msg;\n}\n",
+        "func": "let mute = msg.payload;\n\nglobal.set(\"mute\", mute)\nmsg.payload = mute;\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3321,7 +3312,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2380,
+        "x": 2400,
         "y": 2220,
         "wires": [
             [
@@ -3342,11 +3333,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2680,
+        "x": 2920,
         "y": 2260,
         "wires": [
             [
-                "1b8ee9dbe0155dcd"
+                "1b8ee9dbe0155dcd",
+                "c20ffdd3c22ba8da"
             ]
         ]
     },
@@ -3457,8 +3449,7 @@
         "wires": [
             [
                 "fb34b1c186040d75",
-                "1d6a50722e33c015",
-                "c20ffdd3c22ba8da"
+                "1d6a50722e33c015"
             ]
         ]
     },
@@ -4458,7 +4449,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2440,
+        "x": 2460,
         "y": 2260,
         "wires": [
             [
@@ -4666,11 +4657,10 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1590,
+        "x": 1870,
         "y": 560,
         "wires": [
             [
-                "8c7733a45d32bf17",
                 "d70f91cbc7395561"
             ]
         ]
@@ -5046,8 +5036,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
-        "y": 2240,
+        "x": 1770,
+        "y": 2260,
         "wires": [
             [
                 "508ff50f2a470219",
@@ -5061,14 +5051,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "4bfefaeb7f82f4c6",
         "name": "THEN restore device settings",
-        "func": "let jsonDeviceSettings = global.get(\"device\");\nmsg.payload = jsonDeviceSettings;\n// global.set(\"mute\", \"1\");\nreturn msg;",
+        "func": "let jsonDeviceSettings = global.get(\"device\");\nmsg.payload = jsonDeviceSettings;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1460,
+        "x": 1740,
         "y": 800,
         "wires": [
             [
@@ -5604,50 +5594,24 @@
         ]
     },
     {
-        "id": "c326e0457b39d881",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "72ddf00d98862ef3",
-        "name": "active pid",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "0.1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "pid",
-        "payloadType": "global",
-        "x": 2590,
-        "y": 2880,
-        "wires": [
-            [
-                "c4c1592e68a08ac2"
-            ]
-        ]
-    },
-    {
         "id": "f79b05ded58d1157",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "then we should stop the transmission and profile",
-        "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\";\n    return msg;\n}",
+        "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\" ;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2980,
-        "y": 2940,
+        "x": 3080,
+        "y": 2920,
         "wires": [
             [
-                "aa4a256618f7c4a6",
-                "0c94d661261c1f6e"
+                "0c94d661261c1f6e",
+                "aa4a256618f7c4a6"
             ]
         ]
     },
@@ -5667,7 +5631,7 @@
         "repeat": "0.1",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "5",
         "topic": "",
         "x": 2640,
         "y": 2940,
@@ -5740,7 +5704,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1870,
+        "x": 2150,
         "y": 460,
         "wires": [
             [
@@ -5777,11 +5741,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1880,
+        "x": 2160,
         "y": 560,
         "wires": [
             [
-                "55bca069bdb08ee7"
+                "aa4a256618f7c4a6",
+                "fd45eaf559f851a8"
             ]
         ]
     },
@@ -5804,7 +5769,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "str",
-        "x": 1420,
+        "x": 1700,
         "y": 500,
         "wires": [
             [
@@ -6073,8 +6038,8 @@
         "scope": [
             "347c8041af1a52e0"
         ],
-        "x": 2260,
-        "y": 660,
+        "x": 2660,
+        "y": 780,
         "wires": [
             [
                 "b2786302ea5b87d8"
@@ -6094,8 +6059,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2450,
-        "y": 660,
+        "x": 2850,
+        "y": 780,
         "wires": [
             [
                 "8105dd1d410bdd4b"
@@ -6123,8 +6088,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2630,
-        "y": 660,
+        "x": 3030,
+        "y": 780,
         "wires": [
             []
         ]
@@ -6147,8 +6112,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 2770,
-        "y": 660,
+        "x": 3170,
+        "y": 780,
         "wires": []
     },
     {
@@ -6169,8 +6134,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2550,
-        "y": 720,
+        "x": 2950,
+        "y": 840,
         "wires": []
     },
     {
@@ -6191,8 +6156,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2800,
-        "y": 780,
+        "x": 3200,
+        "y": 900,
         "wires": []
     },
     {
@@ -6213,8 +6178,8 @@
         "topic": "",
         "payload": "settings.VBITRATE",
         "payloadType": "global",
-        "x": 2340,
-        "y": 720,
+        "x": 2740,
+        "y": 840,
         "wires": [
             [
                 "23f54550ba5b6a79"
@@ -6239,8 +6204,8 @@
         "topic": "",
         "payload": "device.tx.dvbs2.ts.bitrate",
         "payloadType": "global",
-        "x": 2350,
-        "y": 780,
+        "x": 2750,
+        "y": 900,
         "wires": [
             [
                 "8d58e07463dad267"
@@ -6298,8 +6263,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2550,
-        "y": 280,
+        "x": 2850,
+        "y": 300,
         "wires": [
             [
                 "1bb882ca67278b69"
@@ -6372,8 +6337,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 340,
+        "x": 2810,
+        "y": 360,
         "wires": [
             [
                 "6e2b3c9e08662125"
@@ -6393,8 +6358,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2720,
-        "y": 280,
+        "x": 3020,
+        "y": 300,
         "wires": [
             [
                 "5989fbe4c1133db2"
@@ -6421,8 +6386,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
-        "y": 340,
+        "x": 3030,
+        "y": 360,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6449,8 +6414,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2740,
-        "y": 400,
+        "x": 3040,
+        "y": 420,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6477,8 +6442,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2850,
-        "y": 280,
+        "x": 3150,
+        "y": 300,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6556,8 +6521,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 460,
+        "x": 2810,
+        "y": 480,
         "wires": [
             [
                 "d2a7c63d9b2fe699"
@@ -6584,8 +6549,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
-        "y": 460,
+        "x": 3030,
+        "y": 480,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6668,8 +6633,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 520,
+        "x": 2810,
+        "y": 540,
         "wires": [
             [
                 "9c6e205117c83338"
@@ -6696,8 +6661,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
-        "y": 520,
+        "x": 3030,
+        "y": 540,
         "wires": [
             [
                 "6bfbf0101b2cd3a4"
@@ -6717,8 +6682,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2990,
-        "y": 340,
+        "x": 3290,
+        "y": 360,
         "wires": [
             [
                 "3eb70786a69e6c70",
@@ -6738,8 +6703,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 3320,
-        "y": 340,
+        "x": 3620,
+        "y": 360,
         "wires": [
             []
         ]
@@ -6762,8 +6727,8 @@
         "topic": "",
         "payload": "settings.IMAGESIZE",
         "payloadType": "global",
-        "x": 2270,
-        "y": 460,
+        "x": 2570,
+        "y": 480,
         "wires": [
             [
                 "b003500f8ea3ffe1"
@@ -6788,8 +6753,8 @@
         "topic": "",
         "payload": "settings.ABITRATE",
         "payloadType": "global",
-        "x": 2280,
-        "y": 520,
+        "x": 2580,
+        "y": 540,
         "wires": [
             [
                 "320ab26158363e57"
@@ -6814,8 +6779,8 @@
         "topic": "",
         "payload": "settings.AUDIO",
         "payloadType": "global",
-        "x": 2280,
-        "y": 400,
+        "x": 2580,
+        "y": 420,
         "wires": [
             [
                 "7e30ac73bb50c7aa"
@@ -6840,8 +6805,8 @@
         "topic": "",
         "payload": "settings.FPS",
         "payloadType": "global",
-        "x": 2250,
-        "y": 340,
+        "x": 2550,
+        "y": 360,
         "wires": [
             [
                 "3c2665b335deadcc"
@@ -6875,8 +6840,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3190,
-        "y": 260,
+        "x": 3490,
+        "y": 280,
         "wires": [
             []
         ]
@@ -6899,8 +6864,8 @@
         "topic": "",
         "payload": "settings.CODEC",
         "payloadType": "global",
-        "x": 2310,
-        "y": 280,
+        "x": 2610,
+        "y": 300,
         "wires": [
             [
                 "a0addd449f41ee70"
@@ -6966,7 +6931,7 @@
         "topic": "",
         "payload": "state_color",
         "payloadType": "global",
-        "x": 1420,
+        "x": 1700,
         "y": 560,
         "wires": [
             [
@@ -8808,6 +8773,7 @@
         "id": "7d18f3e7511a4c0f",
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "553167af0b3221c1",
         "position": "dialog",
         "displayTime": "3",
@@ -8830,6 +8796,7 @@
         "id": "11531a3595ef0f5a",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "553167af0b3221c1",
         "name": "Kill transmission",
         "rules": [
@@ -8858,6 +8825,7 @@
         "id": "e56ed07756258705",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "553167af0b3221c1",
         "name": "busy watchdog",
         "func": "let busy = msg.payload.busy;\nif (busy === \"true\" && global.get(\"mute\") === \"0\") {\n    let freq = parseFloat(global.get(\"device.tx.frequency\")).toFixed(2);\n    let uplink = Math.round(Number(freq) / 1000000 * 4) / 4;\n    let payload =\n        Number(uplink) === Number(msg.payload.uplink) ?\n            \"You're transmitting on this channel... Hold CTRL and click to tune RX\" :\n            \"This channel is busy and you're transmitting... Hold CTRL and click to tune RX\";\n    msg.payload = payload;\n    return msg;\n}",
@@ -8979,7 +8947,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "553167af0b3221c1",
         "name": "spectrum click tx symbol rate if different",
-        "func": "let busy = msg.payload.busy;\nif (busy === \"true\" && global.get(\"mute\") === \"0\") return;\n\nlet sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000;\nif (`${sr}` !== global.get(\"device.tx.dvbs2.sr\")){\n    msg.payload = sr; \n    return msg;\n}",
+        "func": "let busy = msg.payload.busy;\nif (global.get(\"mute\") === \"0\") return;\n\nlet sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000;\nif (`${sr}` !== global.get(\"device.tx.dvbs2.sr\")){\n    msg.payload = sr; \n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9060,7 +9028,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "we read device ",
         "info": "",
-        "x": 1420,
+        "x": 1700,
         "y": 660,
         "wires": []
     },
@@ -9456,8 +9424,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2590,
-        "y": 780,
+        "x": 2990,
+        "y": 900,
         "wires": [
             [
                 "5d929a20d665af8d"
@@ -10208,8 +10176,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1840,
-        "y": 620,
+        "x": 2160,
+        "y": 640,
         "wires": [
             [
                 "d2ec5f39f4c3a7c7"
@@ -10979,8 +10947,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 2290,
-        "y": 620,
+        "x": 2690,
+        "y": 740,
         "wires": [
             [
                 "3ee02849882f8ff7"
@@ -11007,8 +10975,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 620,
+        "x": 2870,
+        "y": 740,
         "wires": [
             []
         ]
@@ -11031,7 +10999,7 @@
         "topic": "",
         "payload": "first_load",
         "payloadType": "global",
-        "x": 1430,
+        "x": 1710,
         "y": 860,
         "wires": [
             [
@@ -11052,7 +11020,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1780,
+        "x": 2060,
         "y": 860,
         "wires": [
             [
@@ -11078,13 +11046,13 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1480,
-        "y": 720,
+        "x": 1680,
+        "y": 760,
         "wires": [
             [
                 "a56122d1643df6cf",
-                "8c7733a45d32bf17",
-                "d70f91cbc7395561"
+                "d70f91cbc7395561",
+                "a8ded79652836a82"
             ]
         ]
     },
@@ -11102,7 +11070,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1900,
+        "x": 2180,
         "y": 700,
         "wires": []
     },
@@ -11374,8 +11342,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2510,
-        "y": 400,
+        "x": 2810,
+        "y": 420,
         "wires": [
             [
                 "ae40a9e5bdd0d113"
@@ -11838,8 +11806,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2810,
-        "y": 700,
+        "x": 3210,
+        "y": 820,
         "wires": []
     },
     {
@@ -11860,8 +11828,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2810,
-        "y": 740,
+        "x": 3210,
+        "y": 860,
         "wires": []
     },
     {
@@ -11947,7 +11915,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1900,
+        "x": 2180,
         "y": 520,
         "wires": []
     },
@@ -12096,8 +12064,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2790,
-        "y": 620,
+        "x": 3190,
+        "y": 740,
         "wires": []
     },
     {
@@ -13833,8 +13801,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3180,
-        "y": 340,
+        "x": 3480,
+        "y": 360,
         "wires": [
             [
                 "34feacf8cac79e5e"
@@ -14205,7 +14173,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1480,
+        "x": 1760,
         "y": 460,
         "wires": [
             [
@@ -14226,7 +14194,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1640,
+        "x": 1920,
         "y": 460,
         "wires": [
             [
@@ -14241,7 +14209,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "stream.mode must be set, or else digital mode setting reboots pluto",
         "info": "",
-        "x": 1780,
+        "x": 2060,
         "y": 400,
         "wires": []
     },
@@ -14258,7 +14226,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1680,
+        "x": 1960,
         "y": 760,
         "wires": [
             [
@@ -14279,7 +14247,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1860,
+        "x": 2140,
         "y": 760,
         "wires": [
             [
@@ -15233,19 +15201,18 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: Stream Mode",
-        "func": "if(msg.restore){\n    let payload = msg.payload;\n    let topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\n    // global.set(\"bitratechange\", true);\n    msg.topic = topic;\n    msg.payload = payload;\n    // global.set(\"deviceChange\", true);\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\nglobal.set(\"stop\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n\n",
+        "func": "if(msg.restore){\n    let payload = msg.payload;\n    let topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\n    // global.set(\"bitratechange\", true);\n    msg.topic = topic;\n    msg.payload = payload;\n    // global.set(\"deviceChange\", true);\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\n// global.set(\"stop\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2420,
+        "x": 2400,
         "y": 2160,
         "wires": [
             [
                 "1b8ee9dbe0155dcd",
-                "c20ffdd3c22ba8da",
                 "2e677684d13ac6e0"
             ]
         ]
@@ -15746,8 +15713,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2570,
-        "y": 2200,
+        "x": 3230,
+        "y": 2180,
         "wires": []
     },
     {
@@ -16098,6 +16065,87 @@
                 "8a6e91746db5e484"
             ]
         ]
+    },
+    {
+        "id": "a8ded79652836a82",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "Mute",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"callsign\")+ \"/tx/mute\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 620,
+        "wires": [
+            [
+                "d558ecd264feb081"
+            ]
+        ]
+    },
+    {
+        "id": "d558ecd264feb081",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 1770,
+        "y": 620,
+        "wires": [
+            [
+                "6afa3d5787c3c8dd"
+            ]
+        ]
+    },
+    {
+        "id": "6afa3d5787c3c8dd",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4bfefaeb7f82f4c6",
+        "name": "Global: mute",
+        "func": "let mute = msg.payload;\nif (mute === 0) {\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 620,
+        "wires": [
+            [
+                "8c7733a45d32bf17"
+            ]
+        ]
+    },
+    {
+        "id": "fd45eaf559f851a8",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "itsme",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2480,
+        "y": 660,
+        "wires": []
     },
     {
         "id": "4c448d00f7a9bc91",
@@ -20159,7 +20207,7 @@
             },
             {
                 "label": "",
-                "value": "15999999",
+                "value": "16000000",
                 "type": "str"
             },
             {
@@ -20257,7 +20305,6 @@
         "y": 660,
         "wires": [
             [
-                "21554bc0efe1836b",
                 "6adfe6d609aeb90a"
             ]
         ]
@@ -20345,23 +20392,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "21554bc0efe1836b",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "debug 24",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 540,
-        "wires": []
     },
     {
         "id": "e688634a9f60c746",
@@ -20458,9 +20488,7 @@
         "x": 1000,
         "y": 780,
         "wires": [
-            [
-                "6d2ec666c4cd744e"
-            ]
+            []
         ]
     },
     {
@@ -20509,23 +20537,6 @@
                 "30794624a6a04c15"
             ]
         ]
-    },
-    {
-        "id": "6d2ec666c4cd744e",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "debug 26",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 680,
-        "wires": []
     },
     {
         "id": "b5cfddf388cbc440",
