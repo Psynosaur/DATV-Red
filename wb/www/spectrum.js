@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 2019 Jeppe Ledet-Pedersen
  * This software is released under the MIT license.
@@ -90,6 +89,250 @@ Spectrum.prototype.drawFFT = function (bins) {
   this.ctx.strokeStyle = "#fefefe";
   this.ctx.stroke();
 };
+var beacon_strength = 0;
+var mouse_in_canvas = false;
+var mouse_x = 0;
+var mouse_y = 0;
+var clicked_x = 0;
+var clicked_y = 0;
+var channelClicked = 0;
+var channel_coords = {};
+var signals = [];
+var rx_count = 1;
+var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
+var busy = false;
+Spectrum.prototype.detect_signals = function (
+  fft_data,
+  ctx,
+  canvasHeight,
+  canvasWidth,
+  sr
+) {
+  var i;
+  var j;
+  const noise_level = 435;
+  const signal_threshold = 445;
+
+  var in_signal = false;
+  var start_signal;
+  var end_signal;
+  var mid_signal;
+  var strength_signal;
+  var signal_bw;
+  var signal_freq;
+  var acc;
+  var acc_i;
+
+  var db_per_pixel;
+  var beacon_strength_pixel;
+
+  var text_x_position;
+
+  /* Clear signals array */
+  
+
+  for (i = 2; i < fft_data.length; i++) {
+    if (!in_signal) {
+      if (
+        (fft_data[i] + fft_data[i - 1] + fft_data[i - 2]) / 3.0 >
+        signal_threshold
+      ) {
+        in_signal = true;
+        start_signal = i;
+      }
+    } /* in_signal == true */ else {
+      if (
+        (fft_data[i] + fft_data[i - 1] + fft_data[i - 2]) / 3.0 <
+        signal_threshold
+      ) {
+        in_signal = false;
+
+        end_signal = i;
+        acc = 0;
+        acc_i = 0;
+        for (
+          j = (start_signal + 0.3 * (end_signal - start_signal)) | 0;
+          j < start_signal + 0.7 * (end_signal - start_signal);
+          j++
+        ) {
+          acc = acc + fft_data[j];
+          acc_i = acc_i + 1;
+        }
+        /*
+                        ctx.lineWidth=1;
+                        ctx.strokeStyle = 'white';
+                        ctx.beginPath();
+                        ctx.moveTo((start_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (signal_threshold/65536)));
+                        ctx.lineTo((end_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (signal_threshold/65536)));
+                        ctx.stroke();
+                        ctx.restore();
+                        */
+
+        strength_signal = acc / acc_i;
+        /*
+                        ctx.lineWidth=1;
+                        ctx.strokeStyle = 'white';
+                        ctx.beginPath();
+                        ctx.moveTo((start_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (strength_signal/65536)));
+                        ctx.lineTo((end_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (strength_signal/65536)));
+                        ctx.stroke();
+                        ctx.restore();
+                        */
+
+        /* Find real start of top of signal */
+        for (
+          j = start_signal;
+          fft_data[j] - noise_level < 0.75 * (strength_signal - noise_level);
+          j++
+        ) {
+          start_signal = j;
+        }
+        /*
+                        ctx.lineWidth=1;
+                        ctx.strokeStyle = 'white';
+                        ctx.beginPath();
+                        ctx.moveTo((start_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (strength_signal/65536)));
+                        ctx.lineTo((start_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (strength_signal/65536)) + 20);
+                        ctx.stroke();
+                        ctx.restore();
+                        */
+
+        /* Find real end of the top of signal */
+        for (
+          j = end_signal;
+          fft_data[j] - noise_level < 0.75 * (strength_signal - noise_level);
+          j--
+        ) {
+          end_signal = j;
+        }
+        /*
+                        ctx.lineWidth=1;
+                        ctx.strokeStyle = 'white';
+                        ctx.beginPath();
+                        ctx.moveTo((end_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (strength_signal/65536)));
+                        ctx.lineTo((end_signal/fft_data.length)*canvasWidth, canvasHeight * (1 - (strength_signal/65536)) + 20);
+                        ctx.stroke();
+                        ctx.restore();
+                        */
+
+        mid_signal = start_signal + (end_signal - start_signal) / 2.0;
+
+        signal_bw = align_symbolrate(
+          (end_signal - start_signal) * (9.0 / fft_data.length)
+        );
+        signal_freq = 490.5 + ((mid_signal + 1) / fft_data.length) * 9.0;
+
+        signals.push({
+          start: (start_signal / fft_data.length) * canvasWidth,
+          end: (end_signal / fft_data.length) * canvasWidth,
+          top: canvasHeight - (strength_signal / 65536) * canvasHeight,
+          frequency: 10000 + signal_freq,
+          symbolrate: 1000.0 * signal_bw * (Number(sr)/10_500_000) ,
+        });
+
+        // Exclude signals in beacon band
+        if (signal_freq < 492.0) {
+          if (signal_bw >= 1.0) {
+            // Probably the Beacon!
+            beacon_strength = strength_signal;
+          }
+          continue;
+        }
+        console.dir(signals)
+        /*
+                            console.log("####");
+                        for(j = start_signal; j < end_signal; j++)
+                        {
+                        console.log(fft_data[j]);
+                        }
+                        */
+
+        /* Sanity check bandwidth, and exclude beacon */
+        if (signal_bw != 0) {
+          text_x_position = (mid_signal / fft_data.length) * canvasWidth;
+
+          /* Adjust for right-side overlap */
+          if (text_x_position > 0.92 * canvasWidth) {
+            text_x_position = canvasWidth - 55;
+          }
+
+          ctx.font = "14px Arial";
+          ctx.fillStyle = "white";
+          ctx.textAlign = "center";
+          if (!is_overpower(beacon_strength, strength_signal, signal_bw)) {
+            ctx.fillText(
+              print_symbolrate(signal_bw) +
+                ", " +
+                print_frequency(signal_freq, signal_bw),
+              text_x_position,
+              canvasHeight - (strength_signal / 65536) * canvasHeight - 16
+            );
+            ctx.restore();
+          } else {
+            ctx.fillText(
+              "[over-power]",
+              text_x_position,
+              canvasHeight - (strength_signal / 65536) * canvasHeight - 16
+            );
+            ctx.restore();
+
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "white";
+            ctx.setLineDash([4, 4]);
+            ctx.beginPath();
+            ctx.moveTo(
+              (start_signal / fft_data.length) * canvasWidth,
+              canvasHeight * (1 - (beacon_strength - 1.0 * scale_db) / 65536)
+            );
+            ctx.lineTo(
+              (end_signal / fft_data.length) * canvasWidth,
+              canvasHeight * (1 - (beacon_strength - 1.0 * scale_db) / 65536)
+            );
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.restore();
+          }
+        }
+      }
+    }
+  }
+
+  if (in_signal) {
+    end_signal = fft_data.length;
+    acc = 0;
+    acc_i = 0;
+    for (
+      j = (start_signal + 0.3 * (end_signal - start_signal)) | 0;
+      j < start_signal + 0.7 * (end_signal - start_signal);
+      j++
+    ) {
+      acc = acc + fft_data[j];
+      acc_i = acc_i + 1;
+    }
+
+    strength_signal = acc / acc_i;
+
+    ctx.font = "14px Arial";
+    ctx.fillStyle = background_colour === "black" ? "white" : "black";
+    ctx.textAlign = "center";
+    ctx.fillText(
+      "[out-of-band]",
+      canvasWidth - 55,
+      canvasHeight - (strength_signal / 65536) * canvasHeight - 16
+    );
+    ctx.restore();
+  }
+
+  if (mouse_in_canvas) {
+    render_frequency_info(ctx, mouse_x, mouse_y);
+
+    render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth);
+  }
+
+  if (typeof signal_selected !== "undefined" && signal_selected != null) {
+    render_signal_selected_box(ctx, clicked_x, clicked_y);
+  }
+};
 
 Spectrum.prototype.drawChannels = function (ctx) {
   ctx.fillStyle = "red";
@@ -160,7 +403,6 @@ function render_frequency_info(ctx, mouse_x, mouse_y) {
   // var width = ctx.canvas.width;
   var height = ctx.canvas.height;
 
-  var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
   if (mouse_y > (height * 1) / 8) {
     for (var i = 0; i < freq_info.length; i++) {
       xd1 = freq_info[i].x1;
@@ -207,7 +449,6 @@ function render_frequency_info(ctx, mouse_x, mouse_y) {
 Spectrum.prototype.drawSpectrum = function (bins) {
   var width = this.ctx.canvas.width;
   var height = this.ctx.canvas.height;
-  // detect_signals(bins, this.ctx, width, height);
   // Fill with black
   this.ctx.fillStyle = "black";
   this.ctx.fillRect(0, 0, width, height);
@@ -263,12 +504,155 @@ Spectrum.prototype.drawSpectrum = function (bins) {
   this.ctx.fillStyle = this.gradient;
   this.ctx.fill();
   // this.drawChannels(this.ctx);
+  // this.detect_signals(bins, this.ctx, height, width, this.spanHz);
 
   // Copy axes from offscreen canvas
   this.ctx.drawImage(this.ctx_axes.canvas, 0, 0);
 };
+function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
+  let channelSpace = Math.floor(
+    (canvasHeight * (4 / 8) - canvasHeight * (1 / 100)) / rx_count
+  );
+  var i;
+  let channel_lines = [];
+  let top_line_y = 5;
+  let square = {};
+  if (mouse_y < (canvasHeight * 7) / 8) {
+    for (i = 0; i < signals.length; i++) {
+      if (
+        mouse_x > signals[i].start &&
+        mouse_x < signals[i].end
+        /* && mouse_y > signals[i].top */
+      ) {
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = background_colour === "black" ? "white" : "black";
 
-function render_signal_selected_box(mouse_clicked_x, mouse_clicked_y) {
+        /* LEFT LINE */
+        ctx.beginPath();
+        ctx.moveTo(signals[i].start, canvasHeight * (7 / 8));
+        ctx.lineTo(signals[i].start, canvasHeight * (1 / 100));
+        ctx.stroke();
+
+        /* Top LINE */
+        ctx.beginPath();
+        ctx.moveTo(signals[i].start, top_line_y);
+        ctx.lineTo(signals[i].end, top_line_y);
+        ctx.stroke();
+        channel_lines.push(top_line_y);
+        /* ctx height = 500 */
+        for (let rx = 0; rx < rx_count; rx++) {
+          /* channel lines */
+          channel_lines.push(channelSpace * (rx + 1));
+          ctx.font = "13px" + " Arial";
+          ctx.fillText(
+            `CH${rx + 1}`,
+            signals[i].start - 20,
+            channelSpace * rx + channelSpace / 2
+          );
+          if (
+            mouse_x > signals[i].start &&
+            mouse_x < signals[i].end &&
+            mouse_y > channel_lines[rx] &&
+            mouse_y < channel_lines[rx + 1]
+          ) {
+            channelClicked = rx + 1;
+            channel_coords.x1 = signals[i].start;
+            channel_coords.x2 = signals[i].end;
+            channel_coords.y1 = channel_lines[rx];
+            ctx.globalAlpha = 0.2;
+            ctx.fillStyle = invertColor(band_colour);
+            ctx.fillRect(
+              channel_coords.x1,
+              channel_coords.y1,
+              signals[i].end - signals[i].start,
+              channelSpace
+            );
+            square["number"] = channelClicked;
+            square["x1"] = channel_coords.x1;
+            square["y1"] = channel_coords.y1;
+            square["width"] = signals[i].end - signals[i].start;
+            square["height"] = channelSpace;
+            /* console.log(square) */
+            highlighted_channel = square;
+            ctx.globalAlpha = 1.0;
+          }
+
+          ctx.beginPath();
+          ctx.moveTo(signals[i].start, channelSpace * (rx + 1));
+          ctx.lineTo(signals[i].end, channelSpace * (rx + 1));
+          ctx.stroke();
+        }
+        /* console.log(channel_lines) */
+        channel_lines.push(canvasHeight * (7 / 8));
+        if (
+          mouse_x > signals[i].start &&
+          mouse_x < signals[i].end &&
+          mouse_y > channel_lines[rx_count]
+        ) {
+          /* ctx.fillText(`ONBOARD`, signals[i].start + 25,  channelSpace * (rx_count + 1) - 25); */
+          channelClicked = rx_count + 1;
+          /* ctx.fillRect(signals[i].start, channelSpace * (rx + 1), signals[i].end - signals[i].start, 10); */
+        }
+        /* RIGHT LINE */
+        ctx.beginPath();
+        ctx.moveTo(signals[i].end, canvasHeight * (7 / 8));
+        ctx.lineTo(signals[i].end, canvasHeight * (1 / 100));
+        ctx.stroke();
+
+        /* As long as we have a beacon, and for signals other than the beacon, display relative power on mouseover */
+        if (beacon_strength > 0 && signals[i].start > canvasWidth / 8) {
+          ctx.font =
+            (signals[i].symbolrate < 500 ? "11px" : "12px") + " Arial";
+          ctx.fillStyle = background_colour === "black" ? "white" : "black";
+          ctx.textAlign = "center";
+          if (
+            Math.round(
+              parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4
+            ) /
+              4 !==
+            10491.5
+          ) {
+            canvasClickBW = signals[i].symbolrate / 1000;
+            uplink =
+              Math.round(
+                parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4
+              ) / 4;
+            downlink =
+              Math.round(parseFloat(signals[i].frequency).toFixed(2) * 4) / 4;
+            busy = true;
+            activeXd1 = signals[i].start;
+            activeXd2 = signals[i].end;
+          }
+          db_per_pixel = ((canvasHeight * 7) / 8 - canvasHeight / 12) / 15; // 15dB screen window
+          beacon_strength_pixel =
+            canvasHeight - (beacon_strength / 65536) * canvasHeight;
+          let mer = `${(
+            (beacon_strength_pixel +
+              (beacon_strength_pixel - signals[i].top)) /
+            db_per_pixel
+          ).toFixed(1)} / ${(
+            (beacon_strength_pixel - signals[i].top) /
+            db_per_pixel
+          ).toFixed(1)} dBb`;
+          /* let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} dB`; */
+          ctx.fillText(
+            mer,
+            signals[i].start - (signals[i].start - signals[i].end) / 2,
+            (canvasHeight * 7) / 8 -
+              (7 * ((canvasHeight * 7) / 8 - signals[i].top)) / 8
+          );
+        }
+        busy = true;
+        ctx.restore();
+        return;
+      }
+    }
+    canvasClickBW = undefined;
+    uplink = undefined;
+    busy = false;
+  }
+}
+function render_signal_selected_box(ctx, mouse_clicked_x, mouse_clicked_y) {
   if (mouse_y < (canvasHeight * 7) / 8) {
     for (i = 0; i < signals.length; i++) {
       if (
@@ -280,7 +664,7 @@ function render_signal_selected_box(mouse_clicked_x, mouse_clicked_y) {
 
         ctx.save();
         ctx.lineWidth = 3;
-        ctx.strokeStyle = background_colour === "black" ? "white" : "black";
+        ctx.strokeStyle = "white";
         ctx.beginPath();
         ctx.moveTo(signal_selected.start, canvasHeight * (7 / 8));
         ctx.lineTo(signal_selected.start, signal_selected.top);
@@ -392,10 +776,12 @@ Spectrum.prototype.updateAxes = function () {
   this.ctx_axes.textBaseline = "middle";
 
   this.ctx_axes.textAlign = "left";
-  var step = 10;
+  var step = 20;
+  // this.min_db = 415;
+  // this.max_db = 515;
   for (var i = this.min_db + 10; i <= this.max_db - 10; i += step) {
     var y = height - this.squeeze(i, 0, height);
-    this.ctx_axes.fillText(i, 5, y);
+    this.ctx_axes.fillText(`${(i - this.min_db)/10}dB`, 5, y);
 
     this.ctx_axes.beginPath();
     this.ctx_axes.moveTo(20, y);

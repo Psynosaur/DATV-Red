@@ -1252,8 +1252,8 @@ var canvasHeightLast;
         if (
           mouse_x > xd1 - 1 &&
           mouse_x < xd2 + 1 &&
-          mouse_y > yd - 5 &&
-          mouse_y < yd + 5
+          mouse_y > yd - 3 &&
+          mouse_y < yd + 9
         ) {
           canvas_element.title =
             "Downlink: " +
