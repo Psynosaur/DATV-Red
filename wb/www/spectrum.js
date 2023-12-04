@@ -781,7 +781,7 @@ Spectrum.prototype.updateAxes = function () {
   // this.max_db = 515;
   for (var i = this.min_db + 10; i <= this.max_db - 10; i += step) {
     var y = height - this.squeeze(i, 0, height);
-    this.ctx_axes.fillText(`${(i - this.min_db)/10}dB`, 5, y);
+    this.ctx_axes.fillText(`${(i - this.min_db)/10}dB`, width - 30, y - 5);
 
     this.ctx_axes.beginPath();
     this.ctx_axes.moveTo(20, y);
