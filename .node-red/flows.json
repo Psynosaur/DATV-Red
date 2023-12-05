@@ -16203,7 +16203,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Calibrate",
+        "label": "Calibrate your rx channels for pluto, wait 3 seconds",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -16213,7 +16213,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 5050,
+        "x": 5180,
         "y": 1220,
         "wires": [
             [
@@ -16260,7 +16260,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 5730,
+        "x": 5800,
         "y": 1240,
         "wires": [
             [
@@ -16283,7 +16283,7 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 5900,
+        "x": 5970,
         "y": 1240,
         "wires": []
     },

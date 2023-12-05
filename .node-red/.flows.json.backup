@@ -289,12 +289,28 @@
             "8879551bc103b8c4",
             "09f981f156e98728",
             "c2854c94f59a9aaa",
-            "ba71cda151f629ae"
+            "ba71cda151f629ae",
+            "538b8437c0ff15ad",
+            "19af65617856761b",
+            "fa8a006c0eeeb105",
+            "5423e8db27441d88",
+            "f9b91a99d9c45cf8",
+            "7f4880a53860cbd8",
+            "f7ad545acf4151b3",
+            "da43e8cbedf7105d",
+            "2c6280037cd8725d",
+            "edea5b446673c7e5",
+            "51acce0652b2ef0a",
+            "ec36c024a33fe8bb",
+            "016922c1059df840",
+            "fca0dc49e0dbc8c8",
+            "231152bfc003a87e",
+            "2e0709eeb3596e1a"
         ],
-        "x": 3554,
-        "y": 1019,
-        "w": 1172,
-        "h": 202
+        "x": 4874,
+        "y": 899,
+        "w": 2052,
+        "h": 402
     },
     {
         "id": "1f5722b7aff1a710",
@@ -6901,8 +6917,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3840,
-        "y": 1060,
+        "x": 5160,
+        "y": 940,
         "wires": [
             []
         ]
@@ -6925,8 +6941,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 3650,
-        "y": 1060,
+        "x": 4970,
+        "y": 940,
         "wires": [
             [
                 "40caf32a1fc66903"
@@ -6951,8 +6967,8 @@
         "topic": "",
         "payload": "[]",
         "payloadType": "json",
-        "x": 3650,
-        "y": 1120,
+        "x": 4970,
+        "y": 1000,
         "wires": [
             [
                 "7aa0b41ed418f215"
@@ -6979,8 +6995,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3860,
-        "y": 1120,
+        "x": 5180,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -7003,8 +7019,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 3670,
-        "y": 1180,
+        "x": 4990,
+        "y": 1060,
         "wires": [
             [
                 "cffbb4b1eb45b8da"
@@ -7031,8 +7047,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3860,
-        "y": 1180,
+        "x": 5180,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -7055,8 +7071,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 4030,
-        "y": 1060,
+        "x": 5350,
+        "y": 940,
         "wires": [
             [
                 "c2854c94f59a9aaa"
@@ -7076,8 +7092,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4600,
-        "y": 1060,
+        "x": 5920,
+        "y": 940,
         "wires": [
             [
                 "dffe1e50bcaeb0a5"
@@ -13686,8 +13702,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4210,
-        "y": 1060,
+        "x": 5530,
+        "y": 940,
         "wires": [
             [
                 "ba71cda151f629ae"
@@ -13707,8 +13723,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 4400,
-        "y": 1060,
+        "x": 5720,
+        "y": 940,
         "wires": [
             [
                 "09f981f156e98728"
@@ -16047,6 +16063,7 @@
         "id": "538b8437c0ff15ad",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "channel calibration function",
         "func": "let calibrated = Boolean(msg.payload);\nif (calibrated) {\n    let tune_table = global.get(\"tune_table\");\n    global.set(\"tune_done\", false);\n    msg.payload = tune_table[26];\n    msg.options = [\n        { \"144.6MHz\": \"144600000\" },\n        { \"436MHz\": \"436000000\" },\n        { \"437MHz\": \"436999998\" },\n        { \"1242MHz\": \"1242000000\" },\n        { \"1255MHz\": \"1255000062\" },\n        { \"CH1 500/333/250/125KS\": `${tune_table[0]}` },\n        { \"CH2 125KS\": `${tune_table[1]}` },\n        { \"CH3 1000/500/333/250/125KS\": `${tune_table[2]}` },\n        { \"CH4 125KS\": `${tune_table[3]}` },\n        { \"CH5 500/333/250/125KS\": `${tune_table[4]}` },\n        { \"CH6 125KS\": `${tune_table[5]}` },\n        { \"CH7 500/333/250/125KS\": `${tune_table[6]}` },\n        { \"CH8 125KS\": `${tune_table[7]}` },\n        { \"CH9 1000/500/333/250/125KS\": `${tune_table[8]}` },\n        { \"CH10 125KS\": `${tune_table[9]}` },\n        { \"CH11 500/333/250/125KS\": `${tune_table[10]}` },\n        { \"CH12 125KS\": `${tune_table[11]}` },\n        { \"CH13 500/333/250/125KS\": `${tune_table[12]}` },\n        { \"CH14 125KS\": `${tune_table[13]}` },\n        { \"CH15 1000/500/333/250/125KS\": `${tune_table[14]}` },\n        { \"CH16 125KS\": `${tune_table[15]}` },\n        { \"CH17 500/333/250/125KS\": `${tune_table[16]}` },\n        { \"CH18 125KS\": `${tune_table[17]}` },\n        { \"CH19 333/250/125KS\": `${tune_table[18]}` },\n        { \"CH20 125KS\": `${tune_table[19]}` },\n        { \"CH21 333/250/125KS\": `${tune_table[20]}` },\n        { \"CH22 125KS\": `${tune_table[21]}` },\n        { \"CH23 333/250/125KS\": `${tune_table[22]}` },\n        { \"CH24 125KS\": `${tune_table[23]}` },\n        { \"CH25 333/250/125KS\": `${tune_table[24]}` },\n        { \"CH26 125KS\": `${tune_table[25]}` },\n        { \"CH27 333/250/125KS\": `${tune_table[26]}` },\n    ]\n    global.set(\"tune_table\", []);\n    return msg;\n}\n\n\n",
         "outputs": 1,
@@ -16055,8 +16072,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5200,
-        "y": 1040,
+        "x": 5940,
+        "y": 1060,
         "wires": [
             [
                 "edea5b446673c7e5"
@@ -16067,6 +16084,7 @@
         "id": "edea5b446673c7e5",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "once calibrated we save our list",
         "func": "let payload = msg.options;\nmsg.payload = JSON.stringify(payload);\nreturn msg;",
         "outputs": 1,
@@ -16075,8 +16093,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5430,
-        "y": 1180,
+        "x": 6210,
+        "y": 1060,
         "wires": [
             [
                 "ec36c024a33fe8bb"
@@ -16087,6 +16105,7 @@
         "id": "ec36c024a33fe8bb",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "set channels path",
         "func": "msg.filename = \"settings\\\\channels.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/channels.json\";\nreturn msg;",
         "outputs": 1,
@@ -16095,8 +16114,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5710,
-        "y": 1180,
+        "x": 6470,
+        "y": 1080,
         "wires": [
             [
                 "fca0dc49e0dbc8c8"
@@ -16107,6 +16126,7 @@
         "id": "fca0dc49e0dbc8c8",
         "type": "file",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -16114,8 +16134,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 6040,
-        "y": 1100,
+        "x": 6660,
+        "y": 1080,
         "wires": [
             [
                 "231152bfc003a87e"
@@ -16126,6 +16146,7 @@
         "id": "231152bfc003a87e",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "rules": [
             {
@@ -16141,8 +16162,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5560,
-        "y": 1040,
+        "x": 6820,
+        "y": 1080,
         "wires": [
             [
                 "2e0709eeb3596e1a"
@@ -16153,6 +16174,7 @@
         "id": "2e0709eeb3596e1a",
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "position": "dialog",
         "displayTime": "3",
         "highlight": "yellow",
@@ -16164,8 +16186,8 @@
         "className": "",
         "topic": "",
         "name": "Channel calibration complete!",
-        "x": 5690,
-        "y": 880,
+        "x": 6750,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -16174,13 +16196,14 @@
         "id": "fa8a006c0eeeb105",
         "type": "ui_button",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "group": "861f885ba5c5eebc",
         "order": 7,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Calibrate",
+        "label": "Calibrate your rx channels for pluto, takes 3s",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -16190,8 +16213,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 4900,
-        "y": 1280,
+        "x": 5160,
+        "y": 1220,
         "wires": [
             [
                 "19af65617856761b"
@@ -16202,6 +16225,7 @@
         "id": "f9b91a99d9c45cf8",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "Send: Frequency",
         "func": "let payload = Number(msg.payload) + global.get(\"device.tx.offset\");\nlet topic = `${global.get(\"cmdPath\")}/tx/frequency`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"tune\", true);\n// global.set(\"deviceChange\", true);\n// global.set(\"device.tx.frequency\", payload);\n// global.set(\"settings.frequency\", payload);\nreturn msg;\n",
         "outputs": 1,
@@ -16210,8 +16234,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5390,
-        "y": 1420,
+        "x": 5560,
+        "y": 1240,
         "wires": [
             [
                 "7f4880a53860cbd8"
@@ -16222,6 +16246,7 @@
         "id": "7f4880a53860cbd8",
         "type": "delay",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "pauseType": "rate",
         "timeout": "5",
@@ -16235,8 +16260,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 5580,
-        "y": 1300,
+        "x": 5800,
+        "y": 1240,
         "wires": [
             [
                 "f7ad545acf4151b3"
@@ -16247,6 +16272,7 @@
         "id": "f7ad545acf4151b3",
         "type": "mqtt out",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "topic": "",
         "qos": "",
@@ -16257,15 +16283,16 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 5750,
-        "y": 1300,
+        "x": 5970,
+        "y": 1240,
         "wires": []
     },
     {
         "id": "19af65617856761b",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "name": "Frequencies for channel calibration",
+        "g": "4b15878090b5548b",
+        "name": "Frequency table for channel calibration",
         "func": "let frequencies = [\n    2403250000,\n    2403500000,\n    2403750000,\n    2404000000,\n    2404250000,\n    2404500000,\n    2404750000,\n    2405000000,\n    2405250000,\n    2405500000,\n    2405750000,\n    2406000000,\n    2406250000,\n    2406500000,\n    2406750000,\n    2407000000,\n    2407250000,\n    2407500000,\n    2407750000,\n    2408000000,\n    2408250000,\n    2408500000,\n    2408750000,\n    2409000000,\n    2409250000,\n    2409500000,\n    2409750000\n]\nmsg.payload = frequencies;\nreturn msg;\n\n\n",
         "outputs": 1,
         "timeout": 0,
@@ -16273,8 +16300,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5150,
-        "y": 1240,
+        "x": 5310,
+        "y": 1180,
         "wires": [
             [
                 "5423e8db27441d88"
@@ -16285,6 +16312,7 @@
         "id": "da43e8cbedf7105d",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "props": [
             {
@@ -16298,7 +16326,7 @@
         "topic": "",
         "payload": "tune_done",
         "payloadType": "global",
-        "x": 4870,
+        "x": 5510,
         "y": 1060,
         "wires": [
             [
@@ -16311,6 +16339,7 @@
         "id": "5423e8db27441d88",
         "type": "split",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "splt": "",
         "spltType": "str",
@@ -16318,8 +16347,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 5150,
-        "y": 1320,
+        "x": 5300,
+        "y": 1260,
         "wires": [
             [
                 "f9b91a99d9c45cf8"
@@ -16330,6 +16359,7 @@
         "id": "51acce0652b2ef0a",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "rules": [
             {
@@ -16345,7 +16375,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 5180,
+        "x": 5900,
         "y": 1140,
         "wires": [
             [
@@ -16357,6 +16387,7 @@
         "id": "016922c1059df840",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "debug 26",
         "active": true,
         "tosidebar": true,
@@ -16366,14 +16397,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 5390,
-        "y": 1120,
+        "x": 6120,
+        "y": 1140,
         "wires": []
     },
     {
         "id": "2c6280037cd8725d",
         "type": "switch",
         "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -16387,7 +16419,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 4990,
+        "x": 5730,
         "y": 1140,
         "wires": [
             [
