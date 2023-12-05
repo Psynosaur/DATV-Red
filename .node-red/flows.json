@@ -286,22 +286,31 @@
             "7aa0b41ed418f215",
             "eb77e66d5c0acdae",
             "cffbb4b1eb45b8da",
-            "538b8437c0ff15ad",
-            "fca0dc49e0dbc8c8",
-            "edea5b446673c7e5",
-            "778857993c3190e4",
             "8879551bc103b8c4",
             "09f981f156e98728",
-            "2e0709eeb3596e1a",
-            "231152bfc003a87e",
-            "ec36c024a33fe8bb",
             "c2854c94f59a9aaa",
-            "ba71cda151f629ae"
+            "ba71cda151f629ae",
+            "538b8437c0ff15ad",
+            "19af65617856761b",
+            "fa8a006c0eeeb105",
+            "5423e8db27441d88",
+            "f9b91a99d9c45cf8",
+            "7f4880a53860cbd8",
+            "f7ad545acf4151b3",
+            "da43e8cbedf7105d",
+            "2c6280037cd8725d",
+            "edea5b446673c7e5",
+            "51acce0652b2ef0a",
+            "ec36c024a33fe8bb",
+            "016922c1059df840",
+            "fca0dc49e0dbc8c8",
+            "231152bfc003a87e",
+            "2e0709eeb3596e1a"
         ],
-        "x": 3554,
-        "y": 1019,
-        "w": 1312,
-        "h": 262
+        "x": 4874,
+        "y": 899,
+        "w": 2052,
+        "h": 402
     },
     {
         "id": "1f5722b7aff1a710",
@@ -510,13 +519,13 @@
             "3e90d102d97d90d1",
             "1de26d5def9ca4f5",
             "ec867dfd3be3e114",
-            "d7e44f153065aff1",
-            "d4a8f10165e682cf"
+            "d4a8f10165e682cf",
+            "72b5ad0fc32a3da9"
         ],
-        "x": 2484,
-        "y": 2839,
-        "w": 902,
-        "h": 362
+        "x": 2554,
+        "y": 2699,
+        "w": 792,
+        "h": 442
     },
     {
         "id": "78f7e24f56d510ed",
@@ -563,7 +572,11 @@
             "e5b0fa3224166063",
             "767df388fc1df0e3",
             "2bc31358161b2eb4",
-            "3cab7aa5b4106a59"
+            "3cab7aa5b4106a59",
+            "7b165d480a2ae435",
+            "a421a70d3ead9cd8",
+            "a784bb0de8df6b05",
+            "193a32ea6df689be"
         ],
         "x": 3574,
         "y": 2039,
@@ -1143,9 +1156,7 @@
             "4497dbfe8502fab3"
         ],
         "x": 74,
-        "y": 379,
-        "w": 1082,
-        "h": 442
+        "y": 379
     },
     {
         "id": "2406e32417780de0",
@@ -1182,9 +1193,7 @@
             "b5cfddf388cbc440"
         ],
         "x": 54,
-        "y": 99,
-        "w": 1512,
-        "h": 282
+        "y": 99
     },
     {
         "id": "1d8e778f40edcc21",
@@ -2779,7 +2788,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: frequency",
-        "func": "var payload = msg.payload;\nif (payload !== global.get(\"device.tx.frequency\")) {\n    if (global.get(\"tune\")) {\n        let tune_table = global.get(\"tune_table\");\n        tune_table.push(Number(msg.payload))\n        global.set(\"tune_table\", tune_table);\n        global.set(\"tune\", false);\n    }\n    // global.set(\"device.tx.frequency\", payload);\n    return msg;\n}\n\n",
+        "func": "var payload = msg.payload;\n\nif (global.get(\"tune\")) {\n    let tune_table = new Set(global.get(\"tune_table\"));\n    tune_table.add(Number(msg.payload))\n    \n    if (Array.from(tune_table).length === 27) {\n        global.set(\"tune_table\", Array.from(tune_table));\n        global.set(\"tune\", false);\n        global.set(\"tune_done\", true);\n        return msg;\n    }\n    global.set(\"tune_table\", Array.from(tune_table));\n}\nreturn msg;\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4680,7 +4689,7 @@
         "color": "",
         "bgcolor": "{{p9_color}}",
         "className": "",
-        "icon": "fa-play-circle-o fa-2x",
+        "icon": "{{start_animation}}",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
@@ -4800,8 +4809,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "ffplay",
-        "x": 3210,
-        "y": 3100,
+        "x": 3270,
+        "y": 2940,
         "wires": [
             [],
             [],
@@ -5512,12 +5521,13 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2790,
-        "y": 2880,
+        "x": 2970,
+        "y": 2740,
         "wires": [
             [
                 "aa4a256618f7c4a6",
-                "0c94d661261c1f6e"
+                "0c94d661261c1f6e",
+                "7b165d480a2ae435"
             ]
         ]
     },
@@ -5527,15 +5537,15 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "get active ffmpeg process id",
-        "func": "let payload = msg.payload;\nif (payload === \"1\") {\n    msg.backgroundcolor = \"\";\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false);\n    global.set(\"ffmpeg_cmd\", \"\");\n    msg.ffmpeg = \"clear\";\n    msg.kill = \"\";\n    return msg;\n}",
+        "func": "let payload = msg.payload;\nif (payload === \"1\") {\n    msg.backgroundcolor = \"\";\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false);\n    global.set(\"ffmpeg_cmd\", \"\");\n    msg.ffmpeg = \"clear\";\n    msg.p9_color = \"\";\n    msg.kill = \"\";\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3240,
-        "y": 3040,
+        "x": 3200,
+        "y": 2840,
         "wires": [
             [
                 "870adb347b148820"
@@ -5548,18 +5558,17 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "then we should stop the transmission and profile",
-        "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\" ;\n    return msg;\n}",
+        "func": "let payload = msg.stop;\nif (payload){\n    global.set(\"stop\", false);\n    msg.payload = \"1\" ;\n    msg.kill = \"\";\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3080,
-        "y": 2920,
+        "x": 3140,
+        "y": 2780,
         "wires": [
             [
-                "0c94d661261c1f6e",
                 "aa4a256618f7c4a6"
             ]
         ]
@@ -5582,8 +5591,8 @@
         "once": true,
         "onceDelay": "5",
         "topic": "",
-        "x": 2640,
-        "y": 2940,
+        "x": 2700,
+        "y": 2780,
         "wires": [
             [
                 "f79b05ded58d1157"
@@ -6908,8 +6917,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3840,
-        "y": 1060,
+        "x": 5160,
+        "y": 940,
         "wires": [
             []
         ]
@@ -6932,8 +6941,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 3650,
-        "y": 1060,
+        "x": 4970,
+        "y": 940,
         "wires": [
             [
                 "40caf32a1fc66903"
@@ -6958,8 +6967,8 @@
         "topic": "",
         "payload": "[]",
         "payloadType": "json",
-        "x": 3650,
-        "y": 1120,
+        "x": 4970,
+        "y": 1000,
         "wires": [
             [
                 "7aa0b41ed418f215"
@@ -6986,8 +6995,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3860,
-        "y": 1120,
+        "x": 5180,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -7010,8 +7019,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 3670,
-        "y": 1180,
+        "x": 4990,
+        "y": 1060,
         "wires": [
             [
                 "cffbb4b1eb45b8da"
@@ -7038,99 +7047,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3860,
-        "y": 1180,
+        "x": 5180,
+        "y": 1060,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "538b8437c0ff15ad",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "channel calibration function",
-        "func": "let calibrated = Boolean(msg.payload);\nif (calibrated && global.get(\"tune_done\")) {\n    let tune_table = global.get(\"tune_table\");\n    global.set(\"tune_done\", false);\n    msg.payload = tune_table[26];\n    msg.options = [\n        { \"144.6MHz\": \"144600000\" },\n        { \"436MHz\": \"436000000\" },\n        { \"437MHz\": \"436999998\" },\n        { \"1242MHz\": \"1242000000\" },\n        { \"1255MHz\": \"1255000062\" },\n        { \"CH1 500/333/250/125KS\": `${tune_table[0]}` },\n        { \"CH2 125KS\": `${tune_table[1]}` },\n        { \"CH3 1000/500/333/250/125KS\": `${tune_table[2]}` },\n        { \"CH4 125KS\": `${tune_table[3]}` },\n        { \"CH5 500/333/250/125KS\": `${tune_table[4]}` },\n        { \"CH6 125KS\": `${tune_table[5]}` },\n        { \"CH7 500/333/250/125KS\": `${tune_table[6]}` },\n        { \"CH8 125KS\": `${tune_table[7]}` },\n        { \"CH9 1000/500/333/250/125KS\": `${tune_table[8]}` },\n        { \"CH10 125KS\": `${tune_table[9]}` },\n        { \"CH11 500/333/250/125KS\": `${tune_table[10]}` },\n        { \"CH12 125KS\": `${tune_table[11]}` },\n        { \"CH13 500/333/250/125KS\": `${tune_table[12]}` },\n        { \"CH14 125KS\": `${tune_table[13]}` },\n        { \"CH15 1000/500/333/250/125KS\": `${tune_table[14]}` },\n        { \"CH16 125KS\": `${tune_table[15]}` },\n        { \"CH17 500/333/250/125KS\": `${tune_table[16]}` },\n        { \"CH18 125KS\": `${tune_table[17]}` },\n        { \"CH19 333/250/125KS\": `${tune_table[18]}` },\n        { \"CH20 125KS\": `${tune_table[19]}` },\n        { \"CH21 333/250/125KS\": `${tune_table[20]}` },\n        { \"CH22 125KS\": `${tune_table[21]}` },\n        { \"CH23 333/250/125KS\": `${tune_table[22]}` },\n        { \"CH24 125KS\": `${tune_table[23]}` },\n        { \"CH25 333/250/125KS\": `${tune_table[24]}` },\n        { \"CH26 125KS\": `${tune_table[25]}` },\n        { \"CH27 333/250/125KS\": `${tune_table[26]}` },\n    ]\n    return msg;\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4040,
-        "y": 1240,
-        "wires": [
-            [
-                "dffe1e50bcaeb0a5",
-                "edea5b446673c7e5"
-            ]
-        ]
-    },
-    {
-        "id": "fca0dc49e0dbc8c8",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 4780,
-        "y": 1200,
-        "wires": [
-            [
-                "231152bfc003a87e"
-            ]
-        ]
-    },
-    {
-        "id": "edea5b446673c7e5",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "once calibrated we save our list",
-        "func": "let payload = msg.options;\nmsg.payload = JSON.stringify(payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4330,
-        "y": 1240,
-        "wires": [
-            [
-                "ec36c024a33fe8bb"
-            ]
-        ]
-    },
-    {
-        "id": "778857993c3190e4",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "Channel calibration checker ",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "0.2",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "tune_done",
-        "payloadType": "global",
-        "x": 3720,
-        "y": 1240,
-        "wires": [
-            [
-                "538b8437c0ff15ad"
-            ]
         ]
     },
     {
@@ -7151,8 +7071,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 4030,
-        "y": 1060,
+        "x": 5350,
+        "y": 940,
         "wires": [
             [
                 "c2854c94f59a9aaa"
@@ -7172,61 +7092,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4600,
-        "y": 1060,
+        "x": 5920,
+        "y": 940,
         "wires": [
             [
                 "dffe1e50bcaeb0a5"
-            ]
-        ]
-    },
-    {
-        "id": "2e0709eeb3596e1a",
-        "type": "ui_toast",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "yellow",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Channel calibration complete!",
-        "x": 4410,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "231152bfc003a87e",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Channel calibration complete!",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 4140,
-        "y": 1120,
-        "wires": [
-            [
-                "2e0709eeb3596e1a"
             ]
         ]
     },
@@ -7466,12 +7336,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3020,
-        "y": 3140,
+        "x": 3080,
+        "y": 3020,
         "wires": [
             [
-                "023820f309b020da",
-                "d7e44f153065aff1"
+                "023820f309b020da"
             ]
         ]
     },
@@ -7493,8 +7362,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 2,
-        "x": 2630,
-        "y": 3160,
+        "x": 2690,
+        "y": 3020,
         "wires": [
             [
                 "3e90d102d97d90d1"
@@ -8875,7 +8744,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "553167af0b3221c1",
         "name": "spectrum click tx frequency",
-        "func": "let busy = msg.payload.busy;\nif (busy === \"true\" && global.get(\"mute\") === \"0\") return;\nif(msg.payload.tune) {\n    global.set(\"tune\", Boolean(msg.payload.tune));\n    if (msg.payload.uplink === \"2409.75\" && global.get(\"tune_table\").length === 26) global.set(\"tune_done\", true);\n}\nlet freq = Number(msg.payload.uplink);\nfreq = freq * 1000000\nmsg.payload = freq; \nreturn msg;",
+        "func": "let busy = msg.payload.busy;\nif (busy === \"true\" && global.get(\"mute\") === \"0\") return;\n\nlet freq = Number(msg.payload.uplink);\nfreq = freq * 1000000\nmsg.payload = freq; \nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8956,6 +8825,7 @@
         "id": "3d529b46ee563149",
         "type": "http in",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "3bec8a3571888efd",
         "name": "",
         "url": "/setTune",
@@ -13258,8 +13128,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2860,
-        "y": 3000,
+        "x": 2880,
+        "y": 2980,
         "wires": [
             [
                 "ec867dfd3be3e114"
@@ -13279,8 +13149,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2580,
-        "y": 3000,
+        "x": 2680,
+        "y": 2940,
         "wires": [
             [
                 "ec867dfd3be3e114"
@@ -13300,8 +13170,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "kill ffplay",
-        "x": 3000,
-        "y": 3080,
+        "x": 3040,
+        "y": 2940,
         "wires": [
             [],
             [],
@@ -13832,8 +13702,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4210,
-        "y": 1060,
+        "x": 5530,
+        "y": 940,
         "wires": [
             [
                 "ba71cda151f629ae"
@@ -13853,32 +13723,11 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 4400,
-        "y": 1060,
+        "x": 5720,
+        "y": 940,
         "wires": [
             [
                 "09f981f156e98728"
-            ]
-        ]
-    },
-    {
-        "id": "ec36c024a33fe8bb",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "set channels path",
-        "func": "msg.filename = \"settings\\\\channels.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/channels.json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4570,
-        "y": 1200,
-        "wires": [
-            [
-                "fca0dc49e0dbc8c8"
             ]
         ]
     },
@@ -15371,7 +15220,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "set defualt pluto ip and port",
+        "label": "set default pluto ip and port",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -15523,7 +15372,7 @@
         "g": "d320c7a134a3a36a",
         "name": "",
         "pauseType": "delay",
-        "timeout": "250",
+        "timeout": "0",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -15549,7 +15398,7 @@
         "g": "d320c7a134a3a36a",
         "name": "",
         "pauseType": "delay",
-        "timeout": "250",
+        "timeout": "0",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -15760,23 +15609,6 @@
                 "79ca0ff5d731c280"
             ]
         ]
-    },
-    {
-        "id": "d7e44f153065aff1",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "72ddf00d98862ef3",
-        "name": "debug 25",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3240,
-        "y": 3160,
-        "wires": []
     },
     {
         "id": "804a1873f1bbe26f",
@@ -16091,11 +15923,507 @@
         "topic": "",
         "payload": "pid",
         "payloadType": "global",
-        "x": 2600,
-        "y": 2880,
+        "x": 2730,
+        "y": 2740,
         "wires": [
             [
                 "c4c1592e68a08ac2"
+            ]
+        ]
+    },
+    {
+        "id": "7b165d480a2ae435",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "p9_color",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3710,
+        "y": 2420,
+        "wires": [
+            [
+                "a421a70d3ead9cd8"
+            ]
+        ]
+    },
+    {
+        "id": "a421a70d3ead9cd8",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 3910,
+        "y": 2420,
+        "wires": [
+            [
+                "6f5791e469edab55"
+            ]
+        ]
+    },
+    {
+        "id": "a784bb0de8df6b05",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "",
+        "props": [],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 3670,
+        "y": 2340,
+        "wires": [
+            [
+                "193a32ea6df689be"
+            ]
+        ]
+    },
+    {
+        "id": "193a32ea6df689be",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "button animations",
+        "func": "if (global.get(\"pid\") !== undefined) {\n    // We have a active ffmpeg profile...\n    msg.start_animation = \"fa-circle-o-notch fa-spin fa-2x fa-fw\";\n    return msg;\n}\n// We have no active ffmpeg profile...\nmsg.start_animation = \"fa-circle-o-notch fa-2x\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3910,
+        "y": 2360,
+        "wires": [
+            [
+                "6f5791e469edab55"
+            ]
+        ]
+    },
+    {
+        "id": "72b5ad0fc32a3da9",
+        "type": "ui_switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "72ddf00d98862ef3",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 2890,
+        "y": 3100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "538b8437c0ff15ad",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "channel calibration function",
+        "func": "let calibrated = Boolean(msg.payload);\nif (calibrated) {\n    let tune_table = global.get(\"tune_table\");\n    global.set(\"tune_done\", false);\n    msg.payload = tune_table[26];\n    msg.options = [\n        { \"144.6MHz\": \"144600000\" },\n        { \"436MHz\": \"436000000\" },\n        { \"437MHz\": \"436999998\" },\n        { \"1242MHz\": \"1242000000\" },\n        { \"1255MHz\": \"1255000062\" },\n        { \"CH1 500/333/250/125KS\": `${tune_table[0]}` },\n        { \"CH2 125KS\": `${tune_table[1]}` },\n        { \"CH3 1000/500/333/250/125KS\": `${tune_table[2]}` },\n        { \"CH4 125KS\": `${tune_table[3]}` },\n        { \"CH5 500/333/250/125KS\": `${tune_table[4]}` },\n        { \"CH6 125KS\": `${tune_table[5]}` },\n        { \"CH7 500/333/250/125KS\": `${tune_table[6]}` },\n        { \"CH8 125KS\": `${tune_table[7]}` },\n        { \"CH9 1000/500/333/250/125KS\": `${tune_table[8]}` },\n        { \"CH10 125KS\": `${tune_table[9]}` },\n        { \"CH11 500/333/250/125KS\": `${tune_table[10]}` },\n        { \"CH12 125KS\": `${tune_table[11]}` },\n        { \"CH13 500/333/250/125KS\": `${tune_table[12]}` },\n        { \"CH14 125KS\": `${tune_table[13]}` },\n        { \"CH15 1000/500/333/250/125KS\": `${tune_table[14]}` },\n        { \"CH16 125KS\": `${tune_table[15]}` },\n        { \"CH17 500/333/250/125KS\": `${tune_table[16]}` },\n        { \"CH18 125KS\": `${tune_table[17]}` },\n        { \"CH19 333/250/125KS\": `${tune_table[18]}` },\n        { \"CH20 125KS\": `${tune_table[19]}` },\n        { \"CH21 333/250/125KS\": `${tune_table[20]}` },\n        { \"CH22 125KS\": `${tune_table[21]}` },\n        { \"CH23 333/250/125KS\": `${tune_table[22]}` },\n        { \"CH24 125KS\": `${tune_table[23]}` },\n        { \"CH25 333/250/125KS\": `${tune_table[24]}` },\n        { \"CH26 125KS\": `${tune_table[25]}` },\n        { \"CH27 333/250/125KS\": `${tune_table[26]}` },\n    ]\n    global.set(\"tune_table\", []);\n    return msg;\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 5940,
+        "y": 1060,
+        "wires": [
+            [
+                "edea5b446673c7e5"
+            ]
+        ]
+    },
+    {
+        "id": "edea5b446673c7e5",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "once calibrated we save our list",
+        "func": "let payload = msg.options;\nmsg.payload = JSON.stringify(payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 6210,
+        "y": 1060,
+        "wires": [
+            [
+                "ec36c024a33fe8bb"
+            ]
+        ]
+    },
+    {
+        "id": "ec36c024a33fe8bb",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "set channels path",
+        "func": "msg.filename = \"settings\\\\channels.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/channels.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 6470,
+        "y": 1080,
+        "wires": [
+            [
+                "fca0dc49e0dbc8c8"
+            ]
+        ]
+    },
+    {
+        "id": "fca0dc49e0dbc8c8",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 6660,
+        "y": 1080,
+        "wires": [
+            [
+                "231152bfc003a87e"
+            ]
+        ]
+    },
+    {
+        "id": "231152bfc003a87e",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Channel calibration complete!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 6820,
+        "y": 1080,
+        "wires": [
+            [
+                "2e0709eeb3596e1a"
+            ]
+        ]
+    },
+    {
+        "id": "2e0709eeb3596e1a",
+        "type": "ui_toast",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "yellow",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Channel calibration complete!",
+        "x": 6750,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa8a006c0eeeb105",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "group": "861f885ba5c5eebc",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrate",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 5050,
+        "y": 1220,
+        "wires": [
+            [
+                "19af65617856761b"
+            ]
+        ]
+    },
+    {
+        "id": "f9b91a99d9c45cf8",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "Send: Frequency",
+        "func": "let payload = Number(msg.payload) + global.get(\"device.tx.offset\");\nlet topic = `${global.get(\"cmdPath\")}/tx/frequency`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"tune\", true);\n// global.set(\"deviceChange\", true);\n// global.set(\"device.tx.frequency\", payload);\n// global.set(\"settings.frequency\", payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 5560,
+        "y": 1240,
+        "wires": [
+            [
+                "7f4880a53860cbd8"
+            ]
+        ]
+    },
+    {
+        "id": "7f4880a53860cbd8",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 5730,
+        "y": 1240,
+        "wires": [
+            [
+                "f7ad545acf4151b3"
+            ]
+        ]
+    },
+    {
+        "id": "f7ad545acf4151b3",
+        "type": "mqtt out",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "064bde8eca01e996",
+        "x": 5900,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "19af65617856761b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "Frequency table for channel calibration",
+        "func": "let frequencies = [\n    2403250000,\n    2403500000,\n    2403750000,\n    2404000000,\n    2404250000,\n    2404500000,\n    2404750000,\n    2405000000,\n    2405250000,\n    2405500000,\n    2405750000,\n    2406000000,\n    2406250000,\n    2406500000,\n    2406750000,\n    2407000000,\n    2407250000,\n    2407500000,\n    2407750000,\n    2408000000,\n    2408250000,\n    2408500000,\n    2408750000,\n    2409000000,\n    2409250000,\n    2409500000,\n    2409750000\n]\nmsg.payload = frequencies;\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 5310,
+        "y": 1180,
+        "wires": [
+            [
+                "5423e8db27441d88"
+            ]
+        ]
+    },
+    {
+        "id": "da43e8cbedf7105d",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "tune_done",
+        "payloadType": "global",
+        "x": 5510,
+        "y": 1060,
+        "wires": [
+            [
+                "538b8437c0ff15ad",
+                "2c6280037cd8725d"
+            ]
+        ]
+    },
+    {
+        "id": "5423e8db27441d88",
+        "type": "split",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "splt": "",
+        "spltType": "str",
+        "arraySplt": "1",
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 5300,
+        "y": 1260,
+        "wires": [
+            [
+                "f9b91a99d9c45cf8"
+            ]
+        ]
+    },
+    {
+        "id": "51acce0652b2ef0a",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "tune_table",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 5900,
+        "y": 1140,
+        "wires": [
+            [
+                "016922c1059df840"
+            ]
+        ]
+    },
+    {
+        "id": "016922c1059df840",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 6120,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "2c6280037cd8725d",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "4b15878090b5548b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 5730,
+        "y": 1140,
+        "wires": [
+            [
+                "51acce0652b2ef0a"
             ]
         ]
     },
@@ -20550,7 +20878,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">\n                        Shift (333KS) / ALT (250KS) + click channel bars or click signal  <a style=\"color:#C10B0B\" href=\"https://youtu.be/-ZdQOVg26_0\" target=\"_blank\">channel\n                            calibration</a></span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
         "output": "str",
         "x": 1190,
         "y": 360,

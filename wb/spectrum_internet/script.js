@@ -232,22 +232,22 @@ var canvasHeightLast;
     /* we clicked on a channel bar... */
     if (uplink !== undefined && canvasClickBW !== undefined && !busy) {
       /* Channel calibration mode */
-      if (ev.altKey && ev.shiftKey) {
-        if (busy) return;
-        lastUplink = uplink;
-        lastCanvasClickBW = canvasClickBW;
-        fetch(
-          `${url}/setTx?` +
-            new URLSearchParams({
-              uplink,
-              downlink,
-              SR: canvasClickBW,
-              busy: false,
-              tune: true,
-            })
-        );
-        return;
-      }
+      // if (ev.altKey && ev.shiftKey) {
+      //   if (busy) return;
+      //   lastUplink = uplink;
+      //   lastCanvasClickBW = canvasClickBW;
+      //   fetch(
+      //     `${url}/setTx?` +
+      //       new URLSearchParams({
+      //         uplink,
+      //         downlink,
+      //         SR: canvasClickBW,
+      //         busy: false,
+      //         tune: true,
+      //       })
+      //   );
+      //   return;
+      // }
 
       // 333KS on > 500KS channel
       if (ev.shiftKey && canvasClickBW > 0.333) {
