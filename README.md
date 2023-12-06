@@ -1,9 +1,8 @@
 # DATV-Red
 
 ## Prerequisite 
-- Please upgrade to [FW 0303](https://github.com/Psynosaur/DATV-Red/wiki#flashing-steps) first
 - Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
-- Firmware flashing [walk through video](https://www.youtube.com/watch?v=g8_ktz4kCkY)
+- Please see [flashing steps](https://github.com/Psynosaur/DATV-Red/wiki#flashing-steps)
 
 ## Setup and use
 1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
