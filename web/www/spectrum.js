@@ -1205,7 +1205,7 @@ function Spectrum(id, options) {
   // Setup state
   this.paused = false;
   this.fullscreen = false;
-  this.min_db = 415;
+  this.min_db = 435;
   this.max_db = 515;
   this.spectrumHeight = 0;
   this.tuningStep = 100000;

@@ -129,8 +129,8 @@
         ],
         "x": 2,
         "y": 307,
-        "w": 1276,
-        "h": 666
+        "w": 1296,
+        "h": 706
     },
     {
         "id": "4bfefaeb7f82f4c6",
@@ -298,19 +298,16 @@
             "7f4880a53860cbd8",
             "f7ad545acf4151b3",
             "da43e8cbedf7105d",
-            "2c6280037cd8725d",
             "edea5b446673c7e5",
-            "51acce0652b2ef0a",
             "ec36c024a33fe8bb",
-            "016922c1059df840",
             "fca0dc49e0dbc8c8",
             "231152bfc003a87e",
             "2e0709eeb3596e1a"
         ],
         "x": 4874,
         "y": 899,
-        "w": 2052,
-        "h": 402
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "1f5722b7aff1a710",
@@ -660,11 +657,12 @@
             "32e18f58d4f086f8",
             "76bed5f0ebc81a4c",
             "56ad120991eb3c83",
-            "4dc0d6bc0972a150"
+            "4dc0d6bc0972a150",
+            "cf6155c5314434de"
         ],
         "x": 34,
         "y": 1139,
-        "w": 1192,
+        "w": 1232,
         "h": 1082
     },
     {
@@ -1156,7 +1154,9 @@
             "4497dbfe8502fab3"
         ],
         "x": 74,
-        "y": 379
+        "y": 379,
+        "w": 1082,
+        "h": 442
     },
     {
         "id": "2406e32417780de0",
@@ -1193,7 +1193,9 @@
             "b5cfddf388cbc440"
         ],
         "x": 54,
-        "y": 99
+        "y": 99,
+        "w": 1512,
+        "h": 282
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1262,8 +1264,8 @@
         ],
         "x": 28,
         "y": 333,
-        "w": 1224,
-        "h": 614
+        "w": 1244,
+        "h": 654
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -1302,11 +1304,12 @@
             "63698f5f30341a43",
             "e56ed07756258705",
             "7d18f3e7511a4c0f",
-            "11531a3595ef0f5a"
+            "11531a3595ef0f5a",
+            "430d098e101f5c6c"
         ],
         "x": 454,
         "y": 539,
-        "w": 592,
+        "w": 712,
         "h": 162
     },
     {
@@ -1344,8 +1347,8 @@
             "515e9264fb253fbc",
             "2f37f6fa43572da4"
         ],
-        "x": 354,
-        "y": 799,
+        "x": 454,
+        "y": 839,
         "w": 792,
         "h": 122
     },
@@ -1368,6 +1371,59 @@
         "y": 359,
         "w": 332,
         "h": 162
+    },
+    {
+        "id": "e403b5b637592353",
+        "type": "group",
+        "z": "27bb1861e8b5803b",
+        "name": "plutos www folder",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c89e4837c83d2853",
+            "9fbc129fa6394326",
+            "fd9ac23c6e70a5aa",
+            "cbf50d9eb89da5d2",
+            "9d495d79ebc38951",
+            "f669a447f3e908ed",
+            "d457e075ac825cb5",
+            "b796d646016935f0",
+            "a88f51e66fb17714",
+            "8c30ea56a34d3ed6",
+            "c64ccc73f797daeb",
+            "1cd090be8ed507a2",
+            "6126de06636f2a66",
+            "78515082550cdaf2",
+            "8d39370d898accaf",
+            "757d2c26dbe0099b",
+            "44c3730ff5adc318",
+            "8623bdd3929c0b5e",
+            "851ec4f2ca907ce4",
+            "4de0745ac50ff8b8"
+        ],
+        "x": 34,
+        "y": 199,
+        "w": 1512,
+        "h": 282
+    },
+    {
+        "id": "a98123637b40fe14",
+        "type": "group",
+        "z": "27bb1861e8b5803b",
+        "name": "old chat",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9d1da64159907870",
+            "34ce25461d4e6d42",
+            "e0101a5a9a04f1aa"
+        ],
+        "x": 34,
+        "y": 79,
+        "w": 462,
+        "h": 82
     },
     {
         "id": "9b3296db2e0c849f",
@@ -2788,7 +2844,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: frequency",
-        "func": "var payload = msg.payload;\n\nif (global.get(\"tune\")) {\n    let tune_table = new Set(global.get(\"tune_table\"));\n    tune_table.add(Number(msg.payload))\n    \n    if (Array.from(tune_table).length === 27) {\n        global.set(\"tune_table\", Array.from(tune_table));\n        global.set(\"tune\", false);\n        global.set(\"tune_done\", true);\n        return msg;\n    }\n    global.set(\"tune_table\", Array.from(tune_table));\n}\nreturn msg;\n\n\n",
+        "func": "var payload = msg.payload;\n\nif (global.get(\"tune\")) {\n    let tune_table = new Set(global.get(\"tune_table\"));\n    tune_table.add(Number(msg.payload))\n    \n    if (Array.from(tune_table).length === 27) {\n        global.set(\"tune_table\", Array.from(tune_table));\n        global.set(\"tune\", false);\n        global.set(\"tune_done\", true);\n        msg.tuned_freq = global.get(\"device.tx.frequency\");\n        return msg;\n    }\n    global.set(\"tune_table\", Array.from(tune_table));\n}\nreturn msg;\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2799,7 +2855,8 @@
         "y": 1420,
         "wires": [
             [
-                "dffe1e50bcaeb0a5"
+                "dffe1e50bcaeb0a5",
+                "cf6155c5314434de"
             ]
         ]
     },
@@ -7071,8 +7128,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 5350,
-        "y": 940,
+        "x": 4970,
+        "y": 1120,
         "wires": [
             [
                 "c2854c94f59a9aaa"
@@ -7092,8 +7149,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5920,
-        "y": 940,
+        "x": 5540,
+        "y": 1120,
         "wires": [
             [
                 "dffe1e50bcaeb0a5"
@@ -8614,7 +8671,6 @@
         "id": "11531a3595ef0f5a",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "553167af0b3221c1",
         "name": "Kill transmission",
         "rules": [
@@ -8623,7 +8679,7 @@
                 "p": "payload",
                 "pt": "msg",
                 "to": "1",
-                "tot": "num"
+                "tot": "str"
             }
         ],
         "action": "",
@@ -8631,11 +8687,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 1060,
         "y": 620,
         "wires": [
             [
-                "55bca069bdb08ee7"
+                "55bca069bdb08ee7",
+                "0c94d661261c1f6e",
+                "7b165d480a2ae435"
             ]
         ]
     },
@@ -8744,7 +8802,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "553167af0b3221c1",
         "name": "spectrum click tx frequency",
-        "func": "let busy = msg.payload.busy;\nif (busy === \"true\" && global.get(\"mute\") === \"0\") return;\n\nlet freq = Number(msg.payload.uplink);\nfreq = freq * 1000000\nmsg.payload = freq; \nreturn msg;",
+        "func": "let busy = msg.payload.busy;\nif (global.get(\"mute\") === \"0\") return;\n\nlet freq = Number(msg.payload.uplink);\nfreq = freq * 1000000\nmsg.payload = freq; \nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8765,7 +8823,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "553167af0b3221c1",
         "name": "spectrum click tx symbol rate if different",
-        "func": "let busy = msg.payload.busy;\nif (global.get(\"mute\") === \"0\") return;\n\nlet sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000;\nif (`${sr}` !== global.get(\"device.tx.dvbs2.sr\")){\n    msg.payload = sr; \n    return msg;\n}",
+        "func": "let busy = msg.payload.busy;\n\nlet sr = parseFloat(msg.payload.SR);\nsr = sr * 1000000;\nif (`${sr}` !== global.get(\"device.tx.dvbs2.sr\")){\n    msg.payload = sr; \n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8776,8 +8834,8 @@
         "y": 620,
         "wires": [
             [
-                "11531a3595ef0f5a",
-                "c663427b8e7b5e29"
+                "c663427b8e7b5e29",
+                "430d098e101f5c6c"
             ]
         ]
     },
@@ -8794,8 +8852,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 880,
+        "x": 910,
+        "y": 920,
         "wires": [
             [
                 "2f37f6fa43572da4",
@@ -8814,11 +8872,11 @@
         "iface": "",
         "port": "",
         "ipv": "udp4",
-        "outport": "4466",
+        "outport": "",
         "base64": false,
         "multicast": "multi",
-        "x": 1070,
-        "y": 880,
+        "x": 1170,
+        "y": 920,
         "wires": []
     },
     {
@@ -11861,8 +11919,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 470,
-        "y": 880,
+        "x": 570,
+        "y": 920,
         "wires": [
             [
                 "515e9264fb253fbc"
@@ -13702,8 +13760,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5530,
-        "y": 940,
+        "x": 5150,
+        "y": 1120,
         "wires": [
             [
                 "ba71cda151f629ae"
@@ -13723,8 +13781,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 5720,
-        "y": 940,
+        "x": 5340,
+        "y": 1120,
         "wires": [
             [
                 "09f981f156e98728"
@@ -14705,8 +14763,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 840,
+        "x": 620,
+        "y": 880,
         "wires": [
             [
                 "515e9264fb253fbc"
@@ -16072,8 +16130,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5940,
-        "y": 1060,
+        "x": 5280,
+        "y": 1180,
         "wires": [
             [
                 "edea5b446673c7e5"
@@ -16093,8 +16151,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6210,
-        "y": 1060,
+        "x": 5570,
+        "y": 1180,
         "wires": [
             [
                 "ec36c024a33fe8bb"
@@ -16114,8 +16172,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 6470,
-        "y": 1080,
+        "x": 5810,
+        "y": 1180,
         "wires": [
             [
                 "fca0dc49e0dbc8c8"
@@ -16134,8 +16192,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 6660,
-        "y": 1080,
+        "x": 5980,
+        "y": 1180,
         "wires": [
             [
                 "231152bfc003a87e"
@@ -16162,8 +16220,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 6820,
-        "y": 1080,
+        "x": 6140,
+        "y": 1180,
         "wires": [
             [
                 "2e0709eeb3596e1a"
@@ -16186,8 +16244,8 @@
         "className": "",
         "topic": "",
         "name": "Channel calibration complete!",
-        "x": 6750,
-        "y": 1160,
+        "x": 6370,
+        "y": 1180,
         "wires": [
             []
         ]
@@ -16203,7 +16261,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Calibrate your rx channels for pluto, takes 3s",
+        "label": "Calibrate your rx channels for pluto, wait 3 seconds",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -16213,8 +16271,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 5160,
-        "y": 1220,
+        "x": 5470,
+        "y": 940,
         "wires": [
             [
                 "19af65617856761b"
@@ -16234,8 +16292,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5560,
-        "y": 1240,
+        "x": 6210,
+        "y": 940,
         "wires": [
             [
                 "7f4880a53860cbd8"
@@ -16260,8 +16318,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 5800,
-        "y": 1240,
+        "x": 6420,
+        "y": 940,
         "wires": [
             [
                 "f7ad545acf4151b3"
@@ -16283,8 +16341,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 5970,
-        "y": 1240,
+        "x": 6590,
+        "y": 940,
         "wires": []
     },
     {
@@ -16300,8 +16358,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 5310,
-        "y": 1180,
+        "x": 5830,
+        "y": 940,
         "wires": [
             [
                 "5423e8db27441d88"
@@ -16326,12 +16384,11 @@
         "topic": "",
         "payload": "tune_done",
         "payloadType": "global",
-        "x": 5510,
-        "y": 1060,
+        "x": 5010,
+        "y": 1180,
         "wires": [
             [
-                "538b8437c0ff15ad",
-                "2c6280037cd8725d"
+                "538b8437c0ff15ad"
             ]
         ]
     },
@@ -16347,8 +16404,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 5300,
-        "y": 1260,
+        "x": 6050,
+        "y": 940,
         "wires": [
             [
                 "f9b91a99d9c45cf8"
@@ -16356,74 +16413,49 @@
         ]
     },
     {
-        "id": "51acce0652b2ef0a",
-        "type": "change",
+        "id": "cf6155c5314434de",
+        "type": "function",
         "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "tune_table",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 5900,
-        "y": 1140,
+        "g": "d320c7a134a3a36a",
+        "name": "Set frequency back to before calibration",
+        "func": "if (msg.tuned_freq){\n    let payload = msg.tuned_freq;\n    let topic = `${global.get(\"cmdPath\")}/tx/frequency`;\n    msg.topic = topic;\n    msg.payload = payload;\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 1420,
         "wires": [
             [
-                "016922c1059df840"
+                "e5b15ef8662e723b"
             ]
         ]
     },
     {
-        "id": "016922c1059df840",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
-        "name": "debug 26",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 6120,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "2c6280037cd8725d",
+        "id": "430d098e101f5c6c",
         "type": "switch",
         "z": "2ec6a7ddfe0cd173",
-        "g": "4b15878090b5548b",
+        "g": "553167af0b3221c1",
         "name": "",
-        "property": "payload",
-        "propertyType": "msg",
+        "property": "mute",
+        "propertyType": "global",
         "rules": [
             {
                 "t": "eq",
-                "v": "1",
-                "vt": "num"
+                "v": "0",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 5730,
-        "y": 1140,
+        "x": 890,
+        "y": 620,
         "wires": [
             [
-                "51acce0652b2ef0a"
+                "11531a3595ef0f5a"
             ]
         ]
     },
@@ -19331,46 +19363,10 @@
         ]
     },
     {
-        "id": "0e2c3433f42c932c",
-        "type": "http in",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "url": "/chat",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 200,
-        "y": 60,
-        "wires": [
-            [
-                "24353fa1e84c365f"
-            ]
-        ]
-    },
-    {
-        "id": "24353fa1e84c365f",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "filename": "wb/chat.html",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 350,
-        "y": 60,
-        "wires": [
-            [
-                "31f91a40fbe9635c"
-            ]
-        ]
-    },
-    {
         "id": "4de0745ac50ff8b8",
         "type": "ui_iframe",
         "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
         "group": "d2e4abefdc42e427",
         "name": "chat iframe",
         "order": 1,
@@ -19379,19 +19375,440 @@
         "url": "/chat",
         "origin": "*",
         "scale": 100,
-        "x": 350,
-        "y": 100,
+        "x": 1330,
+        "y": 260,
         "wires": [
             []
         ]
     },
     {
-        "id": "31f91a40fbe9635c",
+        "id": "c89e4837c83d2853",
+        "type": "http in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "g": "e403b5b637592353",
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "8d39370d898accaf"
+            ]
+        ]
+    },
+    {
+        "id": "9fbc129fa6394326",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "socket_io",
+        "field": "payload.socket_io",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 860,
+        "y": 280,
+        "wires": [
+            [
+                "757d2c26dbe0099b"
+            ]
+        ]
+    },
+    {
+        "id": "fd9ac23c6e70a5aa",
         "type": "http response",
         "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
         "name": "",
-        "x": 490,
-        "y": 60,
+        "x": 1470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "cbf50d9eb89da5d2",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>QO-100 Wideband Chat</title>\n    <meta name=\"description\" content=\"BATC & AMSAT-UK Qatar-OSCAR 100 (Es'hail-2) Wideband Chat-only page\">\n    <meta name=\"author\" content=\"BATC & AMSAT-UK\">\n\n    <style>{{&style}}</style>\n    <script>{{&jquery}}</script>\n    <script>{{&socket_io}}</script>\n    <script>{{&chat}}</script>\n    <script>{{&script}}</script>\n \n</head>\n<body>\n\t<div id=\"chat\"></div>\n</body>\n</html>\n",
+        "x": 1290,
+        "y": 340,
+        "wires": [
+            [
+                "fd9ac23c6e70a5aa"
+            ]
+        ]
+    },
+    {
+        "id": "9d495d79ebc38951",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "",
+        "filename": "wb/chat/style.css",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "f669a447f3e908ed"
+            ]
+        ]
+    },
+    {
+        "id": "f669a447f3e908ed",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "style.css",
+        "field": "payload.style",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 860,
+        "y": 240,
+        "wires": [
+            [
+                "78515082550cdaf2"
+            ]
+        ]
+    },
+    {
+        "id": "d457e075ac825cb5",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "",
+        "filename": "wb/chat/socket.io-3.1.1.min.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "9fbc129fa6394326"
+            ]
+        ]
+    },
+    {
+        "id": "b796d646016935f0",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "jquery",
+        "field": "payload.jquery",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 320,
+        "wires": [
+            [
+                "44c3730ff5adc318"
+            ]
+        ]
+    },
+    {
+        "id": "a88f51e66fb17714",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "",
+        "filename": "wb/chat/jquery.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "b796d646016935f0"
+            ]
+        ]
+    },
+    {
+        "id": "8c30ea56a34d3ed6",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "",
+        "filename": "wb/chat/chat.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "c64ccc73f797daeb"
+            ]
+        ]
+    },
+    {
+        "id": "c64ccc73f797daeb",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "chat",
+        "field": "payload.chat",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 360,
+        "wires": [
+            [
+                "8623bdd3929c0b5e"
+            ]
+        ]
+    },
+    {
+        "id": "1cd090be8ed507a2",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "",
+        "filename": "wb/chat/script.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 440,
+        "wires": [
+            [
+                "6126de06636f2a66"
+            ]
+        ]
+    },
+    {
+        "id": "6126de06636f2a66",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "script",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "851ec4f2ca907ce4"
+            ]
+        ]
+    },
+    {
+        "id": "78515082550cdaf2",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "set msg.style",
+        "func": "msg.style = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            [
+                "d457e075ac825cb5"
+            ]
+        ]
+    },
+    {
+        "id": "8d39370d898accaf",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "function 11",
+        "func": "msg.url = `/chat`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "9d495d79ebc38951"
+            ]
+        ]
+    },
+    {
+        "id": "757d2c26dbe0099b",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "set msg.spectrum",
+        "func": "msg.socket_io = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 280,
+        "wires": [
+            [
+                "a88f51e66fb17714"
+            ]
+        ]
+    },
+    {
+        "id": "44c3730ff5adc318",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "set msg.colormap",
+        "func": "msg.jquery = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 320,
+        "wires": [
+            [
+                "8c30ea56a34d3ed6"
+            ]
+        ]
+    },
+    {
+        "id": "8623bdd3929c0b5e",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "set msg.chat",
+        "func": "msg.chat = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 360,
+        "wires": [
+            [
+                "1cd090be8ed507a2"
+            ]
+        ]
+    },
+    {
+        "id": "851ec4f2ca907ce4",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "g": "e403b5b637592353",
+        "name": "set msg.script",
+        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 440,
+        "wires": [
+            [
+                "cbf50d9eb89da5d2"
+            ]
+        ]
+    },
+    {
+        "id": "9d1da64159907870",
+        "type": "http in",
+        "z": "27bb1861e8b5803b",
+        "g": "a98123637b40fe14",
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "34ce25461d4e6d42"
+            ]
+        ]
+    },
+    {
+        "id": "34ce25461d4e6d42",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "g": "a98123637b40fe14",
+        "name": "",
+        "filename": "wb/chat.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "e0101a5a9a04f1aa"
+            ]
+        ]
+    },
+    {
+        "id": "e0101a5a9a04f1aa",
+        "type": "http response",
+        "z": "27bb1861e8b5803b",
+        "g": "a98123637b40fe14",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 420,
+        "y": 120,
         "wires": []
     },
     {
@@ -20878,7 +21295,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\"><canvas id=\"c\" height=\"200\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
         "output": "str",
         "x": 1190,
         "y": 360,
