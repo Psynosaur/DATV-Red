@@ -7,8 +7,16 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>    
     <body>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const url = urlParams.get('url')
+        const call_sign = urlParams.get('call_sign')
+        var pluto_url = url;
+        var callsign = call_sign;
+    </script>
         <canvas id="waterfall"></canvas>
-        <script src='./vendor/paho/js/paho-mqtt-min.js'></script>
+        <script src='vendor/mqtt.min.js'></script>
         <script src="colormap.js"></script>
         <script src="spectrum.js"></script>
         <script src="mqtt.js"></script>

@@ -67,6 +67,7 @@
     let nco = "";
     let queue = "";
     let fec = "";
+    let sr = "";
     let bitrate = "";
     let constel = "";
     let url = `ws://${plutoAdrress}:9001`
@@ -93,6 +94,8 @@
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/fec`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/sr`, () => { })
+
     })
 
     console.log(client);
@@ -131,7 +134,7 @@
         frequency = `${parseInt(message.toString())} Hz`;
       }
       if (topic === `dt/pluto/${callsign}/tx/gain`) {
-        gain = `${parseInt(message.toString())} dBm`;
+        gain = `${parseFloat(message.toString()).toFixed(2)} dBm`;
       }
       if (topic === `dt/pluto/${callsign}/tx/nco`) {
         nco = `${parseInt(message.toString())} Hz`;
@@ -141,6 +144,9 @@
       }
       if (topic === `dt/pluto/${callsign}/tx/dvbs2/fec`) {
         fec = `${message.toString()}`;
+      }
+      if (topic === `dt/pluto/${callsign}/tx/dvbs2/sr`) {
+        sr = `${message.toString()}`;
       }
       if (topic === `dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`) {
         bitrate = `${parseInt(message.toString()) / 1000} kbits/s`;
@@ -159,6 +165,7 @@
         stats.innerText =
           `\nTS Bit Rate: ${bitrate}` +
           `\nFrequency: ${frequency}` +
+          `\nSymbol Rate: ${Number(sr)/1000} kS/s` +
           `\nConstel: ${constel.toUpperCase()}` +
           `\nFEC: ${fec}` +
           `\nGain ${gain}` +
