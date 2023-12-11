@@ -1186,14 +1186,14 @@ function Spectrum(id, options) {
   this.centerHz = options && options.centerHz ? options.centerHz : 0;
   this.spanHz = options && options.spanHz ? options.spanHz : 0;
   this.gain = options && options.gain ? options.gain : 0;
-  this.fps = options && options.fps ? options.fps : 60;
+  this.fps = options && options.fps ? options.fps : 50;
   this.wf_size = options && options.wf_size ? options.wf_size : 0;
   this.wf_rows = options && options.wf_rows ? options.wf_rows : 4096 + 4096;
   this.spectrumPercent =
     options && options.spectrumPercent ? options.spectrumPercent : 40;
   this.spectrumPercentStep =
     options && options.spectrumPercentStep ? options.spectrumPercentStep : 5;
-  this.averaging = options && options.averaging ? options.averaging : 20;
+  this.averaging = options && options.averaging ? options.averaging : 22;
   this.maxHold = options && options.maxHold ? options.maxHold : false;
   this.autoScale = options && options.autoScale ? options.autoScale : false;
 
@@ -1205,8 +1205,8 @@ function Spectrum(id, options) {
   // Setup state
   this.paused = false;
   this.fullscreen = false;
-  this.min_db = 435;
-  this.max_db = 515;
+  this.min_db = 420;
+  this.max_db = 530;
   this.spectrumHeight = 0;
   this.tuningStep = 100000;
   this.maxbinval = 0;

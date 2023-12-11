@@ -618,7 +618,7 @@ var canvasHeightLast;
       draw_channel(f, 0.125, 7.025 / 8);
     }
     /* draw active rx and tx channels */
-    ctx.font = "19px Arial";
+    ctx.font = "bold 19px Arial";
     ctx.fillStyle = invertColor(band_colour);
     ctx.textAlign = "center";
     ctx.fillText("RX", activeXd1_1 - 20, activeYd_1);
@@ -631,7 +631,7 @@ var canvasHeightLast;
       }
       obj = JSON.parse(tuned_channels[j]);
       ctx.fillStyle = invertColor(band_colour);
-      ctx.font = "13px Arial";
+      ctx.font = "bold 15px Arial";
       ctx.textAlign = "center";
       ctx.fillText(`CH${j + 1}`, obj.x1 - 20, obj.y1 + obj.height / 2);
       ctx.globalAlpha = 0.4;
@@ -639,7 +639,7 @@ var canvasHeightLast;
       ctx.globalAlpha = 1;
       /* console.log("drawing") */
     }
-
+    ctx.font = "bold 19px Arial";
     ctx.fillText("TX", activeXd1_1_tx - 20, activeYd_1_tx);
     ctx.fillRect(
       activeXd1_1_tx,
@@ -650,7 +650,7 @@ var canvasHeightLast;
     ctx.restore();
 
     /* Annotate Bands - Text */
-    ctx.font = "19px Arial";
+    ctx.font = "15px Arial";
     ctx.fillStyle = background_colour === "black" ? "white" : "black";
     ctx.textAlign = "center";
     ctx.fillText(
