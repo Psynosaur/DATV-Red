@@ -63,19 +63,19 @@ function mqtt_client() {
   client.on("connect", function () {
     console.log("Connected MQTT");
     // Subscribe to a topic
-    client.subscribe(`dt/pluto/${callsign}/rx/frequency`, () => {});
-    client.subscribe(`dt/pluto/${callsign}/sr`, () => {});
+    client.subscribe(`dt/pluto/${callsign}/rx/webfft/frequency`, () => {});
+    client.subscribe(`dt/pluto/${callsign}/rx/webfft/span`, () => {});
   });
   client.on("message", function (topic, message) {
-    if (topic === `dt/pluto/${callsign}/rx/frequency`) {
+    if (topic === `dt/pluto/${callsign}/rx/webfft/frequency`) {
       let Hz = Number(message.toString());
       spectrum.setCenterHz(Hz);
     //   console.log("setCenterHz: " + Hz);
     }
-    if (topic === `dt/pluto/${callsign}/sr`) {
+    if (topic === `dt/pluto/${callsign}/rx/webfft/span`) {
       let spanHz = Number(message.toString());
       spectrum.setSpanHz(spanHz);
-    //   console.log("setSpanHz: " + spanHz);
+      console.log("setSpanHz: " + spanHz);
     }
   });
 }

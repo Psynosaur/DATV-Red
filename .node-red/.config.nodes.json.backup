@@ -764,5 +764,24 @@
                 "file": "F:\\Radio\\QO-100\\DATV-Red\\.node-red\\node_modules\\node-red-node-ui-iframe\\ui_iframe.js"
             }
         }
+    },
+    "node-red-node-ui-list": {
+        "name": "node-red-node-ui-list",
+        "version": "0.3.6",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "ui_list": {
+                "name": "ui_list",
+                "types": [
+                    "ui_list"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-ui-list",
+                "file": "F:\\Radio\\QO-100\\DATV-Red\\.node-red\\node_modules\\node-red-node-ui-list\\ui_list.js"
+            }
+        }
     }
 }

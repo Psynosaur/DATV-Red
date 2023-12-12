@@ -1,22 +1,23 @@
 
-
 :root {
-  --textColor: #ffffff;
-  --backGroundColor: #000000;
-  --fontSize: 36px;
-  
+    --textColor: #ffffff;
+    --backGroundColor: #000000;
+    --fontSize: 36px;
+
 }
+
 body {
-  width:  99%;
-  height: 100%;
-  margin: 0px;
-  
-  }
-  
-  #c {
+    width: 99%;
+    height: 100%;
+    margin: 0px;
+
+}
+
+#c {
     background-color: black;
-  }
-  #under-canvas {
+}
+
+#under-canvas {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -28,6 +29,6 @@ body {
     margin-bottom: 10px;
     padding-left: 3px;
     padding-right: 3px;
-    
-  }
- 
+
+}
+

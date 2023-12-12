@@ -1188,12 +1188,12 @@ function Spectrum(id, options) {
   this.gain = options && options.gain ? options.gain : 0;
   this.fps = options && options.fps ? options.fps : 50;
   this.wf_size = options && options.wf_size ? options.wf_size : 0;
-  this.wf_rows = options && options.wf_rows ? options.wf_rows : 4096 + 4096;
+  this.wf_rows = options && options.wf_rows ? options.wf_rows : 2048;
   this.spectrumPercent =
     options && options.spectrumPercent ? options.spectrumPercent : 40;
   this.spectrumPercentStep =
     options && options.spectrumPercentStep ? options.spectrumPercentStep : 5;
-  this.averaging = options && options.averaging ? options.averaging : 22;
+  this.averaging = options && options.averaging ? options.averaging : 0;
   this.maxHold = options && options.maxHold ? options.maxHold : false;
   this.autoScale = options && options.autoScale ? options.autoScale : false;
 

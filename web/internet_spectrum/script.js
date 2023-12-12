@@ -1,5 +1,6 @@
 let fft_url = "";
-var ctx;
+let ctx;
+
 async function getJSON(url) {
   return fetch(`${url}/config`)
     .then((response) => response.json())
@@ -11,22 +12,23 @@ async function getConfig(url) {
   const json = await this.getJSON(url);
   return json;
 }
-var canvas_element;
-var canvas_jqel;
 
-var canvasWidth;
-var canvasHeight;
-var canvasHeightLast;
+let canvas_element;
+let canvas_jqel;
+
+let canvasWidth = 956;
+let canvasHeight = 480;
+let canvasHeightLast;
 
 (async () => {
 
-  var url = static ? 'http://127.0.0.1:1880' : '';  
-  var config = await getConfig(url);
-  var rx_count = config.receivers.length;
-  var ws_url = config.selected;
+  const url = static ? 'http://127.0.0.1:1880' : '';
+  const config = await getConfig(url);
+  const rx_count = config.receivers.length;
+  let ws_url = config.selected;
   /* var ws_url = "ws://44.149.67.245:82/wideband/"; */
   /* ws://46.41.2.20:7681 */
-  var ws_name = "fft";
+  let ws_name = "fft";
 
   /* On load */
  
@@ -35,28 +37,27 @@ var canvasHeightLast;
     ws_url = ws_url_override;
   }
 
-  var render_timer;
+  let render_timer;
   const render_interval_map = {
     /* ms */
     fft: 250,
     fft_fast: 100,
   };
-  var render_interval = render_interval_map[ws_name];
-  var render_busy = false;
-  var render_buffer = [];
+  let render_interval = render_interval_map[ws_name];
+  let render_busy = false;
+  const render_buffer = [];
 
 
+  let mouse_in_canvas = false;
+  let mouse_x = 0;
+  let mouse_y = 0;
+  let clicked_x = 0;
+  let clicked_y = 0;
+  let channelClicked = 0;
+  const channel_coords = {};
+  let beacon_strength = 0;
 
-  var mouse_in_canvas = false;
-  var mouse_x = 0;
-  var mouse_y = 0;
-  var clicked_x = 0;
-  var clicked_y = 0;
-  var channelClicked = 0;
-  var channel_coords = {};
-  var beacon_strength = 0;
-
-  var highlighted_channel = {};
+  let highlighted_channel = {};
   let tuned_channels = Array(rx_count).fill({});
   function isEmpty(obj) {
     return Object.keys(obj).length === 0;
@@ -65,18 +66,18 @@ var canvasHeightLast;
             tuned_channels.push(highlighted_channel);
         } */
 
-  var fft_colour = "#c10b0b";
-  var band_colour = "#c10b0b";
-  var background_colour = "black";
-  var signals = [];
-  var freq_info = [];
+  let fft_colour = "#c10b0b";
+  let band_colour = "#c10b0b";
+  let background_colour = "black";
+  let signals = [];
+  let freq_info = [];
 
   /* This controls the pluto via HTTP request to the node-red API endpoint 'setRadio' */
-  var downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
-  var busy = false;
-  var activeColor, activeXd1, activeYd, activeXd2;
-  var activeColor_1, activeXd1_1, activeYd_1, activeXd2_1;
-  var activeColor_1_tx, activeXd1_1_tx, activeYd_1_tx, activeXd2_1_tx;
+  let downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
+  let busy = false;
+  let activeColor, activeXd1, activeYd, activeXd2;
+  let activeColor_1, activeXd1_1, activeYd_1, activeXd2_1;
+  let activeColor_1_tx, activeXd1_1_tx, activeYd_1_tx, activeXd2_1_tx;
 
   /* Load vars from local storage */
   if (typeof Storage !== "undefined") {
@@ -140,7 +141,8 @@ var canvasHeightLast;
     return color;
   }
 
-  var fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
+  const fft_ws = new u16Websocket(ws_url, ws_name, render_buffer);
+
   /* const urlParams = new URLSearchParams(window.location.search);
         var nodeRedIp = urlParams.get('nodeRed') === undefined ? "127.0.0.1:1880" : urlParams.get('nodeRed'); */
   function setRxClickState(
@@ -312,7 +314,7 @@ var canvasHeightLast;
   }
 
   function loadAll() {
-    canvasHeight = document.body.clientHeight-50;
+    // canvasHeight = document.body.clientHeight-50;
     canvasHeightLast = canvasHeight;
     /* JQuery */
    
@@ -367,7 +369,7 @@ var canvasHeightLast;
     updateFFT(null);
 
     /* Hide fullscreen link for iOS */
-    var n = navigator.userAgent.toLowerCase();
+    const n = navigator.userAgent.toLowerCase();
     if (
       n.indexOf("iphone") != -1 ||
       n.indexOf("ipad") != -1 ||
@@ -454,8 +456,8 @@ var canvasHeightLast;
       (ratio = devicePixelRatio / backingStoreRatio);
 
     if (devicePixelRatio !== backingStoreRatio) {
-      var oldWidth = canvas_element.width;
-      var oldHeight = canvas_element.height;
+      const oldWidth = canvas_element.width;
+      const oldHeight = canvas_element.height;
 
       canvas_element.width = oldWidth * ratio;
       canvas_element.height = oldHeight * ratio;
@@ -474,7 +476,7 @@ var canvasHeightLast;
   }
 
   function updateFFT(data) {
-    var i;
+    let i;
     let obj;
     const _start_freq = 490.5;
 
@@ -686,12 +688,12 @@ var canvasHeightLast;
 
     /* Draw FFT */
     if (data != null) {
-      var start_height = canvasHeight * (7 / 8);
-      var data_length = data.length;
+      const start_height = canvasHeight * (7 / 8);
+      const data_length = data.length;
 
-      var sample;
-      var sample_index;
-      var sample_index_f;
+      let sample;
+      let sample_index;
+      let sample_index_f;
 
       ctx.lineWidth = 1;
       ctx.strokeStyle = fft_colour;
@@ -726,7 +728,7 @@ var canvasHeightLast;
   }
 
   function draw_decoded() {
-    var i;
+    let i;
 
     for (i = 0; i < signals_decoded.length; i++) {
       text_x_position =
@@ -754,7 +756,7 @@ var canvasHeightLast;
       render_busy = true;
       if (render_buffer.length > 0) {
         /* Pull oldest frame off the buffer and render it */
-        var data_frame = render_buffer.shift();
+        const data_frame = render_buffer.shift();
         updateFFT(data_frame);
         detect_signals(data_frame);
 
@@ -838,26 +840,26 @@ var canvasHeightLast;
   }
 
   function detect_signals(fft_data) {
-    var i;
-    var j;
+    let i;
+    let j;
 
     const noise_level = 11000;
     const signal_threshold = 16000;
 
-    var in_signal = false;
-    var start_signal;
-    var end_signal;
-    var mid_signal;
-    var strength_signal;
-    var signal_bw;
-    var signal_freq;
-    var acc;
-    var acc_i;
+    let in_signal = false;
+    let start_signal;
+    let end_signal;
+    let mid_signal;
+    let strength_signal;
+    let signal_bw;
+    let signal_freq;
+    let acc;
+    let acc_i;
 
-    var db_per_pixel;
-    var beacon_strength_pixel;
+    let db_per_pixel;
+    let beacon_strength_pixel;
 
-    var text_x_position;
+    let text_x_position;
 
     /* Clear signals array */
     signals = [];
@@ -1243,9 +1245,9 @@ var canvasHeightLast;
   }
 
   function render_frequency_info(mouse_x, mouse_y) {
-    var display_triggered = false;
+    let display_triggered = false;
     if (mouse_y > (canvasHeight * 7) / 8) {
-      for (var i = 0; i < freq_info.length; i++) {
+      for (let i = 0; i < freq_info.length; i++) {
         xd1 = freq_info[i].x1;
         xd2 = freq_info[i].x2;
         yd = freq_info[i].y;
@@ -1300,7 +1302,8 @@ var canvasHeightLast;
       canvas_element.mozRequestFullScreen();
     }
   }
-  var checkFullScreen = function () {
+
+  const checkFullScreen = function () {
     if (typeof document.fullScreen != "undefined") {
       return document.fullScreen;
     } else if (typeof document.webkitIsFullScreen != "undefined") {
@@ -1311,8 +1314,8 @@ var canvasHeightLast;
       return false;
     }
   };
-  var previousOrientation = window.orientation;
-  var checkOrientation = function () {
+  const previousOrientation = window.orientation;
+  const checkOrientation = function () {
     if (checkFullScreen()) {
       if (window.orientation !== previousOrientation) {
         if (0 != (previousOrientation + window.orientation) % 180) {
@@ -1328,18 +1331,18 @@ var canvasHeightLast;
   };
   var previousHeight = window.innerHeight;
   var previousWidth = window.innerWidth;
-  var checkResize = function () {
+  const checkResize = function () {
     if (
-      !checkFullScreen() &&
-      (previousHeight != window.innerHeight ||
-        previousWidth != window.innerWidth)
+        !checkFullScreen() &&
+        (previousHeight != window.innerHeight ||
+            previousWidth != window.innerWidth)
     ) {
-      let width =  document.body.clientWidth-20;
-      let height =  document.body.clientHeight;
+      let width = document.body.clientWidth - 20;
+      let height = document.body.clientHeight;
       canvasHeight =
-      height < canvasHeightLast
-          ? height
-          : canvasHeightLast;
+          height < canvasHeightLast
+              ? height
+              : canvasHeightLast;
       canvasWidth = width;
       initCanvas(canvas_element);
       previousHeight = window.innerHeight;
