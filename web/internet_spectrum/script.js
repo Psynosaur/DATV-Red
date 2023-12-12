@@ -22,7 +22,7 @@ let canvasHeightLast;
 
 (async () => {
 
-  const url = static ? 'http://127.0.0.1:1880' : '';
+  const url = localPage ? 'http://127.0.0.1:1880' : '';
   const config = await getConfig(url);
   const rx_count = config.receivers.length;
   let ws_url = config.selected;

@@ -57,7 +57,6 @@ function connectWebSocket(spectrum) {
   };
 }
 
-var mouse_in_canvas = false;
 var freq_info = [];
 function main() {
   // Create spectrum object on canvas with ID "waterfall"
@@ -76,14 +75,10 @@ function main() {
 
   // Drag keypress handler
   window.addEventListener("mousemove", function (event) {
-    mouse_in_canvas = true;
     spectrum.detect_movement(event);
-    // console.log(dragStart);
   });
-  window.addEventListener("mouseleave", function (event) {
-    mouse_in_canvas = false;
-    // spectrum.onDrag(event);
-    // console.log(dragStart);
+  window.addEventListener("mouseout", function (event) {
+    spectrum.detect_movement_1(event);
   });
   mqtt_client();
 }

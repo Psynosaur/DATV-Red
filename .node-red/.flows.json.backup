@@ -2,9 +2,9 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red V3.79",
+        "label": "DATV-Red V3.9",
         "disabled": false,
-        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n\r\nV3.69\r\n - Fixed spectrum MQTT client\r\n   - Spans and frequencies are labeled\r\n - Fixed linux start up bugs\r\n   - works again\r\n - Inject OS type before all else...\r\n - Double unmute bug is no more a thing on start up.\r\n - Auto channel calibration...\r\n - Clean up code and flows\r\n - Chat button\r\n   - I don't like it on the dashboard\r\n   - Opens url in default browser\r\n - More fixing of things\r\n - Full rx tuning range\r\n - GUI moved things around\r\n \r\nV3.79\r\n- Minitiouner startup bugs\r\n- GSE refactor\r\n- 1MS on reboot TX SR bug...\r\n- Tx mute should not trigger on startup\r\n- Cleanup of code \r\n- Wrap provider name in quotes\r\n    \r\n\r\n",
+        "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n\r\nV3.69\r\n - Fixed spectrum MQTT client\r\n   - Spans and frequencies are labeled\r\n - Fixed linux start up bugs\r\n   - works again\r\n - Inject OS type before all else...\r\n - Double unmute bug is no more a thing on start up.\r\n - Auto channel calibration...\r\n - Clean up code and flows\r\n - Chat button\r\n   - I don't like it on the dashboard\r\n   - Opens url in default browser\r\n - More fixing of things\r\n - Full rx tuning range\r\n - GUI moved things around\r\n \r\nV3.79\r\n- Minitiouner startup bugs\r\n- GSE refactor\r\n- 1MS on reboot TX SR bug...\r\n- Tx mute should not trigger on startup\r\n- Cleanup of code \r\n- Wrap provider name in quotes    \r\nV3.9\r\n- New firmware version needed see repo\r\n- Spectrum changes\r\n- Detect signals symbol rate\r\n- tune with pluto spectrum\r\n- there is much to be done still.\r\n",
         "env": []
     },
     {
@@ -136,9 +136,9 @@
             "185cc616489b2615"
         ],
         "x": 2,
-        "y": 307,
-        "w": 1296,
-        "h": 666
+        "y": 253,
+        "w": 1350,
+        "h": 720
     },
     {
         "id": "4bfefaeb7f82f4c6",
@@ -1158,16 +1158,33 @@
             "e688634a9f60c746",
             "818602f620560caa",
             "6adfe6d609aeb90a",
-            "f999e537938234c5",
             "5493fb3252e35009",
             "4497dbfe8502fab3",
-            "f917bfd2bffbe0a1",
-            "e9f38773b80ea789",
             "7b24853f35e10fac",
-            "62bf9bf72fffe8be"
+            "a6254b8eb8807472",
+            "3f6233950fb6654d",
+            "41b1f74eaf2fa2bd",
+            "53d85ccc1ca38e73",
+            "6860085513c10a64",
+            "5e009d852e836e3b",
+            "c0a747bc908afade",
+            "db57ce0d38f95c32",
+            "9cfb443df5cb5da9",
+            "de2e4421edba4493",
+            "1abba09f50e1a73c",
+            "97ea4ec5dc95813b",
+            "f51752e8606fb64c",
+            "0e96496b235b3fe0",
+            "c98f9bfdc4eab524",
+            "9f6a4873cc3768b5",
+            "4536019d942cbd41",
+            "9af1f8975e61cc08",
+            "f5eef0dfd7e39ee3"
         ],
-        "x": 74,
-        "y": 379
+        "x": 194,
+        "y": 399,
+        "w": 1492,
+        "h": 762
     },
     {
         "id": "2406e32417780de0",
@@ -1204,7 +1221,9 @@
             "b5cfddf388cbc440"
         ],
         "x": 54,
-        "y": 59
+        "y": 59,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1313,6 +1332,42 @@
         "h": 262
     },
     {
+        "id": "b40c8f098d8e9ccc",
+        "type": "group",
+        "z": "71a32338963256e1",
+        "name": "add receiver",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true
+        },
+        "nodes": [
+            "390ac0996bfbf3e8",
+            "3c880cfa489b99ba",
+            "583e05834ada403d",
+            "56dc16b9e1976cab",
+            "6f0dfc4da4e5adba",
+            "735e31a90de36b9a",
+            "1e70a3d6fd597ab5",
+            "d1aea45a350e8689",
+            "86a51f94eab9e839",
+            "8822bec48f5c42d6",
+            "ae1646fbdd5d8b9c",
+            "282aef0db727d395",
+            "a51c17448cbde903",
+            "b74cbbf79c7b8ecc",
+            "731a3c957fc08056",
+            "4330f69a2f5fe062",
+            "0d7bed971ef2d798",
+            "7409d36e4650ab84",
+            "4696f747c19341dd",
+            "8ebc9dd6c04d47a7"
+        ],
+        "x": 54,
+        "y": 59,
+        "w": 1472,
+        "h": 242
+    },
+    {
         "id": "5c31dbeab217c8e9",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1347,12 +1402,14 @@
             "553167af0b3221c1",
             "0d9e815c3c9d7d4a",
             "d95cd044385c2ba5",
-            "3bec8a3571888efd"
+            "3bec8a3571888efd",
+            "0c5fbec92e79eb41",
+            "b86aad85fafa0443"
         ],
         "x": 28,
-        "y": 333,
-        "w": 1244,
-        "h": 614
+        "y": 279,
+        "w": 1298,
+        "h": 668
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -1370,7 +1427,8 @@
             "2a5a3cc2d63b2942",
             "6e96b284f2323a85",
             "2c6310aae8f397fd",
-            "8764be884d895f57"
+            "8764be884d895f57",
+            "2265f82b17bf49e1"
         ],
         "x": 434,
         "y": 359,
@@ -1452,48 +1510,13 @@
             "117e420d4df518b1",
             "b828f6a6.47d708",
             "1052941d.efad6c",
-            "3d529b46ee563149"
+            "3d529b46ee563149",
+            "69d6d63ac36eab12"
         ],
         "x": 54,
         "y": 359,
         "w": 332,
-        "h": 162
-    },
-    {
-        "id": "b40c8f098d8e9ccc",
-        "type": "group",
-        "z": "71a32338963256e1",
-        "name": "add receiver",
-        "style": {
-            "fill": "#3f93cf",
-            "label": true
-        },
-        "nodes": [
-            "390ac0996bfbf3e8",
-            "3c880cfa489b99ba",
-            "583e05834ada403d",
-            "56dc16b9e1976cab",
-            "6f0dfc4da4e5adba",
-            "735e31a90de36b9a",
-            "1e70a3d6fd597ab5",
-            "d1aea45a350e8689",
-            "86a51f94eab9e839",
-            "8822bec48f5c42d6",
-            "ae1646fbdd5d8b9c",
-            "282aef0db727d395",
-            "a51c17448cbde903",
-            "b74cbbf79c7b8ecc",
-            "731a3c957fc08056",
-            "4330f69a2f5fe062",
-            "0d7bed971ef2d798",
-            "7409d36e4650ab84",
-            "4696f747c19341dd",
-            "8ebc9dd6c04d47a7"
-        ],
-        "x": 54,
-        "y": 59,
-        "w": 1472,
-        "h": 242
+        "h": 202
     },
     {
         "id": "9b3296db2e0c849f",
@@ -16590,6 +16613,88 @@
         ]
     },
     {
+        "id": "69d6d63ac36eab12",
+        "type": "http in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "3bec8a3571888efd",
+        "name": "",
+        "url": "/setLocalRx",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 520,
+        "wires": [
+            [
+                "b828f6a6.47d708",
+                "2265f82b17bf49e1",
+                "b86aad85fafa0443"
+            ]
+        ]
+    },
+    {
+        "id": "2265f82b17bf49e1",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "079e67d7c1e3e99d",
+        "name": "function 14",
+        "func": "return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 480,
+        "wires": [
+            [
+                "0c5fbec92e79eb41",
+                "2a5a3cc2d63b2942",
+                "8764be884d895f57"
+            ]
+        ]
+    },
+    {
+        "id": "0c5fbec92e79eb41",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "CTRL click for RX frequency",
+        "func": "let freq = Number(msg.payload.downlink) + Math.abs(global.get(\"device.rx.offset\"));\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq} MHz, SR: ${sr}kS `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_MHz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq;\nmsg.payload = freq;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 340,
+        "wires": [
+            [
+                "64a9de4a4bd4dab6"
+            ]
+        ]
+    },
+    {
+        "id": "b86aad85fafa0443",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "Rx tuner onboard specturm",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 320,
+        "wires": []
+    },
+    {
         "id": "4c448d00f7a9bc91",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
@@ -19489,7 +19594,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>\n         var pluto_url = \"{{pluto}}\";\n         var callsign = \"{{callsign}}\";\n         </script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>\n         var pluto_url = \"{{pluto}}\";\n         var callsign = \"{{callsign}}\";\n         var localPage = false;\n         </script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
         "x": 1330,
         "y": 200,
         "wires": [
@@ -19944,8 +20049,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 1230,
-        "y": 640,
+        "x": 1610,
+        "y": 600,
         "wires": []
     },
     {
@@ -19961,8 +20066,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 540,
+        "x": 480,
+        "y": 500,
         "wires": [
             [
                 "77dc98e0de74c888"
@@ -19987,8 +20092,8 @@
         "topic": "",
         "payload": "webfft",
         "payloadType": "str",
-        "x": 190,
-        "y": 540,
+        "x": 310,
+        "y": 500,
         "wires": [
             [
                 "b47b8870b7c9bd24"
@@ -20010,8 +20115,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 510,
-        "y": 540,
+        "x": 650,
+        "y": 500,
         "wires": []
     },
     {
@@ -20027,8 +20132,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 830,
-        "y": 660,
+        "x": 1170,
+        "y": 620,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -20055,8 +20160,8 @@
         "max": "6000",
         "step": "0.25",
         "className": "",
-        "x": 930,
-        "y": 420,
+        "x": 970,
+        "y": 560,
         "wires": [
             [
                 "7d69601736a74273"
@@ -20076,11 +20181,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 830,
-        "y": 720,
+        "x": 1190,
+        "y": 700,
         "wires": [
             [
-                "62bf9bf72fffe8be"
+                "470e4d8abf29a205",
+                "a6254b8eb8807472"
             ]
         ]
     },
@@ -20102,13 +20208,14 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 210,
-        "y": 600,
+        "x": 330,
+        "y": 560,
         "wires": [
             [
                 "b82cad0a3cddc877",
                 "bff2bb43c29c79e5",
-                "e688634a9f60c746"
+                "e688634a9f60c746",
+                "a6254b8eb8807472"
             ]
         ]
     },
@@ -20125,8 +20232,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
-        "y": 660,
+        "x": 470,
+        "y": 620,
         "wires": [
             [
                 "f72c1ae9d1dc7d89"
@@ -20147,8 +20254,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 510,
-        "y": 660,
+        "x": 650,
+        "y": 620,
         "wires": [
             [
                 "6adfe6d609aeb90a"
@@ -20168,8 +20275,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 600,
+        "x": 1170,
+        "y": 440,
         "wires": [
             [
                 "5493fb3252e35009",
@@ -20191,8 +20298,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 510,
-        "y": 600,
+        "x": 650,
+        "y": 560,
         "wires": [
             [
                 "4497dbfe8502fab3"
@@ -20212,8 +20319,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 600,
+        "x": 490,
+        "y": 560,
         "wires": [
             [
                 "12159992489b0591"
@@ -20244,7 +20351,7 @@
         "type": "function",
         "z": "9d964f25dcc4d750",
         "g": "2e4963908c2bd3e0",
-        "name": "rx gain",
+        "name": "rx span",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/webfft/span\"\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
@@ -20252,8 +20359,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 720,
+        "x": 480,
+        "y": 700,
         "wires": [
             [
                 "818602f620560caa"
@@ -20274,12 +20381,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 490,
-        "y": 720,
+        "x": 650,
+        "y": 700,
         "wires": [
             [
-                "f999e537938234c5",
-                "f917bfd2bffbe0a1"
+                "7b24853f35e10fac"
             ]
         ]
     },
@@ -20303,38 +20409,12 @@
         "max": "65",
         "step": "1",
         "className": "",
-        "x": 660,
-        "y": 660,
+        "x": 1000,
+        "y": 620,
         "wires": [
             [
                 "aa44e5106814ab9f"
             ]
-        ]
-    },
-    {
-        "id": "f999e537938234c5",
-        "type": "change",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "device.rx.sr",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 780,
-        "wires": [
-            []
         ]
     },
     {
@@ -20357,8 +20437,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
-        "y": 560,
+        "x": 1470,
+        "y": 440,
         "wires": [
             []
         ]
@@ -20376,8 +20456,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 440,
+        "x": 810,
+        "y": 560,
         "wires": [
             [
                 "30794624a6a04c15"
@@ -20407,56 +20487,12 @@
         ]
     },
     {
-        "id": "f917bfd2bffbe0a1",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "function 12",
-        "func": "// if(global.get(\"mute\") === \"0\"){\n//     msg.enabled = false;\n// }\n\n// if(global.get(\"mute\") === \"1\"){\n//     msg.enabled = true;\n// }\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 820,
-        "wires": [
-            [
-                "e9f38773b80ea789",
-                "7b24853f35e10fac"
-            ]
-        ]
-    },
-    {
-        "id": "e9f38773b80ea789",
-        "type": "ui_text",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "group": "bd40e71dca80ef04",
-        "order": 2,
-        "width": "6",
-        "height": "1",
-        "name": "",
-        "label": "current span",
-        "format": "{{value | number:0}} Hz",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 730,
-        "y": 840,
-        "wires": []
-    },
-    {
         "id": "7b24853f35e10fac",
         "type": "ui_slider",
         "z": "9d964f25dcc4d750",
         "g": "2e4963908c2bd3e0",
         "name": "",
-        "label": "SR",
+        "label": "Span",
         "tooltip": "{{value}}",
         "group": "bd40e71dca80ef04",
         "order": 3,
@@ -20470,37 +20506,11 @@
         "max": "256000000",
         "step": "100000",
         "className": "",
-        "x": 710,
-        "y": 780,
-        "wires": [
-            [
-                "0a9fe9e2623385cb"
-            ]
-        ]
-    },
-    {
-        "id": "62bf9bf72fffe8be",
-        "type": "delay",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "2",
-        "timeoutUnits": "seconds",
-        "rate": "20",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1060,
+        "x": 970,
         "y": 700,
         "wires": [
             [
-                "470e4d8abf29a205"
+                "0a9fe9e2623385cb"
             ]
         ]
     },
@@ -20513,6 +20523,455 @@
         "x": 1410,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "a6254b8eb8807472",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set minimum span for tx",
+        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 760,
+        "wires": [
+            [
+                "470e4d8abf29a205"
+            ]
+        ]
+    },
+    {
+        "id": "3f6233950fb6654d",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set minimum span for tx",
+        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41b1f74eaf2fa2bd",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set minimum span for tx",
+        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53d85ccc1ca38e73",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nflow.set(\"min_db\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 900,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "6860085513c10a64",
+        "type": "mqtt out",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "064bde8eca01e996",
+        "x": 1430,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "5e009d852e836e3b",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nflow.set(\"max_db\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 960,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "c4b45eae95987a16",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "x": 290,
+        "y": 900,
+        "wires": [
+            [
+                "db57ce0d38f95c32",
+                "9cfb443df5cb5da9"
+            ]
+        ]
+    },
+    {
+        "id": "c0a747bc908afade",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 650,
+        "y": 960,
+        "wires": [
+            [
+                "f5eef0dfd7e39ee3"
+            ]
+        ]
+    },
+    {
+        "id": "db57ce0d38f95c32",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "max",
+        "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 960,
+        "wires": [
+            [
+                "c0a747bc908afade"
+            ]
+        ]
+    },
+    {
+        "id": "9cfb443df5cb5da9",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "min",
+        "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 900,
+        "wires": [
+            [
+                "de2e4421edba4493"
+            ]
+        ]
+    },
+    {
+        "id": "de2e4421edba4493",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 650,
+        "y": 900,
+        "wires": [
+            [
+                "9af1f8975e61cc08"
+            ]
+        ]
+    },
+    {
+        "id": "1abba09f50e1a73c",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state min",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"min_db\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1020,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "97ea4ec5dc95813b",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state max",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"max_db\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1060,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "f51752e8606fb64c",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "x": 850,
+        "y": 1040,
+        "wires": [
+            [
+                "1abba09f50e1a73c",
+                "97ea4ec5dc95813b"
+            ]
+        ]
+    },
+    {
+        "id": "0e96496b235b3fe0",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "420",
+        "payloadType": "num",
+        "x": 310,
+        "y": 1060,
+        "wires": [
+            [
+                "c98f9bfdc4eab524"
+            ]
+        ]
+    },
+    {
+        "id": "c98f9bfdc4eab524",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "min_db",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f6a4873cc3768b5",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "490",
+        "payloadType": "num",
+        "x": 310,
+        "y": 1120,
+        "wires": [
+            [
+                "4536019d942cbd41"
+            ]
+        ]
+    },
+    {
+        "id": "4536019d942cbd41",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "max_db",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9af1f8975e61cc08",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "min",
+        "label": "Min {{value | number:2}}",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "1000",
+        "step": "2",
+        "className": "",
+        "x": 870,
+        "y": 900,
+        "wires": [
+            [
+                "53d85ccc1ca38e73"
+            ]
+        ]
+    },
+    {
+        "id": "f5eef0dfd7e39ee3",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "max",
+        "label": "Max {{value | number:2}}",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "1000",
+        "step": "2",
+        "className": "",
+        "x": 870,
+        "y": 980,
+        "wires": [
+            [
+                "5e009d852e836e3b"
+            ]
+        ]
     },
     {
         "id": "01cd46f702ab295a",
@@ -20552,7 +21011,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var static = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var localPage = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
         "output": "str",
         "x": 1190,
         "y": 360,

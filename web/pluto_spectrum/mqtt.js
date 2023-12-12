@@ -65,6 +65,9 @@ function mqtt_client() {
     // Subscribe to a topic
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/frequency`, () => {});
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/span`, () => {});
+    client.subscribe(`cmd/pluto/${callsign}/rx/webfft/minSpan`, () => {});
+    client.subscribe(`cmd/pluto/${callsign}/rx/webfft/min_db`, () => {});
+    client.subscribe(`cmd/pluto/${callsign}/rx/webfft/max_db`, () => {});
   });
   client.on("message", function (topic, message) {
     if (topic === `dt/pluto/${callsign}/rx/webfft/frequency`) {
@@ -76,6 +79,21 @@ function mqtt_client() {
       let spanHz = Number(message.toString());
       spectrum.setSpanHz(spanHz);
       console.log("setSpanHz: " + spanHz);
+    }
+    if (topic === `cmd/pluto/${callsign}/rx/webfft/minSpan`) {
+      let spanHz = Number(message.toString());
+      spectrum.setMinSpanHz(spanHz);
+      console.log("minSpan: " + spanHz);
+    }
+    if (topic === `cmd/pluto/${callsign}/rx/webfft/min_db`) {
+      let db = Number(message.toString());
+      spectrum.setMinRange(db);
+      console.log("min db: " + db);
+    }
+    if (topic === `cmd/pluto/${callsign}/rx/webfft/max_db`) {
+      let db = Number(message.toString());
+      spectrum.setMaxRange(db);
+      console.log("max db: " + db);
     }
   });
 }
