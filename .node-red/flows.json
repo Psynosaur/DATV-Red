@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "d7c58eb9e7b65abb",
-        "type": "tab",
-        "label": "DATV Reception",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "9d964f25dcc4d750",
         "type": "tab",
         "label": "Local RX spectrum",
@@ -27,22 +19,6 @@
         "id": "e2c54979685d14cb",
         "type": "tab",
         "label": "Internet_spectrum_source",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "27bb1861e8b5803b",
-        "type": "tab",
-        "label": "Chat",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "30d0afc93dfb235a",
-        "type": "tab",
-        "label": "Sonoff Basic tasmota",
         "disabled": false,
         "info": "",
         "env": []
@@ -1254,84 +1230,6 @@
         "h": 202
     },
     {
-        "id": "dd0059cf3eb1693d",
-        "type": "group",
-        "z": "30d0afc93dfb235a",
-        "name": "HTTP way",
-        "style": {
-            "label": true,
-            "fill": "#3f93cf"
-        },
-        "nodes": [
-            "f36ea5478cd26f4c",
-            "8e6e379dd23ad541",
-            "2d87948c62090044",
-            "3d1df83227b48c35",
-            "ce64bf27f1fae6be",
-            "cf17c69c227b6825",
-            "511e874b9e79d9c1",
-            "f90b10e6825765f0",
-            "e4b9db07aee76ef2",
-            "eef90d12fe67652d",
-            "70dc135bb18e2bd6",
-            "60df7c8dc6d1de55",
-            "caa457b0361bf0ba"
-        ],
-        "x": 54,
-        "y": 39,
-        "w": 772,
-        "h": 442
-    },
-    {
-        "id": "2e3a85f09aa2e172",
-        "type": "group",
-        "z": "30d0afc93dfb235a",
-        "name": "MQTT Way",
-        "style": {
-            "label": true,
-            "fill": "#3f93cf"
-        },
-        "nodes": [
-            "a8596f60466f8cf4",
-            "4a2877dc5a808a1b",
-            "7dae242b8566df9b",
-            "4169371e544b9666",
-            "857224de9710110f",
-            "449f2a69fa24e7fd",
-            "ff147eec327f33fe",
-            "bc7c3ea6788d2b58",
-            "fabd30d9f5135abd",
-            "d625fe7265cbfada",
-            "29a3c6a207d493f9",
-            "b7d0059588d03318",
-            "33b81b6ee3d763f8"
-        ],
-        "x": 54,
-        "y": 559,
-        "w": 1492,
-        "h": 162
-    },
-    {
-        "id": "b2f5ceeaa5d1bfc7",
-        "type": "group",
-        "z": "30d0afc93dfb235a",
-        "name": "",
-        "style": {
-            "fill": "#3f93cf",
-            "label": true
-        },
-        "nodes": [
-            "97e47e6f443015bd",
-            "f391b6fe49265eb0",
-            "0462039e80c24319",
-            "df652e3147152444"
-        ],
-        "x": 874,
-        "y": 39,
-        "w": 252,
-        "h": 262
-    },
-    {
         "id": "b40c8f098d8e9ccc",
         "type": "group",
         "z": "71a32338963256e1",
@@ -1973,46 +1871,6 @@
         "order": 3,
         "width": 1,
         "height": 1
-    },
-    {
-        "id": "c9432c41e4afe7e0",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "65d91b75202c3b55",
-        "order": 6,
-        "width": "1",
-        "height": "1"
-    },
-    {
-        "id": "60dc608a8e13e309",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 4,
-        "width": "1",
-        "height": "1"
-    },
-    {
-        "id": "1d0d55cb8f9c1bff",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 8,
-        "width": "3",
-        "height": "1"
-    },
-    {
-        "id": "28d0dedfd904e16b",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 5,
-        "width": "2",
-        "height": "1"
     },
     {
         "id": "8920ad34.ac04a",
@@ -11656,7 +11514,7 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": "0.2",
         "topic": "",
         "x": 130,
@@ -16695,6 +16553,2933 @@
         "wires": []
     },
     {
+        "id": "1e0841f1.ac68fe",
+        "type": "http in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "url": "/spektrum",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "4dbfb098ed6ce8ef"
+            ]
+        ]
+    },
+    {
+        "id": "5de0bbd4.6c8574",
+        "type": "http in",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "",
+        "url": "/mysitepost",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 1840,
+        "wires": [
+            [
+                "80321000.f2dc5",
+                "75913f37.78e6e"
+            ]
+        ]
+    },
+    {
+        "id": "80321000.f2dc5",
+        "type": "debug",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "mysitepost",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 850,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "8de9647.b8a9a98",
+        "type": "http response",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "",
+        "x": 870,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "b2f5bdf9.e09f1",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "spectrum",
+        "field": "payload.spectrum",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 900,
+        "y": 140,
+        "wires": [
+            [
+                "fad658d5d37f9a7e"
+            ]
+        ]
+    },
+    {
+        "id": "d2c0bc2a.05a02",
+        "type": "http response",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "x": 1510,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f3b55ea2.f4d51",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>\n         var pluto_url = \"{{pluto}}\";\n         var callsign = \"{{callsign}}\";\n         var localPage = false;\n         </script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
+        "x": 1330,
+        "y": 200,
+        "wires": [
+            [
+                "d2c0bc2a.05a02"
+            ]
+        ]
+    },
+    {
+        "id": "57316751.8bd948",
+        "type": "comment",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "Login Form",
+        "info": "",
+        "x": 370,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "ad88b28c.bc842",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "return msg.payload to client",
+        "func": "msg.payload = 'The following data was submitted and available in the msg.payload: '+msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1800,
+        "wires": [
+            [
+                "8de9647.b8a9a98"
+            ]
+        ]
+    },
+    {
+        "id": "75913f37.78e6e",
+        "type": "json",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "",
+        "x": 410,
+        "y": 1800,
+        "wires": [
+            [
+                "ad88b28c.bc842"
+            ]
+        ]
+    },
+    {
+        "id": "111485fa.14c4aa",
+        "type": "comment",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "name": "Form Submission",
+        "info": "",
+        "x": 200,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "e5e2b6286078ea70",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "web/pluto_spectrum/style.css",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "b48f255275eca72c"
+            ]
+        ]
+    },
+    {
+        "id": "b48f255275eca72c",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "style.css",
+        "field": "payload.style",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 900,
+        "y": 100,
+        "wires": [
+            [
+                "541fbfaf914a0185"
+            ]
+        ]
+    },
+    {
+        "id": "e052b91f64f6eeab",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "web/pluto_spectrum/spectrum.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 560,
+        "y": 140,
+        "wires": [
+            [
+                "b2f5bdf9.e09f1"
+            ]
+        ]
+    },
+    {
+        "id": "79f35d51926b0efe",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "colormap",
+        "field": "payload.colormap",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 900,
+        "y": 180,
+        "wires": [
+            [
+                "843fb2fa39feec7b"
+            ]
+        ]
+    },
+    {
+        "id": "de0e60933695f58d",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "web/pluto_spectrum/colormap.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 560,
+        "y": 180,
+        "wires": [
+            [
+                "79f35d51926b0efe"
+            ]
+        ]
+    },
+    {
+        "id": "9648ba331aa59ceb",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "web/pluto_spectrum/mqtt.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 540,
+        "y": 220,
+        "wires": [
+            [
+                "43f4f730e4b29392"
+            ]
+        ]
+    },
+    {
+        "id": "43f4f730e4b29392",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "mqtt",
+        "field": "payload.mqtt",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 890,
+        "y": 220,
+        "wires": [
+            [
+                "6a7ab5a29fc8f204"
+            ]
+        ]
+    },
+    {
+        "id": "ef1a9f2e55057480",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "web/pluto_spectrum/vendor/mqtt.min.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "f8332e1870dc4199"
+            ]
+        ]
+    },
+    {
+        "id": "f8332e1870dc4199",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "vendor",
+        "field": "payload.vendor",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 890,
+        "y": 260,
+        "wires": [
+            [
+                "29e85f0be33d52d7"
+            ]
+        ]
+    },
+    {
+        "id": "7eaceb95a084b02b",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "web/pluto_spectrum/script.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "5b8734bb249bed14"
+            ]
+        ]
+    },
+    {
+        "id": "5b8734bb249bed14",
+        "type": "template",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "script",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 890,
+        "y": 300,
+        "wires": [
+            [
+                "bf3faef62708eeee"
+            ]
+        ]
+    },
+    {
+        "id": "541fbfaf914a0185",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.style",
+        "func": "msg.style = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 100,
+        "wires": [
+            [
+                "e052b91f64f6eeab"
+            ]
+        ]
+    },
+    {
+        "id": "4dbfb098ed6ce8ef",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "function 9",
+        "func": "msg.url = `/spektrum?url=${global.get(\"broker_address\")}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "e5e2b6286078ea70"
+            ]
+        ]
+    },
+    {
+        "id": "fad658d5d37f9a7e",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.spectrum",
+        "func": "msg.spectrum = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 140,
+        "wires": [
+            [
+                "de0e60933695f58d"
+            ]
+        ]
+    },
+    {
+        "id": "843fb2fa39feec7b",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.colormap",
+        "func": "msg.colormap = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 180,
+        "wires": [
+            [
+                "9648ba331aa59ceb"
+            ]
+        ]
+    },
+    {
+        "id": "6a7ab5a29fc8f204",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.mqtt",
+        "func": "msg.mqtt = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 220,
+        "wires": [
+            [
+                "b5cfddf388cbc440",
+                "ef1a9f2e55057480"
+            ]
+        ]
+    },
+    {
+        "id": "29e85f0be33d52d7",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.vendor",
+        "func": "msg.vendor = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 260,
+        "wires": [
+            [
+                "7eaceb95a084b02b"
+            ]
+        ]
+    },
+    {
+        "id": "bf3faef62708eeee",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "set msg.script",
+        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 300,
+        "wires": [
+            [
+                "f3b55ea2.f4d51"
+            ]
+        ]
+    },
+    {
+        "id": "470e4d8abf29a205",
+        "type": "mqtt out",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "064bde8eca01e996",
+        "x": 1610,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b47b8870b7c9bd24",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "webfft ON",
+        "func": "let payload = \"webfft\";\nlet topic = `${global.get(\"cmdPath\")}/rx/stream/mode`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "77dc98e0de74c888"
+            ]
+        ]
+    },
+    {
+        "id": "bb77722b6c2658e8",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "config once",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "webfft",
+        "payloadType": "str",
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "b47b8870b7c9bd24"
+            ]
+        ]
+    },
+    {
+        "id": "77dc98e0de74c888",
+        "type": "mqtt out",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "064bde8eca01e996",
+        "x": 650,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "aa44e5106814ab9f",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "Gain :",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/gain`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 620,
+        "wires": [
+            [
+                "470e4d8abf29a205"
+            ]
+        ]
+    },
+    {
+        "id": "30794624a6a04c15",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "label": "Rx {{value | number:2}}  MHz",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "60",
+        "max": "6000",
+        "step": "0.25",
+        "className": "",
+        "x": 970,
+        "y": 560,
+        "wires": [
+            [
+                "7d69601736a74273"
+            ]
+        ]
+    },
+    {
+        "id": "0a9fe9e2623385cb",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "symbol rate",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/span`;\nmsg.topic = topic\nmsg.payload = payload\n// global.set(\"sr_bug\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 700,
+        "wires": [
+            [
+                "470e4d8abf29a205",
+                "a6254b8eb8807472"
+            ]
+        ]
+    },
+    {
+        "id": "3ba43ff973399e13",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 330,
+        "y": 560,
+        "wires": [
+            [
+                "b82cad0a3cddc877",
+                "bff2bb43c29c79e5",
+                "e688634a9f60c746",
+                "a6254b8eb8807472"
+            ]
+        ]
+    },
+    {
+        "id": "b82cad0a3cddc877",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "rx gain",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/gain\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 620,
+        "wires": [
+            [
+                "f72c1ae9d1dc7d89"
+            ]
+        ]
+    },
+    {
+        "id": "f72c1ae9d1dc7d89",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 650,
+        "y": 620,
+        "wires": [
+            [
+                "6adfe6d609aeb90a"
+            ]
+        ]
+    },
+    {
+        "id": "7d69601736a74273",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "Frequency",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nmsg.rx_freq = (payload * 1000);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 440,
+        "wires": [
+            [
+                "5493fb3252e35009",
+                "470e4d8abf29a205"
+            ]
+        ]
+    },
+    {
+        "id": "12159992489b0591",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 650,
+        "y": 560,
+        "wires": [
+            [
+                "4497dbfe8502fab3"
+            ]
+        ]
+    },
+    {
+        "id": "bff2bb43c29c79e5",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "rx frequency ",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/webfft/frequency\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "12159992489b0591"
+            ]
+        ]
+    },
+    {
+        "id": "2131639cdf6f62a5",
+        "type": "ui_iframe",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "group": "bd40e71dca80ef04",
+        "name": "This displays our website at /spektrum address",
+        "order": 1,
+        "width": "32",
+        "height": "5",
+        "url": "/spektrum",
+        "origin": "*",
+        "scale": 100,
+        "x": 1380,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e688634a9f60c746",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "rx span",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/webfft/span\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 700,
+        "wires": [
+            [
+                "818602f620560caa"
+            ]
+        ]
+    },
+    {
+        "id": "818602f620560caa",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 650,
+        "y": 700,
+        "wires": [
+            [
+                "7b24853f35e10fac"
+            ]
+        ]
+    },
+    {
+        "id": "6adfe6d609aeb90a",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "Rx gain slider",
+        "label": "Gain {{value | number:2}} dB",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "65",
+        "step": "1",
+        "className": "",
+        "x": 1000,
+        "y": 620,
+        "wires": [
+            [
+                "aa44e5106814ab9f"
+            ]
+        ]
+    },
+    {
+        "id": "5493fb3252e35009",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "device.rx.frequency",
+                "pt": "global",
+                "to": "rx_freq",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4497dbfe8502fab3",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "function 10",
+        "func": "let payload = msg.payload;\nmsg.payload = (payload / 1000000);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 560,
+        "wires": [
+            [
+                "30794624a6a04c15"
+            ]
+        ]
+    },
+    {
+        "id": "b5cfddf388cbc440",
+        "type": "file in",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "g": "2406e32417780de0",
+        "name": "",
+        "filename": "web/pluto_spectrum/vendor/paho/js/paho-mqtt-min.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "f8332e1870dc4199"
+            ]
+        ]
+    },
+    {
+        "id": "7b24853f35e10fac",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "label": "Span",
+        "tooltip": "{{value}}",
+        "group": "bd40e71dca80ef04",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "500000",
+        "max": "256000000",
+        "step": "100000",
+        "className": "",
+        "x": 970,
+        "y": 700,
+        "wires": [
+            [
+                "0a9fe9e2623385cb"
+            ]
+        ]
+    },
+    {
+        "id": "98c8f2e2679a3123",
+        "type": "comment",
+        "z": "9d964f25dcc4d750",
+        "name": "",
+        "info": "We need to add spectrum controls",
+        "x": 1410,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a6254b8eb8807472",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set minimum span for tx",
+        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 760,
+        "wires": [
+            [
+                "470e4d8abf29a205"
+            ]
+        ]
+    },
+    {
+        "id": "3f6233950fb6654d",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set minimum span for tx",
+        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41b1f74eaf2fa2bd",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set minimum span for tx",
+        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53d85ccc1ca38e73",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nflow.set(\"min_db\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 900,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "6860085513c10a64",
+        "type": "mqtt out",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "064bde8eca01e996",
+        "x": 1430,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "5e009d852e836e3b",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nflow.set(\"max_db\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 960,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "c4b45eae95987a16",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "x": 290,
+        "y": 900,
+        "wires": [
+            [
+                "db57ce0d38f95c32",
+                "9cfb443df5cb5da9"
+            ]
+        ]
+    },
+    {
+        "id": "c0a747bc908afade",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 650,
+        "y": 960,
+        "wires": [
+            [
+                "f5eef0dfd7e39ee3"
+            ]
+        ]
+    },
+    {
+        "id": "db57ce0d38f95c32",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "max",
+        "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 960,
+        "wires": [
+            [
+                "c0a747bc908afade"
+            ]
+        ]
+    },
+    {
+        "id": "9cfb443df5cb5da9",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "min",
+        "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 900,
+        "wires": [
+            [
+                "de2e4421edba4493"
+            ]
+        ]
+    },
+    {
+        "id": "de2e4421edba4493",
+        "type": "mqtt in",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 650,
+        "y": 900,
+        "wires": [
+            [
+                "9af1f8975e61cc08"
+            ]
+        ]
+    },
+    {
+        "id": "1abba09f50e1a73c",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state min",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"min_db\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1020,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "97ea4ec5dc95813b",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "set state max",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"max_db\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1060,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "f51752e8606fb64c",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "x": 850,
+        "y": 1040,
+        "wires": [
+            [
+                "1abba09f50e1a73c",
+                "97ea4ec5dc95813b"
+            ]
+        ]
+    },
+    {
+        "id": "0e96496b235b3fe0",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "420",
+        "payloadType": "num",
+        "x": 310,
+        "y": 1060,
+        "wires": [
+            [
+                "c98f9bfdc4eab524"
+            ]
+        ]
+    },
+    {
+        "id": "c98f9bfdc4eab524",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "min_db",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f6a4873cc3768b5",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "490",
+        "payloadType": "num",
+        "x": 310,
+        "y": 1120,
+        "wires": [
+            [
+                "4536019d942cbd41"
+            ]
+        ]
+    },
+    {
+        "id": "4536019d942cbd41",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "max_db",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9af1f8975e61cc08",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "min",
+        "label": "Min {{value | number:2}}",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "1000",
+        "step": "2",
+        "className": "",
+        "x": 870,
+        "y": 900,
+        "wires": [
+            [
+                "53d85ccc1ca38e73"
+            ]
+        ]
+    },
+    {
+        "id": "f5eef0dfd7e39ee3",
+        "type": "ui_slider",
+        "z": "9d964f25dcc4d750",
+        "g": "2e4963908c2bd3e0",
+        "name": "max",
+        "label": "Max {{value | number:2}}",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "1000",
+        "step": "2",
+        "className": "",
+        "x": 870,
+        "y": 980,
+        "wires": [
+            [
+                "5e009d852e836e3b"
+            ]
+        ]
+    },
+    {
+        "id": "01cd46f702ab295a",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "",
+        "url": "/spektrum_test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "f395b1bb7fa9dff7"
+            ]
+        ]
+    },
+    {
+        "id": "f7591f90facf0e0b",
+        "type": "http response",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "",
+        "x": 1330,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2acadfcfdd128dd9",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var localPage = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "output": "str",
+        "x": 1190,
+        "y": 360,
+        "wires": [
+            [
+                "f7591f90facf0e0b"
+            ]
+        ]
+    },
+    {
+        "id": "c45e701da3354b62",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "",
+        "filename": "web/internet_spectrum/style.css",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "566cd2394e33219b"
+            ]
+        ]
+    },
+    {
+        "id": "566cd2394e33219b",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "style.css",
+        "field": "payload.style",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [
+                "84fa266a165b46e6"
+            ]
+        ]
+    },
+    {
+        "id": "46beab7ba343f23f",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "",
+        "filename": "web/internet_spectrum/websocket.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 540,
+        "y": 360,
+        "wires": [
+            [
+                "822ca2b96e4f3d64"
+            ]
+        ]
+    },
+    {
+        "id": "822ca2b96e4f3d64",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "websocket",
+        "field": "payload.websocket",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 770,
+        "y": 360,
+        "wires": [
+            [
+                "08dd20aa4336d75c"
+            ]
+        ]
+    },
+    {
+        "id": "9c867256e71c4952",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "",
+        "filename": "web/internet_spectrum/script.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "5652811db02929c2"
+            ]
+        ]
+    },
+    {
+        "id": "5652811db02929c2",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "script",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 750,
+        "y": 420,
+        "wires": [
+            [
+                "a61938e5f879256b"
+            ]
+        ]
+    },
+    {
+        "id": "84fa266a165b46e6",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "set msg.style",
+        "func": "msg.style = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 300,
+        "wires": [
+            [
+                "46beab7ba343f23f"
+            ]
+        ]
+    },
+    {
+        "id": "f395b1bb7fa9dff7",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "set url",
+        "func": "msg.url = \"spektrum_test\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "c45e701da3354b62"
+            ]
+        ]
+    },
+    {
+        "id": "08dd20aa4336d75c",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "set msg.websocket",
+        "func": "msg.websocket = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 360,
+        "wires": [
+            [
+                "9c867256e71c4952"
+            ]
+        ]
+    },
+    {
+        "id": "a61938e5f879256b",
+        "type": "function",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "set msg.script",
+        "func": "msg.script = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 420,
+        "wires": [
+            [
+                "2acadfcfdd128dd9"
+            ]
+        ]
+    },
+    {
+        "id": "bbf9e870bbb3141b",
+        "type": "ui_iframe",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "group": "235bdacf6041386f",
+        "name": "spectrum iframe",
+        "order": 2,
+        "width": "18",
+        "height": "10",
+        "url": "/spektrum_test",
+        "origin": "*",
+        "scale": "100",
+        "x": 1180,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "109faf60df3867c0",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "g": "e6a3ecf34e7cea7c",
+        "name": "",
+        "url": "/spectrum",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "10dbef2665a872eb"
+            ]
+        ]
+    },
+    {
+        "id": "10dbef2665a872eb",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "g": "e6a3ecf34e7cea7c",
+        "name": "",
+        "filename": "web/spectrum.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "8bf647b3812030b1"
+            ]
+        ]
+    },
+    {
+        "id": "8bf647b3812030b1",
+        "type": "http response",
+        "z": "e2c54979685d14cb",
+        "d": true,
+        "g": "e6a3ecf34e7cea7c",
+        "name": "",
+        "x": 550,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "390ac0996bfbf3e8",
+        "type": "ui_form",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "label": "Minitioune receiver",
+        "group": "b774f32781d086fb",
+        "order": 6,
+        "width": "13",
+        "height": "6",
+        "options": [
+            {
+                "label": "ip_address",
+                "value": "ip_address",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "port",
+                "value": "port",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "offset",
+                "value": "offset",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "rx_socket",
+                "value": "rx_socket",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_volts",
+                "value": "lnb_volts",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_22khz",
+                "value": "lnb_22khz",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "dvb_mode",
+                "value": "dvb_mode",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "wide_scan",
+                "value": "wide_scan",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "low_sr",
+                "value": "low_sr",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ip_address": "",
+            "port": "",
+            "offset": "",
+            "rx_socket": "",
+            "lnb_volts": "",
+            "lnb_22khz": "",
+            "dvb_mode": "",
+            "wide_scan": "",
+            "low_sr": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "6f0dfc4da4e5adba"
+            ]
+        ]
+    },
+    {
+        "id": "3c880cfa489b99ba",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "settings file path",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 100,
+        "wires": [
+            [
+                "583e05834ada403d"
+            ]
+        ]
+    },
+    {
+        "id": "583e05834ada403d",
+        "type": "file in",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 820,
+        "y": 100,
+        "wires": [
+            [
+                "56dc16b9e1976cab"
+            ]
+        ]
+    },
+    {
+        "id": "56dc16b9e1976cab",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add receiver",
+        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 100,
+        "wires": [
+            [
+                "1e70a3d6fd597ab5"
+            ]
+        ]
+    },
+    {
+        "id": "6f0dfc4da4e5adba",
+        "type": "change",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "form",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form.type",
+                "pt": "msg",
+                "to": "Minitioune",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "3c880cfa489b99ba"
+            ]
+        ]
+    },
+    {
+        "id": "735e31a90de36b9a",
+        "type": "debug",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add minitiouner",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1e70a3d6fd597ab5",
+        "type": "file",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1200,
+        "y": 100,
+        "wires": [
+            [
+                "735e31a90de36b9a",
+                "86a51f94eab9e839"
+            ]
+        ]
+    },
+    {
+        "id": "d1aea45a350e8689",
+        "type": "inject",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "86a51f94eab9e839"
+            ]
+        ]
+    },
+    {
+        "id": "86a51f94eab9e839",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "settings file path",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "8822bec48f5c42d6"
+            ]
+        ]
+    },
+    {
+        "id": "8822bec48f5c42d6",
+        "type": "file in",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "282aef0db727d395"
+            ]
+        ]
+    },
+    {
+        "id": "ae1646fbdd5d8b9c",
+        "type": "ui_list",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "group": "b774f32781d086fb",
+        "name": "",
+        "order": 6,
+        "width": "26",
+        "height": "6",
+        "lineType": "two",
+        "actionType": "check",
+        "allowHTML": false,
+        "outputs": 1,
+        "topic": "",
+        "x": 1110,
+        "y": 180,
+        "wires": [
+            [
+                "8ebc9dd6c04d47a7"
+            ]
+        ]
+    },
+    {
+        "id": "282aef0db727d395",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "create list from JSON",
+        "func": "let receivers = JSON.parse(msg.payload);\nlet array = [];\nfor (let index = 0; index < receivers.length; index++) {\n    const element = receivers[index];\n    \n    let obj = {\n        \"title\": `CH${index+1} -> ${element.type} - IP: ${element.ip_address} - Port: ${element.port} - Offset: ${element.offset} kHz - Socket: ${element.rx_socket}`,\n        \"icon_name\": \"fa-podcast\"\n    }\n    array.push(obj);\n}\nmsg.payload = array;\nreturn msg;\n\n\n// payloadarray\n// Array of objects containing following properties:\n// title - title of the item,\n// description - description of the item. Optional if line type is Single-line or action type is menu,\n// menu - list of menu items (optional),\n// icon - URL of icon (optional),\n// icon_name - font icon name (optional).\n// icon_unicode - alternative to icon name - uses text characters (optional).\n// isChecked - boolean, set the item checked or on (optional).",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 180,
+        "wires": [
+            [
+                "ae1646fbdd5d8b9c"
+            ]
+        ]
+    },
+    {
+        "id": "a51c17448cbde903",
+        "type": "ui_form",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "label": "Winterhill receiver",
+        "group": "b774f32781d086fb",
+        "order": 6,
+        "width": "13",
+        "height": "6",
+        "options": [
+            {
+                "label": "ip_address",
+                "value": "ip_address",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "port",
+                "value": "port",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "offset",
+                "value": "offset",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "rx_socket",
+                "value": "rx_socket",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_volts",
+                "value": "lnb_volts",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_22khz",
+                "value": "lnb_22khz",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ip_address": "",
+            "port": "",
+            "offset": "",
+            "rx_socket": "",
+            "lnb_volts": "",
+            "lnb_22khz": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "0d7bed971ef2d798"
+            ]
+        ]
+    },
+    {
+        "id": "b74cbbf79c7b8ecc",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "settings file path",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "731a3c957fc08056"
+            ]
+        ]
+    },
+    {
+        "id": "731a3c957fc08056",
+        "type": "file in",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 820,
+        "y": 260,
+        "wires": [
+            [
+                "4330f69a2f5fe062"
+            ]
+        ]
+    },
+    {
+        "id": "4330f69a2f5fe062",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add receiver",
+        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 260,
+        "wires": [
+            [
+                "4696f747c19341dd"
+            ]
+        ]
+    },
+    {
+        "id": "0d7bed971ef2d798",
+        "type": "change",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "form",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form.type",
+                "pt": "msg",
+                "to": "Winterhill",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "b74cbbf79c7b8ecc"
+            ]
+        ]
+    },
+    {
+        "id": "7409d36e4650ab84",
+        "type": "debug",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add winterhill",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4696f747c19341dd",
+        "type": "file",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1200,
+        "y": 260,
+        "wires": [
+            [
+                "7409d36e4650ab84",
+                "86a51f94eab9e839"
+            ]
+        ]
+    },
+    {
+        "id": "8ebc9dd6c04d47a7",
+        "type": "debug",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "checked receivers",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "type": "tab",
+        "label": "Chat",
+        "id": "27bb1861e8b5803b",
+        "info": "",
+        "disabled": false,
+        "env": []
+    },
+    {
+        "id": "c89e4837c83d2853",
+        "type": "http in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "8d39370d898accaf"
+            ]
+        ]
+    },
+    {
+        "id": "9fbc129fa6394326",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "socket_io",
+        "field": "payload.socket_io",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 860,
+        "y": 280,
+        "wires": [
+            [
+                "757d2c26dbe0099b"
+            ]
+        ]
+    },
+    {
+        "id": "fd9ac23c6e70a5aa",
+        "type": "http response",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "x": 1470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "cbf50d9eb89da5d2",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>QO-100 Wideband Chat</title>\n    <meta name=\"description\" content=\"BATC & AMSAT-UK Qatar-OSCAR 100 (Es'hail-2) Wideband Chat-only page\">\n    <meta name=\"author\" content=\"BATC & AMSAT-UK\">\n\n    <style>{{&style}}</style>\n    <script>{{&jquery}}</script>\n    <script>{{&socket_io}}</script>\n    <script>{{&chat}}</script>\n    <script>{{&script}}</script>\n \n</head>\n<body>\n\t<div id=\"chat\"></div>\n</body>\n</html>\n",
+        "x": 1290,
+        "y": 340,
+        "wires": [
+            [
+                "fd9ac23c6e70a5aa"
+            ]
+        ]
+    },
+    {
+        "id": "9d495d79ebc38951",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/style.css",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "f669a447f3e908ed"
+            ]
+        ]
+    },
+    {
+        "id": "f669a447f3e908ed",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "style.css",
+        "field": "payload.style",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 860,
+        "y": 240,
+        "wires": [
+            [
+                "78515082550cdaf2"
+            ]
+        ]
+    },
+    {
+        "id": "d457e075ac825cb5",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/socket.io-3.1.1.min.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "9fbc129fa6394326"
+            ]
+        ]
+    },
+    {
+        "id": "b796d646016935f0",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "jquery",
+        "field": "payload.jquery",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 320,
+        "wires": [
+            [
+                "44c3730ff5adc318"
+            ]
+        ]
+    },
+    {
+        "id": "a88f51e66fb17714",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/jquery.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "b796d646016935f0"
+            ]
+        ]
+    },
+    {
+        "id": "8c30ea56a34d3ed6",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/chat.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "c64ccc73f797daeb"
+            ]
+        ]
+    },
+    {
+        "id": "c64ccc73f797daeb",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "chat",
+        "field": "payload.chat",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 360,
+        "wires": [
+            [
+                "8623bdd3929c0b5e"
+            ]
+        ]
+    },
+    {
+        "id": "1cd090be8ed507a2",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/script.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 440,
+        "wires": [
+            [
+                "6126de06636f2a66"
+            ]
+        ]
+    },
+    {
+        "id": "6126de06636f2a66",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "script",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "851ec4f2ca907ce4"
+            ]
+        ]
+    },
+    {
+        "id": "78515082550cdaf2",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.style",
+        "func": "msg.style = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            [
+                "d457e075ac825cb5"
+            ]
+        ]
+    },
+    {
+        "id": "8d39370d898accaf",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "function 11",
+        "func": "msg.url = `/chat`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "9d495d79ebc38951"
+            ]
+        ]
+    },
+    {
+        "id": "757d2c26dbe0099b",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.spectrum",
+        "func": "msg.socket_io = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 280,
+        "wires": [
+            [
+                "a88f51e66fb17714"
+            ]
+        ]
+    },
+    {
+        "id": "44c3730ff5adc318",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.colormap",
+        "func": "msg.jquery = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 320,
+        "wires": [
+            [
+                "8c30ea56a34d3ed6"
+            ]
+        ]
+    },
+    {
+        "id": "8623bdd3929c0b5e",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.chat",
+        "func": "msg.chat = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 360,
+        "wires": [
+            [
+                "1cd090be8ed507a2"
+            ]
+        ]
+    },
+    {
+        "id": "851ec4f2ca907ce4",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.script",
+        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 440,
+        "wires": [
+            [
+                "cbf50d9eb89da5d2"
+            ]
+        ]
+    },
+    {
+        "id": "9d1da64159907870",
+        "type": "http in",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "34ce25461d4e6d42"
+            ]
+        ]
+    },
+    {
+        "id": "34ce25461d4e6d42",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "filename": "web/chat.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "e0101a5a9a04f1aa"
+            ]
+        ]
+    },
+    {
+        "id": "e0101a5a9a04f1aa",
+        "type": "http response",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 420,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4de0745ac50ff8b8",
+        "type": "ui_iframe",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "group": "d2e4abefdc42e427",
+        "name": "chat iframe",
+        "order": 2,
+        "width": "32",
+        "height": "8",
+        "url": "/chat",
+        "origin": "*",
+        "scale": 100,
+        "x": 130,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7db57965.76d468",
+        "type": "ui_button",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "group": "65d91b75202c3b55",
+        "order": 19,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "chat",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "chat",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "ece06122.7e762"
+            ]
+        ]
+    },
+    {
+        "id": "5e1f0081.6dc3c",
+        "type": "ui_template",
+        "z": "27bb1861e8b5803b",
+        "group": "65d91b75202c3b55",
+        "name": "window redirect",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        if (data == \"chat\") {\n          window.open(\"http://127.0.0.1:1880/chat\");\n        } \n        // if (data == \"GitHub\") {\n        //   //window.open(\"https://github.com/node-red\");\n        //   window.location.href = \"https://github.com/node-red\";\n        // } \n    });\n})(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ece06122.7e762",
+        "type": "trigger",
+        "z": "27bb1861e8b5803b",
+        "name": "reset msg",
+        "op1": "",
+        "op2": "empty",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 780,
+        "y": 80,
+        "wires": [
+            [
+                "5e1f0081.6dc3c"
+            ]
+        ]
+    },
+    {
+        "type": "tab",
+        "label": "DATV Reception",
+        "id": "d7c58eb9e7b65abb",
+        "info": "",
+        "disabled": false,
+        "env": []
+    },
+    {
         "id": "4c448d00f7a9bc91",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
@@ -19496,2327 +22281,52 @@
         ]
     },
     {
-        "id": "1e0841f1.ac68fe",
-        "type": "http in",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "url": "/spektrum",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 180,
-        "y": 100,
-        "wires": [
-            [
-                "4dbfb098ed6ce8ef"
-            ]
-        ]
+        "id": "c9432c41e4afe7e0",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "65d91b75202c3b55",
+        "order": 6,
+        "width": "1",
+        "height": "1"
     },
     {
-        "id": "5de0bbd4.6c8574",
-        "type": "http in",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "url": "/mysitepost",
-        "method": "post",
-        "swaggerDoc": "",
-        "x": 210,
-        "y": 1840,
-        "wires": [
-            [
-                "80321000.f2dc5",
-                "75913f37.78e6e"
-            ]
-        ]
-    },
-    {
-        "id": "80321000.f2dc5",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "mysitepost",
-        "active": true,
-        "console": "false",
-        "complete": "payload",
-        "x": 850,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "8de9647.b8a9a98",
-        "type": "http response",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "x": 870,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "b2f5bdf9.e09f1",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "spectrum",
-        "field": "payload.spectrum",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 900,
-        "y": 140,
-        "wires": [
-            [
-                "fad658d5d37f9a7e"
-            ]
-        ]
-    },
-    {
-        "id": "d2c0bc2a.05a02",
-        "type": "http response",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "x": 1510,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "f3b55ea2.f4d51",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "HTML",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>\n         var pluto_url = \"{{pluto}}\";\n         var callsign = \"{{callsign}}\";\n         var localPage = false;\n         </script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
-        "x": 1330,
-        "y": 200,
-        "wires": [
-            [
-                "d2c0bc2a.05a02"
-            ]
-        ]
-    },
-    {
-        "id": "57316751.8bd948",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "Login Form",
-        "info": "",
-        "x": 370,
-        "y": 1760,
-        "wires": []
-    },
-    {
-        "id": "ad88b28c.bc842",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "return msg.payload to client",
-        "func": "msg.payload = 'The following data was submitted and available in the msg.payload: '+msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 1800,
-        "wires": [
-            [
-                "8de9647.b8a9a98"
-            ]
-        ]
-    },
-    {
-        "id": "75913f37.78e6e",
-        "type": "json",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "x": 410,
-        "y": 1800,
-        "wires": [
-            [
-                "ad88b28c.bc842"
-            ]
-        ]
-    },
-    {
-        "id": "111485fa.14c4aa",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "Form Submission",
-        "info": "",
-        "x": 200,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "e5e2b6286078ea70",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "filename": "web/pluto_spectrum/style.css",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 550,
-        "y": 100,
-        "wires": [
-            [
-                "b48f255275eca72c"
-            ]
-        ]
-    },
-    {
-        "id": "b48f255275eca72c",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "style.css",
-        "field": "payload.style",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 900,
-        "y": 100,
-        "wires": [
-            [
-                "541fbfaf914a0185"
-            ]
-        ]
-    },
-    {
-        "id": "e052b91f64f6eeab",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "filename": "web/pluto_spectrum/spectrum.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 560,
-        "y": 140,
-        "wires": [
-            [
-                "b2f5bdf9.e09f1"
-            ]
-        ]
-    },
-    {
-        "id": "79f35d51926b0efe",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "colormap",
-        "field": "payload.colormap",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 900,
-        "y": 180,
-        "wires": [
-            [
-                "843fb2fa39feec7b"
-            ]
-        ]
-    },
-    {
-        "id": "de0e60933695f58d",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "filename": "web/pluto_spectrum/colormap.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 560,
-        "y": 180,
-        "wires": [
-            [
-                "79f35d51926b0efe"
-            ]
-        ]
-    },
-    {
-        "id": "9648ba331aa59ceb",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "filename": "web/pluto_spectrum/mqtt.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 540,
-        "y": 220,
-        "wires": [
-            [
-                "43f4f730e4b29392"
-            ]
-        ]
-    },
-    {
-        "id": "43f4f730e4b29392",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "mqtt",
-        "field": "payload.mqtt",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 890,
-        "y": 220,
-        "wires": [
-            [
-                "6a7ab5a29fc8f204"
-            ]
-        ]
-    },
-    {
-        "id": "ef1a9f2e55057480",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "filename": "web/pluto_spectrum/vendor/mqtt.min.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 240,
-        "y": 220,
-        "wires": [
-            [
-                "f8332e1870dc4199"
-            ]
-        ]
-    },
-    {
-        "id": "f8332e1870dc4199",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "vendor",
-        "field": "payload.vendor",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 890,
-        "y": 260,
-        "wires": [
-            [
-                "29e85f0be33d52d7"
-            ]
-        ]
-    },
-    {
-        "id": "7eaceb95a084b02b",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "",
-        "filename": "web/pluto_spectrum/script.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 540,
-        "y": 300,
-        "wires": [
-            [
-                "5b8734bb249bed14"
-            ]
-        ]
-    },
-    {
-        "id": "5b8734bb249bed14",
-        "type": "template",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "script",
-        "field": "payload.script",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 890,
-        "y": 300,
-        "wires": [
-            [
-                "bf3faef62708eeee"
-            ]
-        ]
-    },
-    {
-        "id": "541fbfaf914a0185",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "set msg.style",
-        "func": "msg.style = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 100,
-        "wires": [
-            [
-                "e052b91f64f6eeab"
-            ]
-        ]
-    },
-    {
-        "id": "4dbfb098ed6ce8ef",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "function 9",
-        "func": "msg.url = `/spektrum?url=${global.get(\"broker_address\")}`;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 100,
-        "wires": [
-            [
-                "e5e2b6286078ea70"
-            ]
-        ]
-    },
-    {
-        "id": "fad658d5d37f9a7e",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "set msg.spectrum",
-        "func": "msg.spectrum = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1110,
-        "y": 140,
-        "wires": [
-            [
-                "de0e60933695f58d"
-            ]
-        ]
-    },
-    {
-        "id": "843fb2fa39feec7b",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "set msg.colormap",
-        "func": "msg.colormap = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1110,
-        "y": 180,
-        "wires": [
-            [
-                "9648ba331aa59ceb"
-            ]
-        ]
-    },
-    {
-        "id": "6a7ab5a29fc8f204",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "set msg.mqtt",
-        "func": "msg.mqtt = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1090,
-        "y": 220,
-        "wires": [
-            [
-                "b5cfddf388cbc440",
-                "ef1a9f2e55057480"
-            ]
-        ]
-    },
-    {
-        "id": "29e85f0be33d52d7",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "set msg.vendor",
-        "func": "msg.vendor = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1100,
-        "y": 260,
-        "wires": [
-            [
-                "7eaceb95a084b02b"
-            ]
-        ]
-    },
-    {
-        "id": "bf3faef62708eeee",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "set msg.script",
-        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1100,
-        "y": 300,
-        "wires": [
-            [
-                "f3b55ea2.f4d51"
-            ]
-        ]
-    },
-    {
-        "id": "470e4d8abf29a205",
-        "type": "mqtt out",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "064bde8eca01e996",
-        "x": 1610,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "b47b8870b7c9bd24",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "webfft ON",
-        "func": "let payload = \"webfft\";\nlet topic = `${global.get(\"cmdPath\")}/rx/stream/mode`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 500,
-        "wires": [
-            [
-                "77dc98e0de74c888"
-            ]
-        ]
-    },
-    {
-        "id": "bb77722b6c2658e8",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "config once",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "2",
-        "topic": "",
-        "payload": "webfft",
-        "payloadType": "str",
-        "x": 310,
-        "y": 500,
-        "wires": [
-            [
-                "b47b8870b7c9bd24"
-            ]
-        ]
-    },
-    {
-        "id": "77dc98e0de74c888",
-        "type": "mqtt out",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "064bde8eca01e996",
-        "x": 650,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "aa44e5106814ab9f",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "Gain :",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/gain`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1170,
-        "y": 620,
-        "wires": [
-            [
-                "470e4d8abf29a205"
-            ]
-        ]
-    },
-    {
-        "id": "30794624a6a04c15",
-        "type": "ui_slider",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "label": "Rx {{value | number:2}}  MHz",
-        "tooltip": "",
-        "group": "bd40e71dca80ef04",
+        "id": "60dc608a8e13e309",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
         "order": 4,
-        "width": "10",
-        "height": "1",
-        "passthru": false,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "60",
-        "max": "6000",
-        "step": "0.25",
-        "className": "",
-        "x": 970,
-        "y": 560,
-        "wires": [
-            [
-                "7d69601736a74273"
-            ]
-        ]
+        "width": "1",
+        "height": "1"
     },
     {
-        "id": "0a9fe9e2623385cb",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "symbol rate",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/span`;\nmsg.topic = topic\nmsg.payload = payload\n// global.set(\"sr_bug\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1190,
-        "y": 700,
-        "wires": [
-            [
-                "470e4d8abf29a205",
-                "a6254b8eb8807472"
-            ]
-        ]
+        "id": "1d0d55cb8f9c1bff",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
+        "order": 8,
+        "width": "3",
+        "height": "1"
     },
     {
-        "id": "3ba43ff973399e13",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 330,
-        "y": 560,
-        "wires": [
-            [
-                "b82cad0a3cddc877",
-                "bff2bb43c29c79e5",
-                "e688634a9f60c746",
-                "a6254b8eb8807472"
-            ]
-        ]
-    },
-    {
-        "id": "b82cad0a3cddc877",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "rx gain",
-        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/gain\"\nreturn msg;\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 470,
-        "y": 620,
-        "wires": [
-            [
-                "f72c1ae9d1dc7d89"
-            ]
-        ]
-    },
-    {
-        "id": "f72c1ae9d1dc7d89",
-        "type": "mqtt in",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 650,
-        "y": 620,
-        "wires": [
-            [
-                "6adfe6d609aeb90a"
-            ]
-        ]
-    },
-    {
-        "id": "7d69601736a74273",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "Frequency",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nmsg.rx_freq = (payload * 1000);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1170,
-        "y": 440,
-        "wires": [
-            [
-                "5493fb3252e35009",
-                "470e4d8abf29a205"
-            ]
-        ]
-    },
-    {
-        "id": "12159992489b0591",
-        "type": "mqtt in",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 650,
-        "y": 560,
-        "wires": [
-            [
-                "4497dbfe8502fab3"
-            ]
-        ]
-    },
-    {
-        "id": "bff2bb43c29c79e5",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "rx frequency ",
-        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/webfft/frequency\"\nreturn msg;\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 560,
-        "wires": [
-            [
-                "12159992489b0591"
-            ]
-        ]
-    },
-    {
-        "id": "2131639cdf6f62a5",
-        "type": "ui_iframe",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "group": "bd40e71dca80ef04",
-        "name": "This displays our website at /spektrum address",
-        "order": 1,
-        "width": "32",
-        "height": "5",
-        "url": "/spektrum",
-        "origin": "*",
-        "scale": 100,
-        "x": 1380,
-        "y": 100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e688634a9f60c746",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "rx span",
-        "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/webfft/span\"\nreturn msg;\n\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 700,
-        "wires": [
-            [
-                "818602f620560caa"
-            ]
-        ]
-    },
-    {
-        "id": "818602f620560caa",
-        "type": "mqtt in",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 650,
-        "y": 700,
-        "wires": [
-            [
-                "7b24853f35e10fac"
-            ]
-        ]
-    },
-    {
-        "id": "6adfe6d609aeb90a",
-        "type": "ui_slider",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "Rx gain slider",
-        "label": "Gain {{value | number:2}} dB",
-        "tooltip": "",
-        "group": "bd40e71dca80ef04",
+        "id": "28d0dedfd904e16b",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
         "order": 5,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "0",
-        "max": "65",
-        "step": "1",
-        "className": "",
-        "x": 1000,
-        "y": 620,
-        "wires": [
-            [
-                "aa44e5106814ab9f"
-            ]
-        ]
-    },
-    {
-        "id": "5493fb3252e35009",
-        "type": "change",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "device.rx.frequency",
-                "pt": "global",
-                "to": "rx_freq",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1470,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4497dbfe8502fab3",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "function 10",
-        "func": "let payload = msg.payload;\nmsg.payload = (payload / 1000000);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 560,
-        "wires": [
-            [
-                "30794624a6a04c15"
-            ]
-        ]
-    },
-    {
-        "id": "b5cfddf388cbc440",
-        "type": "file in",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "g": "2406e32417780de0",
-        "name": "",
-        "filename": "web/pluto_spectrum/vendor/paho/js/paho-mqtt-min.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 280,
-        "y": 260,
-        "wires": [
-            [
-                "f8332e1870dc4199"
-            ]
-        ]
-    },
-    {
-        "id": "7b24853f35e10fac",
-        "type": "ui_slider",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "label": "Span",
-        "tooltip": "{{value}}",
-        "group": "bd40e71dca80ef04",
-        "order": 3,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "500000",
-        "max": "256000000",
-        "step": "100000",
-        "className": "",
-        "x": 970,
-        "y": 700,
-        "wires": [
-            [
-                "0a9fe9e2623385cb"
-            ]
-        ]
-    },
-    {
-        "id": "98c8f2e2679a3123",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "info": "We need to add spectrum controls",
-        "x": 1410,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "a6254b8eb8807472",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set minimum span for tx",
-        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1420,
-        "y": 760,
-        "wires": [
-            [
-                "470e4d8abf29a205"
-            ]
-        ]
-    },
-    {
-        "id": "3f6233950fb6654d",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set minimum span for tx",
-        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "41b1f74eaf2fa2bd",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set minimum span for tx",
-        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "53d85ccc1ca38e73",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set state",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nflow.set(\"min_db\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1160,
-        "y": 900,
-        "wires": [
-            [
-                "6860085513c10a64"
-            ]
-        ]
-    },
-    {
-        "id": "6860085513c10a64",
-        "type": "mqtt out",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "064bde8eca01e996",
-        "x": 1430,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "5e009d852e836e3b",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set state",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nflow.set(\"max_db\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1160,
-        "y": 960,
-        "wires": [
-            [
-                "6860085513c10a64"
-            ]
-        ]
-    },
-    {
-        "id": "c4b45eae95987a16",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "name": "",
-        "props": [],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0.1",
-        "topic": "",
-        "x": 290,
-        "y": 900,
-        "wires": [
-            [
-                "db57ce0d38f95c32",
-                "9cfb443df5cb5da9"
-            ]
-        ]
-    },
-    {
-        "id": "c0a747bc908afade",
-        "type": "mqtt in",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 650,
-        "y": 960,
-        "wires": [
-            [
-                "f5eef0dfd7e39ee3"
-            ]
-        ]
-    },
-    {
-        "id": "db57ce0d38f95c32",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "max",
-        "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 960,
-        "wires": [
-            [
-                "c0a747bc908afade"
-            ]
-        ]
-    },
-    {
-        "id": "9cfb443df5cb5da9",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "min",
-        "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 900,
-        "wires": [
-            [
-                "de2e4421edba4493"
-            ]
-        ]
-    },
-    {
-        "id": "de2e4421edba4493",
-        "type": "mqtt in",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "064bde8eca01e996",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 650,
-        "y": 900,
-        "wires": [
-            [
-                "9af1f8975e61cc08"
-            ]
-        ]
-    },
-    {
-        "id": "1abba09f50e1a73c",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set state min",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"min_db\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1170,
-        "y": 1020,
-        "wires": [
-            [
-                "6860085513c10a64"
-            ]
-        ]
-    },
-    {
-        "id": "97ea4ec5dc95813b",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set state max",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"max_db\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1170,
-        "y": 1060,
-        "wires": [
-            [
-                "6860085513c10a64"
-            ]
-        ]
-    },
-    {
-        "id": "f51752e8606fb64c",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0.5",
-        "topic": "",
-        "x": 850,
-        "y": 1040,
-        "wires": [
-            [
-                "1abba09f50e1a73c",
-                "97ea4ec5dc95813b"
-            ]
-        ]
-    },
-    {
-        "id": "0e96496b235b3fe0",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "420",
-        "payloadType": "num",
-        "x": 310,
-        "y": 1060,
-        "wires": [
-            [
-                "c98f9bfdc4eab524"
-            ]
-        ]
-    },
-    {
-        "id": "c98f9bfdc4eab524",
-        "type": "change",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "min_db",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 1060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9f6a4873cc3768b5",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "490",
-        "payloadType": "num",
-        "x": 310,
-        "y": 1120,
-        "wires": [
-            [
-                "4536019d942cbd41"
-            ]
-        ]
-    },
-    {
-        "id": "4536019d942cbd41",
-        "type": "change",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "max_db",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 480,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9af1f8975e61cc08",
-        "type": "ui_slider",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "min",
-        "label": "Min {{value | number:2}}",
-        "tooltip": "",
-        "group": "bd40e71dca80ef04",
-        "order": 4,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "0",
-        "max": "1000",
-        "step": "2",
-        "className": "",
-        "x": 870,
-        "y": 900,
-        "wires": [
-            [
-                "53d85ccc1ca38e73"
-            ]
-        ]
-    },
-    {
-        "id": "f5eef0dfd7e39ee3",
-        "type": "ui_slider",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "max",
-        "label": "Max {{value | number:2}}",
-        "tooltip": "",
-        "group": "bd40e71dca80ef04",
-        "order": 4,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "0",
-        "max": "1000",
-        "step": "2",
-        "className": "",
-        "x": 870,
-        "y": 980,
-        "wires": [
-            [
-                "5e009d852e836e3b"
-            ]
-        ]
-    },
-    {
-        "id": "01cd46f702ab295a",
-        "type": "http in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "url": "/spektrum_test",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 150,
-        "y": 300,
-        "wires": [
-            [
-                "f395b1bb7fa9dff7"
-            ]
-        ]
-    },
-    {
-        "id": "f7591f90facf0e0b",
-        "type": "http response",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "x": 1330,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "2acadfcfdd128dd9",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "HTML",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var localPage = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
-        "output": "str",
-        "x": 1190,
-        "y": 360,
-        "wires": [
-            [
-                "f7591f90facf0e0b"
-            ]
-        ]
-    },
-    {
-        "id": "c45e701da3354b62",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "filename": "web/internet_spectrum/style.css",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 530,
-        "y": 300,
-        "wires": [
-            [
-                "566cd2394e33219b"
-            ]
-        ]
-    },
-    {
-        "id": "566cd2394e33219b",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "style.css",
-        "field": "payload.style",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 760,
-        "y": 300,
-        "wires": [
-            [
-                "84fa266a165b46e6"
-            ]
-        ]
-    },
-    {
-        "id": "46beab7ba343f23f",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "filename": "web/internet_spectrum/websocket.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 540,
-        "y": 360,
-        "wires": [
-            [
-                "822ca2b96e4f3d64"
-            ]
-        ]
-    },
-    {
-        "id": "822ca2b96e4f3d64",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "websocket",
-        "field": "payload.websocket",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 770,
-        "y": 360,
-        "wires": [
-            [
-                "08dd20aa4336d75c"
-            ]
-        ]
-    },
-    {
-        "id": "9c867256e71c4952",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "filename": "web/internet_spectrum/script.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 530,
-        "y": 420,
-        "wires": [
-            [
-                "5652811db02929c2"
-            ]
-        ]
-    },
-    {
-        "id": "5652811db02929c2",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "script",
-        "field": "payload.script",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 750,
-        "y": 420,
-        "wires": [
-            [
-                "a61938e5f879256b"
-            ]
-        ]
-    },
-    {
-        "id": "84fa266a165b46e6",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set msg.style",
-        "func": "msg.style = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 950,
-        "y": 300,
-        "wires": [
-            [
-                "46beab7ba343f23f"
-            ]
-        ]
-    },
-    {
-        "id": "f395b1bb7fa9dff7",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set url",
-        "func": "msg.url = \"spektrum_test\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 300,
-        "wires": [
-            [
-                "c45e701da3354b62"
-            ]
-        ]
-    },
-    {
-        "id": "08dd20aa4336d75c",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set msg.websocket",
-        "func": "msg.websocket = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 970,
-        "y": 360,
-        "wires": [
-            [
-                "9c867256e71c4952"
-            ]
-        ]
-    },
-    {
-        "id": "a61938e5f879256b",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set msg.script",
-        "func": "msg.script = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 420,
-        "wires": [
-            [
-                "2acadfcfdd128dd9"
-            ]
-        ]
-    },
-    {
-        "id": "bbf9e870bbb3141b",
-        "type": "ui_iframe",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "group": "235bdacf6041386f",
-        "name": "spectrum iframe",
-        "order": 2,
-        "width": "18",
-        "height": "10",
-        "url": "/spektrum_test",
-        "origin": "*",
-        "scale": "100",
-        "x": 1180,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "109faf60df3867c0",
-        "type": "http in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "g": "e6a3ecf34e7cea7c",
-        "name": "",
-        "url": "/spectrum",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 140,
-        "y": 160,
-        "wires": [
-            [
-                "10dbef2665a872eb"
-            ]
-        ]
-    },
-    {
-        "id": "10dbef2665a872eb",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "g": "e6a3ecf34e7cea7c",
-        "name": "",
-        "filename": "web/spectrum.html",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 370,
-        "y": 160,
-        "wires": [
-            [
-                "8bf647b3812030b1"
-            ]
-        ]
-    },
-    {
-        "id": "8bf647b3812030b1",
-        "type": "http response",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "g": "e6a3ecf34e7cea7c",
-        "name": "",
-        "x": 550,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "c89e4837c83d2853",
-        "type": "http in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "url": "/chat",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 240,
-        "wires": [
-            [
-                "8d39370d898accaf"
-            ]
-        ]
-    },
-    {
-        "id": "9fbc129fa6394326",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "socket_io",
-        "field": "payload.socket_io",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 860,
-        "y": 280,
-        "wires": [
-            [
-                "757d2c26dbe0099b"
-            ]
-        ]
-    },
-    {
-        "id": "fd9ac23c6e70a5aa",
-        "type": "http response",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "x": 1470,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "cbf50d9eb89da5d2",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "HTML",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>QO-100 Wideband Chat</title>\n    <meta name=\"description\" content=\"BATC & AMSAT-UK Qatar-OSCAR 100 (Es'hail-2) Wideband Chat-only page\">\n    <meta name=\"author\" content=\"BATC & AMSAT-UK\">\n\n    <style>{{&style}}</style>\n    <script>{{&jquery}}</script>\n    <script>{{&socket_io}}</script>\n    <script>{{&chat}}</script>\n    <script>{{&script}}</script>\n \n</head>\n<body>\n\t<div id=\"chat\"></div>\n</body>\n</html>\n",
-        "x": 1290,
-        "y": 340,
-        "wires": [
-            [
-                "fd9ac23c6e70a5aa"
-            ]
-        ]
-    },
-    {
-        "id": "9d495d79ebc38951",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/style.css",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 510,
-        "y": 240,
-        "wires": [
-            [
-                "f669a447f3e908ed"
-            ]
-        ]
-    },
-    {
-        "id": "f669a447f3e908ed",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "style.css",
-        "field": "payload.style",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 860,
-        "y": 240,
-        "wires": [
-            [
-                "78515082550cdaf2"
-            ]
-        ]
-    },
-    {
-        "id": "d457e075ac825cb5",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/socket.io-3.1.1.min.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 550,
-        "y": 280,
-        "wires": [
-            [
-                "9fbc129fa6394326"
-            ]
-        ]
-    },
-    {
-        "id": "b796d646016935f0",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "jquery",
-        "field": "payload.jquery",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 850,
-        "y": 320,
-        "wires": [
-            [
-                "44c3730ff5adc318"
-            ]
-        ]
-    },
-    {
-        "id": "a88f51e66fb17714",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/jquery.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 500,
-        "y": 320,
-        "wires": [
-            [
-                "b796d646016935f0"
-            ]
-        ]
-    },
-    {
-        "id": "8c30ea56a34d3ed6",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/chat.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 500,
-        "y": 360,
-        "wires": [
-            [
-                "c64ccc73f797daeb"
-            ]
-        ]
-    },
-    {
-        "id": "c64ccc73f797daeb",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "chat",
-        "field": "payload.chat",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 850,
-        "y": 360,
-        "wires": [
-            [
-                "8623bdd3929c0b5e"
-            ]
-        ]
-    },
-    {
-        "id": "1cd090be8ed507a2",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/script.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 500,
-        "y": 440,
-        "wires": [
-            [
-                "6126de06636f2a66"
-            ]
-        ]
-    },
-    {
-        "id": "6126de06636f2a66",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "script",
-        "field": "payload.script",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 850,
-        "y": 440,
-        "wires": [
-            [
-                "851ec4f2ca907ce4"
-            ]
-        ]
-    },
-    {
-        "id": "78515082550cdaf2",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.style",
-        "func": "msg.style = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 240,
-        "wires": [
-            [
-                "d457e075ac825cb5"
-            ]
-        ]
-    },
-    {
-        "id": "8d39370d898accaf",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "function 11",
-        "func": "msg.url = `/chat`;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 290,
-        "y": 240,
-        "wires": [
-            [
-                "9d495d79ebc38951"
-            ]
-        ]
-    },
-    {
-        "id": "757d2c26dbe0099b",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.spectrum",
-        "func": "msg.socket_io = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
-        "y": 280,
-        "wires": [
-            [
-                "a88f51e66fb17714"
-            ]
-        ]
-    },
-    {
-        "id": "44c3730ff5adc318",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.colormap",
-        "func": "msg.jquery = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
-        "y": 320,
-        "wires": [
-            [
-                "8c30ea56a34d3ed6"
-            ]
-        ]
-    },
-    {
-        "id": "8623bdd3929c0b5e",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.chat",
-        "func": "msg.chat = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 360,
-        "wires": [
-            [
-                "1cd090be8ed507a2"
-            ]
-        ]
-    },
-    {
-        "id": "851ec4f2ca907ce4",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.script",
-        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1060,
-        "y": 440,
-        "wires": [
-            [
-                "cbf50d9eb89da5d2"
-            ]
-        ]
-    },
-    {
-        "id": "9d1da64159907870",
-        "type": "http in",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "url": "/chat",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 80,
-        "wires": [
-            [
-                "34ce25461d4e6d42"
-            ]
-        ]
-    },
-    {
-        "id": "34ce25461d4e6d42",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "filename": "web/chat.html",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 270,
-        "y": 80,
-        "wires": [
-            [
-                "e0101a5a9a04f1aa"
-            ]
-        ]
-    },
-    {
-        "id": "e0101a5a9a04f1aa",
-        "type": "http response",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 420,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "4de0745ac50ff8b8",
-        "type": "ui_iframe",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "group": "d2e4abefdc42e427",
-        "name": "chat iframe",
-        "order": 2,
-        "width": "32",
-        "height": "8",
-        "url": "/chat",
-        "origin": "*",
-        "scale": 100,
-        "x": 130,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7db57965.76d468",
-        "type": "ui_button",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "group": "65d91b75202c3b55",
-        "order": 19,
         "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "chat",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "chat",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 610,
-        "y": 80,
-        "wires": [
-            [
-                "ece06122.7e762"
-            ]
-        ]
+        "height": "1"
     },
     {
-        "id": "5e1f0081.6dc3c",
-        "type": "ui_template",
-        "z": "27bb1861e8b5803b",
-        "group": "65d91b75202c3b55",
-        "name": "window redirect",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "format": "<script>\n(function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        if (data == \"chat\") {\n          window.open(\"http://127.0.0.1:1880/chat\");\n        } \n        // if (data == \"GitHub\") {\n        //   //window.open(\"https://github.com/node-red\");\n        //   window.location.href = \"https://github.com/node-red\";\n        // } \n    });\n})(scope);\n</script>",
-        "storeOutMessages": false,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 960,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ece06122.7e762",
-        "type": "trigger",
-        "z": "27bb1861e8b5803b",
-        "name": "reset msg",
-        "op1": "",
-        "op2": "empty",
-        "op1type": "pay",
-        "op2type": "str",
-        "duration": "250",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 780,
-        "y": 80,
-        "wires": [
-            [
-                "5e1f0081.6dc3c"
-            ]
-        ]
+        "type": "tab",
+        "label": "Sonoff Basic tasmota",
+        "id": "30d0afc93dfb235a",
+        "info": "",
+        "disabled": false,
+        "env": []
     },
     {
         "id": "a8596f60466f8cf4",
@@ -22467,593 +22977,5 @@
                 "97e47e6f443015bd"
             ]
         ]
-    },
-    {
-        "id": "390ac0996bfbf3e8",
-        "type": "ui_form",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "label": "Minitioune receiver",
-        "group": "b774f32781d086fb",
-        "order": 6,
-        "width": "13",
-        "height": "6",
-        "options": [
-            {
-                "label": "ip_address",
-                "value": "ip_address",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "port",
-                "value": "port",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "offset",
-                "value": "offset",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "rx_socket",
-                "value": "rx_socket",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_volts",
-                "value": "lnb_volts",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_22khz",
-                "value": "lnb_22khz",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "dvb_mode",
-                "value": "dvb_mode",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "wide_scan",
-                "value": "wide_scan",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "low_sr",
-                "value": "low_sr",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "ip_address": "",
-            "port": "",
-            "offset": "",
-            "rx_socket": "",
-            "lnb_volts": "",
-            "lnb_22khz": "",
-            "dvb_mode": "",
-            "wide_scan": "",
-            "low_sr": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 170,
-        "y": 100,
-        "wires": [
-            [
-                "6f0dfc4da4e5adba"
-            ]
-        ]
-    },
-    {
-        "id": "3c880cfa489b99ba",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "settings file path",
-        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 100,
-        "wires": [
-            [
-                "583e05834ada403d"
-            ]
-        ]
-    },
-    {
-        "id": "583e05834ada403d",
-        "type": "file in",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 820,
-        "y": 100,
-        "wires": [
-            [
-                "56dc16b9e1976cab"
-            ]
-        ]
-    },
-    {
-        "id": "56dc16b9e1976cab",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add receiver",
-        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1010,
-        "y": 100,
-        "wires": [
-            [
-                "1e70a3d6fd597ab5"
-            ]
-        ]
-    },
-    {
-        "id": "6f0dfc4da4e5adba",
-        "type": "change",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "form",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "form.type",
-                "pt": "msg",
-                "to": "Minitioune",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 420,
-        "y": 100,
-        "wires": [
-            [
-                "3c880cfa489b99ba"
-            ]
-        ]
-    },
-    {
-        "id": "735e31a90de36b9a",
-        "type": "debug",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add minitiouner",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "1e70a3d6fd597ab5",
-        "type": "file",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1200,
-        "y": 100,
-        "wires": [
-            [
-                "735e31a90de36b9a",
-                "86a51f94eab9e839"
-            ]
-        ]
-    },
-    {
-        "id": "d1aea45a350e8689",
-        "type": "inject",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 180,
-        "wires": [
-            [
-                "86a51f94eab9e839"
-            ]
-        ]
-    },
-    {
-        "id": "86a51f94eab9e839",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "settings file path",
-        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 180,
-        "wires": [
-            [
-                "8822bec48f5c42d6"
-            ]
-        ]
-    },
-    {
-        "id": "8822bec48f5c42d6",
-        "type": "file in",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 630,
-        "y": 180,
-        "wires": [
-            [
-                "282aef0db727d395"
-            ]
-        ]
-    },
-    {
-        "id": "ae1646fbdd5d8b9c",
-        "type": "ui_list",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "group": "b774f32781d086fb",
-        "name": "",
-        "order": 6,
-        "width": "26",
-        "height": "6",
-        "lineType": "two",
-        "actionType": "check",
-        "allowHTML": false,
-        "outputs": 1,
-        "topic": "",
-        "x": 1110,
-        "y": 180,
-        "wires": [
-            [
-                "8ebc9dd6c04d47a7"
-            ]
-        ]
-    },
-    {
-        "id": "282aef0db727d395",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "create list from JSON",
-        "func": "let receivers = JSON.parse(msg.payload);\nlet array = [];\nfor (let index = 0; index < receivers.length; index++) {\n    const element = receivers[index];\n    \n    let obj = {\n        \"title\": `CH${index+1} -> ${element.type} - IP: ${element.ip_address} - Port: ${element.port} - Offset: ${element.offset} kHz - Socket: ${element.rx_socket}`,\n        \"icon_name\": \"fa-podcast\"\n    }\n    array.push(obj);\n}\nmsg.payload = array;\nreturn msg;\n\n\n// payloadarray\n// Array of objects containing following properties:\n// title - title of the item,\n// description - description of the item. Optional if line type is Single-line or action type is menu,\n// menu - list of menu items (optional),\n// icon - URL of icon (optional),\n// icon_name - font icon name (optional).\n// icon_unicode - alternative to icon name - uses text characters (optional).\n// isChecked - boolean, set the item checked or on (optional).",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 840,
-        "y": 180,
-        "wires": [
-            [
-                "ae1646fbdd5d8b9c"
-            ]
-        ]
-    },
-    {
-        "id": "a51c17448cbde903",
-        "type": "ui_form",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "label": "Winterhill receiver",
-        "group": "b774f32781d086fb",
-        "order": 6,
-        "width": "13",
-        "height": "6",
-        "options": [
-            {
-                "label": "ip_address",
-                "value": "ip_address",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "port",
-                "value": "port",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "offset",
-                "value": "offset",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "rx_socket",
-                "value": "rx_socket",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_volts",
-                "value": "lnb_volts",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_22khz",
-                "value": "lnb_22khz",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "ip_address": "",
-            "port": "",
-            "offset": "",
-            "rx_socket": "",
-            "lnb_volts": "",
-            "lnb_22khz": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 170,
-        "y": 260,
-        "wires": [
-            [
-                "0d7bed971ef2d798"
-            ]
-        ]
-    },
-    {
-        "id": "b74cbbf79c7b8ecc",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "settings file path",
-        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 260,
-        "wires": [
-            [
-                "731a3c957fc08056"
-            ]
-        ]
-    },
-    {
-        "id": "731a3c957fc08056",
-        "type": "file in",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 820,
-        "y": 260,
-        "wires": [
-            [
-                "4330f69a2f5fe062"
-            ]
-        ]
-    },
-    {
-        "id": "4330f69a2f5fe062",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add receiver",
-        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1010,
-        "y": 260,
-        "wires": [
-            [
-                "4696f747c19341dd"
-            ]
-        ]
-    },
-    {
-        "id": "0d7bed971ef2d798",
-        "type": "change",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "form",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "form.type",
-                "pt": "msg",
-                "to": "Winterhill",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 420,
-        "y": 260,
-        "wires": [
-            [
-                "b74cbbf79c7b8ecc"
-            ]
-        ]
-    },
-    {
-        "id": "7409d36e4650ab84",
-        "type": "debug",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add winterhill",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1380,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "4696f747c19341dd",
-        "type": "file",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1200,
-        "y": 260,
-        "wires": [
-            [
-                "7409d36e4650ab84",
-                "86a51f94eab9e839"
-            ]
-        ]
-    },
-    {
-        "id": "8ebc9dd6c04d47a7",
-        "type": "debug",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "checked receivers",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 180,
-        "wires": []
     }
 ]
