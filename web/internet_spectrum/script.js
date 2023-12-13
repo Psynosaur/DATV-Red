@@ -66,9 +66,9 @@ let canvasHeightLast;
             tuned_channels.push(highlighted_channel);
         } */
 
-  let fft_colour = "#c10b0b";
-  let band_colour = "#c10b0b";
-  let background_colour = "black";
+  let fft_colour = "#0b0bc1";
+  let band_colour = "#c1c10b";
+  let background_colour = "white";
   let signals = [];
   let freq_info = [];
 
