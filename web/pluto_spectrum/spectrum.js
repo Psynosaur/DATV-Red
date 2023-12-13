@@ -621,7 +621,6 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                 ctx.lineTo(signals[i].end, canvasHeight * (1 / 100));
                 ctx.stroke();
 
-                /* As long as we have a beacon, and for signals other than the beacon, display relative power on mouseover */
                 if (signals[i].start > canvasWidth / 1000) {
                     canvasClickBW = signals[i].symbolrate / 1000;
                     downlink = round(signals[i].frequency);
@@ -659,6 +658,8 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                     //     db_per_pixel
                     // ).toFixed(1)} dBb`;
                     /* let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} dB`; */
+                    busy = true;
+
                     let mer = `${(signals[i].frequency / 1_000_000).toFixed(3)}MHz`
                     ctx.fillText(
                         mer,
@@ -674,7 +675,7 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
         }
         // canvasClickBW = undefined;
         // uplink = undefined;
-        // busy = false;
+        busy = false;
     }
 }
 
@@ -1133,7 +1134,7 @@ Spectrum.prototype.toggleFullscreen = function () {
         this.fullscreen = false;
     }
 };
-
+// Keyboard shortcuts should have a helper popup...
 Spectrum.prototype.onKeypress = function (e) {
     switch (e.key) {
         case " ":
@@ -1204,7 +1205,7 @@ Spectrum.prototype.onKeypress = function (e) {
             break;
     }
 };
-
+// we could use drag to change frequency...
 Spectrum.prototype.onDrag = function (event) {
     console.log(event);
 
@@ -1240,7 +1241,8 @@ Spectrum.prototype.on_canvas_click = function (ev) {
     //     setRxChannelState(highlighted_channel);
     // }
     /* we clicked on a signal... */
-    if (downlink !== undefined && canvasClickBW !== undefined) {
+    if (downlink !== undefined && canvasClickBW !== undefined && busy) {
+        // we take our derived symbol rates and cast them to useful rates for tuner
         if (canvasClickBW > 0.035 && canvasClickBW < 0.066) {
             canvasClickBW = 0.033;
         }
@@ -1385,7 +1387,10 @@ function Spectrum(id, options) {
     this.ctx = this.canvas.getContext("2d");
     this.ctx.fillStyle = "black";
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+    // Click to tune support
     this.ctx.canvas.addEventListener("click", this.on_canvas_click, false);
+
     // Create offscreen canvas for axes
     this.axes = document.createElement("canvas");
     this.axes.height = 1; // Updated later

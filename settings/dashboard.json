@@ -3,7 +3,7 @@
     "tasmota_mqtt_topic" : "tasmota_EEB41A",
     "use_switch": true,
     "use_chat": true,
-    "use_longmynd": false,
+    "use_longmynd": true,
     "ffplay_left" : -1438,
     "ffplay_top" : 523
   }

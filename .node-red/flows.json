@@ -32,6 +32,30 @@
         "env": []
     },
     {
+        "id": "27bb1861e8b5803b",
+        "type": "tab",
+        "label": "Chat",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d7c58eb9e7b65abb",
+        "type": "tab",
+        "label": "DATV Reception",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "30d0afc93dfb235a",
+        "type": "tab",
+        "label": "Sonoff Basic tasmota",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "15d7457.fcac4bb",
         "type": "subflow",
         "name": "Change Flow Disabled",
@@ -1076,9 +1100,7 @@
             "8bf647b3812030b1"
         ],
         "x": 34,
-        "y": 119,
-        "w": 592,
-        "h": 82
+        "y": 119
     },
     {
         "id": "9b97da84f20d2dc4",
@@ -1105,9 +1127,7 @@
             "bbf9e870bbb3141b"
         ],
         "x": 34,
-        "y": 259,
-        "w": 1372,
-        "h": 202
+        "y": 259
     },
     {
         "id": "2e4963908c2bd3e0",
@@ -1158,9 +1178,7 @@
             "f5eef0dfd7e39ee3"
         ],
         "x": 194,
-        "y": 399,
-        "w": 1492,
-        "h": 762
+        "y": 399
     },
     {
         "id": "2406e32417780de0",
@@ -1197,9 +1215,7 @@
             "b5cfddf388cbc440"
         ],
         "x": 54,
-        "y": 59,
-        "w": 1532,
-        "h": 282
+        "y": 59
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1261,9 +1277,7 @@
             "8ebc9dd6c04d47a7"
         ],
         "x": 54,
-        "y": 59,
-        "w": 1472,
-        "h": 242
+        "y": 59
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -1871,6 +1885,46 @@
         "order": 3,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "c9432c41e4afe7e0",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "65d91b75202c3b55",
+        "order": 6,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "60dc608a8e13e309",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
+        "order": 4,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "1d0d55cb8f9c1bff",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
+        "order": 8,
+        "width": "3",
+        "height": "1"
+    },
+    {
+        "id": "28d0dedfd904e16b",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "a4a37989805c1f8e",
+        "order": 5,
+        "width": "2",
+        "height": "1"
     },
     {
         "id": "8920ad34.ac04a",
@@ -11514,7 +11568,7 @@
         "props": [],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": "0.2",
         "topic": "",
         "x": 130,
@@ -18945,14 +18999,6 @@
         "wires": []
     },
     {
-        "type": "tab",
-        "label": "Chat",
-        "id": "27bb1861e8b5803b",
-        "info": "",
-        "disabled": false,
-        "env": []
-    },
-    {
         "id": "c89e4837c83d2853",
         "type": "http in",
         "z": "27bb1861e8b5803b",
@@ -19470,14 +19516,6 @@
                 "5e1f0081.6dc3c"
             ]
         ]
-    },
-    {
-        "type": "tab",
-        "label": "DATV Reception",
-        "id": "d7c58eb9e7b65abb",
-        "info": "",
-        "disabled": false,
-        "env": []
     },
     {
         "id": "4c448d00f7a9bc91",
@@ -22281,58 +22319,9 @@
         ]
     },
     {
-        "id": "c9432c41e4afe7e0",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "65d91b75202c3b55",
-        "order": 6,
-        "width": "1",
-        "height": "1"
-    },
-    {
-        "id": "60dc608a8e13e309",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 4,
-        "width": "1",
-        "height": "1"
-    },
-    {
-        "id": "1d0d55cb8f9c1bff",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 8,
-        "width": "3",
-        "height": "1"
-    },
-    {
-        "id": "28d0dedfd904e16b",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 5,
-        "width": "2",
-        "height": "1"
-    },
-    {
-        "type": "tab",
-        "label": "Sonoff Basic tasmota",
-        "id": "30d0afc93dfb235a",
-        "info": "",
-        "disabled": false,
-        "env": []
-    },
-    {
         "id": "a8596f60466f8cf4",
         "type": "ui_switch",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "",
         "label": "AMP",
         "tooltip": "",
@@ -22369,7 +22358,6 @@
         "id": "f36ea5478cd26f4c",
         "type": "http request",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "http toggle request",
         "method": "GET",
         "ret": "txt",
@@ -22394,7 +22382,6 @@
         "id": "4a2877dc5a808a1b",
         "type": "ui_toast",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -22414,7 +22401,6 @@
         "id": "8e6e379dd23ad541",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "parse tasmota http response",
         "func": "let message = msg.payload;\nlet indexOfInterest = message.indexOf(\">O\");\nlet state = message.slice(indexOfInterest + 1, indexOfInterest + 4);\nstate = state.includes('<') ? state.slice(0, -1) : state;\nmsg.button_state = state === \"ON\" ? true : false;\nmsg.payload = `Amp switched ${state}`;\nreturn msg;",
         "outputs": 1,
@@ -22436,7 +22422,6 @@
         "type": "change",
         "z": "30d0afc93dfb235a",
         "d": true,
-        "g": "2e3a85f09aa2e172",
         "name": "",
         "rules": [
             {
@@ -22462,7 +22447,6 @@
         "id": "2d87948c62090044",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "read tasmota settings",
         "func": "let tasmota_settings = JSON.parse(msg.payload);\nif (tasmota_settings.use_switch){\n    msg.payload = tasmota_settings;\n    let url = `${tasmota_settings.tasmota_switch_url}/?m=1&o=1`;\n    msg.url = url;\n    msg.payload = true;\n    return msg;\n}",
         "outputs": 1,
@@ -22483,7 +22467,6 @@
         "id": "3d1df83227b48c35",
         "type": "http request",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "http state request",
         "method": "GET",
         "ret": "txt",
@@ -22508,7 +22491,6 @@
         "id": "ce64bf27f1fae6be",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "read tasmota settings",
         "func": "let tasmota_settings = JSON.parse(msg.payload);\nif (tasmota_settings.use_switch){\n    msg.payload = tasmota_settings;\n    let url = `${tasmota_settings.tasmota_switch_url}/cm?cmnd=STATUS`;\n    msg.url = url;\n    return msg;\n}",
         "outputs": 1,
@@ -22529,7 +22511,6 @@
         "id": "cf17c69c227b6825",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "parse http response",
         "func": "let tasmota_state = JSON.parse(msg.payload);\nif(tasmota_state.Status.Power === 1){\n    msg.payload = true;\n    return msg;\n}\nmsg.payload = false;\nreturn msg;",
         "outputs": 1,
@@ -22552,7 +22533,6 @@
         "type": "inject",
         "z": "30d0afc93dfb235a",
         "d": true,
-        "g": "dd0059cf3eb1693d",
         "name": "",
         "props": [],
         "repeat": "",
@@ -22572,7 +22552,6 @@
         "id": "f90b10e6825765f0",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "set current toggle state",
         "func": "let state = msg.button_state\nmsg.payload = state;\nreturn msg;",
         "outputs": 1,
@@ -22594,7 +22573,6 @@
         "type": "debug",
         "z": "30d0afc93dfb235a",
         "d": true,
-        "g": "dd0059cf3eb1693d",
         "name": "debug 19",
         "active": true,
         "tosidebar": true,
@@ -22611,7 +22589,6 @@
         "id": "eef90d12fe67652d",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "settings file path",
         "func": "msg.filename = \"settings\\\\dashboard.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/dashboard.json\";\nreturn msg;",
         "outputs": 1,
@@ -22632,7 +22609,6 @@
         "id": "70dc135bb18e2bd6",
         "type": "file in",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -22654,7 +22630,6 @@
         "type": "function",
         "z": "30d0afc93dfb235a",
         "d": true,
-        "g": "dd0059cf3eb1693d",
         "name": "settings file path",
         "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/dashboard.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\dashboard.json\";\nreturn msg;",
         "outputs": 1,
@@ -22675,7 +22650,6 @@
         "id": "caa457b0361bf0ba",
         "type": "file in",
         "z": "30d0afc93dfb235a",
-        "g": "dd0059cf3eb1693d",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -22696,7 +22670,6 @@
         "id": "4169371e544b9666",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "send mqtt message to broker to toggle switch",
         "func": "msg.topic = `cmnd/${global.get(\"tasmota_mqtt_topic\")}/POWER`;\nmsg.state = msg.payload;\nmsg.payload = \"toggle\";\nreturn msg;",
         "outputs": 1,
@@ -22718,7 +22691,6 @@
         "id": "857224de9710110f",
         "type": "mqtt out",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "",
         "topic": "",
         "qos": "",
@@ -22737,7 +22709,6 @@
         "id": "449f2a69fa24e7fd",
         "type": "mqtt in",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -22760,7 +22731,6 @@
         "id": "ff147eec327f33fe",
         "type": "inject",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "",
         "props": [],
         "repeat": "1",
@@ -22780,7 +22750,6 @@
         "id": "bc7c3ea6788d2b58",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "power status",
         "func": "msg.action = \"subscribe\"\nmsg.topic = `stat/${global.get(\"tasmota_mqtt_topic\")}/POWER`\nreturn msg;",
         "outputs": 1,
@@ -22801,7 +22770,6 @@
         "id": "fabd30d9f5135abd",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "notification",
         "func": "let payload = msg.state;\nmsg.topic = \"Tasmota switch\"\nmsg.payload = `Amp switched ${payload}`;\nreturn msg;",
         "outputs": 1,
@@ -22823,7 +22791,6 @@
         "type": "debug",
         "z": "30d0afc93dfb235a",
         "d": true,
-        "g": "2e3a85f09aa2e172",
         "name": "Tasmota status",
         "active": true,
         "tosidebar": true,
@@ -22841,7 +22808,6 @@
         "id": "29a3c6a207d493f9",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "get state",
         "func": "msg.topic = `cmnd/${global.get(\"tasmota_mqtt_topic\")}/POWER`;\nmsg.payload = \"\";\nreturn msg;",
         "outputs": 1,
@@ -22862,7 +22828,6 @@
         "id": "b7d0059588d03318",
         "type": "mqtt out",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "",
         "topic": "",
         "qos": "",
@@ -22881,7 +22846,6 @@
         "id": "33b81b6ee3d763f8",
         "type": "inject",
         "z": "30d0afc93dfb235a",
-        "g": "2e3a85f09aa2e172",
         "name": "",
         "props": [],
         "repeat": "",
@@ -22901,7 +22865,6 @@
         "id": "97e47e6f443015bd",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "b2f5ceeaa5d1bfc7",
         "name": "settings file path",
         "func": "msg.filename = \"settings\\\\dashboard.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/dashboard.json\";\nreturn msg;",
         "outputs": 1,
@@ -22922,7 +22885,6 @@
         "id": "f391b6fe49265eb0",
         "type": "file in",
         "z": "30d0afc93dfb235a",
-        "g": "b2f5ceeaa5d1bfc7",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -22943,7 +22905,6 @@
         "id": "0462039e80c24319",
         "type": "function",
         "z": "30d0afc93dfb235a",
-        "g": "b2f5ceeaa5d1bfc7",
         "name": "read tasmota settings",
         "func": "let tasmota_settings = JSON.parse(msg.payload);\nif (tasmota_settings.tasmota_mqtt_topic){\n    global.set(\"tasmota_mqtt_topic\", tasmota_settings.tasmota_mqtt_topic)\n}",
         "outputs": 1,
@@ -22962,7 +22923,6 @@
         "id": "df652e3147152444",
         "type": "inject",
         "z": "30d0afc93dfb235a",
-        "g": "b2f5ceeaa5d1bfc7",
         "name": "",
         "props": [],
         "repeat": "",

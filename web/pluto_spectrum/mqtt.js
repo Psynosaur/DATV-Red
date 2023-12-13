@@ -73,7 +73,7 @@ function mqtt_client() {
     if (topic === `dt/pluto/${callsign}/rx/webfft/frequency`) {
       let Hz = Number(message.toString());
       spectrum.setCenterHz(Hz);
-    //   console.log("setCenterHz: " + Hz);
+      console.log("setCenterHz: " + Hz);
     }
     if (topic === `dt/pluto/${callsign}/rx/webfft/span`) {
       let spanHz = Number(message.toString());
