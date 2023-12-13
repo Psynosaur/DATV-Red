@@ -3,6 +3,11 @@
  * This software is released under the MIT license.
  * See the LICENSE file for further details.
  */
+/*
+ * Copyright (c) 2023 Ohan Smit
+ * This software is released under the MIT license.
+ * See the LICENSE file for further details.
+ */
 
 "use strict";
 let xd1, xd2, yd;
@@ -16,9 +21,9 @@ Spectrum.prototype.squeeze = function (value, out_min, out_max) {
 };
 
 Spectrum.prototype.rowToImageData = function (bins) {
-    for (var i = 0; i < this.imagedata.data.length; i += 4) {
-        var cindex = this.squeeze(bins[i / 4], 0, 255);
-        var color = this.colormap[cindex];
+    for (let i = 0; i < this.imagedata.data.length; i += 4) {
+        const cindex = this.squeeze(bins[i / 4], 0, 255);
+        const color = this.colormap[cindex];
         this.imagedata.data[i + 0] = color[0];
         this.imagedata.data[i + 1] = color[1];
         this.imagedata.data[i + 2] = color[2];
@@ -47,20 +52,20 @@ Spectrum.prototype.addWaterfallRow = function (bins) {
     this.ctx_wf.putImageData(this.imagedata, 0, 0);
 
     if (this.wfrowcount % 100 == 0) {
-        var timeString = new Date().toUTCString();
+        const timeString = new Date().toUTCString();
         this.ctx_wf.font = "16px sans-serif";
         this.ctx_wf.fillStyle = "white";
         this.ctx_wf.textBaseline = "top";
         this.ctx_wf.fillText(timeString, 0, 0); // TODO: Fix font scaling
     }
 
-    var width = this.ctx.canvas.width;
-    var height = this.ctx.canvas.height;
+    const width = this.ctx.canvas.width;
+    const height = this.ctx.canvas.height;
 
     // Copy scaled FFT canvas to screen. Only copy the number of rows that will
     // fit in waterfall area to avoid vertical scaling.
     this.ctx.imageSmoothingEnabled = false;
-    var rows = Math.min(this.wf_rows, height - this.spectrumHeight);
+    const rows = Math.min(this.wf_rows, height - this.spectrumHeight);
     this.ctx.drawImage(
         this.ctx_wf.canvas,
         0,
@@ -77,8 +82,8 @@ Spectrum.prototype.addWaterfallRow = function (bins) {
 Spectrum.prototype.drawFFT = function (bins) {
     this.ctx.beginPath();
     this.ctx.moveTo(-1, this.spectrumHeight + 1);
-    for (var i = 0; i < bins.length; i++) {
-        var y = this.spectrumHeight - this.squeeze(bins[i], 0, this.spectrumHeight);
+    for (let i = 0; i < bins.length; i++) {
+        let y = this.spectrumHeight - this.squeeze(bins[i], 0, this.spectrumHeight);
         if (y > this.spectrumHeight - 1) y = this.spectrumHeight + 1; // Hide underflow
         if (y < 0) y = 0;
         if (i == 0) this.ctx.lineTo(-1, y);
@@ -89,15 +94,16 @@ Spectrum.prototype.drawFFT = function (bins) {
     this.ctx.strokeStyle = "#fefefe";
     this.ctx.stroke();
 };
-var beacon_strength = 0;
-var mouse_in_canvas = false;
-var mouse_x = 0;
-var mouse_y = 0;
-var clicked_x = 0;
-var clicked_y = 0;
-var channelClicked = 0;
-var channel_coords = {};
-var signals = [];
+
+const beacon_strength = 0;
+let mouse_in_canvas = false;
+let mouse_x = 0;
+let mouse_y = 0;
+const clicked_x = 0;
+const clicked_y = 0;
+const channelClicked = 0;
+const channel_coords = {};
+let signals = [];
 const rx_count = 1;
 let db_per_pixel;
 let beacon_strength_pixel;
@@ -115,23 +121,23 @@ Spectrum.prototype.detect_signals = function (
     canvasWidth,
     sr
 ) {
-    var i;
-    var j;
+    let i;
+    let j;
     const noise_level = this.min_db;
     const signal_threshold = this.min_db + 30;
 
-    var in_signal = false;
-    var start_signal = 0;
-    var end_signal;
-    var mid_signal;
-    var strength_signal;
-    var signal_bw;
-    var signal_freq;
-    var acc;
-    var acc_i;
+    let in_signal = false;
+    let start_signal = 0;
+    let end_signal;
+    let mid_signal;
+    let strength_signal;
+    let signal_bw;
+    let signal_freq;
+    let acc;
+    let acc_i;
 
 
-    var text_x_position;
+    let text_x_position;
 
     /* Clear signals array */
     signals = [];
@@ -350,8 +356,8 @@ Spectrum.prototype.drawChannels = function (ctx) {
     const rolloff = 1.35 / 2.0;
     const _start_freq = 491.5;
 
-    var width = ctx.canvas.width;
-    var height = ctx.canvas.height;
+    const width = ctx.canvas.width;
+    const height = ctx.canvas.height;
 
     function draw_channel(center_frequency, bandwidth, line_height) {
         if (typeof freq_info !== "undefined") {
@@ -461,8 +467,8 @@ Spectrum.prototype.drawChannels = function (ctx) {
 // }
 
 Spectrum.prototype.drawSpectrum = function (bins) {
-    var width = this.ctx.canvas.width;
-    var height = this.ctx.canvas.height;
+    const width = this.ctx.canvas.width;
+    const height = this.ctx.canvas.height;
     // Fill with black
     this.ctx.fillStyle = "black";
     this.ctx.fillRect(0, 0, width, height);
@@ -530,9 +536,9 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
     let channelSpace = Math.floor(
         (canvasHeight * (4 / 8) - canvasHeight * (1 / 100)) / rx_count
     );
-    var i;
+    let i;
     let channel_lines = [];
-    let top_line_y = 5;
+    let top_line_y = 2;
     let square = {};
     if (mouse_y < (canvasHeight * 7) / 8) {
 
@@ -763,7 +769,7 @@ function align_symbolrate(width) {
 
 function round(value, step) {
     step || (step = 1.0);
-    var inv = 1.0 / step;
+    const inv = 1.0 / step;
     return Math.round(value * inv) / inv;
 }
 
@@ -783,8 +789,8 @@ function is_overpower(beacon_strength, signal_strength, signal_bw) {
 }
 
 Spectrum.prototype.updateAxes = function () {
-    var width = this.ctx_axes.canvas.width;
-    var height = this.ctx_axes.canvas.height;
+    const width = this.ctx_axes.canvas.width;
+    const height = this.ctx_axes.canvas.height;
 
     // Clear axes canvas
     this.ctx_axes.clearRect(0, 0, width, height);
@@ -795,9 +801,9 @@ Spectrum.prototype.updateAxes = function () {
     this.ctx_axes.textBaseline = "middle";
 
     this.ctx_axes.textAlign = "left";
-    var step = 10;
+    const step = 10;
     for (var i = this.min_db + 10; i <= this.max_db - 10; i += step) {
-        var y = height - this.squeeze(i, 0, height);
+        const y = height - this.squeeze(i, 0, height);
         this.ctx_axes.fillText(i, 5, y);
 
         this.ctx_axes.beginPath();
@@ -809,10 +815,10 @@ Spectrum.prototype.updateAxes = function () {
 
     this.ctx_axes.textBaseline = "bottom";
     for (var i = 0; i < 11; i++) {
-        var x = Math.round(width / 10) * i;
+        const x = Math.round(width / 10) * i;
 
         if (this.spanHz > 0) {
-            var adjust = 0;
+            let adjust = 0;
             if (i == 0) {
                 this.ctx_axes.textAlign = "left";
                 adjust = 3;
@@ -823,7 +829,7 @@ Spectrum.prototype.updateAxes = function () {
                 this.ctx_axes.textAlign = "center";
             }
 
-            var freq = this.centerHz + (this.spanHz / 10) * (i - 5);
+            let freq = this.centerHz + (this.spanHz / 10) * (i - 5);
             if (this.centerHz + this.spanHz > 1e6)
                 freq = Number(freq / 1e6).toFixed(2) + "M";
             else if (this.centerHz + this.spanHz > 1e3) freq = freq / 1e3 + "k";
@@ -861,8 +867,8 @@ Spectrum.prototype.updateSpectrumRatio = function () {
     );
 
     this.gradient = this.ctx.createLinearGradient(0, 0, 0, this.spectrumHeight);
-    for (var i = 0; i < this.colormap.length; i++) {
-        var c = this.colormap[this.colormap.length - 1 - i];
+    for (let i = 0; i < this.colormap.length; i++) {
+        const c = this.colormap[this.colormap.length - 1 - i];
         this.gradient.addColorStop(
             i / this.colormap.length,
             "rgba(" + c[0] + "," + c[1] + "," + c[2] + ", 1.0)"
@@ -871,8 +877,8 @@ Spectrum.prototype.updateSpectrumRatio = function () {
 };
 
 Spectrum.prototype.resize = function () {
-    var width = this.canvas.clientWidth;
-    var height = this.canvas.clientHeight;
+    const width = this.canvas.clientWidth;
+    const height = this.canvas.clientHeight;
 
     if (this.canvas.width != width || this.canvas.height != height) {
         this.canvas.width = width;
@@ -952,8 +958,8 @@ Spectrum.prototype.rangeDecrease = function () {
 };
 
 Spectrum.prototype.doAutoScale = function (bins) {
-    var maxbinval = Math.max(...bins);
-    var minbinval = Math.min(...bins);
+    const maxbinval = Math.max(...bins);
+    const minbinval = Math.min(...bins);
 
     this.setRange(
         Math.ceil(minbinval * 0.075) * 10,
@@ -1009,40 +1015,40 @@ Spectrum.prototype.decrementAveraging = function () {
 };
 
 Spectrum.prototype.incrementFrequency = function () {
-    var freq = {freq: this.centerHz + this.tuningStep};
+    const freq = {freq: this.centerHz + this.tuningStep};
     this.ws.send(JSON.stringify(freq));
 };
 
 Spectrum.prototype.decrementFrequency = function () {
-    var freq = {freq: this.centerHz - this.tuningStep};
+    const freq = {freq: this.centerHz - this.tuningStep};
     this.ws.send(JSON.stringify(freq));
 };
 
 Spectrum.prototype.incrementGain = function () {
-    var gain = {gain: this.gain + 1};
+    const gain = {gain: this.gain + 1};
     this.ws.send(JSON.stringify(gain));
 };
 
 Spectrum.prototype.decrementGain = function () {
-    var gain = {gain: this.gain - 1};
+    const gain = {gain: this.gain - 1};
     this.ws.send(JSON.stringify(gain));
 };
 
 Spectrum.prototype.incrementFps = function () {
-    var fps = {fps: this.fps + 5};
+    const fps = {fps: this.fps + 5};
     this.ws.send(JSON.stringify(fps));
 };
 
 Spectrum.prototype.decrementFps = function () {
-    var fps = {fps: this.fps - 5};
+    const fps = {fps: this.fps - 5};
     this.ws.send(JSON.stringify(fps));
 };
 
 Spectrum.prototype.decrementTuningStep = function () {
     // 1ex, 2.5ex, 5ex
     if (this.tuningStep > 1) {
-        var step;
-        var firstDigit = parseInt(
+        let step;
+        const firstDigit = parseInt(
             this.tuningStep / Math.pow(10, parseInt(Math.log10(this.tuningStep)))
         );
 
@@ -1055,8 +1061,8 @@ Spectrum.prototype.decrementTuningStep = function () {
 
 Spectrum.prototype.incrementTuningStep = function () {
     if (this.tuningStep > 0) {
-        var step;
-        var firstDigit = parseInt(
+        let step;
+        const firstDigit = parseInt(
             this.tuningStep / Math.pow(10, parseInt(Math.log10(this.tuningStep)))
         );
 
@@ -1068,8 +1074,8 @@ Spectrum.prototype.incrementTuningStep = function () {
 };
 
 Spectrum.prototype.downloadWFImage = function () {
-    var link = document.createElement("a");
-    var dateString = new Date().toISOString().replace(/:/g, "-");
+    const link = document.createElement("a");
+    const dateString = new Date().toISOString().replace(/:/g, "-");
     link.download = "capture-" + dateString + ".png";
     link.href = this.wf.toDataURL();
     link.click();
@@ -1219,27 +1225,10 @@ Spectrum.prototype.onDrag = function (event) {
 Spectrum.prototype.on_canvas_click = function (ev) {
     // let magicSpaceUnderSignal = canvasHeight * (4 / 8);
     // let magicSpaceAboveSignal = canvasHeight * (1.59 / 8);
-    /* we clicked on the beacon... */
+
     const url = localPage ? 'http://127.0.0.1:1880' : '';
     console.log(`SR ${canvasClickBW} downlink ${downlink}`)
-    // if (uplink === undefined && canvasClickBW === undefined && busy) {
-    //     /* Tune longmynd on pluto */
-    //     fetch(
-    //         `${url}/setRx?` +
-    //         new URLSearchParams({
-    //             downlink: 10491.5,
-    //             SR: 1.5,
-    //             channel: channelClicked,
-    //         })
-    //     );
-    //     /* console.log(channel_coords); */
-    //     /* RX tuning bar */
-    //     if (channelClicked === rx_count + 1) {
-    //         setRxClickState(activeColor, 43, magicSpaceUnderSignal, canvasWidth * 1 / 5);
-    //         return;
-    //     }
-    //     setRxChannelState(highlighted_channel);
-    // }
+
     /* we clicked on a signal... */
     if (downlink !== undefined && canvasClickBW !== undefined && busy) {
         // we take our derived symbol rates and cast them to useful rates for tuner
@@ -1274,11 +1263,11 @@ Spectrum.prototype.on_canvas_click = function (ev) {
             `${url}/setLocalRx?` +
             new URLSearchParams({
                 downlink: downlink,
-                SR:  canvasClickBW
+                SR: canvasClickBW
                 // channel: channelClicked,
             })
         );
-        /* RX tuning bar */
+        /* RX tuning bar / box */
         // if (channelClicked === rx_count + 1) {
         //     setRxClickState(
         //         activeColor,
@@ -1291,56 +1280,56 @@ Spectrum.prototype.on_canvas_click = function (ev) {
         // setRxChannelState(highlighted_channel);
     }
     /* we clicked on a channel bar... */
-    if (uplink !== undefined && canvasClickBW !== undefined && !busy) {
-        /* Channel calibration mode */
-        // if (ev.altKey && ev.shiftKey) {
-        //   if (busy) return;
-        //   lastUplink = uplink;
-        //   lastCanvasClickBW = canvasClickBW;
-        //   fetch(
-        //     `${url}/setTx?` +
-        //       new URLSearchParams({
-        //         uplink,
-        //         downlink,
-        //         SR: canvasClickBW,
-        //         busy: false,
-        //         tune: true,
-        //       })
-        //   );
-        //   return;
-        // }
-
-        // 333KS on > 500KS channel
-        if (ev.shiftKey && canvasClickBW > 0.333) {
-            canvasClickBW = 0.333;
-        }
-        // 250KS on mid channels
-        if (ev.altKey && canvasClickBW >= 0.333) {
-            canvasClickBW = 0.25;
-        }
-        lastUplink = uplink;
-        lastCanvasClickBW = canvasClickBW;
-
-        fetch(
-            `${url}/setTx?` +
-            new URLSearchParams({
-                uplink,
-                downlink,
-                SR: canvasClickBW,
-                busy: busy,
-            })
-        );
-        activeColor_1_tx = activeColor;
-        activeXd1_1_tx = activeXd1;
-        activeYd_1_tx = activeYd;
-        activeXd2_1_tx = activeXd2;
-        if (storageSupport) {
-            localStorage.activeColor_1_tx = activeColor_1_tx;
-            localStorage.activeXd1_1_tx = activeXd1_1_tx;
-            localStorage.activeYd_1_tx = activeYd_1_tx;
-            localStorage.activeXd2_1_tx = activeXd2_1_tx;
-        }
-    }
+    // if (uplink !== undefined && canvasClickBW !== undefined && !busy) {
+    //     /* Channel calibration mode */
+    //     // if (ev.altKey && ev.shiftKey) {
+    //     //   if (busy) return;
+    //     //   lastUplink = uplink;
+    //     //   lastCanvasClickBW = canvasClickBW;
+    //     //   fetch(
+    //     //     `${url}/setTx?` +
+    //     //       new URLSearchParams({
+    //     //         uplink,
+    //     //         downlink,
+    //     //         SR: canvasClickBW,
+    //     //         busy: false,
+    //     //         tune: true,
+    //     //       })
+    //     //   );
+    //     //   return;
+    //     // }
+    //
+    //     // 333KS on > 500KS channel
+    //     if (ev.shiftKey && canvasClickBW > 0.333) {
+    //         canvasClickBW = 0.333;
+    //     }
+    //     // 250KS on mid channels
+    //     if (ev.altKey && canvasClickBW >= 0.333) {
+    //         canvasClickBW = 0.25;
+    //     }
+    //     lastUplink = uplink;
+    //     lastCanvasClickBW = canvasClickBW;
+    //
+    //     fetch(
+    //         `${url}/setTx?` +
+    //         new URLSearchParams({
+    //             uplink,
+    //             downlink,
+    //             SR: canvasClickBW,
+    //             busy: busy,
+    //         })
+    //     );
+    //     activeColor_1_tx = activeColor;
+    //     activeXd1_1_tx = activeXd1;
+    //     activeYd_1_tx = activeYd;
+    //     activeXd2_1_tx = activeXd2;
+    //     if (storageSupport) {
+    //         localStorage.activeColor_1_tx = activeColor_1_tx;
+    //         localStorage.activeXd1_1_tx = activeXd1_1_tx;
+    //         localStorage.activeYd_1_tx = activeYd_1_tx;
+    //         localStorage.activeXd2_1_tx = activeXd2_1_tx;
+    //     }
+    // }
 }
 
 function Spectrum(id, options) {
