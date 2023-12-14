@@ -1841,7 +1841,7 @@
         "type": "ui_group",
         "name": "command",
         "tab": "fefa8fb5a3363008",
-        "order": 2,
+        "order": 1,
         "disp": true,
         "width": "26",
         "collapse": false,
@@ -1852,7 +1852,7 @@
         "type": "ui_group",
         "name": "Inputs and Codecs",
         "tab": "fefa8fb5a3363008",
-        "order": 1,
+        "order": 2,
         "disp": true,
         "width": "13",
         "collapse": false,
@@ -12303,7 +12303,7 @@
         "pauseType": "rate",
         "timeout": "10",
         "timeoutUnits": "seconds",
-        "rate": "10",
+        "rate": "5",
         "nbRateUnits": "1",
         "rateUnits": "second",
         "randomFirst": "1",
@@ -12312,7 +12312,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2860,
+        "x": 2850,
         "y": 3340,
         "wires": [
             [
@@ -20494,8 +20494,9 @@
         "type": "function",
         "z": "d7c58eb9e7b65abb",
         "name": "RX SWPort",
-        "func": "run = msg.payload\ntopic = \"cmd/longmynd/swport\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "func": "let run = msg.payload\nlet topic = \"cmd/longmynd/swport\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -20584,9 +20585,9 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "off",
-        "payloadType": "str",
-        "x": 530,
+        "payload": "rx_port",
+        "payloadType": "flow",
+        "x": 550,
         "y": 220,
         "wires": [
             [
@@ -21194,44 +21195,6 @@
         ]
     },
     {
-        "id": "88197c215268c6d0",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "off",
-                "fromt": "num",
-                "to": "Top",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "on",
-                "fromt": "num",
-                "to": "Bottom",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1160,
-        "y": 260,
-        "wires": [
-            [
-                "ddcdf74a1e7fe17b"
-            ]
-        ]
-    },
-    {
         "id": "978d405470af5b94",
         "type": "ui_switch",
         "z": "d7c58eb9e7b65abb",
@@ -21242,17 +21205,17 @@
         "order": 8,
         "width": "4",
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
-        "onvalue": "on",
-        "onvalueType": "str",
+        "onvalue": "0",
+        "onvalueType": "num",
         "onicon": "",
         "oncolor": "",
-        "offvalue": "off",
-        "offvalueType": "str",
+        "offvalue": "1",
+        "offvalueType": "num",
         "officon": "",
         "offcolor": "",
         "animate": false,
@@ -21261,8 +21224,8 @@
         "y": 220,
         "wires": [
             [
-                "88197c215268c6d0",
-                "3bceae7c6947f3d7"
+                "3bceae7c6947f3d7",
+                "88197c215268c6d0"
             ]
         ]
     },
@@ -22861,6 +22824,44 @@
         "wires": [
             [
                 "32bc79c700bb824b"
+            ]
+        ]
+    },
+    {
+        "id": "88197c215268c6d0",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "Top",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "Bottom",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 260,
+        "wires": [
+            [
+                "ddcdf74a1e7fe17b"
             ]
         ]
     },
