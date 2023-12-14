@@ -171,7 +171,7 @@
             "6afa3d5787c3c8dd",
             "fd45eaf559f851a8"
         ],
-        "x": 1314,
+        "x": 1374,
         "y": 659,
         "w": 1092,
         "h": 322
@@ -345,7 +345,7 @@
             "7e30ac73bb50c7aa",
             "e59f80f27660af9f"
         ],
-        "x": 1314,
+        "x": 1394,
         "y": 279,
         "w": 1252,
         "h": 342
@@ -374,7 +374,7 @@
             "679eb4e7914de8fa",
             "6b675d160a28a287"
         ],
-        "x": 2594,
+        "x": 2654,
         "y": 179,
         "w": 772,
         "h": 262
@@ -470,8 +470,8 @@
             "cfdd9fffb83031de",
             "de67b561ba5031e9"
         ],
-        "x": 2594,
-        "y": 459,
+        "x": 2694,
+        "y": 479,
         "w": 592,
         "h": 322
     },
@@ -804,7 +804,6 @@
             "5c31dbeab217c8e9",
             "1d6a50722e33c015",
             "e1d2a880c9ca99a4",
-            "964319d0addb4635",
             "3084477086b5b8f2",
             "1b8ee9dbe0155dcd",
             "e5b15ef8662e723b",
@@ -813,7 +812,9 @@
             "c20ffdd3c22ba8da",
             "0d29c855caae3889",
             "cf798b4f51cbac85",
-            "343e66e2cb1a67c3"
+            "343e66e2cb1a67c3",
+            "4a0642add9f7b983",
+            "2d85a16a42027727"
         ],
         "x": 2254,
         "y": 1019,
@@ -893,12 +894,14 @@
             "3ba5b7893d572d90",
             "56e7df909b256eec",
             "e481ee2481f35f02",
-            "7327672ce1acf181"
+            "7327672ce1acf181",
+            "f522633969ddbe94",
+            "0eeb16760c96d1fa"
         ],
         "x": 2114,
-        "y": 3279,
-        "w": 852,
-        "h": 782
+        "y": 3239,
+        "w": 1002,
+        "h": 822
     },
     {
         "id": "50b9700a9a4f731c",
@@ -1130,57 +1133,6 @@
         "y": 259
     },
     {
-        "id": "2e4963908c2bd3e0",
-        "type": "group",
-        "z": "9d964f25dcc4d750",
-        "name": "Rx spectrum controls",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "470e4d8abf29a205",
-            "b47b8870b7c9bd24",
-            "bb77722b6c2658e8",
-            "77dc98e0de74c888",
-            "aa44e5106814ab9f",
-            "30794624a6a04c15",
-            "0a9fe9e2623385cb",
-            "3ba43ff973399e13",
-            "b82cad0a3cddc877",
-            "f72c1ae9d1dc7d89",
-            "7d69601736a74273",
-            "12159992489b0591",
-            "bff2bb43c29c79e5",
-            "e688634a9f60c746",
-            "818602f620560caa",
-            "6adfe6d609aeb90a",
-            "5493fb3252e35009",
-            "4497dbfe8502fab3",
-            "7b24853f35e10fac",
-            "a6254b8eb8807472",
-            "3f6233950fb6654d",
-            "41b1f74eaf2fa2bd",
-            "53d85ccc1ca38e73",
-            "6860085513c10a64",
-            "5e009d852e836e3b",
-            "c0a747bc908afade",
-            "db57ce0d38f95c32",
-            "9cfb443df5cb5da9",
-            "de2e4421edba4493",
-            "1abba09f50e1a73c",
-            "97ea4ec5dc95813b",
-            "f51752e8606fb64c",
-            "0e96496b235b3fe0",
-            "c98f9bfdc4eab524",
-            "9f6a4873cc3768b5",
-            "4536019d942cbd41",
-            "9af1f8975e61cc08",
-            "f5eef0dfd7e39ee3"
-        ],
-        "x": 194,
-        "y": 399
-    },
-    {
         "id": "2406e32417780de0",
         "type": "group",
         "z": "9d964f25dcc4d750",
@@ -1215,7 +1167,9 @@
             "b5cfddf388cbc440"
         ],
         "x": 54,
-        "y": 59
+        "y": 59,
+        "w": 1532,
+        "h": 282
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1429,6 +1383,97 @@
         "y": 359,
         "w": 332,
         "h": 202
+    },
+    {
+        "id": "f06e928c83c73984",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "name": "Mocked MQTT topics",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true
+        },
+        "nodes": [
+            "53d85ccc1ca38e73",
+            "6860085513c10a64",
+            "5e009d852e836e3b",
+            "1abba09f50e1a73c",
+            "97ea4ec5dc95813b",
+            "f51752e8606fb64c",
+            "0e96496b235b3fe0",
+            "c98f9bfdc4eab524",
+            "9f6a4873cc3768b5",
+            "4536019d942cbd41",
+            "9af1f8975e61cc08",
+            "f5eef0dfd7e39ee3",
+            "07b220183ff77006",
+            "7328fadc376b984b",
+            "c27c4949eee35a7e",
+            "8b5dc62e18f85b99",
+            "6ffcd71ddb97f2dd",
+            "4a2dcbac0d2b3e30",
+            "8123e129750f95b0",
+            "03727daaaf94f10a",
+            "6ba4f27abdc0a2d7",
+            "95acf832281a1027",
+            "b20d795a08271867"
+        ],
+        "x": 194,
+        "y": 1079,
+        "w": 1292,
+        "h": 422
+    },
+    {
+        "id": "97ecf1ac9459a777",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "name": "Spectrum controls",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "470e4d8abf29a205",
+            "b47b8870b7c9bd24",
+            "bb77722b6c2658e8",
+            "77dc98e0de74c888",
+            "aa44e5106814ab9f",
+            "30794624a6a04c15",
+            "0a9fe9e2623385cb",
+            "3ba43ff973399e13",
+            "b82cad0a3cddc877",
+            "f72c1ae9d1dc7d89",
+            "7d69601736a74273",
+            "12159992489b0591",
+            "bff2bb43c29c79e5",
+            "e688634a9f60c746",
+            "818602f620560caa",
+            "6adfe6d609aeb90a",
+            "5493fb3252e35009",
+            "4497dbfe8502fab3",
+            "98c8f2e2679a3123",
+            "a6254b8eb8807472",
+            "c4b45eae95987a16",
+            "c0a747bc908afade",
+            "db57ce0d38f95c32",
+            "9cfb443df5cb5da9",
+            "de2e4421edba4493",
+            "860f19a6077ccf7a",
+            "8142d24399193d99",
+            "90ab66a37fc92ccc",
+            "05155ef717c0fb68",
+            "8be1ad29d1e86276",
+            "ed827f68456e01f6",
+            "0d2cd9e73e204cef",
+            "f3e27e7da4f03be6",
+            "f9e2e71dd4f166ca",
+            "0b50c351304db3b5",
+            "0c34bd3ef0714d28"
+        ],
+        "x": 194,
+        "y": 339,
+        "w": 1552,
+        "h": 662
     },
     {
         "id": "9b3296db2e0c849f",
@@ -3708,8 +3753,9 @@
         "wires": [
             [
                 "9695655b0a719b4a",
-                "964319d0addb4635",
-                "1b8ee9dbe0155dcd"
+                "1b8ee9dbe0155dcd",
+                "2d85a16a42027727",
+                "4a0642add9f7b983"
             ]
         ]
     },
@@ -4683,7 +4729,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1650,
+        "x": 1710,
         "y": 760,
         "wires": [
             [
@@ -5084,7 +5130,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
+        "x": 2180,
         "y": 820,
         "wires": [
             [
@@ -5728,7 +5774,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2270,
+        "x": 2330,
         "y": 760,
         "wires": [
             [
@@ -5766,7 +5812,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1920,
+        "x": 1980,
         "y": 880,
         "wires": [
             [
@@ -6036,7 +6082,7 @@
         "scope": [
             "347c8041af1a52e0"
         ],
-        "x": 2680,
+        "x": 2740,
         "y": 260,
         "wires": [
             [
@@ -6057,7 +6103,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2870,
+        "x": 2930,
         "y": 260,
         "wires": [
             [
@@ -6086,7 +6132,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 3050,
+        "x": 3110,
         "y": 260,
         "wires": [
             []
@@ -6110,7 +6156,7 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 3190,
+        "x": 3250,
         "y": 260,
         "wires": []
     },
@@ -6132,7 +6178,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2970,
+        "x": 3030,
         "y": 320,
         "wires": []
     },
@@ -6154,7 +6200,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3220,
+        "x": 3280,
         "y": 380,
         "wires": []
     },
@@ -6176,7 +6222,7 @@
         "topic": "",
         "payload": "settings.VBITRATE",
         "payloadType": "global",
-        "x": 2760,
+        "x": 2820,
         "y": 320,
         "wires": [
             [
@@ -6202,7 +6248,7 @@
         "topic": "",
         "payload": "device.tx.dvbs2.ts.bitrate",
         "payloadType": "global",
-        "x": 2770,
+        "x": 2830,
         "y": 380,
         "wires": [
             [
@@ -6261,7 +6307,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1710,
+        "x": 1790,
         "y": 340,
         "wires": [
             [
@@ -6335,7 +6381,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1670,
+        "x": 1750,
         "y": 400,
         "wires": [
             [
@@ -6356,7 +6402,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1880,
+        "x": 1960,
         "y": 340,
         "wires": [
             [
@@ -6384,7 +6430,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
+        "x": 1970,
         "y": 400,
         "wires": [
             [
@@ -6412,7 +6458,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
+        "x": 1980,
         "y": 460,
         "wires": [
             [
@@ -6440,7 +6486,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2010,
+        "x": 2090,
         "y": 340,
         "wires": [
             [
@@ -6519,7 +6565,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1670,
+        "x": 1750,
         "y": 520,
         "wires": [
             [
@@ -6547,7 +6593,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
+        "x": 1970,
         "y": 520,
         "wires": [
             [
@@ -6631,7 +6677,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1690,
+        "x": 1770,
         "y": 580,
         "wires": [
             [
@@ -6659,7 +6705,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1890,
+        "x": 1970,
         "y": 580,
         "wires": [
             [
@@ -6680,7 +6726,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2150,
+        "x": 2230,
         "y": 400,
         "wires": [
             [
@@ -6701,7 +6747,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2480,
+        "x": 2560,
         "y": 400,
         "wires": [
             []
@@ -6725,7 +6771,7 @@
         "topic": "",
         "payload": "settings.IMAGESIZE",
         "payloadType": "global",
-        "x": 1430,
+        "x": 1510,
         "y": 520,
         "wires": [
             [
@@ -6751,7 +6797,7 @@
         "topic": "",
         "payload": "settings.ABITRATE",
         "payloadType": "global",
-        "x": 1440,
+        "x": 1520,
         "y": 580,
         "wires": [
             [
@@ -6777,7 +6823,7 @@
         "topic": "",
         "payload": "settings.AUDIO",
         "payloadType": "global",
-        "x": 1440,
+        "x": 1520,
         "y": 460,
         "wires": [
             [
@@ -6803,7 +6849,7 @@
         "topic": "",
         "payload": "settings.FPS",
         "payloadType": "global",
-        "x": 1410,
+        "x": 1490,
         "y": 400,
         "wires": [
             [
@@ -6838,7 +6884,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2350,
+        "x": 2430,
         "y": 320,
         "wires": [
             []
@@ -6862,7 +6908,7 @@
         "topic": "",
         "payload": "settings.CODEC",
         "payloadType": "global",
-        "x": 1470,
+        "x": 1550,
         "y": 340,
         "wires": [
             [
@@ -6929,7 +6975,7 @@
         "topic": "",
         "payload": "state_color",
         "payloadType": "global",
-        "x": 1440,
+        "x": 1500,
         "y": 760,
         "wires": [
             [
@@ -7936,8 +7982,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 2900,
-        "y": 500,
+        "x": 3000,
+        "y": 520,
         "wires": [
             [
                 "4823c6eed9e03e46"
@@ -7957,8 +8003,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3080,
-        "y": 500,
+        "x": 3180,
+        "y": 520,
         "wires": [
             []
         ]
@@ -7990,8 +8036,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 2910,
-        "y": 560,
+        "x": 3010,
+        "y": 580,
         "wires": [
             [
                 "c99bca3dafb85e2c"
@@ -8011,8 +8057,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3090,
-        "y": 560,
+        "x": 3190,
+        "y": 580,
         "wires": [
             []
         ]
@@ -8108,8 +8154,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2900,
-        "y": 620,
+        "x": 3000,
+        "y": 640,
         "wires": [
             [
                 "ade9869b5330a585"
@@ -8129,8 +8175,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3080,
-        "y": 620,
+        "x": 3180,
+        "y": 640,
         "wires": [
             []
         ]
@@ -8153,8 +8199,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_size",
         "payloadType": "global",
-        "x": 2710,
-        "y": 620,
+        "x": 2810,
+        "y": 640,
         "wires": [
             [
                 "0b68cbbed95acffe"
@@ -8174,8 +8220,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3090,
-        "y": 680,
+        "x": 3190,
+        "y": 700,
         "wires": [
             []
         ]
@@ -8198,8 +8244,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_volume",
         "payloadType": "global",
-        "x": 2720,
-        "y": 680,
+        "x": 2820,
+        "y": 700,
         "wires": [
             [
                 "a7b99958c4999cf0"
@@ -8226,8 +8272,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 2900,
-        "y": 680,
+        "x": 3000,
+        "y": 700,
         "wires": [
             [
                 "17d14c187e03e78d"
@@ -8252,8 +8298,8 @@
         "topic": "",
         "payload": "device.rx.ffplay",
         "payloadType": "global",
-        "x": 2710,
-        "y": 500,
+        "x": 2810,
+        "y": 520,
         "wires": [
             [
                 "0566516b8c2f5f60"
@@ -8278,8 +8324,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_ontop",
         "payloadType": "global",
-        "x": 2710,
-        "y": 560,
+        "x": 2810,
+        "y": 580,
         "wires": [
             [
                 "e29b0f596d18b958"
@@ -9066,8 +9112,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 2920,
-        "y": 740,
+        "x": 3020,
+        "y": 760,
         "wires": [
             [
                 "cfdd9fffb83031de"
@@ -9087,8 +9133,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3080,
-        "y": 740,
+        "x": 3180,
+        "y": 760,
         "wires": [
             []
         ]
@@ -9111,8 +9157,8 @@
         "topic": "",
         "payload": "device.rx.use_minitioune",
         "payloadType": "global",
-        "x": 2710,
-        "y": 740,
+        "x": 2810,
+        "y": 760,
         "wires": [
             [
                 "5aec87e336f5bf99"
@@ -9201,7 +9247,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3010,
+        "x": 3070,
         "y": 380,
         "wires": [
             [
@@ -9953,7 +9999,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1480,
+        "x": 1540,
         "y": 820,
         "wires": [
             [
@@ -10696,7 +10742,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 2710,
+        "x": 2770,
         "y": 220,
         "wires": [
             [
@@ -10724,7 +10770,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2890,
+        "x": 2950,
         "y": 220,
         "wires": [
             []
@@ -10748,7 +10794,7 @@
         "topic": "",
         "payload": "first_load",
         "payloadType": "global",
-        "x": 1470,
+        "x": 1530,
         "y": 940,
         "wires": [
             [
@@ -10769,7 +10815,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1760,
+        "x": 1820,
         "y": 940,
         "wires": [
             [
@@ -10795,7 +10841,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2000,
+        "x": 2060,
         "y": 940,
         "wires": [
             [
@@ -10819,7 +10865,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2200,
+        "x": 2260,
         "y": 940,
         "wires": []
     },
@@ -11091,7 +11137,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1700,
+        "x": 1780,
         "y": 460,
         "wires": [
             [
@@ -11555,7 +11601,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3230,
+        "x": 3290,
         "y": 340,
         "wires": []
     },
@@ -11642,7 +11688,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2260,
+        "x": 2320,
         "y": 700,
         "wires": []
     },
@@ -12270,7 +12316,8 @@
         "y": 3340,
         "wires": [
             [
-                "e5b15ef8662e723b"
+                "e5b15ef8662e723b",
+                "0eeb16760c96d1fa"
             ]
         ]
     },
@@ -13420,7 +13467,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2340,
+        "x": 2420,
         "y": 400,
         "wires": [
             [
@@ -13771,7 +13818,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1900,
+        "x": 1960,
         "y": 760,
         "wires": [
             [
@@ -13792,7 +13839,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2080,
+        "x": 2140,
         "y": 760,
         "wires": [
             [
@@ -13807,7 +13854,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "stream.mode must be set, or else digital mode setting reboots pluto",
         "info": "",
-        "x": 1600,
+        "x": 1660,
         "y": 700,
         "wires": []
     },
@@ -13824,7 +13871,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
+        "x": 1780,
         "y": 820,
         "wires": [
             [
@@ -13845,7 +13892,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 1880,
+        "x": 1940,
         "y": 820,
         "wires": [
             [
@@ -14914,35 +14961,13 @@
         ]
     },
     {
-        "id": "964319d0addb4635",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "44bb8f59b40e58cf",
-        "name": "symbol rate",
-        "func": "let payload = \"10655999\";\nlet topic = `${global.get(\"cmdPath\")}/rx/sr`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2850,
-        "y": 1600,
-        "wires": [
-            [
-                "3084477086b5b8f2"
-            ]
-        ]
-    },
-    {
         "id": "3084477086b5b8f2",
         "type": "delay",
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "",
         "pauseType": "delay",
-        "timeout": "30",
+        "timeout": "150",
         "timeoutUnits": "milliseconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -14953,10 +14978,12 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 3010,
-        "y": 1640,
+        "x": 3130,
+        "y": 1220,
         "wires": [
-            []
+            [
+                "e5b15ef8662e723b"
+            ]
         ]
     },
     {
@@ -15663,7 +15690,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1430,
+        "x": 1490,
         "y": 880,
         "wires": [
             [
@@ -15685,7 +15712,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 1570,
+        "x": 1630,
         "y": 880,
         "wires": [
             [
@@ -15706,7 +15733,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
+        "x": 1770,
         "y": 880,
         "wires": [
             [
@@ -15728,7 +15755,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2140,
+        "x": 2200,
         "y": 880,
         "wires": []
     },
@@ -15750,7 +15777,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 3250,
+        "x": 3310,
         "y": 400,
         "wires": []
     },
@@ -16310,7 +16337,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "9286ad1292f976c7",
         "name": "GSE init",
-        "func": "let fw = global.get(\"settings.firewall\");\n// De-init state or just another mode state\nif (msg.payload !== \"dvbs2-gse\") {\n    let messages = [\n        \"-t nat -F\",\n        \"-F\"\n    ]\n    msg.payload = messages;\n    msg.init = false;\n    return msg;\n}\n\nif (msg.payload === \"dvbs2-gse\" && !fw) {\n    let messages = [\n        `-t nat -F`,\n        `-F`,\n        `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`,\n        `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`,\n        `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`,\n        `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`,\n        `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`,\n        `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`\n    ]\n\n    msg.payload = messages;\n    msg.init = true;\n    return msg;\n}\n\nif (msg.payload === \"dvbs2-gse\" && fw) {\n    let messages = [\n        `-t nat -F`,\n        `-F`,\n        `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`,\n        `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`,\n        `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`,\n        `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`,\n        `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`,\n        `-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT`, `-A INPUT -i gse0 -j DROP`,\n        `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`\n    ]\n    msg.payload = messages;\n    msg.init = true;\n    return msg;\n}\n",
+        "func": "let fw = global.get(\"settings.firewall\");\n// De-init state or just another mode state\nif (msg.payload !== \"dvbs2-gse\") {\n    let messages = [\n        \"-t nat -F\",\n        \"-F\"\n    ]\n    msg.payload = messages;\n    msg.init = false;\n    return msg;\n}\n\nif (msg.payload === \"dvbs2-gse\" && !fw) {\n    let messages = [\n        `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`,\n        `-t nat -F`,\n        `-F`,\n        `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`,\n        `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`,\n        `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`,\n        `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`,\n        `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`,\n        `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`\n    ]\n\n    msg.payload = messages;\n    msg.init = true;\n    return msg;\n}\n\nif (msg.payload === \"dvbs2-gse\" && fw) {\n    let messages = [\n        `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`,\n        `-t nat -F`,\n        `-F`,\n        `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`,\n        `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`,\n        `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`,\n        `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`,\n        `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`,\n        `-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT`, `-A INPUT -i gse0 -j DROP`,\n        `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`\n    ]\n    msg.payload = messages;\n    msg.init = true;\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16322,7 +16349,8 @@
         "wires": [
             [
                 "7327672ce1acf181",
-                "56e7df909b256eec"
+                "56e7df909b256eec",
+                "f522633969ddbe94"
             ]
         ]
     },
@@ -16573,7 +16601,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
         "name": "CTRL click for RX frequency",
-        "func": "let freq = Number(msg.payload.downlink) + Math.abs(global.get(\"device.rx.offset\"));\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq} MHz, SR: ${sr}kS `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_MHz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq;\nmsg.payload = freq;\nreturn msg;",
+        "func": "let freq = Number(msg.payload.downlink) + Math.abs(global.get(\"device.rx.offset\"));\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq} MHz, SR: ${sr}kS `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_MHz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq;\nmsg.payload = round(freq, 25000);\nreturn msg;\n\n\nfunction round(value, step) {\n    step || (step = 1.0);\n    var inv = 1.0 / step;\n    return Math.round(value * inv) / inv;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16584,7 +16612,8 @@
         "y": 340,
         "wires": [
             [
-                "64a9de4a4bd4dab6"
+                "64a9de4a4bd4dab6",
+                "b86aad85fafa0443"
             ]
         ]
     },
@@ -16607,6 +16636,86 @@
         "wires": []
     },
     {
+        "id": "4a0642add9f7b983",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "RX Frequency",
+        "func": "let span = []\nlet switcher = Number(msg.payload);\nswitch (switcher) {\n    case 35000:\n        span = [\n            560000,\n            1120000,\n            1680000,\n            2240000,\n            2800000,\n            3360000,\n            3920000,\n            4480000\n        ]\n        break;\n    case 66000:\n        span = [\n            1056000,\n            2112000,\n            3168000,\n            4224000,\n            5280000,\n            6336000,\n            7392000,\n            8448000\n        ]\n        break;\n    case 125000:\n        span = [\n            2000000,\n            4000000,\n            6000000,\n            8000000,\n            10000000,\n            12000000,\n            14000000,\n            16000000\n        ]\n        break;\n    case 250000:\n        span = [\n            4000000,\n            8000000,\n            12000000,\n            16000000,\n            20000000,\n            24000000,\n            28000000,\n            32000000\n        ]\n        break;\n    case 333000:\n        span = [\n            5328000,\n            10656000,\n            15984000,\n            21312000,\n            26640000,\n            31968000,\n            37296000,\n            42624000\n        ]\n        break;\n    case 500000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n    case 1000000:\n        span = [\n            16000000,\n            32000000,\n            48000000,\n            64000000,\n            80000000,\n            96000000,\n            112000000,\n            128000000\n        ]\n        break;\n    case 1500000:\n        span = [\n            24000000,\n            48000000,\n            72000000,\n            96000000,\n            120000000,\n            144000000,\n            168000000,\n            192000000\n        ]\n        break;\n    case 2000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000\n        ]\n        break;\n    case 3000000:\n        span = [\n            6000000,\n            12000000,\n            18000000,\n            24000000,\n            30000000,\n            36000000,\n            42000000,\n            48000000\n        ]\n        break;\n    case 4000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n}\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = global.get(\"device.rx.frequency\") * 1000;\nmsg.span = span;\nglobal.set(\"span_options\", span);\nglobal.set(\"change_span_options\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2940,
+        "y": 1220,
+        "wires": [
+            [
+                "3084477086b5b8f2",
+                "2d85a16a42027727"
+            ]
+        ]
+    },
+    {
+        "id": "f522633969ddbe94",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Send route ",
+        "func": "let topic = `${global.get(\"cmdPath\")}/ip/route`;\nmsg.topic = topic;\nmsg.payload = `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2530,
+        "y": 3280,
+        "wires": [
+            [
+                "4cbca64d40e28578"
+            ]
+        ]
+    },
+    {
+        "id": "0eeb16760c96d1fa",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "GSE",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3020,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "2d85a16a42027727",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "d": true,
+        "g": "44bb8f59b40e58cf",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3060,
+        "y": 1320,
+        "wires": []
+    },
+    {
         "id": "1e0841f1.ac68fe",
         "type": "http in",
         "z": "9d964f25dcc4d750",
@@ -16623,47 +16732,6 @@
                 "4dbfb098ed6ce8ef"
             ]
         ]
-    },
-    {
-        "id": "5de0bbd4.6c8574",
-        "type": "http in",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "url": "/mysitepost",
-        "method": "post",
-        "swaggerDoc": "",
-        "x": 210,
-        "y": 1840,
-        "wires": [
-            [
-                "80321000.f2dc5",
-                "75913f37.78e6e"
-            ]
-        ]
-    },
-    {
-        "id": "80321000.f2dc5",
-        "type": "debug",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "mysitepost",
-        "active": true,
-        "console": "false",
-        "complete": "payload",
-        "x": 850,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "8de9647.b8a9a98",
-        "type": "http response",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "x": 870,
-        "y": 1800,
-        "wires": []
     },
     {
         "id": "b2f5bdf9.e09f1",
@@ -16713,63 +16781,6 @@
                 "d2c0bc2a.05a02"
             ]
         ]
-    },
-    {
-        "id": "57316751.8bd948",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "Login Form",
-        "info": "",
-        "x": 370,
-        "y": 1760,
-        "wires": []
-    },
-    {
-        "id": "ad88b28c.bc842",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "return msg.payload to client",
-        "func": "msg.payload = 'The following data was submitted and available in the msg.payload: '+msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 1800,
-        "wires": [
-            [
-                "8de9647.b8a9a98"
-            ]
-        ]
-    },
-    {
-        "id": "75913f37.78e6e",
-        "type": "json",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "",
-        "x": 410,
-        "y": 1800,
-        "wires": [
-            [
-                "ad88b28c.bc842"
-            ]
-        ]
-    },
-    {
-        "id": "111485fa.14c4aa",
-        "type": "comment",
-        "z": "9d964f25dcc4d750",
-        "d": true,
-        "name": "Form Submission",
-        "info": "",
-        "x": 200,
-        "y": 1780,
-        "wires": []
     },
     {
         "id": "e5e2b6286078ea70",
@@ -17149,7 +17160,7 @@
         "id": "470e4d8abf29a205",
         "type": "mqtt out",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "topic": "",
         "qos": "",
@@ -17160,15 +17171,15 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 1610,
-        "y": 600,
+        "x": 1670,
+        "y": 580,
         "wires": []
     },
     {
         "id": "b47b8870b7c9bd24",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "webfft ON",
         "func": "let payload = \"webfft\";\nlet topic = `${global.get(\"cmdPath\")}/rx/stream/mode`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
         "outputs": 1,
@@ -17189,7 +17200,7 @@
         "id": "bb77722b6c2658e8",
         "type": "inject",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "config once",
         "props": [
             {
@@ -17215,7 +17226,7 @@
         "id": "77dc98e0de74c888",
         "type": "mqtt out",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "topic": "",
         "qos": "",
@@ -17234,7 +17245,7 @@
         "id": "aa44e5106814ab9f",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "Gain :",
         "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/gain`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
         "outputs": 1,
@@ -17243,7 +17254,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
+        "x": 1330,
         "y": 620,
         "wires": [
             [
@@ -17255,7 +17266,7 @@
         "id": "30794624a6a04c15",
         "type": "ui_slider",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "label": "Rx {{value | number:2}}  MHz",
         "tooltip": "",
@@ -17283,7 +17294,7 @@
         "id": "0a9fe9e2623385cb",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "symbol rate",
         "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/span`;\nmsg.topic = topic\nmsg.payload = payload\n// global.set(\"sr_bug\", true);\nreturn msg;",
         "outputs": 1,
@@ -17292,12 +17303,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
+        "x": 1330,
         "y": 700,
         "wires": [
             [
-                "470e4d8abf29a205",
-                "a6254b8eb8807472"
+                "8be1ad29d1e86276"
             ]
         ]
     },
@@ -17305,7 +17315,7 @@
         "id": "3ba43ff973399e13",
         "type": "inject",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "props": [
             {
@@ -17334,7 +17344,7 @@
         "id": "b82cad0a3cddc877",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "rx gain",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/gain\"\nreturn msg;\n\n",
         "outputs": 1,
@@ -17355,7 +17365,7 @@
         "id": "f72c1ae9d1dc7d89",
         "type": "mqtt in",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -17377,7 +17387,7 @@
         "id": "7d69601736a74273",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "Frequency",
         "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nmsg.rx_freq = (payload * 1000);\nreturn msg;",
         "outputs": 1,
@@ -17399,7 +17409,7 @@
         "id": "12159992489b0591",
         "type": "mqtt in",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -17421,7 +17431,7 @@
         "id": "bff2bb43c29c79e5",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "rx frequency ",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/webfft/frequency\"\nreturn msg;\n\n",
         "outputs": 1,
@@ -17461,7 +17471,7 @@
         "id": "e688634a9f60c746",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "rx span",
         "func": "msg.action = \"subscribe\"\nmsg.topic = \"dt/pluto/\" + global.get(\"callsign\") + \"/rx/webfft/span\"\nreturn msg;\n\n",
         "outputs": 1,
@@ -17471,7 +17481,7 @@
         "finalize": "",
         "libs": [],
         "x": 480,
-        "y": 700,
+        "y": 680,
         "wires": [
             [
                 "818602f620560caa"
@@ -17482,7 +17492,7 @@
         "id": "818602f620560caa",
         "type": "mqtt in",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -17493,10 +17503,10 @@
         "rh": 0,
         "inputs": 1,
         "x": 650,
-        "y": 700,
+        "y": 680,
         "wires": [
             [
-                "7b24853f35e10fac"
+                "ed827f68456e01f6"
             ]
         ]
     },
@@ -17504,7 +17514,7 @@
         "id": "6adfe6d609aeb90a",
         "type": "ui_slider",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "Rx gain slider",
         "label": "Gain {{value | number:2}} dB",
         "tooltip": "",
@@ -17524,7 +17534,7 @@
         "y": 620,
         "wires": [
             [
-                "aa44e5106814ab9f"
+                "05155ef717c0fb68"
             ]
         ]
     },
@@ -17532,7 +17542,7 @@
         "id": "5493fb3252e35009",
         "type": "change",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "rules": [
             {
@@ -17558,7 +17568,7 @@
         "id": "4497dbfe8502fab3",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "function 10",
         "func": "let payload = msg.payload;\nmsg.payload = (payload / 1000000);\nreturn msg;",
         "outputs": 1,
@@ -17598,37 +17608,10 @@
         ]
     },
     {
-        "id": "7b24853f35e10fac",
-        "type": "ui_slider",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "",
-        "label": "Span",
-        "tooltip": "{{value}}",
-        "group": "bd40e71dca80ef04",
-        "order": 3,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "outs": "end",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": "500000",
-        "max": "256000000",
-        "step": "100000",
-        "className": "",
-        "x": 970,
-        "y": 700,
-        "wires": [
-            [
-                "0a9fe9e2623385cb"
-            ]
-        ]
-    },
-    {
         "id": "98c8f2e2679a3123",
         "type": "comment",
         "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "info": "We need to add spectrum controls",
         "x": 1410,
@@ -17639,17 +17622,17 @@
         "id": "a6254b8eb8807472",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "set minimum span for tx",
-        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
+        "func": "let payload = 0;\nswitch (Number(global.get(\"device.tx.dvbs2.sr\"))) {\n    case 35000:\n        payload = 560_000;\n        break;\n    case 66000:\n        payload = 1056_000;\n        break;\n    case 125000:\n        payload = 2_000_000;\n        break;\n    case 250000:\n        payload = 4_000_000;\n        break;\n    case 333000:\n        payload = 5_328_000;\n        break;\n    case 500000:\n        payload = 8_000_000;\n        break;\n    case 1000000:\n        payload = 16_000_000;\n        break;\n    case 1500000:\n        payload = 24_000_000;\n        break;\n    case 2000000:\n        payload = 8_000_000;\n        break;\n    case 3000000:\n        payload = 6_000_000;\n        break;\n    case 4000000:\n        payload = 8_000_000;\n        break;\n}\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nglobal.set(\"span_min\", payload);\nmsg.payload = payload\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 760,
+        "x": 590,
+        "y": 820,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -17657,58 +17640,20 @@
         ]
     },
     {
-        "id": "3f6233950fb6654d",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set minimum span for tx",
-        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "41b1f74eaf2fa2bd",
-        "type": "function",
-        "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
-        "name": "set minimum span for tx",
-        "func": "let payload = 0;\nswitch (global.get(\"device.tx.dvbs2.sr\")) {\n    case \"35000\":\n        payload = 560_000;\n        break;\n    case \"66000\":\n        payload = 1056_000;\n        break;\n    case \"125000\":\n        payload = 2_000_000;\n        break;\n    case \"250000\":\n        payload = 4_000_000;\n        break;\n    case \"333000\":\n        payload = 5_328_000;\n        break;\n    case \"500000\":\n        payload = 8_000_000;\n        break;\n    case \"1000000\":\n        payload = 16_000_000;\n        break;\n    case \"1500000\":\n        payload = 24_000_000;\n        break;\n    case \"2000000\":\n        payload = 8_000_000;\n        break;\n    case \"3000000\":\n        payload = 6_000_000;\n        break;\n    case \"4000000\":\n        payload = 8_000_000;\n        break;\n}\n\n\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/minSpan`;\nmsg.topic = topic\nmsg.payload = payload\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 650,
-        "y": 840,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "53d85ccc1ca38e73",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "set state",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nflow.set(\"min_db\", msg.payload);\nreturn msg;",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 900,
+        "x": 1120,
+        "y": 1120,
         "wires": [
             [
                 "6860085513c10a64"
@@ -17719,7 +17664,7 @@
         "id": "6860085513c10a64",
         "type": "mqtt out",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "",
         "topic": "",
         "qos": "",
@@ -17730,25 +17675,25 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 1430,
-        "y": 940,
+        "x": 1410,
+        "y": 1360,
         "wires": []
     },
     {
         "id": "5e009d852e836e3b",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "set state",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nflow.set(\"max_db\", msg.payload);\nreturn msg;",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 960,
+        "x": 1120,
+        "y": 1180,
         "wires": [
             [
                 "6860085513c10a64"
@@ -17759,6 +17704,7 @@
         "id": "c4b45eae95987a16",
         "type": "inject",
         "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "props": [],
         "repeat": "1",
@@ -17779,7 +17725,7 @@
         "id": "c0a747bc908afade",
         "type": "mqtt in",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -17792,16 +17738,14 @@
         "x": 650,
         "y": 960,
         "wires": [
-            [
-                "f5eef0dfd7e39ee3"
-            ]
+            []
         ]
     },
     {
         "id": "db57ce0d38f95c32",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "max",
         "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nreturn msg;",
         "outputs": 1,
@@ -17822,7 +17766,7 @@
         "id": "9cfb443df5cb5da9",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "min",
         "func": "msg.action = \"subscribe\"\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nreturn msg;",
         "outputs": 1,
@@ -17843,7 +17787,7 @@
         "id": "de2e4421edba4493",
         "type": "mqtt in",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "97ecf1ac9459a777",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -17856,29 +17800,28 @@
         "x": 650,
         "y": 900,
         "wires": [
-            [
-                "9af1f8975e61cc08"
-            ]
+            []
         ]
     },
     {
         "id": "1abba09f50e1a73c",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "set state min",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"min_db\");\nreturn msg;",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/min_db`;\nmsg.topic = topic;\nmsg.payload = global.get(\"settings.spectrum.min_db\")\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
-        "y": 1020,
+        "x": 510,
+        "y": 1340,
         "wires": [
             [
-                "6860085513c10a64"
+                "6860085513c10a64",
+                "c27c4949eee35a7e"
             ]
         ]
     },
@@ -17886,20 +17829,21 @@
         "id": "97ea4ec5dc95813b",
         "type": "function",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "set state max",
-        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nmsg.payload = flow.get(\"max_db\");\nreturn msg;",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/max_db`;\nmsg.topic = topic;\nmsg.payload = global.get(\"settings.spectrum.max_db\")\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
-        "y": 1060,
+        "x": 510,
+        "y": 1380,
         "wires": [
             [
-                "6860085513c10a64"
+                "6860085513c10a64",
+                "c27c4949eee35a7e"
             ]
         ]
     },
@@ -17907,20 +17851,22 @@
         "id": "f51752e8606fb64c",
         "type": "inject",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "",
         "props": [],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": true,
-        "onceDelay": "0.5",
+        "onceDelay": "1",
         "topic": "",
-        "x": 850,
-        "y": 1040,
+        "x": 310,
+        "y": 1340,
         "wires": [
             [
                 "1abba09f50e1a73c",
-                "97ea4ec5dc95813b"
+                "97ea4ec5dc95813b",
+                "8b5dc62e18f85b99",
+                "8123e129750f95b0"
             ]
         ]
     },
@@ -17928,25 +17874,25 @@
         "id": "0e96496b235b3fe0",
         "type": "inject",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "420",
-        "payloadType": "num",
-        "x": 310,
-        "y": 1060,
+        "payload": "settings.spectrum.min_db",
+        "payloadType": "global",
+        "x": 380,
+        "y": 1120,
         "wires": [
             [
-                "c98f9bfdc4eab524"
+                "9af1f8975e61cc08"
             ]
         ]
     },
@@ -17954,15 +17900,22 @@
         "id": "c98f9bfdc4eab524",
         "type": "change",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "min_db",
-                "pt": "flow",
+                "p": "settings.spectrum.min_db",
+                "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -17970,35 +17923,37 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
-        "y": 1060,
+        "x": 900,
+        "y": 1120,
         "wires": [
-            []
+            [
+                "53d85ccc1ca38e73"
+            ]
         ]
     },
     {
         "id": "9f6a4873cc3768b5",
         "type": "inject",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "490",
-        "payloadType": "num",
-        "x": 310,
-        "y": 1120,
+        "payload": "settings.spectrum.max_db",
+        "payloadType": "global",
+        "x": 380,
+        "y": 1180,
         "wires": [
             [
-                "4536019d942cbd41"
+                "f5eef0dfd7e39ee3"
             ]
         ]
     },
@@ -18006,15 +17961,22 @@
         "id": "4536019d942cbd41",
         "type": "change",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "max_db",
-                "pt": "flow",
+                "p": "settings.spectrum.max_db",
+                "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -18022,17 +17984,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 1120,
+        "x": 900,
+        "y": 1180,
         "wires": [
-            []
+            [
+                "5e009d852e836e3b"
+            ]
         ]
     },
     {
         "id": "9af1f8975e61cc08",
         "type": "ui_slider",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "min",
         "label": "Min {{value | number:2}}",
         "tooltip": "",
@@ -18048,11 +18012,11 @@
         "max": "1000",
         "step": "2",
         "className": "",
-        "x": 870,
-        "y": 900,
+        "x": 690,
+        "y": 1120,
         "wires": [
             [
-                "53d85ccc1ca38e73"
+                "c98f9bfdc4eab524"
             ]
         ]
     },
@@ -18060,7 +18024,7 @@
         "id": "f5eef0dfd7e39ee3",
         "type": "ui_slider",
         "z": "9d964f25dcc4d750",
-        "g": "2e4963908c2bd3e0",
+        "g": "f06e928c83c73984",
         "name": "max",
         "label": "Max {{value | number:2}}",
         "tooltip": "",
@@ -18076,11 +18040,592 @@
         "max": "1000",
         "step": "2",
         "className": "",
-        "x": 870,
-        "y": 980,
+        "x": 690,
+        "y": 1180,
         "wires": [
             [
-                "5e009d852e836e3b"
+                "4536019d942cbd41"
+            ]
+        ]
+    },
+    {
+        "id": "860f19a6077ccf7a",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "RX Frequency",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = global.get(\"device.rx.frequency\") * 1000;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 820,
+        "wires": [
+            [
+                "8142d24399193d99"
+            ]
+        ]
+    },
+    {
+        "id": "8142d24399193d99",
+        "type": "delay",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1470,
+        "y": 860,
+        "wires": [
+            [
+                "8be1ad29d1e86276"
+            ]
+        ]
+    },
+    {
+        "id": "07b220183ff77006",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.spectrum.averaging",
+        "payloadType": "global",
+        "x": 390,
+        "y": 1240,
+        "wires": [
+            [
+                "4a2dcbac0d2b3e30"
+            ]
+        ]
+    },
+    {
+        "id": "7328fadc376b984b",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.spectrum.averaging",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 1240,
+        "wires": [
+            [
+                "6ffcd71ddb97f2dd"
+            ]
+        ]
+    },
+    {
+        "id": "90ab66a37fc92ccc",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.spectrum.gain",
+        "payloadType": "global",
+        "x": 440,
+        "y": 740,
+        "wires": [
+            [
+                "6adfe6d609aeb90a"
+            ]
+        ]
+    },
+    {
+        "id": "05155ef717c0fb68",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.spectrum.gain",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 620,
+        "wires": [
+            [
+                "aa44e5106814ab9f"
+            ]
+        ]
+    },
+    {
+        "id": "c27c4949eee35a7e",
+        "type": "debug",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "g": "f06e928c83c73984",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "8b5dc62e18f85b99",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "set avg",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/avg`;\nmsg.topic = topic;\nmsg.payload = global.get(\"settings.spectrum.averaging\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1420,
+        "wires": [
+            [
+                "6860085513c10a64",
+                "c27c4949eee35a7e"
+            ]
+        ]
+    },
+    {
+        "id": "6ffcd71ddb97f2dd",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "set state",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/avg`;\nmsg.topic = topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 1240,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "4a2dcbac0d2b3e30",
+        "type": "ui_numeric",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "",
+        "label": "fft averaging",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 6,
+        "width": "4",
+        "height": "1",
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "step": "1",
+        "className": "",
+        "x": 710,
+        "y": 1240,
+        "wires": [
+            [
+                "7328fadc376b984b"
+            ]
+        ]
+    },
+    {
+        "id": "8123e129750f95b0",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "set signal_threshold",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/signal_threshold`;\nmsg.topic = topic;\nmsg.payload = global.get(\"settings.spectrum.signal_threshold\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1460,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "03727daaaf94f10a",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.spectrum.signal_threshold",
+        "payloadType": "global",
+        "x": 410,
+        "y": 1280,
+        "wires": [
+            [
+                "b20d795a08271867"
+            ]
+        ]
+    },
+    {
+        "id": "6ba4f27abdc0a2d7",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.spectrum.signal_threshold",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 1280,
+        "wires": [
+            [
+                "95acf832281a1027"
+            ]
+        ]
+    },
+    {
+        "id": "95acf832281a1027",
+        "type": "function",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "set state",
+        "func": "let topic = `${global.get(\"cmdPath\")}/rx/webfft/signal_threshold`;\nmsg.topic = topic;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 1280,
+        "wires": [
+            [
+                "6860085513c10a64"
+            ]
+        ]
+    },
+    {
+        "id": "b20d795a08271867",
+        "type": "ui_numeric",
+        "z": "9d964f25dcc4d750",
+        "g": "f06e928c83c73984",
+        "name": "",
+        "label": "signal threshold",
+        "tooltip": "",
+        "group": "bd40e71dca80ef04",
+        "order": 6,
+        "width": "5",
+        "height": "1",
+        "wrap": false,
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "step": 1,
+        "className": "",
+        "x": 720,
+        "y": 1280,
+        "wires": [
+            [
+                "6ba4f27abdc0a2d7"
+            ]
+        ]
+    },
+    {
+        "id": "8be1ad29d1e86276",
+        "type": "delay",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1620,
+        "y": 740,
+        "wires": [
+            [
+                "470e4d8abf29a205"
+            ]
+        ]
+    },
+    {
+        "id": "ed827f68456e01f6",
+        "type": "ui_dropdown",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "label": "Span",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "bd40e71dca80ef04",
+        "order": 10,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1030,
+        "y": 700,
+        "wires": [
+            [
+                "0a9fe9e2623385cb",
+                "860f19a6077ccf7a"
+            ]
+        ]
+    },
+    {
+        "id": "0d2cd9e73e204cef",
+        "type": "change",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "change_span_options",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "span_options",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "span_min",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 960,
+        "wires": [
+            [
+                "f9e2e71dd4f166ca",
+                "0a9fe9e2623385cb",
+                "ed827f68456e01f6"
+            ]
+        ]
+    },
+    {
+        "id": "f3e27e7da4f03be6",
+        "type": "inject",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 850,
+        "y": 960,
+        "wires": [
+            [
+                "0b50c351304db3b5"
+            ]
+        ]
+    },
+    {
+        "id": "f9e2e71dd4f166ca",
+        "type": "debug",
+        "z": "9d964f25dcc4d750",
+        "d": true,
+        "g": "97ecf1ac9459a777",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "0b50c351304db3b5",
+        "type": "switch",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "property": "change_span_options",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 960,
+        "wires": [
+            [
+                "0c34bd3ef0714d28"
+            ]
+        ]
+    },
+    {
+        "id": "0c34bd3ef0714d28",
+        "type": "delay",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 960,
+        "wires": [
+            [
+                "0d2cd9e73e204cef"
             ]
         ]
     },
@@ -20732,9 +21277,9 @@
         "order": 2,
         "width": 4,
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "decouple": "false",
-        "topic": "payload",
+        "topic": "topic",
         "topicType": "msg",
         "style": "",
         "onvalue": "on",
@@ -21932,10 +22477,11 @@
         "payload": "on",
         "payloadType": "str",
         "x": 590,
-        "y": 280,
+        "y": 320,
         "wires": [
             [
-                "f46d32abeabe83a5"
+                "f46d32abeabe83a5",
+                "9a0b2140b7c832bf"
             ]
         ]
     },

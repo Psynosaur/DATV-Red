@@ -68,6 +68,8 @@ function mqtt_client() {
     client.subscribe(`cmd/pluto/${callsign}/rx/webfft/minSpan`, () => {});
     client.subscribe(`cmd/pluto/${callsign}/rx/webfft/min_db`, () => {});
     client.subscribe(`cmd/pluto/${callsign}/rx/webfft/max_db`, () => {});
+    client.subscribe(`cmd/pluto/${callsign}/rx/webfft/avg`, () => {});
+    client.subscribe(`cmd/pluto/${callsign}/rx/webfft/signal_threshold`, () => {});
   });
   client.on("message", function (topic, message) {
     if (topic === `dt/pluto/${callsign}/rx/webfft/frequency`) {
@@ -94,6 +96,16 @@ function mqtt_client() {
       let db = Number(message.toString());
       spectrum.setMaxRange(db);
       console.log("max db: " + db);
+    }
+    if (topic === `cmd/pluto/${callsign}/rx/webfft/avg`) {
+      let num = Number(message.toString());
+      spectrum.setAveraging(num);
+      console.log("avg: " + num);
+    }
+    if (topic === `cmd/pluto/${callsign}/rx/webfft/signal_threshold`) {
+      let num = Number(message.toString());
+      spectrum.setThreshold(num);
+      console.log("avg: " + num);
     }
   });
 }

@@ -124,7 +124,7 @@ Spectrum.prototype.detect_signals = function (
     let i;
     let j;
     const noise_level = this.min_db;
-    const signal_threshold = this.min_db + 30;
+    const signal_threshold = this.min_db + this.threshold;
 
     let in_signal = false;
     let start_signal = 0;
@@ -281,8 +281,8 @@ Spectrum.prototype.detect_signals = function (
                         ctx.fillText(
                             print_symbolrate(signal_bw),
                             text_x_position,
-                            canvasHeight - (strength_signal / 65536) * canvasHeight - 250
-                        );
+                            canvasHeight - (strength_signal / 7 / (this.max_db - this.min_db)) * canvasHeight - (strength_signal / 14)
+                            );
                         ctx.restore();
                     }
                     // else {
@@ -671,7 +671,7 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                         mer,
                         signals[i].start - (signals[i].start - signals[i].end) / 2,
                         (canvasHeight * 1) / 8 -
-                        (7 * ((canvasHeight * 7) / 8 - signals[i].top)) / 8
+                        (7 * ((canvasHeight * 7) / 8 - signals[i].top)) / 2
                     );
                 }
                 busy = true;
@@ -991,7 +991,9 @@ Spectrum.prototype.setFps = function (fps) {
     this.fps = fps;
     this.updateAxes();
 };
-
+Spectrum.prototype.setThreshold = function (threshold) {
+    this.threshold = threshold;
+};
 Spectrum.prototype.setAveraging = function (num) {
     if (num >= 0) {
         this.averaging = num;
@@ -1337,14 +1339,14 @@ function Spectrum(id, options) {
     this.centerHz = options && options.centerHz ? options.centerHz : 0;
     this.spanHz = options && options.spanHz ? options.spanHz : 0;
     this.gain = options && options.gain ? options.gain : 0;
-    this.fps = options && options.fps ? options.fps : 50;
+    this.fps = options && options.fps ? options.fps : 0;
     this.wf_size = options && options.wf_size ? options.wf_size : 0;
     this.wf_rows = options && options.wf_rows ? options.wf_rows : 2048;
     this.spectrumPercent =
-        options && options.spectrumPercent ? options.spectrumPercent : 40;
+        options && options.spectrumPercent ? options.spectrumPercent : 25;
     this.spectrumPercentStep =
         options && options.spectrumPercentStep ? options.spectrumPercentStep : 5;
-    this.averaging = options && options.averaging ? options.averaging : 10;
+    this.averaging = options && options.averaging ? options.averaging : 5;
     this.maxHold = options && options.maxHold ? options.maxHold : false;
     this.autoScale = options && options.autoScale ? options.autoScale : false;
     this.minSpanHz = options && options.minSpanHz ? options.minSpanHz : 560000;
@@ -1359,6 +1361,7 @@ function Spectrum(id, options) {
     this.fullscreen = false;
     this.min_db = 420;
     this.max_db = 490;
+    this.threshold = 30;
     this.spectrumHeight = 0;
     this.tuningStep = 100000;
     this.maxbinval = 0;
