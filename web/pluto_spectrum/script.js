@@ -2,6 +2,11 @@
 
 var spectrum, logger, ws;
 function connectWebSocket(spectrum) {
+  if(hosting_url !== undefined && window.location.hostname === hosting_url){
+    pluto_url = hosting_url;
+    console.log("WS hostname: " + window.location.hostname)
+    console.log("WS pluto_url: " + pluto_url)
+  }
   ws = new WebSocket(`ws://${pluto_url}:7681/websocket`);
 
   spectrum.setWebSocket(ws);

@@ -890,13 +890,13 @@
             "ad59cd30b3cc7fcc",
             "107deb095943505f",
             "12e13fa8933eafa7",
-            "fb34b1c186040d75",
             "3ba5b7893d572d90",
             "56e7df909b256eec",
             "e481ee2481f35f02",
             "7327672ce1acf181",
             "f522633969ddbe94",
-            "0eeb16760c96d1fa"
+            "0eeb16760c96d1fa",
+            "38932643615d50c9"
         ],
         "x": 2114,
         "y": 3239,
@@ -1008,12 +1008,15 @@
             "9077d20ca65ab2fd",
             "264f78c58101c550",
             "bcea6a9dea321503",
-            "d8696aeccbf8391b"
+            "d8696aeccbf8391b",
+            "9fc2b2b1712c4ac3",
+            "cf620cc1430c2ec5",
+            "e63faf17ba00a395"
         ],
         "x": 54,
         "y": 3939,
         "w": 1212,
-        "h": 562
+        "h": 602
     },
     {
         "id": "68ebf17055b62392",
@@ -1234,6 +1237,97 @@
         "y": 59
     },
     {
+        "id": "f06e928c83c73984",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "name": "Mocked MQTT topics",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true
+        },
+        "nodes": [
+            "53d85ccc1ca38e73",
+            "6860085513c10a64",
+            "5e009d852e836e3b",
+            "1abba09f50e1a73c",
+            "97ea4ec5dc95813b",
+            "f51752e8606fb64c",
+            "0e96496b235b3fe0",
+            "c98f9bfdc4eab524",
+            "9f6a4873cc3768b5",
+            "4536019d942cbd41",
+            "9af1f8975e61cc08",
+            "f5eef0dfd7e39ee3",
+            "07b220183ff77006",
+            "7328fadc376b984b",
+            "c27c4949eee35a7e",
+            "8b5dc62e18f85b99",
+            "6ffcd71ddb97f2dd",
+            "4a2dcbac0d2b3e30",
+            "8123e129750f95b0",
+            "03727daaaf94f10a",
+            "6ba4f27abdc0a2d7",
+            "95acf832281a1027",
+            "b20d795a08271867"
+        ],
+        "x": 194,
+        "y": 1079,
+        "w": 1292,
+        "h": 422
+    },
+    {
+        "id": "97ecf1ac9459a777",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "name": "Spectrum controls",
+        "style": {
+            "fill": "#addb7b",
+            "label": true
+        },
+        "nodes": [
+            "470e4d8abf29a205",
+            "b47b8870b7c9bd24",
+            "bb77722b6c2658e8",
+            "77dc98e0de74c888",
+            "aa44e5106814ab9f",
+            "30794624a6a04c15",
+            "0a9fe9e2623385cb",
+            "3ba43ff973399e13",
+            "b82cad0a3cddc877",
+            "f72c1ae9d1dc7d89",
+            "7d69601736a74273",
+            "12159992489b0591",
+            "bff2bb43c29c79e5",
+            "e688634a9f60c746",
+            "818602f620560caa",
+            "6adfe6d609aeb90a",
+            "5493fb3252e35009",
+            "4497dbfe8502fab3",
+            "98c8f2e2679a3123",
+            "a6254b8eb8807472",
+            "c4b45eae95987a16",
+            "c0a747bc908afade",
+            "db57ce0d38f95c32",
+            "9cfb443df5cb5da9",
+            "de2e4421edba4493",
+            "860f19a6077ccf7a",
+            "8142d24399193d99",
+            "90ab66a37fc92ccc",
+            "05155ef717c0fb68",
+            "8be1ad29d1e86276",
+            "ed827f68456e01f6",
+            "0d2cd9e73e204cef",
+            "f3e27e7da4f03be6",
+            "f9e2e71dd4f166ca",
+            "0b50c351304db3b5",
+            "0c34bd3ef0714d28"
+        ],
+        "x": 194,
+        "y": 339,
+        "w": 1552,
+        "h": 662
+    },
+    {
         "id": "5c31dbeab217c8e9",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1385,95 +1479,25 @@
         "h": 202
     },
     {
-        "id": "f06e928c83c73984",
+        "id": "25c2d9b60d3fc696",
         "type": "group",
-        "z": "9d964f25dcc4d750",
-        "name": "Mocked MQTT topics",
+        "z": "d7c58eb9e7b65abb",
+        "name": "Signal report",
         "style": {
-            "fill": "#3f93cf",
+            "fill": "#ffff3f",
             "label": true
         },
         "nodes": [
-            "53d85ccc1ca38e73",
-            "6860085513c10a64",
-            "5e009d852e836e3b",
-            "1abba09f50e1a73c",
-            "97ea4ec5dc95813b",
-            "f51752e8606fb64c",
-            "0e96496b235b3fe0",
-            "c98f9bfdc4eab524",
-            "9f6a4873cc3768b5",
-            "4536019d942cbd41",
-            "9af1f8975e61cc08",
-            "f5eef0dfd7e39ee3",
-            "07b220183ff77006",
-            "7328fadc376b984b",
-            "c27c4949eee35a7e",
-            "8b5dc62e18f85b99",
-            "6ffcd71ddb97f2dd",
-            "4a2dcbac0d2b3e30",
-            "8123e129750f95b0",
-            "03727daaaf94f10a",
-            "6ba4f27abdc0a2d7",
-            "95acf832281a1027",
-            "b20d795a08271867"
+            "f6e02394155b93b8",
+            "da68bec334fc010b",
+            "32bc79c700bb824b",
+            "2d249c596e884cd8",
+            "8b74e5e219711233"
         ],
-        "x": 194,
-        "y": 1079,
-        "w": 1292,
-        "h": 422
-    },
-    {
-        "id": "97ecf1ac9459a777",
-        "type": "group",
-        "z": "9d964f25dcc4d750",
-        "name": "Spectrum controls",
-        "style": {
-            "fill": "#addb7b",
-            "label": true
-        },
-        "nodes": [
-            "470e4d8abf29a205",
-            "b47b8870b7c9bd24",
-            "bb77722b6c2658e8",
-            "77dc98e0de74c888",
-            "aa44e5106814ab9f",
-            "30794624a6a04c15",
-            "0a9fe9e2623385cb",
-            "3ba43ff973399e13",
-            "b82cad0a3cddc877",
-            "f72c1ae9d1dc7d89",
-            "7d69601736a74273",
-            "12159992489b0591",
-            "bff2bb43c29c79e5",
-            "e688634a9f60c746",
-            "818602f620560caa",
-            "6adfe6d609aeb90a",
-            "5493fb3252e35009",
-            "4497dbfe8502fab3",
-            "98c8f2e2679a3123",
-            "a6254b8eb8807472",
-            "c4b45eae95987a16",
-            "c0a747bc908afade",
-            "db57ce0d38f95c32",
-            "9cfb443df5cb5da9",
-            "de2e4421edba4493",
-            "860f19a6077ccf7a",
-            "8142d24399193d99",
-            "90ab66a37fc92ccc",
-            "05155ef717c0fb68",
-            "8be1ad29d1e86276",
-            "ed827f68456e01f6",
-            "0d2cd9e73e204cef",
-            "f3e27e7da4f03be6",
-            "f9e2e71dd4f166ca",
-            "0b50c351304db3b5",
-            "0c34bd3ef0714d28"
-        ],
-        "x": 194,
-        "y": 339,
-        "w": 1552,
-        "h": 662
+        "x": 34,
+        "y": 1611.5,
+        "w": 792,
+        "h": 149.5
     },
     {
         "id": "9b3296db2e0c849f",
@@ -3513,9 +3537,9 @@
         "y": 2180,
         "wires": [
             [
-                "fb34b1c186040d75",
                 "1d6a50722e33c015",
-                "3ba5b7893d572d90"
+                "3ba5b7893d572d90",
+                "38932643615d50c9"
             ]
         ]
     },
@@ -12312,8 +12336,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2850,
-        "y": 3340,
+        "x": 2910,
+        "y": 3280,
         "wires": [
             [
                 "e5b15ef8662e723b",
@@ -13801,7 +13825,8 @@
                 "3b2bfc1de615d1c2",
                 "f410cc2d0716c94e",
                 "9077d20ca65ab2fd",
-                "d8696aeccbf8391b"
+                "d8696aeccbf8391b",
+                "9fc2b2b1712c4ac3"
             ]
         ]
     },
@@ -14624,28 +14649,6 @@
                 "2a5a3cc2d63b2942",
                 "2c6310aae8f397fd",
                 "8764be884d895f57"
-            ]
-        ]
-    },
-    {
-        "id": "fb34b1c186040d75",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "9286ad1292f976c7",
-        "name": "Send GSE init",
-        "func": "let fw = global.get(\"settings.firewall\");\n\nif (msg.payload !== \"dvbs2-gse\") {\n\n   let payload1 = `-t nat -F`;\n   let payload2 = `-F`;\n\n   let message1 = {};\n   let message2 = {};\n\n   message1.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message2.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n\n   message1.payload = payload1;\n   message2.payload = payload2;\n\n   return [[message1, message2]];\n}\n\n\nif (msg.payload === \"dvbs2-gse\" && !fw) {\n   let payload0 = `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`;\n   let payload1 = `-t nat -F`;\n   let payload2 = `-F`;\n   let payload3 = `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`;\n   let payload4 = `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`;\n   let payload5 = `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`;\n   let payload6 = `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`;\n   let payload7 = `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`;\n   let payload8 = `${global.get(\"settings.tunip\")}`;\n   let payload9 = `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`;\n\n   let message0 = {};\n   let message1 = {};\n   let message2 = {};\n   let message3 = {};\n   let message4 = {};\n   let message5 = {};\n   let message6 = {};\n   let message7 = {};\n   let message8 = {};\n   let message9 = {};\n\n   message0.topic = `${global.get(\"cmdPath\")}/ip/route`;\n   message1.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message2.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message3.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message4.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message5.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message6.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message7.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message8.topic = `${global.get(\"cmdPath\")}/ip/tunadress`;\n   message9.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n\n   message0.payload = payload0;\n   message1.payload = payload1;\n   message2.payload = payload2;\n   message3.payload = payload3;\n   message4.payload = payload4;\n   message5.payload = payload5;\n   message6.payload = payload6;\n   message7.payload = payload7;\n   message8.payload = payload8;\n   message9.payload = payload9;\n\n   return [[message0, message1, message2, message3, message4, message5, message6, message7, message8, message9]];\n}\n\n\nif (msg.payload === \"dvbs2-gse\" && fw) {\n   let payload0 = `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`;\n   let payload1 = `-t nat -F`;\n   let payload2 = `-F`;\n   let payload3 = `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`;\n   let payload4 = `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`;\n   let payload5 = `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`;\n   let payload6 = `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`;\n   let payload7 = `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`;\n   let payload8 = `${global.get(\"settings.tunip\")}`;\n   let payload9 = `-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT`;\n   let payload10 = `-A INPUT -i gse0 -j DROP`;\n   let payload11 = `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`;\n\n   let message0 = {};\n   let message1 = {};\n   let message2 = {};\n   let message3 = {};\n   let message4 = {};\n   let message5 = {};\n   let message6 = {};\n   let message7 = {};\n   let message8 = {};\n   let message9 = {};\n   let message10 = {};\n   let message11 = {};\n\n   message0.topic = `${global.get(\"cmdPath\")}/ip/route`;\n   message1.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message2.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message3.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message4.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message5.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message6.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message7.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message8.topic = `${global.get(\"cmdPath\")}/ip/tunadress`;\n   message9.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message10.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message11.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n\n   message0.payload = payload0;\n   message1.payload = payload1;\n   message2.payload = payload2;\n   message3.payload = payload3;\n   message4.payload = payload4;\n   message5.payload = payload5;\n   message6.payload = payload6;\n   message7.payload = payload7;\n   message8.payload = payload8;\n   message9.payload = payload9;\n   message10.payload = payload10;\n   message11.payload = payload11;\n\n   return [[message0, message1, message2, message3, message4, message5, message6, message7, message8, message9, message10, message11]];\n}\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2680,
-        "y": 3340,
-        "wires": [
-            [
-                "4cbca64d40e28578"
             ]
         ]
     },
@@ -16335,6 +16338,7 @@
         "id": "3ba5b7893d572d90",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "9286ad1292f976c7",
         "name": "GSE init",
         "func": "let fw = global.get(\"settings.firewall\");\n// De-init state or just another mode state\nif (msg.payload !== \"dvbs2-gse\") {\n    let messages = [\n        \"-t nat -F\",\n        \"-F\"\n    ]\n    msg.payload = messages;\n    msg.init = false;\n    return msg;\n}\n\nif (msg.payload === \"dvbs2-gse\" && !fw) {\n    let messages = [\n        `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`,\n        `-t nat -F`,\n        `-F`,\n        `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`,\n        `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`,\n        `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`,\n        `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`,\n        `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`,\n        `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`\n    ]\n\n    msg.payload = messages;\n    msg.init = true;\n    return msg;\n}\n\nif (msg.payload === \"dvbs2-gse\" && fw) {\n    let messages = [\n        `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`,\n        `-t nat -F`,\n        `-F`,\n        `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`,\n        `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`,\n        `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`,\n        `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`,\n        `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`,\n        `-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT`, `-A INPUT -i gse0 -j DROP`,\n        `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`\n    ]\n    msg.payload = messages;\n    msg.init = true;\n    return msg;\n}\n",
@@ -16358,6 +16362,7 @@
         "id": "7327672ce1acf181",
         "type": "split",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "9286ad1292f976c7",
         "name": "",
         "splt": "",
@@ -16378,6 +16383,7 @@
         "id": "e481ee2481f35f02",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "9286ad1292f976c7",
         "name": "Send: iptables",
         "func": "let topic = `${global.get(\"cmdPath\")}/ip/iptables`;\nmsg.topic = topic;\nreturn msg;\n",
@@ -16399,6 +16405,7 @@
         "id": "56e7df909b256eec",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "9286ad1292f976c7",
         "name": "Send: tunadress",
         "func": "if(msg.init){\n    let topic = `${global.get(\"cmdPath\")}/ip/tunadress`;\n    msg.payload = `${global.get(\"settings.tunip\")}`;\n    msg.topic = topic;\n    return msg;\n}\n\n",
@@ -16661,6 +16668,7 @@
         "id": "f522633969ddbe94",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "9286ad1292f976c7",
         "name": "Send route ",
         "func": "let topic = `${global.get(\"cmdPath\")}/ip/route`;\nmsg.topic = topic;\nmsg.payload = `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`;\nreturn msg;",
@@ -16714,6 +16722,94 @@
         "x": 3060,
         "y": 1320,
         "wires": []
+    },
+    {
+        "id": "38932643615d50c9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "9286ad1292f976c7",
+        "name": "Send GSE init new",
+        "func": "let fw = global.get(\"settings.firewall\");\n\nif (msg.payload !== \"dvbs2-gse\") {\n\n   let payload1 = `-t nat -F`;\n   let payload2 = `-F`;\n   let payload3 = `del -net ${global.get(\"settings.network\")}`;\n\n   let message1 = {};\n   let message2 = {};\n   let message3 = {};\n\n   message1.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message2.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message3.topic = `${global.get(\"cmdPath\")}/ip/route`;\n\n   message1.payload = payload1;\n   message2.payload = payload2;\n   message3.payload = payload3;\n\n   return [[message1, message2, message3]];\n}\n\n\nif (msg.payload === \"dvbs2-gse\" && !fw) {\n   let payload0 = `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`;\n   let payload1 = `-t nat -F`;\n   let payload2 = `-F`;\n   let payload3 = `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`;\n   let payload4 = `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`;\n   let payload5 = `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`;\n   let payload6 = `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`;\n   let payload7 = `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`;\n   let payload8 = `${global.get(\"settings.tunip\")}`;\n   let payload9 = `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`;\n\n   let message0 = {};\n   let message1 = {};\n   let message2 = {};\n   let message3 = {};\n   let message4 = {};\n   let message5 = {};\n   let message6 = {};\n   let message7 = {};\n   let message8 = {};\n   let message9 = {};\n\n   message0.topic = `${global.get(\"cmdPath\")}/ip/route`;\n   message1.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message2.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message3.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message4.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message5.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message6.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message7.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message8.topic = `${global.get(\"cmdPath\")}/ip/tunadress`;\n   message9.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n\n   message0.payload = payload0;\n   message1.payload = payload1;\n   message2.payload = payload2;\n   message3.payload = payload3;\n   message4.payload = payload4;\n   message5.payload = payload5;\n   message6.payload = payload6;\n   message7.payload = payload7;\n   message8.payload = payload8;\n   message9.payload = payload9;\n\n   return [[message0, message1, message2, message3, message4, message5, message6, message7, message8, message9]];\n}\n\n\nif (msg.payload === \"dvbs2-gse\" && fw) {\n   let payload0 = `add -net ${global.get(\"settings.network\")} gw ${global.get(\"settings.tunip\")}`;\n   let payload1 = `-t nat -F`;\n   let payload2 = `-F`;\n   let payload3 = `-A FORWARD -p udp -o gse0 -s ${global.get(\"settings.network\")} -j DROP`;\n   let payload4 = `-t nat -A POSTROUTING -o gse0 -j MASQUERADE`;\n   let payload5 = `-t nat -A POSTROUTING -o eth0 -j MASQUERADE`;\n   let payload6 = `-t nat -A PREROUTING -p udp -i gse0 --dport ${global.get(\"settings.portstart_udp\")}:${global.get(\"settings.portend_udp\")} -j DNAT --to-destination ${global.get(\"settings.pc1\")}:${global.get(\"settings.portstart_udp\")}-${global.get(\"settings.portend_udp\")}`;\n   let payload7 = `-t nat -A PREROUTING -p tcp -i gse0 --dport ${global.get(\"settings.portstart_tcp\")}:${global.get(\"settings.portend_tcp\")} -j DNAT --to-destination ${global.get(\"settings.pc2\")}:${global.get(\"settings.portstart_tcp\")}-${global.get(\"settings.portend_tcp\")}`;\n   let payload8 = `${global.get(\"settings.tunip\")}`;\n   let payload9 = `-t nat -A PREROUTING -p udp -i eth0 --dport 8282 -j DNAT --to-destination ${global.get(\"settings.remtunnel\")}:${global.get(\"settings.remtunport\")}`;\n   let payload10 = `-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT`;\n   let payload11 = `-A INPUT -i gse0 -j DROP`;\n\n\n   let message0 = {};\n   let message1 = {};\n   let message2 = {};\n   let message3 = {};\n   let message4 = {};\n   let message5 = {};\n   let message6 = {};\n   let message7 = {};\n   let message8 = {};\n   let message9 = {};\n   let message10 = {};\n   let message11 = {};\n\n   message0.topic = `${global.get(\"cmdPath\")}/ip/route`;\n   message1.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message2.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message3.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message4.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message5.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message6.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message7.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message8.topic = `${global.get(\"cmdPath\")}/ip/tunadress`;\n   message9.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message10.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n   message11.topic = `${global.get(\"cmdPath\")}/ip/iptables`;\n\n   message0.payload = payload0;\n   message1.payload = payload1;\n   message2.payload = payload2;\n   message3.payload = payload3;\n   message4.payload = payload4;\n   message5.payload = payload5;\n   message6.payload = payload6;\n   message7.payload = payload7;\n   message8.payload = payload8;\n   message9.payload = payload9;\n   message10.payload = payload10;\n   message11.payload = payload11;\n\n   return [[message0, message1, message2, message3, message4, message5, message6, message7, message8, message9, message10, message11]];\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2750,
+        "y": 3360,
+        "wires": [
+            [
+                "4cbca64d40e28578"
+            ]
+        ]
+    },
+    {
+        "id": "9fc2b2b1712c4ac3",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "set host url",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.hosting_url;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 4500,
+        "wires": [
+            [
+                "cf620cc1430c2ec5"
+            ]
+        ]
+    },
+    {
+        "id": "cf620cc1430c2ec5",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "hosting url(please forward ports 9001 and 7681 to this server from your local network)",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 720,
+        "y": 4500,
+        "wires": [
+            [
+                "e63faf17ba00a395"
+            ]
+        ]
+    },
+    {
+        "id": "e63faf17ba00a395",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let hosting_url = msg.payload\nglobal.set(\"device.hosting_url\", hosting_url);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 4500,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1e0841f1.ac68fe",
@@ -16773,7 +16869,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>\n         var pluto_url = \"{{pluto}}\";\n         var callsign = \"{{callsign}}\";\n         var localPage = false;\n         </script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n        <meta name=\"author\" content=\"Ohan Smit\">\n        <title>Spectrum Plot</title>\n        <style>{{{style}}}</style>\n    </head>    \n    <body>\n        <canvas id=\"waterfall\"></canvas>\n         <script>\n         var pluto_url = \"{{pluto}}\";\n         var callsign = \"{{callsign}}\";\n         var hosting_url = \"{{hosting_url}}\";\n         var localPage = false;\n         </script>\n         <script>{{{vendor}}}</script>\n        <script>{{{colormap}}}</script>\n        <script>{{{spectrum}}}</script>\n        <script>{{{mqtt}}}</script>\n        <script>{{{script}}}</script>\n        <div class=\"status\">\n          <div id=\"log\"></div>\n        </div>        \n    </body>\n</html>\n",
         "x": 1330,
         "y": 200,
         "wires": [
@@ -17141,7 +17237,7 @@
         "z": "9d964f25dcc4d750",
         "g": "2406e32417780de0",
         "name": "set msg.script",
-        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
+        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nmsg.hosting_url = global.get(\"device.hosting_url\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18429,7 +18525,7 @@
         "topicType": "msg",
         "format": "{{value}}",
         "min": 0,
-        "max": "50",
+        "max": "100",
         "step": 1,
         "className": "",
         "x": 720,
@@ -22474,7 +22570,7 @@
         "type": "function",
         "z": "d7c58eb9e7b65abb",
         "name": "Truncate long provider names",
-        "func": "let provider = truncate(msg.payload, 21);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
+        "func": "let provider = truncate(msg.payload, 23);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22732,6 +22828,7 @@
         "id": "f6e02394155b93b8",
         "type": "debug",
         "z": "d7c58eb9e7b65abb",
+        "g": "25c2d9b60d3fc696",
         "name": "Signal Report",
         "active": true,
         "tosidebar": false,
@@ -22749,6 +22846,7 @@
         "id": "da68bec334fc010b",
         "type": "ui_button",
         "z": "d7c58eb9e7b65abb",
+        "g": "25c2d9b60d3fc696",
         "name": "SignalReport",
         "group": "65d91b75202c3b55",
         "order": 20,
@@ -22777,6 +22875,7 @@
         "id": "32bc79c700bb824b",
         "type": "function",
         "z": "d7c58eb9e7b65abb",
+        "g": "25c2d9b60d3fc696",
         "name": "generate signal report",
         "func": "let freq = (Number(flow.get(\"freq\"))*1000 + Math.abs(Number(global.get('device.rx.offset'))))/1e6;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/\"${flow.get(\"provider\")}\" - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")} - ${freq} ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
         "outputs": 1,
@@ -22798,6 +22897,7 @@
         "id": "2d249c596e884cd8",
         "type": "exec",
         "z": "d7c58eb9e7b65abb",
+        "g": "25c2d9b60d3fc696",
         "command": "",
         "addpay": "payload",
         "append": "",
@@ -22818,6 +22918,7 @@
         "id": "8b74e5e219711233",
         "type": "OS",
         "z": "d7c58eb9e7b65abb",
+        "g": "25c2d9b60d3fc696",
         "name": "",
         "x": 270,
         "y": 1660,

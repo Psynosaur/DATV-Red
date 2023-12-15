@@ -371,10 +371,10 @@ let canvasHeightLast;
     /* Hide fullscreen link for iOS */
     const n = navigator.userAgent.toLowerCase();
     if (
-      n.indexOf("iphone") != -1 ||
-      n.indexOf("ipad") != -1 ||
-      n.indexOf("ipod") != -1 ||
-      n.indexOf("ios") != -1
+      n.indexOf("iphone") !== -1 ||
+      n.indexOf("ipad") !== -1 ||
+      n.indexOf("ipod") !== -1 ||
+      n.indexOf("ios") !== -1
     ) {
     //   $("#fullscreen-link").hide();
     }
@@ -527,7 +527,7 @@ let canvasHeightLast;
       ctx.lineTo(canvasWidth - 35, linePos);
       ctx.stroke();
       /* Annotate lines above 0dB */
-      if (i != 4) {
+      if (i !== 4) {
         ctx.fillText(5 * (4 - i) + "dB", 17, linePos + 4);
         ctx.fillText(5 * (4 - i) + "dB", canvasWidth - 17, linePos + 4);
       }
@@ -538,7 +538,7 @@ let canvasHeightLast;
     ctx.strokeStyle = background_colour === "black" ? "white" : "black";
     ctx.setLineDash([1, 10]);
     for (i = 1; i < 20; i++) {
-      if (i % 5 != 0) {
+      if (i % 5 !== 0) {
         linePos = i * (canvasHeight / 20) - canvasHeight / 6;
         ctx.beginPath();
         ctx.moveTo(0 + 10, linePos);
@@ -579,7 +579,7 @@ let canvasHeightLast;
       const rolloff = 1.35 / 2.0;
 
       if (typeof freq_info !== "undefined") {
-        if (freq_info.length == 44) freq_info = []; // hack to avoid continued push(). better to precompute all points and draw.
+        if (freq_info.length === 44) freq_info = []; // hack to avoid continued push(). better to precompute all points and draw.
         freq_info.push({
           x1:
             (center_frequency - rolloff * bandwidth - _start_freq) *
@@ -825,13 +825,13 @@ let canvasHeightLast;
   const scale_db = 3276.8;
 
   function is_overpower(beacon_strength, signal_strength, signal_bw) {
-    if (beacon_strength != 0) {
+    if (beacon_strength !== 0) {
       if (signal_bw < 0.4) {
         // < 1MS
         return false;
       }
 
-      if (signal_strength > beacon_strength - 0.75 * scale_db) {
+      if (signal_strength > (beacon_strength*1.00) - 0.75 * scale_db) {
         // >= 1MS
         return true;
       }
@@ -981,7 +981,7 @@ let canvasHeightLast;
                         */
 
           /* Sanity check bandwidth, and exclude beacon */
-          if (signal_bw != 0) {
+          if (signal_bw !== 0) {
             text_x_position = (mid_signal / fft_data.length) * canvasWidth;
 
             /* Adjust for right-side overlap */
@@ -1263,9 +1263,9 @@ let canvasHeightLast;
             " MHz\nUplink: " +
             (1910.5 + freq_info[i].center_frequency) +
             " MHz\nSymbol Rate: " +
-            (freq_info[i].bandwidth == 0.125
+            (freq_info[i].bandwidth === 0.125
               ? "125/66/33 Ksps"
-              : freq_info[i].bandwidth == 0.333
+              : freq_info[i].bandwidth === 0.333
               ? freq_info[i].center_frequency < 497.0
                 ? "500/333/250 Ksps"
                 : "333/250 Ksps"
@@ -1273,7 +1273,7 @@ let canvasHeightLast;
           downlink = 10000.0 + freq_info[i].center_frequency;
           uplink = 1910.5 + freq_info[i].center_frequency;
           canvasClickBW =
-            uplink < 2407.5 && freq_info[i].bandwidth == 0.333
+            uplink < 2407.5 && freq_info[i].bandwidth === 0.333
               ? 0.5
               : freq_info[i].bandwidth;
           busy = false;
@@ -1318,7 +1318,7 @@ let canvasHeightLast;
   const checkOrientation = function () {
     if (checkFullScreen()) {
       if (window.orientation !== previousOrientation) {
-        if (0 != (previousOrientation + window.orientation) % 180) {
+        if (0 !== (previousOrientation + window.orientation) % 180) {
           canvasWidth = window.innerHeight;
           canvasHeight = window.innerWidth;
           initCanvas();
@@ -1334,8 +1334,8 @@ let canvasHeightLast;
   const checkResize = function () {
     if (
         !checkFullScreen() &&
-        (previousHeight != window.innerHeight ||
-            previousWidth != window.innerWidth)
+        (previousHeight !== window.innerHeight ||
+            previousWidth !== window.innerWidth)
     ) {
       let width = document.body.clientWidth - 20;
       let height = document.body.clientHeight;

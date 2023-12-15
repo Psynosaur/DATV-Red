@@ -24,7 +24,7 @@ Spectrum.prototype.rowToImageData = function (bins) {
     for (let i = 0; i < this.imagedata.data.length; i += 4) {
         const cindex = this.squeeze(bins[i / 4], 0, 255);
         const color = this.colormap[cindex];
-        this.imagedata.data[i + 0] = color[0];
+        this.imagedata.data[i] = color[0];
         this.imagedata.data[i + 1] = color[1];
         this.imagedata.data[i + 2] = color[2];
         this.imagedata.data[i + 3] = 255;
@@ -51,14 +51,13 @@ Spectrum.prototype.addWaterfallRow = function (bins) {
     this.rowToImageData(bins);
     this.ctx_wf.putImageData(this.imagedata, 0, 0);
 
-    if (this.wfrowcount % 100 == 0) {
+    if (this.wfrowcount % 100 === 0) {
         const timeString = new Date().toUTCString();
-        this.ctx_wf.font = "16px sans-serif";
+        this.ctx_wf.font = `${13 * (Math.ceil(this.divider * 0.2))}px sans-serif`;
         this.ctx_wf.fillStyle = "white";
         this.ctx_wf.textBaseline = "top";
-        this.ctx_wf.fillText(timeString, 0, 0); // TODO: Fix font scaling
+        this.ctx_wf.fillText(timeString, 0, this.divider + 20); // TODO: Fix font scaling
     }
-
     const width = this.ctx.canvas.width;
     const height = this.ctx.canvas.height;
 
@@ -86,9 +85,9 @@ Spectrum.prototype.drawFFT = function (bins) {
         let y = this.spectrumHeight - this.squeeze(bins[i], 0, this.spectrumHeight);
         if (y > this.spectrumHeight - 1) y = this.spectrumHeight + 1; // Hide underflow
         if (y < 0) y = 0;
-        if (i == 0) this.ctx.lineTo(-1, y);
+        if (i === 0) this.ctx.lineTo(-1, y);
         this.ctx.lineTo(i, y);
-        if (i == bins.length - 1) this.ctx.lineTo(this.wf_size + 1, y);
+        if (i === bins.length - 1) this.ctx.lineTo(this.wf_size + 1, y);
     }
     this.ctx.lineTo(this.wf_size + 1, this.spectrumHeight + 1);
     this.ctx.strokeStyle = "#fefefe";
@@ -228,7 +227,7 @@ Spectrum.prototype.detect_signals = function (
 
                 mid_signal = start_signal + (end_signal - start_signal) / 2.0;
                 let divider = sr / this.minSpanHz;
-
+                this.divider = divider;
                 signal_bw = align_symbolrate(
                     (end_signal - start_signal) * (sr / 1_000_000) / 1000 / divider
                 );
@@ -528,7 +527,6 @@ Spectrum.prototype.drawSpectrum = function (bins) {
     // Copy axes from offscreen canvas
     this.ctx.drawImage(this.ctx_axes.canvas, 0, 0);
     this.detect_signals(bins, this.ctx, height, width, this.spanHz);
-
 };
 let highlighted_channel = {};
 
@@ -1339,7 +1337,7 @@ function Spectrum(id, options) {
     this.centerHz = options && options.centerHz ? options.centerHz : 0;
     this.spanHz = options && options.spanHz ? options.spanHz : 0;
     this.gain = options && options.gain ? options.gain : 0;
-    this.fps = options && options.fps ? options.fps : 0;
+    this.fps = options && options.fps ? options.fps : 50;
     this.wf_size = options && options.wf_size ? options.wf_size : 0;
     this.wf_rows = options && options.wf_rows ? options.wf_rows : 2048;
     this.spectrumPercent =
@@ -1367,6 +1365,7 @@ function Spectrum(id, options) {
     this.maxbinval = 0;
     this.minbinval = 0;
     this.wfrowcount = 1;
+    this.divider = 1;
 
     // Colors
     this.colorindex = 0;

@@ -47,6 +47,11 @@
 //   }
 // }
 function mqtt_client() {
+  if(hosting_url !== "" && window.location.hostname === hosting_url){
+    pluto_url = hosting_url;
+    console.log("MQTT hostname: " + window.location.hostname)
+    console.log("MQTT pluto_url: " + pluto_url)
+  }
   let url = `ws://${pluto_url}:9001`;
   const options = {
     // Clean session
