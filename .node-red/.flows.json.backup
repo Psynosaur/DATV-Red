@@ -16805,7 +16805,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
+        "x": 1150,
         "y": 4500,
         "wires": [
             []
@@ -17485,7 +17485,7 @@
         "z": "9d964f25dcc4d750",
         "g": "97ecf1ac9459a777",
         "name": "Frequency",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nmsg.rx_freq = (payload * 1000);\nreturn msg;",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/rx/frequency`;\nmsg.topic = topic;\nmsg.payload = (payload * 1000000);\nmsg.rx_freq = (payload * 1000);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
