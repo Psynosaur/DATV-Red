@@ -11,7 +11,7 @@
 
 3. Double click `DATV-Start.cmd`
 
-4. Fill in pluto IP and callsign when prompted
+4. Fill in pluto IP and callsign when prompted, pluto will connect then restart, please wait
    - ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/0add4f0e-288b-4e54-90f9-54b64e00cc86)![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/149b80d8-d9a7-4a59-b1ed-71ca9d05b477)
 
 
