@@ -11,23 +11,12 @@
 
 3. Setup mqtt broker in address in `settings\pluto.json` and change `broker.broker` address for pluto and `payload` for callsign
    
-   ```json
-    {
-      "action": "connect",
-      "broker": {
-        "broker": "192.168.2.1", 
-        "port": 1883,
-        "username": "root",
-        "password": "analog"
-      },
-      "topic" : "cmd/pluto/call",
-      "payload": "ZS1SCI"
-    }
-   ```
+ 
 4. Double click `DATV-Start.cmd`
 
-5. Press the `set call` button to set your call sign and reboot pluto
- ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/414b3359-f798-4938-bc17-af7d0bc135b1)
+5. Fill in pluto IP and callsign when prompted
+   - ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/0add4f0e-288b-4e54-90f9-54b64e00cc86)![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/149b80d8-d9a7-4a59-b1ed-71ca9d05b477)
+
 
 6. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
 
