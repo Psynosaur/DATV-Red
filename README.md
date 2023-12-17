@@ -9,20 +9,17 @@
 
 2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Red` or `/home/user/DATV-Red/`
 
-3. Setup mqtt broker in address in `settings\pluto.json` and change `broker.broker` address for pluto and `payload` for callsign
-   
- 
-4. Double click `DATV-Start.cmd`
+3. Double click `DATV-Start.cmd`
 
-5. Fill in pluto IP and callsign when prompted
+4. Fill in pluto IP and callsign when prompted
    - ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/0add4f0e-288b-4e54-90f9-54b64e00cc86)![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/149b80d8-d9a7-4a59-b1ed-71ca9d05b477)
 
 
-6. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
+5. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
 
-7. Watch this intro video on [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
+6. Watch this intro video on [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
 
-8. Have fun
+7. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/16d35d72-b2d1-4754-8aef-2d646d0f125b)
 
