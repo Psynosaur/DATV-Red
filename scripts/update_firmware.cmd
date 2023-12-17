@@ -11,9 +11,12 @@ ECHO Updating firmware
 ssh -o UserKnownHostsFile=\\.\NUL root@%pluto% ./update_frm_reboot.sh ./pluto.frm
 ECHO Rebooting pluto
 pause
+exit
 :NoIp
 ECHO Please provide pluto network IP
 pause
+exit
 :NoFile
 ECHO Please provide path to firmware file
 pause
+exit
