@@ -32,4 +32,5 @@ Thank you to all the testers, **DL5OCD**, **HB9DUG**, **DL2GHM** and all others
 
 ## Supporting my hobby
 If you'd like to say thanks, please feel free to buy me some [time](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
+`BTC` wallet [address](bc1qpew9d77qw0y5mp7ecdgwm9d64tsnuww504d33j)
 
