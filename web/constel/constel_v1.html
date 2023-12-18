@@ -1,0 +1,212 @@
+<!-- Styles -->
+<style>
+    #chartdiv {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Micro.js"></script>
+<script src="../pluto_spectrum/vendor/mqtt.min.js"></script>
+
+<!-- Chart code -->
+<script>
+    let data = [];
+    am5.ready(function () {
+
+        // Create root element
+        // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+        var root = am5.Root.new("chartdiv");
+
+        // Set themes
+        // https://www.amcharts.com/docs/v5/concepts/themes/
+        root.setThemes([
+            // am5themes_Animated.new(root),
+            am5themes_Micro.new(root)
+        ]);
+
+        // Create chart
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/
+        var chart = root.container.children.push(am5xy.XYChart.new(root, {
+        }));
+
+        // Create axes
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+        var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+            min: -80,
+            max: 80,
+            renderer: am5xy.AxisRendererX.new(root, {}),
+            // tooltip: am5.Tooltip.new(root, {})
+        }));
+
+        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            min: -80,
+            max: 80,
+            renderer: am5xy.AxisRendererY.new(root, {}),
+            // tooltip: am5.Tooltip.new(root, {})
+        }));
+
+        // Create series
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+        var series = chart.series.push(am5xy.LineSeries.new(root, {
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "y",
+            valueXField: "x",
+            valueField: "value",
+            tooltip: am5.Tooltip.new(root, {
+                labelText: "x: {valueX}, y: {valueY}, value: {value}"
+            })
+        }));
+
+        series.strokes.template.set("visible", false);
+
+        // Add cursor
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+        // chart.set("cursor", am5xy.XYCursor.new(root, {
+        //     xAxis: xAxis,
+        //     yAxis: yAxis,
+        //     snapToSeries: [series]
+        // }));
+
+        // Add scrollbars
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+        // chart.set("scrollbarX", am5.Scrollbar.new(root, {
+        //     orientation: "horizontal"
+        // }));
+        //
+        // chart.set("scrollbarY", am5.Scrollbar.new(root, {
+        //     orientation: "vertical"
+        // }));
+
+
+        // for (var i = 0; i < 50; i++) {
+        //     data.push({
+        //         x: Math.random() * 100 * (Math.random() > 0.5 ? -1 : 1),
+        //         y: Math.random() * 100 * (Math.random() > 0.5 ? -1 : 1),
+        //         color: am5.Color.fromString("#" + Math.floor(Math.random() * 16777215).toString(16)),
+        //         value: Math.random() * 20
+        //     })
+        // }
+
+        // add graphics to line series which will contain bullets
+        var canvasBullets = series.children.push(am5.Graphics.new(root, {}));
+
+        canvasBullets.set("draw", (display) => {
+
+            // loop through all data items
+            am5.array.each(series.dataItems, (dataItem) => {
+                // set fill style from data context
+                var dataContext = dataItem.dataContext;
+                if (dataContext) {
+                    const point = dataItem.get("point");
+                    if (point) {
+                        display.beginPath();
+                        display.beginFill(dataContext.color);
+                        display.drawCircle(point.x, point.y, dataContext.value / 2);
+                        display.endFill();
+                    }
+                }
+            })
+
+        })
+        mqtt_client(canvasBullets, series, data);
+        // // user data is set on each redraw, so we use this to mark draw as dirty
+        // series.strokes.template.on("userData", drawBullets);
+        //
+        // function drawBullets() {
+        //     canvasBullets._markDirtyKey("draw");
+        // }
+        //
+        // series.data.setAll(data);
+
+    }); // end am5.ready()
+    function mqtt_client(canvasBullets, series, data) {
+        let hosting_url = "192.168.1.111";
+        let pluto_url = hosting_url;
+        let callsign = "ZS1SCI";
+        if (hosting_url !== "" && window.location.hostname === hosting_url) {
+            pluto_url = hosting_url;
+            console.log("MQTT hostname: " + window.location.hostname)
+            console.log("MQTT pluto_url: " + pluto_url)
+        }
+        let url = `ws://${pluto_url}:9001`;
+        const options = {
+            // Clean session
+            clean: true,
+            connectTimeout: 4000,
+            // Authentication
+            clientId: "pluto" + new Date().getUTCMilliseconds(),
+            username: "root",
+            password: "analog",
+        };
+        const client = mqtt.connect(url, options);
+        console.log("callsign: " + callsign);
+        console.log("url: " + url);
+        client.on("connect", function () {
+            console.log("Connected MQTT");
+            // Subscribe to a topic
+            client.subscribe(`dt/longmynd/constel_q`, () => {
+            });
+            client.subscribe(`dt/longmynd/constel_i`, () => {
+            });
+            client.subscribe(`dt/longmynd/rx_state`, () => {
+            });
+            client.subscribe(`cmd/longmynd/frequency`, () => {
+            });
+        });
+        let x, y = 0;
+        client.on("message", function (topic, message) {
+            if (topic === `dt/longmynd/rx_state`) {
+                if (message.toString() === "Hunting") {
+                    console.log("clear");
+                    data = []
+                }
+            }
+            if (topic === `cmd/longmynd/frequency`) {
+                console.log("clear");
+                data = []
+            }
+            if (topic === `dt/longmynd/constel_i`) {
+                // x = Number(message.toString());
+                y = Number(message.toString());
+                // console.log("constel_i: " + x);
+            }
+            if (topic === `dt/longmynd/constel_q`) {
+                x = Number(message.toString());
+                // y = Number(message.toString());
+                // console.log("constel_q: " + y);
+            }
+            data.push({
+                x: x,
+                y: y,
+                color: am5.Color.fromString("#00C100"),
+                value: 3
+            })
+
+
+            if(data.length > 6000){
+                data = data.slice(2)
+            }
+            // if(data.length === 3000){
+            //     data = data.slice(1500,2999);
+            // }
+            // user data is set on each redraw, so we use this to mark draw as dirty
+            series.strokes.template.on("userData", drawBullets);
+
+            function drawBullets() {
+                canvasBullets._markDirtyKey("draw");
+            }
+            series.data.setAll(data);
+        });
+    }
+
+
+</script>
+
+<!-- HTML -->
+<div style="background-color: #1b1e21" id="chartdiv"></div>

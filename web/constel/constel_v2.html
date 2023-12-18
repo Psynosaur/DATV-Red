@@ -1,0 +1,152 @@
+<meta charset="utf-8">
+<meta name="author" content="Ohan Smit">
+<title>Constel Plot2</title>
+
+<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var pluto_url = urlParams.get('pluto_url')
+    var call_sign = urlParams.get('call_sign')
+    var localPage = true;
+</script>
+<script src="./chart.js"></script>
+<script src="../pluto_spectrum/vendor/mqtt.min.js"></script>
+<script>
+    function mqtt_client() {
+        let x, y = 0;
+        let data = [];
+        let chart = new Chart("myChart", {
+            type: "scatter",
+            data: {
+                datasets: [{
+                    pointRadius: 2,
+                    pointBackgroundColor: "rgb(55,255,0)",
+                    data: data
+                }]
+            },
+            options: {
+                legend: {display: false},
+                animation: {
+                    duration: 0 // general animation time
+                },
+                hover: {
+                    animationDuration: 0 // duration of animations when hovering an item
+                },
+                responsiveAnimationDuration: 0,
+                scales: {
+                    xAxes: [{suggestedMin: -90,ticks:{min: -90,max: 90}}],
+                    yAxes: [{suggestedMin: -90,ticks:{min: -90,max: 90}}],
+                }
+            }
+        });
+        let pluto = pluto_url;
+        let callsign = call_sign;
+
+        let url = `ws://${pluto}:9001`;
+        const options = {
+            // Clean session
+            clean: true,
+            connectTimeout: 4000,
+            // Authentication
+            clientId: "pluto" + new Date().getUTCMilliseconds(),
+            username: "root",
+            password: "analog",
+        };
+        const client = mqtt.connect(url, options);
+        console.log("callsign: " + callsign);
+        console.log("url: " + url);
+        client.on("connect", function () {
+            console.log("Connected MQTT");
+            // Subscribe to a topic
+            client.subscribe(`dt/longmynd/constel_q`, () => {
+            });
+            client.subscribe(`dt/longmynd/constel_i`, () => {
+            });
+            client.subscribe(`dt/longmynd/rx_state`, () => {
+            });
+            client.subscribe(`cmd/longmynd/frequency`, () => {
+            });
+        });
+        client.on("message", function (topic, message) {
+            if (data.length > 1250) {
+                data = data.slice(2)
+                removeData(chart);
+                removeData(chart);
+                // console.log(data);
+            }
+            if (topic === `dt/longmynd/rx_state`) {
+                if (message.toString() === "Hunting") {
+                    console.log("clear");
+                    data = []
+                    updateChart(chart, data)
+                }
+            }
+            if (topic === `cmd/longmynd/frequency`) {
+                console.log("clear");
+                data = []
+                updateChart(chart, data)
+            }
+            if (topic === `dt/longmynd/constel_i`) {
+                x = Number(message.toString());
+                // y = Number(message.toString());
+                // console.log("constel_i: " + x);
+            }
+            if (topic === `dt/longmynd/constel_q`) {
+                // x = Number(message.toString());
+                y = Number(message.toString());
+                // console.log("constel_q: " + y);
+            }
+            // if(y === -90) return;
+            let obj = {
+                x: x,
+                y: y
+            };
+            data.push(obj)
+
+
+            // if(data.length === 3000){
+            //     data = data.slice(1500,2999);
+            // }
+            // user data is set on each redraw, so we use this to mark draw as dirty
+            // series.strokes.template.on("userData", drawBullets);
+            //
+            // function drawBullets() {
+            //     canvasBullets._markDirtyKey("draw");
+            // }
+            // chart.data = data;
+            // removeData(chart);
+            // updateChart(chart, data)
+            addData(chart,`${x}${y}`, obj);
+        });
+    }
+
+
+    mqtt_client();
+
+    function updateChart(chart, data) {
+        // chart.data.labels.push(label);
+        chart.data.datasets[0].data = data;
+        chart.update('none');
+    }
+
+    function addData(chart, label, data) {
+        chart.data.labels.push(label);
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.push(data);
+        });
+        chart.update();
+    }
+
+    function removeData(chart) {
+        chart.data.labels.pop();
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.pop();
+        });
+        chart.update();
+    }
+
+</script>
+
+
+
