@@ -10,21 +10,28 @@ function mqtt_client() {
                     pointBackgroundColor: "rgb(11,193,11)",
                     data: data
                 },
-                {
-                    type: 'scatter',
-                    data: [{x: 0, y: 0}],
-                    backgroundColor: "rgba(0,0,0,0)",
-                    borderColor: "#737272D3",
-                    pointRadius: 66,
-                    pointHoverRadius: 7,
-                    borderWidth: 3
-                }
+                // {
+                //     type: 'scatter',
+                //     data:  [
+                //         {x: 45, y: -45},{x: 45, y: 45},{x: -45, y: -45},{x: -45, y: 45},
+                //         {x: -60, y: 0},{x: 60, y: 0},{x: 0, y: -60},{x: 0, y: 60}
+                //     ],
+                //     backgroundColor: "rgba(227,38,7,0.82)",
+                //     borderColor: "#737272D3",
+                //     pointRadius: 5,
+                //     pointHoverRadius: 1,
+                //     borderWidth: 1
+                // }
             ]
         },
         options: {
             legend: {display: false},
             showLines: false,
+            animation: {
+                duration: 0
+            },
             scales: {
+                offset: true,
                 xAxes: [
                     {
                         scaleLabel: { // To format the scale label
@@ -41,11 +48,11 @@ function mqtt_client() {
                             display: false
                         },
                         gridLines: {
-                            display: false,
+                            display: true,
                             color: "#727575",
                             zeroLineColor: '#727575'
                         },
-                        suggestedMin: -90
+                        // suggestedMin: -90
                     }],
                 yAxes: [
                     {
@@ -63,11 +70,11 @@ function mqtt_client() {
                             display: false
                         },
                         gridLines: {
-                            display: false,
+                            display: true,
                             color: "#727575",
                             zeroLineColor: '#727575'
                         },
-                        suggestedMin: -90
+                        // suggestedMin: -90
                     }],
             }
         }
@@ -106,7 +113,7 @@ function mqtt_client() {
     client.on("message", function (topic, message) {
         if (data.length > 1200) {
             data = data.slice(2)
-            updateChart(chart, data)
+            updateChart(chart, data, "qpsk")
             removeData(chart);
             removeData(chart);
         }
@@ -114,7 +121,7 @@ function mqtt_client() {
             if (message.toString() === "Hunting") {
                 console.log("clear");
                 data = []
-                updateChart(chart, data)
+                updateChart(chart, data, "qpsk")
                 // updateChart(chart, 1, {x:0, y:0})
                 return;
             }
@@ -122,7 +129,7 @@ function mqtt_client() {
         if (topic === `cmd/longmynd/frequency`) {
             console.log("clear");
             data = []
-            updateChart(chart, data)
+            updateChart(chart, data, "qpsk")
             // updateChart(chart, 1, {x:0, y:0})
             return;
         }
@@ -168,10 +175,15 @@ mqtt_client();
 //     chart.update();
 // }
 
-function updateChart(chart, data) {
+function updateChart(chart, data, modulation) {
     // chart.data.labels.push(label);
     chart.data.datasets[0].data = data;
-    chart.data.datasets[1].data = [{x: 0, y: 0}];
+    console.log(modulation);
+    // chart.data.datasets[1].data = [{x: 45, y: -45},{x: 45, y: 45},{x: -45, y: -45},{x: -45, y: 45}];
+    // chart.data.datasets[1].data =  [
+    //     {x: 45, y: -45},{x: 45, y: 45},{x: -45, y: -45},{x: -45, y: 45},
+    //     {x: -60, y: 0},{x: 60, y: 0},{x: 0, y: -60},{x: 0, y: 60}
+    // ];
     chart.update();
 }
 

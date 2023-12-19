@@ -19640,7 +19640,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot2</title>\n\n<canvas id=\"constellationChart\" style=\"width:1;height:1;\"></canvas>\n<script src=\"/constel/chart.js\"></script>\n<script src=\"/mqtt_min.js\"></script>\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<script src=\"/constel/script.js\"></script>\n\n\n\n",
+        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot2</title>\n\n<canvas id=\"constellationChart\" style=\"width:500px;height:500px;\"></canvas>\n<script src=\"/constel/chart.js\"></script>\n<script src=\"/mqtt_min.js\"></script>\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<script src=\"/constel/script.js\"></script>\n\n\n\n",
         "output": "str",
         "x": 740,
         "y": 140,
@@ -22801,8 +22801,8 @@
         "y": 1920,
         "wires": [
             [
-                "85960296b05e0f13",
-                "b4d68204ef4121e0"
+                "b4d68204ef4121e0",
+                "3c63daae2a5e8e99"
             ]
         ]
     },
@@ -22823,8 +22823,8 @@
         "y": 1880,
         "wires": [
             [
-                "ede5df2f5091c5aa",
-                "f298934c06e2694e"
+                "f298934c06e2694e",
+                "27b3329bfce21726"
             ]
         ]
     },
@@ -22845,8 +22845,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#008080",
-        "x": 1090,
-        "y": 1780,
+        "x": 1190,
+        "y": 1760,
         "wires": []
     },
     {
@@ -22897,6 +22897,44 @@
         "y": 1920,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "27b3329bfce21726",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 1020,
+        "y": 1800,
+        "wires": [
+            [
+                "ede5df2f5091c5aa"
+            ]
+        ]
+    },
+    {
+        "id": "3c63daae2a5e8e99",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 960,
+        "y": 1960,
+        "wires": [
+            [
+                "85960296b05e0f13"
+            ]
         ]
     },
     {
