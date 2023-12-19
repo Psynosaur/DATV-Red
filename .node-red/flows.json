@@ -672,12 +672,15 @@
             "76bed5f0ebc81a4c",
             "56ad120991eb3c83",
             "4dc0d6bc0972a150",
-            "cf6155c5314434de"
+            "cf6155c5314434de",
+            "24ba1c8ca7aea429",
+            "9f35c0e151e986ea",
+            "8bb744f5177e71ff"
         ],
         "x": 74,
         "y": 2779,
         "w": 1232,
-        "h": 1082
+        "h": 1122
     },
     {
         "id": "c927282dfd987c70",
@@ -1515,12 +1518,15 @@
             "48fa401a9ff33366",
             "0bac2366e4f641c2",
             "26f182035e65ae1d",
-            "8a1fb5a4ffa544fd"
+            "8a1fb5a4ffa544fd",
+            "dd2992c2880bcc1f",
+            "692cfca16036ea93",
+            "966f8abcef78816c"
         ],
         "x": 34,
-        "y": 39,
+        "y": -1,
         "w": 1032,
-        "h": 142
+        "h": 182
     },
     {
         "id": "2a6eb2e492bee274",
@@ -1636,6 +1642,80 @@
         "y": 39,
         "w": 1032,
         "h": 82
+    },
+    {
+        "id": "f6c11774649f8d00",
+        "type": "group",
+        "z": "30d0afc93dfb235a",
+        "name": "enable these two to enable HTTP mode",
+        "style": {
+            "label": true,
+            "fill": "#92d04f"
+        },
+        "nodes": [
+            "511e874b9e79d9c1",
+            "60df7c8dc6d1de55"
+        ],
+        "x": 74,
+        "y": 19,
+        "w": 692,
+        "h": 82
+    },
+    {
+        "id": "936b15192e58877f",
+        "type": "group",
+        "z": "30d0afc93dfb235a",
+        "name": "MQTT control",
+        "style": {
+            "label": true,
+            "fill": "#9363b7"
+        },
+        "nodes": [
+            "a8596f60466f8cf4",
+            "4a2877dc5a808a1b",
+            "7dae242b8566df9b",
+            "4169371e544b9666",
+            "857224de9710110f",
+            "449f2a69fa24e7fd",
+            "ff147eec327f33fe",
+            "bc7c3ea6788d2b58",
+            "fabd30d9f5135abd",
+            "d625fe7265cbfada",
+            "29a3c6a207d493f9",
+            "b7d0059588d03318",
+            "33b81b6ee3d763f8"
+        ],
+        "x": 54,
+        "y": 559,
+        "w": 1492,
+        "h": 162
+    },
+    {
+        "id": "4da866f299df009c",
+        "type": "group",
+        "z": "30d0afc93dfb235a",
+        "name": "HTTP control",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "f36ea5478cd26f4c",
+            "8e6e379dd23ad541",
+            "2d87948c62090044",
+            "3d1df83227b48c35",
+            "ce64bf27f1fae6be",
+            "cf17c69c227b6825",
+            "f90b10e6825765f0",
+            "e4b9db07aee76ef2",
+            "eef90d12fe67652d",
+            "70dc135bb18e2bd6",
+            "caa457b0361bf0ba"
+        ],
+        "x": 54,
+        "y": 119,
+        "w": 772,
+        "h": 382
     },
     {
         "id": "9b3296db2e0c849f",
@@ -1826,17 +1906,6 @@
         "order": 2,
         "disp": false,
         "width": "16",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d2e4abefdc42e427",
-        "type": "ui_group",
-        "name": "Chat",
-        "tab": "9b3296db2e0c849f",
-        "order": 13,
-        "disp": false,
-        "width": "32",
         "collapse": false,
         "className": ""
     },
@@ -2131,6 +2200,26 @@
         "group": "a4a37989805c1f8e",
         "order": 5,
         "width": "2",
+        "height": "1"
+    },
+    {
+        "id": "84cb906279952940",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "bd40e71dca80ef04",
+        "order": 8,
+        "width": "5",
+        "height": "1"
+    },
+    {
+        "id": "19741613631106f3",
+        "type": "ui_spacer",
+        "z": "d7c58eb9e7b65abb",
+        "name": "spacer",
+        "group": "bd40e71dca80ef04",
+        "order": 10,
+        "width": "7",
         "height": "1"
     },
     {
@@ -2551,7 +2640,8 @@
                 "c44d0cb54ec5e706",
                 "ac88fa94a49129ec",
                 "1decf932a1bf2fcd",
-                "04e9fefc43a9ccbf"
+                "04e9fefc43a9ccbf",
+                "9f35c0e151e986ea"
             ]
         ]
     },
@@ -6255,7 +6345,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "name": "Pluto connection status",
-        "func": "let status=msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (status == \"node-red:common.status.connected\") {\n    human_status = \"Connected\";\n    if(global.get(\"first_load\")){\n        global.set(\"restore\", true);\n    }\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status=human_status;\nmsg.kleur = fill;\nreturn msg;",
+        "func": "let status=msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (status == \"node-red:common.status.connected\") {\n    let fw = global.get(\"fw_version\").slice(10);\n    human_status = fw.substring(0, fw.length - 7);\n    if(global.get(\"first_load\")){\n        global.set(\"restore\", true);\n    }\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status=human_status;\nmsg.kleur = fill;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -12890,8 +12980,8 @@
         "label": "Sync rx longmynd",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
-        "order": 7,
-        "width": "4",
+        "order": 10,
+        "width": "5",
         "height": "1",
         "passthru": true,
         "decouple": "false",
@@ -17498,6 +17588,75 @@
         ]
     },
     {
+        "id": "24ba1c8ca7aea429",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 570,
+        "y": 3860,
+        "wires": [
+            [
+                "8bb744f5177e71ff"
+            ]
+        ]
+    },
+    {
+        "id": "9f35c0e151e986ea",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "fw version",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/pluto/\" + global.get(\"callsign\")+ \"/system/version\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 3860,
+        "wires": [
+            [
+                "24ba1c8ca7aea429"
+            ]
+        ]
+    },
+    {
+        "id": "8bb744f5177e71ff",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d320c7a134a3a36a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fw_version",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 3860,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "1e0841f1.ac68fe",
         "type": "http in",
         "z": "9d964f25dcc4d750",
@@ -17660,7 +17819,7 @@
         "label": "Rx {{value | number:2}}  MHz",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
-        "order": 3,
+        "order": 9,
         "width": "10",
         "height": "1",
         "passthru": false,
@@ -17844,8 +18003,8 @@
         "g": "2406e32417780de0",
         "group": "bd40e71dca80ef04",
         "name": "Local spectrum",
-        "order": 1,
-        "width": "27",
+        "order": 2,
+        "width": "22",
         "height": "5",
         "url": "/spektrum",
         "origin": "*",
@@ -17908,8 +18067,8 @@
         "label": "Gain {{value | number:2}} dB",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
-        "order": 6,
-        "width": "6",
+        "order": 5,
+        "width": "5",
         "height": "1",
         "passthru": false,
         "outs": "all",
@@ -18368,8 +18527,8 @@
         "label": "Min {{value | number:2}}",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
-        "order": 4,
-        "width": "6",
+        "order": 3,
+        "width": "5",
         "height": "1",
         "passthru": false,
         "outs": "all",
@@ -18396,8 +18555,8 @@
         "label": "Max {{value | number:2}}",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
-        "order": 5,
-        "width": "6",
+        "order": 4,
+        "width": "5",
         "height": "1",
         "passthru": false,
         "outs": "all",
@@ -18655,8 +18814,8 @@
         "label": "fft averaging",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
-        "order": 8,
-        "width": "4",
+        "order": 7,
+        "width": "5",
         "height": "1",
         "wrap": false,
         "passthru": false,
@@ -18787,7 +18946,7 @@
         "label": "signal threshold",
         "tooltip": "",
         "group": "bd40e71dca80ef04",
-        "order": 9,
+        "order": 6,
         "width": "5",
         "height": "1",
         "wrap": false,
@@ -18843,8 +19002,8 @@
         "tooltip": "",
         "place": "Select option",
         "group": "bd40e71dca80ef04",
-        "order": 10,
-        "width": "6",
+        "order": 11,
+        "width": "5",
         "height": "1",
         "passthru": false,
         "multiple": false,
@@ -19481,7 +19640,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot2</title>\n\n<canvas id=\"constellationChart\" style=\"width:250;height:250;\"></canvas>\n<script src=\"/chart.js\"></script>\n<script src=\"/mqtt_min.js\"></script>\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var callsign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n    function mqtt_client() {\n        let x, y = 0;\n        let data = [];\n        let chart = new Chart(\"constellationChart\", {\n            type: \"scatter\",\n            data: {\n                datasets: [{\n                    pointRadius: 2,\n                    pointBackgroundColor: \"rgb(11,193,11)\",\n                    data: data\n                }]\n            },\n            options: {\n                legend: {display: false},\n                showLines: false,\n                scales: {\n                    xAxes: [{ticks:{min: -90,max: 90}}],\n                    yAxes: [{ticks:{min: -90,max: 90}}],\n                }\n            }\n        });\n        // let hosting_url = \"192.168.1.111\";\n        // let pluto_url = hosting_url;\n        // let callsign = \"ZS1SCI\";\n        if (hosting_url !== \"\" && window.location.hostname === hosting_url) {\n            pluto_url = hosting_url;\n            console.log(\"MQTT hostname: \" + window.location.hostname)\n            console.log(\"MQTT pluto_url: \" + pluto_url)\n        }\n        let url = `ws://${pluto_url}:9001`;\n        const options = {\n            // Clean session\n            clean: true,\n            connectTimeout: 4000,\n            // Authentication\n            clientId: \"pluto\" + new Date().getUTCMilliseconds(),\n            username: \"root\",\n            password: \"analog\",\n        };\n        const client = mqtt.connect(url, options);\n        console.log(\"callsign: \" + callsign);\n        console.log(\"url: \" + url);\n        client.on(\"connect\", function () {\n            console.log(\"Connected MQTT\");\n            // Subscribe to a topic\n            client.subscribe(`dt/longmynd/constel_q`, () => {\n            });\n            client.subscribe(`dt/longmynd/constel_i`, () => {\n            });\n            client.subscribe(`dt/longmynd/rx_state`, () => {\n            });\n            client.subscribe(`cmd/longmynd/frequency`, () => {\n            });\n        });\n        client.on(\"message\", function (topic, message) {\n            if (data.length > 800) {\n                data = data.slice(2)\n                updateChart(chart, data)\n                removeData(chart);\n                removeData(chart);\n                // console.log(data);\n            }\n            if (topic === `dt/longmynd/rx_state`) {\n                if (message.toString() === \"Hunting\") {\n                    console.log(\"clear\");\n                    data = []\n                    updateChart(chart, data)\n                    return;\n                }\n            }\n            if (topic === `cmd/longmynd/frequency`) {\n                console.log(\"clear\");\n                data = []\n                updateChart(chart, data)\n                return;\n            }\n            if (topic === `dt/longmynd/constel_i`) {\n                x = Number(message.toString());\n                // y = Number(message.toString());\n                // console.log(\"constel_i: \" + x);\n            }\n            if (topic === `dt/longmynd/constel_q`) {\n                // x = Number(message.toString());\n                y = Number(message.toString());\n                // console.log(\"constel_q: \" + y);\n            }\n            if(y === 0 || x === 0) return;\n            let obj = {\n                x: x,\n                y: y\n            };\n            data.push(obj)\n\n            addData(chart,`${x}${y}` ,obj);\n        });\n    }\n\n\n    mqtt_client();\n\n    function updateChart(chart, data) {\n        chart.data.datasets[0].data = data;\n        chart.update('none');\n    }\n\n    function addData(chart, label, newData) {\n        chart.data.labels.push(label);\n        chart.data.datasets.forEach((dataset) => {\n            dataset.data.push(newData);\n        });\n        chart.update();\n    }\n\n    function removeData(chart) {\n        chart.data.labels.pop();\n        chart.data.datasets.forEach((dataset) => {\n            dataset.data.pop();\n        });\n        chart.update();\n    }\n\n</script>\n\n\n\n",
+        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot2</title>\n\n<canvas id=\"constellationChart\" style=\"width:1;height:1;\"></canvas>\n<script src=\"/constel/chart.js\"></script>\n<script src=\"/mqtt_min.js\"></script>\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<script src=\"/constel/script.js\"></script>\n\n\n\n",
         "output": "str",
         "x": 740,
         "y": 140,
@@ -19573,12 +19732,12 @@
         "name": "",
         "filename": "web/constel/chart.js",
         "filenameType": "str",
-        "format": "utf8",
+        "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 350,
+        "x": 370,
         "y": 80,
         "wires": [
             [
@@ -19592,11 +19751,11 @@
         "z": "34bd429848bdfd07",
         "g": "9c7cb0f498a9f7e2",
         "name": "",
-        "url": "/chart.js",
+        "url": "/constel/chart.js",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 130,
+        "x": 150,
         "y": 80,
         "wires": [
             [
@@ -19611,7 +19770,7 @@
         "g": "9c7cb0f498a9f7e2",
         "group": "bd40e71dca80ef04",
         "name": "Constellation",
-        "order": 2,
+        "order": 1,
         "width": "5",
         "height": "5",
         "url": "/constel",
@@ -19621,6 +19780,80 @@
         "y": 140,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "966f8abcef78816c",
+        "type": "change",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/javascript",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 40,
+        "wires": [
+            [
+                "ee10e75eb6c917e8"
+            ]
+        ]
+    },
+    {
+        "id": "692cfca16036ea93",
+        "type": "file in",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "",
+        "filename": "web/constel/script.js",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "966f8abcef78816c"
+            ]
+        ]
+    },
+    {
+        "id": "dd2992c2880bcc1f",
+        "type": "http in",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "",
+        "url": "/constel/script.js",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "692cfca16036ea93"
+            ]
         ]
     },
     {
@@ -19757,7 +19990,9 @@
                 "8b83d336adb14855",
                 "0e66d5d1d53eb868",
                 "6a472a91f5b893b8",
-                "cd41c1f3c4201336"
+                "cd41c1f3c4201336",
+                "a90f9c1c2af87afa",
+                "410d95bdc81fa714"
             ]
         ]
     },
@@ -22009,7 +22244,7 @@
         "type": "function",
         "z": "d7c58eb9e7b65abb",
         "name": "Truncate long provider names",
-        "func": "let provider = truncate(msg.payload, 23);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
+        "func": "let provider = truncate(msg.payload, 24);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22295,7 +22530,7 @@
         "z": "d7c58eb9e7b65abb",
         "g": "c070d9c6c2a6ac1b",
         "name": "generate signal report",
-        "func": "let freq = (Number(flow.get(\"freq\"))*1000 + Math.abs(Number(global.get('device.rx.offset'))))/1e6;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/\"${flow.get(\"provider\")}\" - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")} - ${freq} ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
+        "func": "let freq = (Number(flow.get(\"freq\"))*1000 + Math.abs(Number(global.get('device.rx.offset'))))/1e6;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/\"${flow.get(\"provider\")}\" - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS Buffer delays, video: ${flow.get(\"video_buffer\")}ms, audio: ${flow.get(\"audio_buffer\")}ms - ${freq} ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22445,6 +22680,224 @@
         "x": 860,
         "y": 1540,
         "wires": []
+    },
+    {
+        "id": "a90f9c1c2af87afa",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "audiobuffer",
+        "func": "msg.action = \"subscribe\"\nmsg.topic =\"dt/longmynd/audiobuffer\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1880,
+        "wires": [
+            [
+                "4f2dbe83f0fbb265"
+            ]
+        ]
+    },
+    {
+        "id": "4f2dbe83f0fbb265",
+        "type": "mqtt in",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 690,
+        "y": 1880,
+        "wires": [
+            [
+                "c5ac2e82dbf465e3"
+            ]
+        ]
+    },
+    {
+        "id": "410d95bdc81fa714",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "videobuffer",
+        "func": "msg.action = \"subscribe\"\nmsg.topic =\"dt/longmynd/videobuffer\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 1920,
+        "wires": [
+            [
+                "cfc26d33717144bd"
+            ]
+        ]
+    },
+    {
+        "id": "cfc26d33717144bd",
+        "type": "mqtt in",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 690,
+        "y": 1920,
+        "wires": [
+            [
+                "32d49dfe659b035a"
+            ]
+        ]
+    },
+    {
+        "id": "85960296b05e0f13",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "group": "65d91b75202c3b55",
+        "order": 12,
+        "width": "4",
+        "height": 1,
+        "name": "videobuffer",
+        "label": "videobuffer",
+        "format": "  {{value | number:0}}  ms",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "14",
+        "color": "#008080",
+        "x": 1070,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "32d49dfe659b035a",
+        "type": "calculator",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "1",
+        "round": false,
+        "truncate": true,
+        "decimals": 0,
+        "decimals2": "2",
+        "x": 860,
+        "y": 1920,
+        "wires": [
+            [
+                "85960296b05e0f13",
+                "b4d68204ef4121e0"
+            ]
+        ]
+    },
+    {
+        "id": "c5ac2e82dbf465e3",
+        "type": "calculator",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "1",
+        "round": false,
+        "truncate": true,
+        "decimals": 0,
+        "decimals2": "2",
+        "x": 860,
+        "y": 1880,
+        "wires": [
+            [
+                "ede5df2f5091c5aa",
+                "f298934c06e2694e"
+            ]
+        ]
+    },
+    {
+        "id": "ede5df2f5091c5aa",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "group": "65d91b75202c3b55",
+        "order": 12,
+        "width": "4",
+        "height": 1,
+        "name": "audiobuffer",
+        "label": "audiobuffer",
+        "format": "  {{value | number:0}}  ms",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "14",
+        "color": "#008080",
+        "x": 1090,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "f298934c06e2694e",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "audio_buffer",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4d68204ef4121e0",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "video_buffer",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 1920,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "01cd46f702ab295a",
@@ -23120,7 +23573,7 @@
                 "label": "offset",
                 "value": "offset",
                 "type": "text",
-                "required": false,
+                "required": true,
                 "rows": null
             },
             {
@@ -23354,7 +23807,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 270,
+        "x": 280,
         "y": 80,
         "wires": [
             [
@@ -23370,7 +23823,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 420,
+        "x": 430,
         "y": 80,
         "wires": []
     },
@@ -23455,6 +23908,7 @@
         "id": "a8596f60466f8cf4",
         "type": "ui_switch",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "",
         "label": "AMP",
         "tooltip": "",
@@ -23491,6 +23945,7 @@
         "id": "f36ea5478cd26f4c",
         "type": "http request",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "http toggle request",
         "method": "GET",
         "ret": "txt",
@@ -23504,7 +23959,7 @@
         "senderr": false,
         "headers": [],
         "x": 650,
-        "y": 260,
+        "y": 280,
         "wires": [
             [
                 "8e6e379dd23ad541"
@@ -23515,6 +23970,7 @@
         "id": "4a2877dc5a808a1b",
         "type": "ui_toast",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
@@ -23534,6 +23990,7 @@
         "id": "8e6e379dd23ad541",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "parse tasmota http response",
         "func": "let message = msg.payload;\nlet indexOfInterest = message.indexOf(\">O\");\nlet state = message.slice(indexOfInterest + 1, indexOfInterest + 4);\nstate = state.includes('<') ? state.slice(0, -1) : state;\nmsg.button_state = state === \"ON\" ? true : false;\nmsg.payload = `Amp switched ${state}`;\nreturn msg;",
         "outputs": 1,
@@ -23543,7 +24000,7 @@
         "finalize": "",
         "libs": [],
         "x": 680,
-        "y": 320,
+        "y": 340,
         "wires": [
             [
                 "f90b10e6825765f0"
@@ -23555,6 +24012,7 @@
         "type": "change",
         "z": "30d0afc93dfb235a",
         "d": true,
+        "g": "936b15192e58877f",
         "name": "",
         "rules": [
             {
@@ -23580,6 +24038,7 @@
         "id": "2d87948c62090044",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "read tasmota settings",
         "func": "let tasmota_settings = JSON.parse(msg.payload);\nif (tasmota_settings.use_switch){\n    msg.payload = tasmota_settings;\n    let url = `${tasmota_settings.tasmota_switch_url}/?m=1&o=1`;\n    msg.url = url;\n    msg.payload = true;\n    return msg;\n}",
         "outputs": 1,
@@ -23589,7 +24048,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "f36ea5478cd26f4c"
@@ -23600,6 +24059,7 @@
         "id": "3d1df83227b48c35",
         "type": "http request",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "http state request",
         "method": "GET",
         "ret": "txt",
@@ -23613,7 +24073,7 @@
         "senderr": false,
         "headers": [],
         "x": 170,
-        "y": 320,
+        "y": 340,
         "wires": [
             [
                 "cf17c69c227b6825"
@@ -23624,6 +24084,7 @@
         "id": "ce64bf27f1fae6be",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "read tasmota settings",
         "func": "let tasmota_settings = JSON.parse(msg.payload);\nif (tasmota_settings.use_switch){\n    msg.payload = tasmota_settings;\n    let url = `${tasmota_settings.tasmota_switch_url}/cm?cmnd=STATUS`;\n    msg.url = url;\n    return msg;\n}",
         "outputs": 1,
@@ -23633,7 +24094,7 @@
         "finalize": "",
         "libs": [],
         "x": 180,
-        "y": 260,
+        "y": 280,
         "wires": [
             [
                 "3d1df83227b48c35"
@@ -23644,6 +24105,7 @@
         "id": "cf17c69c227b6825",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "parse http response",
         "func": "let tasmota_state = JSON.parse(msg.payload);\nif(tasmota_state.Status.Power === 1){\n    msg.payload = true;\n    return msg;\n}\nmsg.payload = false;\nreturn msg;",
         "outputs": 1,
@@ -23653,7 +24115,7 @@
         "finalize": "",
         "libs": [],
         "x": 180,
-        "y": 380,
+        "y": 400,
         "wires": [
             [
                 "e4b9db07aee76ef2",
@@ -23666,6 +24128,7 @@
         "type": "inject",
         "z": "30d0afc93dfb235a",
         "d": true,
+        "g": "f6c11774649f8d00",
         "name": "",
         "props": [],
         "repeat": "",
@@ -23673,8 +24136,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 150,
-        "y": 80,
+        "x": 170,
+        "y": 60,
         "wires": [
             [
                 "eef90d12fe67652d"
@@ -23685,6 +24148,7 @@
         "id": "f90b10e6825765f0",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "set current toggle state",
         "func": "let state = msg.button_state\nmsg.payload = state;\nreturn msg;",
         "outputs": 1,
@@ -23694,7 +24158,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 380,
+        "y": 400,
         "wires": [
             [
                 "a8596f60466f8cf4"
@@ -23706,6 +24170,7 @@
         "type": "debug",
         "z": "30d0afc93dfb235a",
         "d": true,
+        "g": "4da866f299df009c",
         "name": "debug 19",
         "active": true,
         "tosidebar": true,
@@ -23715,13 +24180,14 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 160,
-        "y": 440,
+        "y": 460,
         "wires": []
     },
     {
         "id": "eef90d12fe67652d",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "settings file path",
         "func": "msg.filename = \"settings\\\\dashboard.json\";\nif (global.get(\"platform\") === \"linux\") msg.filename = \"settings/dashboard.json\";\nreturn msg;",
         "outputs": 1,
@@ -23731,7 +24197,7 @@
         "finalize": "",
         "libs": [],
         "x": 160,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "70dc135bb18e2bd6"
@@ -23742,6 +24208,7 @@
         "id": "70dc135bb18e2bd6",
         "type": "file in",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -23751,7 +24218,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 140,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "ce64bf27f1fae6be"
@@ -23763,6 +24230,7 @@
         "type": "function",
         "z": "30d0afc93dfb235a",
         "d": true,
+        "g": "f6c11774649f8d00",
         "name": "settings file path",
         "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/dashboard.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\dashboard.json\";\nreturn msg;",
         "outputs": 1,
@@ -23771,8 +24239,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 80,
+        "x": 660,
+        "y": 60,
         "wires": [
             [
                 "caa457b0361bf0ba"
@@ -23783,6 +24251,7 @@
         "id": "caa457b0361bf0ba",
         "type": "file in",
         "z": "30d0afc93dfb235a",
+        "g": "4da866f299df009c",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -23792,7 +24261,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 620,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "2d87948c62090044"
@@ -23803,6 +24272,7 @@
         "id": "4169371e544b9666",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "send mqtt message to broker to toggle switch",
         "func": "msg.topic = `cmnd/${global.get(\"tasmota_mqtt_topic\")}/POWER`;\nmsg.state = msg.payload;\nmsg.payload = \"toggle\";\nreturn msg;",
         "outputs": 1,
@@ -23824,6 +24294,7 @@
         "id": "857224de9710110f",
         "type": "mqtt out",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "",
         "topic": "",
         "qos": "",
@@ -23842,6 +24313,7 @@
         "id": "449f2a69fa24e7fd",
         "type": "mqtt in",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "",
         "topic": "",
         "qos": "2",
@@ -23864,6 +24336,7 @@
         "id": "ff147eec327f33fe",
         "type": "inject",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "",
         "props": [],
         "repeat": "1",
@@ -23883,6 +24356,7 @@
         "id": "bc7c3ea6788d2b58",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "power status",
         "func": "msg.action = \"subscribe\"\nmsg.topic = `stat/${global.get(\"tasmota_mqtt_topic\")}/POWER`\nreturn msg;",
         "outputs": 1,
@@ -23903,6 +24377,7 @@
         "id": "fabd30d9f5135abd",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "notification",
         "func": "let payload = msg.state;\nmsg.topic = \"Tasmota switch\"\nmsg.payload = `Amp switched ${payload}`;\nreturn msg;",
         "outputs": 1,
@@ -23924,6 +24399,7 @@
         "type": "debug",
         "z": "30d0afc93dfb235a",
         "d": true,
+        "g": "936b15192e58877f",
         "name": "Tasmota status",
         "active": true,
         "tosidebar": true,
@@ -23941,6 +24417,7 @@
         "id": "29a3c6a207d493f9",
         "type": "function",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "get state",
         "func": "msg.topic = `cmnd/${global.get(\"tasmota_mqtt_topic\")}/POWER`;\nmsg.payload = \"\";\nreturn msg;",
         "outputs": 1,
@@ -23961,6 +24438,7 @@
         "id": "b7d0059588d03318",
         "type": "mqtt out",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "",
         "topic": "",
         "qos": "",
@@ -23979,6 +24457,7 @@
         "id": "33b81b6ee3d763f8",
         "type": "inject",
         "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
         "name": "",
         "props": [],
         "repeat": "",
