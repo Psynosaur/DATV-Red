@@ -2,7 +2,7 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red v3.9-15-gd94ff1c",
+        "label": "DATV-Red v3.93",
         "disabled": false,
         "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n\r\nV3.69\r\n - Fixed spectrum MQTT client\r\n   - Spans and frequencies are labeled\r\n - Fixed linux start up bugs\r\n   - works again\r\n - Inject OS type before all else...\r\n - Double unmute bug is no more a thing on start up.\r\n - Auto channel calibration...\r\n - Clean up code and flows\r\n - Chat button\r\n   - I don't like it on the dashboard\r\n   - Opens url in default browser\r\n - More fixing of things\r\n - Full rx tuning range\r\n - GUI moved things around\r\n \r\nV3.79\r\n- Minitiouner startup bugs\r\n- GSE refactor\r\n- 1MS on reboot TX SR bug...\r\n- Tx mute should not trigger on startup\r\n- Cleanup of code \r\n- Wrap provider name in quotes    \r\nV3.9\r\n- New firmware version needed see repo\r\n- Spectrum changes\r\n- Detect signals symbol rate\r\n- tune with pluto spectrum\r\n- there is much to be done still.\r\n",
         "env": []
@@ -11,6 +11,22 @@
         "id": "9d964f25dcc4d750",
         "type": "tab",
         "label": "Local RX spectrum",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "34bd429848bdfd07",
+        "type": "tab",
+        "label": "Constellation",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d7c58eb9e7b65abb",
+        "type": "tab",
+        "label": "DATV Reception",
         "disabled": false,
         "info": "",
         "env": []
@@ -35,14 +51,6 @@
         "id": "27bb1861e8b5803b",
         "type": "tab",
         "label": "Chat",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "d7c58eb9e7b65abb",
-        "type": "tab",
-        "label": "DATV Reception",
         "disabled": false,
         "info": "",
         "env": []
@@ -136,7 +144,9 @@
             "185cc616489b2615"
         ],
         "x": 22,
-        "y": 1373
+        "y": 1373,
+        "w": 1350,
+        "h": 720
     },
     {
         "id": "4bfefaeb7f82f4c6",
@@ -170,7 +180,9 @@
             "fd45eaf559f851a8"
         ],
         "x": 54,
-        "y": 2219
+        "y": 2219,
+        "w": 1092,
+        "h": 322
     },
     {
         "id": "92c95af69a0592d1",
@@ -206,7 +218,9 @@
             "f71130d672ef9830"
         ],
         "x": 3574,
-        "y": 2951.5
+        "y": 2951.5,
+        "w": 1732,
+        "h": 409.5
     },
     {
         "id": "6230aabbd2e27dba",
@@ -241,7 +255,9 @@
             "88e8c5a8e4d381e5"
         ],
         "x": 2914,
-        "y": 759
+        "y": 759,
+        "w": 1332,
+        "h": 362
     },
     {
         "id": "f6218c30fc4ec8b7",
@@ -261,7 +277,9 @@
             "428a0fc47da7621b"
         ],
         "x": 2914,
-        "y": 211.5
+        "y": 211.5,
+        "w": 1012,
+        "h": 149.5
     },
     {
         "id": "4b15878090b5548b",
@@ -298,7 +316,9 @@
             "2e0709eeb3596e1a"
         ],
         "x": 2914,
-        "y": 399
+        "y": 399,
+        "w": 1792,
+        "h": 322
     },
     {
         "id": "1f5722b7aff1a710",
@@ -334,7 +354,9 @@
             "e59f80f27660af9f"
         ],
         "x": 14,
-        "y": 539
+        "y": 539,
+        "w": 1252,
+        "h": 342
     },
     {
         "id": "78b656eeda23dc5a",
@@ -361,7 +383,9 @@
             "6b675d160a28a287"
         ],
         "x": 2114,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 242
     },
     {
         "id": "9f151e324008585b",
@@ -379,7 +403,9 @@
             "fd4311919bb382bd"
         ],
         "x": 1454,
-        "y": 39
+        "y": 39,
+        "w": 732,
+        "h": 82
     },
     {
         "id": "359e81623396a0cb",
@@ -399,7 +425,9 @@
             "b041b653b208cce2"
         ],
         "x": 3414,
-        "y": 39
+        "y": 39,
+        "w": 972,
+        "h": 142
     },
     {
         "id": "1473030260740438",
@@ -421,7 +449,9 @@
             "38ad92b4a70e6127"
         ],
         "x": 2214,
-        "y": 19
+        "y": 19,
+        "w": 1172,
+        "h": 162
     },
     {
         "id": "158a8e642f8da366",
@@ -450,7 +480,9 @@
             "de67b561ba5031e9"
         ],
         "x": 1454,
-        "y": 139
+        "y": 139,
+        "w": 592,
+        "h": 322
     },
     {
         "id": "e6bc3a23f88991a3",
@@ -474,7 +506,9 @@
             "dc1201bc61b55d34"
         ],
         "x": 4274,
-        "y": 771.5
+        "y": 771.5,
+        "w": 672,
+        "h": 237
     },
     {
         "id": "72ddf00d98862ef3",
@@ -502,7 +536,9 @@
             "0b5fd2d31add3324"
         ],
         "x": 2114,
-        "y": 479
+        "y": 479,
+        "w": 772,
+        "h": 422
     },
     {
         "id": "78f7e24f56d510ed",
@@ -556,7 +592,9 @@
             "193a32ea6df689be"
         ],
         "x": 14,
-        "y": 899
+        "y": 899,
+        "w": 2052,
+        "h": 462
     },
     {
         "id": "d320c7a134a3a36a",
@@ -637,7 +675,9 @@
             "cf6155c5314434de"
         ],
         "x": 74,
-        "y": 2779
+        "y": 2779,
+        "w": 1232,
+        "h": 1082
     },
     {
         "id": "c927282dfd987c70",
@@ -679,7 +719,9 @@
             "8ee9aef755219d8b"
         ],
         "x": 1994,
-        "y": 1439
+        "y": 1439,
+        "w": 312,
+        "h": 1642
     },
     {
         "id": "5ed3848da82bcc9a",
@@ -713,7 +755,9 @@
             "4aff6b42b30f122f"
         ],
         "x": 1394,
-        "y": 1999
+        "y": 1999,
+        "w": 332,
+        "h": 762
     },
     {
         "id": "44bb8f59b40e58cf",
@@ -778,7 +822,9 @@
             "2d1d2f2c5a3e44b6"
         ],
         "x": 2334,
-        "y": 1219
+        "y": 1219,
+        "w": 1172,
+        "h": 1722
     },
     {
         "id": "9286ad1292f976c7",
@@ -835,23 +881,9 @@
             "38932643615d50c9"
         ],
         "x": 2354,
-        "y": 2999
-    },
-    {
-        "id": "e6a3ecf34e7cea7c",
-        "type": "group",
-        "z": "e2c54979685d14cb",
-        "name": "old spectrum",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "109faf60df3867c0",
-            "10dbef2665a872eb",
-            "8bf647b3812030b1"
-        ],
-        "x": 34,
-        "y": 119
+        "y": 2999,
+        "w": 1002,
+        "h": 822
     },
     {
         "id": "9b97da84f20d2dc4",
@@ -865,20 +897,12 @@
             "01cd46f702ab295a",
             "f7591f90facf0e0b",
             "2acadfcfdd128dd9",
-            "c45e701da3354b62",
-            "566cd2394e33219b",
-            "46beab7ba343f23f",
-            "822ca2b96e4f3d64",
-            "9c867256e71c4952",
-            "5652811db02929c2",
-            "84fa266a165b46e6",
-            "f395b1bb7fa9dff7",
-            "08dd20aa4336d75c",
-            "a61938e5f879256b",
             "bbf9e870bbb3141b"
         ],
-        "x": 34,
-        "y": 259
+        "x": 554,
+        "y": 39,
+        "w": 712,
+        "h": 82
     },
     {
         "id": "2406e32417780de0",
@@ -954,7 +978,9 @@
             "e3acc1961332372a"
         ],
         "x": 28,
-        "y": 39
+        "y": 39,
+        "w": 1378,
+        "h": 468
     },
     {
         "id": "b40c8f098d8e9ccc",
@@ -988,7 +1014,9 @@
             "8ebc9dd6c04d47a7"
         ],
         "x": 54,
-        "y": 59
+        "y": 59,
+        "w": 1472,
+        "h": 242
     },
     {
         "id": "f06e928c83c73984",
@@ -1076,10 +1104,10 @@
             "0b50c351304db3b5",
             "0c34bd3ef0714d28"
         ],
-        "x": 194,
-        "y": 339,
-        "w": 1552,
-        "h": 662
+        "x": 54,
+        "y": 359,
+        "w": 1452,
+        "h": 502
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1103,7 +1131,9 @@
             "aa5484e4337c7485"
         ],
         "x": 3614,
-        "y": 1239
+        "y": 1239,
+        "w": 992,
+        "h": 82
     },
     {
         "id": "50b9700a9a4f731c",
@@ -1123,7 +1153,9 @@
             "d03c46be6294064a"
         ],
         "x": 3614,
-        "y": 2599
+        "y": 2599,
+        "w": 1012,
+        "h": 82
     },
     {
         "id": "a01b8f8a522d73dd",
@@ -1153,7 +1185,9 @@
             "d7d044e9b570db55"
         ],
         "x": 3614,
-        "y": 1339
+        "y": 1339,
+        "w": 1312,
+        "h": 162
     },
     {
         "id": "a70e8b8a362b3c9d",
@@ -1212,7 +1246,9 @@
             "e63faf17ba00a395"
         ],
         "x": 3614,
-        "y": 1839
+        "y": 1839,
+        "w": 1212,
+        "h": 602
     },
     {
         "id": "68ebf17055b62392",
@@ -1237,7 +1273,9 @@
             "66edc2f79dcda9bc"
         ],
         "x": 3614,
-        "y": 2799
+        "y": 2799,
+        "w": 952,
+        "h": 122
     },
     {
         "id": "16b2433f74b66b9a",
@@ -1282,7 +1320,9 @@
             "c79482819129c76e"
         ],
         "x": 3612.67578125,
-        "y": 1519
+        "y": 1519,
+        "w": 1633.32421875,
+        "h": 305
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -1299,7 +1339,9 @@
             "f8b6ea291e46f876"
         ],
         "x": 2754,
-        "y": 2719
+        "y": 2719,
+        "w": 652,
+        "h": 142
     },
     {
         "id": "185cc616489b2615",
@@ -1322,7 +1364,9 @@
             "b86aad85fafa0443"
         ],
         "x": 48,
-        "y": 1399
+        "y": 1399,
+        "w": 1298,
+        "h": 668
     },
     {
         "id": "b66465fdf55144d8",
@@ -1339,7 +1383,9 @@
             "cdc147736509f758"
         ],
         "x": 54,
-        "y": 299
+        "y": 299,
+        "w": 712,
+        "h": 82
     },
     {
         "id": "e3acc1961332372a",
@@ -1356,7 +1402,9 @@
             "85a46cf1a97d17bc"
         ],
         "x": 54,
-        "y": 399
+        "y": 399,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -1378,7 +1426,9 @@
             "2265f82b17bf49e1"
         ],
         "x": 454,
-        "y": 1479
+        "y": 1479,
+        "w": 792,
+        "h": 162
     },
     {
         "id": "553167af0b3221c1",
@@ -1398,7 +1448,9 @@
             "430d098e101f5c6c"
         ],
         "x": 474,
-        "y": 1659
+        "y": 1659,
+        "w": 712,
+        "h": 162
     },
     {
         "id": "0d9e815c3c9d7d4a",
@@ -1416,7 +1468,9 @@
             "cc29196277550f51"
         ],
         "x": 94,
-        "y": 1679
+        "y": 1679,
+        "w": 232,
+        "h": 282
     },
     {
         "id": "d95cd044385c2ba5",
@@ -1434,7 +1488,9 @@
             "c82484c6378aaa4e"
         ],
         "x": 274,
-        "y": 1959
+        "y": 1959,
+        "w": 992,
+        "h": 82
     },
     {
         "id": "3bec8a3571888efd",
@@ -1453,21 +1509,20 @@
             "69d6d63ac36eab12"
         ],
         "x": 74,
-        "y": 1479
+        "y": 1479,
+        "w": 332,
+        "h": 202
     },
     {
         "id": "9c7cb0f498a9f7e2",
         "type": "group",
-        "z": "d7c58eb9e7b65abb",
+        "z": "34bd429848bdfd07",
         "name": "Constellation",
         "style": {
             "label": true
         },
         "nodes": [
             "ee10e75eb6c917e8",
-            "02f3e9ac818c03e0",
-            "51d2c788419a360e",
-            "819d5b65838d0f8c",
             "9ff2a02ce6c83cc8",
             "a107f00bdb17bc4a",
             "4b8450fb54f0169b",
@@ -1477,9 +1532,51 @@
             "8a1fb5a4ffa544fd"
         ],
         "x": 34,
-        "y": 1579,
-        "w": 952,
-        "h": 202
+        "y": 99,
+        "w": 1032,
+        "h": 142
+    },
+    {
+        "id": "2a6eb2e492bee274",
+        "type": "group",
+        "z": "34bd429848bdfd07",
+        "name": "static vendor js file local spectrum uses this too",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "02f3e9ac818c03e0",
+            "51d2c788419a360e",
+            "819d5b65838d0f8c"
+        ],
+        "x": 34,
+        "y": 319,
+        "w": 752,
+        "h": 82
+    },
+    {
+        "id": "97fae7a46f8ffe23",
+        "type": "group",
+        "z": "e2c54979685d14cb",
+        "name": "static vendor js file local spectrum uses this too",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "40362380a38ea4c4",
+            "5a1f6104e1ceca1d",
+            "c265fbc2639366a2",
+            "a96d8fa6d1a40a14",
+            "0cafa97494de79ac",
+            "496ca8b3595b7b48",
+            "0a1fe3cce13a2b95",
+            "6fcf19edb84cb384",
+            "2a3dc125f08d620e"
+        ],
+        "x": 54,
+        "y": 159,
+        "w": 872,
+        "h": 222
     },
     {
         "id": "9b3296db2e0c849f",
@@ -1571,7 +1668,7 @@
             }
         },
         "site": {
-            "name": "DATV-Red v3.9-15-gd94ff1c",
+            "name": "DATV-Red v3.93",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -17735,8 +17832,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 1670,
-        "y": 580,
+        "x": 1410,
+        "y": 540,
         "wires": []
     },
     {
@@ -17752,8 +17849,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 500,
+        "x": 360,
+        "y": 420,
         "wires": [
             [
                 "77dc98e0de74c888"
@@ -17778,8 +17875,8 @@
         "topic": "",
         "payload": "webfft",
         "payloadType": "str",
-        "x": 310,
-        "y": 500,
+        "x": 190,
+        "y": 420,
         "wires": [
             [
                 "b47b8870b7c9bd24"
@@ -17801,8 +17898,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 650,
-        "y": 500,
+        "x": 530,
+        "y": 420,
         "wires": []
     },
     {
@@ -17818,8 +17915,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1330,
-        "y": 620,
+        "x": 1030,
+        "y": 520,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -17846,8 +17943,8 @@
         "max": "6000",
         "step": "0.25",
         "className": "",
-        "x": 970,
-        "y": 560,
+        "x": 810,
+        "y": 460,
         "wires": [
             [
                 "7d69601736a74273"
@@ -17867,8 +17964,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1330,
-        "y": 700,
+        "x": 850,
+        "y": 620,
         "wires": [
             [
                 "8be1ad29d1e86276"
@@ -17893,8 +17990,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 330,
-        "y": 560,
+        "x": 170,
+        "y": 460,
         "wires": [
             [
                 "b82cad0a3cddc877",
@@ -17917,8 +18014,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 620,
+        "x": 310,
+        "y": 520,
         "wires": [
             [
                 "f72c1ae9d1dc7d89"
@@ -17939,8 +18036,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 650,
-        "y": 620,
+        "x": 490,
+        "y": 520,
         "wires": [
             [
                 "6adfe6d609aeb90a"
@@ -17960,8 +18057,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
-        "y": 440,
+        "x": 1050,
+        "y": 460,
         "wires": [
             [
                 "5493fb3252e35009",
@@ -17983,8 +18080,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 650,
-        "y": 560,
+        "x": 490,
+        "y": 460,
         "wires": [
             [
                 "4497dbfe8502fab3"
@@ -18004,8 +18101,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 560,
+        "x": 330,
+        "y": 460,
         "wires": [
             [
                 "12159992489b0591"
@@ -18044,8 +18141,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 680,
+        "x": 320,
+        "y": 580,
         "wires": [
             [
                 "818602f620560caa"
@@ -18066,8 +18163,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 650,
-        "y": 680,
+        "x": 490,
+        "y": 580,
         "wires": [
             [
                 "ed827f68456e01f6"
@@ -18094,8 +18191,8 @@
         "max": "65",
         "step": "1",
         "className": "",
-        "x": 1000,
-        "y": 620,
+        "x": 660,
+        "y": 520,
         "wires": [
             [
                 "05155ef717c0fb68"
@@ -18122,8 +18219,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1470,
-        "y": 440,
+        "x": 1350,
+        "y": 460,
         "wires": [
             []
         ]
@@ -18141,8 +18238,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 560,
+        "x": 650,
+        "y": 460,
         "wires": [
             [
                 "30794624a6a04c15"
@@ -18156,8 +18253,8 @@
         "g": "97ecf1ac9459a777",
         "name": "",
         "info": "We need to add spectrum controls",
-        "x": 1410,
-        "y": 380,
+        "x": 1290,
+        "y": 400,
         "wires": []
     },
     {
@@ -18173,8 +18270,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 820,
+        "x": 890,
+        "y": 580,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -18254,8 +18351,8 @@
         "once": true,
         "onceDelay": "0.1",
         "topic": "",
-        "x": 290,
-        "y": 900,
+        "x": 150,
+        "y": 680,
         "wires": [
             [
                 "db57ce0d38f95c32",
@@ -18277,8 +18374,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 650,
-        "y": 960,
+        "x": 470,
+        "y": 740,
         "wires": [
             []
         ]
@@ -18296,8 +18393,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 960,
+        "x": 310,
+        "y": 740,
         "wires": [
             [
                 "c0a747bc908afade"
@@ -18317,8 +18414,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 900,
+        "x": 310,
+        "y": 680,
         "wires": [
             [
                 "de2e4421edba4493"
@@ -18339,8 +18436,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 650,
-        "y": 900,
+        "x": 470,
+        "y": 680,
         "wires": [
             []
         ]
@@ -18603,8 +18700,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 820,
+        "x": 860,
+        "y": 660,
         "wires": [
             [
                 "8142d24399193d99"
@@ -18629,8 +18726,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1470,
-        "y": 860,
+        "x": 1050,
+        "y": 660,
         "wires": [
             [
                 "8be1ad29d1e86276"
@@ -18716,8 +18813,8 @@
         "topic": "",
         "payload": "settings.spectrum.gain",
         "payloadType": "global",
-        "x": 440,
-        "y": 740,
+        "x": 220,
+        "y": 620,
         "wires": [
             [
                 "6adfe6d609aeb90a"
@@ -18751,8 +18848,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
-        "y": 620,
+        "x": 860,
+        "y": 520,
         "wires": [
             [
                 "aa44e5106814ab9f"
@@ -19000,8 +19097,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1620,
-        "y": 740,
+        "x": 1220,
+        "y": 620,
         "wires": [
             [
                 "470e4d8abf29a205"
@@ -19028,8 +19125,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1030,
-        "y": 700,
+        "x": 630,
+        "y": 580,
         "wires": [
             [
                 "0a9fe9e2623385cb",
@@ -19071,8 +19168,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1300,
-        "y": 960,
+        "x": 640,
+        "y": 820,
         "wires": [
             [
                 "f9e2e71dd4f166ca",
@@ -19093,8 +19190,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 850,
-        "y": 960,
+        "x": 190,
+        "y": 820,
         "wires": [
             [
                 "0b50c351304db3b5"
@@ -19115,8 +19212,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1540,
-        "y": 960,
+        "x": 880,
+        "y": 820,
         "wires": []
     },
     {
@@ -19137,8 +19234,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 990,
-        "y": 960,
+        "x": 330,
+        "y": 820,
         "wires": [
             [
                 "0c34bd3ef0714d28"
@@ -19163,8 +19260,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1130,
-        "y": 960,
+        "x": 470,
+        "y": 820,
         "wires": [
             [
                 "0d2cd9e73e204cef"
@@ -19172,515 +19269,73 @@
         ]
     },
     {
-        "id": "01cd46f702ab295a",
-        "type": "http in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "url": "/spektrum_test",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 150,
-        "y": 300,
-        "wires": [
-            [
-                "f395b1bb7fa9dff7"
-            ]
-        ]
-    },
-    {
-        "id": "f7591f90facf0e0b",
+        "id": "ee10e75eb6c917e8",
         "type": "http response",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
         "name": "",
-        "x": 1330,
-        "y": 360,
+        "x": 950,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "2acadfcfdd128dd9",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "HTML",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<style>{{style}}</style>\n<script> {{&websocket}}</script>\n<script> \n    var localPage = false;\n</script>\n<script async>{{&script}}</script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
-        "output": "str",
-        "x": 1190,
-        "y": 360,
-        "wires": [
-            [
-                "f7591f90facf0e0b"
-            ]
-        ]
-    },
-    {
-        "id": "c45e701da3354b62",
+        "id": "02f3e9ac818c03e0",
         "type": "file in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
+        "z": "34bd429848bdfd07",
+        "g": "2a6eb2e492bee274",
         "name": "",
-        "filename": "web/internet_spectrum/style.css",
+        "filename": "web/pluto_spectrum/vendor/mqtt.min.js",
         "filenameType": "str",
-        "format": "utf8",
+        "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 530,
-        "y": 300,
-        "wires": [
-            [
-                "566cd2394e33219b"
-            ]
-        ]
-    },
-    {
-        "id": "566cd2394e33219b",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "style.css",
-        "field": "payload.style",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 760,
-        "y": 300,
-        "wires": [
-            [
-                "84fa266a165b46e6"
-            ]
-        ]
-    },
-    {
-        "id": "46beab7ba343f23f",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "filename": "web/internet_spectrum/websocket.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 540,
+        "x": 420,
         "y": 360,
         "wires": [
             [
-                "822ca2b96e4f3d64"
+                "819d5b65838d0f8c"
             ]
         ]
     },
     {
-        "id": "822ca2b96e4f3d64",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "websocket",
-        "field": "payload.websocket",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 770,
-        "y": 360,
-        "wires": [
-            [
-                "08dd20aa4336d75c"
-            ]
-        ]
-    },
-    {
-        "id": "9c867256e71c4952",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "",
-        "filename": "web/internet_spectrum/script.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 530,
-        "y": 420,
-        "wires": [
-            [
-                "5652811db02929c2"
-            ]
-        ]
-    },
-    {
-        "id": "5652811db02929c2",
-        "type": "template",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "script",
-        "field": "payload.script",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 750,
-        "y": 420,
-        "wires": [
-            [
-                "a61938e5f879256b"
-            ]
-        ]
-    },
-    {
-        "id": "84fa266a165b46e6",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set msg.style",
-        "func": "msg.style = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 950,
-        "y": 300,
-        "wires": [
-            [
-                "46beab7ba343f23f"
-            ]
-        ]
-    },
-    {
-        "id": "f395b1bb7fa9dff7",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set url",
-        "func": "msg.url = \"spektrum_test\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 300,
-        "wires": [
-            [
-                "c45e701da3354b62"
-            ]
-        ]
-    },
-    {
-        "id": "08dd20aa4336d75c",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set msg.websocket",
-        "func": "msg.websocket = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 970,
-        "y": 360,
-        "wires": [
-            [
-                "9c867256e71c4952"
-            ]
-        ]
-    },
-    {
-        "id": "a61938e5f879256b",
-        "type": "function",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "name": "set msg.script",
-        "func": "msg.script = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 420,
-        "wires": [
-            [
-                "2acadfcfdd128dd9"
-            ]
-        ]
-    },
-    {
-        "id": "bbf9e870bbb3141b",
-        "type": "ui_iframe",
-        "z": "e2c54979685d14cb",
-        "g": "9b97da84f20d2dc4",
-        "group": "235bdacf6041386f",
-        "name": "spectrum iframe",
-        "order": 2,
-        "width": "18",
-        "height": "10",
-        "url": "/spektrum_test",
-        "origin": "*",
-        "scale": "100",
-        "x": 1180,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "109faf60df3867c0",
+        "id": "51d2c788419a360e",
         "type": "http in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "g": "e6a3ecf34e7cea7c",
+        "z": "34bd429848bdfd07",
+        "g": "2a6eb2e492bee274",
         "name": "",
-        "url": "/spectrum",
+        "url": "/mqtt_min.js",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
         "x": 140,
-        "y": 160,
+        "y": 360,
         "wires": [
             [
-                "10dbef2665a872eb"
+                "02f3e9ac818c03e0"
             ]
         ]
     },
     {
-        "id": "10dbef2665a872eb",
-        "type": "file in",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "g": "e6a3ecf34e7cea7c",
-        "name": "",
-        "filename": "web/spectrum.html",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 370,
-        "y": 160,
-        "wires": [
-            [
-                "8bf647b3812030b1"
-            ]
-        ]
-    },
-    {
-        "id": "8bf647b3812030b1",
-        "type": "http response",
-        "z": "e2c54979685d14cb",
-        "d": true,
-        "g": "e6a3ecf34e7cea7c",
-        "name": "",
-        "x": 550,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "390ac0996bfbf3e8",
-        "type": "ui_form",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "label": "Minitioune receiver",
-        "group": "b774f32781d086fb",
-        "order": 6,
-        "width": "13",
-        "height": "6",
-        "options": [
-            {
-                "label": "ip_address",
-                "value": "ip_address",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "port",
-                "value": "port",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "offset",
-                "value": "offset",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "rx_socket",
-                "value": "rx_socket",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_volts",
-                "value": "lnb_volts",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_22khz",
-                "value": "lnb_22khz",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "dvb_mode",
-                "value": "dvb_mode",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "wide_scan",
-                "value": "wide_scan",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "low_sr",
-                "value": "low_sr",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "ip_address": "",
-            "port": "",
-            "offset": "",
-            "rx_socket": "",
-            "lnb_volts": "",
-            "lnb_22khz": "",
-            "dvb_mode": "",
-            "wide_scan": "",
-            "low_sr": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 170,
-        "y": 100,
-        "wires": [
-            [
-                "6f0dfc4da4e5adba"
-            ]
-        ]
-    },
-    {
-        "id": "3c880cfa489b99ba",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "settings file path",
-        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 100,
-        "wires": [
-            [
-                "583e05834ada403d"
-            ]
-        ]
-    },
-    {
-        "id": "583e05834ada403d",
-        "type": "file in",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 820,
-        "y": 100,
-        "wires": [
-            [
-                "56dc16b9e1976cab"
-            ]
-        ]
-    },
-    {
-        "id": "56dc16b9e1976cab",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add receiver",
-        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1010,
-        "y": 100,
-        "wires": [
-            [
-                "1e70a3d6fd597ab5"
-            ]
-        ]
-    },
-    {
-        "id": "6f0dfc4da4e5adba",
+        "id": "819d5b65838d0f8c",
         "type": "change",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
+        "z": "34bd429848bdfd07",
+        "g": "2a6eb2e492bee274",
+        "name": "Set Headers",
         "rules": [
             {
                 "t": "set",
-                "p": "form",
+                "p": "headers",
                 "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
+                "to": "{}",
+                "tot": "json"
             },
             {
                 "t": "set",
-                "p": "form.type",
+                "p": "headers.content-type",
                 "pt": "msg",
-                "to": "Minitioune",
+                "to": "text/javascript",
                 "tot": "str"
             }
         ],
@@ -19689,919 +19344,164 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 100,
+        "x": 690,
+        "y": 360,
         "wires": [
             [
-                "3c880cfa489b99ba"
+                "ee10e75eb6c917e8"
             ]
         ]
     },
     {
-        "id": "735e31a90de36b9a",
-        "type": "debug",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add minitiouner",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "1e70a3d6fd597ab5",
-        "type": "file",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1200,
-        "y": 100,
-        "wires": [
-            [
-                "735e31a90de36b9a",
-                "86a51f94eab9e839"
-            ]
-        ]
-    },
-    {
-        "id": "d1aea45a350e8689",
-        "type": "inject",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 180,
-        "wires": [
-            [
-                "86a51f94eab9e839"
-            ]
-        ]
-    },
-    {
-        "id": "86a51f94eab9e839",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "settings file path",
-        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 180,
-        "wires": [
-            [
-                "8822bec48f5c42d6"
-            ]
-        ]
-    },
-    {
-        "id": "8822bec48f5c42d6",
-        "type": "file in",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 630,
-        "y": 180,
-        "wires": [
-            [
-                "282aef0db727d395"
-            ]
-        ]
-    },
-    {
-        "id": "ae1646fbdd5d8b9c",
-        "type": "ui_list",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "group": "b774f32781d086fb",
-        "name": "",
-        "order": 6,
-        "width": "26",
-        "height": "6",
-        "lineType": "two",
-        "actionType": "check",
-        "allowHTML": false,
-        "outputs": 1,
-        "topic": "",
-        "x": 1110,
-        "y": 180,
-        "wires": [
-            [
-                "8ebc9dd6c04d47a7"
-            ]
-        ]
-    },
-    {
-        "id": "282aef0db727d395",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "create list from JSON",
-        "func": "let receivers = JSON.parse(msg.payload);\nlet array = [];\nfor (let index = 0; index < receivers.length; index++) {\n    const element = receivers[index];\n    \n    let obj = {\n        \"title\": `CH${index+1} -> ${element.type} - IP: ${element.ip_address} - Port: ${element.port} - Offset: ${element.offset} kHz - Socket: ${element.rx_socket}`,\n        \"icon_name\": \"fa-podcast\"\n    }\n    array.push(obj);\n}\nmsg.payload = array;\nreturn msg;\n\n\n// payloadarray\n// Array of objects containing following properties:\n// title - title of the item,\n// description - description of the item. Optional if line type is Single-line or action type is menu,\n// menu - list of menu items (optional),\n// icon - URL of icon (optional),\n// icon_name - font icon name (optional).\n// icon_unicode - alternative to icon name - uses text characters (optional).\n// isChecked - boolean, set the item checked or on (optional).",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 840,
-        "y": 180,
-        "wires": [
-            [
-                "ae1646fbdd5d8b9c"
-            ]
-        ]
-    },
-    {
-        "id": "a51c17448cbde903",
-        "type": "ui_form",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "label": "Winterhill receiver",
-        "group": "b774f32781d086fb",
-        "order": 6,
-        "width": "13",
-        "height": "6",
-        "options": [
-            {
-                "label": "ip_address",
-                "value": "ip_address",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "port",
-                "value": "port",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "offset",
-                "value": "offset",
-                "type": "text",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "rx_socket",
-                "value": "rx_socket",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_volts",
-                "value": "lnb_volts",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "lnb_22khz",
-                "value": "lnb_22khz",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "ip_address": "",
-            "port": "",
-            "offset": "",
-            "rx_socket": "",
-            "lnb_volts": "",
-            "lnb_22khz": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": "",
-        "className": "",
-        "x": 170,
-        "y": 260,
-        "wires": [
-            [
-                "0d7bed971ef2d798"
-            ]
-        ]
-    },
-    {
-        "id": "b74cbbf79c7b8ecc",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "settings file path",
-        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 260,
-        "wires": [
-            [
-                "731a3c957fc08056"
-            ]
-        ]
-    },
-    {
-        "id": "731a3c957fc08056",
-        "type": "file in",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 820,
-        "y": 260,
-        "wires": [
-            [
-                "4330f69a2f5fe062"
-            ]
-        ]
-    },
-    {
-        "id": "4330f69a2f5fe062",
-        "type": "function",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add receiver",
-        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1010,
-        "y": 260,
-        "wires": [
-            [
-                "4696f747c19341dd"
-            ]
-        ]
-    },
-    {
-        "id": "0d7bed971ef2d798",
-        "type": "change",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "form",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "form.type",
-                "pt": "msg",
-                "to": "Winterhill",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 420,
-        "y": 260,
-        "wires": [
-            [
-                "b74cbbf79c7b8ecc"
-            ]
-        ]
-    },
-    {
-        "id": "7409d36e4650ab84",
-        "type": "debug",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "add winterhill",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1380,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "4696f747c19341dd",
-        "type": "file",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1200,
-        "y": 260,
-        "wires": [
-            [
-                "7409d36e4650ab84",
-                "86a51f94eab9e839"
-            ]
-        ]
-    },
-    {
-        "id": "8ebc9dd6c04d47a7",
-        "type": "debug",
-        "z": "71a32338963256e1",
-        "g": "b40c8f098d8e9ccc",
-        "name": "checked receivers",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "c89e4837c83d2853",
-        "type": "http in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "url": "/chat",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 240,
-        "wires": [
-            [
-                "8d39370d898accaf"
-            ]
-        ]
-    },
-    {
-        "id": "9fbc129fa6394326",
+        "id": "9ff2a02ce6c83cc8",
         "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "socket_io",
-        "field": "payload.socket_io",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 860,
-        "y": 280,
-        "wires": [
-            [
-                "757d2c26dbe0099b"
-            ]
-        ]
-    },
-    {
-        "id": "fd9ac23c6e70a5aa",
-        "type": "http response",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "x": 1470,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "cbf50d9eb89da5d2",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "HTML",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "Constellation HTML and JS",
         "field": "payload",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>QO-100 Wideband Chat</title>\n    <meta name=\"description\" content=\"BATC & AMSAT-UK Qatar-OSCAR 100 (Es'hail-2) Wideband Chat-only page\">\n    <meta name=\"author\" content=\"BATC & AMSAT-UK\">\n\n    <style>{{&style}}</style>\n    <script>{{&jquery}}</script>\n    <script>{{&socket_io}}</script>\n    <script>{{&chat}}</script>\n    <script>{{&script}}</script>\n \n</head>\n<body>\n\t<div id=\"chat\"></div>\n</body>\n</html>\n",
-        "x": 1290,
-        "y": 340,
-        "wires": [
-            [
-                "fd9ac23c6e70a5aa"
-            ]
-        ]
-    },
-    {
-        "id": "9d495d79ebc38951",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/style.css",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 510,
-        "y": 240,
-        "wires": [
-            [
-                "f669a447f3e908ed"
-            ]
-        ]
-    },
-    {
-        "id": "f669a447f3e908ed",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "style.css",
-        "field": "payload.style",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{{msg.payload}}",
+        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot2</title>\n\n<canvas id=\"constellationChart\" style=\"width:250;height:250;\"></canvas>\n<script src=\"/chart.js\"></script>\n<script src=\"/mqtt_min.js\"></script>\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var callsign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n    function mqtt_client() {\n        let x, y = 0;\n        let data = [];\n        let chart = new Chart(\"constellationChart\", {\n            type: \"scatter\",\n            data: {\n                datasets: [{\n                    pointRadius: 2,\n                    pointBackgroundColor: \"rgb(11,193,11)\",\n                    data: data\n                }]\n            },\n            options: {\n                legend: {display: false},\n                showLines: false,\n                scales: {\n                    xAxes: [{ticks:{min: -90,max: 90}}],\n                    yAxes: [{ticks:{min: -90,max: 90}}],\n                }\n            }\n        });\n        // let hosting_url = \"192.168.1.111\";\n        // let pluto_url = hosting_url;\n        // let callsign = \"ZS1SCI\";\n        if (hosting_url !== \"\" && window.location.hostname === hosting_url) {\n            pluto_url = hosting_url;\n            console.log(\"MQTT hostname: \" + window.location.hostname)\n            console.log(\"MQTT pluto_url: \" + pluto_url)\n        }\n        let url = `ws://${pluto_url}:9001`;\n        const options = {\n            // Clean session\n            clean: true,\n            connectTimeout: 4000,\n            // Authentication\n            clientId: \"pluto\" + new Date().getUTCMilliseconds(),\n            username: \"root\",\n            password: \"analog\",\n        };\n        const client = mqtt.connect(url, options);\n        console.log(\"callsign: \" + callsign);\n        console.log(\"url: \" + url);\n        client.on(\"connect\", function () {\n            console.log(\"Connected MQTT\");\n            // Subscribe to a topic\n            client.subscribe(`dt/longmynd/constel_q`, () => {\n            });\n            client.subscribe(`dt/longmynd/constel_i`, () => {\n            });\n            client.subscribe(`dt/longmynd/rx_state`, () => {\n            });\n            client.subscribe(`cmd/longmynd/frequency`, () => {\n            });\n        });\n        client.on(\"message\", function (topic, message) {\n            if (data.length > 800) {\n                data = data.slice(2)\n                updateChart(chart, data)\n                removeData(chart);\n                removeData(chart);\n                // console.log(data);\n            }\n            if (topic === `dt/longmynd/rx_state`) {\n                if (message.toString() === \"Hunting\") {\n                    console.log(\"clear\");\n                    data = []\n                    updateChart(chart, data)\n                    return;\n                }\n            }\n            if (topic === `cmd/longmynd/frequency`) {\n                console.log(\"clear\");\n                data = []\n                updateChart(chart, data)\n                return;\n            }\n            if (topic === `dt/longmynd/constel_i`) {\n                x = Number(message.toString());\n                // y = Number(message.toString());\n                // console.log(\"constel_i: \" + x);\n            }\n            if (topic === `dt/longmynd/constel_q`) {\n                // x = Number(message.toString());\n                y = Number(message.toString());\n                // console.log(\"constel_q: \" + y);\n            }\n            if(y === 0 || x === 0) return;\n            let obj = {\n                x: x,\n                y: y\n            };\n            data.push(obj)\n\n            addData(chart,`${x}${y}` ,obj);\n        });\n    }\n\n\n    mqtt_client();\n\n    function updateChart(chart, data) {\n        chart.data.datasets[0].data = data;\n        chart.update('none');\n    }\n\n    function addData(chart, label, newData) {\n        chart.data.labels.push(label);\n        chart.data.datasets.forEach((dataset) => {\n            dataset.data.push(newData);\n        });\n        chart.update();\n    }\n\n    function removeData(chart) {\n        chart.data.labels.pop();\n        chart.data.datasets.forEach((dataset) => {\n            dataset.data.pop();\n        });\n        chart.update();\n    }\n\n</script>\n\n\n\n",
         "output": "str",
-        "x": 860,
-        "y": 240,
+        "x": 740,
+        "y": 200,
         "wires": [
             [
-                "78515082550cdaf2"
+                "ee10e75eb6c917e8"
             ]
         ]
     },
     {
-        "id": "d457e075ac825cb5",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/socket.io-3.1.1.min.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 550,
-        "y": 280,
-        "wires": [
-            [
-                "9fbc129fa6394326"
-            ]
-        ]
-    },
-    {
-        "id": "b796d646016935f0",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "jquery",
-        "field": "payload.jquery",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 850,
-        "y": 320,
-        "wires": [
-            [
-                "44c3730ff5adc318"
-            ]
-        ]
-    },
-    {
-        "id": "a88f51e66fb17714",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/jquery.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 500,
-        "y": 320,
-        "wires": [
-            [
-                "b796d646016935f0"
-            ]
-        ]
-    },
-    {
-        "id": "8c30ea56a34d3ed6",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/chat.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 500,
-        "y": 360,
-        "wires": [
-            [
-                "c64ccc73f797daeb"
-            ]
-        ]
-    },
-    {
-        "id": "c64ccc73f797daeb",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "chat",
-        "field": "payload.chat",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 850,
-        "y": 360,
-        "wires": [
-            [
-                "8623bdd3929c0b5e"
-            ]
-        ]
-    },
-    {
-        "id": "1cd090be8ed507a2",
-        "type": "file in",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "",
-        "filename": "web/chat/script.js",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 500,
-        "y": 440,
-        "wires": [
-            [
-                "6126de06636f2a66"
-            ]
-        ]
-    },
-    {
-        "id": "6126de06636f2a66",
-        "type": "template",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "script",
-        "field": "payload.script",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "plain",
-        "template": "{{msg.payload}}",
-        "output": "str",
-        "x": 850,
-        "y": 440,
-        "wires": [
-            [
-                "851ec4f2ca907ce4"
-            ]
-        ]
-    },
-    {
-        "id": "78515082550cdaf2",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.style",
-        "func": "msg.style = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 240,
-        "wires": [
-            [
-                "d457e075ac825cb5"
-            ]
-        ]
-    },
-    {
-        "id": "8d39370d898accaf",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "function 11",
-        "func": "msg.url = `/chat`;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 290,
-        "y": 240,
-        "wires": [
-            [
-                "9d495d79ebc38951"
-            ]
-        ]
-    },
-    {
-        "id": "757d2c26dbe0099b",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.spectrum",
-        "func": "msg.socket_io = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
-        "y": 280,
-        "wires": [
-            [
-                "a88f51e66fb17714"
-            ]
-        ]
-    },
-    {
-        "id": "44c3730ff5adc318",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.colormap",
-        "func": "msg.jquery = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1070,
-        "y": 320,
-        "wires": [
-            [
-                "8c30ea56a34d3ed6"
-            ]
-        ]
-    },
-    {
-        "id": "8623bdd3929c0b5e",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.chat",
-        "func": "msg.chat = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 360,
-        "wires": [
-            [
-                "1cd090be8ed507a2"
-            ]
-        ]
-    },
-    {
-        "id": "851ec4f2ca907ce4",
-        "type": "function",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "name": "set msg.script",
-        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1060,
-        "y": 440,
-        "wires": [
-            [
-                "cbf50d9eb89da5d2"
-            ]
-        ]
-    },
-    {
-        "id": "9d1da64159907870",
+        "id": "a107f00bdb17bc4a",
         "type": "http in",
-        "z": "27bb1861e8b5803b",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
         "name": "",
-        "url": "/chat",
+        "url": "/constel",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 120,
-        "y": 80,
+        "x": 130,
+        "y": 200,
         "wires": [
             [
-                "34ce25461d4e6d42"
+                "4b8450fb54f0169b"
             ]
         ]
     },
     {
-        "id": "34ce25461d4e6d42",
+        "id": "4b8450fb54f0169b",
+        "type": "function",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "set pluto, callsign and hosting_url",
+        "func": "msg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nmsg.hosting_url = global.get(\"device.hosting_url\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "9ff2a02ce6c83cc8"
+            ]
+        ]
+    },
+    {
+        "id": "48fa401a9ff33366",
+        "type": "change",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/javascript",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 140,
+        "wires": [
+            [
+                "ee10e75eb6c917e8"
+            ]
+        ]
+    },
+    {
+        "id": "0bac2366e4f641c2",
         "type": "file in",
-        "z": "27bb1861e8b5803b",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
         "name": "",
-        "filename": "web/chat.html",
+        "filename": "web/constel/chart.js",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 270,
-        "y": 80,
+        "x": 350,
+        "y": 140,
         "wires": [
             [
-                "e0101a5a9a04f1aa"
+                "48fa401a9ff33366"
             ]
         ]
     },
     {
-        "id": "e0101a5a9a04f1aa",
-        "type": "http response",
-        "z": "27bb1861e8b5803b",
+        "id": "26f182035e65ae1d",
+        "type": "http in",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
         "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 420,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "4de0745ac50ff8b8",
-        "type": "ui_iframe",
-        "z": "27bb1861e8b5803b",
-        "d": true,
-        "group": "d2e4abefdc42e427",
-        "name": "chat iframe",
-        "order": 2,
-        "width": "32",
-        "height": "8",
-        "url": "/chat",
-        "origin": "*",
-        "scale": 100,
+        "url": "/chart.js",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
         "x": 130,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7db57965.76d468",
-        "type": "ui_button",
-        "z": "27bb1861e8b5803b",
-        "name": "",
-        "group": "65d91b75202c3b55",
-        "order": 19,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "chat",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "chat",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 610,
-        "y": 80,
+        "y": 140,
         "wires": [
             [
-                "ece06122.7e762"
+                "0bac2366e4f641c2"
             ]
         ]
     },
     {
-        "id": "5e1f0081.6dc3c",
-        "type": "ui_template",
-        "z": "27bb1861e8b5803b",
-        "group": "65d91b75202c3b55",
-        "name": "window redirect",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "format": "<script>\n(function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        if (data == \"chat\") {\n          window.open(\"http://127.0.0.1:1880/chat\");\n        } \n        // if (data == \"GitHub\") {\n        //   //window.open(\"https://github.com/node-red\");\n        //   window.location.href = \"https://github.com/node-red\";\n        // } \n    });\n})(scope);\n</script>",
-        "storeOutMessages": false,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 960,
-        "y": 80,
+        "id": "8a1fb5a4ffa544fd",
+        "type": "ui_iframe",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "group": "bd40e71dca80ef04",
+        "name": "Constellation",
+        "order": 2,
+        "width": "5",
+        "height": "5",
+        "url": "/constel",
+        "origin": "",
+        "scale": "100",
+        "x": 970,
+        "y": 200,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "ece06122.7e762",
-        "type": "trigger",
-        "z": "27bb1861e8b5803b",
-        "name": "reset msg",
-        "op1": "",
-        "op2": "empty",
-        "op1type": "pay",
-        "op2type": "str",
-        "duration": "250",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 780,
-        "y": 80,
-        "wires": [
-            [
-                "5e1f0081.6dc3c"
-            ]
         ]
     },
     {
@@ -23236,8 +22136,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 1900,
+        "x": 860,
+        "y": 1720,
         "wires": []
     },
     {
@@ -23260,8 +22160,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
-        "y": 1840,
+        "x": 290,
+        "y": 1660,
         "wires": [
             [
                 "8b74e5e219711233"
@@ -23280,8 +22180,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 1840,
+        "x": 620,
+        "y": 1660,
         "wires": [
             [
                 "2d249c596e884cd8",
@@ -23301,8 +22201,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "copy to clipboard",
-        "x": 690,
-        "y": 1840,
+        "x": 870,
+        "y": 1660,
         "wires": [
             [],
             [],
@@ -23314,8 +22214,8 @@
         "type": "OS",
         "z": "d7c58eb9e7b65abb",
         "name": "",
-        "x": 250,
-        "y": 1840,
+        "x": 430,
+        "y": 1660,
         "wires": [
             [
                 "32bc79c700bb824b"
@@ -23357,37 +22257,6 @@
         "wires": [
             [
                 "ddcdf74a1e7fe17b"
-            ]
-        ]
-    },
-    {
-        "id": "ee10e75eb6c917e8",
-        "type": "http response",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "",
-        "x": 910,
-        "y": 1680,
-        "wires": []
-    },
-    {
-        "id": "02f3e9ac818c03e0",
-        "type": "file in",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "",
-        "filename": "web/pluto_spectrum/vendor/mqtt.min.js",
-        "filenameType": "str",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 420,
-        "y": 1620,
-        "wires": [
-            [
-                "819d5b65838d0f8c"
             ]
         ]
     },
@@ -23454,28 +22323,190 @@
         "wires": []
     },
     {
-        "id": "51d2c788419a360e",
+        "id": "01cd46f702ab295a",
         "type": "http in",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
         "name": "",
-        "url": "/mqtt_min.js",
+        "url": "/spektrum_test",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 140,
-        "y": 1620,
+        "x": 670,
+        "y": 80,
         "wires": [
             [
-                "02f3e9ac818c03e0"
+                "2acadfcfdd128dd9"
             ]
         ]
     },
     {
-        "id": "819d5b65838d0f8c",
+        "id": "f7591f90facf0e0b",
+        "type": "http response",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "",
+        "x": 1010,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2acadfcfdd128dd9",
+        "type": "template",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<link rel=\"stylesheet\" href=\"/internet_spectrum/style.css\">\n<script src=\"/internet_spectrum/websocket.js\"></script>\n<script> \n    var localPage = false;\n</script>\n<script async src=\"/internet_spectrum/script.js\"></script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "output": "str",
+        "x": 850,
+        "y": 80,
+        "wires": [
+            [
+                "f7591f90facf0e0b"
+            ]
+        ]
+    },
+    {
+        "id": "bbf9e870bbb3141b",
+        "type": "ui_iframe",
+        "z": "e2c54979685d14cb",
+        "g": "9b97da84f20d2dc4",
+        "group": "235bdacf6041386f",
+        "name": "spectrum iframe",
+        "order": 2,
+        "width": "18",
+        "height": "10",
+        "url": "/spektrum_test",
+        "origin": "*",
+        "scale": "100",
+        "x": 1160,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40362380a38ea4c4",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
+        "name": "",
+        "filename": "web/internet_spectrum/style.css",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "c265fbc2639366a2"
+            ]
+        ]
+    },
+    {
+        "id": "5a1f6104e1ceca1d",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
+        "name": "",
+        "url": "/internet_spectrum/style.css",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "40362380a38ea4c4"
+            ]
+        ]
+    },
+    {
+        "id": "c265fbc2639366a2",
         "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/css",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 200,
+        "wires": [
+            [
+                "f7591f90facf0e0b"
+            ]
+        ]
+    },
+    {
+        "id": "a96d8fa6d1a40a14",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
+        "name": "",
+        "filename": "web/internet_spectrum/script.js",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "496ca8b3595b7b48"
+            ]
+        ]
+    },
+    {
+        "id": "0cafa97494de79ac",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
+        "name": "",
+        "url": "/internet_spectrum/script.js",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "a96d8fa6d1a40a14"
+            ]
+        ]
+    },
+    {
+        "id": "496ca8b3595b7b48",
+        "type": "change",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
         "name": "Set Headers",
         "rules": [
             {
@@ -23498,92 +22529,272 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 1620,
+        "x": 830,
+        "y": 280,
         "wires": [
             [
-                "ee10e75eb6c917e8"
+                "f7591f90facf0e0b"
             ]
         ]
     },
     {
-        "id": "9ff2a02ce6c83cc8",
-        "type": "template",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "HTML",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot2</title>\n\n<canvas id=\"constellationChart\" style=\"width:100%;height:100%;\"></canvas>\n<script src=\"/chart.js\"></script>\n<script src=\"/mqtt_min.js\"></script>\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var callsign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n    function mqtt_client() {\n        let x, y = 0;\n        let data = [];\n        let chart = new Chart(\"constellationChart\", {\n            type: \"scatter\",\n            data: {\n                datasets: [{\n                    pointRadius: 1,\n                    pointBackgroundColor: \"rgb(55,255,0)\",\n                    data: data\n                }]\n            },\n            options: {\n                legend: {display: false},\n                showLines: false,\n                scales: {\n                    xAxes: [{ticks:{min: -90,max: 90}}],\n                    yAxes: [{ticks:{min: -90,max: 90}}],\n                }\n            }\n        });\n        // let hosting_url = \"192.168.1.111\";\n        // let pluto_url = hosting_url;\n        // let callsign = \"ZS1SCI\";\n        if (hosting_url !== \"\" && window.location.hostname === hosting_url) {\n            pluto_url = hosting_url;\n            console.log(\"MQTT hostname: \" + window.location.hostname)\n            console.log(\"MQTT pluto_url: \" + pluto_url)\n        }\n        let url = `ws://${pluto_url}:9001`;\n        const options = {\n            // Clean session\n            clean: true,\n            connectTimeout: 4000,\n            // Authentication\n            clientId: \"pluto\" + new Date().getUTCMilliseconds(),\n            username: \"root\",\n            password: \"analog\",\n        };\n        const client = mqtt.connect(url, options);\n        console.log(\"callsign: \" + callsign);\n        console.log(\"url: \" + url);\n        client.on(\"connect\", function () {\n            console.log(\"Connected MQTT\");\n            // Subscribe to a topic\n            client.subscribe(`dt/longmynd/constel_q`, () => {\n            });\n            client.subscribe(`dt/longmynd/constel_i`, () => {\n            });\n            client.subscribe(`dt/longmynd/rx_state`, () => {\n            });\n            client.subscribe(`cmd/longmynd/frequency`, () => {\n            });\n        });\n        client.on(\"message\", function (topic, message) {\n            if (data.length > 1000) {\n                data = data.slice(2)\n                updateChart(chart, data)\n                removeData(chart);\n                removeData(chart);\n                // console.log(data);\n            }\n            if (topic === `dt/longmynd/rx_state`) {\n                if (message.toString() === \"Hunting\") {\n                    console.log(\"clear\");\n                    data = []\n                    updateChart(chart, data)\n                    return;\n                }\n            }\n            if (topic === `cmd/longmynd/frequency`) {\n                console.log(\"clear\");\n                data = []\n                updateChart(chart, data)\n                return;\n            }\n            if (topic === `dt/longmynd/constel_i`) {\n                x = Number(message.toString());\n                // y = Number(message.toString());\n                // console.log(\"constel_i: \" + x);\n            }\n            if (topic === `dt/longmynd/constel_q`) {\n                // x = Number(message.toString());\n                y = Number(message.toString());\n                // console.log(\"constel_q: \" + y);\n            }\n            if(y === 0 || x === 0) return;\n            let obj = {\n                x: x,\n                y: y\n            };\n            data.push(obj)\n\n            addData(chart,`${x}${y}` ,obj);\n        });\n    }\n\n\n    mqtt_client();\n\n    function updateChart(chart, data) {\n        chart.data.datasets[0].data = data;\n        chart.update('none');\n    }\n\n    function addData(chart, label, newData) {\n        chart.data.labels.push(label);\n        chart.data.datasets.forEach((dataset) => {\n            dataset.data.push(newData);\n        });\n        chart.update();\n    }\n\n    function removeData(chart) {\n        chart.data.labels.pop();\n        chart.data.datasets.forEach((dataset) => {\n            dataset.data.pop();\n        });\n        chart.update();\n    }\n\n</script>\n\n\n\n",
-        "output": "str",
-        "x": 630,
-        "y": 1740,
-        "wires": [
-            [
-                "ee10e75eb6c917e8"
-            ]
-        ]
-    },
-    {
-        "id": "a107f00bdb17bc4a",
-        "type": "http in",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
+        "id": "0a1fe3cce13a2b95",
+        "type": "file in",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
         "name": "",
-        "url": "/constel",
+        "filename": "web/internet_spectrum/websocket.js",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "2a3dc125f08d620e"
+            ]
+        ]
+    },
+    {
+        "id": "6fcf19edb84cb384",
+        "type": "http in",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
+        "name": "",
+        "url": "/internet_spectrum/websocket.js",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 130,
-        "y": 1740,
+        "x": 230,
+        "y": 340,
         "wires": [
             [
-                "4b8450fb54f0169b"
+                "0a1fe3cce13a2b95"
             ]
         ]
     },
     {
-        "id": "4b8450fb54f0169b",
+        "id": "2a3dc125f08d620e",
+        "type": "change",
+        "z": "e2c54979685d14cb",
+        "g": "97fae7a46f8ffe23",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/javascript",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 340,
+        "wires": [
+            [
+                "f7591f90facf0e0b"
+            ]
+        ]
+    },
+    {
+        "id": "390ac0996bfbf3e8",
+        "type": "ui_form",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "label": "Minitioune receiver",
+        "group": "b774f32781d086fb",
+        "order": 6,
+        "width": "13",
+        "height": "6",
+        "options": [
+            {
+                "label": "ip_address",
+                "value": "ip_address",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "port",
+                "value": "port",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "offset",
+                "value": "offset",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "rx_socket",
+                "value": "rx_socket",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_volts",
+                "value": "lnb_volts",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_22khz",
+                "value": "lnb_22khz",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "dvb_mode",
+                "value": "dvb_mode",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "wide_scan",
+                "value": "wide_scan",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "low_sr",
+                "value": "low_sr",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ip_address": "",
+            "port": "",
+            "offset": "",
+            "rx_socket": "",
+            "lnb_volts": "",
+            "lnb_22khz": "",
+            "dvb_mode": "",
+            "wide_scan": "",
+            "low_sr": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "6f0dfc4da4e5adba"
+            ]
+        ]
+    },
+    {
+        "id": "3c880cfa489b99ba",
         "type": "function",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "set pluto, callsign and hosting_url",
-        "func": "msg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nmsg.hosting_url = global.get(\"device.hosting_url\");\nreturn msg;",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "settings file path",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 1740,
+        "x": 640,
+        "y": 100,
         "wires": [
             [
-                "9ff2a02ce6c83cc8"
+                "583e05834ada403d"
             ]
         ]
     },
     {
-        "id": "48fa401a9ff33366",
+        "id": "583e05834ada403d",
+        "type": "file in",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 820,
+        "y": 100,
+        "wires": [
+            [
+                "56dc16b9e1976cab"
+            ]
+        ]
+    },
+    {
+        "id": "56dc16b9e1976cab",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add receiver",
+        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 100,
+        "wires": [
+            [
+                "1e70a3d6fd597ab5"
+            ]
+        ]
+    },
+    {
+        "id": "6f0dfc4da4e5adba",
         "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "Set Headers",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "headers",
+                "p": "form",
                 "pt": "msg",
-                "to": "{}",
-                "tot": "json"
+                "to": "payload",
+                "tot": "msg"
             },
             {
                 "t": "set",
-                "p": "headers.content-type",
+                "p": "form.type",
                 "pt": "msg",
-                "to": "text/javascript",
+                "to": "Minitioune",
                 "tot": "str"
             }
         ],
@@ -23592,70 +22803,919 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 1680,
+        "x": 420,
+        "y": 100,
         "wires": [
             [
-                "ee10e75eb6c917e8"
+                "3c880cfa489b99ba"
             ]
         ]
     },
     {
-        "id": "0bac2366e4f641c2",
-        "type": "file in",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
+        "id": "735e31a90de36b9a",
+        "type": "debug",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add minitiouner",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1e70a3d6fd597ab5",
+        "type": "file",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
         "name": "",
-        "filename": "web/constel/chart.js",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1200,
+        "y": 100,
+        "wires": [
+            [
+                "735e31a90de36b9a",
+                "86a51f94eab9e839"
+            ]
+        ]
+    },
+    {
+        "id": "d1aea45a350e8689",
+        "type": "inject",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "86a51f94eab9e839"
+            ]
+        ]
+    },
+    {
+        "id": "86a51f94eab9e839",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "settings file path",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "8822bec48f5c42d6"
+            ]
+        ]
+    },
+    {
+        "id": "8822bec48f5c42d6",
+        "type": "file in",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "282aef0db727d395"
+            ]
+        ]
+    },
+    {
+        "id": "ae1646fbdd5d8b9c",
+        "type": "ui_list",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "group": "b774f32781d086fb",
+        "name": "",
+        "order": 6,
+        "width": "26",
+        "height": "6",
+        "lineType": "two",
+        "actionType": "check",
+        "allowHTML": false,
+        "outputs": 1,
+        "topic": "",
+        "x": 1110,
+        "y": 180,
+        "wires": [
+            [
+                "8ebc9dd6c04d47a7"
+            ]
+        ]
+    },
+    {
+        "id": "282aef0db727d395",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "create list from JSON",
+        "func": "let receivers = JSON.parse(msg.payload);\nlet array = [];\nfor (let index = 0; index < receivers.length; index++) {\n    const element = receivers[index];\n    \n    let obj = {\n        \"title\": `CH${index+1} -> ${element.type} - IP: ${element.ip_address} - Port: ${element.port} - Offset: ${element.offset} kHz - Socket: ${element.rx_socket}`,\n        \"icon_name\": \"fa-podcast\"\n    }\n    array.push(obj);\n}\nmsg.payload = array;\nreturn msg;\n\n\n// payloadarray\n// Array of objects containing following properties:\n// title - title of the item,\n// description - description of the item. Optional if line type is Single-line or action type is menu,\n// menu - list of menu items (optional),\n// icon - URL of icon (optional),\n// icon_name - font icon name (optional).\n// icon_unicode - alternative to icon name - uses text characters (optional).\n// isChecked - boolean, set the item checked or on (optional).",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 180,
+        "wires": [
+            [
+                "ae1646fbdd5d8b9c"
+            ]
+        ]
+    },
+    {
+        "id": "a51c17448cbde903",
+        "type": "ui_form",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "label": "Winterhill receiver",
+        "group": "b774f32781d086fb",
+        "order": 6,
+        "width": "13",
+        "height": "6",
+        "options": [
+            {
+                "label": "ip_address",
+                "value": "ip_address",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "port",
+                "value": "port",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "offset",
+                "value": "offset",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "rx_socket",
+                "value": "rx_socket",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_volts",
+                "value": "lnb_volts",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "lnb_22khz",
+                "value": "lnb_22khz",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ip_address": "",
+            "port": "",
+            "offset": "",
+            "rx_socket": "",
+            "lnb_volts": "",
+            "lnb_22khz": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "0d7bed971ef2d798"
+            ]
+        ]
+    },
+    {
+        "id": "b74cbbf79c7b8ecc",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "settings file path",
+        "func": "if (global.get(\"platform\") === \"linux\") {\n    msg.filename = \"settings/receivers.json\";\n    return msg;\n}\nmsg.filename = \"settings\\\\receivers.json\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "731a3c957fc08056"
+            ]
+        ]
+    },
+    {
+        "id": "731a3c957fc08056",
+        "type": "file in",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 820,
+        "y": 260,
+        "wires": [
+            [
+                "4330f69a2f5fe062"
+            ]
+        ]
+    },
+    {
+        "id": "4330f69a2f5fe062",
+        "type": "function",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add receiver",
+        "func": "let receivers = JSON.parse(msg.payload);\nreceivers.push(msg.form);\nglobal.set(\"receivers\", receivers);\nmsg.payload = receivers;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 260,
+        "wires": [
+            [
+                "4696f747c19341dd"
+            ]
+        ]
+    },
+    {
+        "id": "0d7bed971ef2d798",
+        "type": "change",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "form",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "form.type",
+                "pt": "msg",
+                "to": "Winterhill",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "b74cbbf79c7b8ecc"
+            ]
+        ]
+    },
+    {
+        "id": "7409d36e4650ab84",
+        "type": "debug",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "add winterhill",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4696f747c19341dd",
+        "type": "file",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1200,
+        "y": 260,
+        "wires": [
+            [
+                "7409d36e4650ab84",
+                "86a51f94eab9e839"
+            ]
+        ]
+    },
+    {
+        "id": "8ebc9dd6c04d47a7",
+        "type": "debug",
+        "z": "71a32338963256e1",
+        "g": "b40c8f098d8e9ccc",
+        "name": "checked receivers",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c89e4837c83d2853",
+        "type": "http in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "8d39370d898accaf"
+            ]
+        ]
+    },
+    {
+        "id": "9fbc129fa6394326",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "socket_io",
+        "field": "payload.socket_io",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 860,
+        "y": 280,
+        "wires": [
+            [
+                "757d2c26dbe0099b"
+            ]
+        ]
+    },
+    {
+        "id": "fd9ac23c6e70a5aa",
+        "type": "http response",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "x": 1470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "cbf50d9eb89da5d2",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>QO-100 Wideband Chat</title>\n    <meta name=\"description\" content=\"BATC & AMSAT-UK Qatar-OSCAR 100 (Es'hail-2) Wideband Chat-only page\">\n    <meta name=\"author\" content=\"BATC & AMSAT-UK\">\n\n    <style>{{&style}}</style>\n    <script>{{&jquery}}</script>\n    <script>{{&socket_io}}</script>\n    <script>{{&chat}}</script>\n    <script>{{&script}}</script>\n \n</head>\n<body>\n\t<div id=\"chat\"></div>\n</body>\n</html>\n",
+        "x": 1290,
+        "y": 340,
+        "wires": [
+            [
+                "fd9ac23c6e70a5aa"
+            ]
+        ]
+    },
+    {
+        "id": "9d495d79ebc38951",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/style.css",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 350,
-        "y": 1680,
+        "x": 510,
+        "y": 240,
         "wires": [
             [
-                "48fa401a9ff33366"
+                "f669a447f3e908ed"
             ]
         ]
     },
     {
-        "id": "26f182035e65ae1d",
-        "type": "http in",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
+        "id": "f669a447f3e908ed",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "style.css",
+        "field": "payload.style",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 860,
+        "y": 240,
+        "wires": [
+            [
+                "78515082550cdaf2"
+            ]
+        ]
+    },
+    {
+        "id": "d457e075ac825cb5",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
         "name": "",
-        "url": "/chart.js",
+        "filename": "web/chat/socket.io-3.1.1.min.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "9fbc129fa6394326"
+            ]
+        ]
+    },
+    {
+        "id": "b796d646016935f0",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "jquery",
+        "field": "payload.jquery",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 320,
+        "wires": [
+            [
+                "44c3730ff5adc318"
+            ]
+        ]
+    },
+    {
+        "id": "a88f51e66fb17714",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/jquery.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "b796d646016935f0"
+            ]
+        ]
+    },
+    {
+        "id": "8c30ea56a34d3ed6",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/chat.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "c64ccc73f797daeb"
+            ]
+        ]
+    },
+    {
+        "id": "c64ccc73f797daeb",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "chat",
+        "field": "payload.chat",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 360,
+        "wires": [
+            [
+                "8623bdd3929c0b5e"
+            ]
+        ]
+    },
+    {
+        "id": "1cd090be8ed507a2",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "",
+        "filename": "web/chat/script.js",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 500,
+        "y": 440,
+        "wires": [
+            [
+                "6126de06636f2a66"
+            ]
+        ]
+    },
+    {
+        "id": "6126de06636f2a66",
+        "type": "template",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "script",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "{{msg.payload}}",
+        "output": "str",
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "851ec4f2ca907ce4"
+            ]
+        ]
+    },
+    {
+        "id": "78515082550cdaf2",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.style",
+        "func": "msg.style = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            [
+                "d457e075ac825cb5"
+            ]
+        ]
+    },
+    {
+        "id": "8d39370d898accaf",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "function 11",
+        "func": "msg.url = `/chat`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "9d495d79ebc38951"
+            ]
+        ]
+    },
+    {
+        "id": "757d2c26dbe0099b",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.spectrum",
+        "func": "msg.socket_io = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 280,
+        "wires": [
+            [
+                "a88f51e66fb17714"
+            ]
+        ]
+    },
+    {
+        "id": "44c3730ff5adc318",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.colormap",
+        "func": "msg.jquery = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 320,
+        "wires": [
+            [
+                "8c30ea56a34d3ed6"
+            ]
+        ]
+    },
+    {
+        "id": "8623bdd3929c0b5e",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.chat",
+        "func": "msg.chat = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 360,
+        "wires": [
+            [
+                "1cd090be8ed507a2"
+            ]
+        ]
+    },
+    {
+        "id": "851ec4f2ca907ce4",
+        "type": "function",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "name": "set msg.script",
+        "func": "msg.script = msg.payload;\nmsg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 440,
+        "wires": [
+            [
+                "cbf50d9eb89da5d2"
+            ]
+        ]
+    },
+    {
+        "id": "9d1da64159907870",
+        "type": "http in",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "url": "/chat",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 130,
-        "y": 1680,
+        "x": 120,
+        "y": 80,
         "wires": [
             [
-                "0bac2366e4f641c2"
+                "34ce25461d4e6d42"
             ]
         ]
     },
     {
-        "id": "8a1fb5a4ffa544fd",
+        "id": "34ce25461d4e6d42",
+        "type": "file in",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "filename": "web/chat.html",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "e0101a5a9a04f1aa"
+            ]
+        ]
+    },
+    {
+        "id": "e0101a5a9a04f1aa",
+        "type": "http response",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 420,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4de0745ac50ff8b8",
         "type": "ui_iframe",
-        "z": "d7c58eb9e7b65abb",
-        "g": "9c7cb0f498a9f7e2",
-        "group": "bd40e71dca80ef04",
-        "name": "Constellation",
+        "z": "27bb1861e8b5803b",
+        "d": true,
+        "group": "d2e4abefdc42e427",
+        "name": "chat iframe",
         "order": 2,
-        "width": "5",
-        "height": "5",
-        "url": "/constel",
-        "origin": "",
-        "scale": "100",
-        "x": 850,
-        "y": 1740,
+        "width": "32",
+        "height": "8",
+        "url": "/chat",
+        "origin": "*",
+        "scale": 100,
+        "x": 130,
+        "y": 180,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "7db57965.76d468",
+        "type": "ui_button",
+        "z": "27bb1861e8b5803b",
+        "name": "",
+        "group": "65d91b75202c3b55",
+        "order": 19,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "chat",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "chat",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "ece06122.7e762"
+            ]
+        ]
+    },
+    {
+        "id": "5e1f0081.6dc3c",
+        "type": "ui_template",
+        "z": "27bb1861e8b5803b",
+        "group": "65d91b75202c3b55",
+        "name": "window redirect",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        if (data == \"chat\") {\n          window.open(\"http://127.0.0.1:1880/chat\");\n        } \n        // if (data == \"GitHub\") {\n        //   //window.open(\"https://github.com/node-red\");\n        //   window.location.href = \"https://github.com/node-red\";\n        // } \n    });\n})(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ece06122.7e762",
+        "type": "trigger",
+        "z": "27bb1861e8b5803b",
+        "name": "reset msg",
+        "op1": "",
+        "op2": "empty",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 780,
+        "y": 80,
+        "wires": [
+            [
+                "5e1f0081.6dc3c"
+            ]
         ]
     },
     {
