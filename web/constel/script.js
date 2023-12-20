@@ -7,7 +7,7 @@ function mqtt_client() {
             datasets: [
                 {
                     pointRadius: 2,
-                    pointBackgroundColor: "rgb(11,193,11)",
+                    pointBackgroundColor: "rgba(11,193,11,1)",
                     data: data
                 },
                 // {
@@ -27,9 +27,10 @@ function mqtt_client() {
         options: {
             legend: {display: false},
             showLines: false,
-            animation: {
-                duration: 0
+            hover: {
+                animationDuration: 0, // duration of animations when hovering an item
             },
+            responsiveAnimationDuration: 0,
             scales: {
                 offset: true,
                 xAxes: [
@@ -50,8 +51,9 @@ function mqtt_client() {
                         gridLines: {
                             display: true,
                             color: "#727575",
-                            zeroLineColor: '#727575'
+                            zeroLineColor: '#A6A4A4'
                         },
+                        categorySpacing: 10
                         // suggestedMin: -90
                     }],
                 yAxes: [
@@ -72,8 +74,9 @@ function mqtt_client() {
                         gridLines: {
                             display: true,
                             color: "#727575",
-                            zeroLineColor: '#727575'
+                            zeroLineColor: '#A6A4A4'
                         },
+                        categorySpacing: 10
                         // suggestedMin: -90
                     }],
             }

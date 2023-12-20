@@ -265,7 +265,7 @@ Spectrum.prototype.detect_signals = function (
                                 */
 
                 /* Sanity check bandwidth, and exclude beacon */
-                if (signal_bw != 0) {
+                if (signal_bw !== 0) {
                     text_x_position = (mid_signal / fft_data.length) * canvasWidth;
 
                     /* Adjust for right-side overlap */
@@ -360,7 +360,7 @@ Spectrum.prototype.drawChannels = function (ctx) {
 
     function draw_channel(center_frequency, bandwidth, line_height) {
         if (typeof freq_info !== "undefined") {
-            if (freq_info.length == 44) freq_info = []; // hack to avoid continued push(). better to precompute all points and draw.
+            if (freq_info.length === 44) freq_info = []; // hack to avoid continued push(). better to precompute all points and draw.
             freq_info.push({
                 x1:
                     (center_frequency - rolloff * bandwidth - _start_freq) * (width / 9),
@@ -474,7 +474,7 @@ Spectrum.prototype.drawSpectrum = function (bins) {
 
     // FFT averaging
     if (this.averaging > 0) {
-        if (!this.binsAverage || this.binsAverage.length != bins.length) {
+        if (!this.binsAverage || this.binsAverage.length !== bins.length) {
             this.binsAverage = Array.from(bins);
         } else {
             for (var i = 0; i < bins.length; i++) {
@@ -486,7 +486,7 @@ Spectrum.prototype.drawSpectrum = function (bins) {
 
     // Max hold
     if (this.maxHold) {
-        if (!this.binsMax || this.binsMax.length != bins.length) {
+        if (!this.binsMax || this.binsMax.length !== bins.length) {
             this.binsMax = Array.from(bins);
         } else {
             for (var i = 0; i < bins.length; i++) {
@@ -772,7 +772,7 @@ function round(value, step) {
 }
 
 function is_overpower(beacon_strength, signal_strength, signal_bw) {
-    if (beacon_strength != 0) {
+    if (beacon_strength !== 0) {
         if (signal_bw < 0.4) {
             // < 1MS
             return false;
@@ -817,10 +817,10 @@ Spectrum.prototype.updateAxes = function () {
 
         if (this.spanHz > 0) {
             let adjust = 0;
-            if (i == 0) {
+            if (i === 0) {
                 this.ctx_axes.textAlign = "left";
                 adjust = 3;
-            } else if (i == 10) {
+            } else if (i === 10) {
                 this.ctx_axes.textAlign = "right";
                 adjust = -3;
             } else {
@@ -846,7 +846,7 @@ Spectrum.prototype.addData = async function (data) {
     this.databin = new Uint16Array(data);
 
     if (!this.paused) {
-        if (this.databin.length != this.wf_size) {
+        if (this.databin.length !== this.wf_size) {
             this.wf_size = this.databin.length;
             this.ctx_wf.canvas.width = this.databin.length;
             this.ctx_wf.fillStyle = "black";
@@ -878,13 +878,13 @@ Spectrum.prototype.resize = function () {
     const width = this.canvas.clientWidth;
     const height = this.canvas.clientHeight;
 
-    if (this.canvas.width != width || this.canvas.height != height) {
+    if (this.canvas.width !== width || this.canvas.height !== height) {
         this.canvas.width = width;
         this.canvas.height = height;
         this.updateSpectrumRatio();
     }
 
-    if (this.axes.width != width || this.axes.height != this.spectrumHeight) {
+    if (this.axes.width !== width || this.axes.height !== this.spectrumHeight) {
         this.axes.width = width;
         this.axes.height = this.spectrumHeight;
         this.updateAxes();
@@ -1052,7 +1052,7 @@ Spectrum.prototype.decrementTuningStep = function () {
             this.tuningStep / Math.pow(10, parseInt(Math.log10(this.tuningStep)))
         );
 
-        if (firstDigit == 2) step = 2.5;
+        if (firstDigit === 2) step = 2.5;
         else step = 2;
 
         this.setTuningStep(this.tuningStep / step);

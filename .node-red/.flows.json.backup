@@ -589,7 +589,8 @@
             "7b165d480a2ae435",
             "a421a70d3ead9cd8",
             "a784bb0de8df6b05",
-            "193a32ea6df689be"
+            "193a32ea6df689be",
+            "12355048d9e03fdd"
         ],
         "x": 14,
         "y": 899,
@@ -719,12 +720,13 @@
             "93d8b2c69bdc7792",
             "7d0cac41101d2058",
             "cdd0f03b36b22781",
-            "8ee9aef755219d8b"
+            "8ee9aef755219d8b",
+            "2eb9a7d4d6079e45"
         ],
-        "x": 1994,
+        "x": 1954,
         "y": 1439,
-        "w": 312,
-        "h": 1642
+        "w": 352,
+        "h": 1682
     },
     {
         "id": "5ed3848da82bcc9a",
@@ -755,12 +757,13 @@
             "2b4b283274423aba",
             "35c6cd1a805aeca5",
             "f118040acbbf5f44",
-            "4aff6b42b30f122f"
+            "4aff6b42b30f122f",
+            "3845b79a049ba0b1"
         ],
         "x": 1394,
         "y": 1999,
         "w": 332,
-        "h": 762
+        "h": 802
     },
     {
         "id": "44bb8f59b40e58cf",
@@ -822,12 +825,13 @@
             "343e66e2cb1a67c3",
             "4a0642add9f7b983",
             "2d85a16a42027727",
-            "2d1d2f2c5a3e44b6"
+            "2d1d2f2c5a3e44b6",
+            "947313bf5f0e22d1"
         ],
         "x": 2334,
         "y": 1219,
         "w": 1172,
-        "h": 1722
+        "h": 1762
     },
     {
         "id": "9286ad1292f976c7",
@@ -903,9 +907,7 @@
             "bbf9e870bbb3141b"
         ],
         "x": 554,
-        "y": 39,
-        "w": 712,
-        "h": 82
+        "y": 39
     },
     {
         "id": "2406e32417780de0",
@@ -924,9 +926,7 @@
             "de3615657f5f8b75"
         ],
         "x": 48,
-        "y": 39,
-        "w": 1118,
-        "h": 368
+        "y": 39
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1003,9 +1003,7 @@
             "8ebc9dd6c04d47a7"
         ],
         "x": 54,
-        "y": 59,
-        "w": 1472,
-        "h": 242
+        "y": 59
     },
     {
         "id": "f06e928c83c73984",
@@ -1042,9 +1040,7 @@
             "b20d795a08271867"
         ],
         "x": 74,
-        "y": 959,
-        "w": 1292,
-        "h": 422
+        "y": 959
     },
     {
         "id": "97ecf1ac9459a777",
@@ -1094,9 +1090,7 @@
             "0c34bd3ef0714d28"
         ],
         "x": 54,
-        "y": 439,
-        "w": 1452,
-        "h": 502
+        "y": 439
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1314,6 +1308,176 @@
         "h": 305
     },
     {
+        "id": "9c7cb0f498a9f7e2",
+        "type": "group",
+        "z": "34bd429848bdfd07",
+        "name": "Constellation",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ee10e75eb6c917e8",
+            "9ff2a02ce6c83cc8",
+            "a107f00bdb17bc4a",
+            "4b8450fb54f0169b",
+            "48fa401a9ff33366",
+            "0bac2366e4f641c2",
+            "26f182035e65ae1d",
+            "8a1fb5a4ffa544fd",
+            "dd2992c2880bcc1f",
+            "692cfca16036ea93",
+            "966f8abcef78816c"
+        ],
+        "x": 34,
+        "y": -1
+    },
+    {
+        "id": "2a6eb2e492bee274",
+        "type": "group",
+        "z": "34bd429848bdfd07",
+        "name": "static vendor js file local spectrum uses this too",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "02f3e9ac818c03e0",
+            "51d2c788419a360e",
+            "819d5b65838d0f8c"
+        ],
+        "x": 34,
+        "y": 199
+    },
+    {
+        "id": "97fae7a46f8ffe23",
+        "type": "group",
+        "z": "e2c54979685d14cb",
+        "name": "static files for this flow",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "40362380a38ea4c4",
+            "5a1f6104e1ceca1d",
+            "c265fbc2639366a2",
+            "a96d8fa6d1a40a14",
+            "0cafa97494de79ac",
+            "496ca8b3595b7b48",
+            "0a1fe3cce13a2b95",
+            "6fcf19edb84cb384",
+            "2a3dc125f08d620e"
+        ],
+        "x": 54,
+        "y": 159
+    },
+    {
+        "id": "c070d9c6c2a6ac1b",
+        "type": "group",
+        "z": "d7c58eb9e7b65abb",
+        "name": "Signal report",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true
+        },
+        "nodes": [
+            "f6e02394155b93b8",
+            "da68bec334fc010b",
+            "32bc79c700bb824b",
+            "2d249c596e884cd8",
+            "8b74e5e219711233"
+        ],
+        "x": 194,
+        "y": 1611.5,
+        "w": 792,
+        "h": 149.5
+    },
+    {
+        "id": "850ce0dd6b054d30",
+        "type": "group",
+        "z": "27bb1861e8b5803b",
+        "name": "chat button and its iframe",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9d1da64159907870",
+            "34ce25461d4e6d42",
+            "e0101a5a9a04f1aa",
+            "7db57965.76d468",
+            "5e1f0081.6dc3c",
+            "ece06122.7e762"
+        ],
+        "x": 34,
+        "y": 39
+    },
+    {
+        "id": "f6c11774649f8d00",
+        "type": "group",
+        "z": "30d0afc93dfb235a",
+        "name": "enable these two to enable HTTP mode",
+        "style": {
+            "label": true,
+            "fill": "#92d04f"
+        },
+        "nodes": [
+            "511e874b9e79d9c1",
+            "60df7c8dc6d1de55"
+        ],
+        "x": 74,
+        "y": 19
+    },
+    {
+        "id": "936b15192e58877f",
+        "type": "group",
+        "z": "30d0afc93dfb235a",
+        "name": "MQTT control",
+        "style": {
+            "label": true,
+            "fill": "#9363b7"
+        },
+        "nodes": [
+            "a8596f60466f8cf4",
+            "4a2877dc5a808a1b",
+            "7dae242b8566df9b",
+            "4169371e544b9666",
+            "857224de9710110f",
+            "449f2a69fa24e7fd",
+            "ff147eec327f33fe",
+            "bc7c3ea6788d2b58",
+            "fabd30d9f5135abd",
+            "d625fe7265cbfada",
+            "29a3c6a207d493f9",
+            "b7d0059588d03318",
+            "33b81b6ee3d763f8"
+        ],
+        "x": 54,
+        "y": 559
+    },
+    {
+        "id": "4da866f299df009c",
+        "type": "group",
+        "z": "30d0afc93dfb235a",
+        "name": "HTTP control",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "f36ea5478cd26f4c",
+            "8e6e379dd23ad541",
+            "2d87948c62090044",
+            "3d1df83227b48c35",
+            "ce64bf27f1fae6be",
+            "cf17c69c227b6825",
+            "f90b10e6825765f0",
+            "e4b9db07aee76ef2",
+            "eef90d12fe67652d",
+            "70dc135bb18e2bd6",
+            "caa457b0361bf0ba"
+        ],
+        "x": 54,
+        "y": 119
+    },
+    {
         "id": "5c31dbeab217c8e9",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1394,6 +1558,35 @@
         "y": 399,
         "w": 492,
         "h": 82
+    },
+    {
+        "id": "de3615657f5f8b75",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "g": "2406e32417780de0",
+        "name": "static files for this flow",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "026128c195db1eef",
+            "627cec867371bde2",
+            "3c45a7075be468c5",
+            "b64eeea466d6cd08",
+            "966872edde445388",
+            "eecde73600e53333",
+            "dc26a162f73df5e8",
+            "6312034bd95423a1",
+            "1f4aee22e5bdb8cb",
+            "a29f718da4699db4",
+            "adf66d2e6169af92",
+            "12183c5ef3ad71e6",
+            "647b655c9e80836a",
+            "edb6738c089743d7",
+            "0dd67a65a9a17989"
+        ],
+        "x": 74,
+        "y": 139
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -1501,221 +1694,6 @@
         "y": 1479,
         "w": 332,
         "h": 202
-    },
-    {
-        "id": "9c7cb0f498a9f7e2",
-        "type": "group",
-        "z": "34bd429848bdfd07",
-        "name": "Constellation",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "ee10e75eb6c917e8",
-            "9ff2a02ce6c83cc8",
-            "a107f00bdb17bc4a",
-            "4b8450fb54f0169b",
-            "48fa401a9ff33366",
-            "0bac2366e4f641c2",
-            "26f182035e65ae1d",
-            "8a1fb5a4ffa544fd",
-            "dd2992c2880bcc1f",
-            "692cfca16036ea93",
-            "966f8abcef78816c"
-        ],
-        "x": 34,
-        "y": -1,
-        "w": 1032,
-        "h": 182
-    },
-    {
-        "id": "2a6eb2e492bee274",
-        "type": "group",
-        "z": "34bd429848bdfd07",
-        "name": "static vendor js file local spectrum uses this too",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "02f3e9ac818c03e0",
-            "51d2c788419a360e",
-            "819d5b65838d0f8c"
-        ],
-        "x": 34,
-        "y": 199,
-        "w": 752,
-        "h": 82
-    },
-    {
-        "id": "97fae7a46f8ffe23",
-        "type": "group",
-        "z": "e2c54979685d14cb",
-        "name": "static files for this flow",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "40362380a38ea4c4",
-            "5a1f6104e1ceca1d",
-            "c265fbc2639366a2",
-            "a96d8fa6d1a40a14",
-            "0cafa97494de79ac",
-            "496ca8b3595b7b48",
-            "0a1fe3cce13a2b95",
-            "6fcf19edb84cb384",
-            "2a3dc125f08d620e"
-        ],
-        "x": 54,
-        "y": 159,
-        "w": 872,
-        "h": 222
-    },
-    {
-        "id": "c070d9c6c2a6ac1b",
-        "type": "group",
-        "z": "d7c58eb9e7b65abb",
-        "name": "Signal report",
-        "style": {
-            "fill": "#3f93cf",
-            "label": true
-        },
-        "nodes": [
-            "f6e02394155b93b8",
-            "da68bec334fc010b",
-            "32bc79c700bb824b",
-            "2d249c596e884cd8",
-            "8b74e5e219711233"
-        ],
-        "x": 194,
-        "y": 1611.5,
-        "w": 792,
-        "h": 149.5
-    },
-    {
-        "id": "de3615657f5f8b75",
-        "type": "group",
-        "z": "9d964f25dcc4d750",
-        "g": "2406e32417780de0",
-        "name": "static files for this flow",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "026128c195db1eef",
-            "627cec867371bde2",
-            "3c45a7075be468c5",
-            "b64eeea466d6cd08",
-            "966872edde445388",
-            "eecde73600e53333",
-            "dc26a162f73df5e8",
-            "6312034bd95423a1",
-            "1f4aee22e5bdb8cb",
-            "a29f718da4699db4",
-            "adf66d2e6169af92",
-            "12183c5ef3ad71e6",
-            "647b655c9e80836a",
-            "edb6738c089743d7",
-            "0dd67a65a9a17989"
-        ],
-        "x": 74,
-        "y": 139,
-        "w": 872,
-        "h": 242
-    },
-    {
-        "id": "850ce0dd6b054d30",
-        "type": "group",
-        "z": "27bb1861e8b5803b",
-        "name": "chat button and its iframe",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "9d1da64159907870",
-            "34ce25461d4e6d42",
-            "e0101a5a9a04f1aa",
-            "7db57965.76d468",
-            "5e1f0081.6dc3c",
-            "ece06122.7e762"
-        ],
-        "x": 34,
-        "y": 39,
-        "w": 1032,
-        "h": 82
-    },
-    {
-        "id": "f6c11774649f8d00",
-        "type": "group",
-        "z": "30d0afc93dfb235a",
-        "name": "enable these two to enable HTTP mode",
-        "style": {
-            "label": true,
-            "fill": "#92d04f"
-        },
-        "nodes": [
-            "511e874b9e79d9c1",
-            "60df7c8dc6d1de55"
-        ],
-        "x": 74,
-        "y": 19,
-        "w": 692,
-        "h": 82
-    },
-    {
-        "id": "936b15192e58877f",
-        "type": "group",
-        "z": "30d0afc93dfb235a",
-        "name": "MQTT control",
-        "style": {
-            "label": true,
-            "fill": "#9363b7"
-        },
-        "nodes": [
-            "a8596f60466f8cf4",
-            "4a2877dc5a808a1b",
-            "7dae242b8566df9b",
-            "4169371e544b9666",
-            "857224de9710110f",
-            "449f2a69fa24e7fd",
-            "ff147eec327f33fe",
-            "bc7c3ea6788d2b58",
-            "fabd30d9f5135abd",
-            "d625fe7265cbfada",
-            "29a3c6a207d493f9",
-            "b7d0059588d03318",
-            "33b81b6ee3d763f8"
-        ],
-        "x": 54,
-        "y": 559,
-        "w": 1492,
-        "h": 162
-    },
-    {
-        "id": "4da866f299df009c",
-        "type": "group",
-        "z": "30d0afc93dfb235a",
-        "name": "HTTP control",
-        "style": {
-            "label": true,
-            "fill": "#001f60"
-        },
-        "nodes": [
-            "f36ea5478cd26f4c",
-            "8e6e379dd23ad541",
-            "2d87948c62090044",
-            "3d1df83227b48c35",
-            "ce64bf27f1fae6be",
-            "cf17c69c227b6825",
-            "f90b10e6825765f0",
-            "e4b9db07aee76ef2",
-            "eef90d12fe67652d",
-            "70dc135bb18e2bd6",
-            "caa457b0361bf0ba"
-        ],
-        "x": 54,
-        "y": 119,
-        "w": 772,
-        "h": 382
     },
     {
         "id": "9b3296db2e0c849f",
@@ -2173,33 +2151,13 @@
         "height": "1"
     },
     {
-        "id": "60dc608a8e13e309",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 4,
-        "width": "1",
-        "height": "1"
-    },
-    {
         "id": "1d0d55cb8f9c1bff",
         "type": "ui_spacer",
         "z": "d7c58eb9e7b65abb",
         "name": "spacer",
         "group": "a4a37989805c1f8e",
-        "order": 8,
-        "width": "3",
-        "height": "1"
-    },
-    {
-        "id": "28d0dedfd904e16b",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "a4a37989805c1f8e",
-        "order": 5,
-        "width": "2",
+        "order": 7,
+        "width": "1",
         "height": "1"
     },
     {
@@ -3292,7 +3250,7 @@
         "g": "d320c7a134a3a36a",
         "group": "806d30964cf41d9d",
         "order": 5,
-        "width": 3,
+        "width": "4",
         "height": 1,
         "name": "",
         "label": "TS",
@@ -5262,7 +5220,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "Output safegaurd",
-        "func": "let ffmpegOut = msg.payload;\nif (`${ffmpegOut}`.includes(\"drop=\")){\n    let testStr = ffmpegOut.toString();\n    let index = testStr.indexOf(\"speed=\");\n    testStr = testStr.substr(index);\n    testStr = testStr.substr(6).replace('x','');\n    let speed = parseFloat(testStr);\n    if(speed < 0.95 ){\n        msg.fcolor = \"red\";\n    }\n    if (speed >= 0.96 && speed < 1.5) {\n        msg.fcolor = \"limegreen\";\n    }\n    msg.payload = ffmpegOut;\n    return msg;\n}",
+        "func": "let ffmpegOut = msg.payload;\nif (`${ffmpegOut}`.includes(\"frame=\")){\n    let testStr = ffmpegOut.toString();\n    let index = testStr.indexOf(\"speed=\");\n    testStr = testStr.substr(index);\n    testStr = testStr.substr(6).replace('x','');\n    let speed = parseFloat(testStr);\n    if(speed < 0.95 ){\n        msg.fcolor = \"red\";\n    }\n    if (speed >= 0.96 && speed < 1.5) {\n        msg.fcolor = \"limegreen\";\n    }\n    msg.payload = ffmpegOut;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5273,7 +5231,8 @@
         "y": 1160,
         "wires": [
             [
-                "29f59051e6cbe148"
+                "29f59051e6cbe148",
+                "12355048d9e03fdd"
             ]
         ]
     },
@@ -5357,8 +5316,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1610,
-        "y": 2800,
+        "x": 1590,
+        "y": 2860,
         "wires": [
             [
                 "508ff50f2a470219",
@@ -5398,7 +5357,8 @@
                 "4e9c1f576e08279b",
                 "204d7697c1384266",
                 "2b4b283274423aba",
-                "4aff6b42b30f122f"
+                "4aff6b42b30f122f",
+                "3845b79a049ba0b1"
             ]
         ]
     },
@@ -9671,7 +9631,8 @@
         "wires": [
             [],
             [
-                "380f24164e357a8f"
+                "380f24164e357a8f",
+                "12355048d9e03fdd"
             ],
             []
         ]
@@ -12903,6 +12864,7 @@
         "id": "2b25acbe5bad144e",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "44bb8f59b40e58cf",
         "name": "rx spec freq",
         "active": true,
@@ -17657,6 +17619,119 @@
         ]
     },
     {
+        "id": "12355048d9e03fdd",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "ffmpeg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "2eb9a7d4d6079e45",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "c927282dfd987c70",
+        "name": "",
+        "label": "Longmynd TS IP",
+        "tooltip": "",
+        "group": "a4a37989805c1f8e",
+        "order": 6,
+        "width": "5",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2070,
+        "y": 3080,
+        "wires": [
+            [
+                "947313bf5f0e22d1"
+            ]
+        ]
+    },
+    {
+        "id": "947313bf5f0e22d1",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "Send: longmynd tsip",
+        "func": "let topic = `cmd/longmynd/tsip`;\nmsg.topic = topic;\nglobal.set(\"device.rx.tsip_host\", msg.payload);\nglobal.set(\"deviceChange\", true);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2480,
+        "y": 2940,
+        "wires": [
+            [
+                "1b8ee9dbe0155dcd"
+            ]
+        ]
+    },
+    {
+        "id": "3845b79a049ba0b1",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "5ed3848da82bcc9a",
+        "name": "tsip_host",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rx.tsip_host",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 2760,
+        "wires": [
+            [
+                "2eb9a7d4d6079e45",
+                "947313bf5f0e22d1",
+                "777171c7ce6ecdb1"
+            ]
+        ]
+    },
+    {
+        "id": "777171c7ce6ecdb1",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "ts",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2070,
+        "y": 3240,
+        "wires": []
+    },
+    {
         "id": "1e0841f1.ac68fe",
         "type": "http in",
         "z": "9d964f25dcc4d750",
@@ -20297,8 +20372,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
-        "y": 200,
+        "x": 650,
+        "y": 220,
         "wires": [
             [
                 "092f35ea1c391fe9"
@@ -20383,7 +20458,7 @@
         "topic": "",
         "payload": "rx_port",
         "payloadType": "flow",
-        "x": 550,
+        "x": 170,
         "y": 220,
         "wires": [
             [
@@ -21016,7 +21091,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 770,
+        "x": 370,
         "y": 220,
         "wires": [
             [
@@ -21068,7 +21143,7 @@
         "tooltip": "",
         "place": "",
         "group": "a4a37989805c1f8e",
-        "order": 7,
+        "order": 5,
         "width": "5",
         "height": 1,
         "passthru": true,
@@ -21151,8 +21226,8 @@
         "tooltip": "",
         "place": "",
         "group": "a4a37989805c1f8e",
-        "order": 6,
-        "width": 6,
+        "order": 4,
+        "width": "5",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -21220,7 +21295,7 @@
         "width": "6",
         "height": 1,
         "name": "RX provider Name",
-        "label": "Prov. Name :",
+        "label": "Provider",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -21364,7 +21439,7 @@
         "z": "d7c58eb9e7b65abb",
         "name": "Gauge - MER",
         "group": "a4a37989805c1f8e",
-        "order": 9,
+        "order": 8,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -21392,7 +21467,7 @@
         "z": "d7c58eb9e7b65abb",
         "name": "Gauge - Margin",
         "group": "a4a37989805c1f8e",
-        "order": 13,
+        "order": 12,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -21420,7 +21495,7 @@
         "z": "d7c58eb9e7b65abb",
         "name": "Gauge - LDPC Errors",
         "group": "a4a37989805c1f8e",
-        "order": 10,
+        "order": 9,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -21592,7 +21667,7 @@
         "z": "d7c58eb9e7b65abb",
         "name": "Gauge - Null packets",
         "group": "a4a37989805c1f8e",
-        "order": 11,
+        "order": 10,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -21661,7 +21736,7 @@
         "z": "d7c58eb9e7b65abb",
         "name": "Gauge - BCH errors ",
         "group": "a4a37989805c1f8e",
-        "order": 12,
+        "order": 11,
         "width": 3,
         "height": 2,
         "gtype": "gage",
@@ -22209,8 +22284,8 @@
         "topic": "",
         "payload": "on",
         "payloadType": "str",
-        "x": 590,
-        "y": 320,
+        "x": 490,
+        "y": 280,
         "wires": [
             [
                 "f46d32abeabe83a5",
@@ -22244,7 +22319,7 @@
         "type": "function",
         "z": "d7c58eb9e7b65abb",
         "name": "Truncate long provider names",
-        "func": "let provider = truncate(msg.payload, 24);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
+        "func": "let provider = truncate(msg.payload, 26);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22801,8 +22876,8 @@
         "y": 1920,
         "wires": [
             [
-                "85960296b05e0f13",
-                "b4d68204ef4121e0"
+                "b4d68204ef4121e0",
+                "3c63daae2a5e8e99"
             ]
         ]
     },
@@ -22823,8 +22898,8 @@
         "y": 1880,
         "wires": [
             [
-                "ede5df2f5091c5aa",
-                "f298934c06e2694e"
+                "f298934c06e2694e",
+                "27b3329bfce21726"
             ]
         ]
     },
@@ -22845,8 +22920,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#008080",
-        "x": 1090,
-        "y": 1780,
+        "x": 1190,
+        "y": 1760,
         "wires": []
     },
     {
@@ -22895,6 +22970,158 @@
         "reg": false,
         "x": 1140,
         "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27b3329bfce21726",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 1020,
+        "y": 1800,
+        "wires": [
+            [
+                "ede5df2f5091c5aa"
+            ]
+        ]
+    },
+    {
+        "id": "3c63daae2a5e8e99",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 960,
+        "y": 1960,
+        "wires": [
+            [
+                "85960296b05e0f13"
+            ]
+        ]
+    },
+    {
+        "id": "4c790f5e192986cc",
+        "type": "inject",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "rx_lnb",
+        "payloadType": "flow",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "122840fbc31dee84"
+            ]
+        ]
+    },
+    {
+        "id": "a8b516e736a38f89",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "RX LNB",
+        "func": "msg.topic = \"cmd/longmynd/polar\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "092f35ea1c391fe9",
+                "b85b260f4efb9e6d"
+            ]
+        ]
+    },
+    {
+        "id": "122840fbc31dee84",
+        "type": "ui_dropdown",
+        "z": "d7c58eb9e7b65abb",
+        "name": "LNB mode",
+        "label": "LNB mode",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "65d91b75202c3b55",
+        "order": 5,
+        "width": "4",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "No Voltage",
+                "value": "n",
+                "type": "str"
+            },
+            {
+                "label": "Vertical 12V",
+                "value": "v",
+                "type": "str"
+            },
+            {
+                "label": "Horizontal 18V",
+                "value": "h",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "a8b516e736a38f89"
+            ]
+        ]
+    },
+    {
+        "id": "b85b260f4efb9e6d",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lnb",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 340,
         "wires": [
             []
         ]
