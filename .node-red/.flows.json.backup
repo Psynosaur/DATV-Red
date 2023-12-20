@@ -723,10 +723,10 @@
             "8ee9aef755219d8b",
             "2eb9a7d4d6079e45"
         ],
-        "x": 1954,
+        "x": 2014,
         "y": 1439,
-        "w": 352,
-        "h": 1682
+        "w": 292,
+        "h": 1702
     },
     {
         "id": "5ed3848da82bcc9a",
@@ -1317,19 +1317,18 @@
         },
         "nodes": [
             "ee10e75eb6c917e8",
-            "9ff2a02ce6c83cc8",
-            "a107f00bdb17bc4a",
-            "4b8450fb54f0169b",
-            "48fa401a9ff33366",
-            "0bac2366e4f641c2",
-            "26f182035e65ae1d",
             "8a1fb5a4ffa544fd",
             "dd2992c2880bcc1f",
             "692cfca16036ea93",
-            "966f8abcef78816c"
+            "966f8abcef78816c",
+            "35ee7231ba2e92d3",
+            "6fbbca7ba1ed3157",
+            "3fcda18d3f907163"
         ],
         "x": 34,
-        "y": -1
+        "y": 19,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "2a6eb2e492bee274",
@@ -1345,7 +1344,9 @@
             "819d5b65838d0f8c"
         ],
         "x": 34,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "97fae7a46f8ffe23",
@@ -1386,9 +1387,7 @@
             "8b74e5e219711233"
         ],
         "x": 194,
-        "y": 1611.5,
-        "w": 792,
-        "h": 149.5
+        "y": 1611.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -12692,8 +12691,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2110,
-        "y": 3040,
+        "x": 2150,
+        "y": 3060,
         "wires": [
             [
                 "2d1d2f2c5a3e44b6"
@@ -17655,8 +17654,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2070,
-        "y": 3080,
+        "x": 2130,
+        "y": 3100,
         "wires": [
             [
                 "947313bf5f0e22d1"
@@ -17709,8 +17708,8 @@
         "wires": [
             [
                 "2eb9a7d4d6079e45",
-                "947313bf5f0e22d1",
-                "777171c7ce6ecdb1"
+                "777171c7ce6ecdb1",
+                "947313bf5f0e22d1"
             ]
         ]
     },
@@ -19706,139 +19705,6 @@
         ]
     },
     {
-        "id": "9ff2a02ce6c83cc8",
-        "type": "template",
-        "z": "34bd429848bdfd07",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "Constellation HTML and JS",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot2</title>\n\n<canvas id=\"constellationChart\" style=\"width:500px;height:500px;\"></canvas>\n<script src=\"/constel/chart.js\"></script>\n<script src=\"/mqtt_min.js\"></script>\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<script src=\"/constel/script.js\"></script>\n\n\n\n",
-        "output": "str",
-        "x": 740,
-        "y": 140,
-        "wires": [
-            [
-                "ee10e75eb6c917e8"
-            ]
-        ]
-    },
-    {
-        "id": "a107f00bdb17bc4a",
-        "type": "http in",
-        "z": "34bd429848bdfd07",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "",
-        "url": "/constel",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 130,
-        "y": 140,
-        "wires": [
-            [
-                "4b8450fb54f0169b"
-            ]
-        ]
-    },
-    {
-        "id": "4b8450fb54f0169b",
-        "type": "function",
-        "z": "34bd429848bdfd07",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "set pluto, callsign and hosting_url",
-        "func": "msg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nmsg.hosting_url = global.get(\"device.hosting_url\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 140,
-        "wires": [
-            [
-                "9ff2a02ce6c83cc8"
-            ]
-        ]
-    },
-    {
-        "id": "48fa401a9ff33366",
-        "type": "change",
-        "z": "34bd429848bdfd07",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "Set Headers",
-        "rules": [
-            {
-                "t": "set",
-                "p": "headers",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "headers.content-type",
-                "pt": "msg",
-                "to": "text/javascript",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 80,
-        "wires": [
-            [
-                "ee10e75eb6c917e8"
-            ]
-        ]
-    },
-    {
-        "id": "0bac2366e4f641c2",
-        "type": "file in",
-        "z": "34bd429848bdfd07",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "",
-        "filename": "web/constel/chart.js",
-        "filenameType": "str",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 370,
-        "y": 80,
-        "wires": [
-            [
-                "48fa401a9ff33366"
-            ]
-        ]
-    },
-    {
-        "id": "26f182035e65ae1d",
-        "type": "http in",
-        "z": "34bd429848bdfd07",
-        "g": "9c7cb0f498a9f7e2",
-        "name": "",
-        "url": "/constel/chart.js",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 150,
-        "y": 80,
-        "wires": [
-            [
-                "0bac2366e4f641c2"
-            ]
-        ]
-    },
-    {
         "id": "8a1fb5a4ffa544fd",
         "type": "ui_iframe",
         "z": "34bd429848bdfd07",
@@ -19848,7 +19714,7 @@
         "order": 1,
         "width": "5",
         "height": "5",
-        "url": "/constel",
+        "url": "/constel3",
         "origin": "",
         "scale": "100",
         "x": 970,
@@ -19884,8 +19750,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 40,
+        "x": 670,
+        "y": 60,
         "wires": [
             [
                 "ee10e75eb6c917e8"
@@ -19898,15 +19764,15 @@
         "z": "34bd429848bdfd07",
         "g": "9c7cb0f498a9f7e2",
         "name": "",
-        "filename": "web/constel/script.js",
+        "filename": "web/constel/constellation.js",
         "filenameType": "str",
         "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 380,
-        "y": 40,
+        "x": 400,
+        "y": 60,
         "wires": [
             [
                 "966f8abcef78816c"
@@ -19924,10 +19790,69 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 160,
-        "y": 40,
+        "y": 60,
         "wires": [
             [
                 "692cfca16036ea93"
+            ]
+        ]
+    },
+    {
+        "id": "35ee7231ba2e92d3",
+        "type": "template",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "Constellation HTML and JS",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot v3</title>\n<script src=\"/mqtt_min.js\"></script>\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<canvas id=\"graph\" style=\"height: 245px;width: 245px\"></canvas>\n<script src=\"/constel/script.js\"></script>\n",
+        "output": "str",
+        "x": 720,
+        "y": 120,
+        "wires": [
+            [
+                "ee10e75eb6c917e8"
+            ]
+        ]
+    },
+    {
+        "id": "6fbbca7ba1ed3157",
+        "type": "http in",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "",
+        "url": "/constel3",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "3fcda18d3f907163"
+            ]
+        ]
+    },
+    {
+        "id": "3fcda18d3f907163",
+        "type": "function",
+        "z": "34bd429848bdfd07",
+        "g": "9c7cb0f498a9f7e2",
+        "name": "set pluto, callsign and hosting_url",
+        "func": "msg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nmsg.hosting_url = global.get(\"device.hosting_url\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "35ee7231ba2e92d3"
             ]
         ]
     },
@@ -23109,7 +23034,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "lnb",
+                "p": "rx_lnb",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -23120,7 +23045,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
+        "x": 980,
         "y": 340,
         "wires": [
             []
