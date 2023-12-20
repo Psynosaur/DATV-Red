@@ -589,8 +589,7 @@
             "7b165d480a2ae435",
             "a421a70d3ead9cd8",
             "a784bb0de8df6b05",
-            "193a32ea6df689be",
-            "12355048d9e03fdd"
+            "193a32ea6df689be"
         ],
         "x": 14,
         "y": 899,
@@ -5230,8 +5229,7 @@
         "y": 1160,
         "wires": [
             [
-                "29f59051e6cbe148",
-                "12355048d9e03fdd"
+                "29f59051e6cbe148"
             ]
         ]
     },
@@ -9630,8 +9628,7 @@
         "wires": [
             [],
             [
-                "380f24164e357a8f",
-                "12355048d9e03fdd"
+                "380f24164e357a8f"
             ],
             []
         ]
@@ -17618,24 +17615,6 @@
         ]
     },
     {
-        "id": "12355048d9e03fdd",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "78f7e24f56d510ed",
-        "name": "ffmpeg",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1540,
-        "y": 1220,
-        "wires": []
-    },
-    {
         "id": "2eb9a7d4d6079e45",
         "type": "ui_text_input",
         "z": "2ec6a7ddfe0cd173",
@@ -19771,7 +19750,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 400,
+        "x": 420,
         "y": 60,
         "wires": [
             [

@@ -90,7 +90,7 @@ let canvasHeightLast;
     }
     if (localStorage.tuned_channels) {
       tuned_channels = JSON.parse(localStorage.tuned_channels);
-      if (tuned_channels.length !== rx_count) tuned_channels = [];
+      if (tuned_channels.length !== rx_count) tuned_channels = Array(rx_count).fill({});
     }
     if (localStorage.wb_band_colour) {
       band_colour = localStorage.wb_band_colour;
@@ -629,7 +629,7 @@ let canvasHeightLast;
     for (let j = 0; j < tuned_channels.length; j++) {
       if (isEmpty(tuned_channels[j])) {
         console.log("not drawing");
-        break;
+        continue;
       }
       obj = JSON.parse(tuned_channels[j]);
       ctx.fillStyle = invertColor(band_colour);
