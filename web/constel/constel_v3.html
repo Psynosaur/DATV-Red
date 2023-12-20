@@ -1,0 +1,130 @@
+<canvas id="graph" style="height: 1024px;width: 1024px"></canvas>
+<script src="../pluto_spectrum/vendor/mqtt.min.js"></script>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let pluto_url = urlParams.get('pluto_url') ?? "192.168.1.111";
+    const hosting_url = pluto_url;
+    const call_sign = urlParams.get('call_sign') ?? "ZS1SCI";
+    const localPage = true;
+    // let graph;
+    // let data = [];
+    // graph = document.getElementById("graph");
+    // const c = graph.getContext('2d');
+    //
+    // c.lineWidth = 1;
+    // c.canvas.width = 500;
+    // c.canvas.height = 500;
+    // c.strokeStyle = '#333';
+    // const W = c.canvas.width, H = c.canvas.height;
+    //
+    // c.font = 'italic 8pt sans-serif';
+    // c.textAlign = "center";
+    //
+    // function mqtt_client(data) {
+    //     let x, y = 0;
+    //
+    //     if (hosting_url !== "" && window.location.hostname === hosting_url) {
+    //         pluto_url = hosting_url;
+    //         console.log("MQTT hostname: " + window.location.hostname)
+    //         console.log("MQTT pluto_url: " + pluto_url)
+    //     }
+    //     let url = `ws://${pluto_url}:9001`;
+    //     const options = {
+    //         // Clean session
+    //         clean: true,
+    //         connectTimeout: 4000,
+    //         // Authentication
+    //         clientId: "pluto" + new Date().getUTCMilliseconds(),
+    //         username: "root",
+    //         password: "analog",
+    //     };
+    //     const client = mqtt.connect(url, options);
+    //     console.log("callsign: " + call_sign);
+    //     console.log("url: " + url);
+    //     client.on("connect", function () {
+    //         console.log("Connected MQTT");
+    //         // Subscribe to a topic
+    //         client.subscribe(`dt/longmynd/constel_q`, () => {
+    //         });
+    //         client.subscribe(`dt/longmynd/constel_i`, () => {
+    //         });
+    //         client.subscribe(`dt/longmynd/rx_state`, () => {
+    //         });
+    //         client.subscribe(`cmd/longmynd/frequency`, () => {
+    //         });
+    //     });
+    //     client.on("message", function (topic, message) {
+    //         if (data.length > 1500) {
+    //             data = data.slice(2)
+    //             // updateChart(chart, data, "qpsk")
+    //             // removeData(chart);
+    //             // removeData(chart);
+    //         }
+    //         if (topic === `dt/longmynd/rx_state`) {
+    //             if (message.toString() === "Hunting") {
+    //                 console.log("clear");
+    //                 data = []
+    //                 // updateChart(chart, data, "qpsk")
+    //                 // updateChart(chart, 1, {x:0, y:0})
+    //                 // clearCanvas();
+    //                 return;
+    //             }
+    //         }
+    //         if (topic === `cmd/longmynd/frequency`) {
+    //             console.log("clear");
+    //             data = []
+    //             // updateChart(chart, data, "qpsk")
+    //             // updateChart(chart, 1, {x:0, y:0})
+    //             // clearCanvas();
+    //             return;
+    //         }
+    //         if (topic === `dt/longmynd/constel_i`) {
+    //             x = Number(message.toString());
+    //             // y = Number(message.toString());
+    //             // console.log("constel_i: " + x);
+    //         }
+    //         if (topic === `dt/longmynd/constel_q`) {
+    //             // x = Number(message.toString());
+    //             y = Number(message.toString());
+    //             // console.log("constel_q: " + y);
+    //         }
+    //         // if(y === 0 || x === 0) return;
+    //         let obj = {
+    //             x: x,
+    //             y: y
+    //         };
+    //         data.push(obj)
+    //
+    //         drawConstellationPoints(data);
+    //         // addData(chart, "xy", obj);
+    //     });
+    // }
+    //
+    //
+    // mqtt_client(data);
+    //
+    // function clearCanvas(){
+    //     c.setTransform(2.5, 0, 0, 2.5, W / 2, H / 2);
+    //     c.clearRect(0,0,W,H); // clears the canvas
+    //     c.restore();
+    // }
+    //
+    // function drawConstellationPoints(data){
+    //     // Draw the dots
+    //     c.fillStyle = '#37ff00';
+    //     c.setTransform(1,0,0,1,0,0); // resets the transform to clear
+    //     c.clearRect(0,0,W,H); // clears the canvas
+    //
+    //     c.setTransform(2.5, 0, 0, 2.5, W / 2, H / 2)
+    //     c.strokeRect(-90,-90, 180, 180);
+    //
+    //     for(let i = 0; i < data.length; i ++) {
+    //         c.beginPath();
+    //         c.strokeStyle = "#0a0a0a";
+    //         c.arc(data[i].x, data[i].y, 1, 0, Math.PI * 2, true);
+    //         c.stroke();
+    //     }
+    // }
+</script>
+<script src="constellation.js"></script>
