@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2023 Ohan Smit
+ * This software is released under the MIT license.
+ * See the LICENSE file for further details.
+ */
 let data = [];
 let dataPoints = 2500;
 let graph = document.getElementById("graph");
