@@ -925,7 +925,9 @@
             "de3615657f5f8b75"
         ],
         "x": 48,
-        "y": 39
+        "y": 39,
+        "w": 1118,
+        "h": 368
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1039,7 +1041,9 @@
             "b20d795a08271867"
         ],
         "x": 74,
-        "y": 959
+        "y": 959,
+        "w": 1292,
+        "h": 422
     },
     {
         "id": "97ecf1ac9459a777",
@@ -1089,7 +1093,9 @@
             "0c34bd3ef0714d28"
         ],
         "x": 54,
-        "y": 439
+        "y": 439,
+        "w": 1452,
+        "h": 502
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1382,7 +1388,9 @@
             "8b74e5e219711233"
         ],
         "x": 194,
-        "y": 1611.5
+        "y": 1611.5,
+        "w": 792,
+        "h": 149.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -1580,7 +1588,9 @@
             "0dd67a65a9a17989"
         ],
         "x": 74,
-        "y": 139
+        "y": 139,
+        "w": 872,
+        "h": 242
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -2133,16 +2143,6 @@
         "order": 3,
         "width": 1,
         "height": 1
-    },
-    {
-        "id": "c9432c41e4afe7e0",
-        "type": "ui_spacer",
-        "z": "d7c58eb9e7b65abb",
-        "name": "spacer",
-        "group": "65d91b75202c3b55",
-        "order": 6,
-        "width": "1",
-        "height": "1"
     },
     {
         "id": "1d0d55cb8f9c1bff",
@@ -20061,7 +20061,8 @@
                 "6a472a91f5b893b8",
                 "cd41c1f3c4201336",
                 "a90f9c1c2af87afa",
-                "410d95bdc81fa714"
+                "410d95bdc81fa714",
+                "28bb27b4e9707d84"
             ]
         ]
     },
@@ -21243,7 +21244,7 @@
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 12,
+        "order": 11,
         "width": "4",
         "height": 1,
         "name": "RX Actual Frequency",
@@ -21264,7 +21265,7 @@
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 13,
+        "order": 15,
         "width": 3,
         "height": 1,
         "name": "RX Symbol Rate",
@@ -21327,7 +21328,7 @@
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 15,
+        "order": 17,
         "width": "2",
         "height": 1,
         "name": "RX Actual Fec",
@@ -21348,7 +21349,7 @@
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 14,
+        "order": 16,
         "width": "3",
         "height": 1,
         "name": "RX Modulation",
@@ -21369,7 +21370,7 @@
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 17,
+        "order": 19,
         "width": "3",
         "height": 1,
         "name": "Display_min_C/N",
@@ -21386,32 +21387,11 @@
         "wires": []
     },
     {
-        "id": "7b3cab5a067f0a35",
-        "type": "ui_text",
-        "z": "d7c58eb9e7b65abb",
-        "group": "65d91b75202c3b55",
-        "order": 9,
-        "width": 2,
-        "height": 1,
-        "name": "Tuner port",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "14",
-        "color": "#008080",
-        "x": 1510,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "017e750722d50fa5",
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 11,
+        "order": 10,
         "width": "4",
         "height": 1,
         "name": "TS Out",
@@ -22033,7 +22013,7 @@
         "z": "d7c58eb9e7b65abb",
         "d": true,
         "group": "65d91b75202c3b55",
-        "order": 16,
+        "order": 18,
         "width": 3,
         "height": 1,
         "name": "RX Actual Fec",
@@ -22056,7 +22036,7 @@
         "d": true,
         "name": "",
         "group": "65d91b75202c3b55",
-        "order": 18,
+        "order": 20,
         "width": "16",
         "height": "3",
         "label": "FEC",
@@ -22165,6 +22145,13 @@
                 "pt": "global",
                 "to": "false",
                 "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "transmission_delay",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
             }
         ],
         "action": "",
@@ -22480,7 +22467,7 @@
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 7,
+        "order": 6,
         "width": 3,
         "height": 1,
         "name": "Rx time",
@@ -22571,7 +22558,7 @@
         "g": "c070d9c6c2a6ac1b",
         "name": "SignalReport",
         "group": "65d91b75202c3b55",
-        "order": 20,
+        "order": 23,
         "width": "3",
         "height": "1",
         "passthru": false,
@@ -22599,7 +22586,7 @@
         "z": "d7c58eb9e7b65abb",
         "g": "c070d9c6c2a6ac1b",
         "name": "generate signal report",
-        "func": "let freq = (Number(flow.get(\"freq\"))*1000 + Math.abs(Number(global.get('device.rx.offset'))))/1e6;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/\"${flow.get(\"provider\")}\" - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS Buffer delays, video: ${flow.get(\"video_buffer\")}ms, audio: ${flow.get(\"audio_buffer\")}ms - ${freq} ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
+        "func": "let freq = (Number(flow.get(\"freq\")) * 1000 + Math.abs(Number(global.get('device.rx.offset')))) / 1e6;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/\"${flow.get(\"provider\")}\" - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS Buffer delays, video: ${flow.get(\"video_buffer\")}ms, audio: ${flow.get(\"audio_buffer\")}ms ${flow.get(\"transmission_delay\") > 0 ? `- tx delay, ${flow.get(\"transmission_delay\")}ms ` : \"\"}- ${freq} ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22724,31 +22711,8 @@
         "x": 570,
         "y": 1540,
         "wires": [
-            [
-                "d1ee79702e448262"
-            ]
+            []
         ]
-    },
-    {
-        "id": "d1ee79702e448262",
-        "type": "ui_text",
-        "z": "d7c58eb9e7b65abb",
-        "group": "65d91b75202c3b55",
-        "order": 10,
-        "width": "2",
-        "height": 1,
-        "name": "Lna gain",
-        "label": "LNA",
-        "format": "{{value/10 | number:1}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "14",
-        "color": "#008080",
-        "x": 860,
-        "y": 1540,
-        "wires": []
     },
     {
         "id": "a90f9c1c2af87afa",
@@ -22762,7 +22726,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
+        "x": 270,
         "y": 1880,
         "wires": [
             [
@@ -22783,7 +22747,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 690,
+        "x": 510,
         "y": 1880,
         "wires": [
             [
@@ -22803,7 +22767,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
+        "x": 270,
         "y": 1920,
         "wires": [
             [
@@ -22824,7 +22788,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 690,
+        "x": 510,
         "y": 1920,
         "wires": [
             [
@@ -22849,8 +22813,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#008080",
-        "x": 1070,
-        "y": 2000,
+        "x": 1250,
+        "y": 1960,
         "wires": []
     },
     {
@@ -22866,7 +22830,7 @@
         "truncate": true,
         "decimals": 0,
         "decimals2": "2",
-        "x": 860,
+        "x": 720,
         "y": 1920,
         "wires": [
             [
@@ -22888,7 +22852,7 @@
         "truncate": true,
         "decimals": 0,
         "decimals2": "2",
-        "x": 860,
+        "x": 720,
         "y": 1880,
         "wires": [
             [
@@ -22902,8 +22866,8 @@
         "type": "ui_text",
         "z": "d7c58eb9e7b65abb",
         "group": "65d91b75202c3b55",
-        "order": 12,
-        "width": "4",
+        "order": 13,
+        "width": "5",
         "height": 1,
         "name": "audiobuffer",
         "label": "audiobuffer",
@@ -22914,8 +22878,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#008080",
-        "x": 1190,
-        "y": 1760,
+        "x": 1250,
+        "y": 1840,
         "wires": []
     },
     {
@@ -22937,7 +22901,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
+        "x": 1420,
         "y": 1880,
         "wires": [
             []
@@ -22962,7 +22926,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1140,
+        "x": 1420,
         "y": 1920,
         "wires": [
             []
@@ -22979,8 +22943,8 @@
         "round": "",
         "mult": "single",
         "reduce": false,
-        "x": 1020,
-        "y": 1800,
+        "x": 1100,
+        "y": 1840,
         "wires": [
             [
                 "ede5df2f5091c5aa"
@@ -22998,7 +22962,7 @@
         "round": "",
         "mult": "single",
         "reduce": false,
-        "x": 960,
+        "x": 1100,
         "y": 1960,
         "wires": [
             [
@@ -23061,7 +23025,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "65d91b75202c3b55",
-        "order": 5,
+        "order": 7,
         "width": "4",
         "height": "1",
         "passthru": true,
@@ -23119,6 +23083,182 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "28bb27b4e9707d84",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "name": "transmission delay",
+        "func": "msg.action = \"subscribe\"\nmsg.topic =\"dt/longmynd/transdelay\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1960,
+        "wires": [
+            [
+                "175d46a089ea6ba5"
+            ]
+        ]
+    },
+    {
+        "id": "175d46a089ea6ba5",
+        "type": "mqtt in",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 510,
+        "y": 1960,
+        "wires": [
+            [
+                "9575b4e1e6fa27ea"
+            ]
+        ]
+    },
+    {
+        "id": "9575b4e1e6fa27ea",
+        "type": "calculator",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "1",
+        "round": false,
+        "truncate": true,
+        "decimals": 0,
+        "decimals2": "2",
+        "x": 720,
+        "y": 1960,
+        "wires": [
+            [
+                "0a2e232f723d91c4",
+                "d50ebc8190dac5c2"
+            ]
+        ]
+    },
+    {
+        "id": "0a2e232f723d91c4",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "transmission_delay",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 2060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d50ebc8190dac5c2",
+        "type": "smooth",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 1100,
+        "y": 2020,
+        "wires": [
+            [
+                "41d02716c7ee4788"
+            ]
+        ]
+    },
+    {
+        "id": "41d02716c7ee4788",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "group": "65d91b75202c3b55",
+        "order": 14,
+        "width": "3",
+        "height": 1,
+        "name": "tx delay",
+        "label": "tx delay",
+        "format": "{{value | number:0}} ms",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "14",
+        "color": "#008080",
+        "x": 1240,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "da95ef82cdeaed72",
+        "type": "inject",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 890,
+        "y": 2080,
+        "wires": [
+            [
+                "0a2e232f723d91c4",
+                "d50ebc8190dac5c2"
+            ]
+        ]
+    },
+    {
+        "id": "7b3cab5a067f0a35",
+        "type": "ui_text",
+        "z": "d7c58eb9e7b65abb",
+        "d": true,
+        "group": "65d91b75202c3b55",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "name": "Tuner port",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "14",
+        "color": "#008080",
+        "x": 1510,
+        "y": 260,
+        "wires": []
     },
     {
         "id": "01cd46f702ab295a",
@@ -24055,7 +24195,7 @@
         "g": "850ce0dd6b054d30",
         "name": "",
         "group": "65d91b75202c3b55",
-        "order": 19,
+        "order": 21,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -24084,7 +24224,7 @@
         "g": "850ce0dd6b054d30",
         "group": "65d91b75202c3b55",
         "name": "window redirect",
-        "order": 3,
+        "order": 22,
         "width": 0,
         "height": 0,
         "format": "<script>\n(function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        if (data == \"chat\") {\n          window.open(\"http://127.0.0.1:1880/chat\");\n        } \n        // if (data == \"GitHub\") {\n        //   //window.open(\"https://github.com/node-red\");\n        //   window.location.href = \"https://github.com/node-red\";\n        // } \n    });\n})(scope);\n</script>",
