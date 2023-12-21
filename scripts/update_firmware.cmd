@@ -6,7 +6,7 @@ IF [%1] == [] GOTO NoIp
 IF [%2] == [] GOTO NoFile
 cd %BASEDIR%
 ECHO Copying firmware to pluto
-scp ./pluto.frm root@%pluto%:/root
+scp -o UserKnownHostsFile=\\.\NUL ./pluto.frm root@%pluto%:/root
 ECHO Updating firmware
 ssh -o UserKnownHostsFile=\\.\NUL root@%pluto% ./update_frm_reboot.sh ./pluto.frm
 ECHO Rebooting pluto
