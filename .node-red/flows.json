@@ -2,7 +2,7 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red v3.93",
+        "label": "DATV-Red v3.94",
         "disabled": false,
         "info": " - V1.something\r\n   - It hath the spectrum\r\n   - I clickith and it tunith\r\n   - I clickith and it setith stuff\r\n   - more control\r\n   - refactor code\r\n   - we no longer need all the files...\r\n   - restarting pluto sets strange settings.\r\n   - So we have explicitly set certain mqtt command in a certain order\r\n   - Rx and Tx offsets\r\n   - CTRL click tunes longmynd\r\n   - Fix bugs for CTRL click\r\n   - rx has seperate endpoint on API\r\n   - uplink correction\r\n   - Channel busy, you shall not PASS!!\r\n   - add device config, \r\n   - fixed longmynd frequency and sr messages we send in KHz and KS\r\n   - spectrum watchdog only watches you when transmitting . . .\r\n   - flow dependency install script `.\\install_dependencies.bat` RUN IT!!!\r\n   - Remove FECMODE from config-tx.ini\r\n   - Set it for each static profile 1-7\r\n   - Now variable fec set lowest 1/4 for qpsk and doesn't recalculate\r\n   - Will add support for 8psk etc.\r\n   - Fixed state injectors\r\n     - restores state after pluto reboot  \r\n   - If Restore state is Orange, PRESS IT!\r\n   - Channel calibration.\r\n     - [How To](https://youtu.be/-ZdQOVg26_0)\r\n - V1.9.9\r\n   - TS analysis - just for checking that TS is okay... \r\n     - Once tuned to signal, press TS analyse to display TS info(currently just callsign pop up)...\r\n     - There is room for more information gathering here as ffpbrobe is very verbose.\r\n   - Spectrum tuning bar has got a memory\r\n   - Constellation rate calculation changes, as per DL5OCD_Michael\r\n   - Tunes minitioune software by CTRL+ALT clicking\r\n   - bugfixes\r\n   - Consume Open Tuner websocket status, not useful atm...\r\n   - Prep for GUI setup, we can enumerate all current audio and video devices using ffmpeg\r\n   - Spectrum and band color pickers => ALL THE COLOURS OF THE RAINBOW!\r\n   - latest ffmpeg build\r\n   - node red task scheduler xml, import with windows task scheduler to have it start on logon\r\n - V1.993-c(chat)\r\n   - Minitioune spawn routine improvements.\r\n     - killing node red does not kill it. . .\r\n     - instead of spawing each time we deploy changes...\r\n   - Rx top tune bar\r\n   - Tx tune bar\r\n   - Spectrum has better memory...\r\n   - Bitrate calculation changes as per DL5OCD\r\n     - Changed the function to use lookup tables\r\n   - ffplay switch, off by default.\r\n   - rebuild ffmpeg, with vvc...\r\n   - Chat added\r\n     - This prompted a reshuffle of GUI\r\n   - Planning\r\n - V1.994\r\n   - ffplay controls\r\n    - Image size\r\n    - Start up volume\r\n    - on top ? \r\n    - tx clicky bug. . .\r\n - V1.995\r\n   - calculations\r\n - V1.996\r\n   - NCO offset after SR change bug workaround\r\n   - bitrate calculations\r\n   - Beacon RX capability \r\n   - use Minitioune toggle\r\n - V2.0-beta\r\n   - TSRate calculations, be gone, used the pluto's expected TS bitrate `/device/tx/dvbs2/ts/bitrate`\r\n     - This makes the calculations very accurate\r\n       - This would be part of profile settings in future, how video rates are calculated or set\r\n   - Setup from GUI(bye config-tx.ini) \r\n     - almost there\r\n   - Try and remove all DATV-NotSoEasy files, if its an ini file its a setting...\r\n     - almost there\r\n   - No more presets, rework in progress.\r\n - V2.1\r\n   - VVC calculation adjustments\r\n   - TS rate divider should be 1000 its already in bytes...\r\n   - Track ffplay windows position\r\n   - Orgainizing things\r\n   - chagning frame changes FEC table entries\r\n     - short frame and 9/10 doesn't work\r\n     - FEC table updates based on `modulation` and `frame` type\r\n   - We have completely removed DATV-NotSoEasy\r\n     - removed static profile loading\r\n     - removed `config-tx.ini` and `DATV-TX.bat`\r\n   - Profile saver and loading\r\n     - click `SAVER` and the profile you'd like to update.\r\n     - Only saves settings related to ffmpeg\r\n   - Now we need to add input boxes for all the things we put in the `ffmpeg string builder` function\r\n - V2.2 \r\n   - Bundled exe\r\n   - New ffmpeg build `03-Nov-23`\r\n - V2.3\r\n  - Includes shared build as well ffmpeg_\r\n  - removed libx265 bench video\r\n  - call ffmpeg directly\r\n    - no more escaping strings\r\n  - codec switch\r\n    - for easy tweaking\r\n - V2.4\r\n   - Made chat bigger\r\n     - User bar as well...\r\n   - Fix TX spectrum clicky bug\r\n   - Dynamic MQTT subscription\r\n     - We load settings from file `pluto.json`\r\n   - New codec settings in ffmpeg string builder\r\n     - fixes old driver issues - `UPDATE YOUR DRIVERS!`\r\n     - Node red also calls the absoulute path...\r\n - V2.4.1\r\n   - Service provider displays\r\n   - Gain button arrangement\r\n   - frequency and gain saved with profiles \r\n - V2.4.2\r\n   - Pass mode bug fix, kinda... \r\n   - Set callsign button\r\n     - Reboots pluto\r\n     - Is needed for first time users  \r\n     - No more duplicate user \r\n   - Profiles\r\n     - more settings XD\r\n   - no more shortcuts\r\n     - dvbs2_gui path\r\n     - vlc path\r\n   - Shared ffmpeg build `09-Nov-2023`\r\n - V2.4.3\r\n   - set callsign from `pluto.json` in `device.json` when starting app\r\n     - we do not need to wait 5s\r\n   - VVC bitrate `800`\r\n     - Added `vvenc params`\r\n       - Framerate\r\n       - Size\r\n   - open browser restored\r\n   - Its getting harder to break things . . .\r\n - V2.4.5\r\n   - Fixes `powershell` script permissions\r\n   - This should remedy blank stats in app\r\n   - Clicking signal tunes minitiouner\r\n   - Tx parameters can now only be set by click on channel bars\r\n   - Removed unused state check `API`\r\n   - Fixed toggle button states\r\n     - Use minitiouner\r\n     - Use ffplay\r\n     - ffplay on top\r\n   - Rebooting and power kill handling\r\n     - Press restore when pluto connects\r\n     - this is mostly automatic \r\n   - INPUT mode\r\n   - Audio channels\r\n   - UDP and RTMP addressess\r\n   - Added back db below beacon on spectrum\r\n   - Audio sample rate added\r\n   - Fixed ffplay powershell checking\r\n   - calculation node update   \r\n   - even better startup restore\r\n - V2.5\r\n   - New GUI layout\r\n   - `dashboard.json` will keep gui related stuff, like extra flow parameters\r\n     - `use_chat` default `true`\r\n     - `use_switch` default `false`\r\n     - `tasmota_switch_url` network address of sonoff switch\r\n     - Added Sonoff basic tasmota switch for amp\r\n     - This flow is disabled by default \r\n   - On air timer\r\n   - ffmpeg path variable\r\n\r\n\r\nVersion 3\r\n - Renamed project to `DATV-Red`\r\n   - Removes connection between this software and the rest...\r\n - Now `cross platform`\r\n - Paths for ffmpeg execs\r\n   - this is for `linux`  \r\n - `Linux` settings that worked under testing\r\n   - run `/scripts/install.sh`\r\n     - Installs node and xclip\r\n     - not sure about the others... \r\n   - Input types tested working, `UDP` and `RTMP`\r\n - Rx control\r\n   - You need to make sure the pluto can send data to `230.0.0.2:1234` on your network\r\n   - `config.txt` on pluto\r\n     - under `[USB_ETHERNET]` add `gateway_eth = x.x.x.x` with the IP of you network gateway\r\n   - VLC for playing TS\r\n   - Or use ffplay\r\n - Signal report\r\n   - Copies it to the clipboard so you may paste it using `CTRL+V`.\r\n - Rx timer for onboard longmynd\r\n - DVB-GSE\r\n   - This is probably the most awesome thing!\r\nV3.14_pi\r\n - Custom FFT sources\r\n   - change source in stats and settings\r\n - Linux device Paths\r\n - Receivers galore\r\n   - define in `settings\\receivers.json`\r\n - Moved json files to settings\r\n - removed repeated nodes\r\n - Local RX FFT\r\n   - `www` folder from `pluto` now lives in DATV-Red\r\n   - Uses the broker address to conenct to the `pluto` websocket for `FFT`\r\n - TSinput override\r\n - Main spectrum refactor\r\n   - Removed `Bootstrap` and `JQuery`\r\n   - This is prepping the code for the new `FFT` source\r\n   - spectrum.html (578KB)- `deleted`\r\n   - `spectrum_internet` folder contains new code\r\n     - 50KB in size now\r\n   - It is somewhat bigger now...\r\n - Too many changes to recall... ¯\\_(ツ)_/¯\r\n - Does it work, maybe...\r\n\r\nV3.69\r\n - Fixed spectrum MQTT client\r\n   - Spans and frequencies are labeled\r\n - Fixed linux start up bugs\r\n   - works again\r\n - Inject OS type before all else...\r\n - Double unmute bug is no more a thing on start up.\r\n - Auto channel calibration...\r\n - Clean up code and flows\r\n - Chat button\r\n   - I don't like it on the dashboard\r\n   - Opens url in default browser\r\n - More fixing of things\r\n - Full rx tuning range\r\n - GUI moved things around\r\n \r\nV3.79\r\n- Minitiouner startup bugs\r\n- GSE refactor\r\n- 1MS on reboot TX SR bug...\r\n- Tx mute should not trigger on startup\r\n- Cleanup of code \r\n- Wrap provider name in quotes    \r\nV3.9\r\n- New firmware version needed see repo\r\n- Spectrum changes\r\n- Detect signals symbol rate\r\n- tune with pluto spectrum\r\n- there is much to be done still.\r\n",
         "env": []
@@ -925,9 +925,7 @@
             "de3615657f5f8b75"
         ],
         "x": 48,
-        "y": 39,
-        "w": 1118,
-        "h": 368
+        "y": 39
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1041,9 +1039,7 @@
             "b20d795a08271867"
         ],
         "x": 74,
-        "y": 959,
-        "w": 1292,
-        "h": 422
+        "y": 959
     },
     {
         "id": "97ecf1ac9459a777",
@@ -1093,9 +1089,7 @@
             "0c34bd3ef0714d28"
         ],
         "x": 54,
-        "y": 439,
-        "w": 1452,
-        "h": 502
+        "y": 439
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1588,9 +1582,7 @@
             "0dd67a65a9a17989"
         ],
         "x": 74,
-        "y": 139,
-        "w": 872,
-        "h": 242
+        "y": 139
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -1789,7 +1781,7 @@
             }
         },
         "site": {
-            "name": "DATV-Red v3.93",
+            "name": "DATV-Red v3.94",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -22145,13 +22137,6 @@
                 "pt": "global",
                 "to": "false",
                 "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "transmission_delay",
-                "pt": "flow",
-                "to": "0",
-                "tot": "num"
             }
         ],
         "action": "",
@@ -22162,7 +22147,9 @@
         "x": 1320,
         "y": 660,
         "wires": [
-            []
+            [
+                "a4801cf476e76cec"
+            ]
         ]
     },
     {
@@ -22835,7 +22822,7 @@
         "wires": [
             [
                 "b4d68204ef4121e0",
-                "3c63daae2a5e8e99"
+                "1e5acd6b13718ebb"
             ]
         ]
     },
@@ -22857,7 +22844,7 @@
         "wires": [
             [
                 "f298934c06e2694e",
-                "27b3329bfce21726"
+                "86a761d0d89ee362"
             ]
         ]
     },
@@ -23142,8 +23129,7 @@
         "y": 1960,
         "wires": [
             [
-                "0a2e232f723d91c4",
-                "d50ebc8190dac5c2"
+                "a331c7113bb6fa38"
             ]
         ]
     },
@@ -23166,8 +23152,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
-        "y": 2060,
+        "x": 1180,
+        "y": 2080,
         "wires": [
             []
         ]
@@ -23183,11 +23169,11 @@
         "round": "",
         "mult": "single",
         "reduce": false,
-        "x": 1100,
+        "x": 1200,
         "y": 2020,
         "wires": [
             [
-                "41d02716c7ee4788"
+                "6f8a9a80f62fe1e9"
             ]
         ]
     },
@@ -23208,8 +23194,8 @@
         "font": "",
         "fontSize": "14",
         "color": "#008080",
-        "x": 1240,
-        "y": 2020,
+        "x": 1220,
+        "y": 2160,
         "wires": []
     },
     {
@@ -23229,7 +23215,7 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 890,
+        "x": 910,
         "y": 2080,
         "wires": [
             [
@@ -23259,6 +23245,166 @@
         "x": 1510,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "0dd1ad16dedd4d28",
+        "type": "inject",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "transmission_delay",
+        "payloadType": "flow",
+        "x": 1030,
+        "y": 2160,
+        "wires": [
+            [
+                "41d02716c7ee4788"
+            ]
+        ]
+    },
+    {
+        "id": "6f8a9a80f62fe1e9",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "transmission_delay",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 2020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a331c7113bb6fa38",
+        "type": "rbe",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "func": "rbe",
+        "gap": "5",
+        "start": "",
+        "inout": "in",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 970,
+        "y": 2000,
+        "wires": [
+            [
+                "d50ebc8190dac5c2"
+            ]
+        ]
+    },
+    {
+        "id": "a4801cf476e76cec",
+        "type": "delay",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1530,
+        "y": 660,
+        "wires": [
+            [
+                "480dfb31c83e4f89"
+            ]
+        ]
+    },
+    {
+        "id": "480dfb31c83e4f89",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "transmission_delay",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1730,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86a761d0d89ee362",
+        "type": "rbe",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "func": "rbe",
+        "gap": "5",
+        "start": "",
+        "inout": "in",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 970,
+        "y": 1840,
+        "wires": [
+            [
+                "27b3329bfce21726"
+            ]
+        ]
+    },
+    {
+        "id": "1e5acd6b13718ebb",
+        "type": "rbe",
+        "z": "d7c58eb9e7b65abb",
+        "name": "",
+        "func": "rbe",
+        "gap": "5",
+        "start": "",
+        "inout": "in",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 970,
+        "y": 1960,
+        "wires": [
+            [
+                "3c63daae2a5e8e99"
+            ]
+        ]
     },
     {
         "id": "01cd46f702ab295a",

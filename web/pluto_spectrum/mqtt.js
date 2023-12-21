@@ -80,37 +80,37 @@ function mqtt_client() {
     if (topic === `dt/pluto/${callsign}/rx/webfft/frequency`) {
       let Hz = Number(message.toString());
       spectrum.setCenterHz(Hz);
-      console.log("setCenterHz: " + Hz);
+      // console.log("setCenterHz: " + Hz);
     }
     if (topic === `dt/pluto/${callsign}/rx/webfft/span`) {
       let spanHz = Number(message.toString());
       spectrum.setSpanHz(spanHz);
-      console.log("setSpanHz: " + spanHz);
+      // console.log("setSpanHz: " + spanHz);
     }
     if (topic === `cmd/pluto/${callsign}/rx/webfft/minSpan`) {
       let spanHz = Number(message.toString());
       spectrum.setMinSpanHz(spanHz);
-      console.log("minSpan: " + spanHz);
+      // console.log("minSpan: " + spanHz);
     }
     if (topic === `cmd/pluto/${callsign}/rx/webfft/min_db`) {
       let db = Number(message.toString());
       spectrum.setMinRange(db);
-      console.log("min db: " + db);
+      // console.log("min db: " + db);
     }
     if (topic === `cmd/pluto/${callsign}/rx/webfft/max_db`) {
       let db = Number(message.toString());
       spectrum.setMaxRange(db);
-      console.log("max db: " + db);
+      // console.log("max db: " + db);
     }
     if (topic === `cmd/pluto/${callsign}/rx/webfft/avg`) {
       let num = Number(message.toString());
       spectrum.setAveraging(num);
-      console.log("avg: " + num);
+      // console.log("avg: " + num);
     }
     if (topic === `cmd/pluto/${callsign}/rx/webfft/signal_threshold`) {
       let num = Number(message.toString());
       spectrum.setThreshold(num);
-      console.log("avg: " + num);
+      // console.log("avg: " + num);
     }
   });
 }

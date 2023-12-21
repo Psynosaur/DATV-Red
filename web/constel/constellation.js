@@ -87,7 +87,7 @@ const t = setInterval(
 );
 
 function drawConstellationPoints(data) {
-    console.log(data.length)
+    // console.log(data.length)
     // Draw the dots
     ctx.setTransform(15, 0, 0, 15, 0, 0); // resets the transform to clear
     ctx.clearRect(0, 0, W, H); // clears the canvas
