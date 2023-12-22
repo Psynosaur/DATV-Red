@@ -7,8 +7,8 @@ IF [%2] == [] GOTO NoFile
 cd %BASEDIR%
 ECHO Setting up NTP server on pluto
 SET entry="'1s/^/server %ts%\n/'"
-ECHO ssh -o UserKnownHostsFile=\\.\NUL root@%pluto% /etc/init.d/S49ntp stop ; sed -i %entry% /etc/ntp.conf ; ntpd -gq ; /etc/init.d/S49ntp start ; cat /etc/ntp.conf ; sleep 2 ; ntpq -c lpeer
-ssh -o UserKnownHostsFile=\\.\NUL root@%pluto% /etc/init.d/S49ntp stop ; sed -i %entry% /etc/ntp.conf ; cat /etc/ntp.conf ; ntpd -gq ; /etc/init.d/S49ntp start ; sleep 2 ; ntpq -c lpeer
+@REM ECHO ssh -o UserKnownHostsFile=\\.\NUL root@%pluto% /etc/init.d/S49ntp stop ; sed -i %entry% /etc/ntp.conf ; ntpd -gq ; /etc/init.d/S49ntp start ; cat /etc/ntp.conf ; sleep 2 ; ntpq -c lpeer
+ssh -o UserKnownHostsFile=\\.\NUL root@%pluto% /etc/init.d/S49ntp stop ; sed -i %entry% /etc/ntp.conf ; cat /etc/ntp.conf ; ntpd -gq ; /etc/init.d/S49ntp start ; sleep 2 ; ntpq -c lpeer ; date
 pause
 exit
 :NoIp
