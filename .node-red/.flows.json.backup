@@ -22280,7 +22280,7 @@
         "z": "d7c58eb9e7b65abb",
         "g": "c070d9c6c2a6ac1b",
         "name": "generate signal report",
-        "func": "let freq = (Number(flow.get(\"freq\")) * 1000 + Math.abs(Number(global.get('device.rx.offset')))) / 1e6;\nlet provider = `\"${flow.get(\"provider\")}\"`;\nlet v_buff = flow.get(\"video_buffer\");\nlet a_buff = flow.get(\"audio_buffer\");\nlet delay = flow.get(\"transmission_delay\");\nif (global.get(\"platform\") === \"linux\") provider = flow.get(\"provider\");\nlet video = `${v_buff > 100000 ? \"\" : v_buff !== 0 ? `video: ${v_buff}ms` : \"\"}`;\nlet audio = `${a_buff > 100000 ? \"\" : a_buff !== 0 ? `, audio: ${a_buff}ms` : \"\"}`;\nlet tx_delay = `${delay > 0 ? `, tx delay, ${delay}ms ` : \"\"}`;\nlet analysis_string = \"\";\nif (video !== \"\" || audio !== \"\" || tx_delay !== \"\") analysis_string=  `Buffer delays, ${video}${audio}${tx_delay} `;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/${provider} - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${freq}${analysis_string} - ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
+        "func": "let freq = (Number(flow.get(\"freq\")) * 1000 + Math.abs(Number(global.get('device.rx.offset')))) / 1e6;\nlet provider = `\"${flow.get(\"provider\")}\"`;\nlet v_buff = flow.get(\"video_buffer\");\nlet a_buff = flow.get(\"audio_buffer\");\nlet delay = flow.get(\"transmission_delay\");\nif (global.get(\"platform\") === \"linux\") provider = flow.get(\"provider\");\nlet video = `${v_buff > 100000 ? \"\" : v_buff !== 0 ? `video: ${v_buff}ms` : \"\"}`;\nlet audio = `${a_buff > 100000 ? \"\" : a_buff !== 0 ? `, audio: ${a_buff}ms` : \"\"}`;\nlet tx_delay = `${delay > 0 ? `, tx delay, ${delay}ms ` : \"\"}`;\nlet analysis_string = \"\";\nif (video !== \"\" || audio !== \"\" || tx_delay !== \"\") analysis_string=  ` Buffer delays, ${video}${audio}${tx_delay} `;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/${provider} - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${freq}${analysis_string} - ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -23170,6 +23170,13 @@
                 "pt": "msg",
                 "to": "0",
                 "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
             }
         ],
         "action": "",
@@ -23184,7 +23191,10 @@
                 "d50ebc8190dac5c2",
                 "3c63daae2a5e8e99",
                 "27b3329bfce21726",
-                "097842d26da1c238"
+                "097842d26da1c238",
+                "f298934c06e2694e",
+                "b4d68204ef4121e0",
+                "6f8a9a80f62fe1e9"
             ]
         ]
     },
