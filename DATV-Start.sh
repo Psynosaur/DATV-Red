@@ -1,9 +1,7 @@
 #!/usr/bin/bash
 
-# DATV-Red start script by DL5OCD
-
-BASEDIR=$(pwd)
-cd $BASEDIR
+CWD=${pwd}
+cd "$CWD"
 
 echo "Starting DATV-Red..."
 

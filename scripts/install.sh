@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-# Install script by DL5OCD
+# Install script by DL5OCD and ZS1SCI
 
 BASEDIR=$(pwd)
-cd $BASEDIR
+cd "$BASEDIR"
 
 echo "This installs all needed components for DATV-Red..."
 echo "Run this script as root (sudo ./install)!!!"
