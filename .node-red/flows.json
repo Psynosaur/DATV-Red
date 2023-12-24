@@ -1366,9 +1366,7 @@
             "8b74e5e219711233"
         ],
         "x": 194,
-        "y": 1611.5,
-        "w": 812,
-        "h": 149.5
+        "y": 1611.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -1495,9 +1493,7 @@
             "097842d26da1c238"
         ],
         "x": 174,
-        "y": 1799,
-        "w": 1452,
-        "h": 402
+        "y": 1799
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -10010,7 +10006,7 @@
         "name": "",
         "filename": "settings/pluto.json",
         "filenameType": "str",
-        "format": "utf8",
+        "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
@@ -16799,7 +16795,7 @@
         "wires": [
             [
                 "5802767bfd215d2b",
-                "cdc147736509f758"
+                "8d24e6025fe47ef5"
             ]
         ]
     },
