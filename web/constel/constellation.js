@@ -3,7 +3,7 @@
  * This software is released under the MIT license.
  * See the LICENSE file for further details.
  */
-let data = [];
+let data = [{x:0,Y:128},{x:128,Y:0}];
 let dataPoints = 2500;
 let graph = document.getElementById("graph");
 const ctx = graph.getContext('2d', {alpha: false});
@@ -48,6 +48,7 @@ function mqtt_client() {
         client.subscribe(`cmd/longmynd/frequency`, () => {
         });
     });
+
     client.on("message", function (topic, message) {
         if (data.length > dataPoints) {
             data = data.slice(2);
@@ -69,12 +70,22 @@ function mqtt_client() {
         }
         if (topic === `dt/longmynd/constel_q`) {
             y = Number(message.toString());
+
         }
-        let obj = {
-            x: x,
-            y: y
-        };
-        data.push(obj)
+
+        // console.log("data[-1]?.x :" + data.at(-1)?.x)
+        // console.log("data[-1]?.y :" + data.at(-1)?.y)
+        // console.log("data[-2]?.x :" + data.at(-2)?.x)
+        // console.log("data[-2]?.y :" + data.at(-2)?.y)
+        if((x !== data.at(-2)?.x && x !== data.at(-1)?.x) && (y !== data.at(-2)?.y && y !== data.at(-1)?.y)){
+            let obj = {
+                x: x,
+                y: y
+            };
+            // console.log(obj)
+            data.push(obj)
+        }
+
     });
 }
 
@@ -89,15 +100,15 @@ const t = setInterval(
 function drawConstellationPoints(data) {
     // console.log(data.length)
     // Draw the dots
-    ctx.setTransform(15, 0, 0, 15, 0, 0); // resets the transform to clear
+    ctx.setTransform(12, 0, 0, 12, 0, 0); // resets the transform to clear
     ctx.clearRect(0, 0, W, H); // clears the canvas
-    ctx.setTransform(15, 0, 0, 15, W / 2, H / 2)
+    ctx.setTransform(12, 0, 0, 12, W / 2, H / 2)
 
     // Chart axis
-    ctx.strokeRect(0,0, 90, 90);
-    ctx.strokeRect(-90,0, 90, 90);
-    ctx.strokeRect(0,-90, 90, 90);
-    ctx.strokeRect(-90,-90, 90, 90);
+    ctx.strokeRect(0,0, 128, 128);
+    ctx.strokeRect(-128,0, 128, 128);
+    ctx.strokeRect(0,-128, 128, 128);
+    ctx.strokeRect(-128,-128, 128, 128);
 
     let j = 0;
     for (let i = 0; i < data.length; i++) {
