@@ -4,7 +4,7 @@
  * See the LICENSE file for further details.
  */
 let data = [{x:0,Y:128},{x:128,Y:0}];
-let dataPoints = 2500;
+let dataPoints = 1500;
 let graph = document.getElementById("graph");
 const ctx = graph.getContext('2d', {alpha: false});
 
@@ -77,12 +77,14 @@ function mqtt_client() {
         // console.log("data[-1]?.y :" + data.at(-1)?.y)
         // console.log("data[-2]?.x :" + data.at(-2)?.x)
         // console.log("data[-2]?.y :" + data.at(-2)?.y)
-        if((x !== data.at(-2)?.x && x !== data.at(-1)?.x) && (y !== data.at(-2)?.y && y !== data.at(-1)?.y)){
+
+        // if the last two values of x and y in our array aren't the current values, we add the unique point(x,y).
+        if (x !== data.at(-2)?.x && x !== data.at(-1)?.x && y !== data.at(-2)?.y && y !== data.at(-1)?.y) {
             let obj = {
                 x: x,
                 y: y
             };
-            // console.log(obj)
+
             data.push(obj)
         }
 
@@ -100,9 +102,11 @@ const t = setInterval(
 function drawConstellationPoints(data) {
     // console.log(data.length)
     // Draw the dots
-    ctx.setTransform(12, 0, 0, 12, 0, 0); // resets the transform to clear
+    let scale_factor = 12;
+    let magicNumber = 1.85;
+    ctx.setTransform(scale_factor, 0, 0, scale_factor, 0, 0); // resets the transform to clear
     ctx.clearRect(0, 0, W, H); // clears the canvas
-    ctx.setTransform(12, 0, 0, 12, W / 2, H / 2)
+    ctx.setTransform(scale_factor, 0, 0, scale_factor, W / 2, H / 2)
 
     // Chart axis
     ctx.strokeRect(0,0, 128, 128);
@@ -110,6 +114,34 @@ function drawConstellationPoints(data) {
     ctx.strokeRect(0,-128, 128, 128);
     ctx.strokeRect(-128,-128, 128, 128);
 
+    // dots for chart
+    // ctx.scale(1-(1/scale_factor), 1-(1/scale_factor))
+    // let spot_x1 = Math.floor(128/Math.sqrt(2));
+    // let spot_x2 = Math.floor(-128/Math.sqrt(2));
+    // let spot_y1 = Math.floor(128/Math.sqrt(2));
+    // let spot_y2 = Math.floor(-128/Math.sqrt(2));
+    // console.log(`${spot_x1}, ${spot_x2}, ${spot_y1}, ${spot_y2}`)
+    // ctx.fillStyle = `rgb(255, 0, 30)`
+    // ctx.font = `11px sans-serif`;
+    // ctx.textBaseline = "bottom";
+    //
+    // ctx.fillText("01", spot_x1, spot_y1);
+    // ctx.fillText("11", spot_x2, spot_y1);
+    // ctx.fillText("00", spot_x1, spot_y2);
+    // ctx.fillText("10", spot_x2, spot_y2);
+    // ctx.beginPath();
+    // ctx.arc(spot_x1, spot_y1, 1, 0, endAngle, true);
+    // ctx.fill();
+    // ctx.beginPath();
+    // ctx.arc(spot_x2, spot_y1, 1, 0, endAngle, true);
+    // ctx.fill();
+    // ctx.beginPath();
+    // ctx.arc(spot_x1, spot_y2, 1, 0, endAngle, true);
+    // ctx.fill();
+    // ctx.beginPath();
+    // ctx.arc(spot_x2, spot_y2, 1, 0, endAngle, true);
+    // ctx.fill();
+    // ctx.fillStyle = `rgb(0, 255, 128)`
     let j = 0;
     for (let i = 0; i < data.length; i++) {
         // if (i >= 500 && i < 1000) {
@@ -137,6 +169,10 @@ function drawConstellationPoints(data) {
         // }
         ctx.beginPath();
         ctx.arc(data[i].x, data[i].y, 1, 0, endAngle, true);
+        // ctx.fillText(`${data[i].x}, ${data[i].y}`, data[i].x, data[i].y);
         ctx.fill();
     }
+    // ctx.restore();
+
 }
+
