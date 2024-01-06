@@ -93,7 +93,7 @@ Spectrum.prototype.drawFFT = function (bins) {
     this.ctx.strokeStyle = "#fefefe";
     this.ctx.stroke();
 };
-
+// Most of these are from the BATC spectrum code, "internet_spectrum" folder
 const beacon_strength = 0;
 let mouse_in_canvas = false;
 let mouse_x = 0;
@@ -113,6 +113,7 @@ let busy = false;
 let activeColor, activeXd1, activeYd, activeXd2;
 let activeColor_1, activeXd1_1, activeYd_1, activeXd2_1;
 let activeColor_1_tx, activeXd1_1_tx, activeYd_1_tx, activeXd2_1_tx;
+
 Spectrum.prototype.detect_signals = function (
     fft_data,
     ctx,
@@ -122,8 +123,11 @@ Spectrum.prototype.detect_signals = function (
 ) {
     let i;
     let j;
+    // Dynamic signal threshold variables
+    let spectrum_y_range = this.max_db - this.min_db;
+    let spectrum_threshold_step = spectrum_y_range / 100;
     const noise_level = this.min_db;
-    const signal_threshold = this.min_db + this.threshold;
+    const signal_threshold = this.max_db - (spectrum_y_range - spectrum_threshold_step * this.threshold);
 
     let in_signal = false;
     let start_signal = 0;
@@ -247,32 +251,9 @@ Spectrum.prototype.detect_signals = function (
                     symbolrate: 1000.0 * signal_bw,
                 });
 
-                // Exclude signals in beacon band
-                // if (signal_freq < 492.0) {
-                //   if (signal_bw >= 1.0) {
-                //     // Probably the Beacon!
-                //     beacon_strength = strength_signal;
-                //   }
-                //   continue;
-                // }
-                // console.dir(signals)
-                /*
-                                    console.log("####");
-                                for(j = start_signal; j < end_signal; j++)
-                                {
-                                console.log(fft_data[j]);
-                                }
-                                */
 
-                /* Sanity check bandwidth, and exclude beacon */
                 if (signal_bw !== 0) {
                     text_x_position = (mid_signal / fft_data.length) * canvasWidth;
-
-                    /* Adjust for right-side overlap */
-                    // if (text_x_position > 0.92 * canvasWidth) {
-                    //     text_x_position = canvasWidth - 55;
-                    // }
-
                     ctx.font = "14px Arial";
                     ctx.fillStyle = "white";
                     ctx.textAlign = "center";
@@ -284,61 +265,13 @@ Spectrum.prototype.detect_signals = function (
                             );
                         ctx.restore();
                     }
-                    // else {
-                    //     ctx.fillText(
-                    //         "[over-power]",
-                    //         text_x_position,
-                    //         canvasHeight - (strength_signal / 65536) * canvasHeight - 16
-                    //     );
-                    //     ctx.restore();
-                    //
-                    //     ctx.lineWidth = 2;
-                    //     ctx.strokeStyle = "white";
-                    //     ctx.setLineDash([4, 4]);
-                    //     ctx.beginPath();
-                    //     ctx.moveTo(
-                    //         (start_signal / fft_data.length) * canvasWidth,
-                    //         canvasHeight * (1 - (beacon_strength - 1.0 * scale_db) / 65536)
-                    //     );
-                    //     ctx.lineTo(
-                    //         (end_signal / fft_data.length) * canvasWidth,
-                    //         canvasHeight * (1 - (beacon_strength - 1.0 * scale_db) / 65536)
-                    //     );
-                    //     ctx.stroke();
-                    //     ctx.setLineDash([]);
-                    //     ctx.restore();
-                    // }
                 }
+
+
             }
         }
     }
 
-    // if (in_signal) {
-    //     end_signal = fft_data.length;
-    //     acc = 0;
-    //     acc_i = 0;
-    //     for (
-    //         j = (start_signal + 0.3 * (end_signal - start_signal)) | 0;
-    //         j < start_signal + 0.7 * (end_signal - start_signal);
-    //         j++
-    //     ) {
-    //         acc = acc + fft_data[j];
-    //         acc_i = acc_i + 1;
-    //     }
-    //
-    //     strength_signal = acc / acc_i;
-    //
-    //     ctx.font = "14px Arial";
-    //     ctx.fillStyle = background_colour === "black" ? "white" : "black";
-    //     ctx.textAlign = "center";
-    //     ctx.fillText(
-    //         "[out-of-band]",
-    //         canvasWidth - 55,
-    //         canvasHeight - (strength_signal / 65536) * canvasHeight - 16
-    //     );
-    //     ctx.restore();
-    // }
-    // console.log(`mouse in canvas: ${mouse_in_canvas}`)
     if (mouse_in_canvas) {
         // render_frequency_info(ctx, mouse_x, mouse_y);
 
@@ -348,6 +281,20 @@ Spectrum.prototype.detect_signals = function (
     if (typeof signal_selected !== "undefined" && signal_selected != null) {
         render_signal_selected_box(ctx, clicked_x, clicked_y);
     }
+};
+
+Spectrum.prototype.draw_signal_threshold = function (ctx, canvasHeight, canvasWidth){
+    let spectrum_height = (canvasHeight * (this.spectrumPercent / 100));
+    // let spectrum_y_range = this.max_db - this.min_db;
+    let spectrum_threshold_step = spectrum_height / 100;
+    ctx.lineWidth=1;
+    ctx.strokeStyle = 'red';
+    ctx.setLineDash([5, 3])
+    ctx.beginPath();
+    ctx.moveTo(0, spectrum_height - spectrum_threshold_step * this.threshold);
+    ctx.lineTo(canvasWidth, spectrum_height - spectrum_threshold_step * this.threshold);
+    ctx.stroke();
+    ctx.setLineDash([0, 0])
 };
 
 Spectrum.prototype.drawChannels = function (ctx) {
@@ -512,7 +459,6 @@ Spectrum.prototype.drawSpectrum = function (bins) {
 
     // Do autoscale axes
     if (this.autoScale) this.doAutoScale(bins);
-
     // Draw FFT bins
     this.drawFFT(bins);
 
@@ -523,10 +469,13 @@ Spectrum.prototype.drawSpectrum = function (bins) {
     this.ctx.fillStyle = this.gradient;
     this.ctx.fill();
     // this.drawChannels(this.ctx);
+    this.draw_signal_threshold(this.ctx, height, width);
 
     // Copy axes from offscreen canvas
     this.ctx.drawImage(this.ctx_axes.canvas, 0, 0);
+
     this.detect_signals(bins, this.ctx, height, width, this.spanHz);
+
 };
 let highlighted_channel = {};
 

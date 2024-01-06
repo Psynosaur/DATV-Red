@@ -68,6 +68,7 @@ function main() {
   spectrum = new Spectrum("waterfall", {
     spectrumPercent: 65,
     logger: "log",
+    wf_size: 35
   });
 
   // Connect to websocket
