@@ -5,7 +5,7 @@ SET file=%2
 IF [%1] == [] GOTO NoIp
 IF [%2] == [] GOTO NoFile
 cd %BASEDIR%
-:Gogo
+GOTO Gogo
 
 :NoIp
 @echo off
