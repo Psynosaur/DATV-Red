@@ -719,10 +719,10 @@
             "8ee9aef755219d8b",
             "2eb9a7d4d6079e45"
         ],
-        "x": 2014,
+        "x": 1894,
         "y": 1439,
         "w": 292,
-        "h": 1702
+        "h": 1722
     },
     {
         "id": "5ed3848da82bcc9a",
@@ -822,11 +822,12 @@
             "4a0642add9f7b983",
             "2d85a16a42027727",
             "2d1d2f2c5a3e44b6",
-            "947313bf5f0e22d1"
+            "947313bf5f0e22d1",
+            "bb78b77ba46f7005"
         ],
-        "x": 2334,
+        "x": 2234,
         "y": 1219,
-        "w": 1172,
+        "w": 1272,
         "h": 1762
     },
     {
@@ -903,7 +904,9 @@
             "bbf9e870bbb3141b"
         ],
         "x": 574,
-        "y": 39
+        "y": 39,
+        "w": 712,
+        "h": 82
     },
     {
         "id": "2406e32417780de0",
@@ -1326,7 +1329,9 @@
             "3fcda18d3f907163"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "2a6eb2e492bee274",
@@ -1342,7 +1347,9 @@
             "819d5b65838d0f8c"
         ],
         "x": 34,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "97fae7a46f8ffe23",
@@ -1364,7 +1371,9 @@
             "2a3dc125f08d620e"
         ],
         "x": 114,
-        "y": 139
+        "y": 139,
+        "w": 872,
+        "h": 222
     },
     {
         "id": "c070d9c6c2a6ac1b",
@@ -1383,7 +1392,9 @@
             "8b74e5e219711233"
         ],
         "x": 194,
-        "y": 1611.5
+        "y": 1611.5,
+        "w": 812,
+        "h": 149.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -1402,7 +1413,9 @@
             "ece06122.7e762"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 1032,
+        "h": 82
     },
     {
         "id": "f6c11774649f8d00",
@@ -1518,7 +1531,9 @@
             "097842d26da1c238"
         ],
         "x": 194,
-        "y": 1819
+        "y": 1819,
+        "w": 1452,
+        "h": 462
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -3472,7 +3487,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2110,
+        "x": 1990,
         "y": 2080,
         "wires": [
             [
@@ -3501,7 +3516,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2110,
+        "x": 1990,
         "y": 2140,
         "wires": [
             [
@@ -3573,7 +3588,7 @@
         "payloadType": "str",
         "topic": "payload",
         "topicType": "msg",
-        "x": 2120,
+        "x": 2000,
         "y": 2680,
         "wires": [
             [
@@ -3602,7 +3617,7 @@
         "payloadType": "str",
         "topic": "payload",
         "topicType": "msg",
-        "x": 2120,
+        "x": 2000,
         "y": 2620,
         "wires": [
             [
@@ -3673,7 +3688,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "channel",
-        "x": 2120,
+        "x": 2000,
         "y": 2380,
         "wires": [
             [
@@ -3701,7 +3716,7 @@
         "max": "0",
         "step": "-0.25",
         "className": "",
-        "x": 2120,
+        "x": 2000,
         "y": 2200,
         "wires": [
             [
@@ -3755,7 +3770,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2110,
+        "x": 1990,
         "y": 2560,
         "wires": [
             [
@@ -3841,7 +3856,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2110,
+        "x": 1990,
         "y": 2440,
         "wires": [
             [
@@ -3869,7 +3884,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2110,
+        "x": 1990,
         "y": 2260,
         "wires": [
             [
@@ -3908,7 +3923,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2120,
+        "x": 2000,
         "y": 2320,
         "wires": [
             [
@@ -4067,7 +4082,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2110,
+        "x": 1990,
         "y": 2720,
         "wires": [
             [
@@ -4129,7 +4144,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2110,
+        "x": 1990,
         "y": 2760,
         "wires": [
             [
@@ -4190,7 +4205,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2110,
+        "x": 1990,
         "y": 2820,
         "wires": [
             [
@@ -4261,7 +4276,7 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 2120,
+        "x": 2000,
         "y": 1540,
         "wires": [
             [
@@ -4300,7 +4315,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2120,
+        "x": 2000,
         "y": 2880,
         "wires": [
             [
@@ -4360,7 +4375,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2150,
+        "x": 2030,
         "y": 2940,
         "wires": [
             [
@@ -4465,7 +4480,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2130,
+        "x": 2010,
         "y": 3000,
         "wires": [
             [
@@ -4514,7 +4529,7 @@
         "max": "3",
         "step": "1",
         "className": "",
-        "x": 2140,
+        "x": 2020,
         "y": 1840,
         "wires": [
             [
@@ -4874,7 +4889,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2110,
+        "x": 1990,
         "y": 1720,
         "wires": [
             [
@@ -4903,7 +4918,7 @@
         "payloadType": "global",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2110,
+        "x": 1990,
         "y": 1780,
         "wires": [
             [
@@ -5002,7 +5017,7 @@
         "max": "50000",
         "step": "250",
         "className": "",
-        "x": 2090,
+        "x": 1970,
         "y": 1980,
         "wires": [
             [
@@ -5081,7 +5096,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2110,
+        "x": 1990,
         "y": 1600,
         "wires": [
             [
@@ -5996,7 +6011,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 640,
+        "x": 660,
         "y": 2360,
         "wires": [
             [
@@ -6024,7 +6039,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2120,
+        "x": 2000,
         "y": 1940,
         "wires": [
             [
@@ -6098,7 +6113,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2120,
+        "x": 2000,
         "y": 1900,
         "wires": [
             [
@@ -10592,7 +10607,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2110,
+        "x": 1990,
         "y": 1660,
         "wires": [
             [
@@ -12271,7 +12286,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2120,
+        "x": 2000,
         "y": 2500,
         "wires": [
             [
@@ -12432,7 +12447,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2150,
+        "x": 2030,
         "y": 3060,
         "wires": [
             [
@@ -12482,7 +12497,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2160,
+        "x": 2040,
         "y": 1480,
         "wires": [
             [
@@ -12507,8 +12522,8 @@
         "topic": "",
         "payload": "device.tx.dvbs2.tssourceaddress",
         "payloadType": "global",
-        "x": 1780,
-        "y": 3180,
+        "x": 1700,
+        "y": 3060,
         "wires": [
             [
                 "8ee9aef755219d8b"
@@ -12604,7 +12619,6 @@
         "id": "2b25acbe5bad144e",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "44bb8f59b40e58cf",
         "name": "rx spec freq",
         "active": true,
@@ -12685,8 +12699,8 @@
         "order": 10,
         "width": "5",
         "height": "1",
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -13913,7 +13927,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "RX Frequency",
-        "func": "let span = []\nlet switcher = Number(msg.payload);\n\nswitch (switcher) {\n    case 35000:\n        span = [\n            560000,\n            1120000,\n            1680000,\n            2240000,\n            2800000,\n            3360000,\n            3920000,\n            4480000\n        ]\n        break;\n    case 66000:\n        span = [\n            1056000,\n            2112000,\n            3168000,\n            4224000,\n            5280000,\n            6336000,\n            7392000,\n            8448000\n        ]\n        break;\n    case 125000:\n        span = [\n            2000000,\n            4000000,\n            6000000,\n            8000000,\n            10000000,\n            12000000,\n            14000000,\n            16000000\n        ]\n        break;\n    case 250000:\n        span = [\n            4000000,\n            8000000,\n            12000000,\n            16000000,\n            20000000,\n            24000000,\n            28000000,\n            32000000\n        ]\n        break;\n    case 333000:\n        span = [\n            5328000,\n            10656000,\n            15984000,\n            21312000,\n            26640000,\n            31968000,\n            37296000,\n            42624000\n        ]\n        break;\n    case 500000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n    case 1000000:\n        span = [\n            16000000,\n            32000000,\n            48000000,\n            64000000,\n            80000000,\n            96000000,\n            112000000,\n            128000000\n        ]\n        break;\n    case 1500000:\n        span = [\n            24000000,\n            48000000,\n            72000000,\n            96000000,\n            120000000,\n            144000000,\n            168000000,\n            192000000\n        ]\n        break;\n    case 2000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000\n        ]\n        break;\n    case 3000000:\n        span = [\n            6000000,\n            12000000,\n            18000000,\n            24000000,\n            30000000,\n            36000000,\n            42000000,\n            48000000\n        ]\n        break;\n    case 4000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n}\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = global.get(\"device.rx.frequency\") * 1000;\nmsg.span = span;\nglobal.set(\"span_options\", span);\nglobal.set(\"change_span_options\", true);\nreturn msg;",
+        "func": "let span = []\nlet switcher = Number(msg.payload);\n\nswitch (switcher) {\n    case 35000:\n        span = [\n            560000,\n            1120000,\n            1680000,\n            2240000,\n            2800000,\n            3360000,\n            3920000,\n            4480000\n        ]\n        break;\n    case 66000:\n        span = [\n            1056000,\n            2112000,\n            3168000,\n            4224000,\n            5280000,\n            6336000,\n            7392000,\n            8448000\n        ]\n        break;\n    case 125000:\n        span = [\n            2000000,\n            4000000,\n            6000000,\n            8000000,\n            10000000,\n            12000000,\n            14000000,\n            16000000\n        ]\n        break;\n    case 250000:\n        span = [\n            4000000,\n            8000000,\n            12000000,\n            16000000,\n            20000000,\n            24000000,\n            28000000,\n            32000000\n        ]\n        break;\n    case 333000:\n        span = [\n            5328000,\n            10656000,\n            15984000,\n            21312000,\n            26640000,\n            31968000,\n            37296000,\n            42624000\n        ]\n        break;\n    case 500000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n    case 1000000:\n        span = [\n            16000000,\n            32000000,\n            48000000,\n            64000000,\n            80000000,\n            96000000,\n            112000000,\n            128000000\n        ]\n        break;\n    case 1500000:\n        span = [\n            24000000,\n            48000000,\n            72000000,\n            96000000,\n            120000000,\n            144000000,\n            168000000,\n            192000000\n        ]\n        break;\n    case 2000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000\n        ]\n        break;\n    case 3000000:\n        span = [\n            6000000,\n            12000000,\n            18000000,\n            24000000,\n            30000000,\n            36000000,\n            42000000,\n            48000000\n        ]\n        break;\n    case 4000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n}\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = global.get(\"settings.spectrum.freq\") * 1_000_000;\nmsg.span = span;\nglobal.set(\"span_options\", span);\nglobal.set(\"change_span_options\", true);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -15709,6 +15723,11 @@
                 "label": "AC3",
                 "value": "ac3",
                 "type": "str"
+            },
+            {
+                "label": "OPUS",
+                "value": "libopus",
+                "type": "str"
             }
         ],
         "payload": "",
@@ -17102,7 +17121,7 @@
         "tooltip": "",
         "group": "a4a37989805c1f8e",
         "order": 6,
-        "width": "5",
+        "width": "3",
         "height": "1",
         "passthru": false,
         "mode": "text",
@@ -17111,11 +17130,11 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2130,
-        "y": 3100,
+        "x": 2030,
+        "y": 3120,
         "wires": [
             [
-                "947313bf5f0e22d1"
+                "52bcb7338f5c5791"
             ]
         ]
     },
@@ -17165,27 +17184,9 @@
         "wires": [
             [
                 "2eb9a7d4d6079e45",
-                "777171c7ce6ecdb1",
-                "947313bf5f0e22d1"
+                "52bcb7338f5c5791"
             ]
         ]
-    },
-    {
-        "id": "777171c7ce6ecdb1",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "ts",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2070,
-        "y": 3240,
-        "wires": []
     },
     {
         "id": "498aacb4ed3dc458",
@@ -17219,7 +17220,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "ffmpeg command builder",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let input = global.get(\"settings.input_choice\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} `+\n    `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-minrate ${global.get(\n        \"settings.VBITRATE\"\n    )}k -maxrate ${global.get(\"settings.VBITRATE\")}k`;\n    let keyframe_interval = global.get(\"settings.FPS\") * 5;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            //codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx264 -r ${global.get(\n                \"settings.FPS\"\n            )} ${shapingString} -x264-params rc-lookahead=10:no-scenecut=1`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -crf 0 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case \"libvvenc\":\n            let vvcBitRate = videoBitrate * 800; // to Mega-ish\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n\n    \n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                \"settings.video_device\"\n            )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                \"settings.audio_device\"\n            )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts ` +\n        `${global.get(\"settings.null_packets\") ? `-muxrate ${tsRate}K` : ``} ` +\n        // `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\n            \"device.tx.dvbs2.tssourceaddress\"\n        )}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let input = global.get(\"settings.input_choice\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} `+\n    `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-minrate ${global.get(\n        \"settings.VBITRATE\"\n    )}k -maxrate ${global.get(\"settings.VBITRATE\")}k`;\n    let keyframe_interval = global.get(\"settings.FPS\") * 5;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            //codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx264 -r ${global.get(\n                \"settings.FPS\"\n            )} ${shapingString} -x264-params rc-lookahead=10:no-scenecut=1`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -crf 0 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case \"libvvenc\":\n            let vvcBitRate = videoBitrate * 1000; // to Mega-ish\n            let vvc_br = Math.ceil(vvcBitRate / 1000) * 1000;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params intraperiod=96:wavefrontsynchro=1:tiles=2x2:POC0IDR=0`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n\n    \n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 4095;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                \"settings.video_device\"\n            )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                \"settings.audio_device\"\n            )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${global.get(\"settings.ABITRATE\")}k ` +\n        `-f mpegts ` +\n        `${global.get(\"settings.null_packets\") ? `-muxrate ${tsRate}K` : ``} ` +\n        // `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\n            \"device.tx.dvbs2.tssourceaddress\"\n        )}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -17332,7 +17333,7 @@
         "g": "4bfefaeb7f82f4c6",
         "name": "restore object",
         "active": true,
-        "tosidebar": true,
+        "tosidebar": false,
         "console": false,
         "tostatus": false,
         "complete": "payload",
@@ -17698,6 +17699,148 @@
         "wires": [
             [
                 "89b95ad3b6453036"
+            ]
+        ]
+    },
+    {
+        "id": "bb78b77ba46f7005",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "tune_rx_freq",
+        "payloadType": "global",
+        "x": 2370,
+        "y": 1260,
+        "wires": [
+            [
+                "0d29c855caae3889"
+            ]
+        ]
+    },
+    {
+        "id": "ab53398fad4c77de",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "ffplay_console",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.remote_longmynd",
+        "payloadType": "global",
+        "x": 1620,
+        "y": 3320,
+        "wires": [
+            [
+                "d8f476a9293e25a1"
+            ]
+        ]
+    },
+    {
+        "id": "d8f476a9293e25a1",
+        "type": "ui_switch",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "label": "Remote longmynd",
+        "tooltip": "",
+        "group": "a4a37989805c1f8e",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1850,
+        "y": 3320,
+        "wires": [
+            [
+                "594280e393a907ab"
+            ]
+        ]
+    },
+    {
+        "id": "594280e393a907ab",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "set remote_longmynd",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.remote_longmynd",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2080,
+        "y": 3320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52bcb7338f5c5791",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "block TSIP when longmynd is remote",
+        "property": "settings.remote_longmynd",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2070,
+        "y": 3280,
+        "wires": [
+            [
+                "947313bf5f0e22d1"
             ]
         ]
     },
@@ -19063,7 +19206,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 630,
+        "x": 650,
         "y": 660,
         "wires": [
             [
@@ -19920,8 +20063,9 @@
         "type": "function",
         "z": "d7c58eb9e7b65abb",
         "name": "Frequency",
-        "func": "run = msg.payload\ntopic = \"cmd/longmynd/frequency\"\nmsg.topic = topic\nmsg.payload = run\nreturn msg;\n",
+        "func": "msg.topic = \"cmd/longmynd/frequency\"\nreturn msg;\n",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -20418,7 +20562,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 790,
         "y": 280,
         "wires": [
             [
@@ -21111,7 +21255,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 750,
+        "x": 610,
         "y": 280,
         "wires": [
             [
@@ -21194,8 +21338,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 780,
-        "y": 100,
+        "x": 1000,
+        "y": 40,
         "wires": [
             [
                 "757e04c57fef3f65"
@@ -21221,8 +21365,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 760,
-        "y": 160,
+        "x": 780,
+        "y": 140,
         "wires": [
             [
                 "4c448d00f7a9bc91"
@@ -22227,7 +22371,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
+        "x": 660,
         "y": 60,
         "wires": [
             [
@@ -22252,7 +22396,7 @@
         "topic": "",
         "payload": "on",
         "payloadType": "str",
-        "x": 490,
+        "x": 270,
         "y": 280,
         "wires": [
             [
