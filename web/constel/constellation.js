@@ -29,9 +29,10 @@ function mqtt_client() {
         clean: true,
         connectTimeout: 4000,
         // Authentication
-        clientId: "pluto" + new Date().getUTCMilliseconds(),
+        clientId: "pluto_constellation_" + new Date().getUTCMilliseconds(),
         username: "root",
         password: "analog",
+        protocolVersion: 5
     };
     const client = mqtt.connect(url, options);
     console.log("callsign: " + call_sign);
