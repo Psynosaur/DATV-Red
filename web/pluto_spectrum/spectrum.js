@@ -124,6 +124,7 @@ Spectrum.prototype.detect_signals = function (
     let i;
     let j;
     // Dynamic signal threshold variables
+    let spectrum_height = (canvasHeight * (this.spectrumPercent / 100));
     let spectrum_y_range = this.max_db - this.min_db;
     let spectrum_threshold_step = spectrum_y_range / 100;
     const noise_level = this.min_db;
@@ -261,7 +262,7 @@ Spectrum.prototype.detect_signals = function (
                         ctx.fillText(
                             print_symbolrate(signal_bw),
                             text_x_position,
-                            canvasHeight - (strength_signal / 7 / (this.max_db - this.min_db)) * canvasHeight - (strength_signal / 14)
+                            30
                             );
                         ctx.restore();
                     }
