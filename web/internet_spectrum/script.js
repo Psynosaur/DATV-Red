@@ -628,7 +628,7 @@ let canvasHeightLast;
 
     for (let j = 0; j < tuned_channels.length; j++) {
       if (isEmpty(tuned_channels[j])) {
-        console.log("not drawing");
+        // console.log("not drawing");
         continue;
       }
       obj = JSON.parse(tuned_channels[j]);

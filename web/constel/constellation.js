@@ -56,13 +56,13 @@ function mqtt_client() {
         }
         if (topic === `dt/longmynd/rx_state`) {
             if (message.toString() === "Hunting") {
-                console.log("clear");
+                // console.log("clear");
                 data = []
                 return;
             }
         }
         if (topic === `cmd/longmynd/frequency`) {
-            console.log("clear");
+            // console.log("clear");
             data = []
             return;
         }
