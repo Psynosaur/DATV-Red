@@ -5,7 +5,7 @@
 - Please see [flashing steps](https://github.com/Psynosaur/DATV-Red/wiki#flashing-steps)
 
 ## Setup and use
-1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red` and open in file explorer (you'll need [7zip](https://www.7-zip.org/download.html))
+1. Download [latest release](https://github.com/Psynosaur/DATV-Red/releases) and extract to folder `DATV-Red`
 
 2. **VERY IMPORTANT** Please make sure to place the folder in a path without spaces like: `C:\radio\DATV-Red` or `/home/user/DATV-Red/`
 
