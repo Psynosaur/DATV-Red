@@ -78,7 +78,7 @@ let canvasHeightLast;
   let activeColor, activeXd1, activeYd, activeXd2;
   let activeColor_1, activeXd1_1, activeYd_1, activeXd2_1;
   let activeColor_1_tx, activeXd1_1_tx, activeYd_1_tx, activeXd2_1_tx;
-
+  let storageSupport = false;
   /* Load vars from local storage */
   if (typeof Storage !== "undefined") {
     storageSupport = true;

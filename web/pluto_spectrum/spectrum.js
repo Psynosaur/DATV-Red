@@ -111,8 +111,47 @@ let background_colour = "black";
 let downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
 let busy = false;
 let activeColor, activeXd1, activeYd, activeXd2;
-let activeColor_1, activeXd1_1, activeYd_1, activeXd2_1;
-let activeColor_1_tx, activeXd1_1_tx, activeYd_1_tx, activeXd2_1_tx;
+
+let storageSupport = false;
+if (typeof Storage !== "undefined") {
+    storageSupport = true;
+
+    if (localStorage.activeColor) {
+        activeColor = localStorage.activeColor;
+    }
+    if (localStorage.activeXd1) {
+        activeXd1 = localStorage.activeXd1;
+    }
+    if (localStorage.activeYd) {
+        activeYd = localStorage.activeYd;
+    }
+    if (localStorage.activeXd2) {
+        activeXd2 = localStorage.activeXd2;
+    }
+}
+
+// From other spectrum
+function setRxClickState(
+    activeColor_f,
+    activeXd1_f,
+    magicSpaceAboveSignal,
+    activeXd2_f
+) {
+    activeColor = activeColor_f;
+    activeXd1 = activeXd1_f;
+    activeYd = magicSpaceAboveSignal;
+    activeXd2 = activeXd2_f;
+    if (storageSupport) {
+        localStorage.activeColor_1 = activeColor;
+        localStorage.activeXd1_1 = activeXd1;
+        localStorage.activeYd_1 = activeYd;
+        localStorage.activeXd2_1 = activeXd2;
+    }
+}
+
+
+
+
 
 Spectrum.prototype.detect_signals = function (
     fft_data,
@@ -1221,6 +1260,7 @@ Spectrum.prototype.on_canvas_click = function (ev) {
                 // channel: channelClicked,
             })
         );
+        setRxClickState(activeColor, 43, magicSpaceUnderSignal, canvasWidth * 1/5);
         /* RX tuning bar / box */
         // if (channelClicked === rx_count + 1) {
         //     setRxClickState(
