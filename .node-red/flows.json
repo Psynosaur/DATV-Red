@@ -2,7 +2,7 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red v3.96",
+        "label": "DATV-Red v3.97",
         "disabled": false,
         "info": "",
         "env": []
@@ -923,9 +923,7 @@
             "de3615657f5f8b75"
         ],
         "x": 48,
-        "y": 39,
-        "w": 1118,
-        "h": 368
+        "y": 39
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1039,9 +1037,7 @@
             "dbdac0110b580718"
         ],
         "x": 74,
-        "y": 959,
-        "w": 1292,
-        "h": 462
+        "y": 959
     },
     {
         "id": "97ecf1ac9459a777",
@@ -1091,9 +1087,7 @@
             "0c34bd3ef0714d28"
         ],
         "x": 54,
-        "y": 439,
-        "w": 1432,
-        "h": 502
+        "y": 439
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1623,9 +1617,7 @@
             "0dd67a65a9a17989"
         ],
         "x": 74,
-        "y": 139,
-        "w": 872,
-        "h": 242
+        "y": 139
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -1748,7 +1740,7 @@
         "id": "b9e32bd91ff08aa2",
         "type": "ui_base",
         "theme": {
-            "name": "theme-custom",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -1772,12 +1764,12 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#800800",
-                    "value": "#800800",
+                    "default": "#097479",
+                    "value": "#097479",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#800800",
+                    "value": "#097479",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -1789,7 +1781,7 @@
                     "edited": true
                 },
                 "group-textColor": {
-                    "value": "#cc0d00",
+                    "value": "#0eb8c0",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1805,7 +1797,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#800800",
+                    "value": "#097479",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -1825,7 +1817,7 @@
             }
         },
         "site": {
-            "name": "DATV-Red v3.96",
+            "name": "DATV-Red v3.97",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -3882,7 +3874,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 17,
+        "order": 16,
         "width": "6",
         "height": 1,
         "passthru": false,
@@ -4164,7 +4156,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 20,
+        "order": 21,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -4274,7 +4266,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 19,
+        "order": 20,
         "width": "3",
         "height": 1,
         "passthru": false,
@@ -4334,7 +4326,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 18,
+        "order": 19,
         "width": "6",
         "height": 1,
         "passthru": false,
@@ -4390,12 +4382,12 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "c927282dfd987c70",
         "name": "",
-        "label": "FEC Range",
-        "tooltip": "",
+        "label": "Range",
+        "tooltip": "FEC Range",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 16,
-        "width": "6",
+        "order": 17,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "multiple": false,
@@ -4460,7 +4452,7 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2010,
+        "x": 1990,
         "y": 3000,
         "wires": [
             [
@@ -10178,7 +10170,8 @@
                 "4aff6b42b30f122f",
                 "3845b79a049ba0b1",
                 "03f8ae8f0673a768",
-                "5256f916f7a707b7"
+                "5256f916f7a707b7",
+                "5346961230dd5b5f"
             ]
         ]
     },
@@ -17889,6 +17882,91 @@
         "wires": [
             [
                 "66edc2f79dcda9bc"
+            ]
+        ]
+    },
+    {
+        "id": "d344bd8fca67e051",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Send: Rolloff",
+        "func": "let topic = `${global.get(\"cmdPath\")}/tx/dvbs2/firfilter`;\nmsg.topic = topic;\nglobal.set(\"device.tx.dvbs2.firfilter\", msg.payload);\nglobal.set(\"deviceChange\", true);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2150,
+        "y": 3500,
+        "wires": [
+            [
+                "1b8ee9dbe0155dcd"
+            ]
+        ]
+    },
+    {
+        "id": "63c33f9789e5b91c",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "label": "Rolloff",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "06245a91daf3c666",
+        "order": 18,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "0.20",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "0.15",
+                "value": "1",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1970,
+        "y": 3500,
+        "wires": [
+            [
+                "d344bd8fca67e051"
+            ]
+        ]
+    },
+    {
+        "id": "5346961230dd5b5f",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "fecmode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tx.dvbs2.firfilter",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 3520,
+        "wires": [
+            [
+                "63c33f9789e5b91c"
             ]
         ]
     },
