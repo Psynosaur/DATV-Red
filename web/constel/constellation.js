@@ -3,7 +3,7 @@
  * This software is released under the MIT license.
  * See the LICENSE file for further details.
  */
-let data = [{x:0,Y:128},{x:128,Y:0}];
+let data = [{x: 0, Y: 128}, {x: 128, Y: 0}];
 let dataPoints = 1500;
 let graph = document.getElementById("graph");
 const ctx = graph.getContext('2d', {alpha: false});
@@ -27,8 +27,7 @@ function mqtt_client() {
     const options = {
         // Clean session
         clean: true,
-        connectTimeout: 4000,
-        // Authentication
+        connectTimeout: 4000, // Authentication
         clientId: "pluto_constellation_" + new Date().getUTCMilliseconds(),
         username: "root",
         password: "analog",
@@ -82,8 +81,7 @@ function mqtt_client() {
         // if the last two values of x and y in our array aren't the current values, we add the unique point(x,y).
         if (x !== data.at(-2)?.x && x !== data.at(-1)?.x && y !== data.at(-2)?.y && y !== data.at(-1)?.y) {
             let obj = {
-                x: x,
-                y: y
+                x: x, y: y
             };
 
             data.push(obj)
@@ -91,14 +89,89 @@ function mqtt_client() {
 
     });
 }
+// mqtt_client();
+
+function mqtt_client_2() {
+    let x, y = 0;
+    // Create a client instance
+    if (hosting_url !== "" && window.location.hostname === hosting_url) {
+        pluto_url = hosting_url;
+        console.log("MQTT hostname: " + window.location.hostname)
+        console.log("MQTT pluto_url: " + pluto_url)
+    }
+    const serverUrl = pluto_url; // i.e. "great-server.cloudmqtt.com"
+    const serverPort = 9001; // cloudmqtt only accepts WSS sockets on this port. Others will use 9001, 8883 or others
+    const clientId = "datv_red_constel_" + new Date().getUTCMilliseconds(); // make client name unique
+    const client = new Paho.MQTT.Client(serverUrl, serverPort, clientId);
+
+    // set callback handlers
+    client.onConnectionLost = onConnectionLost;
+    client.onMessageArrived = onMessageArrived;
+
+    // connect the client
+    client.connect({onSuccess: onConnect});
+
+    // called when the client connects
+    function onConnect() {
+        client.subscribe(`dt/longmynd/constel_q`);
+        client.subscribe(`dt/longmynd/constel_i`);
+        client.subscribe(`dt/longmynd/rx_state`);
+        client.subscribe(`cmd/longmynd/frequency`);
+
+    }
+
+    // called when the client loses its connection
+    function onConnectionLost(responseObject) {
+        if (responseObject.errorCode !== 0) {
+            console.log("onConnectionLost:" + responseObject.errorMessage);
+        }
+    }
+
+    // called when a message arrives
+    function onMessageArrived(message) {
+        let topic = message.destinationName;
+        if (data.length > dataPoints) {
+            data = data.slice(2);
+        }
+        if (topic === `dt/longmynd/rx_state`) {
+            if (message.payloadString === "Hunting") {
+                // console.log("clear");
+                data = []
+                return;
+            }
+        }
+        if (topic === `cmd/longmynd/frequency`) {
+            // console.log("clear");
+            data = []
+            return;
+        }
+        if (topic === `dt/longmynd/constel_i`) {
+            x = Number(message.payloadString);
+        }
+        if (topic === `dt/longmynd/constel_q`) {
+            y = Number(message.payloadString);
+
+        }
+
+        // console.log("data[-1]?.x :" + data.at(-1)?.x)
+        // console.log("data[-1]?.y :" + data.at(-1)?.y)
+        // console.log("data[-2]?.x :" + data.at(-2)?.x)
+        // console.log("data[-2]?.y :" + data.at(-2)?.y)
+
+        // if the last two values of x and y in our array aren't the current values, we add the unique point(x,y).
+        if (x !== data.at(-2)?.x && x !== data.at(-1)?.x && y !== data.at(-2)?.y && y !== data.at(-1)?.y) {
+            let obj = {
+                x: x, y: y
+            };
+            data.push(obj)
+        }
+    }
+}
 
 
-mqtt_client();
+mqtt_client_2();
 
-const t = setInterval(
-    () => drawConstellationPoints(data),
-    200
-);
+const t = setInterval(() => drawConstellationPoints(data), 200);
 
 function drawConstellationPoints(data) {
     // console.log(data.length)
@@ -110,10 +183,10 @@ function drawConstellationPoints(data) {
     ctx.setTransform(scale_factor, 0, 0, scale_factor, W / 2, H / 2)
 
     // Chart axis
-    ctx.strokeRect(0,0, 128, 128);
-    ctx.strokeRect(-128,0, 128, 128);
-    ctx.strokeRect(0,-128, 128, 128);
-    ctx.strokeRect(-128,-128, 128, 128);
+    ctx.strokeRect(0, 0, 128, 128);
+    ctx.strokeRect(-128, 0, 128, 128);
+    ctx.strokeRect(0, -128, 128, 128);
+    ctx.strokeRect(-128, -128, 128, 128);
 
     // dots for chart
     // ctx.scale(1-(1/scale_factor), 1-(1/scale_factor))

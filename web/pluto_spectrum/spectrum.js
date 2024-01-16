@@ -4,7 +4,7 @@
  * See the LICENSE file for further details.
  */
 /*
- * Copyright (c) 2023 Ohan Smit
+ * Copyright (c) 2024 Ohan Smit
  * This software is released under the MIT license.
  * See the LICENSE file for further details.
  */
@@ -866,6 +866,11 @@ Spectrum.prototype.toggleColor = function () {
     this.updateSpectrumRatio();
 };
 
+Spectrum.prototype.setColor = function (index) {
+    this.colormap = colormaps[index];
+    this.updateSpectrumRatio();
+};
+
 Spectrum.prototype.setRange = function (min_db, max_db) {
     console.log(`min: ${min_db} max: ${max_db}`);
     this.min_db = min_db;
@@ -1318,7 +1323,7 @@ function Spectrum(id, options) {
 
     // Colors
     this.colorindex = 0;
-    this.colormap = colormaps[4];
+    this.colormap = colormaps[5];
 
     // Create main canvas and adjust dimensions to match actual
     this.canvas = document.getElementById(id);
