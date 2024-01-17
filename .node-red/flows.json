@@ -867,7 +867,9 @@
             "de3615657f5f8b75"
         ],
         "x": 48,
-        "y": 39
+        "y": 39,
+        "w": 1118,
+        "h": 368
     },
     {
         "id": "1d8e778f40edcc21",
@@ -991,7 +993,9 @@
             "398b4098f3914cdc"
         ],
         "x": 54,
-        "y": 999
+        "y": 999,
+        "w": 1292,
+        "h": 642
     },
     {
         "id": "97ecf1ac9459a777",
@@ -1041,7 +1045,9 @@
             "0c34bd3ef0714d28"
         ],
         "x": 54,
-        "y": 439
+        "y": 439,
+        "w": 1432,
+        "h": 502
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1334,7 +1340,9 @@
             "8b74e5e219711233"
         ],
         "x": 194,
-        "y": 1611.5
+        "y": 1611.5,
+        "w": 812,
+        "h": 149.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -1370,33 +1378,6 @@
         ],
         "x": 74,
         "y": 19
-    },
-    {
-        "id": "936b15192e58877f",
-        "type": "group",
-        "z": "30d0afc93dfb235a",
-        "name": "MQTT control",
-        "style": {
-            "label": true,
-            "fill": "#9363b7"
-        },
-        "nodes": [
-            "a8596f60466f8cf4",
-            "4a2877dc5a808a1b",
-            "7dae242b8566df9b",
-            "4169371e544b9666",
-            "857224de9710110f",
-            "449f2a69fa24e7fd",
-            "ff147eec327f33fe",
-            "bc7c3ea6788d2b58",
-            "fabd30d9f5135abd",
-            "d625fe7265cbfada",
-            "29a3c6a207d493f9",
-            "b7d0059588d03318",
-            "33b81b6ee3d763f8"
-        ],
-        "x": 54,
-        "y": 559
     },
     {
         "id": "4da866f299df009c",
@@ -1463,7 +1444,9 @@
             "097842d26da1c238"
         ],
         "x": 194,
-        "y": 1819
+        "y": 1819,
+        "w": 1452,
+        "h": 462
     },
     {
         "id": "9396693c.371108",
@@ -1483,7 +1466,9 @@
             "48d4fb91b6cecaa8"
         ],
         "x": 234,
-        "y": 779
+        "y": 779,
+        "w": 832,
+        "h": 242
     },
     {
         "id": "43398fee0d4c0448",
@@ -1502,7 +1487,9 @@
             "119e45104c7cf323"
         ],
         "x": 74,
-        "y": 1659
+        "y": 1659,
+        "w": 892,
+        "h": 122
     },
     {
         "id": "e666d4836bf09971",
@@ -1520,7 +1507,9 @@
             "b27089a64894e5bd"
         ],
         "x": 254,
-        "y": 2339
+        "y": 2339,
+        "w": 812,
+        "h": 122
     },
     {
         "id": "220208a08fb27e80",
@@ -1538,7 +1527,9 @@
             "c8cdb521937dcbc7"
         ],
         "x": 274,
-        "y": 2499
+        "y": 2499,
+        "w": 812,
+        "h": 122
     },
     {
         "id": "66f00749c84bcff9",
@@ -1770,6 +1761,37 @@
         "h": 1762
     },
     {
+        "id": "936b15192e58877f",
+        "type": "group",
+        "z": "30d0afc93dfb235a",
+        "name": "MQTT control",
+        "style": {
+            "label": true,
+            "fill": "#9363b7"
+        },
+        "nodes": [
+            "a8596f60466f8cf4",
+            "4a2877dc5a808a1b",
+            "7dae242b8566df9b",
+            "4169371e544b9666",
+            "857224de9710110f",
+            "449f2a69fa24e7fd",
+            "ff147eec327f33fe",
+            "bc7c3ea6788d2b58",
+            "fabd30d9f5135abd",
+            "d625fe7265cbfada",
+            "29a3c6a207d493f9",
+            "b7d0059588d03318",
+            "33b81b6ee3d763f8",
+            "0f7fc3d249423743",
+            "d22f66d05e22d975",
+            "fa21c3360b52d322",
+            "24a65d9c2eb14bc4"
+        ],
+        "x": 54,
+        "y": 559
+    },
+    {
         "id": "185cc616489b2615",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1858,7 +1880,9 @@
             "0dd67a65a9a17989"
         ],
         "x": 74,
-        "y": 139
+        "y": 139,
+        "w": 872,
+        "h": 242
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -1988,6 +2012,29 @@
         "h": 202
     },
     {
+        "id": "e0dc8a59cb457806",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Longmynd TS ip restore after toggle",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#0070c0"
+        },
+        "nodes": [
+            "20fe8ad99d1cd113",
+            "966271263b3bc8a7",
+            "b41987ea69df74f9",
+            "5dea3831f972cd7b",
+            "7da2972228932ed0",
+            "ae7cfb4cab693bab"
+        ],
+        "x": 1694,
+        "y": 3199,
+        "w": 552,
+        "h": 162
+    },
+    {
         "id": "9b3296db2e0c849f",
         "type": "ui_tab",
         "name": "Transmission-Control",
@@ -2111,7 +2158,7 @@
         "type": "ui_group",
         "name": "Spectrum_Window",
         "tab": "9b3296db2e0c849f",
-        "order": 6,
+        "order": 7,
         "disp": false,
         "width": "18",
         "collapse": false,
@@ -2122,7 +2169,7 @@
         "type": "ui_group",
         "name": "Pluto-info",
         "tab": "9b3296db2e0c849f",
-        "order": 10,
+        "order": 11,
         "disp": false,
         "width": "7",
         "collapse": false,
@@ -2142,7 +2189,7 @@
         "type": "ui_group",
         "name": "ffplay",
         "tab": "9b3296db2e0c849f",
-        "order": 13,
+        "order": 14,
         "disp": false,
         "width": "7",
         "collapse": false,
@@ -2163,7 +2210,7 @@
         "d": true,
         "name": "preset bar",
         "tab": "9b3296db2e0c849f",
-        "order": 14,
+        "order": 15,
         "disp": false,
         "width": "16",
         "collapse": false,
@@ -2174,7 +2221,7 @@
         "type": "ui_group",
         "name": "misc",
         "tab": "9b3296db2e0c849f",
-        "order": 9,
+        "order": 10,
         "disp": false,
         "width": "7",
         "collapse": false,
@@ -2227,7 +2274,7 @@
         "type": "ui_group",
         "name": "Frequency bar",
         "tab": "9b3296db2e0c849f",
-        "order": 4,
+        "order": 5,
         "disp": false,
         "width": "18",
         "collapse": false,
@@ -2238,7 +2285,7 @@
         "type": "ui_group",
         "name": "RX",
         "tab": "9b3296db2e0c849f",
-        "order": 11,
+        "order": 12,
         "disp": false,
         "width": "7",
         "collapse": false,
@@ -2269,7 +2316,7 @@
         "type": "ui_group",
         "name": "RX2",
         "tab": "9b3296db2e0c849f",
-        "order": 12,
+        "order": 13,
         "disp": false,
         "width": "7",
         "collapse": false,
@@ -2364,7 +2411,7 @@
         "type": "ui_group",
         "name": "Pluto_RX_port",
         "tab": "9b3296db2e0c849f",
-        "order": 7,
+        "order": 8,
         "disp": false,
         "width": "18",
         "collapse": false,
@@ -2386,7 +2433,7 @@
         "type": "ui_group",
         "name": "Encoder",
         "tab": "9b3296db2e0c849f",
-        "order": 8,
+        "order": 9,
         "disp": true,
         "width": "7",
         "collapse": false,
@@ -2398,7 +2445,7 @@
         "z": "9d964f25dcc4d750",
         "name": "spacer",
         "group": "06245a91daf3c666",
-        "order": 4,
+        "order": 3,
         "width": 1,
         "height": 1
     },
@@ -2491,7 +2538,7 @@
         "type": "ui_group",
         "name": "ffmpeg",
         "tab": "9b3296db2e0c849f",
-        "order": 5,
+        "order": 6,
         "disp": false,
         "width": "18",
         "collapse": false,
@@ -3787,7 +3834,7 @@
         "g": "c927282dfd987c70",
         "name": "+dBm",
         "group": "06245a91daf3c666",
-        "order": 7,
+        "order": 6,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -3816,7 +3863,7 @@
         "g": "c927282dfd987c70",
         "name": "-dBm",
         "group": "06245a91daf3c666",
-        "order": 6,
+        "order": 5,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -3888,7 +3935,7 @@
         "g": "c927282dfd987c70",
         "name": "",
         "group": "06245a91daf3c666",
-        "order": 3,
+        "order": 2,
         "width": "3",
         "height": 1,
         "passthru": false,
@@ -3917,7 +3964,7 @@
         "g": "c927282dfd987c70",
         "name": "",
         "group": "06245a91daf3c666",
-        "order": 2,
+        "order": 1,
         "width": "3",
         "height": 1,
         "passthru": false,
@@ -4019,7 +4066,7 @@
         "label": "Gain",
         "tooltip": "",
         "group": "06245a91daf3c666",
-        "order": 5,
+        "order": 4,
         "width": "4",
         "height": 1,
         "passthru": false,
@@ -4048,7 +4095,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 8,
+        "order": 7,
         "width": "6",
         "height": 1,
         "passthru": false,
@@ -4104,7 +4151,7 @@
         "tooltip": "",
         "place": "Samplerate",
         "group": "06245a91daf3c666",
-        "order": 10,
+        "order": 9,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -4188,7 +4235,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 12,
+        "order": 11,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -4365,7 +4412,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 11,
+        "order": 10,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -4608,7 +4655,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 17,
+        "order": 19,
         "width": "3",
         "height": 1,
         "passthru": false,
@@ -4668,7 +4715,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 16,
+        "order": 17,
         "width": "6",
         "height": 1,
         "passthru": false,
@@ -12567,7 +12614,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 9,
+        "order": 8,
         "width": "6",
         "height": 1,
         "passthru": false,
@@ -14435,7 +14482,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "6a8835db32d9f8ed",
         "group": "06245a91daf3c666",
-        "order": 19,
+        "order": 12,
         "width": "6",
         "height": "1",
         "name": "",
@@ -17439,7 +17486,7 @@
         "y": 3120,
         "wires": [
             [
-                "52bcb7338f5c5791"
+                "947313bf5f0e22d1"
             ]
         ]
     },
@@ -17489,7 +17536,7 @@
         "wires": [
             [
                 "2eb9a7d4d6079e45",
-                "52bcb7338f5c5791"
+                "947313bf5f0e22d1"
             ]
         ]
     },
@@ -18034,122 +18081,6 @@
         ]
     },
     {
-        "id": "ab53398fad4c77de",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "ffplay_console",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.remote_longmynd",
-        "payloadType": "global",
-        "x": 1620,
-        "y": 3320,
-        "wires": [
-            [
-                "d8f476a9293e25a1"
-            ]
-        ]
-    },
-    {
-        "id": "d8f476a9293e25a1",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "",
-        "label": "Remote longmynd",
-        "tooltip": "",
-        "group": "a4a37989805c1f8e",
-        "order": 18,
-        "width": "3",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1850,
-        "y": 3320,
-        "wires": [
-            [
-                "594280e393a907ab"
-            ]
-        ]
-    },
-    {
-        "id": "594280e393a907ab",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "set remote_longmynd",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.remote_longmynd",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2080,
-        "y": 3320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "52bcb7338f5c5791",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "block TSIP when longmynd is remote",
-        "property": "settings.remote_longmynd",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2050,
-        "y": 3260,
-        "wires": [
-            [
-                "947313bf5f0e22d1"
-            ]
-        ]
-    },
-    {
         "id": "14c2076804c8b3de",
         "type": "ui_text_input",
         "z": "2ec6a7ddfe0cd173",
@@ -18238,7 +18169,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "06245a91daf3c666",
-        "order": 15,
+        "order": 16,
         "width": "6",
         "height": 1,
         "passthru": false,
@@ -18286,11 +18217,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1620,
-        "y": 3440,
+        "x": 1760,
+        "y": 3420,
         "wires": [
             [
-                "95ec5dd09f7387e2"
+                "95ec5dd09f7387e2",
+                "ae7cfb4cab693bab"
             ]
         ]
     },
@@ -19410,6 +19342,144 @@
         "wires": [
             [
                 "5af92414e3f29873"
+            ]
+        ]
+    },
+    {
+        "id": "7da2972228932ed0",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e0dc8a59cb457806",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1790,
+        "y": 3300,
+        "wires": [
+            [
+                "5dea3831f972cd7b"
+            ]
+        ]
+    },
+    {
+        "id": "5dea3831f972cd7b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e0dc8a59cb457806",
+        "name": "check on ",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = `${global.get(\"cmdPath\")}/system/longmynd`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1920,
+        "y": 3300,
+        "wires": [
+            [
+                "20fe8ad99d1cd113"
+            ]
+        ]
+    },
+    {
+        "id": "20fe8ad99d1cd113",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e0dc8a59cb457806",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 2110,
+        "y": 3240,
+        "wires": [
+            [
+                "966271263b3bc8a7"
+            ]
+        ]
+    },
+    {
+        "id": "966271263b3bc8a7",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e0dc8a59cb457806",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2120,
+        "y": 3280,
+        "wires": [
+            [
+                "b41987ea69df74f9"
+            ]
+        ]
+    },
+    {
+        "id": "b41987ea69df74f9",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e0dc8a59cb457806",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "device.rx.tsip_host",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2140,
+        "y": 3320,
+        "wires": [
+            [
+                "947313bf5f0e22d1"
+            ]
+        ]
+    },
+    {
+        "id": "ae7cfb4cab693bab",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e0dc8a59cb457806",
+        "name": "ON",
+        "func": "msg.topic = `${global.get(\"cmdPath\")}/system/longmynd`\nmsg.payload = \"on\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3240,
+        "wires": [
+            [
+                "e5b15ef8662e723b"
             ]
         ]
     },
@@ -24420,7 +24490,7 @@
         "type": "function",
         "z": "d7c58eb9e7b65abb",
         "name": "Truncate long provider names",
-        "func": "let provider = truncate(msg.payload, 26);\nmsg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
+        "func": "// let provider = truncate(msg.payload, 26);\n// msg.payload = provider;\nreturn msg;\n\nfunction truncate(str, n) {\n    return (str.length > n) ? str.slice(0, n - 1) : str;\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -24428,7 +24498,7 @@
         "finalize": "",
         "libs": [],
         "x": 910,
-        "y": 540,
+        "y": 560,
         "wires": [
             [
                 "cc295c934bb4be42",
@@ -24687,7 +24757,7 @@
         "z": "d7c58eb9e7b65abb",
         "g": "c070d9c6c2a6ac1b",
         "name": "generate signal report",
-        "func": "let freq = (Number(flow.get(\"freq\")) * 1000 + Math.abs(Number(global.get('device.rx.offset')))) / 1e6;\nlet provider = `\"${flow.get(\"provider\")}\"`;\nlet v_buff = flow.get(\"video_buffer\");\nlet a_buff = flow.get(\"audio_buffer\");\nlet delay = flow.get(\"transmission_delay\");\nif (global.get(\"platform\") === \"linux\") provider = flow.get(\"provider\");\nlet video = `${v_buff > 100000 ? \"\" : v_buff !== 0 ? `video: ${v_buff.toFixed(1)}ms` : \"\"}`;\nlet audio = `${a_buff > 100000 ? \"\" : a_buff !== 0 ? `, audio: ${a_buff.toFixed(1)}ms` : \"\"}`;\nlet tx_delay = `${delay > 0 ? `, tx delay, ${delay.toFixed(1)}ms ` : \"\"}`;\nlet analysis_string = \"\";\nif (video !== \"\" || audio !== \"\" || tx_delay !== \"\") analysis_string =  ` Buffer delays, ${video}${audio}${tx_delay} `;\nlet sigreport = `SigReport: ${flow.get(\"service\")}/${provider} - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${freq}${analysis_string} - ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
+        "func": "let freq = (Number(flow.get(\"freq\")) * 1000 + Math.abs(Number(global.get('device.rx.offset')))) / 1e6;\nlet provider = `\"${flow.get(\"provider\")}\"`;\nlet v_buff = flow.get(\"video_buffer\");\nlet a_buff = flow.get(\"audio_buffer\");\nlet delay = flow.get(\"transmission_delay\");\nif (global.get(\"platform\") === \"linux\") provider = flow.get(\"provider\");\nlet video = `${v_buff > 100000 ? \"\" : v_buff !== 0 ? `video: ${v_buff.toFixed(1)}ms` : \"\"}`;\nlet audio = `${a_buff > 100000 ? \"\" : a_buff !== 0 ? `, audio: ${a_buff.toFixed(1)}ms` : \"\"}`;\nlet tx_delay = `${delay > 0 ? `, tx delay, ${delay.toFixed(1)}ms ` : \"\"}`;\nlet analysis_string = \"\";\n// if (video !== \"\" || audio !== \"\" || tx_delay !== \"\") analysis_string = ` Buffer delays, ${video}${audio}${tx_delay} `;\nanalysis_string = ` TS: ${global.get(\"ts.bitrate\")}kb/s, V: ${global.get(\"ts.video_bitrate\")}kb/s, A: ${global.get(\"ts.audio_bitrate\")}kb/s `;\n// let sigreport = `SigReport: ${flow.get(\"service\")}/${provider} - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${freq}${analysis_string} - ${global.get(\"device.sig_report_suffux\")}`;\nlet sigreport = `SigReport for ${flow.get(\"service\")} on ${freq}MHz - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${analysis_string} - ${global.get(\"device.sig_report_suffux\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -27934,6 +28004,116 @@
         ]
     },
     {
+        "id": "0f7fc3d249423743",
+        "type": "inject",
+        "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
+        "name": "",
+        "props": [],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 740,
+        "wires": [
+            [
+                "fa21c3360b52d322"
+            ]
+        ]
+    },
+    {
+        "id": "d22f66d05e22d975",
+        "type": "change",
+        "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 760,
+        "wires": [
+            [
+                "a8596f60466f8cf4"
+            ]
+        ]
+    },
+    {
+        "id": "fa21c3360b52d322",
+        "type": "switch",
+        "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
+        "name": "",
+        "property": "mute",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 360,
+        "y": 740,
+        "wires": [
+            [
+                "24a65d9c2eb14bc4"
+            ],
+            [
+                "d22f66d05e22d975"
+            ]
+        ]
+    },
+    {
+        "id": "24a65d9c2eb14bc4",
+        "type": "change",
+        "z": "30d0afc93dfb235a",
+        "g": "936b15192e58877f",
+        "name": "on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "a8596f60466f8cf4"
+            ]
+        ]
+    },
+    {
         "id": "520a275fdb70f6c1",
         "type": "exec",
         "z": "5921103edf8bc817",
@@ -27983,7 +28163,7 @@
         "type": "function",
         "z": "5921103edf8bc817",
         "name": "Quack quack",
-        "func": "// let stuff = msg.payload.replace(/(\\u21b5\\r\\n|\\n|\\r)/gm, \"\");\nlet stuff = msg.payload.replace(/\\r?\\n|\\r/g, \"\");\nlet ducky =  global.get(\"ts_duck\");\nif (typeof stuff === \"string\" && stuff.length === 0) {\n    msg.empty = true;\n    return msg;\n}      // Negates carriage return payload\n\n// Check for non split payload \nlet full_report = stuff.startsWith(\"* \");\nif (full_report) stuff = stuff.split(\"* \").pop();\nfull_report = stuff.startsWith(\"analyze: \")\nif (full_report) stuff = stuff.split(\"analyze: \").pop();\n\nlet ts_report = global.get(\"ts_report\");  // should be empty string or first part of report\n\nif (ts_report.length !== 0 && stuff.length !== 0) {\n    if (ts_report.slice(0, 5) === stuff.slice(0, 5)) {\n        // we broke, if the signal drops, we can't build a valid JSON object, so we start over\n        ts_report = \"\";\n    }\n}\n\nmsg.glob = ts_report;\nts_report = ts_report.concat(stuff);\nglobal.set(\"ts_report\", ts_report);\nmsg.concat = stuff;\nif (isJsonString(ts_report)) {\n    let json = JSON.parse(ts_report)\n    global.set(\"ts_duck\", json)\n    global.set(\"ts_report\", \"\")\n    msg.payload = json;\n    return msg\n}\nmsg.reset = true;\nmsg.payload = ducky;\nreturn msg;\n\nfunction isJsonString(str) {\n    try {\n        JSON.parse(str);\n    } catch (e) {\n        return false;\n    }\n    return true;\n}",
+        "func": "// let stuff = msg.payload.replace(/(\\u21b5\\r\\n|\\n|\\r)/gm, \"\");\nlet stuff = msg.payload.replace(/\\r?\\n|\\r/g, \"\");\nlet ducky =  global.get(\"ts_duck\");\nif (typeof stuff === \"string\" && stuff.length === 0) {\n    msg.empty = true;\n    return msg;\n}      // Negates carriage return payload\n\n// Check for non split payload \nlet full_report = stuff.startsWith(\"* \");\nif (full_report) stuff = stuff.split(\"* \").pop();\nfull_report = stuff.startsWith(\"analyze: \")\nif (full_report) stuff = stuff.split(\"analyze: \").pop();\n\nlet ts_report = global.get(\"ts_report\");  // should be empty string or first part of report\n\nif (ts_report === \"Error: ip: undefined: No such host is known.\"){\n    ts_report = \"\";\n}\n\nif (ts_report.length !== 0 && stuff.length !== 0) {\n    if (ts_report.slice(0, 5) === stuff.slice(0, 5)) {\n        // we broke, if the signal drops, we can't build a valid JSON object, so we start over\n        ts_report = \"\";\n    }\n}\n\nmsg.glob = ts_report;\nts_report = ts_report.concat(stuff);\nglobal.set(\"ts_report\", ts_report);\nmsg.concat = stuff;\nif (isJsonString(ts_report)) {\n    let json = JSON.parse(ts_report)\n    global.set(\"ts_duck\", json)\n    global.set(\"ts_report\", \"\")\n    msg.payload = json;\n    return msg\n}\nmsg.reset = true;\nmsg.payload = ducky;\nreturn msg;\n\nfunction isJsonString(str) {\n    try {\n        JSON.parse(str);\n    } catch (e) {\n        return false;\n    }\n    return true;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -28167,8 +28347,8 @@
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": "3",
-        "removeOlderPoints": "180",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
         "removeOlderUnit": "60",
         "cutout": 0,
         "useOneColor": false,
@@ -28366,7 +28546,8 @@
         "y": 420,
         "wires": [
             [
-                "53268bde953b7f7b"
+                "53268bde953b7f7b",
+                "bbf04ab8e9c03fff"
             ]
         ]
     },
@@ -28387,7 +28568,8 @@
         "y": 460,
         "wires": [
             [
-                "bdbc0e378dfdc5f8"
+                "bdbc0e378dfdc5f8",
+                "6bf7d6e1fba89631"
             ]
         ]
     },
@@ -28408,7 +28590,8 @@
         "y": 500,
         "wires": [
             [
-                "f2aa3f1078982769"
+                "f2aa3f1078982769",
+                "ef693a300d6d5974"
             ]
         ]
     },
@@ -28430,8 +28613,8 @@
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": "3",
-        "removeOlderPoints": "180",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
         "removeOlderUnit": "60",
         "cutout": 0,
         "useOneColor": false,
@@ -28600,8 +28783,8 @@
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": "3",
-        "removeOlderPoints": "180",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
         "removeOlderUnit": "60",
         "cutout": 0,
         "useOneColor": false,
@@ -28821,7 +29004,7 @@
         "order": 5,
         "width": "4",
         "height": "1",
-        "passthru": false,
+        "passthru": true,
         "label": "Stop TS analyser",
         "tooltip": "",
         "color": "",
@@ -29259,9 +29442,8 @@
         "id": "c7506d45c1386dbf",
         "type": "debug",
         "z": "5921103edf8bc817",
-        "d": true,
         "name": "debug 23",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -29277,9 +29459,8 @@
         "id": "46fe2cf623adc6d4",
         "type": "debug",
         "z": "5921103edf8bc817",
-        "d": true,
         "name": "tsduck JSON",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -29490,7 +29671,7 @@
         "order": 5,
         "width": "4",
         "height": "1",
-        "passthru": false,
+        "passthru": true,
         "label": "Start TS analyser",
         "tooltip": "",
         "color": "",
@@ -29561,7 +29742,7 @@
         "type": "debug",
         "z": "5921103edf8bc817",
         "name": "debug 28",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -29569,9 +29750,177 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1290,
-        "y": 320,
+        "x": 1280,
+        "y": 300,
         "wires": []
+    },
+    {
+        "id": "bbf04ab8e9c03fff",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts.video_bitrate",
+                "pt": "global",
+                "to": "video.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1630,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef693a300d6d5974",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts.bitrate",
+                "pt": "global",
+                "to": "ts.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bf7d6e1fba89631",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts.audio_bitrate",
+                "pt": "global",
+                "to": "audio.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1630,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5690c79a4efb6c0",
+        "type": "inject",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 1260,
+        "wires": [
+            [
+                "edf840c156dd92b0"
+            ]
+        ]
+    },
+    {
+        "id": "edf840c156dd92b0",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "RX freq",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = \"cmd/longmynd/frequency\";\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1240,
+        "wires": [
+            [
+                "06dabb2589707321"
+            ]
+        ]
+    },
+    {
+        "id": "06dabb2589707321",
+        "type": "mqtt in",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 590,
+        "y": 1260,
+        "wires": [
+            [
+                "e25a43afa99cde8c",
+                "37d0d6df51e650e3",
+                "9bf07861299d633f"
+            ]
+        ]
+    },
+    {
+        "id": "9bf07861299d633f",
+        "type": "delay",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 820,
+        "y": 1200,
+        "wires": [
+            [
+                "88d52a4d4bc98330"
+            ]
+        ]
     },
     {
         "id": "1f8c8b.72033376",
