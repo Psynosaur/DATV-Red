@@ -2,7 +2,7 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red v3.97",
+        "label": "DATV-Red v3.98",
         "disabled": false,
         "info": "",
         "env": []
@@ -1728,6 +1728,29 @@
         "h": 202
     },
     {
+        "id": "d05699c927c72f19",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Longmynd TS ip restore after toggle or rebbot",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#0070c0"
+        },
+        "nodes": [
+            "4d3277f73b028a47",
+            "9c3c9892ec34dbdd",
+            "621f52f8316f83ca",
+            "435da06adda77a3f",
+            "91c1c4cf01222a9e",
+            "fc6ec55e3762b0b9"
+        ],
+        "x": 1634,
+        "y": 3219,
+        "w": 592,
+        "h": 162
+    },
+    {
         "id": "9b3296db2e0c849f",
         "type": "ui_tab",
         "name": "Transmission and profiles",
@@ -1750,9 +1773,9 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#36d5dd",
+                "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
+                "edited": false,
                 "reset": false
             },
             "customTheme": {
@@ -1817,7 +1840,7 @@
             }
         },
         "site": {
-            "name": "DATV-Red v3.97",
+            "name": "DATV-Red v3.98",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -17112,7 +17135,7 @@
         "height": "1",
         "passthru": false,
         "mode": "text",
-        "delay": 300,
+        "delay": "1000",
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
@@ -17121,7 +17144,7 @@
         "y": 3120,
         "wires": [
             [
-                "52bcb7338f5c5791"
+                "947313bf5f0e22d1"
             ]
         ]
     },
@@ -17171,7 +17194,7 @@
         "wires": [
             [
                 "2eb9a7d4d6079e45",
-                "52bcb7338f5c5791"
+                "947313bf5f0e22d1"
             ]
         ]
     },
@@ -17716,122 +17739,6 @@
         ]
     },
     {
-        "id": "ab53398fad4c77de",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "ffplay_console",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.remote_longmynd",
-        "payloadType": "global",
-        "x": 1620,
-        "y": 3320,
-        "wires": [
-            [
-                "d8f476a9293e25a1"
-            ]
-        ]
-    },
-    {
-        "id": "d8f476a9293e25a1",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "",
-        "label": "Remote longmynd",
-        "tooltip": "",
-        "group": "a4a37989805c1f8e",
-        "order": 7,
-        "width": "2",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1850,
-        "y": 3320,
-        "wires": [
-            [
-                "594280e393a907ab"
-            ]
-        ]
-    },
-    {
-        "id": "594280e393a907ab",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "set remote_longmynd",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.remote_longmynd",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2080,
-        "y": 3320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "52bcb7338f5c5791",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "block TSIP when longmynd is remote",
-        "property": "settings.remote_longmynd",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 2070,
-        "y": 3280,
-        "wires": [
-            [
-                "947313bf5f0e22d1"
-            ]
-        ]
-    },
-    {
         "id": "14c2076804c8b3de",
         "type": "ui_text_input",
         "z": "2ec6a7ddfe0cd173",
@@ -17968,6 +17875,143 @@
             [
                 "63c33f9789e5b91c"
             ]
+        ]
+    },
+    {
+        "id": "4d3277f73b028a47",
+        "type": "mqtt in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d05699c927c72f19",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 2090,
+        "y": 3260,
+        "wires": [
+            [
+                "9c3c9892ec34dbdd"
+            ]
+        ]
+    },
+    {
+        "id": "9c3c9892ec34dbdd",
+        "type": "delay",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d05699c927c72f19",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2100,
+        "y": 3300,
+        "wires": [
+            [
+                "621f52f8316f83ca"
+            ]
+        ]
+    },
+    {
+        "id": "621f52f8316f83ca",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d05699c927c72f19",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "device.rx.tsip_host",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2120,
+        "y": 3340,
+        "wires": [
+            [
+                "947313bf5f0e22d1"
+            ]
+        ]
+    },
+    {
+        "id": "435da06adda77a3f",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d05699c927c72f19",
+        "name": "check on ",
+        "func": "msg.action = \"subscribe\"\nmsg.topic = `${global.get(\"cmdPath\")}/system/longmynd`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1900,
+        "y": 3320,
+        "wires": [
+            [
+                "4d3277f73b028a47"
+            ]
+        ]
+    },
+    {
+        "id": "91c1c4cf01222a9e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "d05699c927c72f19",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1730,
+        "y": 3320,
+        "wires": [
+            [
+                "435da06adda77a3f"
+            ]
+        ]
+    },
+    {
+        "id": "fc6ec55e3762b0b9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "d": true,
+        "g": "d05699c927c72f19",
+        "name": "ON",
+        "func": "msg.topic = `${global.get(\"cmdPath\")}/system/longmynd`\nmsg.payload = \"on\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 3260,
+        "wires": [
+            []
         ]
     },
     {
