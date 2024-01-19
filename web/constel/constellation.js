@@ -183,6 +183,7 @@ function drawConstellationPoints(data) {
     ctx.setTransform(scale_factor, 0, 0, scale_factor, W / 2, H / 2)
 
     // Chart axis
+    ctx.lineWidth = 1.05;
     ctx.strokeRect(0, 0, 128, 128);
     ctx.strokeRect(-128, 0, 128, 128);
     ctx.strokeRect(0, -128, 128, 128);
