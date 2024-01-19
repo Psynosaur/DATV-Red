@@ -113,46 +113,39 @@ let background_colour = "black";
 let downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
 let busy = false;
 let activeColor, activeXd1, activeYd, activeXd2;
-let storageSupport = true;
-let clickBox = {};
-if (typeof Storage !== "undefined") {
-
-    if (localStorage.activeColor) {
-        activeColor = localStorage.activeColor;
-    }
-    if (localStorage.activeXd1) {
-        activeXd1 = localStorage.activeXd1;
-    }
-    if (localStorage.activeYd) {
-        activeYd = localStorage.activeYd;
-    }
-    if (localStorage.activeXd2) {
-        activeXd2 = localStorage.activeXd2;
-    }
-}
+let storageSupport = false;
 let tunedBox = {};
-// From other spectrum
-function setRxClickState () {
-    tunedBox = clickBox;
-    console.log(tunedBox)
-    // if (storageSupport) {
-    //     localStorage.activeColor_1 = activeColor;
-    //     localStorage.activeXd1_1 = activeXd1;
-    //     localStorage.activeYd_1 = activeYd;
-    //     localStorage.activeXd2_1 = activeXd2;
-    // }
+let clickBox = {};
+
+if (typeof Storage !== "undefined") {
+    storageSupport = true;
+    if (localStorage.tunedBox) {
+        tunedBox = JSON.parse(localStorage.tunedBox);
+    }
 }
-function drawRxBox(ctx, xText){
-    ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
-    ctx.fillRect(tunedBox.x, tunedBox.y, tunedBox.w , tunedBox.h);
+
+function setRxClickState (minSpan, spanHz ) {
+    let scale = spanHz/minSpan;
+    tunedBox = clickBox;
+    tunedBox.minSpanHz = minSpan;
+    tunedBox.spanHz = spanHz;
+    tunedBox.w = clickBox.w * scale;
+    if (storageSupport) {
+        localStorage.tunedBox = JSON.stringify(tunedBox);
+    }
+}
+function drawRxBox(ctx, xText, minSpan, spanHz){
+    let scale = minSpan/spanHz;
+    let boxScale = tunedBox?.spanHz / tunedBox?.minSpanHz;
+    ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+    ctx.fillRect(tunedBox.x, tunedBox.y, tunedBox.w * scale * boxScale, tunedBox.h);
+    ctx.fillStyle = "rgb(32,246,137)";
     ctx.fillText(
         `${(tunedBox.freq/1_000_000).toFixed(3)}`,
         xText,
         50
     );
 }
-
-
 
 Spectrum.prototype.detect_signals = function (
     fft_data,
@@ -292,13 +285,14 @@ Spectrum.prototype.detect_signals = function (
                 signals.push(signal);
                 // var rand_num = Math.floor(Math.random() * 10000);
                 // Math.round((rand_num) / 1000) * 1000;
-                console.log("tuneBox" + tunedBox.freq)
-                console.log("freq" + freq)
-                if(Math.round(tunedBox.freq/ 1_000_000) * 1_000_000 === Math.round(freq / 1_000_000) * 1_000_000){
+                // console.log("tuneBox" + tunedBox.freq)
+                // console.log("freq" + freq)
+                if(Math.round(tunedBox.freq/ 125_000) * 125_000 === Math.round(freq / 125_000) * 125_000){
                     tunedBox.x = signal.end;
-                    tunedBox.freq = freq
+                    tunedBox.freq = freq;
+                    tunedBox.minSpanHz = this.minSpanHz;
                     let xText = (mid_signal / fft_data.length) * canvasWidth;
-                    drawRxBox(ctx, xText)
+                    drawRxBox(ctx, xText, this.minSpanHz, this.spanHz)
                 }
 
                 if (signal_bw !== 0) {
@@ -1284,7 +1278,7 @@ Spectrum.prototype.on_canvas_click = function (ctx) {
                 // channel: channelClicked,
             })
         );
-        setRxClickState(ctx);
+        setRxClickState(this.minSpanHz, this.spanHz);
         /* RX tuning bar / box */
         // if (channelClicked === rx_count + 1) {
         //     setRxClickState(
