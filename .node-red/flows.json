@@ -1477,29 +1477,6 @@
         "y": 1999
     },
     {
-        "id": "9396693c.371108",
-        "type": "group",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "Hide_Show beacon PID's",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "28cf83f5.defee4",
-            "dd218282.21d4",
-            "e8cff46c.77d948",
-            "b5e5829b.396ba8",
-            "326842ddbdc15a04",
-            "e55b581a1ed1a18b",
-            "48d4fb91b6cecaa8"
-        ],
-        "x": 334,
-        "y": 1119,
-        "w": 832,
-        "h": 242
-    },
-    {
         "id": "43398fee0d4c0448",
         "type": "group",
         "z": "9d964f25dcc4d750",
@@ -1953,6 +1930,147 @@
         "y": 0
     },
     {
+        "id": "d7eac6e7f4ef2b55",
+        "type": "group",
+        "z": "5921103edf8bc817",
+        "name": "Ts Duck parsing",
+        "style": {
+            "fill": "#92d04f",
+            "label": true
+        },
+        "nodes": [
+            "1b368c698d1603a4",
+            "05a1e2c8dad388fb",
+            "fe45a8178aea5e6e",
+            "27518b5aec9f841e",
+            "97978c37ed1b43cb",
+            "7d72d668f721a872",
+            "e7af55844830de66",
+            "b29edbae04c962c0",
+            "55ce894f45ce2ddc",
+            "1cb0f73e71362bf3",
+            "7631b140ace92b84",
+            "6ba04c2d374cb808",
+            "520a275fdb70f6c1",
+            "f2774c1e20c0c717",
+            "b5581ff51192b69c",
+            "ef591a3732c41ff7",
+            "6187a9f63443b5a6",
+            "81afc6e9b67dd706",
+            "9513e7bc7e75a755",
+            "90dcf88e3200ab47",
+            "46fe2cf623adc6d4",
+            "c7506d45c1386dbf",
+            "60c1848c0328677a"
+        ],
+        "x": 114,
+        "y": -1,
+        "w": 1412,
+        "h": 329.5
+    },
+    {
+        "id": "552181cca779c1aa",
+        "type": "group",
+        "z": "5921103edf8bc817",
+        "name": "check for frequency change",
+        "style": {
+            "fill": "#001f60",
+            "label": true
+        },
+        "nodes": [
+            "a5690c79a4efb6c0",
+            "edf840c156dd92b0",
+            "06dabb2589707321",
+            "9bf07861299d633f"
+        ],
+        "x": 114,
+        "y": 339,
+        "w": 802,
+        "h": 142
+    },
+    {
+        "id": "72d0cc5c362e49a0",
+        "type": "group",
+        "z": "5921103edf8bc817",
+        "name": "Graphs v1",
+        "style": {
+            "fill": "#9363b7",
+            "label": true
+        },
+        "nodes": [
+            "1436b027a5d04949",
+            "411b7a5cad286194",
+            "1914b70a6706ebd4",
+            "c61b7f568c2173b3",
+            "a0b7358ed0f95c7d",
+            "c43dd0629d64335a",
+            "e25a43afa99cde8c",
+            "f2aa3f1078982769",
+            "bdbc0e378dfdc5f8",
+            "53268bde953b7f7b",
+            "ef84197a8c482fd4",
+            "200adee6a0a17962",
+            "1cc947c2494007e1",
+            "c893f1da4a401d72",
+            "8d9202a5c69ff12e",
+            "7910c53e32d985c8",
+            "fce6da69915c1ded",
+            "75c3cc5e2bafbcee",
+            "ccd98fdb4fc0e62f",
+            "d0b57cb6afdec3c4",
+            "d145b4f95cb7ccb9",
+            "87350a84b63234e2",
+            "b5ca2d84858c4612",
+            "3146d841c016a870",
+            "38a875fd828b6e4b",
+            "f040e98d76943d56",
+            "1c36d4749c447ce8",
+            "f689ad314151c376",
+            "8b875f941a7ec664",
+            "904f65fe1cd3e67d",
+            "12817f924e8a10a6",
+            "4836e1ea2e52f007",
+            "547bf3274a28b9fd",
+            "b1ecbdd63ade84af",
+            "69bfe840d7ba1aeb",
+            "3cb27f12428cca36",
+            "b92f008d19d5c664",
+            "aec0e140578add71",
+            "bbf04ab8e9c03fff",
+            "ef693a300d6d5974",
+            "6bf7d6e1fba89631",
+            "8c6a42b18f8ef696",
+            "9396693c.371108"
+        ],
+        "x": 114,
+        "y": 559,
+        "w": 1772,
+        "h": 828
+    },
+    {
+        "id": "9396693c.371108",
+        "type": "group",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "28cf83f5.defee4",
+            "dd218282.21d4",
+            "e8cff46c.77d948",
+            "b5e5829b.396ba8",
+            "326842ddbdc15a04",
+            "e55b581a1ed1a18b",
+            "48d4fb91b6cecaa8"
+        ],
+        "x": 334,
+        "y": 1119,
+        "w": 832,
+        "h": 242
+    },
+    {
         "id": "185cc616489b2615",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -2169,124 +2287,6 @@
         "y": 1479,
         "w": 332,
         "h": 202
-    },
-    {
-        "id": "d7eac6e7f4ef2b55",
-        "type": "group",
-        "z": "5921103edf8bc817",
-        "name": "Ts Duck parsing",
-        "style": {
-            "fill": "#92d04f",
-            "label": true
-        },
-        "nodes": [
-            "1b368c698d1603a4",
-            "05a1e2c8dad388fb",
-            "fe45a8178aea5e6e",
-            "27518b5aec9f841e",
-            "97978c37ed1b43cb",
-            "7d72d668f721a872",
-            "e7af55844830de66",
-            "b29edbae04c962c0",
-            "55ce894f45ce2ddc",
-            "1cb0f73e71362bf3",
-            "7631b140ace92b84",
-            "6ba04c2d374cb808",
-            "520a275fdb70f6c1",
-            "f2774c1e20c0c717",
-            "b5581ff51192b69c",
-            "ef591a3732c41ff7",
-            "6187a9f63443b5a6",
-            "81afc6e9b67dd706",
-            "9513e7bc7e75a755",
-            "90dcf88e3200ab47",
-            "46fe2cf623adc6d4",
-            "c7506d45c1386dbf",
-            "60c1848c0328677a"
-        ],
-        "x": 114,
-        "y": -1,
-        "w": 1412,
-        "h": 329.5
-    },
-    {
-        "id": "552181cca779c1aa",
-        "type": "group",
-        "z": "5921103edf8bc817",
-        "name": "check for frequency change",
-        "style": {
-            "fill": "#001f60",
-            "label": true
-        },
-        "nodes": [
-            "a5690c79a4efb6c0",
-            "edf840c156dd92b0",
-            "06dabb2589707321",
-            "9bf07861299d633f"
-        ],
-        "x": 114,
-        "y": 339,
-        "w": 802,
-        "h": 142
-    },
-    {
-        "id": "72d0cc5c362e49a0",
-        "type": "group",
-        "z": "5921103edf8bc817",
-        "name": "Graphs v1",
-        "style": {
-            "fill": "#9363b7",
-            "label": true
-        },
-        "nodes": [
-            "1436b027a5d04949",
-            "411b7a5cad286194",
-            "1914b70a6706ebd4",
-            "c61b7f568c2173b3",
-            "a0b7358ed0f95c7d",
-            "c43dd0629d64335a",
-            "e25a43afa99cde8c",
-            "f2aa3f1078982769",
-            "bdbc0e378dfdc5f8",
-            "53268bde953b7f7b",
-            "ef84197a8c482fd4",
-            "200adee6a0a17962",
-            "1cc947c2494007e1",
-            "c893f1da4a401d72",
-            "8d9202a5c69ff12e",
-            "7910c53e32d985c8",
-            "fce6da69915c1ded",
-            "75c3cc5e2bafbcee",
-            "ccd98fdb4fc0e62f",
-            "d0b57cb6afdec3c4",
-            "d145b4f95cb7ccb9",
-            "87350a84b63234e2",
-            "b5ca2d84858c4612",
-            "3146d841c016a870",
-            "38a875fd828b6e4b",
-            "f040e98d76943d56",
-            "1c36d4749c447ce8",
-            "f689ad314151c376",
-            "8b875f941a7ec664",
-            "904f65fe1cd3e67d",
-            "12817f924e8a10a6",
-            "4836e1ea2e52f007",
-            "547bf3274a28b9fd",
-            "b1ecbdd63ade84af",
-            "69bfe840d7ba1aeb",
-            "3cb27f12428cca36",
-            "b92f008d19d5c664",
-            "aec0e140578add71",
-            "bbf04ab8e9c03fff",
-            "ef693a300d6d5974",
-            "6bf7d6e1fba89631",
-            "8c6a42b18f8ef696",
-            "9396693c.371108"
-        ],
-        "x": 114,
-        "y": 559,
-        "w": 1772,
-        "h": 828
     },
     {
         "id": "9b3296db2e0c849f",
@@ -29263,7 +29263,6 @@
         "wires": [
             [
                 "c893f1da4a401d72",
-                "32fed2bc451406c2",
                 "8c6a42b18f8ef696"
             ]
         ]
@@ -30029,21 +30028,6 @@
             [
                 "e7af55844830de66"
             ]
-        ]
-    },
-    {
-        "id": "32fed2bc451406c2",
-        "type": "chartjs-line",
-        "z": "5921103edf8bc817",
-        "name": "Test",
-        "path": "charts",
-        "charttitle": "Chart title",
-        "xaxis": "Item",
-        "yaxis": "Value",
-        "x": 1810,
-        "y": 140,
-        "wires": [
-            []
         ]
     },
     {
