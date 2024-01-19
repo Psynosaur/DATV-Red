@@ -89,9 +89,11 @@ Spectrum.prototype.drawFFT = function (bins) {
         this.ctx.lineTo(i, y);
         if (i === bins.length - 1) this.ctx.lineTo(this.wf_size + 1, y);
     }
+
     this.ctx.lineTo(this.wf_size + 1, this.spectrumHeight + 1);
     this.ctx.strokeStyle = "#fefefe";
     this.ctx.stroke();
+
 };
 // Most of these are from the BATC spectrum code, "internet_spectrum" folder
 const beacon_strength = 0;
@@ -111,10 +113,9 @@ let background_colour = "black";
 let downlink, uplink, canvasClickBW, lastUplink, lastCanvasClickBW;
 let busy = false;
 let activeColor, activeXd1, activeYd, activeXd2;
-
-let storageSupport = false;
+let storageSupport = true;
+let clickBox = {};
 if (typeof Storage !== "undefined") {
-    storageSupport = true;
 
     if (localStorage.activeColor) {
         activeColor = localStorage.activeColor;
@@ -129,27 +130,27 @@ if (typeof Storage !== "undefined") {
         activeXd2 = localStorage.activeXd2;
     }
 }
-
+let tunedBox = {};
 // From other spectrum
-function setRxClickState(
-    activeColor_f,
-    activeXd1_f,
-    magicSpaceAboveSignal,
-    activeXd2_f
-) {
-    activeColor = activeColor_f;
-    activeXd1 = activeXd1_f;
-    activeYd = magicSpaceAboveSignal;
-    activeXd2 = activeXd2_f;
-    if (storageSupport) {
-        localStorage.activeColor_1 = activeColor;
-        localStorage.activeXd1_1 = activeXd1;
-        localStorage.activeYd_1 = activeYd;
-        localStorage.activeXd2_1 = activeXd2;
-    }
+function setRxClickState () {
+    tunedBox = clickBox;
+    console.log(tunedBox)
+    // if (storageSupport) {
+    //     localStorage.activeColor_1 = activeColor;
+    //     localStorage.activeXd1_1 = activeXd1;
+    //     localStorage.activeYd_1 = activeYd;
+    //     localStorage.activeXd2_1 = activeXd2;
+    // }
 }
-
-
+function drawRxBox(ctx, xText){
+    ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+    ctx.fillRect(tunedBox.x, tunedBox.y, tunedBox.w , tunedBox.h);
+    ctx.fillText(
+        `${(tunedBox.freq/1_000_000).toFixed(3)}`,
+        xText,
+        50
+    );
+}
 
 
 
@@ -280,16 +281,25 @@ Spectrum.prototype.detect_signals = function (
                 signal_freq = ((mid_signal + 1) / fft_data.length) * 10.0;
                 let freq = (this.centerHz - (sr / 2)) + (sr * (10 * signal_freq) / 100);
                 // console.log(`freq : ${freq} signal_freq: ${signal_freq} sr: ${sr}`)
-
-                signals.push({
+                let signal = {
                     start: (start_signal / fft_data.length) * canvasWidth,
                     end: (end_signal / fft_data.length) * canvasWidth,
                     top: canvasHeight - (strength_signal / 65536) * canvasHeight,
                     frequency: freq,
                     // symbolrate: 1000.0 * signal_bw * (Number(sr)/this.spanHz) ,
                     symbolrate: 1000.0 * signal_bw,
-                });
-
+                }
+                signals.push(signal);
+                // var rand_num = Math.floor(Math.random() * 10000);
+                // Math.round((rand_num) / 1000) * 1000;
+                console.log("tuneBox" + tunedBox.freq)
+                console.log("freq" + freq)
+                if(Math.round(tunedBox.freq/ 1_000_000) * 1_000_000 === Math.round(freq / 1_000_000) * 1_000_000){
+                    tunedBox.x = signal.end;
+                    tunedBox.freq = freq
+                    let xText = (mid_signal / fft_data.length) * canvasWidth;
+                    drawRxBox(ctx, xText)
+                }
 
                 if (signal_bw !== 0) {
                     text_x_position = (mid_signal / fft_data.length) * canvasWidth;
@@ -301,10 +311,11 @@ Spectrum.prototype.detect_signals = function (
                             print_symbolrate(signal_bw),
                             text_x_position,
                             30
-                            );
+                        );
                         ctx.restore();
                     }
                 }
+                // drawRxBox(ctx)
 
 
             }
@@ -322,11 +333,11 @@ Spectrum.prototype.detect_signals = function (
     }
 };
 
-Spectrum.prototype.draw_signal_threshold = function (ctx, canvasHeight, canvasWidth){
+Spectrum.prototype.draw_signal_threshold = function (ctx, canvasHeight, canvasWidth) {
     let spectrum_height = (canvasHeight * (this.spectrumPercent / 100));
     // let spectrum_y_range = this.max_db - this.min_db;
     let spectrum_threshold_step = spectrum_height / 100;
-    ctx.lineWidth=1;
+    ctx.lineWidth = 1;
     ctx.strokeStyle = 'red';
     ctx.setLineDash([5, 3])
     ctx.beginPath();
@@ -503,6 +514,7 @@ Spectrum.prototype.drawSpectrum = function (bins) {
 
     // Restore scale
     this.ctx.restore();
+    // drawRxBox(this.ctx)
 
     // Fill scaled path
     this.ctx.fillStyle = this.gradient;
@@ -517,6 +529,8 @@ Spectrum.prototype.drawSpectrum = function (bins) {
 
 };
 let highlighted_channel = {};
+
+
 
 function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
     let channelSpace = Math.floor(
@@ -616,6 +630,8 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                 if (signals[i].start > canvasWidth / 1000) {
                     canvasClickBW = signals[i].symbolrate / 1000;
                     downlink = round(signals[i].frequency);
+                    activeXd1 = signals[i].start;
+                    activeXd2 = signals[i].end;
                     // ctx.font =
                     //     (signals[i].symbolrate < 500 ? "11px" : "12px") + " Arial";
                     // ctx.fillStyle = background_colour === "black" ? "white" : "black";
@@ -638,6 +654,13 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                     //     activeXd1 = signals[i].start;
                     //     activeXd2 = signals[i].end;
                     // }
+                    clickBox = {
+                        x: signals[i].end,
+                        y: canvasHeight * (1 / 100),
+                        w: signals[i].start - signals[i].end,
+                        h: canvasHeight * (7 / 8),
+                        freq: round(signals[i].frequency)
+                    };
                     // db_per_pixel = ((canvasHeight * 7) / 8 - canvasHeight / 12) / 15; // 15dB screen window
                     // beacon_strength_pixel =
                     //     canvasHeight - (beacon_strength / 65536) * canvasHeight;
@@ -651,6 +674,7 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                     // ).toFixed(1)} dBb`;
                     /* let mer = `${((beacon_strength_pixel + (beacon_strength_pixel - signals[i].top)) / db_per_pixel).toFixed(1)} dB`; */
                     busy = true;
+                    // render_signal_selected_box(ctx, clicked_x, clicked_y);
 
                     let mer = `${(signals[i].frequency / 1_000_000).toFixed(3)}MHz`
                     ctx.fillText(
@@ -1215,7 +1239,7 @@ Spectrum.prototype.onDrag = function (event) {
     console.log(dragStart);
 };
 
-Spectrum.prototype.on_canvas_click = function (ev) {
+Spectrum.prototype.on_canvas_click = function (ctx) {
     // let magicSpaceUnderSignal = canvasHeight * (4 / 8);
     // let magicSpaceAboveSignal = canvasHeight * (1.59 / 8);
 
@@ -1260,7 +1284,7 @@ Spectrum.prototype.on_canvas_click = function (ev) {
                 // channel: channelClicked,
             })
         );
-        setRxClickState(activeColor, 43, magicSpaceUnderSignal, canvasWidth * 1/5);
+        setRxClickState(ctx);
         /* RX tuning bar / box */
         // if (channelClicked === rx_count + 1) {
         //     setRxClickState(
@@ -1374,7 +1398,7 @@ function Spectrum(id, options) {
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     // Click to tune support
-    this.ctx.canvas.addEventListener("click", this.on_canvas_click, false);
+    this.ctx.canvas.addEventListener("click", () => this.on_canvas_click(this.ctx), false);
 
     // Create offscreen canvas for axes
     this.axes = document.createElement("canvas");
