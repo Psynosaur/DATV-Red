@@ -1942,10 +1942,8 @@
             "1b368c698d1603a4",
             "05a1e2c8dad388fb",
             "fe45a8178aea5e6e",
-            "27518b5aec9f841e",
             "97978c37ed1b43cb",
             "7d72d668f721a872",
-            "e7af55844830de66",
             "b29edbae04c962c0",
             "55ce894f45ce2ddc",
             "1cb0f73e71362bf3",
@@ -1961,12 +1959,13 @@
             "90dcf88e3200ab47",
             "46fe2cf623adc6d4",
             "c7506d45c1386dbf",
-            "60c1848c0328677a"
+            "a56d2fed4e2f8115",
+            "ff75aaaff0fe2eda"
         ],
         "x": 114,
-        "y": -1,
-        "w": 1412,
-        "h": 329.5
+        "y": 19,
+        "w": 1492,
+        "h": 242
     },
     {
         "id": "552181cca779c1aa",
@@ -1984,9 +1983,9 @@
             "9bf07861299d633f"
         ],
         "x": 114,
-        "y": 339,
-        "w": 802,
-        "h": 142
+        "y": 359,
+        "w": 612,
+        "h": 82
     },
     {
         "id": "72d0cc5c362e49a0",
@@ -28166,17 +28165,17 @@
         "winHide": false,
         "oldrc": false,
         "name": "TS Duck goes",
-        "x": 940,
-        "y": 140,
+        "x": 860,
+        "y": 80,
         "wires": [
             [],
             [
                 "c7506d45c1386dbf",
-                "60c1848c0328677a",
                 "90dcf88e3200ab47"
             ],
             [
-                "9513e7bc7e75a755"
+                "9513e7bc7e75a755",
+                "a56d2fed4e2f8115"
             ]
         ]
     },
@@ -28193,8 +28192,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 140,
+        "x": 600,
+        "y": 60,
         "wires": [
             [
                 "520a275fdb70f6c1"
@@ -28214,8 +28213,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 140,
+        "x": 1090,
+        "y": 100,
         "wires": [
             [
                 "46fe2cf623adc6d4"
@@ -28262,11 +28261,11 @@
         "payload": "",
         "payloadType": "str",
         "x": 210,
-        "y": 180,
+        "y": 60,
         "wires": [
             [
                 "b5e5829b.396ba8",
-                "e7af55844830de66"
+                "7d72d668f721a872"
             ]
         ]
     },
@@ -28281,8 +28280,15 @@
                 "t": "set",
                 "p": "ts_report",
                 "pt": "global",
-                "to": "payload",
-                "tot": "msg"
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -28290,8 +28296,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
-        "y": 140,
+        "x": 400,
+        "y": 60,
         "wires": [
             [
                 "97978c37ed1b43cb"
@@ -28336,7 +28342,7 @@
         "type": "function",
         "z": "5921103edf8bc817",
         "g": "d7eac6e7f4ef2b55",
-        "name": "kill ts duck on freq change",
+        "name": "kill ts duck",
         "func": "msg.payload = \"Taskkill /T /F /IM tsp.exe\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -28345,37 +28351,10 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 260,
+        "y": 160,
         "wires": [
             [
                 "fe45a8178aea5e6e"
-            ]
-        ]
-    },
-    {
-        "id": "27518b5aec9f841e",
-        "type": "delay",
-        "z": "5921103edf8bc817",
-        "d": true,
-        "g": "d7eac6e7f4ef2b55",
-        "name": "throws antother duck in the air",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 570,
-        "y": 180,
-        "wires": [
-            [
-                "97978c37ed1b43cb"
             ]
         ]
     },
@@ -29357,7 +29336,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
+        "x": 1090,
         "y": 220,
         "wires": [
             [
@@ -29374,8 +29353,8 @@
         "scope": [
             "520a275fdb70f6c1"
         ],
-        "x": 1060,
-        "y": 220,
+        "x": 200,
+        "y": 200,
         "wires": [
             [
                 "81afc6e9b67dd706"
@@ -29395,8 +29374,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 220,
+        "x": 410,
+        "y": 200,
         "wires": [
             [
                 "6187a9f63443b5a6"
@@ -29423,8 +29402,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1390,
-        "y": 220,
+        "x": 830,
+        "y": 200,
         "wires": [
             []
         ]
@@ -29495,8 +29474,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 180,
+        "x": 1100,
+        "y": 140,
         "wires": []
     },
     {
@@ -29513,8 +29492,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1230,
-        "y": 100,
+        "x": 1110,
+        "y": 60,
         "wires": []
     },
     {
@@ -29531,36 +29510,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1410,
-        "y": 140,
+        "x": 1270,
+        "y": 100,
         "wires": []
-    },
-    {
-        "id": "60c1848c0328677a",
-        "type": "delay",
-        "z": "5921103edf8bc817",
-        "d": true,
-        "g": "d7eac6e7f4ef2b55",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "2",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1250,
-        "y": 40,
-        "wires": [
-            [
-                "90dcf88e3200ab47"
-            ]
-        ]
     },
     {
         "id": "ef591a3732c41ff7",
@@ -29575,8 +29527,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 280,
+        "x": 1440,
+        "y": 180,
         "wires": []
     },
     {
@@ -29592,8 +29544,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "pew pew",
-        "x": 1080,
-        "y": 280,
+        "x": 1280,
+        "y": 180,
         "wires": [
             [
                 "ef591a3732c41ff7"
@@ -29626,8 +29578,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 920,
-        "y": 280,
+        "x": 1080,
+        "y": 180,
         "wires": [
             [
                 "b5581ff51192b69c"
@@ -29657,8 +29609,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 740,
-        "y": 260,
+        "x": 840,
+        "y": 160,
         "wires": [
             [
                 "6ba04c2d374cb808"
@@ -29686,11 +29638,10 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 600,
-        "y": 220,
+        "x": 660,
+        "y": 160,
         "wires": [
             [
-                "27518b5aec9f841e",
                 "1cb0f73e71362bf3",
                 "b29edbae04c962c0"
             ]
@@ -29734,34 +29685,6 @@
         "x": 1390,
         "y": 1080,
         "wires": []
-    },
-    {
-        "id": "e7af55844830de66",
-        "type": "change",
-        "z": "5921103edf8bc817",
-        "g": "d7eac6e7f4ef2b55",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 450,
-        "y": 100,
-        "wires": [
-            [
-                "7d72d668f721a872"
-            ]
-        ]
     },
     {
         "id": "b92f008d19d5c664",
@@ -29899,7 +29822,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 210,
-        "y": 440,
+        "y": 400,
         "wires": [
             [
                 "edf840c156dd92b0"
@@ -29919,8 +29842,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 420,
+        "x": 360,
+        "y": 400,
         "wires": [
             [
                 "06dabb2589707321"
@@ -29941,8 +29864,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 590,
-        "y": 440,
+        "x": 490,
+        "y": 400,
         "wires": [
             [
                 "9bf07861299d633f"
@@ -29967,8 +29890,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 820,
-        "y": 380,
+        "x": 630,
+        "y": 400,
         "wires": [
             [
                 "e25a43afa99cde8c"
@@ -29986,7 +29909,7 @@
         "width": "4",
         "height": "1",
         "passthru": true,
-        "label": "Retart TS analyser",
+        "label": "Restart TS analyser",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -29997,7 +29920,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 230,
-        "y": 260,
+        "y": 160,
         "wires": [
             [
                 "05a1e2c8dad388fb"
@@ -30022,11 +29945,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 240,
+        "x": 220,
         "y": 100,
         "wires": [
             [
-                "e7af55844830de66"
+                "7d72d668f721a872"
             ]
         ]
     },
@@ -30047,6 +29970,56 @@
         "x": 1540,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "a56d2fed4e2f8115",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "g": "d7eac6e7f4ef2b55",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "TSDuck died",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1310,
+        "y": 140,
+        "wires": [
+            [
+                "ff75aaaff0fe2eda"
+            ]
+        ]
+    },
+    {
+        "id": "ff75aaaff0fe2eda",
+        "type": "ui_toast",
+        "z": "5921103edf8bc817",
+        "g": "d7eac6e7f4ef2b55",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "TSDuck dead",
+        "x": 1500,
+        "y": 140,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1f8c8b.72033376",
