@@ -652,7 +652,7 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                         x: signals[i].end,
                         y: canvasHeight * (1 / 100),
                         w: signals[i].start - signals[i].end,
-                        h: canvasHeight * (7 / 8),
+                        h: canvasHeight * (99 / 100),
                         freq: round(signals[i].frequency)
                     };
                     // db_per_pixel = ((canvasHeight * 7) / 8 - canvasHeight / 12) / 15; // 15dB screen window
