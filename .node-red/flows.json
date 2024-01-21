@@ -1410,132 +1410,6 @@
         "y": 1999
     },
     {
-        "id": "e666d4836bf09971",
-        "type": "group",
-        "z": "d7c58eb9e7b65abb",
-        "name": "Hide_Show Longmynd reception panel",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "2e99a366c68c9d9c",
-            "b8177fbb07a6b83f",
-            "d27d5b9419b046a8",
-            "7bdca886c98f396f",
-            "b27089a64894e5bd",
-            "2829c42254f93828"
-        ],
-        "x": 174,
-        "y": 2479
-    },
-    {
-        "id": "b57e659498779d61",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "b4133686e9d73f92",
-            "3d75526cb77ff179",
-            "d15190871850d526",
-            "16182ec68f42c435",
-            "fcb99ad4f9e87aa1"
-        ],
-        "x": 54,
-        "y": 3999
-    },
-    {
-        "id": "482f6db670236c2a",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "ed6bba97ad64d324",
-            "02cafd3d4daf917a",
-            "d360c63421f57d9c",
-            "6893510832a160d6",
-            "1d48a2dfa413945f"
-        ],
-        "x": 54,
-        "y": 4159
-    },
-    {
-        "id": "130d212313aa8a43",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "8f3dd49dcfb0c452",
-            "a642d1270a817c8a",
-            "12c530716a8c0627",
-            "27c29e8d322944b4",
-            "4ec7825abd32d374"
-        ],
-        "x": 54,
-        "y": 4319
-    },
-    {
-        "id": "e23b6ac2d6740a41",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "1a5178a707e03426",
-            "42048c82b1760d4f",
-            "de7388b3695d6432",
-            "dca64b1b351bdddc",
-            "829d37e9299a3660"
-        ],
-        "x": 54,
-        "y": 4479
-    },
-    {
-        "id": "aa912c2c4d35b288",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "1d89f7c80b2d61cc",
-            "660cde76f49413d6",
-            "6a76c3d603fa3447",
-            "5ef112b7f9e2b108",
-            "46d86c94cb136d92"
-        ],
-        "x": 54,
-        "y": 4639
-    },
-    {
-        "id": "504d56e1630d436a",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "97891050d5c8066b",
-            "92d1cb60b0db634c",
-            "7a79c6b0f5a18dca",
-            "5a489e28b0ad6768"
-        ],
-        "x": 334,
-        "y": 4799
-    },
-    {
         "id": "38c9fb66e354750a",
         "type": "group",
         "z": "34bd429848bdfd07",
@@ -1906,237 +1780,6 @@
         "y": 599
     },
     {
-        "id": "143bc240e3444baa",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "style": {
-            "stroke": "#30363d",
-            "stroke-opacity": "1",
-            "fill": "#010409",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#e6edf3"
-        },
-        "nodes": [
-            "f8c95c1e224a194e",
-            "bc522f91564580e2",
-            "11d798ab6ceb2c95",
-            "527f572e625fe7e7",
-            "4737582dc6b617cc",
-            "a577758d81399cf1"
-        ],
-        "x": 54,
-        "y": 4979
-    },
-    {
-        "id": "11ddf2e8d8edefbb",
-        "type": "group",
-        "z": "d7c58eb9e7b65abb",
-        "name": "Hide_Show modulator extra settings",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "8b3c5c6e0233e0cb",
-            "8187a1ce9420b24b",
-            "8af31f4e72f5a3cb",
-            "5897ac43586b199d",
-            "c8cdb521937dcbc7",
-            "ec3cfc1bf55fcf83"
-        ],
-        "x": 174,
-        "y": 2619
-    },
-    {
-        "id": "5e4f29bf63a69ebd",
-        "type": "group",
-        "z": "d7c58eb9e7b65abb",
-        "name": "Hide_Show encoder extra settings",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "bbf86df544d647c3",
-            "2661d88008bf4f93",
-            "6a5bbf23ceed9b7e",
-            "c4075519513606d9",
-            "de3202d956f2f551",
-            "fe5e85892b62efb0"
-        ],
-        "x": 174,
-        "y": 2759
-    },
-    {
-        "id": "6b33e16d6eb73426",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show beacon PID's",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "8108b6f10c66fc9f",
-            "1de53c5fc306ff50",
-            "3630d1131bb313a4",
-            "85c45ae7de333cc4",
-            "41f7e9aebcdc8170",
-            "4a528b8124d88d9f"
-        ],
-        "x": 934,
-        "y": 4019
-    },
-    {
-        "id": "06b6d40e37eed1b3",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show beacon PID's",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "f8bd6464fb345bca",
-            "176d9640153364f4",
-            "50ce0f085872ca4e",
-            "2d5695ec793054d6",
-            "7415d15902f16090",
-            "fd73374edce4e46a"
-        ],
-        "x": 954,
-        "y": 4179
-    },
-    {
-        "id": "304e7427b347da66",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show beacon PID's",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "8f0c08d9412ef590",
-            "da02344022be378a",
-            "a2bd9d57336aaff2",
-            "afa076da2172e60f",
-            "5f8bba04108b2b51"
-        ],
-        "x": 954,
-        "y": 4319
-    },
-    {
-        "id": "4fb1b73484298f73",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show beacon PID's",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "4eb333c7a229cd20",
-            "bbf9db31dd874918",
-            "fbb23963a7dd86c9",
-            "758b32fa4c6ebf8f",
-            "0463ca7f2033f2ca"
-        ],
-        "x": 974,
-        "y": 4479
-    },
-    {
-        "id": "3c1d2bff8dbb2a62",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show beacon PID's",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "d71f0d1aed3eb5a4",
-            "71399868f22129f7",
-            "0395b22393312f5b",
-            "202d4b9096fbc81a",
-            "e2db61457fd85c06",
-            "1da7821c9ebd9493"
-        ],
-        "x": 974,
-        "y": 4639
-    },
-    {
-        "id": "8a69f99edaaca8df",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Hide_Show beacon PID's",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "6d802750f40d9203",
-            "ef8c4a7fe1b7b245",
-            "9c91edbf3f3183bb",
-            "e0368315184e4fa4",
-            "8e4aebe6d28bba09",
-            "876b472b90bd24ed"
-        ],
-        "x": 954,
-        "y": 4799
-    },
-    {
-        "id": "f27cb7bc733a47f7",
-        "type": "group",
-        "z": "d7c58eb9e7b65abb",
-        "name": "Hide_Show longmynd extra settings",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "6a72cc8e354d9ad1",
-            "0b41809ac89b2ec3",
-            "8eb849c12c854deb",
-            "3c39227ccabb7da9",
-            "6b5ce0a02930640f",
-            "23a78be8b7f984d5"
-        ],
-        "x": 174,
-        "y": 2899
-    },
-    {
-        "id": "2609b8ed27e6906d",
-        "type": "group",
-        "z": "e2c54979685d14cb",
-        "name": "Hide_Show batc spectrum",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "769b4c5e13b16e64",
-            "4b6314a8706ddc2a",
-            "46351a7397f6ec0c",
-            "a2992e3a7b829843",
-            "371509b7e5add381",
-            "c97b10a9fbf41318"
-        ],
-        "x": 114,
-        "y": 399
-    },
-    {
-        "id": "23393eb2826cc8ee",
-        "type": "group",
-        "z": "9d964f25dcc4d750",
-        "name": "Hide_Show Pluto spectrum panel",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "6fdf3e3f1bf5b389",
-            "4b0a2ac64d8244ca",
-            "4c92909c595a2250",
-            "ef58d193f130e63b",
-            "142a30e0d1f55a0f",
-            "a3e2715c1576d9f2"
-        ],
-        "x": 54,
-        "y": 1659
-    },
-    {
         "id": "8f3c2fac1ab17032",
         "type": "group",
         "z": "34cbb32907b1aed6",
@@ -2154,6 +1797,258 @@
         "x": 114,
         "y": 79,
         "w": 712,
+        "h": 122
+    },
+    {
+        "id": "6b33e16d6eb73426",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8108b6f10c66fc9f",
+            "1de53c5fc306ff50",
+            "3630d1131bb313a4",
+            "85c45ae7de333cc4",
+            "41f7e9aebcdc8170",
+            "4a528b8124d88d9f"
+        ],
+        "x": 114,
+        "y": 259,
+        "w": 1172,
+        "h": 122
+    },
+    {
+        "id": "06b6d40e37eed1b3",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f8bd6464fb345bca",
+            "176d9640153364f4",
+            "50ce0f085872ca4e",
+            "2d5695ec793054d6",
+            "7415d15902f16090",
+            "fd73374edce4e46a"
+        ],
+        "x": 134,
+        "y": 419,
+        "w": 1172,
+        "h": 122
+    },
+    {
+        "id": "304e7427b347da66",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8f0c08d9412ef590",
+            "da02344022be378a",
+            "a2bd9d57336aaff2",
+            "afa076da2172e60f",
+            "5f8bba04108b2b51",
+            "4908492e7fc40ea6"
+        ],
+        "x": 134,
+        "y": 559,
+        "w": 1172,
+        "h": 142
+    },
+    {
+        "id": "4fb1b73484298f73",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4eb333c7a229cd20",
+            "bbf9db31dd874918",
+            "fbb23963a7dd86c9",
+            "758b32fa4c6ebf8f",
+            "0463ca7f2033f2ca",
+            "4ebce23763cd3879"
+        ],
+        "x": 154,
+        "y": 719,
+        "w": 1172,
+        "h": 142
+    },
+    {
+        "id": "3c1d2bff8dbb2a62",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d71f0d1aed3eb5a4",
+            "71399868f22129f7",
+            "0395b22393312f5b",
+            "202d4b9096fbc81a",
+            "e2db61457fd85c06",
+            "1da7821c9ebd9493"
+        ],
+        "x": 154,
+        "y": 879,
+        "w": 1172,
+        "h": 122
+    },
+    {
+        "id": "8a69f99edaaca8df",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6d802750f40d9203",
+            "ef8c4a7fe1b7b245",
+            "9c91edbf3f3183bb",
+            "e0368315184e4fa4",
+            "8e4aebe6d28bba09",
+            "876b472b90bd24ed"
+        ],
+        "x": 134,
+        "y": 1039,
+        "w": 1172,
+        "h": 122
+    },
+    {
+        "id": "2609b8ed27e6906d",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show batc spectrum",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "769b4c5e13b16e64",
+            "4b6314a8706ddc2a",
+            "46351a7397f6ec0c",
+            "a2992e3a7b829843",
+            "371509b7e5add381",
+            "c97b10a9fbf41318"
+        ],
+        "x": 154,
+        "y": 1199,
+        "w": 1152,
+        "h": 122
+    },
+    {
+        "id": "e666d4836bf09971",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show Longmynd reception panel",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2e99a366c68c9d9c",
+            "b8177fbb07a6b83f",
+            "d27d5b9419b046a8",
+            "7bdca886c98f396f",
+            "b27089a64894e5bd",
+            "2829c42254f93828"
+        ],
+        "x": 154,
+        "y": 1339,
+        "w": 1152,
+        "h": 122
+    },
+    {
+        "id": "11ddf2e8d8edefbb",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show modulator extra settings",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8b3c5c6e0233e0cb",
+            "8187a1ce9420b24b",
+            "8af31f4e72f5a3cb",
+            "5897ac43586b199d",
+            "ec3cfc1bf55fcf83",
+            "c8cdb521937dcbc7"
+        ],
+        "x": 1334,
+        "y": 599,
+        "w": 1192,
+        "h": 222
+    },
+    {
+        "id": "5e4f29bf63a69ebd",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show encoder extra settings",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "bbf86df544d647c3",
+            "2661d88008bf4f93",
+            "6a5bbf23ceed9b7e",
+            "c4075519513606d9",
+            "de3202d956f2f551",
+            "fe5e85892b62efb0"
+        ],
+        "x": 154,
+        "y": 1619,
+        "w": 1152,
+        "h": 122
+    },
+    {
+        "id": "f27cb7bc733a47f7",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show longmynd extra settings",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6a72cc8e354d9ad1",
+            "0b41809ac89b2ec3",
+            "8eb849c12c854deb",
+            "3c39227ccabb7da9",
+            "6b5ce0a02930640f",
+            "23a78be8b7f984d5"
+        ],
+        "x": 154,
+        "y": 1759,
+        "w": 1152,
+        "h": 122
+    },
+    {
+        "id": "23393eb2826cc8ee",
+        "type": "group",
+        "z": "34cbb32907b1aed6",
+        "name": "Hide_Show Pluto spectrum panel",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6fdf3e3f1bf5b389",
+            "4b0a2ac64d8244ca",
+            "4c92909c595a2250",
+            "ef58d193f130e63b",
+            "142a30e0d1f55a0f",
+            "a3e2715c1576d9f2"
+        ],
+        "x": 154,
+        "y": 1479,
+        "w": 1152,
         "h": 122
     },
     {
@@ -2521,7 +2416,7 @@
         "type": "ui_group",
         "name": "ffplay",
         "tab": "9b3296db2e0c849f",
-        "order": 13,
+        "order": 14,
         "disp": false,
         "width": "6",
         "collapse": false,
@@ -2542,7 +2437,7 @@
         "d": true,
         "name": "preset bar",
         "tab": "9b3296db2e0c849f",
-        "order": 14,
+        "order": 15,
         "disp": false,
         "width": "16",
         "collapse": false,
@@ -2553,7 +2448,7 @@
         "type": "ui_group",
         "name": "misc",
         "tab": "9b3296db2e0c849f",
-        "order": 12,
+        "order": 13,
         "disp": false,
         "width": "6",
         "collapse": false,
@@ -2637,7 +2532,7 @@
         "type": "ui_group",
         "name": "RX",
         "tab": "9b3296db2e0c849f",
-        "order": 8,
+        "order": 9,
         "disp": false,
         "width": "6",
         "collapse": false,
@@ -2754,7 +2649,7 @@
         "type": "ui_group",
         "name": "Encoder",
         "tab": "9b3296db2e0c849f",
-        "order": 6,
+        "order": 7,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -2851,7 +2746,7 @@
         "type": "ui_group",
         "name": "Pluto-info",
         "tab": "9b3296db2e0c849f",
-        "order": 7,
+        "order": 8,
         "disp": false,
         "width": "6",
         "collapse": false,
@@ -2891,7 +2786,7 @@
         "type": "ui_group",
         "name": "Modulator-extra",
         "tab": "9b3296db2e0c849f",
-        "order": 9,
+        "order": 10,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -2902,7 +2797,7 @@
         "type": "ui_group",
         "name": "Encoder-extra",
         "tab": "9b3296db2e0c849f",
-        "order": 10,
+        "order": 11,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -2913,7 +2808,7 @@
         "type": "ui_group",
         "name": "Longmynd-extra",
         "tab": "9b3296db2e0c849f",
-        "order": 11,
+        "order": 12,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -3154,27 +3049,7 @@
         "z": "34cbb32907b1aed6",
         "name": "spacer",
         "group": "06245a91daf3c666",
-        "order": 34,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "27b7f90d913dd711",
-        "type": "ui_spacer",
-        "z": "34cbb32907b1aed6",
-        "name": "spacer",
-        "group": "06245a91daf3c666",
         "order": 35,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "e052d27e9210aae4",
-        "type": "ui_spacer",
-        "z": "34cbb32907b1aed6",
-        "name": "spacer",
-        "group": "06245a91daf3c666",
-        "order": 37,
         "width": 1,
         "height": 1
     },
@@ -3184,38 +3059,8 @@
         "z": "34cbb32907b1aed6",
         "name": "spacer",
         "group": "06245a91daf3c666",
-        "order": 41,
+        "order": 36,
         "width": 6,
-        "height": 1
-    },
-    {
-        "id": "80c6ea22eef5ebcc",
-        "type": "ui_spacer",
-        "z": "34cbb32907b1aed6",
-        "name": "spacer",
-        "group": "06245a91daf3c666",
-        "order": 38,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "50bf4f1f755fb1dd",
-        "type": "ui_spacer",
-        "z": "34cbb32907b1aed6",
-        "name": "spacer",
-        "group": "06245a91daf3c666",
-        "order": 40,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "6d223fc20cc4d35d",
-        "type": "ui_spacer",
-        "z": "34cbb32907b1aed6",
-        "name": "spacer",
-        "group": "441bbfce250f4e02",
-        "order": 6,
-        "width": 3,
         "height": 1
     },
     {
@@ -3255,6 +3100,27 @@
         "name": "spacer",
         "group": "27ec828db8c0f22b",
         "order": 12,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "848728a56fc33e5b",
+        "type": "ui_group",
+        "name": "Temp",
+        "tab": "9b3296db2e0c849f",
+        "order": 6,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6d223fc20cc4d35d",
+        "type": "ui_spacer",
+        "z": "34cbb32907b1aed6",
+        "name": "spacer",
+        "group": "441bbfce250f4e02",
+        "order": 6,
         "width": 3,
         "height": 1
     },
@@ -18709,844 +18575,6 @@
         ]
     },
     {
-        "id": "b4133686e9d73f92",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "b57e659498779d61",
-        "name": "",
-        "events": "all",
-        "x": 820,
-        "y": 4040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3d75526cb77ff179",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "b57e659498779d61",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 4040,
-        "wires": [
-            [
-                "d15190871850d526"
-            ],
-            [
-                "16182ec68f42c435"
-            ]
-        ]
-    },
-    {
-        "id": "d15190871850d526",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "b57e659498779d61",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Pluto-info\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4040,
-        "wires": [
-            [
-                "b4133686e9d73f92"
-            ]
-        ]
-    },
-    {
-        "id": "16182ec68f42c435",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "b57e659498779d61",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Pluto-info\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4080,
-        "wires": [
-            [
-                "b4133686e9d73f92"
-            ]
-        ]
-    },
-    {
-        "id": "fcb99ad4f9e87aa1",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "b57e659498779d61",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 150,
-        "y": 4100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ed6bba97ad64d324",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "482f6db670236c2a",
-        "name": "",
-        "events": "all",
-        "x": 820,
-        "y": 4200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "02cafd3d4daf917a",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "482f6db670236c2a",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 4200,
-        "wires": [
-            [
-                "d360c63421f57d9c"
-            ],
-            [
-                "6893510832a160d6"
-            ]
-        ]
-    },
-    {
-        "id": "d360c63421f57d9c",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "482f6db670236c2a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_misc\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4200,
-        "wires": [
-            [
-                "ed6bba97ad64d324"
-            ]
-        ]
-    },
-    {
-        "id": "6893510832a160d6",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "482f6db670236c2a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_misc\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4240,
-        "wires": [
-            [
-                "ed6bba97ad64d324"
-            ]
-        ]
-    },
-    {
-        "id": "1d48a2dfa413945f",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "482f6db670236c2a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 150,
-        "y": 4260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8f3dd49dcfb0c452",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "130d212313aa8a43",
-        "name": "",
-        "events": "all",
-        "x": 820,
-        "y": 4360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a642d1270a817c8a",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "130d212313aa8a43",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 4360,
-        "wires": [
-            [
-                "12c530716a8c0627"
-            ],
-            [
-                "27c29e8d322944b4"
-            ]
-        ]
-    },
-    {
-        "id": "12c530716a8c0627",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "130d212313aa8a43",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Encoder\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4360,
-        "wires": [
-            [
-                "8f3dd49dcfb0c452"
-            ]
-        ]
-    },
-    {
-        "id": "27c29e8d322944b4",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "130d212313aa8a43",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Encoder\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4400,
-        "wires": [
-            [
-                "8f3dd49dcfb0c452"
-            ]
-        ]
-    },
-    {
-        "id": "4ec7825abd32d374",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "130d212313aa8a43",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 150,
-        "y": 4420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1a5178a707e03426",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e23b6ac2d6740a41",
-        "name": "",
-        "events": "all",
-        "x": 820,
-        "y": 4520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "42048c82b1760d4f",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e23b6ac2d6740a41",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 4520,
-        "wires": [
-            [
-                "de7388b3695d6432"
-            ],
-            [
-                "dca64b1b351bdddc"
-            ]
-        ]
-    },
-    {
-        "id": "de7388b3695d6432",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e23b6ac2d6740a41",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Modulator\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4520,
-        "wires": [
-            [
-                "1a5178a707e03426"
-            ]
-        ]
-    },
-    {
-        "id": "dca64b1b351bdddc",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e23b6ac2d6740a41",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Modulator\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4560,
-        "wires": [
-            [
-                "1a5178a707e03426"
-            ]
-        ]
-    },
-    {
-        "id": "829d37e9299a3660",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "e23b6ac2d6740a41",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 150,
-        "y": 4580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1d89f7c80b2d61cc",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "aa912c2c4d35b288",
-        "name": "",
-        "events": "all",
-        "x": 820,
-        "y": 4680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "660cde76f49413d6",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "aa912c2c4d35b288",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 4680,
-        "wires": [
-            [
-                "6a76c3d603fa3447"
-            ],
-            [
-                "5ef112b7f9e2b108"
-            ]
-        ]
-    },
-    {
-        "id": "6a76c3d603fa3447",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "aa912c2c4d35b288",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_ffmpeg\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4680,
-        "wires": [
-            [
-                "1d89f7c80b2d61cc"
-            ]
-        ]
-    },
-    {
-        "id": "5ef112b7f9e2b108",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "aa912c2c4d35b288",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_ffmpeg\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4720,
-        "wires": [
-            [
-                "1d89f7c80b2d61cc"
-            ]
-        ]
-    },
-    {
-        "id": "46d86c94cb136d92",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "aa912c2c4d35b288",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 150,
-        "y": 4740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "97891050d5c8066b",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "504d56e1630d436a",
-        "name": "",
-        "events": "all",
-        "x": 820,
-        "y": 4840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "92d1cb60b0db634c",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "504d56e1630d436a",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
-        "y": 4840,
-        "wires": [
-            [
-                "7a79c6b0f5a18dca"
-            ],
-            [
-                "5a489e28b0ad6768"
-            ]
-        ]
-    },
-    {
-        "id": "7a79c6b0f5a18dca",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "504d56e1630d436a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_ffplay\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4840,
-        "wires": [
-            [
-                "97891050d5c8066b"
-            ]
-        ]
-    },
-    {
-        "id": "5a489e28b0ad6768",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "504d56e1630d436a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_ffplay\"]}}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 4880,
-        "wires": [
-            [
-                "97891050d5c8066b"
-            ]
-        ]
-    },
-    {
-        "id": "f8c95c1e224a194e",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "143bc240e3444baa",
-        "name": "inject",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0.5",
-        "topic": "",
-        "x": 150,
-        "y": 5060,
-        "wires": [
-            [
-                "bc522f91564580e2"
-            ]
-        ]
-    },
-    {
-        "id": "bc522f91564580e2",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "143bc240e3444baa",
-        "name": "",
-        "filename": "settings/ui.json",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 360,
-        "y": 5060,
-        "wires": [
-            [
-                "11d798ab6ceb2c95"
-            ]
-        ]
-    },
-    {
-        "id": "11d798ab6ceb2c95",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "143bc240e3444baa",
-        "name": "vlc_path",
-        "func": "let ui_settings = JSON.parse(msg.payload);\nmsg.payload = ui_settings;\nglobal.set(\"ui\", ui_settings);\nmsg.payload = ui_settings.ffplay;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 540,
-        "y": 5040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "527f572e625fe7e7",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "143bc240e3444baa",
-        "name": "save state",
-        "func": "let tiounePath = msg.payload\nglobal.set(\"device.vlc_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1170,
-        "y": 5020,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4737582dc6b617cc",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "143bc240e3444baa",
-        "name": "save device settings ",
-        "func": "if (msg.payload) {\n    global.set(\"deviceChange\", false);\n    let deviceSettings = global.get(\"device\");\n    msg.payload = JSON.stringify(deviceSettings);\n    return msg;\n}\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 5200,
-        "wires": [
-            [
-                "a577758d81399cf1"
-            ]
-        ]
-    },
-    {
-        "id": "a577758d81399cf1",
-        "type": "file",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "g": "143bc240e3444baa",
-        "name": "",
-        "filename": "settings/device.json",
-        "filenameType": "str",
-        "appendNewline": false,
-        "createDir": false,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1010,
-        "y": 5200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "38ef16553cc6ad09",
         "type": "change",
         "z": "2ec6a7ddfe0cd173",
@@ -19735,1133 +18763,6 @@
         "wires": [
             [
                 "e5b15ef8662e723b"
-            ]
-        ]
-    },
-    {
-        "id": "8108b6f10c66fc9f",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "6b33e16d6eb73426",
-        "name": "",
-        "events": "all",
-        "x": 2020,
-        "y": 4060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1de53c5fc306ff50",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "6b33e16d6eb73426",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1610,
-        "y": 4060,
-        "wires": [
-            [
-                "3630d1131bb313a4"
-            ],
-            [
-                "85c45ae7de333cc4"
-            ]
-        ]
-    },
-    {
-        "id": "3630d1131bb313a4",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "6b33e16d6eb73426",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Pluto-info\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.info",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1820,
-        "y": 4060,
-        "wires": [
-            [
-                "8108b6f10c66fc9f"
-            ]
-        ]
-    },
-    {
-        "id": "85c45ae7de333cc4",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "6b33e16d6eb73426",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Pluto-info\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.info",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1820,
-        "y": 4100,
-        "wires": [
-            [
-                "8108b6f10c66fc9f"
-            ]
-        ]
-    },
-    {
-        "id": "41f7e9aebcdc8170",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "6b33e16d6eb73426",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.info",
-        "payloadType": "global",
-        "x": 1080,
-        "y": 4100,
-        "wires": [
-            [
-                "4a528b8124d88d9f"
-            ]
-        ]
-    },
-    {
-        "id": "f8bd6464fb345bca",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "06b6d40e37eed1b3",
-        "name": "",
-        "events": "all",
-        "x": 2040,
-        "y": 4220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "176d9640153364f4",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "06b6d40e37eed1b3",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1630,
-        "y": 4220,
-        "wires": [
-            [
-                "50ce0f085872ca4e"
-            ],
-            [
-                "2d5695ec793054d6"
-            ]
-        ]
-    },
-    {
-        "id": "50ce0f085872ca4e",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "06b6d40e37eed1b3",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_misc\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.misc",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1840,
-        "y": 4220,
-        "wires": [
-            [
-                "f8bd6464fb345bca"
-            ]
-        ]
-    },
-    {
-        "id": "2d5695ec793054d6",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "06b6d40e37eed1b3",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_misc\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.misc",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1840,
-        "y": 4260,
-        "wires": [
-            [
-                "f8bd6464fb345bca"
-            ]
-        ]
-    },
-    {
-        "id": "7415d15902f16090",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "06b6d40e37eed1b3",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.misc",
-        "payloadType": "global",
-        "x": 1100,
-        "y": 4260,
-        "wires": [
-            [
-                "fd73374edce4e46a"
-            ]
-        ]
-    },
-    {
-        "id": "8f0c08d9412ef590",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "304e7427b347da66",
-        "name": "",
-        "events": "all",
-        "x": 2040,
-        "y": 4360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "da02344022be378a",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "304e7427b347da66",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1630,
-        "y": 4360,
-        "wires": [
-            [
-                "a2bd9d57336aaff2"
-            ],
-            [
-                "afa076da2172e60f"
-            ]
-        ]
-    },
-    {
-        "id": "a2bd9d57336aaff2",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "304e7427b347da66",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Encoder\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.encoder",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1840,
-        "y": 4360,
-        "wires": [
-            [
-                "8f0c08d9412ef590"
-            ]
-        ]
-    },
-    {
-        "id": "afa076da2172e60f",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "304e7427b347da66",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Encoder\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.encoder",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1840,
-        "y": 4400,
-        "wires": [
-            [
-                "8f0c08d9412ef590"
-            ]
-        ]
-    },
-    {
-        "id": "5f8bba04108b2b51",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "304e7427b347da66",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.encoder",
-        "payloadType": "global",
-        "x": 1110,
-        "y": 4400,
-        "wires": [
-            [
-                "4908492e7fc40ea6"
-            ]
-        ]
-    },
-    {
-        "id": "4eb333c7a229cd20",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4fb1b73484298f73",
-        "name": "",
-        "events": "all",
-        "x": 2060,
-        "y": 4520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bbf9db31dd874918",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4fb1b73484298f73",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1650,
-        "y": 4520,
-        "wires": [
-            [
-                "fbb23963a7dd86c9"
-            ],
-            [
-                "758b32fa4c6ebf8f"
-            ]
-        ]
-    },
-    {
-        "id": "fbb23963a7dd86c9",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4fb1b73484298f73",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Modulator\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.modulator",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1860,
-        "y": 4520,
-        "wires": [
-            [
-                "4eb333c7a229cd20"
-            ]
-        ]
-    },
-    {
-        "id": "758b32fa4c6ebf8f",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4fb1b73484298f73",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Modulator\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.modulator",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1860,
-        "y": 4560,
-        "wires": [
-            [
-                "4eb333c7a229cd20"
-            ]
-        ]
-    },
-    {
-        "id": "0463ca7f2033f2ca",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "4fb1b73484298f73",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.modulator",
-        "payloadType": "global",
-        "x": 1140,
-        "y": 4560,
-        "wires": [
-            [
-                "4ebce23763cd3879"
-            ]
-        ]
-    },
-    {
-        "id": "d71f0d1aed3eb5a4",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "3c1d2bff8dbb2a62",
-        "name": "",
-        "events": "all",
-        "x": 2060,
-        "y": 4680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "71399868f22129f7",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "3c1d2bff8dbb2a62",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1650,
-        "y": 4680,
-        "wires": [
-            [
-                "0395b22393312f5b"
-            ],
-            [
-                "202d4b9096fbc81a"
-            ]
-        ]
-    },
-    {
-        "id": "0395b22393312f5b",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "3c1d2bff8dbb2a62",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_ffmpeg\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.ffmpeg",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1860,
-        "y": 4680,
-        "wires": [
-            [
-                "d71f0d1aed3eb5a4"
-            ]
-        ]
-    },
-    {
-        "id": "202d4b9096fbc81a",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "3c1d2bff8dbb2a62",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_ffmpeg\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.ffmpeg",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1860,
-        "y": 4720,
-        "wires": [
-            [
-                "d71f0d1aed3eb5a4"
-            ]
-        ]
-    },
-    {
-        "id": "e2db61457fd85c06",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "3c1d2bff8dbb2a62",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.ffmpeg",
-        "payloadType": "global",
-        "x": 1130,
-        "y": 4720,
-        "wires": [
-            [
-                "1da7821c9ebd9493"
-            ]
-        ]
-    },
-    {
-        "id": "6d802750f40d9203",
-        "type": "ui_ui_control",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "8a69f99edaaca8df",
-        "name": "",
-        "events": "all",
-        "x": 2040,
-        "y": 4840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ef8c4a7fe1b7b245",
-        "type": "switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "8a69f99edaaca8df",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1630,
-        "y": 4840,
-        "wires": [
-            [
-                "9c91edbf3f3183bb"
-            ],
-            [
-                "e0368315184e4fa4"
-            ]
-        ]
-    },
-    {
-        "id": "9c91edbf3f3183bb",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "8a69f99edaaca8df",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_ffplay\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.ffplay",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1840,
-        "y": 4840,
-        "wires": [
-            [
-                "6d802750f40d9203"
-            ]
-        ]
-    },
-    {
-        "id": "e0368315184e4fa4",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "8a69f99edaaca8df",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_ffplay\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.ffplay",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1840,
-        "y": 4880,
-        "wires": [
-            [
-                "6d802750f40d9203"
-            ]
-        ]
-    },
-    {
-        "id": "8e4aebe6d28bba09",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "8a69f99edaaca8df",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.ffplay",
-        "payloadType": "global",
-        "x": 1100,
-        "y": 4880,
-        "wires": [
-            [
-                "876b472b90bd24ed"
-            ]
-        ]
-    },
-    {
-        "id": "4a528b8124d88d9f",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "6b33e16d6eb73426",
-        "name": "Info",
-        "label": "Pluto information top bar",
-        "tooltip": "Info",
-        "group": "c4b0794d54ab9746",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1370,
-        "y": 4100,
-        "wires": [
-            [
-                "1de53c5fc306ff50"
-            ]
-        ]
-    },
-    {
-        "id": "fd73374edce4e46a",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "06b6d40e37eed1b3",
-        "name": "Misc",
-        "label": "DVBS-GUI, VLC and AMP",
-        "tooltip": "Misc",
-        "group": "6ce8d00a039e3b50",
-        "order": 3,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1410,
-        "y": 4260,
-        "wires": [
-            [
-                "176d9640153364f4"
-            ]
-        ]
-    },
-    {
-        "id": "4908492e7fc40ea6",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Encoder",
-        "label": "Encoder",
-        "tooltip": "Encoder",
-        "group": "06245a91daf3c666",
-        "order": 36,
-        "width": 4,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1399,
-        "y": 4407,
-        "wires": [
-            [
-                "da02344022be378a"
-            ]
-        ]
-    },
-    {
-        "id": "1da7821c9ebd9493",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "3c1d2bff8dbb2a62",
-        "name": "ffmpeg",
-        "label": "ffmpeg encoding bar",
-        "tooltip": "ffmpeg encoding bar",
-        "group": "6ce8d00a039e3b50",
-        "order": 4,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1390,
-        "y": 4720,
-        "wires": [
-            [
-                "71399868f22129f7"
-            ]
-        ]
-    },
-    {
-        "id": "876b472b90bd24ed",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "8a69f99edaaca8df",
-        "name": "ffplay",
-        "label": "VLC and ffplay panel",
-        "tooltip": "ffplay",
-        "group": "6ce8d00a039e3b50",
-        "order": 5,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1350,
-        "y": 4880,
-        "wires": [
-            [
-                "ef8c4a7fe1b7b245"
-            ]
-        ]
-    },
-    {
-        "id": "4ebce23763cd3879",
-        "type": "ui_switch",
-        "z": "2ec6a7ddfe0cd173",
-        "d": true,
-        "name": "Modulator",
-        "label": "Modulator",
-        "tooltip": "Modulator",
-        "group": "441bbfce250f4e02",
-        "order": 5,
-        "width": 3,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 1427,
-        "y": 4525,
-        "wires": [
-            [
-                "bbf9db31dd874918"
             ]
         ]
     },
@@ -23107,194 +21008,6 @@
         "wires": [
             [
                 "6860085513c10a64"
-            ]
-        ]
-    },
-    {
-        "id": "6fdf3e3f1bf5b389",
-        "type": "ui_ui_control",
-        "z": "9d964f25dcc4d750",
-        "g": "23393eb2826cc8ee",
-        "name": "",
-        "events": "all",
-        "x": 1120,
-        "y": 1720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4b0a2ac64d8244ca",
-        "type": "switch",
-        "z": "9d964f25dcc4d750",
-        "g": "23393eb2826cc8ee",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 1720,
-        "wires": [
-            [
-                "4c92909c595a2250"
-            ],
-            [
-                "ef58d193f130e63b"
-            ]
-        ]
-    },
-    {
-        "id": "4c92909c595a2250",
-        "type": "change",
-        "z": "9d964f25dcc4d750",
-        "g": "23393eb2826cc8ee",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Pluto_RX_port\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.pluto_spectrum",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 1700,
-        "wires": [
-            [
-                "6fdf3e3f1bf5b389"
-            ]
-        ]
-    },
-    {
-        "id": "ef58d193f130e63b",
-        "type": "change",
-        "z": "9d964f25dcc4d750",
-        "g": "23393eb2826cc8ee",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Pluto_RX_port\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.pluto_spectrum",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 1740,
-        "wires": [
-            [
-                "6fdf3e3f1bf5b389"
-            ]
-        ]
-    },
-    {
-        "id": "142a30e0d1f55a0f",
-        "type": "inject",
-        "z": "9d964f25dcc4d750",
-        "g": "23393eb2826cc8ee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.longmynd",
-        "payloadType": "global",
-        "x": 220,
-        "y": 1720,
-        "wires": [
-            [
-                "a3e2715c1576d9f2"
-            ]
-        ]
-    },
-    {
-        "id": "a3e2715c1576d9f2",
-        "type": "ui_switch",
-        "z": "9d964f25dcc4d750",
-        "g": "23393eb2826cc8ee",
-        "name": "Pluto spectrum panel",
-        "label": "Pluto spectrum panel",
-        "tooltip": "Spec",
-        "group": "c4b0794d54ab9746",
-        "order": 3,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 460,
-        "y": 1720,
-        "wires": [
-            [
-                "4b0a2ac64d8244ca"
             ]
         ]
     },
@@ -27035,168 +24748,6 @@
         "wires": []
     },
     {
-        "id": "2e99a366c68c9d9c",
-        "type": "ui_ui_control",
-        "z": "d7c58eb9e7b65abb",
-        "g": "e666d4836bf09971",
-        "name": "",
-        "events": "all",
-        "x": 1240,
-        "y": 2540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b8177fbb07a6b83f",
-        "type": "switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "e666d4836bf09971",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 810,
-        "y": 2540,
-        "wires": [
-            [
-                "d27d5b9419b046a8"
-            ],
-            [
-                "7bdca886c98f396f"
-            ]
-        ]
-    },
-    {
-        "id": "d27d5b9419b046a8",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "e666d4836bf09971",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_RX\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.longmynd",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2520,
-        "wires": [
-            [
-                "2e99a366c68c9d9c"
-            ]
-        ]
-    },
-    {
-        "id": "7bdca886c98f396f",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "e666d4836bf09971",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_RX\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.longmynd",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2560,
-        "wires": [
-            [
-                "2e99a366c68c9d9c"
-            ]
-        ]
-    },
-    {
-        "id": "b27089a64894e5bd",
-        "type": "ui_switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "e666d4836bf09971",
-        "name": "Longmynd reception panel",
-        "label": "Longmynd",
-        "tooltip": "Longmynd",
-        "group": "06245a91daf3c666",
-        "order": 39,
-        "width": 4,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 600,
-        "y": 2540,
-        "wires": [
-            [
-                "b8177fbb07a6b83f"
-            ]
-        ]
-    },
-    {
         "id": "59db3398c81e2937",
         "type": "change",
         "z": "d7c58eb9e7b65abb",
@@ -27220,32 +24771,6 @@
         "y": 1500,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "2829c42254f93828",
-        "type": "inject",
-        "z": "d7c58eb9e7b65abb",
-        "g": "e666d4836bf09971",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.longmynd",
-        "payloadType": "global",
-        "x": 340,
-        "y": 2540,
-        "wires": [
-            [
-                "b27089a64894e5bd"
-            ]
         ]
     },
     {
@@ -27313,570 +24838,6 @@
         "x": 1080,
         "y": 1660,
         "wires": []
-    },
-    {
-        "id": "8b3c5c6e0233e0cb",
-        "type": "ui_ui_control",
-        "z": "d7c58eb9e7b65abb",
-        "g": "11ddf2e8d8edefbb",
-        "name": "",
-        "events": "all",
-        "x": 1240,
-        "y": 2680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8187a1ce9420b24b",
-        "type": "switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "11ddf2e8d8edefbb",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 810,
-        "y": 2680,
-        "wires": [
-            [
-                "8af31f4e72f5a3cb"
-            ],
-            [
-                "5897ac43586b199d"
-            ]
-        ]
-    },
-    {
-        "id": "8af31f4e72f5a3cb",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "11ddf2e8d8edefbb",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Modulator-extra\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.modulator_extra",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2660,
-        "wires": [
-            [
-                "8b3c5c6e0233e0cb"
-            ]
-        ]
-    },
-    {
-        "id": "5897ac43586b199d",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "11ddf2e8d8edefbb",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Modulator-extra\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.modulator_extra",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2700,
-        "wires": [
-            [
-                "8b3c5c6e0233e0cb"
-            ]
-        ]
-    },
-    {
-        "id": "bbf86df544d647c3",
-        "type": "ui_ui_control",
-        "z": "d7c58eb9e7b65abb",
-        "g": "5e4f29bf63a69ebd",
-        "name": "",
-        "events": "all",
-        "x": 1240,
-        "y": 2820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2661d88008bf4f93",
-        "type": "switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "5e4f29bf63a69ebd",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 810,
-        "y": 2820,
-        "wires": [
-            [
-                "6a5bbf23ceed9b7e"
-            ],
-            [
-                "c4075519513606d9"
-            ]
-        ]
-    },
-    {
-        "id": "6a5bbf23ceed9b7e",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "5e4f29bf63a69ebd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Encoder-extra\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.encoder_extra",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2800,
-        "wires": [
-            [
-                "bbf86df544d647c3"
-            ]
-        ]
-    },
-    {
-        "id": "c4075519513606d9",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "5e4f29bf63a69ebd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Encoder-extra\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.encoder_extra",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2840,
-        "wires": [
-            [
-                "bbf86df544d647c3"
-            ]
-        ]
-    },
-    {
-        "id": "c8cdb521937dcbc7",
-        "type": "ui_switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "11ddf2e8d8edefbb",
-        "name": "Modulator extra settings",
-        "label": "Extra settings",
-        "tooltip": "",
-        "group": "06245a91daf3c666",
-        "order": 33,
-        "width": 4,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "autorenew",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "check_circle",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 640,
-        "y": 2680,
-        "wires": [
-            [
-                "8187a1ce9420b24b"
-            ]
-        ]
-    },
-    {
-        "id": "de3202d956f2f551",
-        "type": "ui_switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "5e4f29bf63a69ebd",
-        "name": "Encoder Extra Settings",
-        "label": "Encoder extra settings",
-        "tooltip": "",
-        "group": "8bd7855b29878c5b",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "autorenew",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "check_circle",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 620,
-        "y": 2820,
-        "wires": [
-            [
-                "2661d88008bf4f93"
-            ]
-        ]
-    },
-    {
-        "id": "ec3cfc1bf55fcf83",
-        "type": "inject",
-        "z": "d7c58eb9e7b65abb",
-        "g": "11ddf2e8d8edefbb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.modulator_extra",
-        "payloadType": "global",
-        "x": 360,
-        "y": 2680,
-        "wires": [
-            [
-                "c8cdb521937dcbc7"
-            ]
-        ]
-    },
-    {
-        "id": "fe5e85892b62efb0",
-        "type": "inject",
-        "z": "d7c58eb9e7b65abb",
-        "g": "5e4f29bf63a69ebd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.encoder_extra",
-        "payloadType": "global",
-        "x": 350,
-        "y": 2820,
-        "wires": [
-            [
-                "de3202d956f2f551"
-            ]
-        ]
-    },
-    {
-        "id": "6a72cc8e354d9ad1",
-        "type": "ui_ui_control",
-        "z": "d7c58eb9e7b65abb",
-        "g": "f27cb7bc733a47f7",
-        "name": "",
-        "events": "all",
-        "x": 1240,
-        "y": 2960,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0b41809ac89b2ec3",
-        "type": "switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "f27cb7bc733a47f7",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 810,
-        "y": 2960,
-        "wires": [
-            [
-                "8eb849c12c854deb"
-            ],
-            [
-                "3c39227ccabb7da9"
-            ]
-        ]
-    },
-    {
-        "id": "8eb849c12c854deb",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "f27cb7bc733a47f7",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Longmynd-extra\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.longmynd_extra",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2940,
-        "wires": [
-            [
-                "6a72cc8e354d9ad1"
-            ]
-        ]
-    },
-    {
-        "id": "3c39227ccabb7da9",
-        "type": "change",
-        "z": "d7c58eb9e7b65abb",
-        "g": "f27cb7bc733a47f7",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Longmynd-extra\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.longmynd_extra",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 2980,
-        "wires": [
-            [
-                "6a72cc8e354d9ad1"
-            ]
-        ]
-    },
-    {
-        "id": "6b5ce0a02930640f",
-        "type": "ui_switch",
-        "z": "d7c58eb9e7b65abb",
-        "g": "f27cb7bc733a47f7",
-        "name": "Longmynd extra settings",
-        "label": "Longmynd extra settings",
-        "tooltip": "",
-        "group": "a4a37989805c1f8e",
-        "order": 17,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 610,
-        "y": 2960,
-        "wires": [
-            [
-                "0b41809ac89b2ec3"
-            ]
-        ]
-    },
-    {
-        "id": "23a78be8b7f984d5",
-        "type": "inject",
-        "z": "d7c58eb9e7b65abb",
-        "g": "f27cb7bc733a47f7",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.longmynd_extra",
-        "payloadType": "global",
-        "x": 360,
-        "y": 2960,
-        "wires": [
-            [
-                "6b5ce0a02930640f"
-            ]
-        ]
     },
     {
         "id": "01cd46f702ab295a",
@@ -28164,194 +25125,6 @@
         "wires": [
             [
                 "f7591f90facf0e0b"
-            ]
-        ]
-    },
-    {
-        "id": "769b4c5e13b16e64",
-        "type": "ui_ui_control",
-        "z": "e2c54979685d14cb",
-        "g": "2609b8ed27e6906d",
-        "name": "",
-        "events": "all",
-        "x": 1180,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4b6314a8706ddc2a",
-        "type": "switch",
-        "z": "e2c54979685d14cb",
-        "g": "2609b8ed27e6906d",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 750,
-        "y": 460,
-        "wires": [
-            [
-                "46351a7397f6ec0c"
-            ],
-            [
-                "a2992e3a7b829843"
-            ]
-        ]
-    },
-    {
-        "id": "46351a7397f6ec0c",
-        "type": "change",
-        "z": "e2c54979685d14cb",
-        "g": "2609b8ed27e6906d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Transmission-Control_Spectrum_Window\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.batc",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 980,
-        "y": 440,
-        "wires": [
-            [
-                "769b4c5e13b16e64"
-            ]
-        ]
-    },
-    {
-        "id": "a2992e3a7b829843",
-        "type": "change",
-        "z": "e2c54979685d14cb",
-        "g": "2609b8ed27e6906d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Spectrum_Window\"]}}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "settings.ui.batc",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 980,
-        "y": 480,
-        "wires": [
-            [
-                "769b4c5e13b16e64"
-            ]
-        ]
-    },
-    {
-        "id": "371509b7e5add381",
-        "type": "inject",
-        "z": "e2c54979685d14cb",
-        "g": "2609b8ed27e6906d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "settings.ui.batc",
-        "payloadType": "global",
-        "x": 260,
-        "y": 460,
-        "wires": [
-            [
-                "c97b10a9fbf41318"
-            ]
-        ]
-    },
-    {
-        "id": "c97b10a9fbf41318",
-        "type": "ui_switch",
-        "z": "e2c54979685d14cb",
-        "g": "2609b8ed27e6906d",
-        "name": "BATC",
-        "label": "BATC spectrum panel",
-        "tooltip": "BATC",
-        "group": "c4b0794d54ab9746",
-        "order": 2,
-        "width": "0",
-        "height": "0",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 490,
-        "y": 460,
-        "wires": [
-            [
-                "4b6314a8706ddc2a"
             ]
         ]
     },
@@ -32310,5 +29083,2262 @@
         "x": 750,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "8108b6f10c66fc9f",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "6b33e16d6eb73426",
+        "name": "",
+        "events": "all",
+        "x": 1200,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1de53c5fc306ff50",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "6b33e16d6eb73426",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 300,
+        "wires": [
+            [
+                "3630d1131bb313a4"
+            ],
+            [
+                "85c45ae7de333cc4"
+            ]
+        ]
+    },
+    {
+        "id": "3630d1131bb313a4",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "6b33e16d6eb73426",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Pluto-info\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.info",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 300,
+        "wires": [
+            [
+                "8108b6f10c66fc9f"
+            ]
+        ]
+    },
+    {
+        "id": "85c45ae7de333cc4",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "6b33e16d6eb73426",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Pluto-info\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.info",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            [
+                "8108b6f10c66fc9f"
+            ]
+        ]
+    },
+    {
+        "id": "41f7e9aebcdc8170",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "6b33e16d6eb73426",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.info",
+        "payloadType": "global",
+        "x": 260,
+        "y": 340,
+        "wires": [
+            [
+                "4a528b8124d88d9f"
+            ]
+        ]
+    },
+    {
+        "id": "4a528b8124d88d9f",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "6b33e16d6eb73426",
+        "name": "Info",
+        "label": "Pluto information top bar",
+        "tooltip": "Info",
+        "group": "c4b0794d54ab9746",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "1de53c5fc306ff50"
+            ]
+        ]
+    },
+    {
+        "id": "f8bd6464fb345bca",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "176d9640153364f4",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 810,
+        "y": 460,
+        "wires": [
+            [
+                "50ce0f085872ca4e"
+            ],
+            [
+                "2d5695ec793054d6"
+            ]
+        ]
+    },
+    {
+        "id": "50ce0f085872ca4e",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_misc\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.misc",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 460,
+        "wires": [
+            [
+                "f8bd6464fb345bca"
+            ]
+        ]
+    },
+    {
+        "id": "2d5695ec793054d6",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_misc\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.misc",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 500,
+        "wires": [
+            [
+                "f8bd6464fb345bca"
+            ]
+        ]
+    },
+    {
+        "id": "7415d15902f16090",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.misc",
+        "payloadType": "global",
+        "x": 290,
+        "y": 500,
+        "wires": [
+            [
+                "fd73374edce4e46a"
+            ]
+        ]
+    },
+    {
+        "id": "fd73374edce4e46a",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "06b6d40e37eed1b3",
+        "name": "Misc",
+        "label": "DVBS-GUI, VLC and AMP",
+        "tooltip": "Misc",
+        "group": "6ce8d00a039e3b50",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "176d9640153364f4"
+            ]
+        ]
+    },
+    {
+        "id": "8f0c08d9412ef590",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "304e7427b347da66",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da02344022be378a",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "304e7427b347da66",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 810,
+        "y": 600,
+        "wires": [
+            [
+                "a2bd9d57336aaff2"
+            ],
+            [
+                "afa076da2172e60f"
+            ]
+        ]
+    },
+    {
+        "id": "a2bd9d57336aaff2",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "304e7427b347da66",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Encoder\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.encoder",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 600,
+        "wires": [
+            [
+                "8f0c08d9412ef590"
+            ]
+        ]
+    },
+    {
+        "id": "afa076da2172e60f",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "304e7427b347da66",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Encoder\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.encoder",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 640,
+        "wires": [
+            [
+                "8f0c08d9412ef590"
+            ]
+        ]
+    },
+    {
+        "id": "5f8bba04108b2b51",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "304e7427b347da66",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.encoder",
+        "payloadType": "global",
+        "x": 300,
+        "y": 640,
+        "wires": [
+            [
+                "4908492e7fc40ea6"
+            ]
+        ]
+    },
+    {
+        "id": "4908492e7fc40ea6",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "304e7427b347da66",
+        "name": "Encoder",
+        "label": "Encoder",
+        "tooltip": "Encoder",
+        "group": "848728a56fc33e5b",
+        "order": 36,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 520,
+        "y": 660,
+        "wires": [
+            [
+                "da02344022be378a"
+            ]
+        ]
+    },
+    {
+        "id": "4eb333c7a229cd20",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "4fb1b73484298f73",
+        "name": "",
+        "events": "all",
+        "x": 1240,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bbf9db31dd874918",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "4fb1b73484298f73",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 830,
+        "y": 760,
+        "wires": [
+            [
+                "fbb23963a7dd86c9"
+            ],
+            [
+                "758b32fa4c6ebf8f"
+            ]
+        ]
+    },
+    {
+        "id": "fbb23963a7dd86c9",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "4fb1b73484298f73",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Modulator\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.modulator",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 760,
+        "wires": [
+            [
+                "4eb333c7a229cd20"
+            ]
+        ]
+    },
+    {
+        "id": "758b32fa4c6ebf8f",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "4fb1b73484298f73",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Modulator\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.modulator",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 800,
+        "wires": [
+            [
+                "4eb333c7a229cd20"
+            ]
+        ]
+    },
+    {
+        "id": "0463ca7f2033f2ca",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "4fb1b73484298f73",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.modulator",
+        "payloadType": "global",
+        "x": 320,
+        "y": 800,
+        "wires": [
+            [
+                "4ebce23763cd3879"
+            ]
+        ]
+    },
+    {
+        "id": "4ebce23763cd3879",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "d": true,
+        "g": "4fb1b73484298f73",
+        "name": "Modulator",
+        "label": "Modulator",
+        "tooltip": "Modulator",
+        "group": "441bbfce250f4e02",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 520,
+        "y": 820,
+        "wires": [
+            [
+                "bbf9db31dd874918"
+            ]
+        ]
+    },
+    {
+        "id": "d71f0d1aed3eb5a4",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "3c1d2bff8dbb2a62",
+        "name": "",
+        "events": "all",
+        "x": 1240,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71399868f22129f7",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "3c1d2bff8dbb2a62",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 830,
+        "y": 920,
+        "wires": [
+            [
+                "0395b22393312f5b"
+            ],
+            [
+                "202d4b9096fbc81a"
+            ]
+        ]
+    },
+    {
+        "id": "0395b22393312f5b",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "3c1d2bff8dbb2a62",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_ffmpeg\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.ffmpeg",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 920,
+        "wires": [
+            [
+                "d71f0d1aed3eb5a4"
+            ]
+        ]
+    },
+    {
+        "id": "202d4b9096fbc81a",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "3c1d2bff8dbb2a62",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_ffmpeg\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.ffmpeg",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 960,
+        "wires": [
+            [
+                "d71f0d1aed3eb5a4"
+            ]
+        ]
+    },
+    {
+        "id": "e2db61457fd85c06",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "3c1d2bff8dbb2a62",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.ffmpeg",
+        "payloadType": "global",
+        "x": 310,
+        "y": 960,
+        "wires": [
+            [
+                "1da7821c9ebd9493"
+            ]
+        ]
+    },
+    {
+        "id": "1da7821c9ebd9493",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "3c1d2bff8dbb2a62",
+        "name": "ffmpeg",
+        "label": "ffmpeg encoding bar",
+        "tooltip": "ffmpeg encoding bar",
+        "group": "6ce8d00a039e3b50",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 570,
+        "y": 960,
+        "wires": [
+            [
+                "71399868f22129f7"
+            ]
+        ]
+    },
+    {
+        "id": "6d802750f40d9203",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "8a69f99edaaca8df",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef8c4a7fe1b7b245",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "8a69f99edaaca8df",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 810,
+        "y": 1080,
+        "wires": [
+            [
+                "9c91edbf3f3183bb"
+            ],
+            [
+                "e0368315184e4fa4"
+            ]
+        ]
+    },
+    {
+        "id": "9c91edbf3f3183bb",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "8a69f99edaaca8df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_ffplay\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.ffplay",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1080,
+        "wires": [
+            [
+                "6d802750f40d9203"
+            ]
+        ]
+    },
+    {
+        "id": "e0368315184e4fa4",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "8a69f99edaaca8df",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_ffplay\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.ffplay",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1120,
+        "wires": [
+            [
+                "6d802750f40d9203"
+            ]
+        ]
+    },
+    {
+        "id": "8e4aebe6d28bba09",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "8a69f99edaaca8df",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.ffplay",
+        "payloadType": "global",
+        "x": 290,
+        "y": 1120,
+        "wires": [
+            [
+                "876b472b90bd24ed"
+            ]
+        ]
+    },
+    {
+        "id": "876b472b90bd24ed",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "8a69f99edaaca8df",
+        "name": "ffplay",
+        "label": "VLC and ffplay panel",
+        "tooltip": "ffplay",
+        "group": "6ce8d00a039e3b50",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 1120,
+        "wires": [
+            [
+                "ef8c4a7fe1b7b245"
+            ]
+        ]
+    },
+    {
+        "id": "769b4c5e13b16e64",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "2609b8ed27e6906d",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b6314a8706ddc2a",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "2609b8ed27e6906d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 1260,
+        "wires": [
+            [
+                "46351a7397f6ec0c"
+            ],
+            [
+                "a2992e3a7b829843"
+            ]
+        ]
+    },
+    {
+        "id": "46351a7397f6ec0c",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "2609b8ed27e6906d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Spectrum_Window\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.batc",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1240,
+        "wires": [
+            [
+                "769b4c5e13b16e64"
+            ]
+        ]
+    },
+    {
+        "id": "a2992e3a7b829843",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "2609b8ed27e6906d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Spectrum_Window\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.batc",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1280,
+        "wires": [
+            [
+                "769b4c5e13b16e64"
+            ]
+        ]
+    },
+    {
+        "id": "371509b7e5add381",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "2609b8ed27e6906d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.batc",
+        "payloadType": "global",
+        "x": 300,
+        "y": 1260,
+        "wires": [
+            [
+                "c97b10a9fbf41318"
+            ]
+        ]
+    },
+    {
+        "id": "c97b10a9fbf41318",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "2609b8ed27e6906d",
+        "name": "BATC",
+        "label": "BATC spectrum panel",
+        "tooltip": "BATC",
+        "group": "c4b0794d54ab9746",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 530,
+        "y": 1260,
+        "wires": [
+            [
+                "4b6314a8706ddc2a"
+            ]
+        ]
+    },
+    {
+        "id": "2e99a366c68c9d9c",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "e666d4836bf09971",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8177fbb07a6b83f",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "e666d4836bf09971",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 1400,
+        "wires": [
+            [
+                "d27d5b9419b046a8"
+            ],
+            [
+                "7bdca886c98f396f"
+            ]
+        ]
+    },
+    {
+        "id": "d27d5b9419b046a8",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "e666d4836bf09971",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_RX\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.longmynd",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1380,
+        "wires": [
+            [
+                "2e99a366c68c9d9c"
+            ]
+        ]
+    },
+    {
+        "id": "7bdca886c98f396f",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "e666d4836bf09971",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_RX\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.longmynd",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1420,
+        "wires": [
+            [
+                "2e99a366c68c9d9c"
+            ]
+        ]
+    },
+    {
+        "id": "b27089a64894e5bd",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "e666d4836bf09971",
+        "name": "Longmynd reception panel",
+        "label": "Longmynd",
+        "tooltip": "Longmynd",
+        "group": "848728a56fc33e5b",
+        "order": 39,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 580,
+        "y": 1400,
+        "wires": [
+            [
+                "b8177fbb07a6b83f"
+            ]
+        ]
+    },
+    {
+        "id": "2829c42254f93828",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "e666d4836bf09971",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.longmynd",
+        "payloadType": "global",
+        "x": 320,
+        "y": 1400,
+        "wires": [
+            [
+                "b27089a64894e5bd"
+            ]
+        ]
+    },
+    {
+        "id": "8b3c5c6e0233e0cb",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "11ddf2e8d8edefbb",
+        "name": "",
+        "events": "all",
+        "x": 2440,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8187a1ce9420b24b",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "11ddf2e8d8edefbb",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2050,
+        "y": 660,
+        "wires": [
+            [
+                "8af31f4e72f5a3cb"
+            ],
+            [
+                "5897ac43586b199d"
+            ]
+        ]
+    },
+    {
+        "id": "8af31f4e72f5a3cb",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "11ddf2e8d8edefbb",
+        "name": "On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Modulator-extra\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.modulator_extra",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2210,
+        "y": 640,
+        "wires": [
+            [
+                "8b3c5c6e0233e0cb"
+            ]
+        ]
+    },
+    {
+        "id": "5897ac43586b199d",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "11ddf2e8d8edefbb",
+        "name": "Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Modulator-extra\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.modulator_extra",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2210,
+        "y": 680,
+        "wires": [
+            [
+                "8b3c5c6e0233e0cb"
+            ]
+        ]
+    },
+    {
+        "id": "ec3cfc1bf55fcf83",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "11ddf2e8d8edefbb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.ui.modulator_extra",
+        "payloadType": "global",
+        "x": 1520,
+        "y": 660,
+        "wires": [
+            [
+                "c8cdb521937dcbc7"
+            ]
+        ]
+    },
+    {
+        "id": "bbf86df544d647c3",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "5e4f29bf63a69ebd",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2661d88008bf4f93",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "5e4f29bf63a69ebd",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 1680,
+        "wires": [
+            [
+                "6a5bbf23ceed9b7e"
+            ],
+            [
+                "c4075519513606d9"
+            ]
+        ]
+    },
+    {
+        "id": "6a5bbf23ceed9b7e",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "5e4f29bf63a69ebd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Encoder-extra\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.encoder_extra",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1660,
+        "wires": [
+            [
+                "bbf86df544d647c3"
+            ]
+        ]
+    },
+    {
+        "id": "c4075519513606d9",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "5e4f29bf63a69ebd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Encoder-extra\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.encoder_extra",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1700,
+        "wires": [
+            [
+                "bbf86df544d647c3"
+            ]
+        ]
+    },
+    {
+        "id": "de3202d956f2f551",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "5e4f29bf63a69ebd",
+        "name": "Encoder Extra Settings",
+        "label": "Encoder extra settings",
+        "tooltip": "",
+        "group": "8bd7855b29878c5b",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "autorenew",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "check_circle",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 600,
+        "y": 1680,
+        "wires": [
+            [
+                "2661d88008bf4f93"
+            ]
+        ]
+    },
+    {
+        "id": "fe5e85892b62efb0",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "5e4f29bf63a69ebd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.encoder_extra",
+        "payloadType": "global",
+        "x": 340,
+        "y": 1680,
+        "wires": [
+            [
+                "de3202d956f2f551"
+            ]
+        ]
+    },
+    {
+        "id": "6a72cc8e354d9ad1",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "f27cb7bc733a47f7",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b41809ac89b2ec3",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "f27cb7bc733a47f7",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 1820,
+        "wires": [
+            [
+                "8eb849c12c854deb"
+            ],
+            [
+                "3c39227ccabb7da9"
+            ]
+        ]
+    },
+    {
+        "id": "8eb849c12c854deb",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "f27cb7bc733a47f7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Longmynd-extra\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.longmynd_extra",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1800,
+        "wires": [
+            [
+                "6a72cc8e354d9ad1"
+            ]
+        ]
+    },
+    {
+        "id": "3c39227ccabb7da9",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "f27cb7bc733a47f7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Longmynd-extra\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.longmynd_extra",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1840,
+        "wires": [
+            [
+                "6a72cc8e354d9ad1"
+            ]
+        ]
+    },
+    {
+        "id": "6b5ce0a02930640f",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "f27cb7bc733a47f7",
+        "name": "Longmynd extra settings",
+        "label": "Longmynd extra settings",
+        "tooltip": "",
+        "group": "a4a37989805c1f8e",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 590,
+        "y": 1820,
+        "wires": [
+            [
+                "0b41809ac89b2ec3"
+            ]
+        ]
+    },
+    {
+        "id": "23a78be8b7f984d5",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "f27cb7bc733a47f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.longmynd_extra",
+        "payloadType": "global",
+        "x": 340,
+        "y": 1820,
+        "wires": [
+            [
+                "6b5ce0a02930640f"
+            ]
+        ]
+    },
+    {
+        "id": "6fdf3e3f1bf5b389",
+        "type": "ui_ui_control",
+        "z": "34cbb32907b1aed6",
+        "g": "23393eb2826cc8ee",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b0a2ac64d8244ca",
+        "type": "switch",
+        "z": "34cbb32907b1aed6",
+        "g": "23393eb2826cc8ee",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 1540,
+        "wires": [
+            [
+                "4c92909c595a2250"
+            ],
+            [
+                "ef58d193f130e63b"
+            ]
+        ]
+    },
+    {
+        "id": "4c92909c595a2250",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "23393eb2826cc8ee",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_Pluto_RX_port\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.pluto_spectrum",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1520,
+        "wires": [
+            [
+                "6fdf3e3f1bf5b389"
+            ]
+        ]
+    },
+    {
+        "id": "ef58d193f130e63b",
+        "type": "change",
+        "z": "34cbb32907b1aed6",
+        "g": "23393eb2826cc8ee",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_Pluto_RX_port\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.pluto_spectrum",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1560,
+        "wires": [
+            [
+                "6fdf3e3f1bf5b389"
+            ]
+        ]
+    },
+    {
+        "id": "142a30e0d1f55a0f",
+        "type": "inject",
+        "z": "34cbb32907b1aed6",
+        "g": "23393eb2826cc8ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.pluto_spectrum",
+        "payloadType": "global",
+        "x": 340,
+        "y": 1540,
+        "wires": [
+            [
+                "a3e2715c1576d9f2"
+            ]
+        ]
+    },
+    {
+        "id": "a3e2715c1576d9f2",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "23393eb2826cc8ee",
+        "name": "Pluto spectrum panel",
+        "label": "Pluto spectrum panel",
+        "tooltip": "Spec",
+        "group": "c4b0794d54ab9746",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 560,
+        "y": 1540,
+        "wires": [
+            [
+                "4b0a2ac64d8244ca"
+            ]
+        ]
+    },
+    {
+        "id": "c8cdb521937dcbc7",
+        "type": "ui_switch",
+        "z": "34cbb32907b1aed6",
+        "g": "11ddf2e8d8edefbb",
+        "name": "Modulator extra settings",
+        "label": "Extra settings",
+        "tooltip": "",
+        "group": "06245a91daf3c666",
+        "order": 33,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1830,
+        "y": 780,
+        "wires": [
+            [
+                "8187a1ce9420b24b"
+            ]
+        ]
     }
 ]

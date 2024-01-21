@@ -2,7 +2,7 @@
     html,
     body {
         background: #212222 !important;
-
+        color: #212222 !important;;
     }
 
     body.nr-dashboard-theme md-toolbar,
@@ -50,9 +50,7 @@
     }
 
     #Tab_Transmission-Control {
-        background: -webkit-linear-gradient(270deg,
-                #212222 0%,
-                #212222 100%) !important;
+        background: #212222 !important;
         margin: auto;
         width: 100vh;
         max-width: 100vw;
