@@ -32,6 +32,7 @@ Spectrum.prototype.rowToImageData = function (bins) {
 };
 
 Spectrum.prototype.addWaterfallRow = function (bins) {
+
     // Shift waterfall 1 row down
     this.ctx_wf.drawImage(
         this.ctx_wf.canvas,
@@ -76,6 +77,7 @@ Spectrum.prototype.addWaterfallRow = function (bins) {
         width,
         height - this.spectrumHeight
     );
+
 };
 
 Spectrum.prototype.drawFFT = function (bins) {
@@ -124,8 +126,8 @@ if (typeof Storage !== "undefined") {
     }
 }
 
-function setRxClickState (minSpan, spanHz ) {
-    let scale = spanHz/minSpan;
+function setRxClickState(minSpan, spanHz) {
+    let scale = spanHz / minSpan;
     tunedBox = clickBox;
     tunedBox.minSpanHz = minSpan;
     tunedBox.spanHz = spanHz;
@@ -134,14 +136,15 @@ function setRxClickState (minSpan, spanHz ) {
         localStorage.tunedBox = JSON.stringify(tunedBox);
     }
 }
-function drawRxBox(ctx, xText, minSpan, spanHz){
-    let scale = minSpan/spanHz;
+
+function drawRxBox(ctx, xText, minSpan, spanHz) {
+    let scale = minSpan / spanHz;
     let boxScale = tunedBox?.spanHz / tunedBox?.minSpanHz;
     ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
     ctx.fillRect(tunedBox.x, tunedBox.y, tunedBox.w * scale * boxScale, tunedBox.h);
     ctx.fillStyle = "rgb(32,246,137)";
     ctx.fillText(
-        `${(tunedBox.freq/1_000_000).toFixed(3)}`,
+        `${(tunedBox.freq / 1_000_000).toFixed(3)}`,
         xText,
         50
     );
@@ -287,7 +290,7 @@ Spectrum.prototype.detect_signals = function (
                 // Math.round((rand_num) / 1000) * 1000;
                 // console.log("tuneBox" + tunedBox.freq)
                 // console.log("freq" + freq)
-                if(Math.round(tunedBox.freq/ 125_000) * 125_000 === Math.round(freq / 125_000) * 125_000){
+                if (Math.round(tunedBox.freq / 125_000) * 125_000 === Math.round(freq / 125_000) * 125_000) {
                     tunedBox.x = signal.end;
                     tunedBox.freq = freq;
                     tunedBox.minSpanHz = this.minSpanHz;
@@ -372,18 +375,18 @@ Spectrum.prototype.drawChannels = function (ctx) {
     }
 
     /* 1MS */
-    for (var f = 493.25; f <= 496.25; f = f + 1.5) {
+    for (let i = 493.25; i <= 496.25; i = i + 1.5) {
         // draw_channel(f, 1.0, 7.475 / 8);
-        draw_channel(f, 1.0, 8.975 / 30);
+        draw_channel(i, 1.0, 8.975 / 30);
     }
 
     /* 333Ks */
-    for (var f = 492.75; f <= 499.25; f = f + 0.5) {
-        draw_channel(f, 0.333, 8.15 / 30);
+    for (let j = 492.75; j <= 499.25; j = j + 0.5) {
+        draw_channel(j, 0.333, 8.15 / 30);
     }
 
     /* 125Ks */
-    for (var f = 492.75; f <= 499.25; f = f + 0.25) {
+    for (let f = 492.75; f <= 499.25; f = f + 0.25) {
         draw_channel(f, 0.125, 7.425 / 30);
     }
 
@@ -397,7 +400,7 @@ Spectrum.prototype.drawChannels = function (ctx) {
     ctx.fillText(
         "Click to tune wide & narrow channels",
         (494.75 - _start_freq) * (width / 9),
-        height - 6
+        100
     );
 
     /* ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 15), canvasHeight - 6);
@@ -509,11 +512,11 @@ Spectrum.prototype.drawSpectrum = function (bins) {
     // Restore scale
     this.ctx.restore();
     // drawRxBox(this.ctx)
+    // this.drawChannels(this.ctx);
 
     // Fill scaled path
     this.ctx.fillStyle = this.gradient;
     this.ctx.fill();
-    // this.drawChannels(this.ctx);
     this.draw_signal_threshold(this.ctx, height, width);
 
     // Copy axes from offscreen canvas
@@ -523,7 +526,6 @@ Spectrum.prototype.drawSpectrum = function (bins) {
 
 };
 let highlighted_channel = {};
-
 
 
 function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
@@ -1346,6 +1348,7 @@ Spectrum.prototype.on_canvas_click = function (ctx) {
 
 function Spectrum(id, options) {
     // Handle options
+    // console.dir(options)
     this.centerHz = options && options.centerHz ? options.centerHz : 0;
     this.spanHz = options && options.spanHz ? options.spanHz : 0;
     this.gain = options && options.gain ? options.gain : 0;
@@ -1369,9 +1372,9 @@ function Spectrum(id, options) {
     // Setup state
     this.paused = false;
     this.fullscreen = false;
-    this.min_db = 420;
-    this.max_db = 490;
-    this.threshold = 30;
+    this.min_db = options && options.min_db ? options.min_db : 420;
+    this.max_db = options && options.max_db ? options.max_db : 490;
+    this.threshold = options && options.threshold ? options.threshold : 30;
     this.spectrumHeight = 0;
     this.tuningStep = 100000;
     this.maxbinval = 0;
@@ -1381,7 +1384,7 @@ function Spectrum(id, options) {
 
     // Colors
     this.colorindex = 0;
-    this.colormap = colormaps[5];
+    this.colormap = colormaps[options.color];
 
     // Create main canvas and adjust dimensions to match actual
     this.canvas = document.getElementById(id);

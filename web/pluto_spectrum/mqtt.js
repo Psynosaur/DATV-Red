@@ -27,7 +27,7 @@ function mqtt_client_2() {
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/minSpan`);
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/min_db`);
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/max_db`);
-    client.subscribe(`dt/pluto/${callsign}/rx/webfft/spectrum_percent`);
+    client.subscribe(`dt/pluto/${callsign}/rx/webfft/percent`);
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/color`);
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/avg`);
     client.subscribe(`dt/pluto/${callsign}/rx/webfft/signal_threshold`);
@@ -81,7 +81,7 @@ function mqtt_client_2() {
       spectrum.setThreshold(num);
       // console.log("avg: " + num);
     }
-    if (topic === `dt/pluto/${callsign}/rx/webfft/spectrum_percent`) {
+    if (topic === `dt/pluto/${callsign}/rx/webfft/percent`) {
       let num = Number(message.payloadString);
       spectrum.setSpectrumPercent(num);
       // console.log("avg: " + num);

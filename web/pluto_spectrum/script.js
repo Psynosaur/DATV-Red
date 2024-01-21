@@ -11,15 +11,15 @@ function connectWebSocket(spectrum) {
 
   spectrum.setWebSocket(ws);
 
-  ws.onconnect = function (evt) {
+  ws.onconnect = function () {
     ws.binaryType = "arraybuffer";
   };
 
-  ws.onopen = function (evt) {
+  ws.onopen = function () {
     ws.binaryType = "arraybuffer";
     console.log("connected!");
   };
-  ws.onclose = function (evt) {
+  ws.onclose = function () {
     console.log("closed");
     setTimeout(function () {
       connectWebSocket(spectrum);
@@ -61,33 +61,53 @@ function connectWebSocket(spectrum) {
     }
   };
 }
+async function getJSON(url) {
+  return fetch(`${url}/config`)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        return responseJson;
+      });
+}
+async function getConfig(url) {
+  const json = await getJSON(url);
+  return json;
+}
 
 var freq_info = [];
 function main() {
-  // Create spectrum object on canvas with ID "waterfall"
-  spectrum = new Spectrum("waterfall", {
-    spectrumPercent: 65,
-    logger: "log",
-    wf_size: 35
-  });
+  (async () => {
+    const url = localPage ? 'http://127.0.0.1:1880' : '';
+    const config = await getConfig(url);
+    // Create spectrum object on canvas with ID "waterfall"
+    spectrum = new Spectrum("waterfall", {
+      spectrumPercent: config.settings.spectrum.percent,
+      logger: "log",
+      wf_size: 35,
+      max_db: config.settings.spectrum.max_db,
+      min_db: config.settings.spectrum.min_db,
+      threshold: config.settings.spectrum.signal_threshold,
+      color: config.settings.spectrum.color,
+      averaging: config.settings.spectrum.averaging
+    });
 
-  // Connect to websocket
-  connectWebSocket(spectrum);
+    // Connect to websocket
+    connectWebSocket(spectrum);
 
-  // Bind keypress handler
-  window.addEventListener("keydown", function (e) {
-    spectrum.onKeypress(e);
-  });
+    // Bind keypress handler
+    window.addEventListener("keydown", function (e) {
+      spectrum.onKeypress(e);
+    });
 
-  // Drag keypress handler
-  window.addEventListener("mousemove", function (event) {
-    spectrum.detect_movement(event);
-  });
-  window.addEventListener("mouseout", function (event) {
-    spectrum.detect_movement_1(event);
-  });
-  // mqtt_client();
-  mqtt_client_2();
+    // Drag keypress handler
+    window.addEventListener("mousemove", function (event) {
+      spectrum.detect_movement(event);
+    });
+    window.addEventListener("mouseout", function (event) {
+      spectrum.detect_movement_1(event);
+    });
+    // mqtt_client();
+    mqtt_client_2();
+  })();
 }
 
 window.onload = main;

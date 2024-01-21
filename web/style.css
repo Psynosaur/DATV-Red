@@ -1,0 +1,147 @@
+
+    html,
+    body {
+        background: #212222 !important;
+
+    }
+
+    body.nr-dashboard-theme md-toolbar,
+    body.nr-dashboard-theme md-content md-card {}
+
+
+    ui-card-panel {
+        /* background-color: rgba(250, 250, 250, 0.103) !important; */
+        border: none !important;
+        border-radius: 5px !important;
+        /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19) !important; */
+    }
+
+    ui-card-panel>div.nr-dashboard-cardpanel>div>md-card {
+        /* background: none !important; */
+        border-radius: 5px !important;
+    }
+
+    ui-card-panel>div.nr-dashboard-cardpanel button {
+        /*background: none !important;*/
+    }
+
+    md-toolbar {
+        background: none !important;
+    }
+
+    md-sidenav {
+        background: linear-gradient(120deg, rgba(40, 42, 49, 0.90) 20%, rgba(47, 49, 56, 0.90) 80%) !important;
+    }
+
+    md-card.nr-dashboard-button * {
+        /* box-shadow: none !important; */
+    }
+
+    md-card.nr-dashboard-template * {
+        /* background: none !important; */
+    }
+
+    md-switch {
+        /* background-color: rgba(250, 250, 250, 0.103) !important; */
+    }
+
+    md-backdrop.md-opaque {
+        background-color: rgba(77, 77, 77, 0.315);
+    }
+
+    #Tab_Transmission-Control {
+        background: -webkit-linear-gradient(270deg,
+                #212222 0%,
+                #212222 100%) !important;
+        margin: auto;
+        width: 100vh;
+        max-width: 100vw;
+        min-width: 1920px;
+    }
+
+    md-select {
+        text-align: right;
+        
+    }
+    .nr-dashboard-theme .nr-dashboard-dropdown md-select .md-select-value, .nr-dashboard-theme .nr-dashboard-dropdown md-select .md-select-value.md-select-placeholder {
+        color: #eeeeee;
+        border-color: rgba(0, 0, 0, 0.0);
+        border-bottom-width: 1px;
+        padding: 0px 2px;
+    }
+
+    md-input-container .md-input {
+        /* color: #eeeeee; */
+        border-color: rgb(110, 109, 109) !important;
+    }
+
+    md-list md-list-item.md-2-line .md-list-item-text h3 {
+        color: #FFFFFF;
+    }
+
+    md-checkbox.md-default-theme:not(.md-checked) .md-icon, md-checkbox:not(.md-checked) .md-icon {
+        border-color: rgb(148, 144, 144);
+    }
+
+    @media all and (min-width:1921px) and (max-width: 5000px) {
+        #Tab_Transmission-Control {
+            /* left: -5rem; */
+            min-width: 1920px;
+        }
+    }
+
+    @media all and (min-width:1627px) and (max-width: 1920px) {
+        #Tab_Transmission-Control {
+            /* left: -5rem; */
+            min-width: 100vw;
+        }
+    }
+
+    @media all and (min-width:960px) and (max-width: 1024px) {
+        #Tab_Transmission-Control {
+            /* left: -5rem; */
+            min-width: 1920px;
+        }
+    }
+
+    @media all and (min-width:801px) and (max-width: 959px) {
+        #Tab_Transmission-Control {
+            /* left: -5rem; */
+            min-width: 1920px;
+        }
+    }
+
+    @media all and (min-width:769px) and (max-width: 800px) {
+        #Tab_Transmission-Control {
+            /* left: -5rem; */
+            min-width: 1920px;
+        }
+    }
+
+    @media all and (min-width:569px) and (max-width: 768px) {
+        #Tab_Transmission-Control {
+            /* left: -5rem; */
+            min-width: 1920px;
+        }
+
+        @media all and (min-width:481px) and (max-width: 568px) {
+            #Tab_Transmission-Control {
+                /* left: -5rem; */
+                min-width: 1920px;
+            }
+        }
+
+        @media all and (min-width:321px) and (max-width: 480px) {
+            #Tab_Transmission-Control {
+                /* left: -5rem; */
+                min-width: 1920px;
+            }
+        }
+
+        @media all and (min-width:0px) and (max-width: 320px) {
+            #Tab_Transmission-Control {
+                /* left: -5rem; */
+                min-width: 1920px;
+            }
+        }
+    }
