@@ -1801,7 +1801,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#097479",
+                "baseColor": "#0c578e",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -1816,11 +1816,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#097479",
-                    "value": "#097479",
+                    "value": "#0c578e",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#0c578e",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -1832,7 +1832,7 @@
                     "edited": true
                 },
                 "group-textColor": {
-                    "value": "#0eb8c0",
+                    "value": "#1282d5",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -1848,7 +1848,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#097479",
+                    "value": "#0c578e",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -10668,7 +10668,7 @@
         "width": "6",
         "height": 1,
         "name": "Encoder controls",
-        "label": "<b><font size=4><font color=\"#CC0D00\"}>Encoder controls",
+        "label": "<b><font size=4><font color=\"#0C578E\"}>Encoder controls",
         "format": "",
         "layout": "row-spread",
         "className": "",
@@ -13115,7 +13115,7 @@
         "width": "4",
         "height": 1,
         "name": "Modulator controls",
-        "label": "<b><font size=4><font color=\"#CC0D00\"}>Modulator controls",
+        "label": "<b><font size=4><font color=\"#0C578E\"}>Modulator controls",
         "format": "",
         "layout": "row-left",
         "className": "",
