@@ -64,6 +64,14 @@
         "env": []
     },
     {
+        "id": "b80fd331a41baadc",
+        "type": "tab",
+        "label": "Styling",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "15d7457.fcac4bb",
         "type": "subflow",
         "name": "Change Flow Disabled",
@@ -1510,6 +1518,29 @@
         "y": 1819
     },
     {
+        "id": "d05699c927c72f19",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Longmynd TS ip restore after toggle or rebbot",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#0070c0"
+        },
+        "nodes": [
+            "4d3277f73b028a47",
+            "9c3c9892ec34dbdd",
+            "621f52f8316f83ca",
+            "435da06adda77a3f",
+            "91c1c4cf01222a9e",
+            "fc6ec55e3762b0b9"
+        ],
+        "x": 1634,
+        "y": 3219,
+        "w": 592,
+        "h": 162
+    },
+    {
         "id": "5c31dbeab217c8e9",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1728,27 +1759,24 @@
         "h": 202
     },
     {
-        "id": "d05699c927c72f19",
+        "id": "8f3c2fac1ab17032",
         "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Longmynd TS ip restore after toggle or rebbot",
+        "z": "b80fd331a41baadc",
+        "name": "Control UI",
         "style": {
-            "stroke": "none",
-            "label": true,
-            "fill": "#0070c0"
+            "label": true
         },
         "nodes": [
-            "4d3277f73b028a47",
-            "9c3c9892ec34dbdd",
-            "621f52f8316f83ca",
-            "435da06adda77a3f",
-            "91c1c4cf01222a9e",
-            "fc6ec55e3762b0b9"
+            "dd5f965e.fb70b8",
+            "7e3af08d3b59486d",
+            "e49100b42776835c",
+            "8b7ad726a468bcdc",
+            "4f4e153ed6b6a425"
         ],
-        "x": 1634,
-        "y": 3219,
-        "w": 592,
-        "h": 162
+        "x": 154,
+        "y": 139,
+        "w": 712,
+        "h": 122
     },
     {
         "id": "9b3296db2e0c849f",
@@ -1775,7 +1803,7 @@
                 "default": "#097479",
                 "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false,
+                "edited": true,
                 "reset": false
             },
             "customTheme": {
@@ -2224,6 +2252,25 @@
         "order": 10,
         "width": "7",
         "height": "1"
+    },
+    {
+        "id": "81b1bdc3.9a60b8",
+        "type": "ui_group",
+        "name": "Hacks",
+        "tab": "2f5baa7e.0221fe",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2f5baa7e.0221fe",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "timeline",
+        "order": 1,
+        "disabled": true,
+        "hidden": false
     },
     {
         "id": "8920ad34.ac04a",
@@ -25459,5 +25506,113 @@
                 "97e47e6f443015bd"
             ]
         ]
+    },
+    {
+        "id": "dd5f965e.fb70b8",
+        "type": "ui_template",
+        "z": "b80fd331a41baadc",
+        "g": "8f3c2fac1ab17032",
+        "group": "81b1bdc3.9a60b8",
+        "name": "DATV-RED CSS",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<link rel=\"stylesheet\" href=\"/style.css\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 280,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e3af08d3b59486d",
+        "type": "http in",
+        "z": "b80fd331a41baadc",
+        "g": "8f3c2fac1ab17032",
+        "name": "",
+        "url": "/style.css",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "e49100b42776835c"
+            ]
+        ]
+    },
+    {
+        "id": "e49100b42776835c",
+        "type": "file in",
+        "z": "b80fd331a41baadc",
+        "g": "8f3c2fac1ab17032",
+        "name": "",
+        "filename": "web/style.css",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "8b7ad726a468bcdc"
+            ]
+        ]
+    },
+    {
+        "id": "8b7ad726a468bcdc",
+        "type": "change",
+        "z": "b80fd331a41baadc",
+        "g": "8f3c2fac1ab17032",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/css",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 220,
+        "wires": [
+            [
+                "4f4e153ed6b6a425"
+            ]
+        ]
+    },
+    {
+        "id": "4f4e153ed6b6a425",
+        "type": "http response",
+        "z": "b80fd331a41baadc",
+        "g": "8f3c2fac1ab17032",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 220,
+        "wires": []
     }
 ]
