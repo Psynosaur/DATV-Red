@@ -65,7 +65,7 @@
         color: #eeeeee;
         border-color: rgba(0, 0, 0, 0.0);
         border-bottom-width: 1px;
-        padding: 0px 2px;
+        padding: 0 2px;
     }
 
     md-input-container .md-input {
@@ -80,6 +80,21 @@
     md-checkbox.md-default-theme:not(.md-checked) .md-icon, md-checkbox:not(.md-checked) .md-icon {
         border-color: rgb(148, 144, 144);
     }
+
+    .nr-dashboard-dropdown md-input-container {
+        width: 100%;
+        height: 90%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0;
+    }
+    /*.nr-dashboard-cardcontainer > * {*/
+    /*    margin: 0 !important;*/
+    /*    position: absolute;*/
+    /*    opacity: 0;*/
+    /*    padding-left: 3px;*/
+    /*    padding-right: 3px;*/
+    /*}*/
 
     @media all and (min-width:1921px) and (max-width: 5000px) {
         #Tab_Transmission-Control {
