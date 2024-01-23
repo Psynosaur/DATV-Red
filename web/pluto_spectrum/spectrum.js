@@ -676,8 +676,7 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                     ctx.fillText(
                         mer,
                         signals[i].start - (signals[i].start - signals[i].end) / 2,
-                        (canvasHeight * 1) / 8 -
-                        (7 * ((canvasHeight * 7) / 8 - signals[i].top)) / 2
+                        75
                     );
                 }
                 busy = true;

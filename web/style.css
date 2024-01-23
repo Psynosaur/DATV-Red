@@ -1,8 +1,11 @@
 
-    html,
+    html {
+        background-color: #212222 !important;
+    }
     body {
-        background: #212222 !important;
+        /*background: #212222 !important;*/
         color: #212222 !important;;
+        background-color: #212222 !important;
     }
 
     body.nr-dashboard-theme md-toolbar,
@@ -30,7 +33,7 @@
     }
 
     md-sidenav {
-        background: linear-gradient(120deg, rgba(40, 42, 49, 0.90) 20%, rgba(47, 49, 56, 0.90) 80%) !important;
+        background: linear-gradient(360deg, rgba(40, 42, 49, 0.90) 20%, rgba(47, 49, 56, 0.90) 80%) !important;
     }
 
     md-card.nr-dashboard-button * {
@@ -44,7 +47,9 @@
     md-switch {
         /* background-color: rgba(250, 250, 250, 0.103) !important; */
     }
-
+    md-switch.md-default-theme .md-ink-ripple, md-switch .md-ink-ripple {
+        color: rgb(0, 91, 142);
+    }
     md-backdrop.md-opaque {
         background-color: rgba(77, 77, 77, 0.315);
     }
@@ -62,7 +67,7 @@
         
     }
     .nr-dashboard-theme .nr-dashboard-dropdown md-select .md-select-value, .nr-dashboard-theme .nr-dashboard-dropdown md-select .md-select-value.md-select-placeholder {
-        color: #eeeeee;
+        color: #ffffff;
         border-color: rgba(0, 0, 0, 0.0);
         border-bottom-width: 1px;
         padding: 0 2px;
@@ -74,6 +79,9 @@
     }
 
     md-list md-list-item.md-2-line .md-list-item-text h3 {
+        color: #FFFFFF;
+    }
+    h3, h4{
         color: #FFFFFF;
     }
 
@@ -96,6 +104,15 @@
     /*    padding-right: 3px;*/
     /*}*/
 
+    md-checkbox.md-checked .md-icon:after {
+        border-color: rgba(255, 255, 255, 0.79);
+    }
+    .md-button.md-default-theme:not([disabled]).md-focused, .md-button:not([disabled]).md-focused, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
+        background-color: rgba(12, 89, 133, 0.3);
+    }
+    /*md-content{*/
+    /*    background-color: #212222 !important;*/
+    /*}*/
     @media all and (min-width:1921px) and (max-width: 5000px) {
         #Tab_Transmission-Control {
             /* left: -5rem; */
