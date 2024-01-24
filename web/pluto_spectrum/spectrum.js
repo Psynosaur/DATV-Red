@@ -286,7 +286,7 @@ Spectrum.prototype.detect_signals = function (
                     frequency: freq,
                     // symbolrate: 1000.0 * signal_bw * (Number(sr)/this.spanHz) ,
                     symbolrate: 1000.0 * signal_bw,
-                    offset: (Math.round(freq / 125_000) * 125_000) - freq
+                    offset: ((Math.round(freq / 250_000) * 250_000) - freq) / 2
                 }
                 signals.push(signal);
                 // var rand_num = Math.floor(Math.random() * 10000);
@@ -303,7 +303,7 @@ Spectrum.prototype.detect_signals = function (
 
                 if (signal_bw !== 0) {
                     text_x_position = (mid_signal / fft_data.length) * canvasWidth;
-                    ctx.font = "14px Arial";
+                    ctx.font = "10px Arial";
                     ctx.fillStyle = "white";
                     ctx.textAlign = "center";
                     if (!is_overpower(beacon_strength, strength_signal, signal_bw) && signal_bw > 0) {
