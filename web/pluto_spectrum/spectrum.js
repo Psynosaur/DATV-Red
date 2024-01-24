@@ -275,7 +275,9 @@ Spectrum.prototype.detect_signals = function (
                 // console.log(`singal bw : ${signal_bw}`)
 
                 signal_freq = ((mid_signal + 1) / fft_data.length) * 10.0;
-                let freq = (this.centerHz - (sr / 2)) + (sr * (10 * signal_freq) / 100);
+                // RX offset for GPSDO
+                let rx_offset = 16500;
+                let freq = (this.centerHz - (sr / 2)) + (sr * (10 * signal_freq) / 100) - rx_offset;
                 // console.log(`freq : ${freq} signal_freq: ${signal_freq} sr: ${sr}`)
                 let signal = {
                     start: (start_signal / fft_data.length) * canvasWidth,
@@ -284,6 +286,7 @@ Spectrum.prototype.detect_signals = function (
                     frequency: freq,
                     // symbolrate: 1000.0 * signal_bw * (Number(sr)/this.spanHz) ,
                     symbolrate: 1000.0 * signal_bw,
+                    offset: (Math.round(freq / 125_000) * 125_000) - freq
                 }
                 signals.push(signal);
                 // var rand_num = Math.floor(Math.random() * 10000);
@@ -311,6 +314,11 @@ Spectrum.prototype.detect_signals = function (
                         );
                         ctx.restore();
                     }
+                    ctx.fillText(
+                        Math.round(signal.offset) + "Hz",
+                        text_x_position,
+                        15
+                    );
                 }
                 // drawRxBox(ctx)
 
