@@ -16,61 +16,66 @@ const W = ctx.canvas.width, H = ctx.canvas.height;
 ctx.fillStyle = `rgb(0, 255, 128)`
 let endAngle = Math.PI * 2;
 
-function mqtt_client() {
+
+function mqtt_client_2() {
     let x, y = 0;
+    // Create a client instance
     if (hosting_url !== "" && window.location.hostname === hosting_url) {
         pluto_url = hosting_url;
         console.log("MQTT hostname: " + window.location.hostname)
         console.log("MQTT pluto_url: " + pluto_url)
     }
-    let url = `ws://${pluto_url}:9001`;
-    const options = {
-        // Clean session
-        clean: true,
-        connectTimeout: 4000,
-        // Authentication
-        clientId: "pluto_constellation_" + new Date().getUTCMilliseconds(),
-        username: "root",
-        password: "analog",
-        protocolVersion: 5
-    };
-    const client = mqtt.connect(url, options);
-    console.log("callsign: " + call_sign);
-    console.log("url: " + url);
-    client.on("connect", function () {
-        console.log("Connected MQTT");
-        // Subscribe to a topic
-        client.subscribe(`dt/longmynd/constel_q`, () => {
-        });
-        client.subscribe(`dt/longmynd/constel_i`, () => {
-        });
-        client.subscribe(`dt/longmynd/rx_state`, () => {
-        });
-        client.subscribe(`cmd/longmynd/frequency`, () => {
-        });
-    });
+    const serverUrl = pluto_url; // i.e. "great-server.cloudmqtt.com"
+    const serverPort = 9001; // cloudmqtt only accepts WSS sockets on this port. Others will use 9001, 8883 or others
+    const clientId = "datv_red_constel_" + new Date().getUTCMilliseconds(); // make client name unique
+    const client = new Paho.MQTT.Client(serverUrl, serverPort, clientId);
 
-    client.on("message", function (topic, message) {
+    // set callback handlers
+    client.onConnectionLost = onConnectionLost;
+    client.onMessageArrived = onMessageArrived;
+
+    // connect the client
+    client.connect({onSuccess: onConnect});
+
+    // called when the client connects
+    function onConnect() {
+        client.subscribe(`dt/longmynd/constel_q`);
+        client.subscribe(`dt/longmynd/constel_i`);
+        client.subscribe(`dt/longmynd/rx_state`);
+        client.subscribe(`cmd/longmynd/frequency`);
+
+    }
+
+    // called when the client loses its connection
+    function onConnectionLost(responseObject) {
+        if (responseObject.errorCode !== 0) {
+            console.log("onConnectionLost:" + responseObject.errorMessage);
+        }
+    }
+
+    // called when a message arrives
+    function onMessageArrived(message) {
+        let topic = message.destinationName;
         if (data.length > dataPoints) {
             data = data.slice(2);
         }
         if (topic === `dt/longmynd/rx_state`) {
-            if (message.toString() === "Hunting") {
-                console.log("clear");
+            if (message.payloadString === "Hunting") {
+                // console.log("clear");
                 data = []
                 return;
             }
         }
         if (topic === `cmd/longmynd/frequency`) {
-            console.log("clear");
+            // console.log("clear");
             data = []
             return;
         }
         if (topic === `dt/longmynd/constel_i`) {
-            x = Number(message.toString());
+            x = Number(message.payloadString);
         }
         if (topic === `dt/longmynd/constel_q`) {
-            y = Number(message.toString());
+            y = Number(message.payloadString);
 
         }
 
@@ -82,19 +87,15 @@ function mqtt_client() {
         // if the last two values of x and y in our array aren't the current values, we add the unique point(x,y).
         if (x !== data.at(-2)?.x && x !== data.at(-1)?.x && y !== data.at(-2)?.y && y !== data.at(-1)?.y) {
             let obj = {
-                x: x,
-                y: y
+                x: x, y: y
             };
-
             data.push(obj)
         }
-
-    });
+    }
 }
 
 
-mqtt_client();
-
+mqtt_client_2();
 const t = setInterval(
     () => drawConstellationPoints(data),
     200

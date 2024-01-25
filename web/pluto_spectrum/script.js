@@ -86,7 +86,7 @@ function main() {
   window.addEventListener("mouseout", function (event) {
     spectrum.detect_movement_1(event);
   });
-  mqtt_client();
+  mqtt_client_2();
 }
 
 window.onload = main;

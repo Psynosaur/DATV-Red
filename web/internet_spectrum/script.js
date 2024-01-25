@@ -318,7 +318,7 @@ let canvasHeightLast;
     canvasHeightLast = canvasHeight;
     /* JQuery */
    
-    canvasWidth = document.body.clientWidth-10;
+    canvasWidth = document.body.clientWidth;
     canvas_element = document.getElementById("c");
     console.info("ele");
     console.dir(canvas_element);

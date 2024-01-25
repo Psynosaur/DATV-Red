@@ -2,7 +2,7 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red v3.98",
+        "label": "DATV-Red v3.99",
         "disabled": false,
         "info": "",
         "env": []
@@ -912,7 +912,9 @@
             "bbf9e870bbb3141b"
         ],
         "x": 574,
-        "y": 39
+        "y": 39,
+        "w": 712,
+        "h": 82
     },
     {
         "id": "2406e32417780de0",
@@ -931,7 +933,9 @@
             "de3615657f5f8b75"
         ],
         "x": 48,
-        "y": 39
+        "y": 39,
+        "w": 1118,
+        "h": 368
     },
     {
         "id": "1d8e778f40edcc21",
@@ -1045,7 +1049,9 @@
             "dbdac0110b580718"
         ],
         "x": 74,
-        "y": 959
+        "y": 959,
+        "w": 1292,
+        "h": 462
     },
     {
         "id": "97ecf1ac9459a777",
@@ -1095,7 +1101,9 @@
             "0c34bd3ef0714d28"
         ],
         "x": 54,
-        "y": 439
+        "y": 439,
+        "w": 1432,
+        "h": 502
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1116,12 +1124,14 @@
             "1c72db672d937ce0",
             "f477395f8ca8b572",
             "1e1b426c252bac24",
-            "aa5484e4337c7485"
+            "aa5484e4337c7485",
+            "180388b831177a46",
+            "9823a436301b32b2"
         ],
         "x": 3614,
-        "y": 1239,
+        "y": 1199,
         "w": 992,
-        "h": 82
+        "h": 122
     },
     {
         "id": "50b9700a9a4f731c",
@@ -1329,7 +1339,9 @@
             "3fcda18d3f907163"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "2a6eb2e492bee274",
@@ -1345,7 +1357,9 @@
             "819d5b65838d0f8c"
         ],
         "x": 34,
-        "y": 199
+        "y": 199,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "97fae7a46f8ffe23",
@@ -1367,7 +1381,9 @@
             "2a3dc125f08d620e"
         ],
         "x": 114,
-        "y": 139
+        "y": 139,
+        "w": 872,
+        "h": 222
     },
     {
         "id": "c070d9c6c2a6ac1b",
@@ -1541,6 +1557,26 @@
         "h": 162
     },
     {
+        "id": "8f3c2fac1ab17032",
+        "type": "group",
+        "z": "b80fd331a41baadc",
+        "name": "Control UI",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "dd5f965e.fb70b8",
+            "7e3af08d3b59486d",
+            "e49100b42776835c",
+            "8b7ad726a468bcdc",
+            "4f4e153ed6b6a425"
+        ],
+        "x": 154,
+        "y": 139,
+        "w": 712,
+        "h": 122
+    },
+    {
         "id": "5c31dbeab217c8e9",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1648,7 +1684,9 @@
             "0dd67a65a9a17989"
         ],
         "x": 74,
-        "y": 139
+        "y": 139,
+        "w": 872,
+        "h": 242
     },
     {
         "id": "079e67d7c1e3e99d",
@@ -1759,29 +1797,90 @@
         "h": 202
     },
     {
-        "id": "8f3c2fac1ab17032",
+        "id": "06b6d40e37eed1b3",
         "type": "group",
         "z": "b80fd331a41baadc",
-        "name": "Control UI",
+        "name": "Hide_Show beacon PID's",
         "style": {
             "label": true
         },
         "nodes": [
-            "dd5f965e.fb70b8",
-            "7e3af08d3b59486d",
-            "e49100b42776835c",
-            "8b7ad726a468bcdc",
-            "4f4e153ed6b6a425"
+            "f8bd6464fb345bca",
+            "176d9640153364f4",
+            "50ce0f085872ca4e",
+            "2d5695ec793054d6",
+            "7415d15902f16090",
+            "fd73374edce4e46a"
         ],
-        "x": 154,
-        "y": 139,
-        "w": 712,
+        "x": 114,
+        "y": 439,
+        "w": 1172,
         "h": 122
+    },
+    {
+        "id": "f5783c124afe86af",
+        "type": "group",
+        "z": "b80fd331a41baadc",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7c3d1579e020b667",
+            "f99cc7f8dd1cb1d2",
+            "58a7e7a460eae63b",
+            "25572180f064d893",
+            "a9aea4585ec7fe3c",
+            "0f3a0f678490a4fc"
+        ],
+        "x": 114,
+        "y": 599,
+        "w": 1172,
+        "h": 122
+    },
+    {
+        "id": "ade9273d097a9db1",
+        "type": "group",
+        "z": "b80fd331a41baadc",
+        "name": "Hide_Show beacon PID's",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d529bdbc9f45a97d",
+            "71b1b4e3f8eeb759",
+            "069262d7c9880f25",
+            "617ada9474d9d0e7",
+            "bab6109002c8f907",
+            "5d23a06c27921452"
+        ],
+        "x": 114,
+        "y": 759,
+        "w": 1172,
+        "h": 122
+    },
+    {
+        "id": "793a325eb2e7b42f",
+        "type": "group",
+        "z": "34bd429848bdfd07",
+        "name": "static vendor js file local spectrum uses this too",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "519c84985998557c",
+            "c1c02ddfc72287db",
+            "c8023460909346e3"
+        ],
+        "x": 34,
+        "y": 319,
+        "w": 812,
+        "h": 82
     },
     {
         "id": "9b3296db2e0c849f",
         "type": "ui_tab",
-        "name": "Transmission and profiles",
+        "name": "Transmission-Control",
         "icon": "fa-spinner fa-pulse",
         "order": 1,
         "disabled": false,
@@ -1868,7 +1967,7 @@
             }
         },
         "site": {
-            "name": "DATV-Red v3.98",
+            "name": "DATV-Red v3.99",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -1973,7 +2072,7 @@
     {
         "id": "7954d85ae8701623",
         "type": "ui_group",
-        "name": "Misc bar",
+        "name": "misc",
         "tab": "9b3296db2e0c849f",
         "order": 9,
         "disp": false,
@@ -2078,7 +2177,7 @@
     {
         "id": "a4a37989805c1f8e",
         "type": "ui_group",
-        "name": "RX 2",
+        "name": "RX2",
         "tab": "9b3296db2e0c849f",
         "order": 12,
         "disp": false,
@@ -2270,6 +2369,26 @@
         "icon": "timeline",
         "order": 1,
         "disabled": true,
+        "hidden": false
+    },
+    {
+        "id": "6ce8d00a039e3b50",
+        "type": "ui_group",
+        "name": "Other UI components",
+        "tab": "febc866b4e10d620",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "febc866b4e10d620",
+        "type": "ui_tab",
+        "name": "UI-Controls",
+        "icon": "settings_overscan",
+        "order": 3,
+        "disabled": false,
         "hidden": false
     },
     {
@@ -9439,7 +9558,8 @@
         "y": 3280,
         "wires": [
             [
-                "517a7337244c67a7"
+                "517a7337244c67a7",
+                "378dce373fcfc379"
             ]
         ]
     },
@@ -11525,7 +11645,7 @@
         "width": "2",
         "height": 1,
         "passthru": false,
-        "label": "VLC",
+        "label": "VLC:8888",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -11535,7 +11655,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 4430,
+        "x": 4440,
         "y": 820,
         "wires": [
             [
@@ -14360,10 +14480,10 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "50b9700a9a4f731c",
         "name": "FFT",
-        "label": "FFT URL",
+        "label": "BATC FFT source",
         "tooltip": "",
         "place": "Select option",
-        "group": "2275ce4aba6ae57e",
+        "group": "6ce8d00a039e3b50",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -18062,6 +18182,62 @@
         ]
     },
     {
+        "id": "180388b831177a46",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "6a8835db32d9f8ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 3910,
+        "y": 1240,
+        "wires": [
+            [
+                "9823a436301b32b2"
+            ]
+        ]
+    },
+    {
+        "id": "9823a436301b32b2",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "6a8835db32d9f8ed",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tx_time",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4090,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "1e0841f1.ac68fe",
         "type": "http in",
         "z": "9d964f25dcc4d750",
@@ -18099,7 +18275,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "\n<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Spectrum Plot</title>\n<link rel=\"stylesheet\" href=\"/pluto_spectrum/style.css\">\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var callsign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n    </script>\n    <script src=\"/mqtt_min.js\"></script>\n    <script src=\"/pluto_spectrum/colormap.js\"></script>\n    <script src=\"/pluto_spectrum/spectrum.js\"></script>\n    <script src=\"/pluto_spectrum/mqtt.js\"></script>\n    <script src=\"/pluto_spectrum/script.js\"></script>\n\n<canvas id=\"waterfall\"></canvas>\n<div class=\"status\">\n    <div id=\"log\"></div>\n</div>        \n\n",
+        "template": "\n<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Spectrum Plot</title>\n<link rel=\"stylesheet\" href=\"/pluto_spectrum/style.css\">\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var callsign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n    </script>\n    <script src=\"/paho-mqtt-min.js\"></script>\n    <script src=\"/pluto_spectrum/colormap.js\"></script>\n    <script src=\"/pluto_spectrum/spectrum.js\"></script>\n    <script src=\"/pluto_spectrum/mqtt.js\"></script>\n    <script src=\"/pluto_spectrum/script.js\"></script>\n\n<canvas id=\"waterfall\"></canvas>\n<div class=\"status\">\n    <div id=\"log\"></div>\n</div>        \n\n",
         "output": "str",
         "x": 830,
         "y": 80,
@@ -20062,7 +20238,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 420,
+        "x": 480,
         "y": 240,
         "wires": [
             [
@@ -20115,7 +20291,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
+        "x": 750,
         "y": 240,
         "wires": [
             [
@@ -20226,7 +20402,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot v3</title>\n<script src=\"/mqtt_min.js\"></script>\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<canvas id=\"graph\" style=\"height: 245px;width: 245px\"></canvas>\n<script src=\"/constel/script.js\"></script>\n",
+        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Constel Plot v3</title>\n<script src=\"/paho-mqtt-min.js\"></script>\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<canvas id=\"graph\" style=\"height: 245px;width: 245px\"></canvas>\n<script src=\"/constel/script.js\"></script>\n",
         "output": "str",
         "x": 720,
         "y": 120,
@@ -20272,6 +20448,80 @@
         "wires": [
             [
                 "35ee7231ba2e92d3"
+            ]
+        ]
+    },
+    {
+        "id": "519c84985998557c",
+        "type": "file in",
+        "z": "34bd429848bdfd07",
+        "g": "793a325eb2e7b42f",
+        "name": "",
+        "filename": "web/pluto_spectrum/vendor/paho-mqtt-min.js",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "c8023460909346e3"
+            ]
+        ]
+    },
+    {
+        "id": "c1c02ddfc72287db",
+        "type": "http in",
+        "z": "34bd429848bdfd07",
+        "g": "793a325eb2e7b42f",
+        "name": "",
+        "url": "/paho-mqtt-min.js",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "519c84985998557c"
+            ]
+        ]
+    },
+    {
+        "id": "c8023460909346e3",
+        "type": "change",
+        "z": "34bd429848bdfd07",
+        "g": "793a325eb2e7b42f",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/javascript",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 360,
+        "wires": [
+            [
+                "ee10e75eb6c917e8"
             ]
         ]
     },
@@ -25614,5 +25864,570 @@
         "x": 790,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "f8bd6464fb345bca",
+        "type": "ui_ui_control",
+        "z": "b80fd331a41baadc",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "events": "all",
+        "x": 1200,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "176d9640153364f4",
+        "type": "switch",
+        "z": "b80fd331a41baadc",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "50ce0f085872ca4e"
+            ],
+            [
+                "2d5695ec793054d6"
+            ]
+        ]
+    },
+    {
+        "id": "50ce0f085872ca4e",
+        "type": "change",
+        "z": "b80fd331a41baadc",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_misc\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.misc",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 480,
+        "wires": [
+            [
+                "f8bd6464fb345bca"
+            ]
+        ]
+    },
+    {
+        "id": "2d5695ec793054d6",
+        "type": "change",
+        "z": "b80fd331a41baadc",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_misc\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.misc",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 520,
+        "wires": [
+            [
+                "f8bd6464fb345bca"
+            ]
+        ]
+    },
+    {
+        "id": "7415d15902f16090",
+        "type": "inject",
+        "z": "b80fd331a41baadc",
+        "g": "06b6d40e37eed1b3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.misc",
+        "payloadType": "global",
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "fd73374edce4e46a"
+            ]
+        ]
+    },
+    {
+        "id": "fd73374edce4e46a",
+        "type": "ui_switch",
+        "z": "b80fd331a41baadc",
+        "d": true,
+        "g": "06b6d40e37eed1b3",
+        "name": "Misc",
+        "label": "DVBS-GUI, VLC and AMP",
+        "tooltip": "Misc",
+        "group": "6ce8d00a039e3b50",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 570,
+        "y": 520,
+        "wires": [
+            [
+                "176d9640153364f4"
+            ]
+        ]
+    },
+    {
+        "id": "7c3d1579e020b667",
+        "type": "ui_ui_control",
+        "z": "b80fd331a41baadc",
+        "g": "f5783c124afe86af",
+        "name": "",
+        "events": "all",
+        "x": 1200,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f99cc7f8dd1cb1d2",
+        "type": "switch",
+        "z": "b80fd331a41baadc",
+        "g": "f5783c124afe86af",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 640,
+        "wires": [
+            [
+                "58a7e7a460eae63b"
+            ],
+            [
+                "25572180f064d893"
+            ]
+        ]
+    },
+    {
+        "id": "58a7e7a460eae63b",
+        "type": "change",
+        "z": "b80fd331a41baadc",
+        "g": "f5783c124afe86af",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_RX\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.rx",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 640,
+        "wires": [
+            [
+                "7c3d1579e020b667"
+            ]
+        ]
+    },
+    {
+        "id": "25572180f064d893",
+        "type": "change",
+        "z": "b80fd331a41baadc",
+        "g": "f5783c124afe86af",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_RX\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.rx",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 680,
+        "wires": [
+            [
+                "7c3d1579e020b667"
+            ]
+        ]
+    },
+    {
+        "id": "a9aea4585ec7fe3c",
+        "type": "inject",
+        "z": "b80fd331a41baadc",
+        "g": "f5783c124afe86af",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.rx",
+        "payloadType": "global",
+        "x": 260,
+        "y": 680,
+        "wires": [
+            [
+                "0f3a0f678490a4fc"
+            ]
+        ]
+    },
+    {
+        "id": "0f3a0f678490a4fc",
+        "type": "ui_switch",
+        "z": "b80fd331a41baadc",
+        "g": "f5783c124afe86af",
+        "name": "Longmynd panel left",
+        "label": "Longmynd panel left",
+        "tooltip": "",
+        "group": "6ce8d00a039e3b50",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 620,
+        "y": 680,
+        "wires": [
+            [
+                "f99cc7f8dd1cb1d2"
+            ]
+        ]
+    },
+    {
+        "id": "d529bdbc9f45a97d",
+        "type": "ui_ui_control",
+        "z": "b80fd331a41baadc",
+        "g": "ade9273d097a9db1",
+        "name": "",
+        "events": "all",
+        "x": 1200,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71b1b4e3f8eeb759",
+        "type": "switch",
+        "z": "b80fd331a41baadc",
+        "g": "ade9273d097a9db1",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 800,
+        "wires": [
+            [
+                "069262d7c9880f25"
+            ],
+            [
+                "617ada9474d9d0e7"
+            ]
+        ]
+    },
+    {
+        "id": "069262d7c9880f25",
+        "type": "change",
+        "z": "b80fd331a41baadc",
+        "g": "ade9273d097a9db1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Transmission-Control_RX2\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.rx2",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 800,
+        "wires": [
+            [
+                "d529bdbc9f45a97d"
+            ]
+        ]
+    },
+    {
+        "id": "617ada9474d9d0e7",
+        "type": "change",
+        "z": "b80fd331a41baadc",
+        "g": "ade9273d097a9db1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Transmission-Control_RX2\"]}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "settings.ui.rx2",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 840,
+        "wires": [
+            [
+                "d529bdbc9f45a97d"
+            ]
+        ]
+    },
+    {
+        "id": "bab6109002c8f907",
+        "type": "inject",
+        "z": "b80fd331a41baadc",
+        "g": "ade9273d097a9db1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.ui.rx2",
+        "payloadType": "global",
+        "x": 260,
+        "y": 840,
+        "wires": [
+            [
+                "5d23a06c27921452"
+            ]
+        ]
+    },
+    {
+        "id": "5d23a06c27921452",
+        "type": "ui_switch",
+        "z": "b80fd331a41baadc",
+        "g": "ade9273d097a9db1",
+        "name": "Longmynd panel right",
+        "label": "Longmynd panel right",
+        "tooltip": "",
+        "group": "6ce8d00a039e3b50",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 540,
+        "y": 840,
+        "wires": [
+            [
+                "71b1b4e3f8eeb759"
+            ]
+        ]
     }
 ]

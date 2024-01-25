@@ -49,7 +49,7 @@ md-backdrop.md-opaque {
     background-color: rgba(77, 77, 77, 0.315);
 }
 
-#Tab_Transmission_and_profiles {
+#Tab_Transmission-Control {
     background: #212222 !important;
     margin: auto;
     width: 100vh;
@@ -97,67 +97,67 @@ md-checkbox.md-default-theme:not(.md-checked) .md-icon, md-checkbox:not(.md-chec
 /*}*/
 
 @media all and (min-width:1921px) and (max-width: 5000px) {
-    #Tab_Transmission_and_profiles {
+    #Tab_Transmission-Control {
         /* left: -5rem; */
         min-width: 1920px;
     }
 }
 @media all and (min-width:1732px) and (max-width: 1734px) {
-    #Tab_Transmission_and_profiles {
+    #Tab_Transmission-Control {
         /* left: -5rem; */
         min-width: 100vw;
     }
 }
 @media all and (min-width:1627px) and (max-width: 1920px) {
-    #Tab_Transmission_and_profiles {
+    #Tab_Transmission-Control {
         /* left: -5rem; */
         min-width: 1920px;
     }
 }
 
 @media all and (min-width:960px) and (max-width: 1024px) {
-    #Tab_Transmission_and_profiles {
+    #Tab_Transmission-Control {
         /* left: -5rem; */
         min-width: 1920px;
     }
 }
 
 @media all and (min-width:801px) and (max-width: 959px) {
-    #Tab_Transmission_and_profiles {
+    #Tab_Transmission-Control {
         /* left: -5rem; */
         min-width: 1920px;
     }
 }
 
 @media all and (min-width:769px) and (max-width: 800px) {
-    #Tab_Transmission_and_profiles {
+    #Tab_Transmission-Control {
         /* left: -5rem; */
         min-width: 1920px;
     }
 }
 
 @media all and (min-width:569px) and (max-width: 768px) {
-    #Tab_Transmission_and_profiles {
+    #Tab_Transmission-Control {
         /* left: -5rem; */
         min-width: 1920px;
     }
 
     @media all and (min-width:481px) and (max-width: 568px) {
-        #Tab_Transmission_and_profiles {
+        #Tab_Transmission-Control {
             /* left: -5rem; */
             min-width: 1920px;
         }
     }
 
     @media all and (min-width:321px) and (max-width: 480px) {
-        #Tab_Transmission_and_profiles {
+        #Tab_Transmission-Control {
             /* left: -5rem; */
             min-width: 1920px;
         }
     }
 
     @media all and (min-width:0px) and (max-width: 320px) {
-        #Tab_Transmission_and_profiles {
+        #Tab_Transmission-Control {
             /* left: -5rem; */
             min-width: 1920px;
         }
