@@ -19,9 +19,7 @@
 
 5. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
 
-6. Watch this intro video on [usage](https://www.youtube.com/watch?v=8q4WMCyKtKw) and perhaps [reception](https://youtu.be/lz3GO2zCf_Q)
-
-7. Have fun
+6. Have fun
 
 ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/1a92da28-736c-4f40-bf34-7566445b0d5d)
 
