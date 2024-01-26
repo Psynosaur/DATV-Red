@@ -1,7 +1,7 @@
 # DATV-Red
 
 ## Prerequisite 
-- Latest beta PlutoSDR [firmware](https://github.com/F5OEO/pluto-ori-ps/wiki)
+- Latest PlutoDVB2 [firmware](https://github.com/F5OEO/plutosdr-fw/releases)
 - Please see [flashing steps](https://github.com/Psynosaur/DATV-Red/wiki#flashing-steps)
 
 ## Setup and use
@@ -21,7 +21,8 @@
 
 7. Have fun
 
-![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/4e548a34-72be-479c-835c-c1cded61a98f)
+![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/1a92da28-736c-4f40-bf34-7566445b0d5d)
+
 
 ## Thanks 
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
