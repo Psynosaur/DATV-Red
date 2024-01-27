@@ -12,12 +12,7 @@
 "use strict";
 let xd1, xd2, yd;
 Spectrum.prototype.squeeze = function (value, out_min, out_max) {
-    if (value <= this.min_db) return out_min;
-    else if (value >= this.max_db) return out_max;
-    else
-        return Math.round(
-            ((value - this.min_db) / (this.max_db - this.min_db)) * out_max
-        );
+    if (value <= this.min_db) return out_min; else if (value >= this.max_db) return out_max; else return Math.round(((value - this.min_db) / (this.max_db - this.min_db)) * out_max);
 };
 
 Spectrum.prototype.rowToImageData = function (bins) {
@@ -34,17 +29,7 @@ Spectrum.prototype.rowToImageData = function (bins) {
 Spectrum.prototype.addWaterfallRow = function (bins) {
 
     // Shift waterfall 1 row down
-    this.ctx_wf.drawImage(
-        this.ctx_wf.canvas,
-        0,
-        0,
-        this.wf_size,
-        this.wf_rows - 1,
-        0,
-        1,
-        this.wf_size,
-        this.wf_rows - 1
-    );
+    this.ctx_wf.drawImage(this.ctx_wf.canvas, 0, 0, this.wf_size, this.wf_rows - 1, 0, 1, this.wf_size, this.wf_rows - 1);
 
     this.wfrowcount++;
 
@@ -66,17 +51,7 @@ Spectrum.prototype.addWaterfallRow = function (bins) {
     // fit in waterfall area to avoid vertical scaling.
     this.ctx.imageSmoothingEnabled = false;
     const rows = Math.min(this.wf_rows, height - this.spectrumHeight);
-    this.ctx.drawImage(
-        this.ctx_wf.canvas,
-        0,
-        0,
-        this.wf_size,
-        rows,
-        0,
-        this.spectrumHeight,
-        width,
-        height - this.spectrumHeight
-    );
+    this.ctx.drawImage(this.ctx_wf.canvas, 0, 0, this.wf_size, rows, 0, this.spectrumHeight, width, height - this.spectrumHeight);
 
 };
 
@@ -143,20 +118,10 @@ function drawRxBox(ctx, xText, minSpan, spanHz) {
     ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
     ctx.fillRect(tunedBox.x, tunedBox.y, tunedBox.w * scale * boxScale, tunedBox.h);
     ctx.fillStyle = "rgb(32,246,137)";
-    ctx.fillText(
-        `${(tunedBox.freq / 1_000_000).toFixed(3)}`,
-        xText,
-        50
-    );
+    ctx.fillText(`${(tunedBox.freq / 1_000_000).toFixed(3)}`, xText, 50);
 }
 
-Spectrum.prototype.detect_signals = function (
-    fft_data,
-    ctx,
-    canvasHeight,
-    canvasWidth,
-    sr
-) {
+Spectrum.prototype.detect_signals = function (fft_data, ctx, canvasHeight, canvasWidth, sr) {
     let i;
     let j;
     // Dynamic signal threshold variables
@@ -183,28 +148,18 @@ Spectrum.prototype.detect_signals = function (
 
     for (i = 0; i < fft_data.length; i++) {
         if (!in_signal) {
-            if (
-                (fft_data[i] + fft_data[i - 1] + fft_data[i - 2]) / 3.0 >
-                signal_threshold
-            ) {
+            if ((fft_data[i] + fft_data[i - 1] + fft_data[i - 2]) / 3.0 > signal_threshold) {
                 in_signal = true;
                 start_signal = i;
             }
         } /* in_signal == true */ else {
-            if (
-                (fft_data[i] + fft_data[i - 1] + fft_data[i - 2]) / 3.0 <
-                signal_threshold
-            ) {
+            if ((fft_data[i] + fft_data[i - 1] + fft_data[i - 2]) / 3.0 < signal_threshold) {
                 in_signal = false;
 
                 end_signal = i;
                 acc = 0;
                 acc_i = 0;
-                for (
-                    j = (start_signal + 0.3 * (end_signal - start_signal)) | 0;
-                    j < start_signal + 0.7 * (end_signal - start_signal);
-                    j++
-                ) {
+                for (j = (start_signal + 0.3 * (end_signal - start_signal)) | 0; j < start_signal + 0.7 * (end_signal - start_signal); j++) {
                     acc = acc + fft_data[j];
                     acc_i = acc_i + 1;
                 }
@@ -230,11 +185,7 @@ Spectrum.prototype.detect_signals = function (
                                 */
 
                 /* Find real start of top of signal */
-                for (
-                    j = start_signal;
-                    fft_data[j] - noise_level < 0.75 * (strength_signal - noise_level);
-                    j++
-                ) {
+                for (j = start_signal; fft_data[j] - noise_level < 0.75 * (strength_signal - noise_level); j++) {
                     start_signal = j;
                 }
                 /*
@@ -248,11 +199,7 @@ Spectrum.prototype.detect_signals = function (
                                 */
 
                 /* Find real end of the top of signal */
-                for (
-                    j = end_signal;
-                    fft_data[j] - noise_level < 0.75 * (strength_signal - noise_level);
-                    j--
-                ) {
+                for (j = end_signal; fft_data[j] - noise_level < 0.75 * (strength_signal - noise_level); j--) {
                     end_signal = j;
                 }
                 /*
@@ -268,9 +215,7 @@ Spectrum.prototype.detect_signals = function (
                 mid_signal = start_signal + (end_signal - start_signal) / 2.0;
                 let divider = sr / this.minSpanHz;
                 this.divider = divider;
-                signal_bw = align_symbolrate(
-                    (end_signal - start_signal) * (sr / 1_000_000) / 1000 / divider
-                );
+                signal_bw = align_symbolrate((end_signal - start_signal) * (sr / 1_000_000) / 1000 / divider);
                 if (isNaN(signal_bw) && signal_bw !== 0) break;
                 // console.log(`singal bw : ${signal_bw}`)
 
@@ -283,12 +228,12 @@ Spectrum.prototype.detect_signals = function (
                     start: (start_signal / fft_data.length) * canvasWidth,
                     end: (end_signal / fft_data.length) * canvasWidth,
                     top: canvasHeight - (strength_signal / 65536) * canvasHeight,
-                    frequency: freq,
-                    // symbolrate: 1000.0 * signal_bw * (Number(sr)/this.spanHz) ,
+                    frequency: freq, // symbolrate: 1000.0 * signal_bw * (Number(sr)/this.spanHz) ,
                     symbolrate: 1000.0 * signal_bw,
-                    offset: ((Math.round(freq / 250_000) * 250_000) - freq) / 2
+                    offset: ((Math.round(freq / 250_000) * 250_000) - freq) * -1
                 }
                 signals.push(signal);
+
                 // var rand_num = Math.floor(Math.random() * 10000);
                 // Math.round((rand_num) / 1000) * 1000;
                 // console.log("tuneBox" + tunedBox.freq)
@@ -307,18 +252,14 @@ Spectrum.prototype.detect_signals = function (
                     ctx.fillStyle = "white";
                     ctx.textAlign = "center";
                     if (!is_overpower(beacon_strength, strength_signal, signal_bw) && signal_bw > 0) {
-                        ctx.fillText(
-                            print_symbolrate(signal_bw),
-                            text_x_position,
-                            30
-                        );
+                        ctx.fillText(print_symbolrate(signal_bw), text_x_position, 30);
                         ctx.restore();
                     }
-                    ctx.fillText(
-                        Math.round(signal.offset) + "Hz",
-                        text_x_position,
-                        15
-                    );
+                    ctx.fillText(Math.round(signal.offset) + "Hz", text_x_position, 15);
+                    if (signal.offset > -10_000 && signal.offset < 10_000) {
+                        ctx.fillText("L", text_x_position, 60);
+                    }
+
                 }
                 // drawRxBox(ctx)
 
@@ -364,22 +305,15 @@ Spectrum.prototype.drawChannels = function (ctx) {
         if (typeof freq_info !== "undefined") {
             if (freq_info.length === 44) freq_info = []; // hack to avoid continued push(). better to precompute all points and draw.
             freq_info.push({
-                x1:
-                    (center_frequency - rolloff * bandwidth - _start_freq) * (width / 9),
-                x2:
-                    (center_frequency + rolloff * bandwidth - _start_freq) * (width / 9),
+                x1: (center_frequency - rolloff * bandwidth - _start_freq) * (width / 9),
+                x2: (center_frequency + rolloff * bandwidth - _start_freq) * (width / 9),
                 y: height * line_height,
                 center_frequency: center_frequency,
                 bandwidth: bandwidth,
             });
         }
 
-        ctx.fillRect(
-            (center_frequency - rolloff * bandwidth - _start_freq) * (width / 9),
-            height * line_height,
-            2 * (rolloff * bandwidth) * (width / 9),
-            5
-        );
+        ctx.fillRect((center_frequency - rolloff * bandwidth - _start_freq) * (width / 9), height * line_height, 2 * (rolloff * bandwidth) * (width / 9), 5);
     }
 
     /* 1MS */
@@ -405,11 +339,7 @@ Spectrum.prototype.drawChannels = function (ctx) {
     // ctx.fillText("A71A DATV Beacon", ((491.5) - _start_freq) * (width / 9), height - 45);
     // ctx.fillText("10491.500", ((491.5) - _start_freq) * (width / 9), height - 28);
     // ctx.fillText("(1.5MS/s QPSK, 4/5)", ((491.5) - _start_freq) * (width / 9), height - 12);
-    ctx.fillText(
-        "Click to tune wide & narrow channels",
-        (494.75 - _start_freq) * (width / 9),
-        100
-    );
+    ctx.fillText("Click to tune wide & narrow channels", (494.75 - _start_freq) * (width / 9), 100);
 
     /* ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 15), canvasHeight - 6);
     ctx.fillText("", ((494.75) - _start_freq) * (canvasWidth / 6.42), canvasHeight - 6); */
@@ -537,9 +467,7 @@ let highlighted_channel = {};
 
 
 function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
-    let channelSpace = Math.floor(
-        (canvasHeight * (4 / 8) - canvasHeight * (1 / 100)) / rx_count
-    );
+    let channelSpace = Math.floor((canvasHeight * (4 / 8) - canvasHeight * (1 / 100)) / rx_count);
     let i;
     let channel_lines = [];
     let top_line_y = 2;
@@ -549,9 +477,7 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
 
         for (i = 0; i < signals.length; i++) {
             // console.log(`start: ${ signals[i].start}, end ${ signals[i].end}, mouse_x: ${mouse_x} `)
-            if (
-                mouse_x > signals[i].start &&
-                mouse_x < signals[i].end
+            if (mouse_x > signals[i].start && mouse_x < signals[i].end
                 // && mouse_y > signals[i].top
             ) {
                 // console.log("render box")
@@ -681,11 +607,7 @@ function render_signal_box(ctx, mouse_x, mouse_y, canvasHeight, canvasWidth) {
                     // render_signal_selected_box(ctx, clicked_x, clicked_y);
 
                     let mer = `${(signals[i].frequency / 1_000_000).toFixed(3)}MHz`
-                    ctx.fillText(
-                        mer,
-                        signals[i].start - (signals[i].start - signals[i].end) / 2,
-                        75
-                    );
+                    ctx.fillText(mer, signals[i].start - (signals[i].start - signals[i].end) / 2, 75);
                 }
                 busy = true;
                 ctx.restore();
@@ -703,11 +625,7 @@ let signal_selected;
 function render_signal_selected_box(ctx, mouse_clicked_x, mouse_clicked_y) {
     if (mouse_y < (canvasHeight * 7) / 8) {
         for (let i = 0; i < signals.length; i++) {
-            if (
-                mouse_clicked_x > signals[i].start &&
-                mouse_clicked_x < signals[i].end &&
-                mouse_clicked_y > signals[i].top
-            ) {
+            if (mouse_clicked_x > signals[i].start && mouse_clicked_x < signals[i].end && mouse_clicked_y > signals[i].top) {
                 signal_selected = signals[i];
 
                 ctx.save();
@@ -843,9 +761,7 @@ Spectrum.prototype.updateAxes = function () {
             }
 
             let freq = this.centerHz + (this.spanHz / 10) * (i - 5);
-            if (this.centerHz + this.spanHz > 1e6)
-                freq = Number(freq / 1e6).toFixed(2) + "M";
-            else if (this.centerHz + this.spanHz > 1e3) freq = freq / 1e3 + "k";
+            if (this.centerHz + this.spanHz > 1e6) freq = Number(freq / 1e6).toFixed(2) + "M"; else if (this.centerHz + this.spanHz > 1e3) freq = freq / 1e3 + "k";
             this.ctx_axes.fillText(freq, x + adjust, height - 3);
         }
 
@@ -875,17 +791,12 @@ Spectrum.prototype.addData = async function (data) {
 };
 
 Spectrum.prototype.updateSpectrumRatio = function () {
-    this.spectrumHeight = Math.round(
-        (this.canvas.height * this.spectrumPercent) / 100.0
-    );
+    this.spectrumHeight = Math.round((this.canvas.height * this.spectrumPercent) / 100.0);
 
     this.gradient = this.ctx.createLinearGradient(0, 0, 0, this.spectrumHeight);
     for (let i = 0; i < this.colormap.length; i++) {
         const c = this.colormap[this.colormap.length - 1 - i];
-        this.gradient.addColorStop(
-            i / this.colormap.length,
-            "rgba(" + c[0] + "," + c[1] + "," + c[2] + ", 1.0)"
-        );
+        this.gradient.addColorStop(i / this.colormap.length, "rgba(" + c[0] + "," + c[1] + "," + c[2] + ", 1.0)");
     }
 };
 
@@ -971,18 +882,14 @@ Spectrum.prototype.rangeIncrease = function () {
 };
 
 Spectrum.prototype.rangeDecrease = function () {
-    if (this.max_db - this.min_db > 10)
-        this.setRange(this.min_db + 5, this.max_db - 5);
+    if (this.max_db - this.min_db > 10) this.setRange(this.min_db + 5, this.max_db - 5);
 };
 
 Spectrum.prototype.doAutoScale = function (bins) {
     const maxbinval = Math.max(...bins);
     const minbinval = Math.min(...bins);
 
-    this.setRange(
-        Math.ceil(minbinval * 0.075) * 10,
-        Math.ceil(maxbinval * 0.075) * 10
-    ); // 75% to nearest 10
+    this.setRange(Math.ceil(minbinval * 0.075) * 10, Math.ceil(maxbinval * 0.075) * 10); // 75% to nearest 10
     this.toggleAutoScale();
 };
 
@@ -1068,12 +975,9 @@ Spectrum.prototype.decrementTuningStep = function () {
     // 1ex, 2.5ex, 5ex
     if (this.tuningStep > 1) {
         let step;
-        const firstDigit = parseInt(
-            this.tuningStep / Math.pow(10, parseInt(Math.log10(this.tuningStep)))
-        );
+        const firstDigit = parseInt(this.tuningStep / Math.pow(10, parseInt(Math.log10(this.tuningStep))));
 
-        if (firstDigit === 2) step = 2.5;
-        else step = 2;
+        if (firstDigit === 2) step = 2.5; else step = 2;
 
         this.setTuningStep(this.tuningStep / step);
     }
@@ -1082,12 +986,9 @@ Spectrum.prototype.decrementTuningStep = function () {
 Spectrum.prototype.incrementTuningStep = function () {
     if (this.tuningStep > 0) {
         let step;
-        const firstDigit = parseInt(
-            this.tuningStep / Math.pow(10, parseInt(Math.log10(this.tuningStep)))
-        );
+        const firstDigit = parseInt(this.tuningStep / Math.pow(10, parseInt(Math.log10(this.tuningStep))));
 
-        if (firstDigit > 1) step = 2;
-        else step = 2.5;
+        if (firstDigit > 1) step = 2; else step = 2.5;
 
         this.setTuningStep(this.tuningStep * step);
     }
@@ -1236,8 +1137,7 @@ Spectrum.prototype.onDrag = function (event) {
     console.log(event);
 
     let dragStart = {
-        x: event.pageX - this.canvas.offsetLeft,
-        y: event.pageY - this.canvas.offsetTop,
+        x: event.pageX - this.canvas.offsetLeft, y: event.pageY - this.canvas.offsetTop,
     };
     console.log(dragStart);
 };
@@ -1279,14 +1179,10 @@ Spectrum.prototype.on_canvas_click = function (ctx) {
         if (canvasClickBW > 2) {
             canvasClickBW = 2;
         }
-        fetch(
-            `${url}/setLocalRx?` +
-            new URLSearchParams({
-                downlink: downlink,
-                SR: canvasClickBW
-                // channel: channelClicked,
-            })
-        );
+        fetch(`${url}/setLocalRx?` + new URLSearchParams({
+            downlink: downlink, SR: canvasClickBW
+            // channel: channelClicked,
+        }));
         setRxClickState(this.minSpanHz, this.spanHz);
         /* RX tuning bar / box */
         // if (channelClicked === rx_count + 1) {
@@ -1362,19 +1258,14 @@ function Spectrum(id, options) {
     this.fps = options && options.fps ? options.fps : 50;
     this.wf_size = options && options.wf_size ? options.wf_size : 0;
     this.wf_rows = options && options.wf_rows ? options.wf_rows : 2048;
-    this.spectrumPercent =
-        options && options.spectrumPercent ? options.spectrumPercent : 25;
-    this.spectrumPercentStep =
-        options && options.spectrumPercentStep ? options.spectrumPercentStep : 5;
+    this.spectrumPercent = options && options.spectrumPercent ? options.spectrumPercent : 25;
+    this.spectrumPercentStep = options && options.spectrumPercentStep ? options.spectrumPercentStep : 5;
     this.averaging = options && options.averaging ? options.averaging : 5;
     this.maxHold = options && options.maxHold ? options.maxHold : false;
     this.autoScale = options && options.autoScale ? options.autoScale : false;
     this.minSpanHz = options && options.minSpanHz ? options.minSpanHz : 560000;
 
-    this.logger =
-        options && options.logger
-            ? document.getElementById(options.logger)
-            : document.getElementById("log");
+    this.logger = options && options.logger ? document.getElementById(options.logger) : document.getElementById("log");
 
     // Setup state
     this.paused = false;
@@ -1392,7 +1283,8 @@ function Spectrum(id, options) {
     // Colors
     this.colorindex = 0;
     this.colormap = colormaps[options.color];
-
+    let test = evaluate_cmap(0.5, 'viridis', false)
+    console.dir(test);
     // Create main canvas and adjust dimensions to match actual
     this.canvas = document.getElementById(id);
     this.canvas.height = this.canvas.clientHeight;

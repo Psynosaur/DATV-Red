@@ -16,7 +16,7 @@ async function getConfig(url) {
 let canvas_element;
 let canvas_jqel;
 
-let canvasWidth = 956;
+let canvasWidth = 966;
 let canvasHeight = 480;
 let canvasHeightLast;
 
@@ -320,8 +320,8 @@ let canvasHeightLast;
    
     canvasWidth = document.body.clientWidth;
     canvas_element = document.getElementById("c");
-    console.info("ele");
-    console.dir(canvas_element);
+    // console.info("ele");
+    // console.dir(canvas_element);
     // el.background;
     /* JQuery */
     // canvas_jqel = $("#c");
