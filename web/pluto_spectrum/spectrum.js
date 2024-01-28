@@ -55,14 +55,14 @@ Spectrum.prototype.addWaterfallRow = function (bins) {
 
         // Font scaling over all spans...
         this.ctx_wf.save();
-        this.ctx_wf.scale(this.ctx_wf.canvas.width / 512, this.ctx_wf.canvas.height / 1052);
+        this.ctx_wf.scale(this.ctx_wf.canvas.width / 612, this.ctx_wf.canvas.height / 1552);
         // keep constant scale regardless
 
         this.ctx_wf.font = `13px sans-serif`
         this.ctx_wf.fillStyle = "white";
 
         this.ctx_wf.textBaseline = "top";
-        this.ctx_wf.fillText(timeString, 0, 0);
+        this.ctx_wf.fillText(timeString, 3, 3);
 
         this.ctx_wf.restore();
     }
