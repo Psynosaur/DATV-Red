@@ -25,6 +25,19 @@ Spectrum.prototype.rowToImageData = function (bins) {
         this.imagedata.data[i + 3] = 255;
     }
 };
+//
+// Spectrum.prototype.stretchText = function (ctx, text, x, y, xw, xh) {
+//     // var c = document.createElement("canvas").getContext("2d");
+//     let scale = this.ctx_wf.canvas.width / 1024;
+//     const font = `13px sans-serif`;
+//     ctx.font = font;
+//     ctx.fillColor = "white";
+//     console.log(scale)
+//     var w = ctx.measureText(text).width;
+//     var h = parseInt(font);
+//     ctx.fillText(text, 0, h);
+//     ctx.drawImage(ctx.canvas, 0, 0, w, h, x, y, w + xw, h + xh);
+// }
 
 Spectrum.prototype.addWaterfallRow = function (bins) {
 
@@ -38,11 +51,20 @@ Spectrum.prototype.addWaterfallRow = function (bins) {
     this.ctx_wf.putImageData(this.imagedata, 0, 0);
 
     if (this.wfrowcount % 100 === 0) {
-        const timeString = new Date().toUTCString();
-        this.ctx_wf.font = `${13 * (Math.ceil(this.divider * 0.2))}px sans-serif`;
+        const timeString = new Date().toISOString();
+
+        // Font scaling over all spans...
+        this.ctx_wf.save();
+        this.ctx_wf.scale(this.ctx_wf.canvas.width / 512, this.ctx_wf.canvas.height / 1052);
+        // keep constant scale regardless
+
+        this.ctx_wf.font = `13px sans-serif`
         this.ctx_wf.fillStyle = "white";
+
         this.ctx_wf.textBaseline = "top";
-        this.ctx_wf.fillText(timeString, 0, this.divider + 20); // TODO: Fix font scaling
+        this.ctx_wf.fillText(timeString, 0, 0);
+
+        this.ctx_wf.restore();
     }
     const width = this.ctx.canvas.width;
     const height = this.ctx.canvas.height;
@@ -255,11 +277,11 @@ Spectrum.prototype.detect_signals = function (fft_data, ctx, canvasHeight, canva
                         ctx.fillText(print_symbolrate(signal_bw), text_x_position, 30);
                         ctx.restore();
                     }
-                    ctx.fillText(Math.round(signal.offset) + "Hz", text_x_position, 15);
                     if (signal.offset > -10_000 && signal.offset < 10_000) {
-                        ctx.fillText("L", text_x_position, 60);
+                        ctx.fillStyle = "Green";
                     }
-
+                    ctx.fillText(Math.round(signal.offset) + "Hz", text_x_position, 15);
+                    ctx.fillStyle = "white";
                 }
                 // drawRxBox(ctx)
 
@@ -1283,8 +1305,7 @@ function Spectrum(id, options) {
     // Colors
     this.colorindex = 0;
     this.colormap = colormaps[options.color];
-    let test = evaluate_cmap(0.5, 'viridis', false)
-    console.dir(test);
+
     // Create main canvas and adjust dimensions to match actual
     this.canvas = document.getElementById(id);
     this.canvas.height = this.canvas.clientHeight;
