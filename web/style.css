@@ -96,13 +96,6 @@
         padding-right: 15px;
         margin: 0;
     }
-    /*.nr-dashboard-cardcontainer > * {*/
-    /*    margin: 0 !important;*/
-    /*    position: absolute;*/
-    /*    opacity: 0;*/
-    /*    padding-left: 3px;*/
-    /*    padding-right: 3px;*/
-    /*}*/
 
     md-checkbox.md-checked .md-icon:after {
         border-color: rgba(255, 255, 255, 0.79);
@@ -110,9 +103,10 @@
     .md-button.md-default-theme:not([disabled]).md-focused, .md-button:not([disabled]).md-focused, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
         background-color: rgba(12, 89, 133, 0.3);
     }
-    /*md-content{*/
-    /*    background-color: #212222 !important;*/
-    /*}*/
+    /* BATC spectrum width in Node-RED*/
+    #c {
+        width: 966px !important;
+    }
     @media all and (min-width:1921px) and (max-width: 5000px) {
         #Tab_Transmission-Control {
             /* left: -5rem; */
