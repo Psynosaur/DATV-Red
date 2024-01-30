@@ -34,11 +34,11 @@ if (typeof Storage !== "undefined") {
 }
 
 function setRxClickState(minSpan, spanHz) {
-    let scale = spanHz / minSpan;
+    let scale = minSpan / spanHz ;
     tunedBox = clickBox;
     tunedBox.minSpanHz = minSpan;
     tunedBox.spanHz = spanHz;
-    tunedBox.w = clickBox.w * scale;
+    tunedBox.w = clickBox.w * scale * (spanHz / minSpan);
     if (storageSupport) {
         localStorage.tunedBox = JSON.stringify(tunedBox);
     }
