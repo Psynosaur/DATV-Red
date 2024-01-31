@@ -3,7 +3,7 @@
  * This software is released under the MIT license.
  * See the LICENSE file for further details.
  */
-let data = [{x: 0, Y: 128}, {x: 128, Y: 0}];
+let data = [{x: 0, y: 128}, {x: 128, y: 0}];
 let dataPoints = 1500;
 let graph = document.getElementById("graph");
 const ctx = graph.getContext('2d', {alpha: false});
