@@ -95,6 +95,14 @@
         "env": []
     },
     {
+        "id": "bb87a41c971b3c28",
+        "type": "tab",
+        "label": "Channel bars",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "15d7457.fcac4bb",
         "type": "subflow",
         "name": "Change Flow Disabled",
@@ -805,7 +813,9 @@
             "bbf9e870bbb3141b"
         ],
         "x": 574,
-        "y": 39
+        "y": 39,
+        "w": 712,
+        "h": 82
     },
     {
         "id": "2406e32417780de0",
@@ -824,7 +834,9 @@
             "de3615657f5f8b75"
         ],
         "x": 28,
-        "y": 19
+        "y": 19,
+        "w": 1138,
+        "h": 348
     },
     {
         "id": "b40c8f098d8e9ccc",
@@ -911,7 +923,9 @@
             "30794624a6a04c15"
         ],
         "x": 34,
-        "y": 979
+        "y": 979,
+        "w": 1292,
+        "h": 562
     },
     {
         "id": "97ecf1ac9459a777",
@@ -964,7 +978,9 @@
             "4b4adb8ffff59a56"
         ],
         "x": 34,
-        "y": 379
+        "y": 379,
+        "w": 1592,
+        "h": 588
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -995,84 +1011,6 @@
         "h": 122
     },
     {
-        "id": "50b9700a9a4f731c",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spectrum settings",
-        "style": {
-            "label": true,
-            "fill": "#001f60"
-        },
-        "nodes": [
-            "f132495fecc36548",
-            "d46af93abcd001aa",
-            "63d3cb318a61e47d",
-            "5a94e29921a8893f",
-            "d03c46be6294064a"
-        ],
-        "x": 3614,
-        "y": 2499,
-        "w": 1012,
-        "h": 82
-    },
-    {
-        "id": "a70e8b8a362b3c9d",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "dvbs_gui_path",
-        "style": {
-            "label": true,
-            "fill": "#001f60"
-        },
-        "nodes": [
-            "9dc824c56f4f3a2c",
-            "93f563206f98cde4",
-            "a53750444a663bac",
-            "06596bd1203529e7",
-            "3aadcd5b16a568f8",
-            "e4d49de5ef76b48c",
-            "973c10af4dbfb52e",
-            "ad88d2145d494f9b",
-            "30437f33c9972f90",
-            "c5f093958cc5103e",
-            "21bcf98d22dabf77",
-            "77d1845d8d7e97dd",
-            "7c666d4b66bdb1c1",
-            "382c0ba4ac25e933",
-            "a65e0da8e66d8647",
-            "08bb407e7555f53c",
-            "05d216119b33b43c",
-            "4cea289b661afb2e",
-            "f67aefa381b6dc8a",
-            "55f7b77a67cc54df",
-            "587ba7dcecad6d47",
-            "8c3e78c6704e92a2",
-            "517a1391985bff60",
-            "bdad9791244eab3b",
-            "21b402fbd4675dcf",
-            "87560b970ae3d1ca",
-            "46a46f85dadd76f6",
-            "2427bded041bffae",
-            "81633328a5ead7be",
-            "3b2bfc1de615d1c2",
-            "e48b23e1d46a182a",
-            "1b33b2ee0e91bf0a",
-            "fa64203cbbfc748d",
-            "f59601c8ef54fb30",
-            "9077d20ca65ab2fd",
-            "264f78c58101c550",
-            "bcea6a9dea321503",
-            "d8696aeccbf8391b",
-            "9fc2b2b1712c4ac3",
-            "cf620cc1430c2ec5",
-            "e63faf17ba00a395"
-        ],
-        "x": 3614,
-        "y": 1839,
-        "w": 1212,
-        "h": 602
-    },
-    {
         "id": "68ebf17055b62392",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -1101,56 +1039,6 @@
         "h": 122
     },
     {
-        "id": "16b2433f74b66b9a",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "style": {
-            "stroke": "#30363d",
-            "stroke-opacity": "1",
-            "fill": "#010409",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#e6edf3"
-        },
-        "nodes": [
-            "7f3d237a25e7a435",
-            "68abb4393d028775",
-            "06b559ab4aca15cf",
-            "6f532c25947db01e",
-            "2e0d409b4b551cdb",
-            "a7a765ba72c31ee8",
-            "7a6a3cfb847eed62",
-            "d155c2f4a4a95ddf",
-            "4b0e4ceac0843b6c",
-            "bb9f89e948bdda86",
-            "17889543320f7239",
-            "793fd51eda4da3b4",
-            "976add8cdc661885",
-            "afc105ffdbfd6b67",
-            "edaef66bea244028",
-            "1476c7ae3ee7429f",
-            "bda9d0fa12b73a7b",
-            "9707e10f88d44a13",
-            "e4f4bb8ab484614c",
-            "268823098bee16e3",
-            "7de98b3ad530b9ed",
-            "adec478022684111",
-            "3867abc64be57709",
-            "5742c2b6848b86ca",
-            "b0cd2e5a31c4cd6b",
-            "4d3826e743c485db",
-            "c79482819129c76e",
-            "d46536f5ead91b86",
-            "f576c965ac8d9aab",
-            "6e6700cfb7db9272"
-        ],
-        "x": 3594,
-        "y": 1519,
-        "w": 1652,
-        "h": 305
-    },
-    {
         "id": "9c7cb0f498a9f7e2",
         "type": "group",
         "z": "34bd429848bdfd07",
@@ -1169,7 +1057,9 @@
             "3fcda18d3f907163"
         ],
         "x": 34,
-        "y": 19
+        "y": 19,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "2a6eb2e492bee274",
@@ -1185,7 +1075,9 @@
             "819d5b65838d0f8c"
         ],
         "x": 34,
-        "y": 199
+        "y": 199,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "97fae7a46f8ffe23",
@@ -1207,7 +1099,9 @@
             "2a3dc125f08d620e"
         ],
         "x": 114,
-        "y": 139
+        "y": 139,
+        "w": 872,
+        "h": 222
     },
     {
         "id": "c070d9c6c2a6ac1b",
@@ -1226,7 +1120,9 @@
             "8b74e5e219711233"
         ],
         "x": 54,
-        "y": 51.5
+        "y": 51.5,
+        "w": 812,
+        "h": 149.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -1245,7 +1141,9 @@
             "ece06122.7e762"
         ],
         "x": 34,
-        "y": 39
+        "y": 39,
+        "w": 1032,
+        "h": 82
     },
     {
         "id": "f6c11774649f8d00",
@@ -1261,7 +1159,9 @@
             "60df7c8dc6d1de55"
         ],
         "x": 74,
-        "y": 19
+        "y": 19,
+        "w": 692,
+        "h": 82
     },
     {
         "id": "4da866f299df009c",
@@ -1286,7 +1186,9 @@
             "caa457b0361bf0ba"
         ],
         "x": 54,
-        "y": 119
+        "y": 119,
+        "w": 772,
+        "h": 382
     },
     {
         "id": "a5269925ed64322c",
@@ -1327,7 +1229,9 @@
             "097842d26da1c238"
         ],
         "x": 174,
-        "y": 1999
+        "y": 1999,
+        "w": 1452,
+        "h": 462
     },
     {
         "id": "38c9fb66e354750a",
@@ -1343,7 +1247,9 @@
             "20183c79061e9c57"
         ],
         "x": 34,
-        "y": 299
+        "y": 299,
+        "w": 772,
+        "h": 82
     },
     {
         "id": "44bb8f59b40e58cf",
@@ -1443,7 +1349,9 @@
             "24a65d9c2eb14bc4"
         ],
         "x": 54,
-        "y": 559
+        "y": 559,
+        "w": 1492,
+        "h": 242
     },
     {
         "id": "e0dc8a59cb457806",
@@ -1580,7 +1488,9 @@
             "a0d336bd144ceaf0"
         ],
         "x": 54,
-        "y": 239
+        "y": 239,
+        "w": 1872,
+        "h": 1582
     },
     {
         "id": "d7eac6e7f4ef2b55",
@@ -1625,7 +1535,9 @@
             "26aaab09baf5f6cb"
         ],
         "x": 114,
-        "y": 19
+        "y": 19,
+        "w": 1592,
+        "h": 369.5
     },
     {
         "id": "552181cca779c1aa",
@@ -1643,7 +1555,9 @@
             "9bf07861299d633f"
         ],
         "x": 114,
-        "y": 499
+        "y": 499,
+        "w": 612,
+        "h": 82
     },
     {
         "id": "72d0cc5c362e49a0",
@@ -1700,7 +1614,9 @@
             "9396693c.371108"
         ],
         "x": 114,
-        "y": 599
+        "y": 599,
+        "w": 1772,
+        "h": 828
     },
     {
         "id": "6b33e16d6eb73426",
@@ -1719,7 +1635,9 @@
             "4a528b8124d88d9f"
         ],
         "x": 94,
-        "y": 259
+        "y": 259,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "06b6d40e37eed1b3",
@@ -1738,7 +1656,9 @@
             "fd73374edce4e46a"
         ],
         "x": 94,
-        "y": 399
+        "y": 399,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "304e7427b347da66",
@@ -1757,7 +1677,9 @@
             "4908492e7fc40ea6"
         ],
         "x": 1334,
-        "y": 399
+        "y": 399,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "4fb1b73484298f73",
@@ -1775,7 +1697,9 @@
             "0463ca7f2033f2ca"
         ],
         "x": 94,
-        "y": 539
+        "y": 539,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "3c1d2bff8dbb2a62",
@@ -1794,7 +1718,9 @@
             "1da7821c9ebd9493"
         ],
         "x": 94,
-        "y": 679
+        "y": 679,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "8a69f99edaaca8df",
@@ -1813,7 +1739,9 @@
             "876b472b90bd24ed"
         ],
         "x": 1334,
-        "y": 539
+        "y": 539,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "2609b8ed27e6906d",
@@ -1832,7 +1760,9 @@
             "c97b10a9fbf41318"
         ],
         "x": 1334,
-        "y": 679
+        "y": 679,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "e666d4836bf09971",
@@ -1851,7 +1781,9 @@
             "2829c42254f93828"
         ],
         "x": 94,
-        "y": 819
+        "y": 819,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "11ddf2e8d8edefbb",
@@ -1870,7 +1802,9 @@
             "c8cdb521937dcbc7"
         ],
         "x": 1334,
-        "y": 259
+        "y": 259,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "5e4f29bf63a69ebd",
@@ -1889,7 +1823,9 @@
             "fe5e85892b62efb0"
         ],
         "x": 94,
-        "y": 959
+        "y": 959,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "f27cb7bc733a47f7",
@@ -1908,7 +1844,9 @@
             "23a78be8b7f984d5"
         ],
         "x": 1334,
-        "y": 959
+        "y": 959,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "23393eb2826cc8ee",
@@ -1927,7 +1865,9 @@
             "a3e2715c1576d9f2"
         ],
         "x": 1334,
-        "y": 819
+        "y": 819,
+        "w": 1212,
+        "h": 122
     },
     {
         "id": "8f3c2fac1ab17032",
@@ -1946,7 +1886,9 @@
             "959e4f3cf436217e"
         ],
         "x": 134,
-        "y": 39
+        "y": 39,
+        "w": 832,
+        "h": 162
     },
     {
         "id": "1d8e778f40edcc21",
@@ -2010,7 +1952,9 @@
             "48d4fb91b6cecaa8"
         ],
         "x": 334,
-        "y": 1159
+        "y": 1159,
+        "w": 832,
+        "h": 242
     },
     {
         "id": "185cc616489b2615",
@@ -2064,7 +2008,9 @@
             "0dd67a65a9a17989"
         ],
         "x": 54,
-        "y": 99
+        "y": 99,
+        "w": 872,
+        "h": 242
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -2104,7 +2050,9 @@
             "ef70d0aa4139e52a"
         ],
         "x": 794,
-        "y": 819
+        "y": 819,
+        "w": 232,
+        "h": 122
     },
     {
         "id": "b66465fdf55144d8",
@@ -2316,8 +2264,8 @@
             "cfdd9fffb83031de",
             "de67b561ba5031e9"
         ],
-        "x": 1354,
-        "y": 3959,
+        "x": 774,
+        "y": 4359,
         "w": 732,
         "h": 322
     },
@@ -2349,6 +2297,157 @@
         "y": 4351.5,
         "w": 672,
         "h": 277
+    },
+    {
+        "id": "16b2433f74b66b9a",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "style": {
+            "stroke": "#30363d",
+            "stroke-opacity": "1",
+            "fill": "#010409",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#e6edf3"
+        },
+        "nodes": [
+            "7f3d237a25e7a435",
+            "68abb4393d028775",
+            "06b559ab4aca15cf",
+            "6f532c25947db01e",
+            "2e0d409b4b551cdb",
+            "a7a765ba72c31ee8",
+            "7a6a3cfb847eed62",
+            "d155c2f4a4a95ddf",
+            "4b0e4ceac0843b6c",
+            "bb9f89e948bdda86",
+            "17889543320f7239",
+            "793fd51eda4da3b4",
+            "976add8cdc661885",
+            "afc105ffdbfd6b67",
+            "edaef66bea244028",
+            "1476c7ae3ee7429f",
+            "bda9d0fa12b73a7b",
+            "9707e10f88d44a13",
+            "e4f4bb8ab484614c",
+            "268823098bee16e3",
+            "7de98b3ad530b9ed",
+            "adec478022684111",
+            "3867abc64be57709",
+            "5742c2b6848b86ca",
+            "b0cd2e5a31c4cd6b",
+            "4d3826e743c485db",
+            "c79482819129c76e",
+            "d46536f5ead91b86",
+            "f576c965ac8d9aab",
+            "6e6700cfb7db9272"
+        ],
+        "x": 74,
+        "y": 4759,
+        "w": 1652,
+        "h": 305
+    },
+    {
+        "id": "a70e8b8a362b3c9d",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "dvbs_gui_path",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "9dc824c56f4f3a2c",
+            "93f563206f98cde4",
+            "a53750444a663bac",
+            "06596bd1203529e7",
+            "3aadcd5b16a568f8",
+            "e4d49de5ef76b48c",
+            "973c10af4dbfb52e",
+            "ad88d2145d494f9b",
+            "30437f33c9972f90",
+            "c5f093958cc5103e",
+            "21bcf98d22dabf77",
+            "77d1845d8d7e97dd",
+            "7c666d4b66bdb1c1",
+            "382c0ba4ac25e933",
+            "a65e0da8e66d8647",
+            "08bb407e7555f53c",
+            "05d216119b33b43c",
+            "4cea289b661afb2e",
+            "f67aefa381b6dc8a",
+            "55f7b77a67cc54df",
+            "587ba7dcecad6d47",
+            "8c3e78c6704e92a2",
+            "517a1391985bff60",
+            "bdad9791244eab3b",
+            "21b402fbd4675dcf",
+            "87560b970ae3d1ca",
+            "46a46f85dadd76f6",
+            "2427bded041bffae",
+            "81633328a5ead7be",
+            "3b2bfc1de615d1c2",
+            "e48b23e1d46a182a",
+            "1b33b2ee0e91bf0a",
+            "fa64203cbbfc748d",
+            "f59601c8ef54fb30",
+            "9077d20ca65ab2fd",
+            "264f78c58101c550",
+            "bcea6a9dea321503",
+            "d8696aeccbf8391b",
+            "9fc2b2b1712c4ac3",
+            "cf620cc1430c2ec5",
+            "e63faf17ba00a395"
+        ],
+        "x": 74,
+        "y": 5079,
+        "w": 1212,
+        "h": 602
+    },
+    {
+        "id": "50b9700a9a4f731c",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "spectrum settings",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "f132495fecc36548",
+            "d46af93abcd001aa",
+            "63d3cb318a61e47d",
+            "5a94e29921a8893f",
+            "d03c46be6294064a"
+        ],
+        "x": 94,
+        "y": 5739,
+        "w": 1012,
+        "h": 82
+    },
+    {
+        "id": "2edde61ef763efb1",
+        "type": "group",
+        "z": "bb87a41c971b3c28",
+        "name": "Constellation",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8d93ec9ffef157a7",
+            "bc26bca4691c5b09",
+            "97a5bdcba2d539b7",
+            "660301aa5cd33713",
+            "56a201d2c28f426d",
+            "9e4289fec815f0a5",
+            "8b1f7d494d0389a3",
+            "2e3c908ba8bc61e5"
+        ],
+        "x": 94,
+        "y": 59,
+        "w": 1032,
+        "h": 162
     },
     {
         "id": "9b3296db2e0c849f",
@@ -2515,7 +2614,7 @@
         "d": true,
         "name": "preset bar",
         "tab": "9b3296db2e0c849f",
-        "order": 14,
+        "order": 15,
         "disp": false,
         "width": "18",
         "collapse": false,
@@ -2526,7 +2625,7 @@
         "type": "ui_group",
         "name": "misc",
         "tab": "9b3296db2e0c849f",
-        "order": 13,
+        "order": 14,
         "disp": false,
         "width": "6",
         "collapse": false,
@@ -2930,6 +3029,17 @@
         "order": 9,
         "width": 2,
         "height": 1
+    },
+    {
+        "id": "7b6e02f526fcf081",
+        "type": "ui_group",
+        "name": "channel_bars",
+        "tab": "9b3296db2e0c849f",
+        "order": 13,
+        "disp": false,
+        "width": "18",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "8920ad34.ac04a",
@@ -13370,1045 +13480,6 @@
         ]
     },
     {
-        "id": "f132495fecc36548",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "50b9700a9a4f731c",
-        "name": "save state",
-        "func": "let fft_url = msg.payload\nglobal.set(\"device.fft_url\", fft_url);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4530,
-        "y": 2540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d46af93abcd001aa",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "50b9700a9a4f731c",
-        "name": "spectrumSettings",
-        "func": "let spectrumSettings = JSON.parse(msg.payload);\nmsg.payload = spectrumSettings;\nglobal.set(\"fft\", spectrumSettings);\nlet array = [];\nfor (var key in spectrumSettings) {\n   let obj = {\n      [`${key}`]: `${spectrumSettings[key]}`\n   };\n   array.push(obj);\n}\nmsg.options = array;\nmsg.payload = msg.fft_url;\nreturn msg;\n\n// msg.options = [\"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n//  msg.options = [\n//         { \"144.6MHz\": \"144600000\" },",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4190,
-        "y": 2540,
-        "wires": [
-            [
-                "5a94e29921a8893f"
-            ]
-        ]
-    },
-    {
-        "id": "63d3cb318a61e47d",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "50b9700a9a4f731c",
-        "name": "",
-        "props": [
-            {
-                "p": "fft_url",
-                "v": "device.fft_url",
-                "vt": "global"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "x": 3710,
-        "y": 2540,
-        "wires": [
-            [
-                "d03c46be6294064a"
-            ]
-        ]
-    },
-    {
-        "id": "5a94e29921a8893f",
-        "type": "ui_dropdown",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "50b9700a9a4f731c",
-        "name": "FFT",
-        "label": "FFT URL",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "c4b0794d54ab9746",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": false,
-        "options": [],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 4350,
-        "y": 2540,
-        "wires": [
-            [
-                "f132495fecc36548"
-            ]
-        ]
-    },
-    {
-        "id": "d03c46be6294064a",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "50b9700a9a4f731c",
-        "name": "",
-        "filename": "settings/spectrum.json",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 3880,
-        "y": 2540,
-        "wires": [
-            [
-                "d46af93abcd001aa"
-            ]
-        ]
-    },
-    {
-        "id": "9dc824c56f4f3a2c",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let tiounePath = msg.payload\nglobal.set(\"device.dvbs_gui_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "93f563206f98cde4",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "dvbs_gui_path",
-        "tooltip": "",
-        "group": "2275ce4aba6ae57e",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4500,
-        "y": 2160,
-        "wires": [
-            [
-                "9dc824c56f4f3a2c"
-            ]
-        ]
-    },
-    {
-        "id": "a53750444a663bac",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "dvbs_gui_path",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.dvbs_gui_path;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4240,
-        "y": 2160,
-        "wires": [
-            [
-                "93f563206f98cde4"
-            ]
-        ]
-    },
-    {
-        "id": "06596bd1203529e7",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "inject",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0.5",
-        "topic": "",
-        "x": 3710,
-        "y": 1920,
-        "wires": [
-            [
-                "3aadcd5b16a568f8"
-            ]
-        ]
-    },
-    {
-        "id": "3aadcd5b16a568f8",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "filename": "settings/device.json",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 3930,
-        "y": 1920,
-        "wires": [
-            [
-                "a53750444a663bac",
-                "ad88d2145d494f9b",
-                "382c0ba4ac25e933",
-                "05d216119b33b43c",
-                "21bcf98d22dabf77",
-                "55f7b77a67cc54df",
-                "81633328a5ead7be",
-                "87560b970ae3d1ca",
-                "517a1391985bff60",
-                "3b2bfc1de615d1c2",
-                "9077d20ca65ab2fd",
-                "d8696aeccbf8391b",
-                "9fc2b2b1712c4ac3"
-            ]
-        ]
-    },
-    {
-        "id": "e4d49de5ef76b48c",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let tiounePath = msg.payload\nglobal.set(\"device.vlc_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 1880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "973c10af4dbfb52e",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "vlc_path",
-        "tooltip": "",
-        "group": "2275ce4aba6ae57e",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4480,
-        "y": 1880,
-        "wires": [
-            [
-                "e4d49de5ef76b48c"
-            ]
-        ]
-    },
-    {
-        "id": "ad88d2145d494f9b",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "vlc_path",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.vlc_path;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4220,
-        "y": 1880,
-        "wires": [
-            [
-                "973c10af4dbfb52e"
-            ]
-        ]
-    },
-    {
-        "id": "30437f33c9972f90",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let ffmpeg_path = msg.payload\nglobal.set(\"device.ffmpeg_path\", ffmpeg_path);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 1920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c5f093958cc5103e",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "ffmpeg_path",
-        "tooltip": "",
-        "group": "28123a21c50f54af",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4490,
-        "y": 1920,
-        "wires": [
-            [
-                "30437f33c9972f90"
-            ]
-        ]
-    },
-    {
-        "id": "21bcf98d22dabf77",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "ffmpeg_path",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffmpeg_path;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4230,
-        "y": 1920,
-        "wires": [
-            [
-                "c5f093958cc5103e"
-            ]
-        ]
-    },
-    {
-        "id": "77d1845d8d7e97dd",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let ffplay_path = msg.payload\nglobal.set(\"device.ffplay_path\", ffplay_path);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 1960,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7c666d4b66bdb1c1",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "ffplay_path",
-        "tooltip": "",
-        "group": "28123a21c50f54af",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4490,
-        "y": 1960,
-        "wires": [
-            [
-                "77d1845d8d7e97dd"
-            ]
-        ]
-    },
-    {
-        "id": "382c0ba4ac25e933",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "ffplay_path",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffplay_path;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4230,
-        "y": 1960,
-        "wires": [
-            [
-                "7c666d4b66bdb1c1"
-            ]
-        ]
-    },
-    {
-        "id": "a65e0da8e66d8647",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let ffprobe_path = msg.payload\nglobal.set(\"device.ffprobe_path\", ffprobe_path);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "08bb407e7555f53c",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "ffprobe_path",
-        "tooltip": "",
-        "group": "28123a21c50f54af",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4490,
-        "y": 2000,
-        "wires": [
-            [
-                "a65e0da8e66d8647"
-            ]
-        ]
-    },
-    {
-        "id": "05d216119b33b43c",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "ffprobe_path",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffprobe_path;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4230,
-        "y": 2000,
-        "wires": [
-            [
-                "08bb407e7555f53c"
-            ]
-        ]
-    },
-    {
-        "id": "4cea289b661afb2e",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let tiounePath = msg.payload\nglobal.set(\"device.sig_report_suffux\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f67aefa381b6dc8a",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "Signal report suffix",
-        "tooltip": "",
-        "group": "2275ce4aba6ae57e",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4510,
-        "y": 2080,
-        "wires": [
-            [
-                "4cea289b661afb2e"
-            ]
-        ]
-    },
-    {
-        "id": "55f7b77a67cc54df",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "dvbs_gui_path",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.sig_report_suffux;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4240,
-        "y": 2080,
-        "wires": [
-            [
-                "f67aefa381b6dc8a"
-            ]
-        ]
-    },
-    {
-        "id": "587ba7dcecad6d47",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let ffplay_path_linux = msg.payload\nglobal.set(\"device.ffplay_path_linux\", ffplay_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8c3e78c6704e92a2",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "ffplay_path_linux",
-        "tooltip": "",
-        "group": "28123a21c50f54af",
-        "order": 12,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4510,
-        "y": 2200,
-        "wires": [
-            [
-                "587ba7dcecad6d47"
-            ]
-        ]
-    },
-    {
-        "id": "517a1391985bff60",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "ffplay_path_linux",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffplay_path_linux;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4250,
-        "y": 2200,
-        "wires": [
-            [
-                "8c3e78c6704e92a2"
-            ]
-        ]
-    },
-    {
-        "id": "bdad9791244eab3b",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let ffprobe_path_linux = msg.payload\nglobal.set(\"device.ffprobe_path_linux\", ffprobe_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "21b402fbd4675dcf",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "ffprobe_path_linux",
-        "tooltip": "",
-        "group": "28123a21c50f54af",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4510,
-        "y": 2240,
-        "wires": [
-            [
-                "bdad9791244eab3b"
-            ]
-        ]
-    },
-    {
-        "id": "87560b970ae3d1ca",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "ffprobe_path_linux",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffprobe_path_linux;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4250,
-        "y": 2240,
-        "wires": [
-            [
-                "21b402fbd4675dcf"
-            ]
-        ]
-    },
-    {
-        "id": "46a46f85dadd76f6",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let ffmpeg_path_linux = msg.payload\nglobal.set(\"device.ffmpeg_path_linux\", ffmpeg_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2427bded041bffae",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "ffmpeg_path_linux",
-        "tooltip": "",
-        "group": "28123a21c50f54af",
-        "order": 11,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4510,
-        "y": 2280,
-        "wires": [
-            [
-                "46a46f85dadd76f6"
-            ]
-        ]
-    },
-    {
-        "id": "81633328a5ead7be",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "ffmpeg_path_linux",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffmpeg_path_linux;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4250,
-        "y": 2280,
-        "wires": [
-            [
-                "2427bded041bffae"
-            ]
-        ]
-    },
-    {
-        "id": "3b2bfc1de615d1c2",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "set tuner ts ip address",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.rx.tsip;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4260,
-        "y": 2320,
-        "wires": [
-            [
-                "e48b23e1d46a182a"
-            ]
-        ]
-    },
-    {
-        "id": "e48b23e1d46a182a",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "TS RX stream IP",
-        "tooltip": "",
-        "group": "6140f866127cd620",
-        "order": 3,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4510,
-        "y": 2320,
-        "wires": [
-            [
-                "1b33b2ee0e91bf0a"
-            ]
-        ]
-    },
-    {
-        "id": "1b33b2ee0e91bf0a",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let tsip = msg.payload\nglobal.set(\"device.rx.tsip\", tsip);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fa64203cbbfc748d",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let tiounePath = msg.payload\nglobal.set(\"device.minitioune_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f59601c8ef54fb30",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "minitioune path",
-        "tooltip": "",
-        "group": "b774f32781d086fb",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4500,
-        "y": 2120,
-        "wires": [
-            [
-                "fa64203cbbfc748d"
-            ]
-        ]
-    },
-    {
-        "id": "9077d20ca65ab2fd",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "minitiounePath",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.minitioune_path;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4240,
-        "y": 2120,
-        "wires": [
-            [
-                "f59601c8ef54fb30"
-            ]
-        ]
-    },
-    {
-        "id": "264f78c58101c550",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let vlc_path_linux = msg.payload\nglobal.set(\"device.vlc_path_linux\", vlc_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4730,
-        "y": 2040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bcea6a9dea321503",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "vlc_path_linux",
-        "tooltip": "",
-        "group": "2275ce4aba6ae57e",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4500,
-        "y": 2040,
-        "wires": [
-            [
-                "264f78c58101c550"
-            ]
-        ]
-    },
-    {
-        "id": "d8696aeccbf8391b",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "vlc_path_linux",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.vlc_path_linux;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4240,
-        "y": 2040,
-        "wires": [
-            [
-                "bcea6a9dea321503"
-            ]
-        ]
-    },
-    {
-        "id": "9fc2b2b1712c4ac3",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "set host url",
-        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.hosting_url;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 3890,
-        "y": 2400,
-        "wires": [
-            [
-                "cf620cc1430c2ec5"
-            ]
-        ]
-    },
-    {
-        "id": "cf620cc1430c2ec5",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "",
-        "label": "hosting url(please forward ports 9001 and 7681 to this server from your local network)",
-        "tooltip": "",
-        "group": "2275ce4aba6ae57e",
-        "order": 2,
-        "width": "0",
-        "height": "0",
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4280,
-        "y": 2400,
-        "wires": [
-            [
-                "e63faf17ba00a395"
-            ]
-        ]
-    },
-    {
-        "id": "e63faf17ba00a395",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "a70e8b8a362b3c9d",
-        "name": "save state",
-        "func": "let hosting_url = msg.payload\nglobal.set(\"device.hosting_url\", hosting_url);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 4710,
-        "y": 2400,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e9c772547c5ee64e",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
@@ -14554,861 +13625,6 @@
         "reg": false,
         "x": 4640,
         "y": 2880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7f3d237a25e7a435",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.audio_codec",
-        "payloadType": "global",
-        "x": 4640,
-        "y": 1560,
-        "wires": [
-            [
-                "68abb4393d028775"
-            ]
-        ]
-    },
-    {
-        "id": "68abb4393d028775",
-        "type": "ui_dropdown",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "AUDIO codec",
-        "label": "AUDIO codec",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "88af1ac84b7217bd",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "AAC",
-                "value": "aac",
-                "type": "str"
-            },
-            {
-                "label": "AAC+",
-                "value": "libfdk_aac",
-                "type": "str"
-            },
-            {
-                "label": "AC3",
-                "value": "ac3",
-                "type": "str"
-            },
-            {
-                "label": "OPUS",
-                "value": "libopus",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 4900,
-        "y": 1560,
-        "wires": [
-            [
-                "06b559ab4aca15cf"
-            ]
-        ]
-    },
-    {
-        "id": "06b559ab4aca15cf",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set AUDIO codec",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.audio_codec",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 5130,
-        "y": 1560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6f532c25947db01e",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.input_choice",
-        "payloadType": "global",
-        "x": 4640,
-        "y": 1615.5908203125,
-        "wires": [
-            [
-                "2e0d409b4b551cdb"
-            ]
-        ]
-    },
-    {
-        "id": "2e0d409b4b551cdb",
-        "type": "ui_dropdown",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "INPUT choice",
-        "label": "INPUT choice",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "88af1ac84b7217bd",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "DSHOW",
-                "value": "dshow",
-                "type": "str"
-            },
-            {
-                "label": "UDP",
-                "value": "udp",
-                "type": "str"
-            },
-            {
-                "label": "RTMP",
-                "value": "rtmp",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 4900,
-        "y": 1615.5908203125,
-        "wires": [
-            [
-                "a7a765ba72c31ee8"
-            ]
-        ]
-    },
-    {
-        "id": "a7a765ba72c31ee8",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set INPUT choice",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.input_choice",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 5130,
-        "y": 1615.5908203125,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7a6a3cfb847eed62",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.udp_ip_port",
-        "payloadType": "global",
-        "x": 4640,
-        "y": 1671.818359375,
-        "wires": [
-            [
-                "d155c2f4a4a95ddf"
-            ]
-        ]
-    },
-    {
-        "id": "d155c2f4a4a95ddf",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "UDP ip:port",
-        "label": "UDP ip:port",
-        "tooltip": "",
-        "group": "bd5e2c07c46bb0ef",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4861.765625,
-        "y": 1671.181640625,
-        "wires": [
-            [
-                "4b0e4ceac0843b6c"
-            ]
-        ]
-    },
-    {
-        "id": "4b0e4ceac0843b6c",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set udp ip:port",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.udp_ip_port",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 5101.765625,
-        "y": 1671.181640625,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bb9f89e948bdda86",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.rtmp_ip_port",
-        "payloadType": "global",
-        "x": 4640,
-        "y": 1727.4091796875,
-        "wires": [
-            [
-                "17889543320f7239"
-            ]
-        ]
-    },
-    {
-        "id": "17889543320f7239",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "RTMP ip:port",
-        "label": "RTMP ip:port",
-        "tooltip": "",
-        "group": "bd5e2c07c46bb0ef",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4890,
-        "y": 1727.4091796875,
-        "wires": [
-            [
-                "793fd51eda4da3b4"
-            ]
-        ]
-    },
-    {
-        "id": "793fd51eda4da3b4",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set rtmp ip:port",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.rtmp_ip_port",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 5120,
-        "y": 1727.4091796875,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "976add8cdc661885",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.audio_sample_rate",
-        "payloadType": "global",
-        "x": 4660,
-        "y": 1783,
-        "wires": [
-            [
-                "afc105ffdbfd6b67"
-            ]
-        ]
-    },
-    {
-        "id": "afc105ffdbfd6b67",
-        "type": "ui_dropdown",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "AUDIO SR",
-        "label": "Audio sample rate",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "42d87aea4110d7da",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "8 kHz",
-                "value": "8000",
-                "type": "str"
-            },
-            {
-                "label": "11.025 kHz",
-                "value": "11025",
-                "type": "str"
-            },
-            {
-                "label": "16 kHz",
-                "value": "16000",
-                "type": "str"
-            },
-            {
-                "label": "22.05 kHz",
-                "value": "22050",
-                "type": "str"
-            },
-            {
-                "label": "44.1 kHz",
-                "value": "44100",
-                "type": "str"
-            },
-            {
-                "label": "48 kHz",
-                "value": "48000",
-                "type": "str"
-            },
-            {
-                "label": "88.2 kHz",
-                "value": "88200",
-                "type": "str"
-            },
-            {
-                "label": "96 kHz",
-                "value": "96000",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 4890,
-        "y": 1783,
-        "wires": [
-            [
-                "edaef66bea244028"
-            ]
-        ]
-    },
-    {
-        "id": "edaef66bea244028",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set AUDIO SR",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.audio_sample_rate",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 5120,
-        "y": 1783,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1476c7ae3ee7429f",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.audio_delay",
-        "payloadType": "global",
-        "x": 3780,
-        "y": 1560,
-        "wires": [
-            [
-                "bda9d0fa12b73a7b"
-            ]
-        ]
-    },
-    {
-        "id": "bda9d0fa12b73a7b",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "Audio delay",
-        "label": "Audio delay in seconds",
-        "tooltip": "",
-        "group": "bd5e2c07c46bb0ef",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4030,
-        "y": 1560,
-        "wires": [
-            [
-                "9707e10f88d44a13"
-            ]
-        ]
-    },
-    {
-        "id": "9707e10f88d44a13",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set audio delay",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.audio_delay",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 4240,
-        "y": 1560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e4f4bb8ab484614c",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.thread_queue",
-        "payloadType": "global",
-        "x": 3790,
-        "y": 1600,
-        "wires": [
-            [
-                "268823098bee16e3"
-            ]
-        ]
-    },
-    {
-        "id": "268823098bee16e3",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "Thread queue",
-        "label": "Thread queue",
-        "tooltip": "",
-        "group": "bd5e2c07c46bb0ef",
-        "order": 11,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4040,
-        "y": 1600,
-        "wires": [
-            [
-                "7de98b3ad530b9ed"
-            ]
-        ]
-    },
-    {
-        "id": "7de98b3ad530b9ed",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set thread queue",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.thread_queue",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 4250,
-        "y": 1600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "adec478022684111",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.rt_buffer",
-        "payloadType": "global",
-        "x": 3768.67578125,
-        "y": 1723,
-        "wires": [
-            [
-                "3867abc64be57709"
-            ]
-        ]
-    },
-    {
-        "id": "3867abc64be57709",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "RT buffer",
-        "label": "RT buffer",
-        "tooltip": "",
-        "group": "bd5e2c07c46bb0ef",
-        "order": 12,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4018.67578125,
-        "y": 1723,
-        "wires": [
-            [
-                "5742c2b6848b86ca"
-            ]
-        ]
-    },
-    {
-        "id": "5742c2b6848b86ca",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set rt buffer",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.rt_buffer",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 4248.67578125,
-        "y": 1723,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b0cd2e5a31c4cd6b",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.fifo_size",
-        "payloadType": "global",
-        "x": 3768.67578125,
-        "y": 1763,
-        "wires": [
-            [
-                "4d3826e743c485db"
-            ]
-        ]
-    },
-    {
-        "id": "4d3826e743c485db",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "FIFO size",
-        "label": "FIFO size",
-        "tooltip": "",
-        "group": "bd5e2c07c46bb0ef",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4018.67578125,
-        "y": 1763,
-        "wires": [
-            [
-                "c79482819129c76e"
-            ]
-        ]
-    },
-    {
-        "id": "c79482819129c76e",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set FIFO size",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.fifo_size",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 4248.67578125,
-        "y": 1763,
         "wires": [
             []
         ]
@@ -16168,92 +14384,6 @@
         "payloadType": "date",
         "x": 1580,
         "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d46536f5ead91b86",
-        "type": "inject",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "settings.audio_delay_vvc",
-        "payloadType": "global",
-        "x": 3780,
-        "y": 1660,
-        "wires": [
-            [
-                "f576c965ac8d9aab"
-            ]
-        ]
-    },
-    {
-        "id": "f576c965ac8d9aab",
-        "type": "ui_text_input",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "Audio delay",
-        "label": "Audio delay in seconds(VVC)",
-        "tooltip": "",
-        "group": "bd5e2c07c46bb0ef",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 4030,
-        "y": 1660,
-        "wires": [
-            [
-                "6e6700cfb7db9272"
-            ]
-        ]
-    },
-    {
-        "id": "6e6700cfb7db9272",
-        "type": "change",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "16b2433f74b66b9a",
-        "name": "set audio delay",
-        "rules": [
-            {
-                "t": "set",
-                "p": "settings.audio_delay_vvc",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "bitratechange",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 4240,
-        "y": 1660,
         "wires": [
             []
         ]
@@ -17851,8 +15981,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 1750,
-        "y": 4000,
+        "x": 1170,
+        "y": 4400,
         "wires": [
             [
                 "4823c6eed9e03e46"
@@ -17872,8 +16002,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2000,
-        "y": 4000,
+        "x": 1420,
+        "y": 4400,
         "wires": [
             []
         ]
@@ -17905,8 +16035,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1670,
-        "y": 4060,
+        "x": 1090,
+        "y": 4460,
         "wires": [
             [
                 "c99bca3dafb85e2c"
@@ -17926,8 +16056,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1990,
-        "y": 4060,
+        "x": 1410,
+        "y": 4460,
         "wires": [
             []
         ]
@@ -18023,8 +16153,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1690,
-        "y": 4120,
+        "x": 1110,
+        "y": 4520,
         "wires": [
             [
                 "ade9869b5330a585"
@@ -18044,8 +16174,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2000,
-        "y": 4120,
+        "x": 1420,
+        "y": 4520,
         "wires": [
             []
         ]
@@ -18068,8 +16198,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_size",
         "payloadType": "global",
-        "x": 1470,
-        "y": 4120,
+        "x": 890,
+        "y": 4520,
         "wires": [
             [
                 "0b68cbbed95acffe"
@@ -18089,8 +16219,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1990,
-        "y": 4180,
+        "x": 1410,
+        "y": 4580,
         "wires": [
             []
         ]
@@ -18113,8 +16243,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_volume",
         "payloadType": "global",
-        "x": 1480,
-        "y": 4180,
+        "x": 900,
+        "y": 4580,
         "wires": [
             [
                 "a7b99958c4999cf0"
@@ -18141,8 +16271,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 1700,
-        "y": 4180,
+        "x": 1120,
+        "y": 4580,
         "wires": [
             [
                 "17d14c187e03e78d"
@@ -18167,8 +16297,8 @@
         "topic": "",
         "payload": "device.rx.ffplay",
         "payloadType": "global",
-        "x": 1470,
-        "y": 4000,
+        "x": 890,
+        "y": 4400,
         "wires": [
             [
                 "0566516b8c2f5f60"
@@ -18193,8 +16323,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_ontop",
         "payloadType": "global",
-        "x": 1470,
-        "y": 4060,
+        "x": 890,
+        "y": 4460,
         "wires": [
             [
                 "e29b0f596d18b958"
@@ -18228,8 +16358,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 1680,
-        "y": 4240,
+        "x": 1100,
+        "y": 4640,
         "wires": [
             [
                 "cfdd9fffb83031de"
@@ -18249,8 +16379,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2000,
-        "y": 4240,
+        "x": 1420,
+        "y": 4640,
         "wires": [
             []
         ]
@@ -18273,8 +16403,8 @@
         "topic": "",
         "payload": "device.rx.use_minitioune",
         "payloadType": "global",
-        "x": 1470,
-        "y": 4240,
+        "x": 890,
+        "y": 4640,
         "wires": [
             [
                 "5aec87e336f5bf99"
@@ -18590,6 +16720,1986 @@
         "wires": [
             [
                 "a5fc05cbf3c2b877"
+            ]
+        ]
+    },
+    {
+        "id": "7f3d237a25e7a435",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.audio_codec",
+        "payloadType": "global",
+        "x": 1120,
+        "y": 4800,
+        "wires": [
+            [
+                "68abb4393d028775"
+            ]
+        ]
+    },
+    {
+        "id": "68abb4393d028775",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "AUDIO codec",
+        "label": "AUDIO codec",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "88af1ac84b7217bd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "AAC",
+                "value": "aac",
+                "type": "str"
+            },
+            {
+                "label": "AAC+",
+                "value": "libfdk_aac",
+                "type": "str"
+            },
+            {
+                "label": "AC3",
+                "value": "ac3",
+                "type": "str"
+            },
+            {
+                "label": "OPUS",
+                "value": "libopus",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1380,
+        "y": 4800,
+        "wires": [
+            [
+                "06b559ab4aca15cf"
+            ]
+        ]
+    },
+    {
+        "id": "06b559ab4aca15cf",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set AUDIO codec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.audio_codec",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 4800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f532c25947db01e",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.input_choice",
+        "payloadType": "global",
+        "x": 1120,
+        "y": 4855.5908203125,
+        "wires": [
+            [
+                "2e0d409b4b551cdb"
+            ]
+        ]
+    },
+    {
+        "id": "2e0d409b4b551cdb",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "INPUT choice",
+        "label": "INPUT choice",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "88af1ac84b7217bd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "DSHOW",
+                "value": "dshow",
+                "type": "str"
+            },
+            {
+                "label": "UDP",
+                "value": "udp",
+                "type": "str"
+            },
+            {
+                "label": "RTMP",
+                "value": "rtmp",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1380,
+        "y": 4855.5908203125,
+        "wires": [
+            [
+                "a7a765ba72c31ee8"
+            ]
+        ]
+    },
+    {
+        "id": "a7a765ba72c31ee8",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set INPUT choice",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.input_choice",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 4855.5908203125,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a6a3cfb847eed62",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.udp_ip_port",
+        "payloadType": "global",
+        "x": 1120,
+        "y": 4911.818359375,
+        "wires": [
+            [
+                "d155c2f4a4a95ddf"
+            ]
+        ]
+    },
+    {
+        "id": "d155c2f4a4a95ddf",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "UDP ip:port",
+        "label": "UDP ip:port",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1341.765625,
+        "y": 4911.181640625,
+        "wires": [
+            [
+                "4b0e4ceac0843b6c"
+            ]
+        ]
+    },
+    {
+        "id": "4b0e4ceac0843b6c",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set udp ip:port",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.udp_ip_port",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1581.765625,
+        "y": 4911.181640625,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb9f89e948bdda86",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.rtmp_ip_port",
+        "payloadType": "global",
+        "x": 1120,
+        "y": 4967.4091796875,
+        "wires": [
+            [
+                "17889543320f7239"
+            ]
+        ]
+    },
+    {
+        "id": "17889543320f7239",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "RTMP ip:port",
+        "label": "RTMP ip:port",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1370,
+        "y": 4967.4091796875,
+        "wires": [
+            [
+                "793fd51eda4da3b4"
+            ]
+        ]
+    },
+    {
+        "id": "793fd51eda4da3b4",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set rtmp ip:port",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.rtmp_ip_port",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 4967.4091796875,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "976add8cdc661885",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.audio_sample_rate",
+        "payloadType": "global",
+        "x": 1140,
+        "y": 5023,
+        "wires": [
+            [
+                "afc105ffdbfd6b67"
+            ]
+        ]
+    },
+    {
+        "id": "afc105ffdbfd6b67",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "AUDIO SR",
+        "label": "Audio sample rate",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "42d87aea4110d7da",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "8 kHz",
+                "value": "8000",
+                "type": "str"
+            },
+            {
+                "label": "11.025 kHz",
+                "value": "11025",
+                "type": "str"
+            },
+            {
+                "label": "16 kHz",
+                "value": "16000",
+                "type": "str"
+            },
+            {
+                "label": "22.05 kHz",
+                "value": "22050",
+                "type": "str"
+            },
+            {
+                "label": "44.1 kHz",
+                "value": "44100",
+                "type": "str"
+            },
+            {
+                "label": "48 kHz",
+                "value": "48000",
+                "type": "str"
+            },
+            {
+                "label": "88.2 kHz",
+                "value": "88200",
+                "type": "str"
+            },
+            {
+                "label": "96 kHz",
+                "value": "96000",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1370,
+        "y": 5023,
+        "wires": [
+            [
+                "edaef66bea244028"
+            ]
+        ]
+    },
+    {
+        "id": "edaef66bea244028",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set AUDIO SR",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.audio_sample_rate",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 5023,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1476c7ae3ee7429f",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.audio_delay",
+        "payloadType": "global",
+        "x": 260,
+        "y": 4800,
+        "wires": [
+            [
+                "bda9d0fa12b73a7b"
+            ]
+        ]
+    },
+    {
+        "id": "bda9d0fa12b73a7b",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "Audio delay",
+        "label": "Audio delay in seconds",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 510,
+        "y": 4800,
+        "wires": [
+            [
+                "9707e10f88d44a13"
+            ]
+        ]
+    },
+    {
+        "id": "9707e10f88d44a13",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set audio delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.audio_delay",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 4800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4f4bb8ab484614c",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.thread_queue",
+        "payloadType": "global",
+        "x": 270,
+        "y": 4840,
+        "wires": [
+            [
+                "268823098bee16e3"
+            ]
+        ]
+    },
+    {
+        "id": "268823098bee16e3",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "Thread queue",
+        "label": "Thread queue",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 520,
+        "y": 4840,
+        "wires": [
+            [
+                "7de98b3ad530b9ed"
+            ]
+        ]
+    },
+    {
+        "id": "7de98b3ad530b9ed",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set thread queue",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.thread_queue",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 4840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adec478022684111",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.rt_buffer",
+        "payloadType": "global",
+        "x": 248.67578125,
+        "y": 4963,
+        "wires": [
+            [
+                "3867abc64be57709"
+            ]
+        ]
+    },
+    {
+        "id": "3867abc64be57709",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "RT buffer",
+        "label": "RT buffer",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 498.67578125,
+        "y": 4963,
+        "wires": [
+            [
+                "5742c2b6848b86ca"
+            ]
+        ]
+    },
+    {
+        "id": "5742c2b6848b86ca",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set rt buffer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.rt_buffer",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 728.67578125,
+        "y": 4963,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0cd2e5a31c4cd6b",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.fifo_size",
+        "payloadType": "global",
+        "x": 248.67578125,
+        "y": 5003,
+        "wires": [
+            [
+                "4d3826e743c485db"
+            ]
+        ]
+    },
+    {
+        "id": "4d3826e743c485db",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "FIFO size",
+        "label": "FIFO size",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 498.67578125,
+        "y": 5003,
+        "wires": [
+            [
+                "c79482819129c76e"
+            ]
+        ]
+    },
+    {
+        "id": "c79482819129c76e",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set FIFO size",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.fifo_size",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 728.67578125,
+        "y": 5003,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d46536f5ead91b86",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.audio_delay_vvc",
+        "payloadType": "global",
+        "x": 260,
+        "y": 4900,
+        "wires": [
+            [
+                "f576c965ac8d9aab"
+            ]
+        ]
+    },
+    {
+        "id": "f576c965ac8d9aab",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "Audio delay",
+        "label": "Audio delay in seconds(VVC)",
+        "tooltip": "",
+        "group": "bd5e2c07c46bb0ef",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 510,
+        "y": 4900,
+        "wires": [
+            [
+                "6e6700cfb7db9272"
+            ]
+        ]
+    },
+    {
+        "id": "6e6700cfb7db9272",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "16b2433f74b66b9a",
+        "name": "set audio delay",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.audio_delay_vvc",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 4900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dc824c56f4f3a2c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.dvbs_gui_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93f563206f98cde4",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "dvbs_gui_path",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 960,
+        "y": 5400,
+        "wires": [
+            [
+                "9dc824c56f4f3a2c"
+            ]
+        ]
+    },
+    {
+        "id": "a53750444a663bac",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "dvbs_gui_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.dvbs_gui_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 5400,
+        "wires": [
+            [
+                "93f563206f98cde4"
+            ]
+        ]
+    },
+    {
+        "id": "06596bd1203529e7",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "inject",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "x": 170,
+        "y": 5160,
+        "wires": [
+            [
+                "3aadcd5b16a568f8"
+            ]
+        ]
+    },
+    {
+        "id": "3aadcd5b16a568f8",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "filename": "settings/device.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 390,
+        "y": 5160,
+        "wires": [
+            [
+                "a53750444a663bac",
+                "ad88d2145d494f9b",
+                "382c0ba4ac25e933",
+                "05d216119b33b43c",
+                "21bcf98d22dabf77",
+                "55f7b77a67cc54df",
+                "81633328a5ead7be",
+                "87560b970ae3d1ca",
+                "517a1391985bff60",
+                "3b2bfc1de615d1c2",
+                "9077d20ca65ab2fd",
+                "d8696aeccbf8391b",
+                "9fc2b2b1712c4ac3"
+            ]
+        ]
+    },
+    {
+        "id": "e4d49de5ef76b48c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.vlc_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "973c10af4dbfb52e",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "vlc_path",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 940,
+        "y": 5120,
+        "wires": [
+            [
+                "e4d49de5ef76b48c"
+            ]
+        ]
+    },
+    {
+        "id": "ad88d2145d494f9b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "vlc_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.vlc_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 5120,
+        "wires": [
+            [
+                "973c10af4dbfb52e"
+            ]
+        ]
+    },
+    {
+        "id": "30437f33c9972f90",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let ffmpeg_path = msg.payload\nglobal.set(\"device.ffmpeg_path\", ffmpeg_path);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5f093958cc5103e",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "ffmpeg_path",
+        "tooltip": "",
+        "group": "28123a21c50f54af",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 950,
+        "y": 5160,
+        "wires": [
+            [
+                "30437f33c9972f90"
+            ]
+        ]
+    },
+    {
+        "id": "21bcf98d22dabf77",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "ffmpeg_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffmpeg_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 5160,
+        "wires": [
+            [
+                "c5f093958cc5103e"
+            ]
+        ]
+    },
+    {
+        "id": "77d1845d8d7e97dd",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let ffplay_path = msg.payload\nglobal.set(\"device.ffplay_path\", ffplay_path);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c666d4b66bdb1c1",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "ffplay_path",
+        "tooltip": "",
+        "group": "28123a21c50f54af",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 950,
+        "y": 5200,
+        "wires": [
+            [
+                "77d1845d8d7e97dd"
+            ]
+        ]
+    },
+    {
+        "id": "382c0ba4ac25e933",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "ffplay_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffplay_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 5200,
+        "wires": [
+            [
+                "7c666d4b66bdb1c1"
+            ]
+        ]
+    },
+    {
+        "id": "a65e0da8e66d8647",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let ffprobe_path = msg.payload\nglobal.set(\"device.ffprobe_path\", ffprobe_path);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08bb407e7555f53c",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "ffprobe_path",
+        "tooltip": "",
+        "group": "28123a21c50f54af",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 950,
+        "y": 5240,
+        "wires": [
+            [
+                "a65e0da8e66d8647"
+            ]
+        ]
+    },
+    {
+        "id": "05d216119b33b43c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "ffprobe_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffprobe_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 5240,
+        "wires": [
+            [
+                "08bb407e7555f53c"
+            ]
+        ]
+    },
+    {
+        "id": "4cea289b661afb2e",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.sig_report_suffux\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f67aefa381b6dc8a",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "Signal report suffix",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 970,
+        "y": 5320,
+        "wires": [
+            [
+                "4cea289b661afb2e"
+            ]
+        ]
+    },
+    {
+        "id": "55f7b77a67cc54df",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "dvbs_gui_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.sig_report_suffux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 5320,
+        "wires": [
+            [
+                "f67aefa381b6dc8a"
+            ]
+        ]
+    },
+    {
+        "id": "587ba7dcecad6d47",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let ffplay_path_linux = msg.payload\nglobal.set(\"device.ffplay_path_linux\", ffplay_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c3e78c6704e92a2",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "ffplay_path_linux",
+        "tooltip": "",
+        "group": "28123a21c50f54af",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 970,
+        "y": 5440,
+        "wires": [
+            [
+                "587ba7dcecad6d47"
+            ]
+        ]
+    },
+    {
+        "id": "517a1391985bff60",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "ffplay_path_linux",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffplay_path_linux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5440,
+        "wires": [
+            [
+                "8c3e78c6704e92a2"
+            ]
+        ]
+    },
+    {
+        "id": "bdad9791244eab3b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let ffprobe_path_linux = msg.payload\nglobal.set(\"device.ffprobe_path_linux\", ffprobe_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21b402fbd4675dcf",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "ffprobe_path_linux",
+        "tooltip": "",
+        "group": "28123a21c50f54af",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 970,
+        "y": 5480,
+        "wires": [
+            [
+                "bdad9791244eab3b"
+            ]
+        ]
+    },
+    {
+        "id": "87560b970ae3d1ca",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "ffprobe_path_linux",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffprobe_path_linux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5480,
+        "wires": [
+            [
+                "21b402fbd4675dcf"
+            ]
+        ]
+    },
+    {
+        "id": "46a46f85dadd76f6",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let ffmpeg_path_linux = msg.payload\nglobal.set(\"device.ffmpeg_path_linux\", ffmpeg_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2427bded041bffae",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "ffmpeg_path_linux",
+        "tooltip": "",
+        "group": "28123a21c50f54af",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 970,
+        "y": 5520,
+        "wires": [
+            [
+                "46a46f85dadd76f6"
+            ]
+        ]
+    },
+    {
+        "id": "81633328a5ead7be",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "ffmpeg_path_linux",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.ffmpeg_path_linux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 5520,
+        "wires": [
+            [
+                "2427bded041bffae"
+            ]
+        ]
+    },
+    {
+        "id": "3b2bfc1de615d1c2",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "set tuner ts ip address",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.rx.tsip;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 5560,
+        "wires": [
+            [
+                "e48b23e1d46a182a"
+            ]
+        ]
+    },
+    {
+        "id": "e48b23e1d46a182a",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "TS RX stream IP",
+        "tooltip": "",
+        "group": "6140f866127cd620",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 970,
+        "y": 5560,
+        "wires": [
+            [
+                "1b33b2ee0e91bf0a"
+            ]
+        ]
+    },
+    {
+        "id": "1b33b2ee0e91bf0a",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let tsip = msg.payload\nglobal.set(\"device.rx.tsip\", tsip);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa64203cbbfc748d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let tiounePath = msg.payload\nglobal.set(\"device.minitioune_path\", tiounePath);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f59601c8ef54fb30",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "minitioune path",
+        "tooltip": "",
+        "group": "b774f32781d086fb",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 960,
+        "y": 5360,
+        "wires": [
+            [
+                "fa64203cbbfc748d"
+            ]
+        ]
+    },
+    {
+        "id": "9077d20ca65ab2fd",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "minitiounePath",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.minitioune_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 5360,
+        "wires": [
+            [
+                "f59601c8ef54fb30"
+            ]
+        ]
+    },
+    {
+        "id": "264f78c58101c550",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let vlc_path_linux = msg.payload\nglobal.set(\"device.vlc_path_linux\", vlc_path_linux);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 5280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bcea6a9dea321503",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "vlc_path_linux",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 960,
+        "y": 5280,
+        "wires": [
+            [
+                "264f78c58101c550"
+            ]
+        ]
+    },
+    {
+        "id": "d8696aeccbf8391b",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "vlc_path_linux",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.vlc_path_linux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 5280,
+        "wires": [
+            [
+                "bcea6a9dea321503"
+            ]
+        ]
+    },
+    {
+        "id": "9fc2b2b1712c4ac3",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "set host url",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.hosting_url;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 5640,
+        "wires": [
+            [
+                "cf620cc1430c2ec5"
+            ]
+        ]
+    },
+    {
+        "id": "cf620cc1430c2ec5",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "hosting url(please forward ports 9001 and 7681 to this server from your local network)",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 740,
+        "y": 5640,
+        "wires": [
+            [
+                "e63faf17ba00a395"
+            ]
+        ]
+    },
+    {
+        "id": "e63faf17ba00a395",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "let hosting_url = msg.payload\nglobal.set(\"device.hosting_url\", hosting_url);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 5640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f132495fecc36548",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "50b9700a9a4f731c",
+        "name": "save state",
+        "func": "let fft_url = msg.payload\nglobal.set(\"device.fft_url\", fft_url);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 5780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d46af93abcd001aa",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "50b9700a9a4f731c",
+        "name": "spectrumSettings",
+        "func": "let spectrumSettings = JSON.parse(msg.payload);\nmsg.payload = spectrumSettings;\nglobal.set(\"fft\", spectrumSettings);\nlet array = [];\nfor (var key in spectrumSettings) {\n   let obj = {\n      [`${key}`]: `${spectrumSettings[key]}`\n   };\n   array.push(obj);\n}\nmsg.options = array;\nmsg.payload = msg.fft_url;\nreturn msg;\n\n// msg.options = [\"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"8/9\", \"9/10\"];\n//  msg.options = [\n//         { \"144.6MHz\": \"144600000\" },",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 5780,
+        "wires": [
+            [
+                "5a94e29921a8893f"
+            ]
+        ]
+    },
+    {
+        "id": "63d3cb318a61e47d",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "50b9700a9a4f731c",
+        "name": "",
+        "props": [
+            {
+                "p": "fft_url",
+                "v": "device.fft_url",
+                "vt": "global"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 190,
+        "y": 5780,
+        "wires": [
+            [
+                "d03c46be6294064a"
+            ]
+        ]
+    },
+    {
+        "id": "5a94e29921a8893f",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "50b9700a9a4f731c",
+        "name": "FFT",
+        "label": "FFT URL",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "c4b0794d54ab9746",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 830,
+        "y": 5780,
+        "wires": [
+            [
+                "f132495fecc36548"
+            ]
+        ]
+    },
+    {
+        "id": "d03c46be6294064a",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "50b9700a9a4f731c",
+        "name": "",
+        "filename": "settings/spectrum.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 360,
+        "y": 5780,
+        "wires": [
+            [
+                "d46af93abcd001aa"
             ]
         ]
     },
@@ -21227,7 +21337,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
+        "x": 400,
         "y": 120,
         "wires": [
             [
@@ -26694,7 +26804,7 @@
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
-        "interpolate": "step",
+        "interpolate": "bezier",
         "nodata": "",
         "dot": false,
         "ymin": "",
@@ -26971,7 +27081,7 @@
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
-        "interpolate": "step",
+        "interpolate": "bezier",
         "nodata": "",
         "dot": false,
         "ymin": "",
@@ -27148,7 +27258,7 @@
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
-        "interpolate": "step",
+        "interpolate": "bezier",
         "nodata": "",
         "dot": false,
         "ymin": "",
@@ -31372,6 +31482,168 @@
         "y": 80,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "8d93ec9ffef157a7",
+        "type": "http response",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "name": "",
+        "x": 1010,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "bc26bca4691c5b09",
+        "type": "ui_iframe",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "group": "7b6e02f526fcf081",
+        "name": "channel bars",
+        "order": 13,
+        "width": "15",
+        "height": "3",
+        "url": "/channel_bars",
+        "origin": "",
+        "scale": "100",
+        "x": 1030,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97a5bdcba2d539b7",
+        "type": "http in",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "name": "",
+        "url": "/channel_bars/index.js",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "660301aa5cd33713"
+            ]
+        ]
+    },
+    {
+        "id": "660301aa5cd33713",
+        "type": "file in",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "name": "",
+        "filename": "web/channel_bars/index.js",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 480,
+        "y": 100,
+        "wires": [
+            [
+                "56a201d2c28f426d"
+            ]
+        ]
+    },
+    {
+        "id": "56a201d2c28f426d",
+        "type": "change",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/javascript",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 100,
+        "wires": [
+            [
+                "8d93ec9ffef157a7"
+            ]
+        ]
+    },
+    {
+        "id": "9e4289fec815f0a5",
+        "type": "template",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "name": "Constellation HTML and JS",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Channel bars v1</title>\n<script src=\"/paho-mqtt-min.js\"></script>\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var call_sign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n</script>\n<canvas id=\"channels\" style=\"height: 100px;width: 750px\"></canvas>\n<script src=\"/channel_bars/index.js\"></script>\n",
+        "output": "str",
+        "x": 780,
+        "y": 160,
+        "wires": [
+            [
+                "8d93ec9ffef157a7"
+            ]
+        ]
+    },
+    {
+        "id": "8b1f7d494d0389a3",
+        "type": "http in",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "name": "",
+        "url": "/channel_bars",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "2e3c908ba8bc61e5"
+            ]
+        ]
+    },
+    {
+        "id": "2e3c908ba8bc61e5",
+        "type": "function",
+        "z": "bb87a41c971b3c28",
+        "g": "2edde61ef763efb1",
+        "name": "set pluto, callsign and hosting_url",
+        "func": "msg.pluto = global.get(\"broker_address\");\nmsg.callsign = global.get(\"callsign\");\nmsg.hosting_url = global.get(\"device.hosting_url\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "9e4289fec815f0a5"
+            ]
         ]
     }
 ]
