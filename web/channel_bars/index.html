@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<meta charset="utf-8">
+<meta name="author" content="Ohan Smit">
+<canvas id="channels" style="height: 100px;width: 750px"></canvas>
+<script src="../pluto_spectrum/vendor/paho-mqtt-min.js"></script>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let pluto_url = urlParams.get('pluto_url') ?? "192.168.1.111";
+    const hosting_url = pluto_url;
+    const call_sign = urlParams.get('call_sign') ?? "ZS1SCI";
+    const localPage = true;
+</script>
+<script src="index.js"></script>
