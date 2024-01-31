@@ -21,9 +21,11 @@ function connectWebSocket(spectrum) {
   };
   ws.onclose = function () {
     console.log("closed");
+    let cnt = 0;
     setTimeout(function () {
       connectWebSocket(spectrum);
-    }, 1000);
+      cnt++;
+    }, cnt * 1000);
   };
   ws.onerror = function (evt) {
     console.log("error: " + evt.message);
@@ -34,7 +36,7 @@ function connectWebSocket(spectrum) {
     if (evt.data instanceof ArrayBuffer) {
       spectrum.addData(evt.data);
     } else {
-      var data = JSON.parse(evt.data);
+      const data = JSON.parse(evt.data);
       console.dir(data);
       if (data.center) {
         spectrum.setCenterHz(data.center);
@@ -69,11 +71,11 @@ async function getJSON(url) {
       });
 }
 async function getConfig(url) {
-  const json = await getJSON(url);
-  return json;
+  return await getJSON(url);
 }
 
-var freq_info = [];
+
+
 function main() {
   (async () => {
     const url = localPage ? 'http://127.0.0.1:1880' : '';
