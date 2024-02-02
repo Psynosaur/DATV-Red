@@ -565,7 +565,7 @@ Spectrum.prototype.addData = async function (data) {
             this.ctx_wf.canvas.width = this.databin.length;
             this.ctx_wf.fillStyle = "black";
             this.ctx_wf.fillRect(0, 0, this.wf.width, this.wf.height);
-            this.imagedata = this.ctx_wf.createImageData(this.databin.length, 1);
+            this.imagedata = this.ctx_wf?.createImageData(this.databin.length ?? 1, 1);
         }
         this.drawSpectrum(this.databin);
         this.addWaterfallRow(this.databin);

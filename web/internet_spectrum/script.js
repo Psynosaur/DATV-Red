@@ -1314,7 +1314,7 @@ let canvasHeightLast;
       return false;
     }
   };
-  const previousOrientation = window.orientation;
+  let previousOrientation = window.orientation;
   const checkOrientation = function () {
     if (checkFullScreen()) {
       if (window.orientation !== previousOrientation) {
@@ -1367,5 +1367,5 @@ let canvasHeightLast;
   window.addEventListener("resize", checkResize, false);
   window.addEventListener("orientationchange", checkOrientation, false);
   // Android doesn't always fire orientationChange on 180 degree turns
-  setInterval(checkOrientation, 2000);
+  setInterval(checkOrientation, 2000);setInterval(checkOrientation, 2000);
 })();
