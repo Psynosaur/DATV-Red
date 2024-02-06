@@ -114,7 +114,7 @@ Spectrum.prototype.render_signal_box = function (ctx, mouse_x, mouse_y, canvasHe
                 if (signals[i].start > canvasWidth / 1000) {
                     canvasClickBW = signals[i].symbolrate / 1000;
                     downlink = round(signals[i].frequency);
-
+                    uplink = downlink + this.offset
                     clickBox = {
                         x: signals[i].end,
                         y: canvasHeight * (1 / 100),
@@ -328,16 +328,14 @@ Spectrum.prototype.detect_signals = function (fft_data, ctx, canvasHeight, canva
                 if (isNaN(signal_bw) && signal_bw !== 0) break;
 
                 signal_freq = ((mid_signal + 1) / fft_data.length) * 10.0;
-                // RX offset for GPSDO
-                let rx_offset = 16500;
-                let freq = (this.centerHz - (sr / 2)) + (sr * (10 * signal_freq) / 100) - rx_offset;
+                let freq = (this.centerHz - (sr / 2)) + (sr * (10 * signal_freq) / 100);
                 let signal = {
                     start: (start_signal / fft_data.length) * canvasWidth,
                     end: (end_signal / fft_data.length) * canvasWidth,
                     top: canvasHeight - (strength_signal / 65536) * canvasHeight,
                     frequency: freq, // symbolrate: 1000.0 * signal_bw * (Number(sr)/this.spanHz) ,
                     symbolrate: 1000.0 * signal_bw,
-                    offset: (((Math.round(freq / 250_000) * 250_000) - freq) * -1) / 2
+                    offset: ((Math.round(freq / 250_000) * 250_000) - freq) * -1
                 }
                 signals.push(signal);
                 if (Math.round(tunedBox.freq / 125_000) * 125_000 === Math.round(freq / 125_000) * 125_000) {
@@ -1276,7 +1274,9 @@ Spectrum.prototype.on_canvas_click = function () {
         }
 
         const queryParams = new URLSearchParams({
-            downlink: downlink, SR: canvasClickBW
+            downlink,
+            uplink,
+            SR: canvasClickBW
         });
 
         fetch(`${url}/setLocalRx?${queryParams}`).then(() => {
@@ -1309,6 +1309,7 @@ Spectrum.prototype.handleOptions = function (options) {
     this.min_db = options && options.min_db ? options.min_db : 420;
     this.max_db = options && options.max_db ? options.max_db : 490;
     this.threshold = options && options.threshold ? options.threshold : 30;
+    this.offset = options && options.offset ? options.offset : 0;
 };
 
 /**
