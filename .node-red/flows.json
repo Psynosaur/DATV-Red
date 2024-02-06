@@ -222,9 +222,9 @@
             "185cc616489b2615"
         ],
         "x": 22,
-        "y": 1373,
-        "w": 1350,
-        "h": 720
+        "y": 1333,
+        "w": 1296,
+        "h": 760
     },
     {
         "id": "4bfefaeb7f82f4c6",
@@ -833,9 +833,7 @@
             "de3615657f5f8b75"
         ],
         "x": 28,
-        "y": 19,
-        "w": 1138,
-        "h": 348
+        "y": 19
     },
     {
         "id": "b40c8f098d8e9ccc",
@@ -920,9 +918,7 @@
             "30794624a6a04c15"
         ],
         "x": 34,
-        "y": 979,
-        "w": 1292,
-        "h": 562
+        "y": 979
     },
     {
         "id": "97ecf1ac9459a777",
@@ -976,9 +972,7 @@
             "5445cf6467643bef"
         ],
         "x": 34,
-        "y": 379,
-        "w": 1592,
-        "h": 588
+        "y": 379
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1112,7 +1106,9 @@
             "8b74e5e219711233"
         ],
         "x": 54,
-        "y": 51.5
+        "y": 51.5,
+        "w": 812,
+        "h": 149.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -1213,7 +1209,9 @@
             "097842d26da1c238"
         ],
         "x": 174,
-        "y": 1999
+        "y": 1999,
+        "w": 1452,
+        "h": 462
     },
     {
         "id": "38c9fb66e354750a",
@@ -1230,75 +1228,6 @@
         ],
         "x": 34,
         "y": 299
-    },
-    {
-        "id": "44bb8f59b40e58cf",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "MQTT TX",
-        "style": {
-            "label": true,
-            "fill": "#92d04f",
-            "label-position": "n"
-        },
-        "nodes": [
-            "faf5a12234cf3d6a",
-            "64a9de4a4bd4dab6",
-            "1b201451fae7fae6",
-            "d57c9c3c32e5a58b",
-            "7f859a7a7ee27404",
-            "68e079e44b9dd5c2",
-            "5af92414e3f29873",
-            "524de1980547eaea",
-            "5d8a44d8d3dfd931",
-            "33dc958065cdada2",
-            "e91e846502f35c90",
-            "14e5a286770d3cd0",
-            "cec2f56be1fccf51",
-            "152082051caa1d1d",
-            "88c17ad9f892b06d",
-            "762e2c70acd9ebe0",
-            "b1fb472a0a5e24a7",
-            "37b18a222ae30d52",
-            "b6da9101dce07fd1",
-            "807128449158f2eb",
-            "f65818d390a71152",
-            "9695655b0a719b4a",
-            "20fcf5f8b61db48f",
-            "89b95ad3b6453036",
-            "af45e1bfc3e75ecb",
-            "aa4a256618f7c4a6",
-            "55bca069bdb08ee7",
-            "c5ceed661f8529ce",
-            "0c74362e749bcdc4",
-            "4a50af4869a33baa",
-            "b1b6fc76c723e0f1",
-            "7b06e3153449eb9a",
-            "d533bf0f097fedc4",
-            "f7a31bdb75d1c530",
-            "1d6a50722e33c015",
-            "e1d2a880c9ca99a4",
-            "3084477086b5b8f2",
-            "1b8ee9dbe0155dcd",
-            "e5b15ef8662e723b",
-            "34093316d4a4742b",
-            "2b25acbe5bad144e",
-            "c20ffdd3c22ba8da",
-            "0d29c855caae3889",
-            "cf798b4f51cbac85",
-            "343e66e2cb1a67c3",
-            "4a0642add9f7b983",
-            "2d85a16a42027727",
-            "2d1d2f2c5a3e44b6",
-            "947313bf5f0e22d1",
-            "bb78b77ba46f7005",
-            "5c31dbeab217c8e9",
-            "534c2d0e405b4cdf"
-        ],
-        "x": 2234,
-        "y": 1219,
-        "w": 1272,
-        "h": 1762
     },
     {
         "id": "936b15192e58877f",
@@ -1463,10 +1392,18 @@
             "59db3398c81e2937",
             "f135d524ed4f4baa",
             "9ffdedeaa71563a8",
-            "a0d336bd144ceaf0"
+            "a0d336bd144ceaf0",
+            "d094db56c84ad604",
+            "4622081ade1760cb",
+            "6f0bbb346cfd21a4",
+            "db2b919bb3f55ce8",
+            "3545ee6c53a576c0",
+            "ea5ac76535869d25"
         ],
         "x": 54,
-        "y": 239
+        "y": 239,
+        "w": 1872,
+        "h": 1582
     },
     {
         "id": "d7eac6e7f4ef2b55",
@@ -2117,11 +2054,13 @@
             "d46af93abcd001aa",
             "63d3cb318a61e47d",
             "5a94e29921a8893f",
-            "d03c46be6294064a"
+            "d03c46be6294064a",
+            "8c1b5efab2a40a90",
+            "5aa9ce11562d2ef0"
         ],
         "x": 94,
         "y": 5739,
-        "w": 1012,
+        "w": 1352,
         "h": 82
     },
     {
@@ -2147,6 +2086,75 @@
         ],
         "x": 94,
         "y": 59
+    },
+    {
+        "id": "44bb8f59b40e58cf",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "MQTT TX",
+        "style": {
+            "label": true,
+            "fill": "#92d04f",
+            "label-position": "n"
+        },
+        "nodes": [
+            "faf5a12234cf3d6a",
+            "64a9de4a4bd4dab6",
+            "1b201451fae7fae6",
+            "d57c9c3c32e5a58b",
+            "7f859a7a7ee27404",
+            "68e079e44b9dd5c2",
+            "5af92414e3f29873",
+            "524de1980547eaea",
+            "5d8a44d8d3dfd931",
+            "33dc958065cdada2",
+            "e91e846502f35c90",
+            "14e5a286770d3cd0",
+            "cec2f56be1fccf51",
+            "152082051caa1d1d",
+            "88c17ad9f892b06d",
+            "762e2c70acd9ebe0",
+            "b1fb472a0a5e24a7",
+            "37b18a222ae30d52",
+            "b6da9101dce07fd1",
+            "807128449158f2eb",
+            "f65818d390a71152",
+            "9695655b0a719b4a",
+            "20fcf5f8b61db48f",
+            "89b95ad3b6453036",
+            "af45e1bfc3e75ecb",
+            "aa4a256618f7c4a6",
+            "55bca069bdb08ee7",
+            "c5ceed661f8529ce",
+            "0c74362e749bcdc4",
+            "4a50af4869a33baa",
+            "b1b6fc76c723e0f1",
+            "7b06e3153449eb9a",
+            "d533bf0f097fedc4",
+            "f7a31bdb75d1c530",
+            "1d6a50722e33c015",
+            "e1d2a880c9ca99a4",
+            "3084477086b5b8f2",
+            "1b8ee9dbe0155dcd",
+            "e5b15ef8662e723b",
+            "34093316d4a4742b",
+            "2b25acbe5bad144e",
+            "c20ffdd3c22ba8da",
+            "0d29c855caae3889",
+            "cf798b4f51cbac85",
+            "343e66e2cb1a67c3",
+            "4a0642add9f7b983",
+            "2d85a16a42027727",
+            "2d1d2f2c5a3e44b6",
+            "947313bf5f0e22d1",
+            "bb78b77ba46f7005",
+            "534c2d0e405b4cdf",
+            "5c31dbeab217c8e9"
+        ],
+        "x": 2234,
+        "y": 1219,
+        "w": 1272,
+        "h": 1762
     },
     {
         "id": "9396693c.371108",
@@ -2183,17 +2191,17 @@
             "df0fb204fd14a618",
             "079e67d7c1e3e99d",
             "553167af0b3221c1",
-            "0d9e815c3c9d7d4a",
             "d95cd044385c2ba5",
             "3bec8a3571888efd",
             "0c5fbec92e79eb41",
             "b86aad85fafa0443",
-            "73f33f3d3a9a37b9"
+            "0d9e815c3c9d7d4a",
+            "c56212ba6e7e964d"
         ],
         "x": 48,
-        "y": 1399,
-        "w": 1298,
-        "h": 668
+        "y": 1359,
+        "w": 1244,
+        "h": 708
     },
     {
         "id": "de3615657f5f8b75",
@@ -2222,9 +2230,46 @@
             "0dd67a65a9a17989"
         ],
         "x": 54,
-        "y": 99,
-        "w": 872,
-        "h": 242
+        "y": 99
+    },
+    {
+        "id": "4b4adb8ffff59a56",
+        "type": "group",
+        "z": "9d964f25dcc4d750",
+        "g": "97ecf1ac9459a777",
+        "style": {
+            "stroke": "#30363d",
+            "stroke-opacity": "1",
+            "fill": "#010409",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#e6edf3"
+        },
+        "nodes": [
+            "9a20e47615d12403",
+            "ef70d0aa4139e52a"
+        ],
+        "x": 794,
+        "y": 819
+    },
+    {
+        "id": "b66465fdf55144d8",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d8e778f40edcc21",
+        "name": "read pluto.json file",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8d24e6025fe47ef5",
+            "cdc147736509f758"
+        ],
+        "x": 234,
+        "y": 379,
+        "w": 532,
+        "h": 82
     },
     {
         "id": "5c31dbeab217c8e9",
@@ -2246,47 +2291,6 @@
         "h": 142
     },
     {
-        "id": "4b4adb8ffff59a56",
-        "type": "group",
-        "z": "9d964f25dcc4d750",
-        "g": "97ecf1ac9459a777",
-        "style": {
-            "stroke": "#30363d",
-            "stroke-opacity": "1",
-            "fill": "#010409",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#e6edf3"
-        },
-        "nodes": [
-            "9a20e47615d12403",
-            "ef70d0aa4139e52a"
-        ],
-        "x": 794,
-        "y": 819,
-        "w": 232,
-        "h": 122
-    },
-    {
-        "id": "b66465fdf55144d8",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "1d8e778f40edcc21",
-        "name": "read pluto.json file",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "8d24e6025fe47ef5",
-            "cdc147736509f758"
-        ],
-        "x": 234,
-        "y": 379,
-        "w": 532,
-        "h": 82
-    },
-    {
         "id": "079e67d7c1e3e99d",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -2305,10 +2309,10 @@
             "8764be884d895f57",
             "2265f82b17bf49e1"
         ],
-        "x": 454,
-        "y": 1479,
-        "w": 792,
-        "h": 162
+        "x": 414,
+        "y": 1439,
+        "w": 832,
+        "h": 222
     },
     {
         "id": "553167af0b3221c1",
@@ -2332,25 +2336,6 @@
         "x": 474,
         "y": 1659,
         "w": 712,
-        "h": 162
-    },
-    {
-        "id": "0d9e815c3c9d7d4a",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "185cc616489b2615",
-        "name": "config endpoint for our widgets",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "fc107bad9688d742",
-            "74e7eb9fa07e7e53",
-            "cc29196277550f51"
-        ],
-        "x": 94,
-        "y": 1679,
-        "w": 252,
         "h": 162
     },
     {
@@ -2393,6 +2378,25 @@
         "y": 1479,
         "w": 332,
         "h": 202
+    },
+    {
+        "id": "0d9e815c3c9d7d4a",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "config endpoint for our widgets",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fc107bad9688d742",
+            "74e7eb9fa07e7e53",
+            "cc29196277550f51"
+        ],
+        "x": 94,
+        "y": 1679,
+        "w": 252,
+        "h": 162
     },
     {
         "id": "9b3296db2e0c849f",
@@ -2954,16 +2958,6 @@
         "width": "6",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "8bb4791826ed7509",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "27ec828db8c0f22b",
-        "order": 5,
-        "width": 4,
-        "height": 1
     },
     {
         "id": "42992fae82400161",
@@ -6907,8 +6901,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2470,
-        "y": 1360,
+        "x": 2370,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -6927,12 +6921,12 @@
         "finalize": "",
         "libs": [],
         "x": 2710,
-        "y": 1360,
+        "y": 1340,
         "wires": [
             [
                 "faf5a12234cf3d6a",
-                "1b8ee9dbe0155dcd",
-                "343e66e2cb1a67c3"
+                "343e66e2cb1a67c3",
+                "1b8ee9dbe0155dcd"
             ]
         ]
     },
@@ -6951,7 +6945,9 @@
         "x": 3020,
         "y": 1360,
         "wires": [
-            []
+            [
+                "2b25acbe5bad144e"
+            ]
         ]
     },
     {
@@ -8578,6 +8574,7 @@
         "id": "8764be884d895f57",
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "079e67d7c1e3e99d",
         "name": "CTRL click notfication formatter",
         "func": "let payload = msg.payload;\npayload.downlink = Number(payload.downlink).toFixed(2);\npayload.SR = Number(payload.SR * 1000);\nmsg.payload = JSON.stringify(payload);\nreturn msg;",
@@ -8588,7 +8585,7 @@
         "finalize": "",
         "libs": [],
         "x": 870,
-        "y": 1600,
+        "y": 1620,
         "wires": [
             [
                 "6154ee8d719adfbd",
@@ -8602,7 +8599,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "079e67d7c1e3e99d",
         "name": "CTRL click for RX frequency",
-        "func": "let freq = Number(msg.payload.downlink);\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq} MHz, SR: ${sr}kS `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_MHz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq * 1000000;\nmsg.payload = freq; \nreturn msg;",
+        "func": "let freq = Number(msg.payload.downlink);\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq.toFixed(6)} MHz, SR: ${sr}kS `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_MHz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq * 1000000;\nmsg.payload = freq; \nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8647,8 +8644,7 @@
                 "e56ed07756258705",
                 "b828f6a6.47d708",
                 "64b76a53a5576a2f",
-                "63698f5f30341a43",
-                "73f33f3d3a9a37b9"
+                "63698f5f30341a43"
             ]
         ]
     },
@@ -9955,8 +9951,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 640,
-        "y": 2300,
+        "x": 800,
+        "y": 2320,
         "wires": [
             [
                 "a56122d1643df6cf",
@@ -10977,45 +10973,6 @@
         "wires": []
     },
     {
-        "id": "fc107bad9688d742",
-        "type": "http in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "0d9e815c3c9d7d4a",
-        "name": "",
-        "url": "/config",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 190,
-        "y": 1720,
-        "wires": [
-            [
-                "74e7eb9fa07e7e53"
-            ]
-        ]
-    },
-    {
-        "id": "cc29196277550f51",
-        "type": "function",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "0d9e815c3c9d7d4a",
-        "name": "return config object",
-        "func": "let payload = JSON.parse(msg.payload);\npayload.selected = global.get(\"device.fft_url\");\npayload.receivers = global.get(\"receivers\")\npayload.rx_sr = global.get(\"device.rx.sr\");\npayload.rx_freq = Number(global.get(\"device.rx.frequency\"))*1000;\npayload.settings = global.get(\"settings\");\nmsg.payload = payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 210,
-        "y": 1800,
-        "wires": [
-            [
-                "b828f6a6.47d708"
-            ]
-        ]
-    },
-    {
         "id": "fd4311919bb382bd",
         "type": "file in",
         "z": "2ec6a7ddfe0cd173",
@@ -11033,27 +10990,6 @@
         "wires": [
             [
                 "3b59a3e0f9422294"
-            ]
-        ]
-    },
-    {
-        "id": "74e7eb9fa07e7e53",
-        "type": "file in",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "0d9e815c3c9d7d4a",
-        "name": "",
-        "filename": "settings/spectrum.json",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 220,
-        "y": 1760,
-        "wires": [
-            [
-                "cc29196277550f51"
             ]
         ]
     },
@@ -11325,8 +11261,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 1520,
+        "x": 550,
+        "y": 1480,
         "wires": [
             [
                 "2a5a3cc2d63b2942",
@@ -13078,8 +13014,7 @@
         "wires": [
             [
                 "b828f6a6.47d708",
-                "2265f82b17bf49e1",
-                "b86aad85fafa0443"
+                "2265f82b17bf49e1"
             ]
         ]
     },
@@ -13112,7 +13047,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "185cc616489b2615",
         "name": "CTRL click for RX frequency",
-        "func": "let freq = Number(msg.payload.downlink) + Math.abs(global.get(\"device.rx.offset\"));\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq} MHz, SR: ${sr}kS `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_MHz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq;\nmsg.payload = round(freq, 25000);\nreturn msg;\n\n\nfunction round(value, step) {\n    step || (step = 1.0);\n    var inv = 1.0 / step;\n    return Math.round(value * inv) / inv;\n}",
+        "func": "let freq = Number(msg.payload.uplink)\nlet sr = Number(msg.payload.SR);\nsr = sr * 1000;\nlet title = `Freq: ${freq.toFixed(6)} MHz, SR: ${sr}kS `;\nif (global.get(\"platform\") === \"linux\") title = `Freq:_${freq}_Hz,SR:_${sr}_kS/s_`;\nmsg.title = title;\nglobal.set(\"ffplay_title\", title);\nfreq = freq;\nmsg.payload = freq\nreturn msg;\n\n\nfunction round(value, step) {\n    step || (step = 1.0);\n    var inv = 1.0 / step;\n    return Math.round(value * inv) / inv;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13124,7 +13059,7 @@
         "wires": [
             [
                 "64a9de4a4bd4dab6",
-                "b86aad85fafa0443"
+                "c56212ba6e7e964d"
             ]
         ]
     },
@@ -13142,8 +13077,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 1440,
+        "x": 1110,
+        "y": 1400,
         "wires": []
     },
     {
@@ -13152,14 +13087,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "RX Frequency",
-        "func": "let span = []\nlet switcher = Number(msg.payload);\n\nswitch (switcher) {\n    case 35000:\n        span = [\n            560000,\n            1120000,\n            1680000,\n            2240000,\n            2800000,\n            3360000,\n            3920000,\n            4480000\n        ]\n        break;\n    case 66000:\n        span = [\n            1056000,\n            2112000,\n            3168000,\n            4224000,\n            5280000,\n            6336000,\n            7392000,\n            8448000\n        ]\n        break;\n    case 125000:\n        span = [\n            2000000,\n            4000000,\n            6000000,\n            8000000,\n            10000000,\n            12000000,\n            14000000,\n            16000000\n        ]\n        break;\n    case 250000:\n        span = [\n            4000000,\n            8000000,\n            12000000,\n            16000000,\n            20000000,\n            24000000,\n            28000000,\n            32000000\n        ]\n        break;\n    case 333000:\n        span = [\n            5328000,\n            10656000,\n            15984000,\n            21312000,\n            26640000,\n            31968000,\n            37296000,\n            42624000\n        ]\n        break;\n    case 500000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n    case 1000000:\n        span = [\n            16000000,\n            32000000,\n            48000000,\n            64000000,\n            80000000,\n            96000000,\n            112000000,\n            128000000\n        ]\n        break;\n    case 1500000:\n        span = [\n            24000000,\n            48000000,\n            72000000,\n            96000000,\n            120000000,\n            144000000,\n            168000000,\n            192000000\n        ]\n        break;\n    case 2000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000\n        ]\n        break;\n    case 3000000:\n        span = [\n            6000000,\n            12000000,\n            18000000,\n            24000000,\n            30000000,\n            36000000,\n            42000000,\n            48000000\n        ]\n        break;\n    case 4000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n}\n\nlet topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\nmsg.topic = topic;\nmsg.payload = global.get(\"settings.spectrum.freq\") * 1_000_000;\nmsg.span = span;\nglobal.set(\"span_options\", span);\nglobal.set(\"change_span_options\", true);\nreturn msg;",
+        "func": "let span = []\nlet switcher = Number(msg.payload);\n\nswitch (switcher) {\n    case 35000:\n        span = [\n            560000,\n            1120000,\n            1680000,\n            2240000,\n            2800000,\n            3360000,\n            3920000,\n            4480000\n        ]\n        break;\n    case 66000:\n        span = [\n            1056000,\n            2112000,\n            3168000,\n            4224000,\n            5280000,\n            6336000,\n            7392000,\n            8448000\n        ]\n        break;\n    case 125000:\n        span = [\n            2000000,\n            4000000,\n            6000000,\n            8000000,\n            10000000,\n            12000000,\n            14000000,\n            16000000\n        ]\n        break;\n    case 250000:\n        span = [\n            4000000,\n            8000000,\n            12000000,\n            16000000,\n            20000000,\n            24000000,\n            28000000,\n            32000000\n        ]\n        break;\n    case 333000:\n        span = [\n            5328000,\n            10656000,\n            15984000,\n            21312000,\n            26640000,\n            31968000,\n            37296000,\n            42624000\n        ]\n        break;\n    case 500000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n    case 1000000:\n        span = [\n            16000000,\n            32000000,\n            48000000,\n            64000000,\n            80000000,\n            96000000,\n            112000000,\n            128000000\n        ]\n        break;\n    case 1500000:\n        span = [\n            24000000,\n            48000000,\n            72000000,\n            96000000,\n            120000000,\n            144000000,\n            168000000,\n            192000000\n        ]\n        break;\n    case 2000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000\n        ]\n        break;\n    case 3000000:\n        span = [\n            6000000,\n            12000000,\n            18000000,\n            24000000,\n            30000000,\n            36000000,\n            42000000,\n            48000000\n        ]\n        break;\n    case 4000000:\n        span = [\n            8000000,\n            16000000,\n            24000000,\n            32000000,\n            40000000,\n            48000000,\n            56000000,\n            64000000\n        ]\n        break;\n}\n\n// let topic = `${global.get(\"cmdPath\")}/rx/webfft/frequency`;\n// msg.topic = topic;\n// msg.payload = global.get(\"settings.spectrum.freq\") * 1_000_000;\nmsg.span = span;\nglobal.set(\"span_options\", span);\nglobal.set(\"change_span_options\", true);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3000,
+        "x": 2920,
         "y": 1420,
         "wires": [
             [
@@ -14261,7 +14196,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "ffmpeg command builder",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let input = global.get(\"settings.input_choice\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} `+\n    `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-minrate ${Math.floor(global.get(\"settings.VBITRATE\"))}k -maxrate ${Math.floor(global.get(\"settings.VBITRATE\"))}k`;\n    let keyframe_interval = global.get(\"settings.FPS\") * 5;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            //codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx264 -r ${global.get(\n                \"settings.FPS\"\n            )} ${shapingString} -x264-params rc-lookahead=10:no-scenecut=1`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate*1000) - audio_bit_rate) / 10000) * 10000;\n            let targetBitrate = Math.floor((max_video_rate / 1.6) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = false;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:tiles=2x2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n\n    \n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 696;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED-v4\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.video_device_linux\"\n                )}\\ -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.audio_device_linux\"\n                )}\\ `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                    \"settings.video_device\"\n                )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                    \"settings.audio_device\"\n                )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${audio_bit_rate} ` +\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        // `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type advanced_codec_digital_hdtv ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        // `-metadata service_type=${service_provider} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\n            \"device.tx.dvbs2.tssourceaddress\"\n        )}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let input = global.get(\"settings.input_choice\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} `+\n    `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-minrate ${Math.floor(global.get(\"settings.VBITRATE\"))}k -maxrate ${Math.floor(global.get(\"settings.VBITRATE\"))}k`;\n    let keyframe_interval = global.get(\"settings.FPS\") * 5;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            //codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx264 -r ${global.get(\n                \"settings.FPS\"\n            )} ${shapingString} -x264-params rc-lookahead=10:no-scenecut=1`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx265 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate*1000) - audio_bit_rate) / 10000) * 10000;\n            let targetBitrate = Math.floor((max_video_rate / 1.6) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = false;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:tiles=2x2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 -crf 30 -usage realtime ${shapingString}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n\n    \n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    let buffer_size = videoBitrate * buffer_factor;\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let mpegts_service_id = 696;\n    let mpegts_transport_stream_id = 4095;\n    let mpegts_pmt_start_pid = 4095;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED-v4\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.video_device_linux\"\n                )}\\ -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.audio_device_linux\"\n                )}\\ `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                    \"settings.video_device\"\n                )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                    \"settings.audio_device\"\n                )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K -g ${keyframe_interval} ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${audio_bit_rate} ` +\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        // `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type advanced_codec_digital_hdtv ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        // `-metadata service_type=${service_provider} ` +\n        `-af aresample=async=1 ` +\n        `\\\"udp://${global.get(\n            \"device.tx.dvbs2.tssourceaddress\"\n        )}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -18498,7 +18433,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "50b9700a9a4f731c",
         "name": "save state",
-        "func": "let fft_url = msg.payload\nglobal.set(\"device.fft_url\", fft_url);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "func": "let fft_url = msg.payload\nglobal.set(\"device.fft_url\", fft_url);\nglobal.set(\"deviceChange\", true);\nmsg.payload = \"fft\"\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -18508,7 +18443,9 @@
         "x": 1010,
         "y": 5780,
         "wires": [
-            []
+            [
+                "8c1b5efab2a40a90"
+            ]
         ]
     },
     {
@@ -18608,23 +18545,6 @@
         ]
     },
     {
-        "id": "73f33f3d3a9a37b9",
-        "type": "debug",
-        "z": "2ec6a7ddfe0cd173",
-        "g": "185cc616489b2615",
-        "name": "debug 31",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 290,
-        "y": 1440,
-        "wires": []
-    },
-    {
         "id": "45f08d8899b75e5b",
         "type": "debug",
         "z": "2ec6a7ddfe0cd173",
@@ -18699,6 +18619,136 @@
         ]
     },
     {
+        "id": "fc107bad9688d742",
+        "type": "http in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0d9e815c3c9d7d4a",
+        "name": "",
+        "url": "/config",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 1720,
+        "wires": [
+            [
+                "74e7eb9fa07e7e53"
+            ]
+        ]
+    },
+    {
+        "id": "74e7eb9fa07e7e53",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0d9e815c3c9d7d4a",
+        "name": "",
+        "filename": "settings/spectrum.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 220,
+        "y": 1760,
+        "wires": [
+            [
+                "cc29196277550f51"
+            ]
+        ]
+    },
+    {
+        "id": "cc29196277550f51",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0d9e815c3c9d7d4a",
+        "name": "return config object",
+        "func": "let payload = JSON.parse(msg.payload);\npayload.selected = global.get(\"device.fft_url\");\npayload.receivers = global.get(\"receivers\")\npayload.rx_sr = global.get(\"device.rx.sr\");\npayload.rx_freq = Number(global.get(\"device.rx.frequency\"))*1000;\npayload.settings = global.get(\"settings\");\npayload.offset = Math.abs(global.get(\"device.rx.offset\"))\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 1800,
+        "wires": [
+            [
+                "b828f6a6.47d708"
+            ]
+        ]
+    },
+    {
+        "id": "5aa9ce11562d2ef0",
+        "type": "ui_template",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "50b9700a9a4f731c",
+        "group": "c4b0794d54ab9746",
+        "name": "window redirect",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n    scope.$watch('msg.payload', function(data) {\n        if (data == \"fft\") {\n          window.open(\"http://127.0.0.1:1880/ui\", \"_self\");\n        } \n        // if (data == \"GitHub\") {\n        //   //window.open(\"https://github.com/node-red\");\n        //   window.location.href = \"https://github.com/node-red\";\n        // } \n    });\n})(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1340,
+        "y": 5780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c1b5efab2a40a90",
+        "type": "trigger",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "50b9700a9a4f731c",
+        "name": "reset msg",
+        "op1": "",
+        "op2": "empty",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1160,
+        "y": 5780,
+        "wires": [
+            [
+                "5aa9ce11562d2ef0"
+            ]
+        ]
+    },
+    {
+        "id": "c56212ba6e7e964d",
+        "type": "calculator",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "185cc616489b2615",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "0.000001",
+        "round": false,
+        "truncate": true,
+        "decimals": 0,
+        "decimals2": "6",
+        "x": 860,
+        "y": 1400,
+        "wires": [
+            [
+                "b86aad85fafa0443"
+            ]
+        ]
+    },
+    {
         "id": "1e0841f1.ac68fe",
         "type": "http in",
         "z": "9d964f25dcc4d750",
@@ -18736,7 +18786,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "\n<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Spectrum Plot</title>\n<link rel=\"stylesheet\" href=\"/pluto_spectrum/style.css\">\n\n<script>\n    var pluto_url = \"{{pluto}}\";\n    var callsign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n    </script>\n    <script src=\"/paho-mqtt-min.js\"></script>\n    <script src=\"/pluto_spectrum/colormap.js\"></script>\n    <script src=\"/pluto_spectrum/spectrum.js\"></script>\n    <script src=\"/pluto_spectrum/mqtt.js\"></script>\n    <script src=\"/pluto_spectrum/script.js\"></script>\n\n<canvas id=\"waterfall\"></canvas>\n<div class=\"status\">\n    <div id=\"log\"></div>\n</div>        \n\n",
+        "template": "\n<meta charset=\"utf-8\">\n<meta name=\"author\" content=\"Jeppe Ledet-Pedersen\">\n<meta name=\"author\" content=\"Ohan Smit\">\n<title>Spectrum Plot</title>\n<link rel=\"stylesheet\" href=\"/pluto_spectrum/style.css\">\n\n<script>\n\n    var pluto_url = \"{{pluto}}\";\n    var callsign = \"{{callsign}}\";\n    var hosting_url = \"{{hosting_url}}\";\n    var localPage = false;\n    \n</script>\n\n<script src=\"/paho-mqtt-min.js\"></script>\n<script src=\"/pluto_spectrum/colormap.js\"></script>\n<script src=\"/pluto_spectrum/spectrum.js\"></script>\n<script src=\"/pluto_spectrum/mqtt.js\"></script>\n<script src=\"/pluto_spectrum/script.js\"></script>\n\n<canvas id=\"waterfall\"></canvas>\n<div class=\"status\">\n    <div id=\"log\"></div>\n</div>        \n\n",
         "output": "str",
         "x": 810,
         "y": 60,
@@ -20485,7 +20535,6 @@
         "y": 1260,
         "wires": [
             [
-                "30794624a6a04c15",
                 "76c7e2a6f2401924"
             ]
         ]
@@ -21579,7 +21628,8 @@
                 "cd41c1f3c4201336",
                 "a90f9c1c2af87afa",
                 "410d95bdc81fa714",
-                "28bb27b4e9707d84"
+                "28bb27b4e9707d84",
+                "d094db56c84ad604"
             ]
         ]
     },
@@ -21772,8 +21822,8 @@
         "y": 960,
         "wires": [
             [
-                "9ccafb64a91eebb9",
-                "cc4ddaef1b0abcbe"
+                "6f0bbb346cfd21a4",
+                "db2b919bb3f55ce8"
             ]
         ]
     },
@@ -22907,7 +22957,7 @@
         "g": "41bf595616b12030",
         "group": "a4a37989805c1f8e",
         "order": 6,
-        "width": 2,
+        "width": "2",
         "height": 1,
         "name": "RX Modulation",
         "label": "",
@@ -22928,7 +22978,7 @@
         "z": "d7c58eb9e7b65abb",
         "g": "41bf595616b12030",
         "group": "a4a37989805c1f8e",
-        "order": 19,
+        "order": 18,
         "width": 3,
         "height": 1,
         "name": "Display_min_C/N",
@@ -22991,33 +23041,37 @@
         "id": "9ccafb64a91eebb9",
         "type": "ui_led",
         "z": "d7c58eb9e7b65abb",
-        "d": true,
         "g": "41bf595616b12030",
-        "order": 4,
-        "group": "27ec828db8c0f22b",
-        "width": 1,
+        "order": 20,
+        "group": "a4a37989805c1f8e",
+        "width": "2",
         "height": 1,
-        "label": "",
+        "label": "Carrier",
         "labelPlacement": "left",
         "labelAlignment": "right",
         "colorForValue": [
             {
                 "color": "#ff0000",
-                "value": "Hunting",
+                "value": "No Lock",
+                "valueType": "str"
+            },
+            {
+                "color": "#ffa500",
+                "value": "Partial Lock",
                 "valueType": "str"
             },
             {
                 "color": "#008000",
-                "value": "demod_s2",
+                "value": "Lock",
                 "valueType": "str"
             }
         ],
-        "allowColorForValueInMessage": false,
+        "allowColorForValueInMessage": true,
         "shape": "circle",
-        "showGlow": false,
+        "showGlow": true,
         "name": "Carrier lock",
-        "x": 870,
-        "y": 940,
+        "x": 890,
+        "y": 1200,
         "wires": []
     },
     {
@@ -24949,6 +25003,151 @@
         "x": 1080,
         "y": 1660,
         "wires": []
+    },
+    {
+        "id": "d094db56c84ad604",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "g": "41bf595616b12030",
+        "name": "bch_uncorect",
+        "func": "msg.action = \"subscribe\"\nmsg.topic=\"dt/longmynd/bch_uncorect\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1080,
+        "wires": [
+            [
+                "4622081ade1760cb"
+            ]
+        ]
+    },
+    {
+        "id": "4622081ade1760cb",
+        "type": "mqtt in",
+        "z": "d7c58eb9e7b65abb",
+        "g": "41bf595616b12030",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "064bde8eca01e996",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 590,
+        "y": 1080,
+        "wires": [
+            [
+                "3545ee6c53a576c0"
+            ]
+        ]
+    },
+    {
+        "id": "6f0bbb346cfd21a4",
+        "type": "function",
+        "z": "d7c58eb9e7b65abb",
+        "g": "41bf595616b12030",
+        "name": "Rx state checker",
+        "func": "if(flow.get(\"state\") !== \"demod_s2\"){\n    msg.lock = \"No Lock\"\n    return msg;\n}\n\nif(flow.get(\"bch_uncorect\") === \"0\" && flow.get(\"state\") === \"demod_s2\"){\n    msg.lock = \"Partial Lock\"\n    return msg;\n}\n\nif(flow.get(\"bch_uncorect\") === \"1\" && flow.get(\"state\") === \"demod_s2\"){\n    msg.lock = \"Lock\"\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 960,
+        "wires": [
+            [
+                "cc4ddaef1b0abcbe",
+                "ea5ac76535869d25"
+            ]
+        ]
+    },
+    {
+        "id": "db2b919bb3f55ce8",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "g": "41bf595616b12030",
+        "name": "demod state",
+        "rules": [
+            {
+                "t": "set",
+                "p": "state",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3545ee6c53a576c0",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "g": "41bf595616b12030",
+        "name": "bch_uncorect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bch_uncorect",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea5ac76535869d25",
+        "type": "change",
+        "z": "d7c58eb9e7b65abb",
+        "g": "41bf595616b12030",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "lock",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 1160,
+        "wires": [
+            [
+                "9ccafb64a91eebb9"
+            ]
+        ]
     },
     {
         "id": "01cd46f702ab295a",
@@ -31203,9 +31402,9 @@
         "label": "Extra settings",
         "tooltip": "",
         "group": "a4a37989805c1f8e",
-        "order": 21,
-        "width": 0,
-        "height": 0,
+        "order": 19,
+        "width": "4",
+        "height": "1",
         "passthru": false,
         "decouple": "true",
         "topic": "topic",
@@ -31488,7 +31687,7 @@
         "order": 16,
         "width": 0,
         "height": 0,
-        "format": "<script>\n    // Click event on top meny item to set input props\n     (async () => {\n        await new Promise(res => setTimeout(res, 1000));\n        document.querySelectorAll(\n            \"md-list-item button.md-no-style.md-button.md-ink-ripple\"\n            )[0].addEventListener(\"click\", () => {\n        let collection = document.querySelectorAll(\"input[type=number]\");\n        collection[1].step = \"10000\";\n        collection[1].min = \"40000000\";\n        collection[1].max = \"6000000000\";\n        console.log(\"cccccc\")\n        });\n    })();\n    \n</script>",
+        "format": "<script>\n    // Click event on top meny item to set input props\n     (async () => {\n        const config_global = await getConfig();\n        localStorage.setItem(\"config_global\", JSON.stringify(config_global));\n        await new Promise(res => setTimeout(res, 1000));\n        document.querySelectorAll(\n            \"md-list-item button.md-no-style.md-button.md-ink-ripple\"\n            )[0].addEventListener(\"click\", () => {\n        let collection = document.querySelectorAll(\"input[type=number]\");\n        collection[1].step = \"10000\";\n        collection[1].min = \"40000000\";\n        collection[1].max = \"6000000000\";\n        console.log(\"cccccc\")\n        });\n    })();\n    async function getJSON() {\n  return fetch(`http://127.0.0.1:1880/config`)\n      .then((response) => response.json())\n      .then((responseJson) => {\n        return responseJson;\n      });\n}\nasync function getConfig() {\n  return await getJSON();\n}\n\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,

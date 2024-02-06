@@ -1,4 +1,3 @@
-
 let canvas = document.getElementById("bars");
 const ctx = canvas.getContext('2d', {alpha: false});
 ctx.lineWidth = 1;
@@ -24,7 +23,7 @@ let band_colour = "rgb(144,148,148)";
 let activeColor, activeXd1, activeYd, activeXd2;
 let activeColor_tx, activeXd1_tx, activeYd_tx, activeXd2_tx;
 let downlink, uplink, canvasClickBW;
-let x1,x2,y1;
+let x1, x2, y1;
 
 /* Load vars from local storage */
 if (typeof Storage !== "undefined") {
@@ -49,7 +48,7 @@ function on_canvas_click(ev) {
     console.log(`${uplink}:${canvasClickBW}`)
     let u = uplink
     let sr = canvasClickBW
-    if(canvasClickBW === undefined || uplink === undefined) return
+    if (canvasClickBW === undefined || uplink === undefined) return
 
     const url = localPage ? 'http://127.0.0.1:1880' : '';
     /* we clicked on a channel bar... */
@@ -121,7 +120,12 @@ function drawChannels(ctx) {
 
     /* 333Ks */
     for (let j = 492.75; j <= 499.25; j = j + 0.5) {
-
+        // if (j <= 496.75) {
+        //     draw_channel(j, 0.333, 0.5);
+        // }
+        // if (j > 496.25){
+        //     draw_channel(j, 0.250, 0.5);
+        // }
         draw_channel(j, 0.333, 0.5);
     }
 
@@ -130,10 +134,10 @@ function drawChannels(ctx) {
 
         draw_channel(f, 0.125, 0.4);
     }
-    if(mouse_in_canvas){
+    if (mouse_in_canvas) {
         // Mouse hover over rectangle
         ctx.fillStyle = invertColor(band_colour);
-        ctx.fillRect(x1, y1, x2 - x1 +1, 7);
+        ctx.fillRect(x1, y1, x2 - x1 + 1, 7);
     }
 
     ctx.fillStyle = invertColor(band_colour);
@@ -182,15 +186,19 @@ function resize(canvas) {
     //     this.axes.height = this.spectrumHeight;
     // }
 }
+
 function getMinY(data) {
     return data.reduce((min, p) => p.y < min ? p.y : min, data[0].y);
 }
+
 function getMaxY(data) {
     return data.reduce((max, p) => p.y > max ? p.y : max, data[0].y);
 }
+
 function getMinX(data) {
     return data.reduce((min, p) => p.x < min ? p.x : min, data[0].x);
 }
+
 function resetCanvasVariables() {
     canvasClickBW = undefined;
     uplink = undefined;
@@ -221,7 +229,7 @@ function render_frequency_info(mouse_x, mouse_y) {
         resetCanvasVariables();
         return
     }
-    if (mouse_y > minY ) {
+    if (mouse_y > minY) {
         for (let i = 0; i < freq.length; i++) {
             let xd1 = freq[i].x1;
             let xd2 = freq[i].x2;
@@ -232,7 +240,7 @@ function render_frequency_info(mouse_x, mouse_y) {
                 mouse_y > yd - 1
                 && mouse_y < yd + 6
             ) {
-                downlink = 10000.0 + freq[i].center_frequency - offset;
+                downlink = 10000.0 + freq[i].center_frequency - offset - 0.5;
                 uplink = freq[i].center_frequency;
                 canvasClickBW =
                     uplink < 2407.5 && freq[i].bandwidth === 0.333
@@ -248,7 +256,7 @@ function render_frequency_info(mouse_x, mouse_y) {
                     (freq[i].bandwidth === 0.125
                         ? "125/66/33 Ksps"
                         : freq[i].bandwidth === 0.333
-                            ? freq[i].center_frequency < 497.0
+                            ? freq[i].center_frequency < 2407.5
                                 ? "500/333/250 Ksps"
                                 : "333/250 Ksps"
                             : "1 Msps");
