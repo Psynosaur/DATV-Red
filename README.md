@@ -32,6 +32,6 @@ Node Red flows inspired by project from PE2JKO [from this post](https://www.pg54
 Thank you to all the testers, **DL5OCD**, **HB9DUG**, **DL2GHM** and all others
 
 ## Supporting my hobby
-If you'd like to say thanks, please feel free to buy me some [coffee](https://www.buymeacoffee.com/ohansmitg)
+If you'd like to say thanks, please feel free to buy me some [coffee](https://www.buymeacoffee.com/ohansmitg) or [time](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
 
 
