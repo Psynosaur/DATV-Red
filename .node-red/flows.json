@@ -2,7 +2,7 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red v4.4.2",
+        "label": "DATV-Red v4.5",
         "disabled": false,
         "info": "",
         "env": []
@@ -835,9 +835,7 @@
             "de3615657f5f8b75"
         ],
         "x": 28,
-        "y": 19,
-        "w": 1138,
-        "h": 348
+        "y": 19
     },
     {
         "id": "b40c8f098d8e9ccc",
@@ -922,9 +920,7 @@
             "30794624a6a04c15"
         ],
         "x": 34,
-        "y": 979,
-        "w": 1292,
-        "h": 562
+        "y": 979
     },
     {
         "id": "97ecf1ac9459a777",
@@ -978,9 +974,7 @@
             "5445cf6467643bef"
         ],
         "x": 34,
-        "y": 379,
-        "w": 1592,
-        "h": 588
+        "y": 379
     },
     {
         "id": "6a8835db32d9f8ed",
@@ -1114,9 +1108,7 @@
             "8b74e5e219711233"
         ],
         "x": 54,
-        "y": 51.5,
-        "w": 812,
-        "h": 149.5
+        "y": 51.5
     },
     {
         "id": "850ce0dd6b054d30",
@@ -1217,9 +1209,7 @@
             "097842d26da1c238"
         ],
         "x": 174,
-        "y": 1999,
-        "w": 1452,
-        "h": 462
+        "y": 1999
     },
     {
         "id": "38c9fb66e354750a",
@@ -1409,9 +1399,7 @@
             "ea5ac76535869d25"
         ],
         "x": 54,
-        "y": 239,
-        "w": 1872,
-        "h": 1582
+        "y": 239
     },
     {
         "id": "d7eac6e7f4ef2b55",
@@ -2238,9 +2226,7 @@
             "0dd67a65a9a17989"
         ],
         "x": 54,
-        "y": 99,
-        "w": 872,
-        "h": 242
+        "y": 99
     },
     {
         "id": "4b4adb8ffff59a56",
@@ -2261,9 +2247,7 @@
             "ef70d0aa4139e52a"
         ],
         "x": 794,
-        "y": 819,
-        "w": 232,
-        "h": 122
+        "y": 819
     },
     {
         "id": "b66465fdf55144d8",
@@ -2500,7 +2484,7 @@
             }
         },
         "site": {
-            "name": "DATV-Red v4.4.2",
+            "name": "DATV-Red v4.5",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -7030,7 +7014,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "name": "Pluto connection status",
-        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet human_status;\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (status == \"node-red:common.status.connected\") {\n    let fw = global.get(\"fw_version\");\n    // human_status = fw.substring(0, fw.length - 7);\n    human_status = fw;\n    if(global.get(\"first_load\")){\n        global.set(\"restore\", true);\n    }\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status = human_status;\nmsg.kleur = fill;\nreturn msg;",
+        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet human_status = \"Disconnected\";\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (status == \"node-red:common.status.connected\") {\n    let fw = global.get(\"fw_version\");\n    // human_status = fw.substring(0, fw.length - 7);\n    human_status = fw;\n    if(global.get(\"first_load\")){\n        global.set(\"restore\", true);\n    }\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status = human_status;\nmsg.kleur = fill;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8411,14 +8395,14 @@
         "g": "185cc616489b2615",
         "name": "Rx tuner",
         "active": true,
-        "tosidebar": false,
-        "console": true,
+        "tosidebar": true,
+        "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
+        "x": 1060,
         "y": 1880,
         "wires": []
     },
@@ -18811,6 +18795,51 @@
         ]
     },
     {
+        "id": "9f781a956455f4d0",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "start \"\" \"http://127.0.0.1:1880/ui/\"",
+        "payloadType": "str",
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "2ee3aedffba86c3f"
+            ]
+        ]
+    },
+    {
+        "id": "2ee3aedffba86c3f",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
         "id": "1e0841f1.ac68fe",
         "type": "http in",
         "z": "9d964f25dcc4d750",
@@ -19762,7 +19791,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "settings.spectrum.gain",
         "payloadType": "global",
@@ -19770,7 +19799,8 @@
         "y": 780,
         "wires": [
             [
-                "6adfe6d609aeb90a"
+                "6adfe6d609aeb90a",
+                "05155ef717c0fb68"
             ]
         ]
     },
