@@ -100,8 +100,8 @@ module.exports = {
     //     // This function should return the options object, or a Promise
     //     // that resolves to the options object
     //     return {
-    //         key: require("fs").readFileSync('privkey.pem'),
-    //         cert: require("fs").readFileSync('cert.pem')
+    //         key: require("fs").readFileSync('./key.pem', 'utf8'),
+    //         cert: require("fs").readFileSync('./server.crt', 'utf8')
     //     }
     // },
 

@@ -1441,9 +1441,10 @@
             "bc1ff855d619201b",
             "15a29f50132efa7b",
             "d5168d21f7645b1e",
-            "26aaab09baf5f6cb"
+            "26aaab09baf5f6cb",
+            "e76e8d4084087268"
         ],
-        "x": 114,
+        "x": 14,
         "y": 19
     },
     {
@@ -7015,7 +7016,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "name": "Pluto connection status",
-        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet human_status = \"Disconnected\";\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (status == \"node-red:common.status.connected\") {\n    let fw = global.get(\"fw_version\");\n    // human_status = fw.substring(0, fw.length - 7);\n    human_status = fw;\n    if(global.get(\"first_load\")){\n        global.set(\"restore\", true);\n    }\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status = human_status;\nmsg.kleur = fill;\nreturn msg;",
+        "func": "let status = msg.status.text;\nlet fill = msg.status.fill;\nlet human_status = \"Disconnected\";\nif (status == \"node-red:common.status.connecting\") {\n    human_status = \"Connecting\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (status == \"node-red:common.status.connected\") {\n    let fw = global.get(\"fw_version\") ?? \"Connected\";\n    // human_status = fw.substring(0, fw.length - 7);\n    human_status = fw;\n    if(global.get(\"first_load\")){\n        global.set(\"restore\", true);\n    }\n}\nif (status == \"node-red:common.status.disconnected\") {\n    human_status = \"Disconnected\";\n    global.set(\"state_color\", \"orange\");\n    global.set(\"first_load\", true);\n}\nif (fill == \"yellow\") {\n    msg.achtergrond_kleur = \"black\"\n}\nif (fill == \"green\") {\n    msg.achtergrond_kleur = \"white\"\n}\nif (fill == \"red\") {\n    msg.achtergrond_kleur = \"white\"\n}\nmsg.human_status = human_status;\nmsg.kleur = fill;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8723,7 +8724,7 @@
         "ipv": "udp4",
         "outport": "",
         "base64": false,
-        "multicast": "multi",
+        "multicast": "false",
         "x": 1190,
         "y": 2000,
         "wires": []
@@ -29097,6 +29098,26 @@
         "wires": [
             [
                 "ff75aaaff0fe2eda"
+            ]
+        ]
+    },
+    {
+        "id": "e76e8d4084087268",
+        "type": "inject",
+        "z": "5921103edf8bc817",
+        "g": "d7eac6e7f4ef2b55",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "1b368c698d1603a4"
             ]
         ]
     },

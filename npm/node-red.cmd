@@ -9,7 +9,7 @@ IF EXIST "%dp0%DATV-RED_node-v21.7.1.exe" (
   SET PATHEXT=%PATHEXT:;.JS;=;%
 )
 
-"%_prog%"  "%dp0%\node_modules\node-red\red.js" %*
+"%_prog%" "--no-deprecation"  "%dp0%\node_modules\node-red\red.js" %*
 ENDLOCAL
 EXIT /b %errorlevel%
 :find_dp0
