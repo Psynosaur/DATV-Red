@@ -25,8 +25,8 @@ var css = ''
 + '  height: 100%;'
 + '  margin: 0px;'
 + '  padding: 0px;'
-+ '  background: #3F464C;'
-+ '  color: #ccc;'
++ '  background: #333333;'
++ '  color: #f2f2f2;'
 + '  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;'
 + '  font-size: 100%;'
 + '  position: relative;'
@@ -46,7 +46,7 @@ var css = ''
 + '}'
 + '#batchat-messages-panel a, #batchat-messages-panel a:hover, #batchat-messages-panel a:focus, #batchat-messages-panel a:active {'
 + '  text-decoration: underline;'
-+ '  color: inherit;'
++ '  color: red;'
 + '}'
 + '.batchat-messages-panel-object {'
 + '  padding-bottom: 1px;'
@@ -55,12 +55,12 @@ var css = ''
 + '  text-decoration: underline;'
 + '}'
 + '.batchat-message-datestamp, .batchat-message-timestamp {'
-+ '  color: #b0b0b0;'
++ '  color: #e5e5e5;'
 + '  padding-right: 0.75em;'
 + '}'
 + '.batchat-message-nick {'
 + '  font-weight: bold;'
-+ '  color: #FBDE2D;'
++ '  color: #0085d1;'
 + '  padding-right: 0.75em;'
 + '}'
 + '.batchat-message-text {'
@@ -71,7 +71,7 @@ var css = ''
 + '}'
 + '#batchat-users-panel {'
 + '  z-index: 100;'
-+ '  background: #3F464C;'
++ '  background: #333333;'
 + '  position: absolute;'
 + '  top: 0;'
 + '  right: 0;'
@@ -97,8 +97,8 @@ var css = ''
 + '  padding: 0 5px;'
 + '  height: 30px;'
 + '  display: block;'
-+ '  background: #FFFFFF;'
-+ '  color: #111;'
++ '  background: #212222;'
++ '  color: #f2f2f2;'
 + '}';
 
 var socket;
@@ -208,9 +208,12 @@ var initUsers = function(users) {
       }
   }
 }
-var timeString = function(t) {
-  var s = t.toLocaleTimeString().split(/[:]/);
-  return s[0]+":"+s[1];
+const timeString = function(t) {
+  return t.toLocaleTimeString([], {
+    hourCycle: 'h23',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
 }
 var shuffle_panels = function() {
   var p_height = $("#batchat-main-panel").height() - (15+13);
