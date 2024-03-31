@@ -4,11 +4,11 @@
     "version": "1.9.0",
     "private": true,
     "dependencies": {
-        "@node-red-contrib-themes/theme-collection": "~3.1.2",
+        "@node-red-contrib-themes/theme-collection": "^3.1.11",
         "node-red-contrib-calc": "~1.0.6",
         "node-red-contrib-os": "~0.2.1",
         "node-red-contrib-ui-led": "~0.4.11",
-        "node-red-dashboard": "~3.6.2",
+        "node-red-dashboard": "^3.6.5",
         "node-red-node-smooth": "~0.1.2",
         "node-red-node-ui-iframe": "~0.2.1",
         "node-red-node-ui-list": "~0.3.6"
