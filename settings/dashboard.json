@@ -1,10 +1,6 @@
 {
     "tasmota_switch_url" : "http://192.168.1.132",
     "tasmota_mqtt_topic" : "tasmota_EEB41A",
-    "use_switch": true,
-    "use_chat": true,
-    "use_longmynd": true,
-    "ffplay_left" : 200,
-    "ffplay_top" : 200
-  }
+    "use_switch": true
+}
   
