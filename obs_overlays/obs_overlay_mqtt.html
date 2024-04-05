@@ -70,6 +70,7 @@
     let sr = "";
     let bitrate = "";
     let constel = "";
+    let codec = "";
     let url = `ws://${plutoAdrress}:9001`
     const options = {
       // Clean session
@@ -91,6 +92,7 @@
       client.subscribe(`dt/pluto/${callsign}/temperature_ad`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/queue`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/constel`, () => { })
+      client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/codec`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/fec`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
       client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/ts/bitrate`, () => { })
@@ -154,7 +156,9 @@
       if (topic === `dt/pluto/${callsign}/tx/dvbs2/constel`) {
         constel = `${message.toString()}`;
       }
-
+      if (topic === `dt/pluto/${callsign}/tx/dvbs2/codec`) {
+        codec = `${message.toString()}`;
+      }
       // client.end()
     });
     setInterval(
@@ -163,6 +167,8 @@
         txTime = parseInt(onAir) === 0 ? moment.utc(end.diff(transmissionStart)).format('mm:ss') : "00:00";
         output.innerText = `ON AIR : ${txTime} : ${moment.utc().format(urlParams["format"] || dateFormat)}  `
         stats.innerText =
+          `\nCodec: ${codec}` +
+          `\nBBFRAME Queue: ${queue}` +
           `\nTS Bit Rate: ${bitrate}` +
           `\nFrequency: ${frequency}` +
           `\nSymbol Rate: ${Number(sr)/1000} kS/s` +
@@ -170,7 +176,6 @@
           `\nFEC: ${fec}` +
           `\nGain ${gain}` +
           `\nNCO: ${nco}` +
-          `\nBBFRAME Queue: ${queue}` +
           `\nTuner: ${temp}`;
       }, 1);
 
