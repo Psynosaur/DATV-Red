@@ -4,8 +4,7 @@
         "type": "tab",
         "label": "DATV-Red v4.7",
         "disabled": false,
-        "info": "",
-        "env": []
+        "info": ""
     },
     {
         "id": "9d964f25dcc4d750",
@@ -257,7 +256,7 @@
         "x": 54,
         "y": 2159,
         "w": 1312,
-        "h": 242
+        "h": 342
     },
     {
         "id": "92c95af69a0592d1",
@@ -1913,10 +1912,10 @@
             "525b094f71549d38",
             "6100407c3851ff95"
         ],
-        "x": 74,
+        "x": 94,
         "y": 3959,
-        "w": 1252,
-        "h": 382
+        "w": 1512,
+        "h": 402
     },
     {
         "id": "158a8e642f8da366",
@@ -1944,8 +1943,8 @@
             "cfdd9fffb83031de",
             "de67b561ba5031e9"
         ],
-        "x": 774,
-        "y": 4359,
+        "x": 894,
+        "y": 4399,
         "w": 732,
         "h": 322
     },
@@ -1977,7 +1976,7 @@
             "c8cdf2e30572c156"
         ],
         "x": 74,
-        "y": 4351.5,
+        "y": 4391.5,
         "w": 672,
         "h": 337
     },
@@ -1985,14 +1984,9 @@
         "id": "16b2433f74b66b9a",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
+        "name": "",
         "style": {
-            "stroke": "#30363d",
-            "stroke-opacity": "1",
-            "fill": "#010409",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#e6edf3"
+            "label": true
         },
         "nodes": [
             "7f3d237a25e7a435",
@@ -2027,7 +2021,7 @@
             "6e6700cfb7db9272"
         ],
         "x": 74,
-        "y": 4759,
+        "y": 4799,
         "w": 1652,
         "h": 305
     },
@@ -2035,7 +2029,7 @@
         "id": "a70e8b8a362b3c9d",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
-        "name": "dvbs_gui_path",
+        "name": "exec paths",
         "style": {
             "label": true,
             "fill": "#001f60"
@@ -2084,7 +2078,7 @@
             "e63faf17ba00a395"
         ],
         "x": 74,
-        "y": 5079,
+        "y": 5539,
         "w": 1212,
         "h": 602
     },
@@ -2106,8 +2100,8 @@
             "8c1b5efab2a40a90",
             "5aa9ce11562d2ef0"
         ],
-        "x": 94,
-        "y": 5739,
+        "x": 74,
+        "y": 6179,
         "w": 1352,
         "h": 82
     },
@@ -2454,6 +2448,30 @@
         "h": 162
     },
     {
+        "id": "0e7ada672069cea4",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "NVIDIA tweaks",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4d7d6318a70b8e04",
+            "e3f5bbdd2ecb08d7",
+            "6398bd2421ae51a0",
+            "055a52547eba0a80",
+            "623ad963897006b7",
+            "02a9010d28f77dea",
+            "c007ccb0b2214945",
+            "50d814e15e34d86b",
+            "bdb34d686b04ddf2"
+        ],
+        "x": 114,
+        "y": 5179,
+        "w": 952,
+        "h": 202
+    },
+    {
         "id": "9b3296db2e0c849f",
         "type": "ui_tab",
         "name": "Transmission-Control",
@@ -2764,7 +2782,7 @@
     {
         "id": "88af1ac84b7217bd",
         "type": "ui_group",
-        "name": "Inputs and Codecs",
+        "name": "Inputs",
         "tab": "fefa8fb5a3363008",
         "order": 2,
         "disp": true,
@@ -3032,6 +3050,17 @@
         "order": 3,
         "disp": true,
         "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ce32d1caa356bc95",
+        "type": "ui_group",
+        "name": "Codec settings",
+        "tab": "fefa8fb5a3363008",
+        "order": 5,
+        "disp": true,
+        "width": "13",
         "collapse": false,
         "className": ""
     },
@@ -6821,8 +6850,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 2360,
+        "x": 680,
+        "y": 2460,
         "wires": [
             [
                 "aa4a256618f7c4a6",
@@ -10025,8 +10054,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 800,
-        "y": 2320,
+        "x": 640,
+        "y": 2300,
         "wires": [
             [
                 "a56122d1643df6cf",
@@ -10049,7 +10078,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
+        "x": 900,
         "y": 2300,
         "wires": []
     },
@@ -12299,8 +12328,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 170,
-        "y": 2360,
+        "x": 190,
+        "y": 2460,
         "wires": [
             [
                 "d558ecd264feb081"
@@ -12321,8 +12350,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 1,
-        "x": 310,
-        "y": 2360,
+        "x": 330,
+        "y": 2460,
         "wires": [
             [
                 "6afa3d5787c3c8dd"
@@ -12342,8 +12371,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 2360,
+        "x": 470,
+        "y": 2460,
         "wires": [
             [
                 "8c7733a45d32bf17"
@@ -12364,8 +12393,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 2340,
+        "x": 920,
+        "y": 2420,
         "wires": []
     },
     {
@@ -14271,7 +14300,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "ffmpeg command builder",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let input = global.get(\"settings.input_choice\");\n    let keyframe_interval = global.get(\"settings.FPS\") * 5;\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            //codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx264 -r ${global.get(\n                \"settings.FPS\"\n            )} ${shapingString} -x264-params rc-lookahead=10:no-scenecut=1`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx265 -pix_fmt yuv420p -x265-params crf=5:level-idc=5.1:high-tier=1 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            // codec = `libx265 -pix_fmt yuv420p -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            let targetBitrate = Math.floor((max_video_rate / 1.65) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 -cpu-used 4 -row-mt true -threads 8 -crf 30 -usage realtime `;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 -preset 5 -crf 32 -svtav1-params tune=0:rc=1`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.5);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? 1250 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED-v4.7\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.video_device_linux\"\n                )}\\ -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.audio_device_linux\"\n                )}\\ `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                    \"settings.video_device\"\n                )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                    \"settings.audio_device\"\n                )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    \n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        // `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        // `-af aresample=async=1 -mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\") { \n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} -g ${keyframe_interval} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000,aresample=async=1\\\" ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let input = global.get(\"settings.input_choice\");\n    let keyframe_interval = global.get(\"settings.FPS\") * 5;\n    const hw_preset = global.get(\"settings.nvidia_preset\");\n    const hw_tune = global.get(\"settings.nvidia_tune\");\n    const hw_profile = global.get(\"settings.nvidia_profile\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset ${hw_preset} -rc-lookahead ${global.get(\"settings.FPS\")} -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -level 5.1 -tune ${hw_tune} -rc cbr_ld_hq`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            //codec = `libx264 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx264 -r ${global.get(\n                \"settings.FPS\"\n            )} ${shapingString} -x264-params rc-lookahead=10:no-scenecut=1`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            codec = `libx265 -pix_fmt yuv420p -x265-params crf=5:level-idc=5.1:high-tier=1 -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            // codec = `libx265 -pix_fmt yuv420p -r ${global.get(\"settings.FPS\")} ${shapingString}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            let targetBitrate = Math.floor((max_video_rate / 1.65) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 -cpu-used 4 -row-mt true -threads 8 -crf 30 -usage realtime `;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 -preset 5 -crf 32 -svtav1-params tune=0:rc=1`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc -profile ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc -tier ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.75);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? 1250 : 1000;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = \"DATV-RED-v4.7\";\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.video_device_linux\"\n                )}\\ -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.audio_device_linux\"\n                )}\\ `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                    \"settings.video_device\"\n                )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                    \"settings.audio_device\"\n                )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n    \n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        // `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        // `-af aresample=async=1 -mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\") { \n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} -g ${keyframe_interval} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000,aresample=async=1\\\" ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -15226,7 +15255,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
+        "x": 770,
         "y": 4080,
         "wires": [
             [
@@ -15254,7 +15283,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
+        "x": 780,
         "y": 4140,
         "wires": [
             [
@@ -15389,7 +15418,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
+        "x": 770,
         "y": 4200,
         "wires": [
             [
@@ -15501,7 +15530,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
+        "x": 770,
         "y": 4260,
         "wires": [
             [
@@ -15522,7 +15551,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
+        "x": 990,
         "y": 4080,
         "wires": [
             [
@@ -15543,7 +15572,7 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1200,
+        "x": 1480,
         "y": 4080,
         "wires": [
             []
@@ -15680,7 +15709,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
+        "x": 1210,
         "y": 4000,
         "wires": [
             []
@@ -15779,8 +15808,8 @@
         "topic": "",
         "payload": "settings.null_packets",
         "payloadType": "global",
-        "x": 240,
-        "y": 4300,
+        "x": 260,
+        "y": 4320,
         "wires": [
             [
                 "99d8f740effd901b"
@@ -15815,7 +15844,7 @@
         "animate": false,
         "className": "",
         "x": 520,
-        "y": 4300,
+        "y": 4320,
         "wires": [
             [
                 "11030f0dbe456eb3"
@@ -15850,7 +15879,7 @@
         "to": "",
         "reg": false,
         "x": 770,
-        "y": 4300,
+        "y": 4320,
         "wires": [
             []
         ]
@@ -15882,8 +15911,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 1170,
-        "y": 4400,
+        "x": 1290,
+        "y": 4440,
         "wires": [
             [
                 "4823c6eed9e03e46"
@@ -15903,8 +15932,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 4400,
+        "x": 1540,
+        "y": 4440,
         "wires": [
             []
         ]
@@ -15936,8 +15965,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 1090,
-        "y": 4460,
+        "x": 1210,
+        "y": 4500,
         "wires": [
             [
                 "c99bca3dafb85e2c"
@@ -15957,8 +15986,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 4460,
+        "x": 1530,
+        "y": 4500,
         "wires": [
             []
         ]
@@ -16054,8 +16083,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1110,
-        "y": 4520,
+        "x": 1230,
+        "y": 4560,
         "wires": [
             [
                 "ade9869b5330a585"
@@ -16075,8 +16104,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 4520,
+        "x": 1540,
+        "y": 4560,
         "wires": [
             []
         ]
@@ -16099,8 +16128,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_size",
         "payloadType": "global",
-        "x": 890,
-        "y": 4520,
+        "x": 1010,
+        "y": 4560,
         "wires": [
             [
                 "0b68cbbed95acffe"
@@ -16120,8 +16149,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
-        "y": 4580,
+        "x": 1530,
+        "y": 4620,
         "wires": [
             []
         ]
@@ -16144,8 +16173,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_volume",
         "payloadType": "global",
-        "x": 900,
-        "y": 4580,
+        "x": 1020,
+        "y": 4620,
         "wires": [
             [
                 "a7b99958c4999cf0"
@@ -16172,8 +16201,8 @@
         "max": "100",
         "step": 1,
         "className": "",
-        "x": 1120,
-        "y": 4580,
+        "x": 1240,
+        "y": 4620,
         "wires": [
             [
                 "17d14c187e03e78d"
@@ -16198,8 +16227,8 @@
         "topic": "",
         "payload": "device.rx.ffplay",
         "payloadType": "global",
-        "x": 890,
-        "y": 4400,
+        "x": 1010,
+        "y": 4440,
         "wires": [
             [
                 "0566516b8c2f5f60"
@@ -16224,8 +16253,8 @@
         "topic": "",
         "payload": "device.rx.ffplay_ontop",
         "payloadType": "global",
-        "x": 890,
-        "y": 4460,
+        "x": 1010,
+        "y": 4500,
         "wires": [
             [
                 "e29b0f596d18b958"
@@ -16259,8 +16288,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 1100,
-        "y": 4640,
+        "x": 1220,
+        "y": 4680,
         "wires": [
             [
                 "cfdd9fffb83031de"
@@ -16280,8 +16309,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1420,
-        "y": 4640,
+        "x": 1540,
+        "y": 4680,
         "wires": [
             []
         ]
@@ -16304,8 +16333,8 @@
         "topic": "",
         "payload": "device.rx.use_minitioune",
         "payloadType": "global",
-        "x": 890,
-        "y": 4640,
+        "x": 1010,
+        "y": 4680,
         "wires": [
             [
                 "5aec87e336f5bf99"
@@ -16334,7 +16363,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 230,
-        "y": 4520,
+        "y": 4560,
         "wires": [
             [
                 "de9023ef02fb7ae5"
@@ -16355,7 +16384,7 @@
         "oldrc": false,
         "name": "VLC",
         "x": 610,
-        "y": 4520,
+        "y": 4560,
         "wires": [
             [],
             [],
@@ -16376,7 +16405,7 @@
         "oldrc": false,
         "name": "DVB-S GUI",
         "x": 650,
-        "y": 4580,
+        "y": 4620,
         "wires": [
             [],
             [],
@@ -16405,7 +16434,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 170,
-        "y": 4580,
+        "y": 4620,
         "wires": [
             [
                 "0bdcee0b1767660d"
@@ -16426,7 +16455,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 4520,
+        "y": 4560,
         "wires": [
             [
                 "ba28f83345465e97"
@@ -16447,7 +16476,7 @@
         "oldrc": false,
         "name": "VLC",
         "x": 610,
-        "y": 4400,
+        "y": 4440,
         "wires": [
             [],
             [],
@@ -16468,7 +16497,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 4400,
+        "y": 4440,
         "wires": [
             [
                 "97790ba38317b165"
@@ -16497,7 +16526,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 230,
-        "y": 4400,
+        "y": 4440,
         "wires": [
             [
                 "c94c6e15b8ce6ac5"
@@ -16518,7 +16547,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 4580,
+        "y": 4620,
         "wires": [
             [
                 "dc1201bc61b55d34"
@@ -16546,7 +16575,7 @@
         "to": "",
         "reg": false,
         "x": 490,
-        "y": 4580,
+        "y": 4620,
         "wires": [
             [
                 "e7122ff60e30d850"
@@ -16567,7 +16596,7 @@
         "oldrc": false,
         "name": "VLC",
         "x": 610,
-        "y": 4460,
+        "y": 4500,
         "wires": [
             [],
             [],
@@ -16588,7 +16617,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 4460,
+        "y": 4500,
         "wires": [
             [
                 "e479890312f6ed6b"
@@ -16617,7 +16646,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 230,
-        "y": 4460,
+        "y": 4500,
         "wires": [
             [
                 "a5fc05cbf3c2b877"
@@ -16643,7 +16672,7 @@
         "payload": "settings.audio_codec",
         "payloadType": "global",
         "x": 1120,
-        "y": 4800,
+        "y": 4840,
         "wires": [
             [
                 "68abb4393d028775"
@@ -16692,7 +16721,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1380,
-        "y": 4800,
+        "y": 4840,
         "wires": [
             [
                 "06b559ab4aca15cf"
@@ -16727,7 +16756,7 @@
         "to": "",
         "reg": false,
         "x": 1610,
-        "y": 4800,
+        "y": 4840,
         "wires": [
             []
         ]
@@ -16751,7 +16780,7 @@
         "payload": "settings.input_choice",
         "payloadType": "global",
         "x": 1120,
-        "y": 4855.5908203125,
+        "y": 4895.5908203125,
         "wires": [
             [
                 "2e0d409b4b551cdb"
@@ -16795,7 +16824,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1380,
-        "y": 4855.5908203125,
+        "y": 4895.5908203125,
         "wires": [
             [
                 "a7a765ba72c31ee8"
@@ -16830,7 +16859,7 @@
         "to": "",
         "reg": false,
         "x": 1610,
-        "y": 4855.5908203125,
+        "y": 4895.5908203125,
         "wires": [
             []
         ]
@@ -16854,7 +16883,7 @@
         "payload": "settings.udp_ip_port",
         "payloadType": "global",
         "x": 1120,
-        "y": 4911.818359375,
+        "y": 4951.818359375,
         "wires": [
             [
                 "d155c2f4a4a95ddf"
@@ -16881,7 +16910,7 @@
         "className": "",
         "topicType": "msg",
         "x": 1341.765625,
-        "y": 4911.181640625,
+        "y": 4951.181640625,
         "wires": [
             [
                 "4b0e4ceac0843b6c"
@@ -16916,7 +16945,7 @@
         "to": "",
         "reg": false,
         "x": 1581.765625,
-        "y": 4911.181640625,
+        "y": 4951.181640625,
         "wires": [
             []
         ]
@@ -16940,7 +16969,7 @@
         "payload": "settings.rtmp_ip_port",
         "payloadType": "global",
         "x": 1120,
-        "y": 4967.4091796875,
+        "y": 5007.4091796875,
         "wires": [
             [
                 "17889543320f7239"
@@ -16967,7 +16996,7 @@
         "className": "",
         "topicType": "msg",
         "x": 1370,
-        "y": 4967.4091796875,
+        "y": 5007.4091796875,
         "wires": [
             [
                 "793fd51eda4da3b4"
@@ -17002,7 +17031,7 @@
         "to": "",
         "reg": false,
         "x": 1600,
-        "y": 4967.4091796875,
+        "y": 5007.4091796875,
         "wires": [
             []
         ]
@@ -17026,7 +17055,7 @@
         "payload": "settings.audio_sample_rate",
         "payloadType": "global",
         "x": 1140,
-        "y": 5023,
+        "y": 5063,
         "wires": [
             [
                 "afc105ffdbfd6b67"
@@ -17095,7 +17124,7 @@
         "topicType": "msg",
         "className": "",
         "x": 1370,
-        "y": 5023,
+        "y": 5063,
         "wires": [
             [
                 "edaef66bea244028"
@@ -17130,7 +17159,7 @@
         "to": "",
         "reg": false,
         "x": 1600,
-        "y": 5023,
+        "y": 5063,
         "wires": [
             []
         ]
@@ -17154,7 +17183,7 @@
         "payload": "settings.audio_delay",
         "payloadType": "global",
         "x": 260,
-        "y": 4800,
+        "y": 4840,
         "wires": [
             [
                 "bda9d0fa12b73a7b"
@@ -17181,7 +17210,7 @@
         "className": "",
         "topicType": "msg",
         "x": 510,
-        "y": 4800,
+        "y": 4840,
         "wires": [
             [
                 "9707e10f88d44a13"
@@ -17216,7 +17245,7 @@
         "to": "",
         "reg": false,
         "x": 720,
-        "y": 4800,
+        "y": 4840,
         "wires": [
             []
         ]
@@ -17240,7 +17269,7 @@
         "payload": "settings.thread_queue",
         "payloadType": "global",
         "x": 270,
-        "y": 4840,
+        "y": 4880,
         "wires": [
             [
                 "268823098bee16e3"
@@ -17267,7 +17296,7 @@
         "className": "",
         "topicType": "msg",
         "x": 520,
-        "y": 4840,
+        "y": 4880,
         "wires": [
             [
                 "7de98b3ad530b9ed"
@@ -17302,7 +17331,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 4840,
+        "y": 4880,
         "wires": [
             []
         ]
@@ -17326,7 +17355,7 @@
         "payload": "settings.rt_buffer",
         "payloadType": "global",
         "x": 248.67578125,
-        "y": 4963,
+        "y": 5003,
         "wires": [
             [
                 "3867abc64be57709"
@@ -17353,7 +17382,7 @@
         "className": "",
         "topicType": "msg",
         "x": 498.67578125,
-        "y": 4963,
+        "y": 5003,
         "wires": [
             [
                 "5742c2b6848b86ca"
@@ -17388,7 +17417,7 @@
         "to": "",
         "reg": false,
         "x": 728.67578125,
-        "y": 4963,
+        "y": 5003,
         "wires": [
             []
         ]
@@ -17412,7 +17441,7 @@
         "payload": "settings.fifo_size",
         "payloadType": "global",
         "x": 248.67578125,
-        "y": 5003,
+        "y": 5043,
         "wires": [
             [
                 "4d3826e743c485db"
@@ -17439,7 +17468,7 @@
         "className": "",
         "topicType": "msg",
         "x": 498.67578125,
-        "y": 5003,
+        "y": 5043,
         "wires": [
             [
                 "c79482819129c76e"
@@ -17474,7 +17503,7 @@
         "to": "",
         "reg": false,
         "x": 728.67578125,
-        "y": 5003,
+        "y": 5043,
         "wires": [
             []
         ]
@@ -17498,7 +17527,7 @@
         "payload": "settings.audio_delay_vvc",
         "payloadType": "global",
         "x": 260,
-        "y": 4900,
+        "y": 4940,
         "wires": [
             [
                 "f576c965ac8d9aab"
@@ -17525,7 +17554,7 @@
         "className": "",
         "topicType": "msg",
         "x": 510,
-        "y": 4900,
+        "y": 4940,
         "wires": [
             [
                 "6e6700cfb7db9272"
@@ -17560,7 +17589,7 @@
         "to": "",
         "reg": false,
         "x": 720,
-        "y": 4900,
+        "y": 4940,
         "wires": [
             []
         ]
@@ -17579,7 +17608,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5400,
+        "y": 5860,
         "wires": [
             []
         ]
@@ -17604,7 +17633,7 @@
         "className": "",
         "topicType": "msg",
         "x": 960,
-        "y": 5400,
+        "y": 5860,
         "wires": [
             [
                 "9dc824c56f4f3a2c"
@@ -17625,7 +17654,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5400,
+        "y": 5860,
         "wires": [
             [
                 "93f563206f98cde4"
@@ -17645,7 +17674,7 @@
         "onceDelay": "0.5",
         "topic": "",
         "x": 170,
-        "y": 5160,
+        "y": 5620,
         "wires": [
             [
                 "3aadcd5b16a568f8"
@@ -17666,7 +17695,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 390,
-        "y": 5160,
+        "y": 5620,
         "wires": [
             [
                 "a53750444a663bac",
@@ -17699,7 +17728,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5120,
+        "y": 5580,
         "wires": [
             []
         ]
@@ -17724,7 +17753,7 @@
         "className": "",
         "topicType": "msg",
         "x": 940,
-        "y": 5120,
+        "y": 5580,
         "wires": [
             [
                 "e4d49de5ef76b48c"
@@ -17745,7 +17774,7 @@
         "finalize": "",
         "libs": [],
         "x": 680,
-        "y": 5120,
+        "y": 5580,
         "wires": [
             [
                 "973c10af4dbfb52e"
@@ -17766,7 +17795,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5160,
+        "y": 5620,
         "wires": [
             []
         ]
@@ -17791,7 +17820,7 @@
         "className": "",
         "topicType": "msg",
         "x": 950,
-        "y": 5160,
+        "y": 5620,
         "wires": [
             [
                 "30437f33c9972f90"
@@ -17812,7 +17841,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 5160,
+        "y": 5620,
         "wires": [
             [
                 "c5f093958cc5103e"
@@ -17833,7 +17862,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5200,
+        "y": 5660,
         "wires": [
             []
         ]
@@ -17858,7 +17887,7 @@
         "className": "",
         "topicType": "msg",
         "x": 950,
-        "y": 5200,
+        "y": 5660,
         "wires": [
             [
                 "77d1845d8d7e97dd"
@@ -17879,7 +17908,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 5200,
+        "y": 5660,
         "wires": [
             [
                 "7c666d4b66bdb1c1"
@@ -17900,7 +17929,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5240,
+        "y": 5700,
         "wires": [
             []
         ]
@@ -17925,7 +17954,7 @@
         "className": "",
         "topicType": "msg",
         "x": 950,
-        "y": 5240,
+        "y": 5700,
         "wires": [
             [
                 "a65e0da8e66d8647"
@@ -17946,7 +17975,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 5240,
+        "y": 5700,
         "wires": [
             [
                 "08bb407e7555f53c"
@@ -17967,7 +17996,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5320,
+        "y": 5780,
         "wires": [
             []
         ]
@@ -17992,7 +18021,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5320,
+        "y": 5780,
         "wires": [
             [
                 "4cea289b661afb2e"
@@ -18013,7 +18042,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5320,
+        "y": 5780,
         "wires": [
             [
                 "f67aefa381b6dc8a"
@@ -18034,7 +18063,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5440,
+        "y": 5900,
         "wires": [
             []
         ]
@@ -18059,7 +18088,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5440,
+        "y": 5900,
         "wires": [
             [
                 "587ba7dcecad6d47"
@@ -18080,7 +18109,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 5440,
+        "y": 5900,
         "wires": [
             [
                 "8c3e78c6704e92a2"
@@ -18101,7 +18130,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5480,
+        "y": 5940,
         "wires": [
             []
         ]
@@ -18126,7 +18155,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5480,
+        "y": 5940,
         "wires": [
             [
                 "bdad9791244eab3b"
@@ -18147,7 +18176,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 5480,
+        "y": 5940,
         "wires": [
             [
                 "21b402fbd4675dcf"
@@ -18168,7 +18197,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5520,
+        "y": 5980,
         "wires": [
             []
         ]
@@ -18193,7 +18222,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5520,
+        "y": 5980,
         "wires": [
             [
                 "46a46f85dadd76f6"
@@ -18214,7 +18243,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 5520,
+        "y": 5980,
         "wires": [
             [
                 "2427bded041bffae"
@@ -18235,7 +18264,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 5560,
+        "y": 6020,
         "wires": [
             [
                 "e48b23e1d46a182a"
@@ -18262,7 +18291,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5560,
+        "y": 6020,
         "wires": [
             [
                 "1b33b2ee0e91bf0a"
@@ -18283,7 +18312,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5560,
+        "y": 6020,
         "wires": [
             []
         ]
@@ -18302,7 +18331,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5360,
+        "y": 5820,
         "wires": [
             []
         ]
@@ -18327,7 +18356,7 @@
         "className": "",
         "topicType": "msg",
         "x": 960,
-        "y": 5360,
+        "y": 5820,
         "wires": [
             [
                 "fa64203cbbfc748d"
@@ -18348,7 +18377,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5360,
+        "y": 5820,
         "wires": [
             [
                 "f59601c8ef54fb30"
@@ -18369,7 +18398,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5280,
+        "y": 5740,
         "wires": [
             []
         ]
@@ -18394,7 +18423,7 @@
         "className": "",
         "topicType": "msg",
         "x": 960,
-        "y": 5280,
+        "y": 5740,
         "wires": [
             [
                 "264f78c58101c550"
@@ -18415,7 +18444,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5280,
+        "y": 5740,
         "wires": [
             [
                 "bcea6a9dea321503"
@@ -18436,7 +18465,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 5640,
+        "y": 6100,
         "wires": [
             [
                 "cf620cc1430c2ec5"
@@ -18463,7 +18492,7 @@
         "className": "",
         "topicType": "msg",
         "x": 740,
-        "y": 5640,
+        "y": 6100,
         "wires": [
             [
                 "e63faf17ba00a395"
@@ -18484,7 +18513,7 @@
         "finalize": "",
         "libs": [],
         "x": 1170,
-        "y": 5640,
+        "y": 6100,
         "wires": [
             []
         ]
@@ -18502,8 +18531,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 5780,
+        "x": 990,
+        "y": 6220,
         "wires": [
             [
                 "8c1b5efab2a40a90"
@@ -18523,8 +18552,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 5780,
+        "x": 650,
+        "y": 6220,
         "wires": [
             [
                 "5a94e29921a8893f"
@@ -18549,8 +18578,8 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "x": 190,
-        "y": 5780,
+        "x": 170,
+        "y": 6220,
         "wires": [
             [
                 "d03c46be6294064a"
@@ -18577,8 +18606,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 830,
-        "y": 5780,
+        "x": 810,
+        "y": 6220,
         "wires": [
             [
                 "f132495fecc36548"
@@ -18598,8 +18627,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 360,
-        "y": 5780,
+        "x": 340,
+        "y": 6220,
         "wires": [
             [
                 "d46af93abcd001aa"
@@ -18756,8 +18785,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 1340,
-        "y": 5780,
+        "x": 1320,
+        "y": 6220,
         "wires": [
             []
         ]
@@ -18780,8 +18809,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1160,
-        "y": 5780,
+        "x": 1140,
+        "y": 6220,
         "wires": [
             [
                 "5aa9ce11562d2ef0"
@@ -19013,7 +19042,7 @@
         "oldrc": false,
         "name": "mpv",
         "x": 630,
-        "y": 4640,
+        "y": 4680,
         "wires": [
             [],
             [],
@@ -19034,7 +19063,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 4640,
+        "y": 4680,
         "wires": [
             [
                 "a2195a36147bdb64"
@@ -19063,7 +19092,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 260,
-        "y": 4640,
+        "y": 4680,
         "wires": [
             [
                 "05adc155f5908f25"
@@ -19279,7 +19308,7 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "1f5722b7aff1a710",
-        "name": "function 24",
+        "name": "codec to mqtt path",
         "func": "msg.payload = global.get(\"settings.CODEC\")\nmsg.topic= \"dt/pluto/\" + global.get(\"callsign\")+ \"/tx/dvbs2/codec\"\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -19287,8 +19316,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
-        "y": 4200,
+        "x": 1250,
+        "y": 4220,
         "wires": [
             [
                 "525b094f71549d38"
@@ -19310,8 +19339,8 @@
         "correl": "",
         "expiry": "",
         "broker": "064bde8eca01e996",
-        "x": 1190,
-        "y": 4200,
+        "x": 1410,
+        "y": 4220,
         "wires": []
     },
     {
@@ -19326,11 +19355,388 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 890,
-        "y": 4140,
+        "x": 1070,
+        "y": 4220,
         "wires": [
             [
                 "31fc4dcf29e0f060"
+            ]
+        ]
+    },
+    {
+        "id": "936ed1747471b019",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "startup watchdog",
+        "func": "msg.payload = env.get(\"SECURED\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d7d6318a70b8e04",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.nvidia_preset",
+        "payloadType": "global",
+        "x": 280,
+        "y": 5220,
+        "wires": [
+            [
+                "6398bd2421ae51a0"
+            ]
+        ]
+    },
+    {
+        "id": "e3f5bbdd2ecb08d7",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "Set NVIDIA preset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.nvidia_preset",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 5220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6398bd2421ae51a0",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "NVENC(x264/x265) hardware preset",
+        "label": "NVIDIA hardware preset",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "ce32d1caa356bc95",
+        "order": 8,
+        "width": "13",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "default",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "slow - hq 2 passes",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "medium - hq 1 pass",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "fast - hp 1 pass",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "ll - low latency",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "llhq - low latency hq",
+                "value": "48000",
+                "type": "str"
+            },
+            {
+                "label": "llhp - low latency hp",
+                "value": "88200",
+                "type": "str"
+            },
+            {
+                "label": "p1 - fastest (lowest quality)",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "p2 - faster (lower quality)",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "p3 - fast (low quality)",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "p4 - medium (default)",
+                "value": "15",
+                "type": "str"
+            },
+            {
+                "label": "p5 - slow (good quality)",
+                "value": "16",
+                "type": "str"
+            },
+            {
+                "label": "p6 - slower (better quality)",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "p7 - slowest (best quality)",
+                "value": "18",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 630,
+        "y": 5220,
+        "wires": [
+            [
+                "e3f5bbdd2ecb08d7"
+            ]
+        ]
+    },
+    {
+        "id": "055a52547eba0a80",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.nvidia_tune",
+        "payloadType": "global",
+        "x": 280,
+        "y": 5280,
+        "wires": [
+            [
+                "02a9010d28f77dea"
+            ]
+        ]
+    },
+    {
+        "id": "623ad963897006b7",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "Set NVIDIA tune",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.nvidia_tune",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 5280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02a9010d28f77dea",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "NVENC(x264/x265) hardware preset",
+        "label": "NVIDIA tune",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "ce32d1caa356bc95",
+        "order": 8,
+        "width": "13",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "hq - High quality",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "ll - Low latency",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "ull - Ultra low latency",
+                "value": "3",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 630,
+        "y": 5280,
+        "wires": [
+            [
+                "623ad963897006b7"
+            ]
+        ]
+    },
+    {
+        "id": "c007ccb0b2214945",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "Set NVIDIA profile",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.nvidia_profile",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 5340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50d814e15e34d86b",
+        "type": "ui_dropdown",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "NVENC(x264/x265) hardware preset",
+        "label": "NVIDIA profile",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "ce32d1caa356bc95",
+        "order": 8,
+        "width": "13",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "main",
+                "value": "main",
+                "type": "str"
+            },
+            {
+                "label": "high",
+                "value": "high",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 630,
+        "y": 5340,
+        "wires": [
+            [
+                "c007ccb0b2214945"
+            ]
+        ]
+    },
+    {
+        "id": "bdb34d686b04ddf2",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.nvidia_profile",
+        "payloadType": "global",
+        "x": 280,
+        "y": 5340,
+        "wires": [
+            [
+                "50d814e15e34d86b"
             ]
         ]
     },
