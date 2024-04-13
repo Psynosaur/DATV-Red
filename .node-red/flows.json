@@ -800,8 +800,8 @@
             "0eeb16760c96d1fa",
             "38932643615d50c9"
         ],
-        "x": 2354,
-        "y": 2999,
+        "x": 2374,
+        "y": 3099,
         "w": 1002,
         "h": 822
     },
@@ -819,7 +819,7 @@
             "2acadfcfdd128dd9",
             "bbf9e870bbb3141b"
         ],
-        "x": 574,
+        "x": 114,
         "y": 39,
         "w": 712,
         "h": 82
@@ -10191,8 +10191,8 @@
         "topic": "",
         "payload": "settings.network",
         "payloadType": "global",
-        "x": 2460,
-        "y": 3180,
+        "x": 2480,
+        "y": 3280,
         "wires": [
             [
                 "bb8dee7ad47db69c"
@@ -10218,8 +10218,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2700,
-        "y": 3180,
+        "x": 2720,
+        "y": 3280,
         "wires": [
             [
                 "44f0b7da719f1757"
@@ -10253,8 +10253,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2930,
-        "y": 3180,
+        "x": 2950,
+        "y": 3280,
         "wires": [
             []
         ]
@@ -10277,8 +10277,8 @@
         "topic": "",
         "payload": "settings.pc1",
         "payloadType": "global",
-        "x": 2470,
-        "y": 3240,
+        "x": 2490,
+        "y": 3340,
         "wires": [
             [
                 "6f6601d609b6460d"
@@ -10312,8 +10312,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2930,
-        "y": 3240,
+        "x": 2950,
+        "y": 3340,
         "wires": [
             []
         ]
@@ -10337,8 +10337,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2700,
-        "y": 3240,
+        "x": 2720,
+        "y": 3340,
         "wires": [
             [
                 "1de281946f74c19b"
@@ -10363,8 +10363,8 @@
         "topic": "",
         "payload": "settings.pc2",
         "payloadType": "global",
-        "x": 2470,
-        "y": 3300,
+        "x": 2490,
+        "y": 3400,
         "wires": [
             [
                 "1ca63cc42b3ba5f8"
@@ -10390,8 +10390,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2700,
-        "y": 3300,
+        "x": 2720,
+        "y": 3400,
         "wires": [
             [
                 "5db94457ba6ae6b6"
@@ -10425,8 +10425,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2930,
-        "y": 3300,
+        "x": 2950,
+        "y": 3400,
         "wires": [
             []
         ]
@@ -10449,8 +10449,8 @@
         "topic": "",
         "payload": "settings.portstart_udp",
         "payloadType": "global",
-        "x": 2480,
-        "y": 3360,
+        "x": 2500,
+        "y": 3460,
         "wires": [
             [
                 "41df24c97592fd90"
@@ -10476,8 +10476,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2720,
-        "y": 3360,
+        "x": 2740,
+        "y": 3460,
         "wires": [
             [
                 "0bd56278afe23f51"
@@ -10511,8 +10511,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2950,
-        "y": 3360,
+        "x": 2970,
+        "y": 3460,
         "wires": [
             []
         ]
@@ -10544,8 +10544,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2950,
-        "y": 3420,
+        "x": 2970,
+        "y": 3520,
         "wires": [
             []
         ]
@@ -10569,8 +10569,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2710,
-        "y": 3420,
+        "x": 2730,
+        "y": 3520,
         "wires": [
             [
                 "4c0b0ccf968a8497"
@@ -10595,8 +10595,8 @@
         "topic": "",
         "payload": "settings.portend_udp",
         "payloadType": "global",
-        "x": 2480,
-        "y": 3420,
+        "x": 2500,
+        "y": 3520,
         "wires": [
             [
                 "19b9271d7a62e4a5"
@@ -10621,8 +10621,8 @@
         "topic": "",
         "payload": "settings.tunip",
         "payloadType": "global",
-        "x": 2470,
-        "y": 3600,
+        "x": 2490,
+        "y": 3700,
         "wires": [
             [
                 "5635c4cc49824c04"
@@ -10648,8 +10648,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2700,
-        "y": 3600,
+        "x": 2720,
+        "y": 3700,
         "wires": [
             [
                 "71e2bcf77d069c8e"
@@ -10683,8 +10683,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2930,
-        "y": 3600,
+        "x": 2950,
+        "y": 3700,
         "wires": [
             []
         ]
@@ -10707,8 +10707,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 3150,
-        "y": 3040,
+        "x": 3170,
+        "y": 3140,
         "wires": [
             [
                 "e5b15ef8662e723b",
@@ -10734,8 +10734,8 @@
         "topic": "",
         "payload": "settings.portstart_tcp",
         "payloadType": "global",
-        "x": 2480,
-        "y": 3480,
+        "x": 2500,
+        "y": 3580,
         "wires": [
             [
                 "d508b43091f81d07"
@@ -10761,8 +10761,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2720,
-        "y": 3480,
+        "x": 2740,
+        "y": 3580,
         "wires": [
             [
                 "361d78ea269b5bbd"
@@ -10796,8 +10796,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2950,
-        "y": 3480,
+        "x": 2970,
+        "y": 3580,
         "wires": [
             []
         ]
@@ -10829,8 +10829,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2940,
-        "y": 3540,
+        "x": 2960,
+        "y": 3640,
         "wires": [
             []
         ]
@@ -10854,8 +10854,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2710,
-        "y": 3540,
+        "x": 2730,
+        "y": 3640,
         "wires": [
             [
                 "3cb48bb52bd5e53f"
@@ -10880,8 +10880,8 @@
         "topic": "",
         "payload": "settings.portend_tcp",
         "payloadType": "global",
-        "x": 2480,
-        "y": 3540,
+        "x": 2500,
+        "y": 3640,
         "wires": [
             [
                 "ce3c8a12ea185160"
@@ -11009,8 +11009,8 @@
         "topic": "",
         "payload": "settings.firewall",
         "payloadType": "global",
-        "x": 2500,
-        "y": 3660,
+        "x": 2520,
+        "y": 3760,
         "wires": [
             [
                 "8ce724b0fdbe7f04"
@@ -11048,8 +11048,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 2700,
-        "y": 3660,
+        "x": 2720,
+        "y": 3760,
         "wires": [
             [
                 "5cb8fd575bd887c8"
@@ -11083,8 +11083,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2930,
-        "y": 3660,
+        "x": 2950,
+        "y": 3760,
         "wires": [
             []
         ]
@@ -11425,8 +11425,8 @@
         "topic": "",
         "payload": "settings.remtunnel",
         "payloadType": "global",
-        "x": 2480,
-        "y": 3720,
+        "x": 2500,
+        "y": 3820,
         "wires": [
             [
                 "4bcbcb9cfd193fed"
@@ -11452,8 +11452,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2730,
-        "y": 3720,
+        "x": 2750,
+        "y": 3820,
         "wires": [
             [
                 "7a479b074b745c8f"
@@ -11487,8 +11487,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2940,
-        "y": 3720,
+        "x": 2960,
+        "y": 3820,
         "wires": [
             []
         ]
@@ -11520,8 +11520,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2960,
-        "y": 3780,
+        "x": 2980,
+        "y": 3880,
         "wires": [
             []
         ]
@@ -11545,8 +11545,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 2740,
-        "y": 3780,
+        "x": 2760,
+        "y": 3880,
         "wires": [
             [
                 "ad59cd30b3cc7fcc"
@@ -11571,8 +11571,8 @@
         "topic": "",
         "payload": "settings.remtunport",
         "payloadType": "global",
-        "x": 2500,
-        "y": 3780,
+        "x": 2520,
+        "y": 3880,
         "wires": [
             [
                 "107deb095943505f"
@@ -12973,8 +12973,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2440,
-        "y": 3100,
+        "x": 2460,
+        "y": 3200,
         "wires": [
             [
                 "7327672ce1acf181",
@@ -12996,8 +12996,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 2590,
-        "y": 3120,
+        "x": 2610,
+        "y": 3220,
         "wires": [
             [
                 "e481ee2481f35f02"
@@ -13018,8 +13018,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2760,
-        "y": 3120,
+        "x": 2780,
+        "y": 3220,
         "wires": [
             [
                 "4cbca64d40e28578"
@@ -13040,8 +13040,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2760,
-        "y": 3080,
+        "x": 2780,
+        "y": 3180,
         "wires": [
             [
                 "4cbca64d40e28578"
@@ -13253,8 +13253,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2770,
-        "y": 3040,
+        "x": 2790,
+        "y": 3140,
         "wires": [
             [
                 "4cbca64d40e28578"
@@ -13275,8 +13275,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3260,
-        "y": 3120,
+        "x": 3280,
+        "y": 3220,
         "wires": []
     },
     {
@@ -13311,8 +13311,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2990,
-        "y": 3120,
+        "x": 3010,
+        "y": 3220,
         "wires": [
             [
                 "4cbca64d40e28578"
@@ -26433,7 +26433,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 690,
+        "x": 230,
         "y": 80,
         "wires": [
             [
@@ -26447,7 +26447,7 @@
         "z": "e2c54979685d14cb",
         "g": "9b97da84f20d2dc4",
         "name": "",
-        "x": 1030,
+        "x": 570,
         "y": 80,
         "wires": []
     },
@@ -26463,7 +26463,7 @@
         "syntax": "mustache",
         "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<link rel=\"stylesheet\" href=\"/internet_spectrum/style.css\">\n<script src=\"/internet_spectrum/websocket.js\"></script>\n<script> \n    var localPage = false;\n</script>\n<script async src=\"/internet_spectrum/script.js\"></script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
         "output": "str",
-        "x": 870,
+        "x": 410,
         "y": 80,
         "wires": [
             [
@@ -26484,7 +26484,7 @@
         "url": "/spektrum_test",
         "origin": "*",
         "scale": "100",
-        "x": 1180,
+        "x": 720,
         "y": 80,
         "wires": [
             []
