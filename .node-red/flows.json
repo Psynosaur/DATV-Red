@@ -2085,7 +2085,7 @@
             "e63faf17ba00a395"
         ],
         "x": 74,
-        "y": 5459,
+        "y": 5499,
         "w": 1212,
         "h": 602
     },
@@ -2230,12 +2230,15 @@
             "8ed4172167c69676",
             "3dc297199112c4cf",
             "0e55bf78e62a2838",
-            "38ff39169e57b714"
+            "38ff39169e57b714",
+            "ab08a3641c16e334",
+            "d86f9c2570ed4ea3",
+            "9ccfe5c42de38478"
         ],
-        "x": 74,
-        "y": 5099,
-        "w": 952,
-        "h": 322
+        "x": 94,
+        "y": 5079,
+        "w": 972,
+        "h": 382
     },
     {
         "id": "4d669b1e14f85738",
@@ -15441,7 +15444,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "42d87aea4110d7da",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -17077,7 +17080,7 @@
         "tooltip": "",
         "place": "Select option",
         "group": "42d87aea4110d7da",
-        "order": 3,
+        "order": 2,
         "width": 6,
         "height": 1,
         "passthru": true,
@@ -17613,7 +17616,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5780,
+        "y": 5820,
         "wires": [
             []
         ]
@@ -17638,7 +17641,7 @@
         "className": "",
         "topicType": "msg",
         "x": 960,
-        "y": 5780,
+        "y": 5820,
         "wires": [
             [
                 "9dc824c56f4f3a2c"
@@ -17659,7 +17662,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5780,
+        "y": 5820,
         "wires": [
             [
                 "93f563206f98cde4"
@@ -17679,7 +17682,7 @@
         "onceDelay": "0.5",
         "topic": "",
         "x": 170,
-        "y": 5540,
+        "y": 5580,
         "wires": [
             [
                 "3aadcd5b16a568f8"
@@ -17700,7 +17703,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 390,
-        "y": 5540,
+        "y": 5580,
         "wires": [
             [
                 "a53750444a663bac",
@@ -17733,7 +17736,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5500,
+        "y": 5540,
         "wires": [
             []
         ]
@@ -17758,7 +17761,7 @@
         "className": "",
         "topicType": "msg",
         "x": 940,
-        "y": 5500,
+        "y": 5540,
         "wires": [
             [
                 "e4d49de5ef76b48c"
@@ -17779,7 +17782,7 @@
         "finalize": "",
         "libs": [],
         "x": 680,
-        "y": 5500,
+        "y": 5540,
         "wires": [
             [
                 "973c10af4dbfb52e"
@@ -17800,7 +17803,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5540,
+        "y": 5580,
         "wires": [
             []
         ]
@@ -17825,7 +17828,7 @@
         "className": "",
         "topicType": "msg",
         "x": 950,
-        "y": 5540,
+        "y": 5580,
         "wires": [
             [
                 "30437f33c9972f90"
@@ -17846,7 +17849,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 5540,
+        "y": 5580,
         "wires": [
             [
                 "c5f093958cc5103e"
@@ -17867,7 +17870,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5580,
+        "y": 5620,
         "wires": [
             []
         ]
@@ -17892,7 +17895,7 @@
         "className": "",
         "topicType": "msg",
         "x": 950,
-        "y": 5580,
+        "y": 5620,
         "wires": [
             [
                 "77d1845d8d7e97dd"
@@ -17913,7 +17916,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 5580,
+        "y": 5620,
         "wires": [
             [
                 "7c666d4b66bdb1c1"
@@ -17934,7 +17937,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5620,
+        "y": 5660,
         "wires": [
             []
         ]
@@ -17959,7 +17962,7 @@
         "className": "",
         "topicType": "msg",
         "x": 950,
-        "y": 5620,
+        "y": 5660,
         "wires": [
             [
                 "a65e0da8e66d8647"
@@ -17980,7 +17983,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 5620,
+        "y": 5660,
         "wires": [
             [
                 "08bb407e7555f53c"
@@ -18001,7 +18004,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5700,
+        "y": 5740,
         "wires": [
             []
         ]
@@ -18026,7 +18029,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5700,
+        "y": 5740,
         "wires": [
             [
                 "4cea289b661afb2e"
@@ -18047,7 +18050,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5700,
+        "y": 5740,
         "wires": [
             [
                 "f67aefa381b6dc8a"
@@ -18068,7 +18071,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5820,
+        "y": 5860,
         "wires": [
             []
         ]
@@ -18093,7 +18096,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5820,
+        "y": 5860,
         "wires": [
             [
                 "587ba7dcecad6d47"
@@ -18114,7 +18117,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 5820,
+        "y": 5860,
         "wires": [
             [
                 "8c3e78c6704e92a2"
@@ -18135,7 +18138,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5860,
+        "y": 5900,
         "wires": [
             []
         ]
@@ -18160,7 +18163,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5860,
+        "y": 5900,
         "wires": [
             [
                 "bdad9791244eab3b"
@@ -18181,7 +18184,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 5860,
+        "y": 5900,
         "wires": [
             [
                 "21b402fbd4675dcf"
@@ -18202,7 +18205,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5900,
+        "y": 5940,
         "wires": [
             []
         ]
@@ -18227,7 +18230,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5900,
+        "y": 5940,
         "wires": [
             [
                 "46a46f85dadd76f6"
@@ -18248,7 +18251,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 5900,
+        "y": 5940,
         "wires": [
             [
                 "2427bded041bffae"
@@ -18269,7 +18272,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 5940,
+        "y": 5980,
         "wires": [
             [
                 "e48b23e1d46a182a"
@@ -18296,7 +18299,7 @@
         "className": "",
         "topicType": "msg",
         "x": 970,
-        "y": 5940,
+        "y": 5980,
         "wires": [
             [
                 "1b33b2ee0e91bf0a"
@@ -18317,7 +18320,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5940,
+        "y": 5980,
         "wires": [
             []
         ]
@@ -18336,7 +18339,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5740,
+        "y": 5780,
         "wires": [
             []
         ]
@@ -18361,7 +18364,7 @@
         "className": "",
         "topicType": "msg",
         "x": 960,
-        "y": 5740,
+        "y": 5780,
         "wires": [
             [
                 "fa64203cbbfc748d"
@@ -18382,7 +18385,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5740,
+        "y": 5780,
         "wires": [
             [
                 "f59601c8ef54fb30"
@@ -18403,7 +18406,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 5660,
+        "y": 5700,
         "wires": [
             []
         ]
@@ -18428,7 +18431,7 @@
         "className": "",
         "topicType": "msg",
         "x": 960,
-        "y": 5660,
+        "y": 5700,
         "wires": [
             [
                 "264f78c58101c550"
@@ -18449,7 +18452,7 @@
         "finalize": "",
         "libs": [],
         "x": 700,
-        "y": 5660,
+        "y": 5700,
         "wires": [
             [
                 "bcea6a9dea321503"
@@ -18470,7 +18473,7 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 6020,
+        "y": 6060,
         "wires": [
             [
                 "cf620cc1430c2ec5"
@@ -18497,7 +18500,7 @@
         "className": "",
         "topicType": "msg",
         "x": 740,
-        "y": 6020,
+        "y": 6060,
         "wires": [
             [
                 "e63faf17ba00a395"
@@ -18518,7 +18521,7 @@
         "finalize": "",
         "libs": [],
         "x": 1170,
-        "y": 6020,
+        "y": 6060,
         "wires": [
             []
         ]
@@ -18851,7 +18854,7 @@
         "g": "78f7e24f56d510ed",
         "name": "Start encoder",
         "group": "42d87aea4110d7da",
-        "order": 3,
+        "order": 6,
         "width": "2",
         "height": 1,
         "passthru": false,
@@ -19082,7 +19085,7 @@
         "g": "e6bc3a23f88991a3",
         "name": "MPV_test",
         "group": "42d87aea4110d7da",
-        "order": 2,
+        "order": 4,
         "width": "2",
         "height": 1,
         "passthru": false,
@@ -19111,7 +19114,7 @@
         "g": "72ddf00d98862ef3",
         "name": "ffplay_test",
         "group": "42d87aea4110d7da",
-        "order": 2,
+        "order": 5,
         "width": "2",
         "height": 1,
         "passthru": false,
@@ -19248,15 +19251,15 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "1473030260740438",
-        "name": "Calculate bitrate function legacy",
-        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let codec = global.get(\"settings.CODEC\");\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n    //Decrease TSBitRate for GSE to 88% because of the IP-Header (internal encoder)\n    let streamout = global.get(\"device.tx.stream.mode\");\n    if (streamout == \"dvbs2-gse\")\n        TSBitRate = (TSBitRate * 0.88)\n\n    if (sr > 20 && sr < 36)\n        videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    if (sr > 35 && sr < 67)\n        videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    if (sr > 66 && sr < 126)\n        videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    if (sr > 125 && sr < 251)\n        videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    if (sr > 250 && sr < 334)\n        videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    if (sr > 333 && sr < 501)\n        videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    if (sr > 500 && sr < 1001)\n        videoBitRate = (TSBitRate * 0.86) - audioBitRate;\n    if (sr > 1000 && sr < 1501)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    if (sr > 1500 && sr < 4001)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = (videoBitRate * 0.80);\n            if (fec === \"1/3\") videoBitRate = (videoBitRate * 0.87);\n            if (fec === \"2/5\") videoBitRate = (videoBitRate * 0.91);\n            if (fec === \"1/2\") videoBitRate = (videoBitRate * 0.94);\n            if (fec === \"3/5\") videoBitRate = (videoBitRate * 0.96);\n            if (fec === \"2/3\") videoBitRate = (videoBitRate * 0.98);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.02;\n            break;\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.03;\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.04;\n            break;\n    }\n    if (videoBitRate > 1 && videoBitRate < 61) videoBitRate = (videoBitRate * 0.5);\n    if (videoBitRate > 60 && videoBitRate < 101) videoBitRate = (videoBitRate * 0.7);\n    // if (codec === \"libvvenc\") videoBitRate = videoBitRate * 0.95;   \n    global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    global.set(\"settings.VBITRATE\", Number(videoBitRate.toFixed(2)));\n    return msg;\n}\n",
+        "name": "BR calc",
+        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let codec = global.get(\"settings.CODEC\");\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n    //Decrease TSBitRate for GSE to 88% because of the IP-Header (internal encoder)\n    let streamout = global.get(\"device.tx.stream.mode\");\n    let br_multi = global.get(\"settings.bitrate_multiplier\");\n    if (streamout == \"dvbs2-gse\")\n        TSBitRate = (TSBitRate * 0.88)\n\n    if (sr > 20 && sr < 36)\n        videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    if (sr > 35 && sr < 67)\n        videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    if (sr > 66 && sr < 126)\n        videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    if (sr > 125 && sr < 251)\n        videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    if (sr > 250 && sr < 334)\n        videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    if (sr > 333 && sr < 501)\n        videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    if (sr > 500 && sr < 1001)\n        videoBitRate = (TSBitRate * 0.86) - audioBitRate;\n    if (sr > 1000 && sr < 1501)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    if (sr > 1500 && sr < 4001)\n        videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = (videoBitRate * 0.80);\n            if (fec === \"1/3\") videoBitRate = (videoBitRate * 0.87);\n            if (fec === \"2/5\") videoBitRate = (videoBitRate * 0.91);\n            if (fec === \"1/2\") videoBitRate = (videoBitRate * 0.94);\n            if (fec === \"3/5\") videoBitRate = (videoBitRate * 0.96);\n            if (fec === \"2/3\") videoBitRate = (videoBitRate * 0.98);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.01;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.02;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.02;\n            break;\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.03;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.03;\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"5/6\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"8/9\") videoBitRate = videoBitRate * 1.04;\n            if (fec === \"9/10\") videoBitRate = videoBitRate * 1.04;\n            break;\n    }\n    if (videoBitRate > 1 && videoBitRate < 61) videoBitRate = (videoBitRate * 0.5);\n    if (videoBitRate > 60 && videoBitRate < 101) videoBitRate = (videoBitRate * 0.7);\n    // if (codec === \"libvvenc\") videoBitRate = videoBitRate * 0.95;   \n    global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    global.set(\"settings.VBITRATE\", Number((videoBitRate * br_multi).toFixed(2)));\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1830,
+        "x": 1760,
         "y": 60,
         "wires": [
             [
@@ -19268,6 +19271,7 @@
         "id": "c2d784cdfb89762d",
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "1473030260740438",
         "group": "8bd7855b29878c5b",
         "order": 8,
@@ -19290,6 +19294,7 @@
         "id": "633c66ba35309ee7",
         "type": "ui_text",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "1473030260740438",
         "group": "8bd7855b29878c5b",
         "order": 9,
@@ -19386,8 +19391,8 @@
         "topic": "",
         "payload": "settings.nvidia_preset",
         "payloadType": "global",
-        "x": 240,
-        "y": 5140,
+        "x": 260,
+        "y": 5120,
         "wires": [
             [
                 "6398bd2421ae51a0"
@@ -19421,8 +19426,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 5140,
+        "x": 930,
+        "y": 5120,
         "wires": [
             []
         ]
@@ -19518,8 +19523,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 590,
-        "y": 5140,
+        "x": 610,
+        "y": 5120,
         "wires": [
             [
                 "e3f5bbdd2ecb08d7"
@@ -19544,8 +19549,8 @@
         "topic": "",
         "payload": "settings.nvidia_tune",
         "payloadType": "global",
-        "x": 240,
-        "y": 5200,
+        "x": 260,
+        "y": 5180,
         "wires": [
             [
                 "02a9010d28f77dea"
@@ -19579,8 +19584,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
-        "y": 5200,
+        "x": 920,
+        "y": 5180,
         "wires": [
             []
         ]
@@ -19621,8 +19626,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 590,
-        "y": 5200,
+        "x": 610,
+        "y": 5180,
         "wires": [
             [
                 "623ad963897006b7"
@@ -19656,8 +19661,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 5260,
+        "x": 930,
+        "y": 5240,
         "wires": [
             []
         ]
@@ -19693,8 +19698,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 590,
-        "y": 5260,
+        "x": 610,
+        "y": 5240,
         "wires": [
             [
                 "c007ccb0b2214945"
@@ -19719,8 +19724,8 @@
         "topic": "",
         "payload": "settings.nvidia_profile",
         "payloadType": "global",
-        "x": 240,
-        "y": 5260,
+        "x": 260,
+        "y": 5240,
         "wires": [
             [
                 "50d814e15e34d86b"
@@ -19745,8 +19750,8 @@
         "topic": "",
         "payload": "settings.libx26x_preset",
         "payloadType": "global",
-        "x": 250,
-        "y": 5320,
+        "x": 270,
+        "y": 5300,
         "wires": [
             [
                 "8ed4172167c69676"
@@ -19780,8 +19785,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 5320,
+        "x": 930,
+        "y": 5300,
         "wires": [
             []
         ]
@@ -19857,8 +19862,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 550,
-        "y": 5320,
+        "x": 570,
+        "y": 5300,
         "wires": [
             [
                 "d6648d4dac4c3c65"
@@ -19883,8 +19888,8 @@
         "topic": "",
         "payload": "settings.libx26x_crf",
         "payloadType": "global",
-        "x": 230,
-        "y": 5380,
+        "x": 250,
+        "y": 5360,
         "wires": [
             [
                 "38ff39169e57b714"
@@ -19919,7 +19924,7 @@
         "to": "",
         "reg": false,
         "x": 920,
-        "y": 5380,
+        "y": 5360,
         "wires": [
             []
         ]
@@ -19944,8 +19949,8 @@
         "max": "30",
         "step": 1,
         "className": "",
-        "x": 540,
-        "y": 5380,
+        "x": 560,
+        "y": 5360,
         "wires": [
             [
                 "0e55bf78e62a2838"
@@ -20013,6 +20018,93 @@
         "x": 4090,
         "y": 1380,
         "wires": []
+    },
+    {
+        "id": "ab08a3641c16e334",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.bitrate_multiplier",
+        "payloadType": "global",
+        "x": 270,
+        "y": 5420,
+        "wires": [
+            [
+                "d86f9c2570ed4ea3"
+            ]
+        ]
+    },
+    {
+        "id": "d86f9c2570ed4ea3",
+        "type": "ui_slider",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "Video bitrate multiplier",
+        "label": "Video bitrate multiplier",
+        "tooltip": "{{payload}}",
+        "group": "42d87aea4110d7da",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0.9",
+        "max": "1",
+        "step": "0.01",
+        "className": "",
+        "x": 560,
+        "y": 5420,
+        "wires": [
+            [
+                "9ccfe5c42de38478"
+            ]
+        ]
+    },
+    {
+        "id": "9ccfe5c42de38478",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "0e7ada672069cea4",
+        "name": "Video bitrate multiplier",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.bitrate_multiplier",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 5420,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "1e0841f1.ac68fe",
