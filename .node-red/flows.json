@@ -30859,7 +30859,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "n6.1.1-6-g2cefae66b9",
+        "payload": "n6.1.1-99-gf75f1f39f2",
         "payloadType": "str",
         "x": 320,
         "y": 180,
@@ -30951,7 +30951,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v3.1.7",
+        "payload": "v3.1.9",
         "payloadType": "str",
         "x": 270,
         "y": 300,
@@ -31043,7 +31043,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "core 164 r3186 585e019",
+        "payload": "core 164 r3190 7ed753b",
         "payloadType": "str",
         "x": 330,
         "y": 440,
@@ -31089,9 +31089,9 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v3.5+116-0dced5064",
+        "payload": "v3.6+2-23f7133ec",
         "payloadType": "str",
-        "x": 320,
+        "x": 310,
         "y": 500,
         "wires": [
             [
@@ -31135,9 +31135,9 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v1.11.0-rc1",
+        "payload": "v1.11.1",
         "payloadType": "str",
-        "x": 290,
+        "x": 280,
         "y": 560,
         "wires": [
             [
@@ -31227,13 +31227,59 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v3.8.2-356-g80123cb352",
+        "payload": "v3.8.2-397-ga4420e55a8",
         "payloadType": "str",
         "x": 330,
         "y": 680,
         "wires": [
             [
                 "6bd9b4974ea6e5c8"
+            ]
+        ]
+    },
+    {
+        "id": "05d2583655e0d248",
+        "type": "ui_text",
+        "z": "77dd5d2f6b2ec996",
+        "group": "ce0b1e3dc798b9a0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "libsvtav1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "224d293b43a06f50",
+        "type": "inject",
+        "z": "77dd5d2f6b2ec996",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "v2.0.0-7-gbd9e31f1",
+        "payloadType": "str",
+        "x": 310,
+        "y": 740,
+        "wires": [
+            [
+                "05d2583655e0d248"
             ]
         ]
     },
