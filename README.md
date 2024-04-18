@@ -1,6 +1,6 @@
 # DATV-Red
 
-## Prerequisite 
+## Prerequisite
 - Latest PlutoDVB2 [firmware](https://github.com/F5OEO/plutosdr-fw/releases)
 - Please see [flashing steps](https://github.com/Psynosaur/DATV-Red/wiki#flashing-steps)
 
@@ -24,7 +24,7 @@
 ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/1a92da28-736c-4f40-bf34-7566445b0d5d)
 
 
-## Thanks 
+## Thanks
 Batch files previously used in this project were from DL5OCD Michael and his [DATV-NotSoEasy project](https://groups.io/g/plutodvb/message/257)
 
 Node Red flows inspired by project from PE2JKO [from this post](https://www.pg540.org/wiki/index.php/RFE_for_PlutoDVB2)
@@ -33,5 +33,3 @@ Thank you to all the testers, **DL5OCD**, **HB9DUG**, **DL2GHM** and all others
 
 ## Supporting my hobby
 If you'd like to say thanks, please feel free to buy me some [coffee](https://www.buymeacoffee.com/ohansmitg) or [time](https://paypal.me/zs1sci?country.x=ZA&locale.x=en_US)
-
-

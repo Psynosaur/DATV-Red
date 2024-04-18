@@ -3,7 +3,7 @@
  * This software is released under the MIT license.
  * See the LICENSE file for further details.
  */
-let data = [{x:0,Y:128},{x:128,Y:0}];
+let data = [{x: 0, y: 128}, {x: 128, y: 0}];
 let dataPoints = 1500;
 let graph = document.getElementById("graph");
 const ctx = graph.getContext('2d', {alpha: false});
@@ -16,6 +16,80 @@ const W = ctx.canvas.width, H = ctx.canvas.height;
 ctx.fillStyle = `rgb(0, 255, 128)`
 let endAngle = Math.PI * 2;
 
+function mqtt_client() {
+    let x, y = 0;
+    if (hosting_url !== "" && window.location.hostname === hosting_url) {
+        pluto_url = hosting_url;
+        console.log("MQTT hostname: " + window.location.hostname)
+        console.log("MQTT pluto_url: " + pluto_url)
+    }
+    let url = `ws://${pluto_url}:9001`;
+    const options = {
+        // Clean session
+        clean: true,
+        connectTimeout: 4000, // Authentication
+        clientId: "pluto_constellation_" + new Date().getUTCMilliseconds(),
+        username: "root",
+        password: "analog",
+        protocolVersion: 5
+    };
+    const client = mqtt.connect(url, options);
+    console.log("callsign: " + call_sign);
+    console.log("url: " + url);
+    client.on("connect", function () {
+        console.log("Connected MQTT");
+        // Subscribe to a topic
+        client.subscribe(`dt/longmynd/constel_q`, () => {
+        });
+        client.subscribe(`dt/longmynd/constel_i`, () => {
+        });
+        client.subscribe(`dt/longmynd/rx_state`, () => {
+        });
+        client.subscribe(`cmd/longmynd/frequency`, () => {
+        });
+    });
+
+    client.on("message", function (topic, message) {
+        if (data.length > dataPoints) {
+            data = data.slice(2);
+        }
+        if (topic === `dt/longmynd/rx_state`) {
+            if (message.toString() === "Hunting") {
+                // console.log("clear");
+                data = []
+                return;
+            }
+        }
+        if (topic === `cmd/longmynd/frequency`) {
+            // console.log("clear");
+            data = []
+            return;
+        }
+        if (topic === `dt/longmynd/constel_i`) {
+            x = Number(message.toString());
+        }
+        if (topic === `dt/longmynd/constel_q`) {
+            y = Number(message.toString());
+
+        }
+
+        // console.log("data[-1]?.x :" + data.at(-1)?.x)
+        // console.log("data[-1]?.y :" + data.at(-1)?.y)
+        // console.log("data[-2]?.x :" + data.at(-2)?.x)
+        // console.log("data[-2]?.y :" + data.at(-2)?.y)
+
+        // if the last two values of x and y in our array aren't the current values, we add the unique point(x,y).
+        if (x !== data.at(-2)?.x && x !== data.at(-1)?.x && y !== data.at(-2)?.y && y !== data.at(-1)?.y) {
+            let obj = {
+                x: x, y: y
+            };
+
+            data.push(obj)
+        }
+
+    });
+}
+// mqtt_client();
 
 function mqtt_client_2() {
     let x, y = 0;
@@ -96,10 +170,8 @@ function mqtt_client_2() {
 
 
 mqtt_client_2();
-const t = setInterval(
-    () => drawConstellationPoints(data),
-    200
-);
+
+const t = setInterval(() => drawConstellationPoints(data), 200);
 
 function drawConstellationPoints(data) {
     // console.log(data.length)
@@ -111,10 +183,11 @@ function drawConstellationPoints(data) {
     ctx.setTransform(scale_factor, 0, 0, scale_factor, W / 2, H / 2)
 
     // Chart axis
-    ctx.strokeRect(0,0, 128, 128);
-    ctx.strokeRect(-128,0, 128, 128);
-    ctx.strokeRect(0,-128, 128, 128);
-    ctx.strokeRect(-128,-128, 128, 128);
+    ctx.lineWidth = 1.05;
+    ctx.strokeRect(0, 0, 128, 128);
+    ctx.strokeRect(-128, 0, 128, 128);
+    ctx.strokeRect(0, -128, 128, 128);
+    ctx.strokeRect(-128, -128, 128, 128);
 
     // dots for chart
     // ctx.scale(1-(1/scale_factor), 1-(1/scale_factor))

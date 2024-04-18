@@ -41,7 +41,7 @@ module.exports = {
      * node-red from being able to decrypt your existing credentials and they will be
      * lost.
      */
-    //credentialSecret: "a-secret-key",
+    credentialSecret: false,
 
     /** By default, the flow JSON will be formatted over multiple lines making
      * it easier to compare changes when using version control.
@@ -100,8 +100,8 @@ module.exports = {
     //     // This function should return the options object, or a Promise
     //     // that resolves to the options object
     //     return {
-    //         key: require("fs").readFileSync('privkey.pem'),
-    //         cert: require("fs").readFileSync('cert.pem')
+    //         key: require("fs").readFileSync('./key.pem', 'utf8'),
+    //         cert: require("fs").readFileSync('./server.crt', 'utf8')
     //     }
     // },
 
