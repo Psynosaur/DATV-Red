@@ -1856,7 +1856,9 @@
             "b66465fdf55144d8",
             "7e5823716251ab2f",
             "3fcb9fd86cb5c3db",
-            "f1f80eb4c4463209"
+            "f1f80eb4c4463209",
+            "32c462b0da9121b7",
+            "00b5fd164b47a07e"
         ],
         "x": 34,
         "y": 39,
@@ -2629,17 +2631,6 @@
         }
     },
     {
-        "id": "e8adab232b1d4dce",
-        "type": "ui_group",
-        "name": "Buffer",
-        "tab": "3fcae860e82945fc",
-        "order": 1,
-        "disp": false,
-        "width": "26",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "235bdacf6041386f",
         "type": "ui_group",
         "name": "Spectrum_Window",
@@ -2653,7 +2644,7 @@
     {
         "id": "3fcae860e82945fc",
         "type": "ui_tab",
-        "name": "Stats and settings",
+        "name": "Path and radio settings",
         "icon": "fa-sliders",
         "order": 2,
         "disabled": false,
@@ -3551,7 +3542,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "group": "8bd7855b29878c5b",
-        "order": 1,
+        "order": 4,
         "width": 6,
         "height": 1,
         "name": "Queue",
@@ -3918,10 +3909,10 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "",
-        "group": "e8adab232b1d4dce",
-        "order": 1,
-        "width": "26",
-        "height": "5",
+        "group": "8bd7855b29878c5b",
+        "order": 5,
+        "width": "6",
+        "height": "3",
         "label": "Queue",
         "chartType": "line",
         "legend": "false",
@@ -4256,7 +4247,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "group": "8bd7855b29878c5b",
-        "order": 2,
+        "order": 1,
         "width": 6,
         "height": 1,
         "name": "",
@@ -5962,7 +5953,7 @@
         "g": "78f7e24f56d510ed",
         "name": "Start encoder",
         "group": "8bd7855b29878c5b",
-        "order": 3,
+        "order": 2,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -6706,7 +6697,7 @@
         "g": "72ddf00d98862ef3",
         "name": "Stop encoder",
         "group": "8bd7855b29878c5b",
-        "order": 4,
+        "order": 3,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -7207,8 +7198,8 @@
         "y": 440,
         "wires": [
             [
-                "4dce4a7940b4c36d",
-                "45f08d8899b75e5b"
+                "45f08d8899b75e5b",
+                "4dce4a7940b4c36d"
             ]
         ]
     },
@@ -7218,7 +7209,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "group": "8bd7855b29878c5b",
-        "order": 9,
+        "order": 11,
         "width": 3,
         "height": 1,
         "name": "Video bitrate",
@@ -7240,7 +7231,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78b656eeda23dc5a",
         "group": "8bd7855b29878c5b",
-        "order": 8,
+        "order": 9,
         "width": 3,
         "height": 1,
         "name": "TS bitrate",
@@ -13659,7 +13650,7 @@
         "position": "prompt",
         "displayTime": "3",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 1,
         "ok": "OK",
         "cancel": "Cancel",
@@ -13738,7 +13729,7 @@
         "position": "prompt",
         "displayTime": "3",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 1,
         "ok": "OK",
         "cancel": "Cancel",
@@ -14041,7 +14032,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "1",
+        "onceDelay": "2",
         "topic": "",
         "x": 130,
         "y": 80,
@@ -14078,7 +14069,7 @@
         "y": 180,
         "wires": [
             [
-                "f86b01b311946b8c"
+                "00b5fd164b47a07e"
             ],
             [
                 "3fcb9fd86cb5c3db"
@@ -14112,7 +14103,7 @@
         "y": 280,
         "wires": [
             [
-                "f86b01b311946b8c"
+                "00b5fd164b47a07e"
             ],
             [
                 "7e5823716251ab2f"
@@ -15045,7 +15036,7 @@
         "props": [
             {
                 "p": "human_status",
-                "v": "Setup",
+                "v": "Setup - Click me",
                 "vt": "str"
             },
             {
@@ -15107,7 +15098,7 @@
         "tooltip": "",
         "place": "Select...",
         "group": "8bd7855b29878c5b",
-        "order": 5,
+        "order": 6,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -15171,7 +15162,7 @@
         "tooltip": "",
         "place": "",
         "group": "8bd7855b29878c5b",
-        "order": 7,
+        "order": 8,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -15350,7 +15341,7 @@
         "tooltip": "",
         "place": "",
         "group": "8bd7855b29878c5b",
-        "order": 6,
+        "order": 7,
         "width": 6,
         "height": 1,
         "passthru": false,
@@ -18698,9 +18689,7 @@
         "x": 420,
         "y": 240,
         "wires": [
-            [
-                "f86b01b311946b8c"
-            ],
+            [],
             [
                 "4fb1058936a12cd1"
             ]
@@ -19289,7 +19278,7 @@
         "d": true,
         "g": "1473030260740438",
         "group": "8bd7855b29878c5b",
-        "order": 8,
+        "order": 10,
         "width": 3,
         "height": 1,
         "name": "TS bitrate",
@@ -19312,7 +19301,7 @@
         "d": true,
         "g": "1473030260740438",
         "group": "8bd7855b29878c5b",
-        "order": 9,
+        "order": 12,
         "width": 3,
         "height": 1,
         "name": "Video bitrate",
@@ -20443,6 +20432,56 @@
         "x": 910,
         "y": 4760,
         "wires": []
+    },
+    {
+        "id": "32c462b0da9121b7",
+        "type": "ui_toast",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d8e778f40edcc21",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1250,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "00b5fd164b47a07e",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1d8e778f40edcc21",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "You cancelled the process, click the orange setup button to continue...",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 440,
+        "wires": [
+            [
+                "32c462b0da9121b7"
+            ]
+        ]
     },
     {
         "id": "1e0841f1.ac68fe",
@@ -26877,6 +26916,8 @@
         "z": "e2c54979685d14cb",
         "g": "9b97da84f20d2dc4",
         "name": "",
+        "statusCode": "",
+        "headers": {},
         "x": 570,
         "y": 80,
         "wires": []
@@ -26891,7 +26932,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<link rel=\"stylesheet\" href=\"/internet_spectrum/style.css\">\n<script src=\"/internet_spectrum/websocket.js\"></script>\n<script> \n    var localPage = false;\n</script>\n<script async src=\"/internet_spectrum/script.js\"></script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + click channel bars or click signal</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
+        "template": "<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<title>QO-100 / Es'hail-2 Wideband Spectrum Monitor</title>\n<meta content=\"QO-100 / Es'hail-2 Wideband Spectrum Monitor - by BATC & AMSAT-UK\" name=\"description\">\n<meta content=\"BATC & AMSAT-UK\" name=\"author\">\n<link rel=\"stylesheet\" href=\"/internet_spectrum/style.css\">\n<script src=\"/internet_spectrum/websocket.js\"></script>\n<script> \n    var localPage = false;\n</script>\n<script async src=\"/internet_spectrum/script.js\"></script>\n<body class=\"bg-dark\">\n    <div id=\"content\" role=\"main\">\n        <div class=\"row\">\n            <div id=\"fft-col\" class=\"col-xl-12\">\n                <canvas id=\"c\"></canvas>\n                <div id=\"under-canvas\">\n                    <span style=\"color: white;float: left;\">Shift (333KS) / ALT (250KS) + channel bars, bottom is Longmynd/top tunes minitiouner</span>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-speed-select\">FFT</label>\n                        <select id=\"fft-speed-select\">\n                            <option value=\"fft\" selected=\"selected\">Slow\n                            <option value=\"fft_fast\">Fast\n                        </select>\n                        <label style=\"color: white;padding: 3px\" for=\"fft-colour-select\">SP</label><input\n                            type=\"color\" id=\"fft-colour-select\" value=\"$(fft_colour)\"><label\n                            style=\"color: white;padding: 3px\" for=\"band-colour-select\">CH</label><input\n                            type=\"color\" id=\"band-colour-select\" value=\"$(band_colour)\"><select\n                            id=\"background-colour-select\">\n                            <option value=\"black\" selected=\"selected\">Black\n                            <option value=\"white\">White\n                        </select>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n</html>",
         "output": "str",
         "x": 410,
         "y": 80,
@@ -32676,8 +32717,8 @@
         "type": "ui_switch",
         "z": "34cbb32907b1aed6",
         "g": "8a69f99edaaca8df",
-        "name": "ffplay",
-        "label": "VLC and ffplay panel",
+        "name": "players",
+        "label": "Build in media players vlc,mpv and ffplay",
         "tooltip": "ffplay",
         "group": "6ce8d00a039e3b50",
         "order": 5,
@@ -33371,7 +33412,7 @@
         "label": "Encoder Extra Settings",
         "tooltip": "",
         "group": "8bd7855b29878c5b",
-        "order": 10,
+        "order": 13,
         "width": 0,
         "height": 0,
         "passthru": true,
