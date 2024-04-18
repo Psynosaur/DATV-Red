@@ -1980,12 +1980,16 @@
             "3bcd4fc464fd72de",
             "a2195a36147bdb64",
             "05adc155f5908f25",
-            "c8cdf2e30572c156"
+            "c8cdf2e30572c156",
+            "145d1fc4b1d1167f",
+            "f9139c9bf37a1048",
+            "f3927c1b417a14f5",
+            "42dd2f46d7c8d4ae"
         ],
         "x": 74,
         "y": 4391.5,
-        "w": 672,
-        "h": 337
+        "w": 942,
+        "h": 409.5
     },
     {
         "id": "16b2433f74b66b9a",
@@ -2027,8 +2031,8 @@
             "f576c965ac8d9aab",
             "6e6700cfb7db9272"
         ],
-        "x": 74,
-        "y": 4759,
+        "x": 94,
+        "y": 4799,
         "w": 1652,
         "h": 305
     },
@@ -2082,12 +2086,18 @@
             "d8696aeccbf8391b",
             "9fc2b2b1712c4ac3",
             "cf620cc1430c2ec5",
-            "e63faf17ba00a395"
+            "e63faf17ba00a395",
+            "1f647aefee1cdd8d",
+            "448756174c9d3e8f",
+            "d73edf2eb5d9705c",
+            "7be1043267dda20e",
+            "873fb926aabc59df",
+            "5ab34640666bb337"
         ],
-        "x": 34,
-        "y": 5639,
+        "x": 54,
+        "y": 5579,
         "w": 1212,
-        "h": 602
+        "h": 682
     },
     {
         "id": "50b9700a9a4f731c",
@@ -7094,8 +7104,8 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "9f151e324008585b",
-        "name": "function 2",
-        "func": "let jsonSettings = JSON.parse(msg.payload);\nmsg.payload = jsonSettings;\nmsg.codec = jsonSettings.CODEC;\nglobal.set(\"settings\", jsonSettings);\nglobal.set(\"device.tx.dvbs2.constel\", jsonSettings.MODE);\nreturn msg;",
+        "name": "parse settings",
+        "func": "let jsonSettings = JSON.parse(msg.payload);\nmsg.payload = jsonSettings;\nglobal.set(\"settings\", jsonSettings);\nglobal.set(\"device.tx.dvbs2.constel\", jsonSettings.MODE);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -16605,7 +16615,7 @@
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "VLC",
+        "name": "mpv",
         "x": 610,
         "y": 4500,
         "wires": [
@@ -16619,7 +16629,7 @@
         "type": "function",
         "z": "2ec6a7ddfe0cd173",
         "g": "e6bc3a23f88991a3",
-        "name": "vlc",
+        "name": "mpv",
         "func": "let imagesize = global.get('device.rx.ffplay_size');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos);\nlet vert = imagesize.substr(xPos + 1, imagesize.length);\n\nlet mpv = `ffmpeg/mpv`;\n// if (global.get(\"platform\") === \"linux\") mpv = `${global.get(\"device.vlc_path_linux\")}`;\nlet dimensions = global.get(\"device.rx.ffplay_size\").split(\"x\"); // --height=${dimensions[1]}\n// let path = `\\\"${mpv}\\\" udp://@${global.get(\"device.rx.tsip\")} --cache=no --video-x=50 --video-y=50 --meta-title=\\\"${global.get(\"ffplay_title\")}\\\"`;\nlet path = `\\\"${mpv}\\\" udp://@${global.get(\"device.rx.tsip\")} --cache=no\"`;\n\nmsg.payload = path;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -16682,8 +16692,8 @@
         "topic": "",
         "payload": "settings.audio_codec",
         "payloadType": "global",
-        "x": 1120,
-        "y": 4800,
+        "x": 1140,
+        "y": 4840,
         "wires": [
             [
                 "68abb4393d028775"
@@ -16731,8 +16741,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1380,
-        "y": 4800,
+        "x": 1400,
+        "y": 4840,
         "wires": [
             [
                 "06b559ab4aca15cf"
@@ -16766,8 +16776,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1610,
-        "y": 4800,
+        "x": 1630,
+        "y": 4840,
         "wires": [
             []
         ]
@@ -16790,8 +16800,8 @@
         "topic": "",
         "payload": "settings.input_choice",
         "payloadType": "global",
-        "x": 1120,
-        "y": 4855.5908203125,
+        "x": 1140,
+        "y": 4895.5908203125,
         "wires": [
             [
                 "2e0d409b4b551cdb"
@@ -16834,8 +16844,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1380,
-        "y": 4855.5908203125,
+        "x": 1400,
+        "y": 4895.5908203125,
         "wires": [
             [
                 "a7a765ba72c31ee8"
@@ -16869,8 +16879,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1610,
-        "y": 4855.5908203125,
+        "x": 1630,
+        "y": 4895.5908203125,
         "wires": [
             []
         ]
@@ -16893,8 +16903,8 @@
         "topic": "",
         "payload": "settings.udp_ip_port",
         "payloadType": "global",
-        "x": 1120,
-        "y": 4911.818359375,
+        "x": 1140,
+        "y": 4951.818359375,
         "wires": [
             [
                 "d155c2f4a4a95ddf"
@@ -16920,8 +16930,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1341.765625,
-        "y": 4911.181640625,
+        "x": 1361.765625,
+        "y": 4951.181640625,
         "wires": [
             [
                 "4b0e4ceac0843b6c"
@@ -16955,8 +16965,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1581.765625,
-        "y": 4911.181640625,
+        "x": 1601.765625,
+        "y": 4951.181640625,
         "wires": [
             []
         ]
@@ -16979,8 +16989,8 @@
         "topic": "",
         "payload": "settings.rtmp_ip_port",
         "payloadType": "global",
-        "x": 1120,
-        "y": 4967.4091796875,
+        "x": 1140,
+        "y": 5007.4091796875,
         "wires": [
             [
                 "17889543320f7239"
@@ -17006,8 +17016,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1370,
-        "y": 4967.4091796875,
+        "x": 1390,
+        "y": 5007.4091796875,
         "wires": [
             [
                 "793fd51eda4da3b4"
@@ -17041,8 +17051,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1600,
-        "y": 4967.4091796875,
+        "x": 1620,
+        "y": 5007.4091796875,
         "wires": [
             []
         ]
@@ -17065,8 +17075,8 @@
         "topic": "",
         "payload": "settings.audio_sample_rate",
         "payloadType": "global",
-        "x": 1140,
-        "y": 5023,
+        "x": 1160,
+        "y": 5063,
         "wires": [
             [
                 "afc105ffdbfd6b67"
@@ -17134,8 +17144,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 1370,
-        "y": 5023,
+        "x": 1390,
+        "y": 5063,
         "wires": [
             [
                 "edaef66bea244028"
@@ -17169,8 +17179,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1600,
-        "y": 5023,
+        "x": 1620,
+        "y": 5063,
         "wires": [
             []
         ]
@@ -17193,8 +17203,8 @@
         "topic": "",
         "payload": "settings.audio_delay",
         "payloadType": "global",
-        "x": 260,
-        "y": 4800,
+        "x": 280,
+        "y": 4840,
         "wires": [
             [
                 "bda9d0fa12b73a7b"
@@ -17220,8 +17230,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 510,
-        "y": 4800,
+        "x": 530,
+        "y": 4840,
         "wires": [
             [
                 "9707e10f88d44a13"
@@ -17255,8 +17265,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 4800,
+        "x": 740,
+        "y": 4840,
         "wires": [
             []
         ]
@@ -17279,8 +17289,8 @@
         "topic": "",
         "payload": "settings.thread_queue",
         "payloadType": "global",
-        "x": 270,
-        "y": 4840,
+        "x": 290,
+        "y": 4880,
         "wires": [
             [
                 "268823098bee16e3"
@@ -17306,8 +17316,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 520,
-        "y": 4840,
+        "x": 540,
+        "y": 4880,
         "wires": [
             [
                 "7de98b3ad530b9ed"
@@ -17341,8 +17351,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
-        "y": 4840,
+        "x": 750,
+        "y": 4880,
         "wires": [
             []
         ]
@@ -17365,8 +17375,8 @@
         "topic": "",
         "payload": "settings.rt_buffer",
         "payloadType": "global",
-        "x": 248.67578125,
-        "y": 4963,
+        "x": 268.67578125,
+        "y": 5003,
         "wires": [
             [
                 "3867abc64be57709"
@@ -17392,8 +17402,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 498.67578125,
-        "y": 4963,
+        "x": 518.67578125,
+        "y": 5003,
         "wires": [
             [
                 "5742c2b6848b86ca"
@@ -17427,8 +17437,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 728.67578125,
-        "y": 4963,
+        "x": 748.67578125,
+        "y": 5003,
         "wires": [
             []
         ]
@@ -17451,8 +17461,8 @@
         "topic": "",
         "payload": "settings.fifo_size",
         "payloadType": "global",
-        "x": 248.67578125,
-        "y": 5003,
+        "x": 268.67578125,
+        "y": 5043,
         "wires": [
             [
                 "4d3826e743c485db"
@@ -17478,8 +17488,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 498.67578125,
-        "y": 5003,
+        "x": 518.67578125,
+        "y": 5043,
         "wires": [
             [
                 "c79482819129c76e"
@@ -17513,8 +17523,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 728.67578125,
-        "y": 5003,
+        "x": 748.67578125,
+        "y": 5043,
         "wires": [
             []
         ]
@@ -17537,8 +17547,8 @@
         "topic": "",
         "payload": "settings.audio_delay_vvc",
         "payloadType": "global",
-        "x": 260,
-        "y": 4900,
+        "x": 280,
+        "y": 4940,
         "wires": [
             [
                 "f576c965ac8d9aab"
@@ -17564,8 +17574,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 510,
-        "y": 4900,
+        "x": 530,
+        "y": 4940,
         "wires": [
             [
                 "6e6700cfb7db9272"
@@ -17599,8 +17609,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 4900,
+        "x": 740,
+        "y": 4940,
         "wires": [
             []
         ]
@@ -17618,8 +17628,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5960,
+        "x": 1170,
+        "y": 5980,
         "wires": [
             []
         ]
@@ -17643,8 +17653,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 920,
-        "y": 5960,
+        "x": 940,
+        "y": 5980,
         "wires": [
             [
                 "9dc824c56f4f3a2c"
@@ -17664,8 +17674,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 5960,
+        "x": 680,
+        "y": 5980,
         "wires": [
             [
                 "93f563206f98cde4"
@@ -17684,8 +17694,8 @@
         "once": true,
         "onceDelay": "0.5",
         "topic": "",
-        "x": 130,
-        "y": 5720,
+        "x": 150,
+        "y": 5740,
         "wires": [
             [
                 "3aadcd5b16a568f8"
@@ -17705,8 +17715,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 350,
-        "y": 5720,
+        "x": 370,
+        "y": 5740,
         "wires": [
             [
                 "a53750444a663bac",
@@ -17721,7 +17731,9 @@
                 "3b2bfc1de615d1c2",
                 "9077d20ca65ab2fd",
                 "d8696aeccbf8391b",
-                "9fc2b2b1712c4ac3"
+                "9fc2b2b1712c4ac3",
+                "5ab34640666bb337",
+                "d73edf2eb5d9705c"
             ]
         ]
     },
@@ -17738,8 +17750,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5680,
+        "x": 1170,
+        "y": 5700,
         "wires": [
             []
         ]
@@ -17763,8 +17775,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 900,
-        "y": 5680,
+        "x": 920,
+        "y": 5700,
         "wires": [
             [
                 "e4d49de5ef76b48c"
@@ -17784,8 +17796,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 5680,
+        "x": 660,
+        "y": 5700,
         "wires": [
             [
                 "973c10af4dbfb52e"
@@ -17805,8 +17817,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5720,
+        "x": 1170,
+        "y": 5740,
         "wires": [
             []
         ]
@@ -17830,8 +17842,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 910,
-        "y": 5720,
+        "x": 930,
+        "y": 5740,
         "wires": [
             [
                 "30437f33c9972f90"
@@ -17851,8 +17863,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 5720,
+        "x": 670,
+        "y": 5740,
         "wires": [
             [
                 "c5f093958cc5103e"
@@ -17872,8 +17884,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5760,
+        "x": 1170,
+        "y": 5780,
         "wires": [
             []
         ]
@@ -17897,8 +17909,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 910,
-        "y": 5760,
+        "x": 930,
+        "y": 5780,
         "wires": [
             [
                 "77d1845d8d7e97dd"
@@ -17918,8 +17930,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 5760,
+        "x": 670,
+        "y": 5780,
         "wires": [
             [
                 "7c666d4b66bdb1c1"
@@ -17939,8 +17951,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5800,
+        "x": 1170,
+        "y": 5820,
         "wires": [
             []
         ]
@@ -17964,8 +17976,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 910,
-        "y": 5800,
+        "x": 930,
+        "y": 5820,
         "wires": [
             [
                 "a65e0da8e66d8647"
@@ -17985,8 +17997,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 5800,
+        "x": 670,
+        "y": 5820,
         "wires": [
             [
                 "08bb407e7555f53c"
@@ -18006,8 +18018,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5880,
+        "x": 1170,
+        "y": 5900,
         "wires": [
             []
         ]
@@ -18031,8 +18043,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 930,
-        "y": 5880,
+        "x": 950,
+        "y": 5900,
         "wires": [
             [
                 "4cea289b661afb2e"
@@ -18052,8 +18064,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 5880,
+        "x": 680,
+        "y": 5900,
         "wires": [
             [
                 "f67aefa381b6dc8a"
@@ -18073,8 +18085,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 6000,
+        "x": 1170,
+        "y": 6020,
         "wires": [
             []
         ]
@@ -18098,8 +18110,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 930,
-        "y": 6000,
+        "x": 950,
+        "y": 6020,
         "wires": [
             [
                 "587ba7dcecad6d47"
@@ -18119,8 +18131,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 6000,
+        "x": 690,
+        "y": 6020,
         "wires": [
             [
                 "8c3e78c6704e92a2"
@@ -18140,8 +18152,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 6040,
+        "x": 1170,
+        "y": 6060,
         "wires": [
             []
         ]
@@ -18165,8 +18177,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 930,
-        "y": 6040,
+        "x": 950,
+        "y": 6060,
         "wires": [
             [
                 "bdad9791244eab3b"
@@ -18186,8 +18198,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 6040,
+        "x": 690,
+        "y": 6060,
         "wires": [
             [
                 "21b402fbd4675dcf"
@@ -18207,8 +18219,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 6080,
+        "x": 1170,
+        "y": 6100,
         "wires": [
             []
         ]
@@ -18232,8 +18244,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 930,
-        "y": 6080,
+        "x": 950,
+        "y": 6100,
         "wires": [
             [
                 "46a46f85dadd76f6"
@@ -18253,8 +18265,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 6080,
+        "x": 690,
+        "y": 6100,
         "wires": [
             [
                 "2427bded041bffae"
@@ -18274,8 +18286,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 6120,
+        "x": 700,
+        "y": 6140,
         "wires": [
             [
                 "e48b23e1d46a182a"
@@ -18301,8 +18313,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 930,
-        "y": 6120,
+        "x": 950,
+        "y": 6140,
         "wires": [
             [
                 "1b33b2ee0e91bf0a"
@@ -18322,8 +18334,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 6120,
+        "x": 1170,
+        "y": 6140,
         "wires": [
             []
         ]
@@ -18341,8 +18353,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5920,
+        "x": 1170,
+        "y": 5940,
         "wires": [
             []
         ]
@@ -18366,8 +18378,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 920,
-        "y": 5920,
+        "x": 940,
+        "y": 5940,
         "wires": [
             [
                 "fa64203cbbfc748d"
@@ -18387,8 +18399,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 5920,
+        "x": 680,
+        "y": 5940,
         "wires": [
             [
                 "f59601c8ef54fb30"
@@ -18408,8 +18420,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 5840,
+        "x": 1170,
+        "y": 5860,
         "wires": [
             []
         ]
@@ -18433,8 +18445,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 920,
-        "y": 5840,
+        "x": 940,
+        "y": 5860,
         "wires": [
             [
                 "264f78c58101c550"
@@ -18454,8 +18466,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 5840,
+        "x": 680,
+        "y": 5860,
         "wires": [
             [
                 "bcea6a9dea321503"
@@ -18475,8 +18487,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 6200,
+        "x": 330,
+        "y": 6220,
         "wires": [
             [
                 "cf620cc1430c2ec5"
@@ -18502,8 +18514,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 700,
-        "y": 6200,
+        "x": 720,
+        "y": 6220,
         "wires": [
             [
                 "e63faf17ba00a395"
@@ -18523,8 +18535,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
-        "y": 6200,
+        "x": 1150,
+        "y": 6220,
         "wires": [
             []
         ]
@@ -20064,8 +20076,8 @@
         "outs": "end",
         "topic": "topic",
         "topicType": "msg",
-        "min": "0.95",
-        "max": "1",
+        "min": "0.5",
+        "max": "1.5",
         "step": "0.01",
         "className": "",
         "x": 560,
@@ -20202,6 +20214,235 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "145d1fc4b1d1167f",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "d": true,
+        "g": "e6bc3a23f88991a3",
+        "name": "OBS",
+        "group": "6140f866127cd620",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "<font size=2>OBS",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 4740,
+        "wires": [
+            [
+                "f3927c1b417a14f5"
+            ]
+        ]
+    },
+    {
+        "id": "f9139c9bf37a1048",
+        "type": "exec",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bc3a23f88991a3",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "OBS",
+        "x": 630,
+        "y": 4740,
+        "wires": [
+            [
+                "42dd2f46d7c8d4ae"
+            ],
+            [
+                "42dd2f46d7c8d4ae"
+            ],
+            [
+                "42dd2f46d7c8d4ae"
+            ]
+        ]
+    },
+    {
+        "id": "f3927c1b417a14f5",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bc3a23f88991a3",
+        "name": "OBS",
+        "func": "let obs = `start \\\"OBS\\\" ${global.get(\"device.obs_path\")}`;\nif (global.get(\"platform\") === \"linux\") obs = `${global.get(\"device.obs_path_linux\")}`;\nmsg.payload = `\\\"${obs}\\\"`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 4740,
+        "wires": [
+            [
+                "f9139c9bf37a1048"
+            ]
+        ]
+    },
+    {
+        "id": "1f647aefee1cdd8d",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "global.set(\"device.obs_path_linux\", msg.payload);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 5660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "448756174c9d3e8f",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "obs_path_linux",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 940,
+        "y": 5660,
+        "wires": [
+            [
+                "1f647aefee1cdd8d"
+            ]
+        ]
+    },
+    {
+        "id": "d73edf2eb5d9705c",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "vlc_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.obs_path_linux;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 5660,
+        "wires": [
+            [
+                "448756174c9d3e8f"
+            ]
+        ]
+    },
+    {
+        "id": "7be1043267dda20e",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "save state",
+        "func": "global.set(\"device.obs_path\", msg.payload);\nglobal.set(\"deviceChange\", true);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 5620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "873fb926aabc59df",
+        "type": "ui_text_input",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "",
+        "label": "obs_path",
+        "tooltip": "",
+        "group": "2275ce4aba6ae57e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 920,
+        "y": 5620,
+        "wires": [
+            [
+                "7be1043267dda20e"
+            ]
+        ]
+    },
+    {
+        "id": "5ab34640666bb337",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "a70e8b8a362b3c9d",
+        "name": "obs_path",
+        "func": "let jsonDeviceSettings = JSON.parse(msg.payload);\nmsg.payload = jsonDeviceSettings;\nglobal.set(\"device\", jsonDeviceSettings);\nmsg.payload = jsonDeviceSettings.obs_path;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 5620,
+        "wires": [
+            [
+                "873fb926aabc59df"
+            ]
+        ]
+    },
+    {
+        "id": "42dd2f46d7c8d4ae",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "e6bc3a23f88991a3",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 4760,
+        "wires": []
     },
     {
         "id": "1e0841f1.ac68fe",
