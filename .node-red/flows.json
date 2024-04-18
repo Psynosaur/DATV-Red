@@ -30630,27 +30630,10 @@
         "y": 460,
         "wires": [
             [
-                "c915219681639a2a",
                 "05a1e2c8dad388fb",
                 "e25a43afa99cde8c"
             ]
         ]
-    },
-    {
-        "id": "c915219681639a2a",
-        "type": "debug",
-        "z": "5921103edf8bc817",
-        "name": "debug 35",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "f303ba3ab6ae823e",
