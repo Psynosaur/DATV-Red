@@ -99,6 +99,7 @@
         let bitrate = "";
         let constel = "";
         let codec = "";
+        let vbitrate = "";
         let url = `ws://${plutoAdrress}:9001`
         const options = {
             // Clean session
@@ -128,6 +129,8 @@
             client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/constel`, () => {
             })
             client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/codec`, () => {
+            })
+            client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/vbitrate`, () => {
             })
             client.subscribe(`dt/pluto/${callsign}/tx/dvbs2/fec`, () => {
             })
@@ -203,6 +206,9 @@
             if (topic === `dt/pluto/${callsign}/tx/dvbs2/codec`) {
                 codec = `${message.toString()}`;
             }
+            if (topic === `dt/pluto/${callsign}/tx/dvbs2/vbitrate`) {
+                vbitrate = `${message.toString()}`;
+            }
             // client.end()
         });
         setInterval(
@@ -212,17 +218,17 @@
                 cs.innerText = callsign;
                 output.innerText = `ON AIR : ${txTime} : ${moment.utc().format(urlParams["format"] || dateFormat)}  `
                 stats.innerText =
-
-                    `\nCodec: ${codec}` +
-                    `\nBBFRAME Queue: ${queue}` +
-                    `\nTS Bit Rate: ${bitrate}` +
                     `\nFrequency: ${frequency}` +
                     `\nSymbol Rate: ${Number(sr) / 1000} kS/s` +
                     `\nConstel: ${constel.toUpperCase()}` +
                     `\nFEC: ${fec}` +
                     `\nGain ${gain}` +
                     `\nNCO: ${nco}` +
-                    `\nTuner: ${temp}`;
+                    `\nFPGA: ${temp}` +
+                    `\nCodec: ${codec}` +
+                    `\nTransport: ${bitrate}` +
+                    `\nVideo: ${vbitrate} kbits/s` +
+                    `\nBBFRAME Queue: ${queue}`;
             }, 1);
 
         intervalFunction();

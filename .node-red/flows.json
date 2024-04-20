@@ -1927,7 +1927,10 @@
             "11030f0dbe456eb3",
             "31fc4dcf29e0f060",
             "525b094f71549d38",
-            "6100407c3851ff95"
+            "6100407c3851ff95",
+            "0cf4946a16d145e9",
+            "dffc72b2528002ac",
+            "852d3f6d0f9adfeb"
         ],
         "x": 74,
         "y": 3959,
@@ -20886,7 +20889,7 @@
         "g": "78f7e24f56d510ed",
         "name": "",
         "props": [],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -20896,6 +20899,66 @@
         "wires": [
             [
                 "e5b0fa3224166063"
+            ]
+        ]
+    },
+    {
+        "id": "0cf4946a16d145e9",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "codec to mqtt path",
+        "func": "msg.payload = global.get(\"settings.VBITRATE\")\nmsg.topic= \"dt/pluto/\" + global.get(\"callsign\")+ \"/tx/dvbs2/vbitrate\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 4300,
+        "wires": [
+            [
+                "dffc72b2528002ac"
+            ]
+        ]
+    },
+    {
+        "id": "dffc72b2528002ac",
+        "type": "mqtt out",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "064bde8eca01e996",
+        "x": 1390,
+        "y": 4300,
+        "wires": []
+    },
+    {
+        "id": "852d3f6d0f9adfeb",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1f5722b7aff1a710",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1050,
+        "y": 4300,
+        "wires": [
+            [
+                "0cf4946a16d145e9"
             ]
         ]
     },
