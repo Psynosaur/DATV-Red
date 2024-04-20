@@ -9,19 +9,15 @@
 
 2. Open the `DATV-RED.exe` on windows or `./DATV-Start-Linux.sh` on Linux
 
-3. Fill in pluto IP and callsign when prompted
-   - ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/00e838cb-3d4e-4fe0-b610-449a343060ef)![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/7192efc2-e02d-4e60-9332-be3d219206c0)
+3. Fill in pluto IP and callsign when prompted 
+   ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/00e838cb-3d4e-4fe0-b610-449a343060ef)![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/7192efc2-e02d-4e60-9332-be3d219206c0)
 
-   - If you missed this prompt or cancelled, please click the setup button
-   - ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/ecfb21b7-e148-4ab2-a497-0495d5fd14a7)
-
-4. The mqtt paths will be set and the pluto will restart, wait 30s
-   - ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/37f20566-e88c-4b93-9b5a-59f16466f469)
+   - If you missed this prompt or cancelled, please click the setup button the mqtt paths will be set and the pluto will restart, wait about 15s
+   - ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/ecfb21b7-e148-4ab2-a497-0495d5fd14a7)![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/37f20566-e88c-4b93-9b5a-59f16466f469)
  
+4. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
 
-6. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
-
-7. You will see the default view, please toggle the radio buttons to enable and disable UI components to your liking.
+5. You will see the default view, please toggle the radio buttons to enable and disable UI components to your liking.
 
 ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/0a73d0de-1e29-4694-8d71-54c29df8c3aa)
 
