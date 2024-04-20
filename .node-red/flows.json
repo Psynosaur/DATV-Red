@@ -572,7 +572,11 @@
             "ad37281268e472dd",
             "5c64a390d5896343",
             "3204c0ce07c0d10c",
-            "dda9e7bff710e516"
+            "dda9e7bff710e516",
+            "7403c75962d544a9",
+            "3b4678b43f6f7a8a",
+            "1ece6931418d8da6",
+            "04f9a5bb376d348a"
         ],
         "x": 14,
         "y": 859,
@@ -9605,7 +9609,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "button colors",
-        "func": "let jsonSettings = global.get(\"settings\");\nif(msg.payload){\n    msg.p1_color = \"green\";\n    msg.p1 = jsonSettings.profiles.p1;\n    msg.p2_color = \"green\";\n    msg.p2 = jsonSettings.profiles.p2;\n    msg.p3_color = \"green\";\n    msg.p3 = jsonSettings.profiles.p3;\n    msg.p4_color = \"green\";\n    msg.p4 = jsonSettings.profiles.p4;\n    msg.p5_color = \"green\";\n    msg.p5 = jsonSettings.profiles.p5;\n    msg.p6_color = \"green\";\n    msg.p6 = jsonSettings.profiles.p6;\n    msg.p7_color = \"green\";\n    msg.p7 = jsonSettings.profiles.p7;\n    msg.p8_color = \"green\";\n    msg.p9_color = \"green\";\n    return msg;\n}\nmsg.p1_color = \"\";\nmsg.p1 = jsonSettings.profiles.p1;\nmsg.p2_color = \"\";\nmsg.p2 = jsonSettings.profiles.p2;\nmsg.p3_color = \"\";\nmsg.p3 = jsonSettings.profiles.p3;\nmsg.p4_color = \"\";\nmsg.p4 = jsonSettings.profiles.p4;\nmsg.p5_color = \"\";\nmsg.p5 = jsonSettings.profiles.p5;\nmsg.p6_color = \"\";\nmsg.p6 = jsonSettings.profiles.p6;\nmsg.p7_color = \"\";\nmsg.p7 = jsonSettings.profiles.p7;\nmsg.p8_color = \"\";\nmsg.p9_color = \"\";\nreturn msg;",
+        "func": "let profiles = global.get(\"profiles\");\nif(msg.payload){\n    msg.p1_color = \"green\";\n    msg.p1 = profiles.p1;\n    msg.p2_color = \"green\";\n    msg.p2 = profiles.p2;\n    msg.p3_color = \"green\";\n    msg.p3 = profiles.p3;\n    msg.p4_color = \"green\";\n    msg.p4 = profiles.p4;\n    msg.p5_color = \"green\";\n    msg.p5 = profiles.p5;\n    msg.p6_color = \"green\";\n    msg.p6 = profiles.p6;\n    msg.p7_color = \"green\";\n    msg.p7 = profiles.p7;\n    msg.p8_color = \"green\";\n    msg.p9_color = \"green\";\n    return msg;\n}\nmsg.p1_color = \"\";\nmsg.p1 = profiles.p1;\nmsg.p2_color = \"\";\nmsg.p2 = profiles.p2;\nmsg.p3_color = \"\";\nmsg.p3 = profiles.p3;\nmsg.p4_color = \"\";\nmsg.p4 = profiles.p4;\nmsg.p5_color = \"\";\nmsg.p5 = profiles.p5;\nmsg.p6_color = \"\";\nmsg.p6 = profiles.p6;\nmsg.p7_color = \"\";\nmsg.p7 = profiles.p7;\nmsg.p8_color = \"\";\nmsg.p9_color = \"\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -20729,19 +20733,99 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "function 25",
-        "func": "let jsonSettings = global.get(\"settings\");\nif (msg.payload === \"Cancel\") msg.payload = `p${msg.clicked}`\njsonSettings.profiles[`p${msg.clicked}`] = msg.payload !== \"\" ? msg.payload : `p${msg.clicked}`;\nglobal.set(\"settings\", jsonSettings);\nreturn msg;",
+        "func": "let profiles = global.get(\"profiles\");\nif (msg.payload === \"Cancel\") msg.payload = `p${msg.clicked}`\nprofiles[`p${msg.clicked}`] = msg.payload !== \"\" ? msg.payload : `p${msg.clicked}`;\nglobal.set(\"profiles\", profiles);\nmsg.payload = profiles;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1580,
+        "x": 1610,
         "y": 1240,
+        "wires": [
+            [
+                "1ece6931418d8da6"
+            ]
+        ]
+    },
+    {
+        "id": "7403c75962d544a9",
+        "type": "file in",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "",
+        "filename": "settings/profiles.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 820,
+        "y": 920,
+        "wires": [
+            [
+                "04f9a5bb376d348a"
+            ]
+        ]
+    },
+    {
+        "id": "3b4678b43f6f7a8a",
+        "type": "inject",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 960,
+        "wires": [
+            [
+                "7403c75962d544a9"
+            ]
+        ]
+    },
+    {
+        "id": "1ece6931418d8da6",
+        "type": "file",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "",
+        "filename": "settings/profiles.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1400,
+        "y": 1180,
         "wires": [
             [
                 "e5b0fa3224166063"
             ]
+        ]
+    },
+    {
+        "id": "04f9a5bb376d348a",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "parse settings",
+        "func": "let profiles = JSON.parse(msg.payload);\nglobal.set(\"profiles\", profiles);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 900,
+        "wires": [
+            []
         ]
     },
     {
