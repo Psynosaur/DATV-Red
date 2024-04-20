@@ -17,6 +17,7 @@
         --backGroundColor: #ffffff00;
         --fontSize: 36px;
         --fontFamily: 'Arial Regular';
+        --fontSizeCallsign: 72px;
     }
 </style>
 <html>
@@ -28,15 +29,28 @@
 </head>
 
 <body translate="no">
+<div id="cs" style="
+    display: flow;
+		font-family: var(--fontFamily);
+		font-size: var(--fontSizeCallsign);
+    text-align: left;
+		color: var(--textColor);
+		border-radius: 3px;
+		padding: 5px;
+    align-items: flex-start;
+		background-color: var(--backGroundColor);
+    width: 800px;
+    ">
+</div>
 <div id="output" style="
-    display: inline-block;
+    display: flow;
 		font-family: var(--fontFamily);
 		font-size: var(--fontSize);
     text-align: left;
 		color: var(--textColor); 
 		border-radius: 3px; 
 		padding: 5px; 
-    align-items: left;
+    align-items: flex-start;
 		background-color: var(--backGroundColor);
     width: 800px;
     ">
@@ -74,6 +88,7 @@
         let txTime = moment.duration(0, 'seconds');
         let output = document.getElementById("output");
         let stats = document.getElementById("stats");
+        let cs = document.getElementById("cs");
         let temp = "";
         let frequency = "";
         let gain = "";
@@ -194,8 +209,10 @@
             intervalFunction = function () {
                 end = moment();
                 txTime = parseInt(onAir) === 0 ? moment.utc(end.diff(transmissionStart)).format('mm:ss') : "00:00";
+                cs.innerText = callsign;
                 output.innerText = `ON AIR : ${txTime} : ${moment.utc().format(urlParams["format"] || dateFormat)}  `
                 stats.innerText =
+
                     `\nCodec: ${codec}` +
                     `\nBBFRAME Queue: ${queue}` +
                     `\nTS Bit Rate: ${bitrate}` +
