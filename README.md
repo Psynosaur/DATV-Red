@@ -21,7 +21,7 @@
 
 6. Please refer to the [Wiki](https://github.com/Psynosaur/DATV-Red/wiki) for more setup details
 
-7. You will see the default view, please toggle the radio buttons to enable and disabled UI components to your liking.
+7. You will see the default view, please toggle the radio buttons to enable and disable UI components to your liking.
 
 ![image](https://github.com/Psynosaur/DATV-Red/assets/26934113/0a73d0de-1e29-4694-8d71-54c29df8c3aa)
 
