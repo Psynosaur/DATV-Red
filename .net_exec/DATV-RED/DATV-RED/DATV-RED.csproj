@@ -4,8 +4,8 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{5F9DF1FA-A882-4028-A7BB-1DD0A209FBFC}</ProjectGuid>
-        <OutputType>Exe</OutputType>
+        <ProjectGuid>{F4BF742B-5E7B-4023-88B6-B594D714B955}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>DATV_RED</RootNamespace>
         <AssemblyName>DATV_RED</AssemblyName>
@@ -44,7 +44,7 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-      <None Include="icon.ico" />
+      <Content Include="icon.ico" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

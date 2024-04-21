@@ -577,7 +577,9 @@
             "3b4678b43f6f7a8a",
             "1ece6931418d8da6",
             "04f9a5bb376d348a",
-            "5e8e586689917688"
+            "5e8e586689917688",
+            "14b5ed72c1000617",
+            "fc903a4a8e9a979e"
         ],
         "x": -6,
         "y": 859,
@@ -3110,16 +3112,6 @@
         "className": ""
     },
     {
-        "id": "42992fae82400161",
-        "type": "ui_spacer",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "spacer",
-        "group": "da031ac17a307778",
-        "order": 9,
-        "width": 2,
-        "height": 1
-    },
-    {
         "id": "ce0b1e3dc798b9a0",
         "type": "ui_group",
         "name": "Codecs",
@@ -5531,8 +5523,8 @@
         "name": "profile 3",
         "group": "da031ac17a307778",
         "order": 3,
-        "width": 2,
-        "height": 1,
+        "width": "3",
+        "height": "1",
         "passthru": false,
         "label": "{{p3}}",
         "tooltip": "",
@@ -5560,8 +5552,8 @@
         "name": "profile 4",
         "group": "da031ac17a307778",
         "order": 4,
-        "width": 2,
-        "height": 1,
+        "width": "3",
+        "height": "1",
         "passthru": false,
         "label": "{{p4}}",
         "tooltip": "",
@@ -5589,8 +5581,8 @@
         "name": "profile 5",
         "group": "da031ac17a307778",
         "order": 5,
-        "width": 2,
-        "height": 1,
+        "width": "3",
+        "height": "1",
         "passthru": false,
         "label": "{{p5}}",
         "tooltip": "",
@@ -5683,8 +5675,8 @@
         "name": "profile 6",
         "group": "da031ac17a307778",
         "order": 6,
-        "width": 2,
-        "height": 1,
+        "width": "3",
+        "height": "1",
         "passthru": false,
         "label": "{{p6}}",
         "tooltip": "",
@@ -5712,8 +5704,8 @@
         "name": "profile 7",
         "group": "da031ac17a307778",
         "order": 7,
-        "width": 2,
-        "height": 1,
+        "width": "3",
+        "height": "1",
         "passthru": false,
         "label": "{{p7}}",
         "tooltip": "",
@@ -5762,8 +5754,8 @@
         "name": "profile 2",
         "group": "da031ac17a307778",
         "order": 2,
-        "width": 2,
-        "height": 1,
+        "width": "3",
+        "height": "1",
         "passthru": false,
         "label": "{{p2}}",
         "tooltip": "",
@@ -5791,8 +5783,8 @@
         "name": "profile 1",
         "group": "da031ac17a307778",
         "order": 1,
-        "width": 2,
-        "height": 1,
+        "width": "3",
+        "height": "1",
         "passthru": false,
         "label": "{{p1}}",
         "tooltip": "",
@@ -9230,8 +9222,8 @@
         "g": "78f7e24f56d510ed",
         "name": "saver",
         "group": "da031ac17a307778",
-        "order": 8,
-        "width": 2,
+        "order": 9,
+        "width": "3",
         "height": 1,
         "passthru": false,
         "label": "Saver",
@@ -9522,7 +9514,8 @@
         "y": 980,
         "wires": [
             [
-                "e733dc0c81143d51"
+                "e733dc0c81143d51",
+                "fc903a4a8e9a979e"
             ]
         ]
     },
@@ -9566,11 +9559,11 @@
         "outputs": 1,
         "ok": "OK",
         "cancel": "Cancel",
-        "raw": false,
+        "raw": true,
         "className": "",
         "topic": "",
-        "name": "Profile saved",
-        "x": 1650,
+        "name": "Profile name popup",
+        "x": 1670,
         "y": 1140,
         "wires": [
             [
@@ -9602,8 +9595,8 @@
         "y": 980,
         "wires": [
             [
-                "fc3424b338c6f01a",
-                "e5b0fa3224166063"
+                "e5b0fa3224166063",
+                "14b5ed72c1000617"
             ]
         ]
     },
@@ -20847,7 +20840,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "DATV-RED-v4.8.5",
+        "payload": "DATV-RED-v4.8.6",
         "payloadType": "str",
         "x": 1270,
         "y": 680,
@@ -20959,6 +20952,46 @@
         "wires": [
             [
                 "0cf4946a16d145e9"
+            ]
+        ]
+    },
+    {
+        "id": "14b5ed72c1000617",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1650,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "fc903a4a8e9a979e",
+        "type": "function",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "function 26",
+        "func": "let profiles =  global.get(\"profiles\");\nlet index = msg.clicked;\nmsg.payload = profiles[`p${index}`];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 960,
+        "wires": [
+            [
+                "fc3424b338c6f01a",
+                "e5b0fa3224166063"
             ]
         ]
     },
