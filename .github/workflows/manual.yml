@@ -35,9 +35,7 @@ jobs:
       shell: bash
       run: |
         mkdir Release
-    - uses: edgarrc/action-7z@v1
-      env:
-       VERSION: ${{ inputs.version }}
+    - uses: milliewalky/setup-7-zip@v1
       with:
         args: 7z a -t7z -mx=9 DATV-Red-v$VERSION.7z ./Release/
       
