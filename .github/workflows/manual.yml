@@ -36,8 +36,10 @@ jobs:
       run: |
         mkdir Release
     - uses: edgarrc/action-7z@v1
+      env:
+       VERSION: ${{ inputs.version }}
       with:
-        args: 7z a -t7z -mx=9 DATV-Red-test.7z ./Release/
+        args: 7z a -t7z -mx=9 DATV-Red-v$VERSION.7z ./Release/
       
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
