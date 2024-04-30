@@ -31,7 +31,7 @@ jobs:
       with:
         clean: false
         # submodules: recursive
-    - name: Install dependencies
+    - name: make release directory
       shell: bash
       run: |
         mkdir Release
@@ -42,8 +42,8 @@ jobs:
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: release-${{ inputs.version }}
-        title: Release-${{ inputs.version }}
+        automatic_release_tag: release-v${{ inputs.version }}
+        title: Release-v${{ inputs.version }}
         prerelease: false
         files: |
             Release/**.7z
