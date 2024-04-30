@@ -22,7 +22,7 @@ run-name: DATV-Red release ${{ inputs.version }}
 jobs:
   compact_release:
     # runs-on: self-hosted
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     # environment: plutosdr-fw-ci
     permissions: write-all
     
@@ -32,12 +32,14 @@ jobs:
         clean: false
         # submodules: recursive
     - name: make release directory
-      shell: pwsh
+      shell: bash
       run: |
         mkdir Release
-    - uses: milliewalky/setup-7-zip@v1
-      with:
-        args: 7z a -t7z -mx=9 DATV-Red-v$VERSION.7z ./Release/
+        sudo apt install p7zip-full
+        7z a -t7z ./Release/DATV-Red-v$VERSION.7z *
+    # - uses: milliewalky/setup-7-zip@v1
+    #   with:
+    #     args: 7z a -t7z -mx=9  ./Release/
       
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
