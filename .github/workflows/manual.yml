@@ -31,9 +31,13 @@ jobs:
       with:
         clean: false
         # submodules: recursive
+    - name: Install dependencies
+      shell: bash
+      run: |
+        mkdir Release
     - uses: edgarrc/action-7z@v1
       with:
-        args: 7z a -t7z -mx=9 DATV-Red-{{$VERSION}}.7z ./Release/
+        args: 7z a -t7z -mx=9 DATV-Red-test.7z ./Release/
       
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
