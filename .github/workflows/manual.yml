@@ -33,7 +33,7 @@ jobs:
         # submodules: recursive
     - uses: edgarrc/action-7z@v1
       with:
-        args: 7z a -t7z -mx=9 DATV-Red-{{ inputs.version }}.7z ./Release/
+        args: 7z a -t7z -mx=9 DATV-Red-$VERSION.7z ./Release/
       
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
@@ -42,4 +42,4 @@ jobs:
         title: Release-${{ inputs.version }}
         prerelease: false
         files: |
-            Release/**.zip
+            Release/**.7z
