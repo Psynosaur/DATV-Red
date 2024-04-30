@@ -22,7 +22,7 @@ run-name: DATV-Red release ${{ inputs.version }}
 jobs:
   compact_release:
     # runs-on: self-hosted
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     # environment: plutosdr-fw-ci
     permissions: write-all
     
@@ -32,7 +32,7 @@ jobs:
         clean: false
         # submodules: recursive
     - name: make release directory
-      shell: bash
+      shell: pwsh
       run: |
         mkdir Release
     - uses: milliewalky/setup-7-zip@v1
