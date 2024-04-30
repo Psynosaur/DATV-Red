@@ -18,7 +18,7 @@ on:
 env:
   VERSION: ${{ inputs.version }}
 
-run-name: 7z DATV-Red release {{ inputs.version }}
+run-name: 7z DATV-Red release ${{VERSION}}
 jobs:
   compact_release:
     # runs-on: self-hosted
