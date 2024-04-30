@@ -1,0 +1,45 @@
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      version:
+        description: 'Provide release tag, eg. v4.9'
+        type: string
+        required: true
+    
+env:
+  VERSION: ${{ inputs.version }}
+
+run-name: 7z DATV-Red release {{ inputs.version }}
+jobs:
+  compact_release:
+    # runs-on: self-hosted
+    runs-on: ubuntu-latest
+    # environment: plutosdr-fw-ci
+    permissions: write-all
+    
+    steps:
+    - uses: actions/checkout@v4.1.1
+      with:
+        clean: false
+        # submodules: recursive
+    - uses: edgarrc/action-7z@v1
+      with:
+        args: 7z a -t7z -mx=9 DATV-Red-{{ inputs.version }}.7z ./Release/
+      
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: release-${{ inputs.version }}
+        title: Release ${{ inputs.version }}
+        prerelease: false
+        files: |
+            Release/**.zip
