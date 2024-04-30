@@ -1,5 +1,5 @@
 # DATV-Red
-Latest Release : [![GitHub Release](https://img.shields.io/github/v/release/Psynosaur/DATV-Red.svg)](https://github.com/Psynosaur/DATV-Red/releases/latest)  [![Github Releases](https://img.shields.io/github/downloads/Psynosaur/DATV-Red/total.svg)](https://github.com/Psynosaur/DATV-Red/releases/latest)
+[![GitHub Release](https://img.shields.io/github/v/release/Psynosaur/DATV-Red.svg)](https://github.com/Psynosaur/DATV-Red/releases/latest)  [![Github Releases](https://img.shields.io/github/downloads/Psynosaur/DATV-Red/total.svg)](https://github.com/Psynosaur/DATV-Red/releases/latest)
 ## Prerequisite
 - Latest PlutoDVB2 [firmware](https://github.com/F5OEO/plutosdr-fw/releases)
 - Please see [flashing steps](https://github.com/Psynosaur/DATV-Red/wiki#flashing-steps)
