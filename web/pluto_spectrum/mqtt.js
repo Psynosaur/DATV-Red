@@ -8,7 +8,7 @@ function mqtt_client_2() {
   const serverUrl = pluto_url; // i.e. "great-server.cloudmqtt.com"
   const serverPort = 9001; // cloudmqtt only accepts WSS sockets on this port. Others will use 9001, 8883 or others
   const clientId = "datv_red_spectrum_" + new Date().getUTCMilliseconds(); // make client name unique
-  const client = new Paho.MQTT.Client(serverUrl, serverPort, clientId);
+  const client = new Paho.Client(serverUrl, serverPort, clientId);
 
   // set callback handlers
   client.onConnectionLost = onConnectionLost;

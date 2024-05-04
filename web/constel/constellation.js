@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Ohan Smit
+ * Copyright (c) 2024 Ohan Smit
  * This software is released under the MIT license.
  * See the LICENSE file for further details.
  */
@@ -16,82 +16,7 @@ const W = ctx.canvas.width, H = ctx.canvas.height;
 ctx.fillStyle = `rgb(0, 255, 128)`
 let endAngle = Math.PI * 2;
 
-function mqtt_client() {
-    let x, y = 0;
-    if (hosting_url !== "" && window.location.hostname === hosting_url) {
-        pluto_url = hosting_url;
-        console.log("MQTT hostname: " + window.location.hostname)
-        console.log("MQTT pluto_url: " + pluto_url)
-    }
-    let url = `ws://${pluto_url}:9001`;
-    const options = {
-        // Clean session
-        clean: true,
-        connectTimeout: 4000, // Authentication
-        clientId: "pluto_constellation_" + new Date().getUTCMilliseconds(),
-        username: "root",
-        password: "analog",
-        protocolVersion: 5
-    };
-    const client = mqtt.connect(url, options);
-    console.log("callsign: " + call_sign);
-    console.log("url: " + url);
-    client.on("connect", function () {
-        console.log("Connected MQTT");
-        // Subscribe to a topic
-        client.subscribe(`dt/longmynd/constel_q`, () => {
-        });
-        client.subscribe(`dt/longmynd/constel_i`, () => {
-        });
-        client.subscribe(`dt/longmynd/rx_state`, () => {
-        });
-        client.subscribe(`cmd/longmynd/frequency`, () => {
-        });
-    });
-
-    client.on("message", function (topic, message) {
-        if (data.length > dataPoints) {
-            data = data.slice(2);
-        }
-        if (topic === `dt/longmynd/rx_state`) {
-            if (message.toString() === "Hunting") {
-                // console.log("clear");
-                data = []
-                return;
-            }
-        }
-        if (topic === `cmd/longmynd/frequency`) {
-            // console.log("clear");
-            data = []
-            return;
-        }
-        if (topic === `dt/longmynd/constel_i`) {
-            x = Number(message.toString());
-        }
-        if (topic === `dt/longmynd/constel_q`) {
-            y = Number(message.toString());
-
-        }
-
-        // console.log("data[-1]?.x :" + data.at(-1)?.x)
-        // console.log("data[-1]?.y :" + data.at(-1)?.y)
-        // console.log("data[-2]?.x :" + data.at(-2)?.x)
-        // console.log("data[-2]?.y :" + data.at(-2)?.y)
-
-        // if the last two values of x and y in our array aren't the current values, we add the unique point(x,y).
-        if (x !== data.at(-2)?.x && x !== data.at(-1)?.x && y !== data.at(-2)?.y && y !== data.at(-1)?.y) {
-            let obj = {
-                x: x, y: y
-            };
-
-            data.push(obj)
-        }
-
-    });
-}
-// mqtt_client();
-
-function mqtt_client_2() {
+function mqtt_client_v2(topics = []) {
     let x, y = 0;
     // Create a client instance
     if (hosting_url !== "" && window.location.hostname === hosting_url) {
@@ -102,7 +27,7 @@ function mqtt_client_2() {
     const serverUrl = pluto_url; // i.e. "great-server.cloudmqtt.com"
     const serverPort = 9001; // cloudmqtt only accepts WSS sockets on this port. Others will use 9001, 8883 or others
     const clientId = "datv_red_constel_" + new Date().getUTCMilliseconds(); // make client name unique
-    const client = new Paho.MQTT.Client(serverUrl, serverPort, clientId);
+    const client = new Paho.Client(serverUrl, serverPort, clientId);
 
     // set callback handlers
     client.onConnectionLost = onConnectionLost;
@@ -113,11 +38,10 @@ function mqtt_client_2() {
 
     // called when the client connects
     function onConnect() {
-        client.subscribe(`dt/longmynd/constel_q`);
-        client.subscribe(`dt/longmynd/constel_i`);
-        client.subscribe(`dt/longmynd/rx_state`);
-        client.subscribe(`cmd/longmynd/frequency`);
-
+        for (let i = 0; i < topics.length ;i++) {
+            // console.log(topics[i])
+            client.subscribe(topics[i])
+        }
     }
 
     // called when the client loses its connection
@@ -169,7 +93,12 @@ function mqtt_client_2() {
 }
 
 
-mqtt_client_2();
+mqtt_client_v2([
+    `dt/longmynd/constel_q`,
+    `dt/longmynd/constel_i`,
+    `dt/longmynd/rx_state`,
+    `cmd/longmynd/frequency`]
+);
 
 const t = setInterval(() => drawConstellationPoints(data), 200);
 

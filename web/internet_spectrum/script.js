@@ -47,6 +47,51 @@ let beacon_strength = 0;
 
 let highlighted_channel = {};
 let tuned_channels = Array(rx_count).fill({});
+let mqttClient = {};
+
+function mqtt_channels() {
+    if (hosting_url !== "" && window.location.hostname === hosting_url) {
+        pluto_url = hosting_url;
+        console.log("MQTT hostname: " + window.location.hostname)
+        console.log("MQTT pluto_url: " + pluto_url)
+    }
+
+    const serverUrl = pluto_url; // i.e. "great-server.cloudmqtt.com"
+    const serverPort = 9001; // cloudmqtt only accepts WSS sockets on this port. Others will use 9001, 8883 or others
+    const clientId = "datv_red_inter_" + new Date().getUTCMilliseconds(); // make client name unique
+    const client = new Paho.Client(serverUrl, serverPort, clientId);
+    // Publish a Message
+
+
+    // set callback handlers
+    client.onConnectionLost = onConnectionLost;
+    client.onMessageArrived = onMessageArrived;
+
+    // connect the client
+    client.connect({onSuccess: onConnect});
+
+    // called when the client connects
+    function onConnect() {
+
+        client.subscribe("datv_red/channels")
+        mqttClient = client;
+
+    }
+
+    // called when the client loses its connection
+    function onConnectionLost(responseObject) {
+        if (responseObject.errorCode !== 0) {
+            console.log("onConnectionLost:" + responseObject.errorMessage);
+        }
+    }
+
+    // called when a message arrives
+    function onMessageArrived(message) {
+        //update spectrum drawing
+    }
+}
+
+mqtt_channels();
 
 function isEmpty(obj) {
     return Object.keys(obj).length === 0;
@@ -151,6 +196,16 @@ function setRxClickState(
         localStorage.activeYd_1 = activeYd_1;
         localStorage.activeXd2_1 = activeXd2_1;
     }
+    const message = new Paho.Message(JSON.stringify({
+        freq: downlink,
+        sr: canvasClickBW,
+        // channel: channelClicked
+    }));
+    // message.destinationName = "red";
+    message.topic = `datv_red/channels/${channelClicked}`;
+    // message.qos = 0;
+    console.log("MQTT message: " + message)
+    mqttClient.send(message);
 }
 
 function setRxChannelState(channel) {
@@ -168,6 +223,16 @@ function setRxChannelState(channel) {
         tuned_channels = someArray;
         localStorage.tuned_channels = JSON.stringify(someArray);
         console.log(`kaas bra  ${someArray}`);
+        const message = new Paho.Message(JSON.stringify({
+            freq: downlink,
+            sr: channel.sr/1000,
+            // channel: channelClicked
+        }));
+        // message.destinationName = "red";
+        message.topic = `datv_red/channels/${channelClicked}`;
+        // message.qos = 0;
+        console.log("MQTT message: " + message)
+        mqttClient.send(message);
     }
     return;
 }
@@ -177,6 +242,8 @@ function on_canvas_click(ev) {
     let magicSpaceAboveSignal = canvasHeight * (1.59 / 8);
     /* we clicked on the beacon... */
     if (uplink === undefined && canvasClickBW === undefined && busy) {
+        downlink = 10491.5
+        canvasClickBW = 1.5
         /* Tune longmynd on pluto */
         fetch(
             `${url}/setRx?` +
@@ -187,7 +254,7 @@ function on_canvas_click(ev) {
             })
         );
         /* console.log(channel_coords); */
-        /* RX tuning bar */
+        /* RX tuning bar for longmynd */
         if (channelClicked === rx_count + 1) {
             setRxClickState(activeColor, 43, magicSpaceUnderSignal, canvasWidth * 1 / 5);
             return;
@@ -1062,7 +1129,11 @@ function detect_signals(fft_data) {
         render_signal_selected_box(clicked_x, clicked_y);
     }
 }
-
+function round(value, step) {
+    step || (step = 1.0);
+    const inv = 1.0 / step;
+    return Math.round(value * inv) / inv;
+}
 function render_signal_box(mouse_x, mouse_y) {
     let channelSpace = Math.floor(
         (canvasHeight * (4 / 8) - canvasHeight * (1 / 100)) / rx_count
@@ -1125,6 +1196,8 @@ function render_signal_box(mouse_x, mouse_y) {
                         square["y1"] = channel_coords.y1;
                         square["width"] = signals[i].end - signals[i].start;
                         square["height"] = channelSpace;
+                        square["freq"] = signals[i].frequency.toFixed(6);
+                        square["sr"] = signals[i].symbolrate;
                         /* console.log(square) */
                         highlighted_channel = square;
                         ctx.globalAlpha = 1.0;
@@ -1171,7 +1244,7 @@ function render_signal_box(mouse_x, mouse_y) {
                                 parseFloat(signals[i].frequency - 8089.5).toFixed(2) * 4
                             ) / 4;
                         downlink =
-                          signals[i].frequency.toFixed(6) ;
+                            signals[i].frequency.toFixed(6);
                         busy = true;
                         activeXd1 = signals[i].start;
                         activeXd2 = signals[i].end;
