@@ -28,23 +28,21 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4.1.1
-      with:
-        clean: true
-        # submodules: recursive
     - name: make release directory
       shell: bash
       run: |
+        ls -al 
         mkdir Release
-        7z a -t7z -mx=9 ./Release/DATV-Red-v$VERSION.7z *
+        # 7z a -t7z -mx=9 ./Release/DATV-Red-v$VERSION.7z *
     # - uses: milliewalky/setup-7-zip@v1
     #   with:
     #     args: 7z a -t7z -mx=9  ./Release/
       
-    - uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: release-v${{ inputs.version }}
-        title: Release-v${{ inputs.version }}
-        prerelease: false
-        files: |
-            Release/**.7z
+    # - uses: "marvinpinto/action-automatic-releases@latest"
+    #   with:
+    #     repo_token: "${{ secrets.GITHUB_TOKEN }}"
+    #     automatic_release_tag: release-v${{ inputs.version }}
+    #     title: Release-v${{ inputs.version }}
+    #     prerelease: false
+    #     files: |
+    #         Release/**.7z
