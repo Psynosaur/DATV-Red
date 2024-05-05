@@ -33,7 +33,7 @@ jobs:
       run: |
         # ls -al 
         # mkdir Release
-        7z a -t7z -mx=9 ./DATV-Red-v$VERSION.7z ./*
+        7z a -r -t7z -mx=9 ./DATV-Red-v$VERSION.7z  ./*
     # - uses: milliewalky/setup-7-zip@v1
     #   with:
     #     args: 7z a -t7z -mx=9  ./Release/
