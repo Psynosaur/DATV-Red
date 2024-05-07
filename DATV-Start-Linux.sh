@@ -5,5 +5,5 @@ cd "$CWD"
 
 echo "Starting DATV-Red..."
 
-node ./npm/node_modules/node-red/red.js --settings ./.node-red/settings.js --userDir ./.node-red/
+./npm/node ./npm/node_modules/node-red/red.js --userDir ./.node-red/
 exit

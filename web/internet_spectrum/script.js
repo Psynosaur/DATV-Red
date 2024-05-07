@@ -90,8 +90,9 @@ function mqtt_channels() {
         //update spectrum drawing
     }
 }
-
-mqtt_channels();
+if(pluto_url){
+    mqtt_channels();
+}
 
 function isEmpty(obj) {
     return Object.keys(obj).length === 0;

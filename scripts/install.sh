@@ -15,11 +15,11 @@ echo "Installation aborted, end."
 exit
 fi
 
-cd .. && cd ffmpeg && chmod +x * && cd ..
-chmod +x DATV-Start.sh
+# cd .. && cd ffmpeg && chmod +x * && cd ..
+# chmod +x DATV-Start.sh
 
 
-snap install node --classic
+#snap install node --classic
 apt-get install -y xclip
 
 apt-get install -y v4l-utils

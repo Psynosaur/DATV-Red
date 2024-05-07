@@ -2,7 +2,7 @@
     {
         "id": "2ec6a7ddfe0cd173",
         "type": "tab",
-        "label": "DATV-Red v4.8",
+        "label": "DATV-Red v4.9",
         "disabled": false,
         "info": ""
     },
@@ -2353,7 +2353,7 @@
         "id": "ac33191348496194",
         "type": "group",
         "z": "ce1713554003f4d8",
-        "name": "Intel HW",
+        "name": "Intel QuickSyncVideo",
         "style": {
             "label": true,
             "stroke": "#3f3f3f",
@@ -2369,12 +2369,15 @@
             "9d68679e01a9d817",
             "03ed9ba837127718",
             "4bdbf269d8b5ce7e",
-            "19166778b5e00187"
+            "19166778b5e00187",
+            "c014b1fcbbfd4019",
+            "1e7b3fab04e50c7e",
+            "1f08b642a83ebb11"
         ],
         "x": 1134,
-        "y": 459,
-        "w": 972,
-        "h": 162
+        "y": 419,
+        "w": 952,
+        "h": 202
     },
     {
         "id": "a34209d254b63c7b",
@@ -2461,6 +2464,22 @@
         "y": 819,
         "w": 992,
         "h": 122
+    },
+    {
+        "id": "e7016216d1ab82c5",
+        "type": "group",
+        "z": "ce1713554003f4d8",
+        "name": "Flappie die waghond",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "09b53391959d15fb"
+        ],
+        "x": 1674,
+        "y": 979,
+        "w": 152,
+        "h": 82
     },
     {
         "id": "9396693c.371108",
@@ -2712,22 +2731,6 @@
         "h": 162
     },
     {
-        "id": "e7016216d1ab82c5",
-        "type": "group",
-        "z": "ce1713554003f4d8",
-        "name": "Flappie die waghond",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "09b53391959d15fb"
-        ],
-        "x": 1674,
-        "y": 979,
-        "w": 152,
-        "h": 82
-    },
-    {
         "id": "9b3296db2e0c849f",
         "type": "ui_tab",
         "name": "Transmission-Control",
@@ -2817,7 +2820,7 @@
             }
         },
         "site": {
-            "name": "DATV-RED V4.8",
+            "name": "DATV-RED V4.9",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -3210,7 +3213,7 @@
         "order": 10,
         "disp": true,
         "width": "6",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -3320,7 +3323,7 @@
     {
         "id": "a227e1b21c29f280",
         "type": "ui_group",
-        "name": "Intel encoder",
+        "name": "Intel QuickSyncVideo encoder",
         "tab": "fefa8fb5a3363008",
         "order": 6,
         "disp": true,
@@ -5459,7 +5462,7 @@
         "name": "",
         "group": "441bbfce250f4e02",
         "order": 6,
-        "width": 3,
+        "width": "2",
         "height": 1,
         "passthru": false,
         "label": "Reboot",
@@ -9021,7 +9024,8 @@
         "wires": [
             [
                 "64a9de4a4bd4dab6",
-                "af0afe1e86d6e2ce"
+                "af0afe1e86d6e2ce",
+                "517a7337244c67a7"
             ]
         ]
     },
@@ -14614,7 +14618,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "fcb",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let use_crf = global.get(\"settings.use_crf\");\n    let input = global.get(\"settings.input_choice\");\n    let key_frame_multi = global.get(\"settings.key_frame_multi\");\n    let keyframe_interval = global.get(\"settings.FPS\") * key_frame_multi;\n    const hw_preset = global.get(\"settings.nvidia_preset\");\n    const hw_tune = global.get(\"settings.nvidia_tune\");\n    const hw_profile = global.get(\"settings.nvidia_profile\");\n    const sw_preset = global.get(\"settings.libx26x_preset\");\n    const intel_preset = global.get(\"settings.libmfx_preset\");\n    const libmfx_h264 = global.get(\"settings.libmfx_h264\");\n    const libmfx_h265 = global.get(\"settings.libmfx_h265\");\n    const libx_h264 = global.get(\"settings.libx264\");\n    const libx_h265 = global.get(\"settings.libx265\");\n    const libaom = global.get(\"settings.libaom-av1\");\n    const libsvtav1 = global.get(\"settings.libsvtav1\");\n    const libvvenc = global.get(\"settings.libvvenc\");\n    const sw_crf = global.get(\"settings.libx26x_crf\");\n    const mux_delay = global.get(\"settings.mux_delay\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset ${hw_preset} -tune ${hw_tune} -rc-lookahead ${global.get(\"settings.FPS\")}`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            codec = `libx264 -preset ${sw_preset} ${libx_h264} ${shapingString} ${use_crf ? `-x264-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency`\n            codec = `libx265 -preset ${sw_preset} ${libx_h265} ${shapingString} ${use_crf ? `-x265-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            max_video_rate = max_video_rate * 0.9; // Remove 10% from max rate for null packing\n            let targetBitrate = Math.floor((max_video_rate / 1.5) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc ${libvvenc} -r ${global.get(\"settings.FPS\")} -vvenc-params targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 ${libaom}`;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 ${libsvtav1}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc -profile ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc -tier ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_qsv\":\n            codec = `hevc_qsv ${libmfx_h265} -preset ${intel_preset} ${shapingString}`;\n            break;\n        case \"h264_qsv\":\n            codec = `h264_qsv ${libmfx_h264} -preset ${intel_preset} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.75);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? mux_delay + 250 : mux_delay;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = flow.get(\"version\");\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.video_device_linux\"\n                )}\\ -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.audio_device_linux\"\n                )}\\ `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                    \"settings.video_device\"\n                )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                    \"settings.audio_device\"\n                )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        // `-mpegts_flags system_b -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\") {\n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    const key_frame_option = codec_str === \"libvvenc\" ? `` : `-g ${keyframe_interval}`\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ${key_frame_option} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000:aresample=async=1\\\" ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -af aresample=async=1 ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 ` +\n        `-b:a ${audio_bit_rate} ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let use_crf = global.get(\"settings.use_crf\");\n    let input = global.get(\"settings.input_choice\");\n    let key_frame_multi = global.get(\"settings.key_frame_multi\");\n    let keyframe_interval = global.get(\"settings.FPS\") * key_frame_multi;\n    const hw_preset = global.get(\"settings.nvidia_preset\");\n    const hw_tune = global.get(\"settings.nvidia_tune\");\n    const hw_profile = global.get(\"settings.nvidia_profile\");\n    const sw_preset = global.get(\"settings.libx26x_preset\");\n    const qsv_preset = global.get(\"settings.qsv_preset\");\n    const h264_qsv = global.get(\"settings.h264_qsv\");\n    const hevc_qsv = global.get(\"settings.hevc_qsv\");\n    const av1_qsv = global.get(\"settings.av1_qsv\");\n    const libx_h264 = global.get(\"settings.libx264\");\n    const libx_h265 = global.get(\"settings.libx265\");\n    const libaom = global.get(\"settings.libaom-av1\");\n    const libsvtav1 = global.get(\"settings.libsvtav1\");\n    const libvvenc = global.get(\"settings.libvvenc\");\n    const sw_crf = global.get(\"settings.libx26x_crf\");\n    const mux_delay = global.get(\"settings.mux_delay\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset ${hw_preset} -tune ${hw_tune} -rc-lookahead ${global.get(\"settings.FPS\")}`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec) {\n        case \"libx264\":\n            codec = `libx264 -preset ${sw_preset} ${libx_h264} ${shapingString} ${use_crf ? `-x264-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency`\n            codec = `libx265 -preset ${sw_preset} ${libx_h265} ${shapingString} ${use_crf ? `-x265-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            max_video_rate = max_video_rate * 0.9; // Remove 10% from max rate for null packing\n            let targetBitrate = Math.floor((max_video_rate / 1.5) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc ${libvvenc} -r ${global.get(\"settings.FPS\")} -vvenc-params targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 ${libaom}`;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 ${libsvtav1}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc -profile ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc -tier ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_qsv\":\n            codec = `hevc_qsv ${hevc_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"h264_qsv\":\n            codec = `h264_qsv ${h264_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv_udp\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.75);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? mux_delay + 250 : mux_delay;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = flow.get(\"version\");\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.video_device_linux\"\n                )}\\ -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.audio_device_linux\"\n                )}\\ `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                    \"settings.video_device\"\n                )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                    \"settings.audio_device\"\n                )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        // `-mpegts_flags system_b -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\" || codec_str === \"av1_qsv\") {\n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    if (codec_str === \"av1_qsv_udp\"){\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n    }\n    const key_frame_option = codec_str === \"libvvenc\" ? `` : `-g ${keyframe_interval}`\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ${key_frame_option} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000:aresample=async=1\\\" ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -af aresample=async=1 ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 ` +\n        `-b:a ${audio_bit_rate} ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -19347,7 +19351,7 @@
         "name": "debug",
         "group": "441bbfce250f4e02",
         "order": 6,
-        "width": "3",
+        "width": "2",
         "height": "1",
         "passthru": false,
         "label": "debug",
@@ -19554,6 +19558,119 @@
         "wires": [
             [
                 "fd4311919bb382bd"
+            ]
+        ]
+    },
+    {
+        "id": "d109fe1b21ea6f7e",
+        "type": "ui_button",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "exit",
+        "group": "441bbfce250f4e02",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "exit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1290,
+        "y": 620,
+        "wires": [
+            [
+                "e24fe78e590484f9"
+            ]
+        ]
+    },
+    {
+        "id": "5c184e3ca6d64963",
+        "type": "exit",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "exitcode": "1111",
+        "x": 2090,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "2fc31fb2bb0ca4c0",
+        "type": "ui_toast",
+        "z": "2ec6a7ddfe0cd173",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Exit",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1690,
+        "y": 640,
+        "wires": [
+            [
+                "1c3451fb6f1af55a"
+            ]
+        ]
+    },
+    {
+        "id": "1c3451fb6f1af55a",
+        "type": "switch",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Exit",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1940,
+        "y": 640,
+        "wires": [
+            [
+                "5c184e3ca6d64963"
+            ]
+        ]
+    },
+    {
+        "id": "e24fe78e590484f9",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "This will exit the application",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 620,
+        "wires": [
+            [
+                "2fc31fb2bb0ca4c0"
             ]
         ]
     },
@@ -20763,6 +20880,16 @@
                 "label": "HW - Intel H265",
                 "value": "hevc_qsv",
                 "type": "str"
+            },
+            {
+                "label": "HW - Intel AV1 GSE-SRT ",
+                "value": "av1_qsv",
+                "type": "str"
+            },
+            {
+                "label": "HW - Intel AV1",
+                "value": "av1_qsv_udp",
+                "type": "str"
             }
         ],
         "payload": "",
@@ -21818,11 +21945,11 @@
         "type": "change",
         "z": "ce1713554003f4d8",
         "g": "ac33191348496194",
-        "name": "Set libmfx_h265 options",
+        "name": "Set hevc_qsv options",
         "rules": [
             {
                 "t": "set",
-                "p": "settings.libmfx_h265",
+                "p": "settings.hevc_qsv",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -21840,7 +21967,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1970,
+        "x": 1960,
         "y": 500,
         "wires": [
             []
@@ -21862,9 +21989,9 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "settings.libmfx_h265",
+        "payload": "settings.hevc_qsv",
         "payloadType": "global",
-        "x": 1300,
+        "x": 1290,
         "y": 500,
         "wires": [
             [
@@ -21878,10 +22005,10 @@
         "z": "ce1713554003f4d8",
         "g": "ac33191348496194",
         "name": "",
-        "label": "Intel H265 options",
+        "label": "hevc_qsv(h265) options",
         "tooltip": "",
         "group": "a227e1b21c29f280",
-        "order": 19,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -21891,7 +22018,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 1590,
+        "x": 1610,
         "y": 500,
         "wires": [
             [
@@ -21904,11 +22031,11 @@
         "type": "change",
         "z": "ce1713554003f4d8",
         "g": "ac33191348496194",
-        "name": "Set libmfx_h264 options",
+        "name": "Set h264_qsv options",
         "rules": [
             {
                 "t": "set",
-                "p": "settings.libmfx_h264",
+                "p": "settings.h264_qsv",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -21926,7 +22053,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1970,
+        "x": 1960,
         "y": 540,
         "wires": [
             []
@@ -21948,9 +22075,9 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "settings.libmfx_h264",
+        "payload": "settings.h264_qsv",
         "payloadType": "global",
-        "x": 1300,
+        "x": 1290,
         "y": 540,
         "wires": [
             [
@@ -21964,10 +22091,10 @@
         "z": "ce1713554003f4d8",
         "g": "ac33191348496194",
         "name": "",
-        "label": "Intel H264 options",
+        "label": "h264_qsv options",
         "tooltip": "",
         "group": "a227e1b21c29f280",
-        "order": 19,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -22001,9 +22128,9 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "settings.libmfx_preset",
+        "payload": "settings.qsv_preset",
         "payloadType": "global",
-        "x": 1300,
+        "x": 1290,
         "y": 580,
         "wires": [
             [
@@ -22017,11 +22144,11 @@
         "z": "ce1713554003f4d8",
         "g": "ac33191348496194",
         "name": "libmfx - HW INTEL preset",
-        "label": "libmfx - HW INTEL preset",
+        "label": "preset",
         "tooltip": "",
         "place": "Select option",
         "group": "a227e1b21c29f280",
-        "order": 4,
+        "order": 1,
         "width": "13",
         "height": "1",
         "passthru": true,
@@ -22080,11 +22207,11 @@
         "type": "change",
         "z": "ce1713554003f4d8",
         "g": "ac33191348496194",
-        "name": "Set libmfx preset",
+        "name": "Set qsv_preset preset",
         "rules": [
             {
                 "t": "set",
-                "p": "settings.libmfx_preset",
+                "p": "settings.qsv_preset",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -22102,7 +22229,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1950,
+        "x": 1960,
         "y": 580,
         "wires": [
             []
@@ -22670,6 +22797,92 @@
             [
                 "09b53391959d15fb"
             ],
+            []
+        ]
+    },
+    {
+        "id": "c014b1fcbbfd4019",
+        "type": "inject",
+        "z": "ce1713554003f4d8",
+        "g": "ac33191348496194",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "settings.av1_qsv",
+        "payloadType": "global",
+        "x": 1290,
+        "y": 460,
+        "wires": [
+            [
+                "1e7b3fab04e50c7e"
+            ]
+        ]
+    },
+    {
+        "id": "1e7b3fab04e50c7e",
+        "type": "ui_text_input",
+        "z": "ce1713554003f4d8",
+        "g": "ac33191348496194",
+        "name": "",
+        "label": "av1_qsv options",
+        "tooltip": "",
+        "group": "a227e1b21c29f280",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1580,
+        "y": 460,
+        "wires": [
+            [
+                "1f08b642a83ebb11"
+            ]
+        ]
+    },
+    {
+        "id": "1f08b642a83ebb11",
+        "type": "change",
+        "z": "ce1713554003f4d8",
+        "g": "ac33191348496194",
+        "name": "Set av1_qsv options",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.av1_qsv",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 460,
+        "wires": [
             []
         ]
     },
