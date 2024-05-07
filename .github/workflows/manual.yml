@@ -28,14 +28,12 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4.1.1
-      with:
-        clean: false
-        # submodules: recursive
     - name: make release directory
       shell: bash
       run: |
-        mkdir Release
-        7z a -t7z -mx=9 ./Release/DATV-Red-v$VERSION.7z *
+        # ls -al 
+        # mkdir Release
+        7z a -r -t7z -mx=9 ./DATV-Red-v$VERSION.7z  ./*
     # - uses: milliewalky/setup-7-zip@v1
     #   with:
     #     args: 7z a -t7z -mx=9  ./Release/
@@ -47,4 +45,4 @@ jobs:
         title: Release-v${{ inputs.version }}
         prerelease: false
         files: |
-            Release/**.7z
+            **.7z
