@@ -250,39 +250,6 @@
         "h": 820
     },
     {
-        "id": "4bfefaeb7f82f4c6",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "settings restorer",
-        "style": {
-            "label": true,
-            "fill": "#92d04f"
-        },
-        "nodes": [
-            "7d6077cea86f2378",
-            "b800a9f107cb3124",
-            "a5d3ec26a3634e1e",
-            "8c7733a45d32bf17",
-            "98580b7a29e56897",
-            "61748e994293d03b",
-            "da0526f09e2cf48c",
-            "c667113f68ae72fa",
-            "a56122d1643df6cf",
-            "a14cd65fe7fac722",
-            "b9e877b123e7e841",
-            "000aadf55c9c61da",
-            "a8ded79652836a82",
-            "d558ecd264feb081",
-            "6afa3d5787c3c8dd",
-            "fd45eaf559f851a8",
-            "03f8ae8f0673a768"
-        ],
-        "x": 54,
-        "y": 2159,
-        "w": 1312,
-        "h": 342
-    },
-    {
         "id": "92c95af69a0592d1",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -449,32 +416,6 @@
         "h": 142
     },
     {
-        "id": "1473030260740438",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "Bitrate calculator",
-        "style": {
-            "label": true,
-            "fill": "#001f60"
-        },
-        "nodes": [
-            "dd4535e1d6b65679",
-            "8c336280fd0fcc92",
-            "8751a0dd93a8ed60",
-            "d791940d6fb69cd4",
-            "1827c9f76c07664e",
-            "1c303a9ac462db5c",
-            "38ad92b4a70e6127",
-            "8bcfa3ec1a3348b7",
-            "633c66ba35309ee7",
-            "c2d784cdfb89762d"
-        ],
-        "x": 1434,
-        "y": 59,
-        "w": 1172,
-        "h": 242
-    },
-    {
         "id": "72ddf00d98862ef3",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -500,11 +441,13 @@
             "0b5fd2d31add3324",
             "11cf525e1a7c1782",
             "266f80627bce4bf5",
-            "3326448b2fa1b1c6"
+            "3326448b2fa1b1c6",
+            "50e33196f9c1c78f",
+            "1e09d548d38c9016"
         ],
-        "x": 2234,
+        "x": 2214,
         "y": 659,
-        "w": 792,
+        "w": 1242,
         "h": 502
     },
     {
@@ -566,103 +509,13 @@
             "04f9a5bb376d348a",
             "5e8e586689917688",
             "14b5ed72c1000617",
-            "fc903a4a8e9a979e"
+            "fc903a4a8e9a979e",
+            "f3bfc6e61a25b1a6"
         ],
         "x": -6,
         "y": 859,
         "w": 2072,
         "h": 442
-    },
-    {
-        "id": "d320c7a134a3a36a",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "MQTT RX",
-        "style": {
-            "label": true,
-            "fill": "#6f2fa0"
-        },
-        "nodes": [
-            "36a9e71117a34327",
-            "babe629c1afb5e8b",
-            "45967ab8c3bd9a21",
-            "d2b51c2f7d254def",
-            "306b57e47411d35c",
-            "23773127332c2b1f",
-            "9aa8ef50bbbe8e2d",
-            "d26972d34559fd63",
-            "a27d9eec9ce16ab7",
-            "b601d6596401a754",
-            "b6d03834b636d44d",
-            "9cea687107707a6b",
-            "50bf46056b71ec3a",
-            "5d39969ea562b92d",
-            "18b3a285bc3b304a",
-            "59e507f64ad42e32",
-            "4ddefda4dc462586",
-            "a3b043862df5d1c9",
-            "203d8eabee6242e7",
-            "33155f6018ceeffa",
-            "7a4a8d639646cff4",
-            "96d158d7fdc5ee78",
-            "746af9f95f7438cd",
-            "9fb89f4342f8baf0",
-            "e2ddf0eaa1468069",
-            "91114b46796f2205",
-            "aeded232cbae2ef0",
-            "8bcc3bb6537a078d",
-            "2e28b17c64c14184",
-            "04d27b36a3ee9934",
-            "25a924b7dc1d4576",
-            "0b6d33db8fc071c9",
-            "ac88fa94a49129ec",
-            "347c8041af1a52e0",
-            "8ec0b8acdb25a6b7",
-            "1cc9bf09772f06d3",
-            "54e338fa6a48fd5b",
-            "ae61c1e19f8634d0",
-            "8a6e91746db5e484",
-            "31eb287a0ca0a45c",
-            "508bccc9de4506fc",
-            "c8042db5402565df",
-            "8e34088eda2b7263",
-            "2acfb18cb9db9a02",
-            "c4f36ff7105c2dd1",
-            "de949c9780005117",
-            "c44d0cb54ec5e706",
-            "4fd321bd9fa719f3",
-            "f1d972d20ef54cf2",
-            "ef310c8290b45f2f",
-            "728cb5ecbddc04f0",
-            "b22449c1178f10d2",
-            "9cb8fc791809bfd9",
-            "1decf932a1bf2fcd",
-            "ba4a435e3fbcd377",
-            "a944ecbfc565c58b",
-            "54cbda477035a37f",
-            "04e9fefc43a9ccbf",
-            "b733d75a1c79f1a2",
-            "850a280f13dbdd1a",
-            "32e18f58d4f086f8",
-            "76bed5f0ebc81a4c",
-            "56ad120991eb3c83",
-            "4dc0d6bc0972a150",
-            "cf6155c5314434de",
-            "24ba1c8ca7aea429",
-            "9f35c0e151e986ea",
-            "8bb744f5177e71ff",
-            "e46baa13b39cba9e",
-            "bd24f785a5a8b525",
-            "fb04031f2c318738",
-            "d49c970eaa1d83d7",
-            "790b0c2c3183bf58",
-            "80359ffd7ddaa92c",
-            "08a917e81cfdc18d"
-        ],
-        "x": 74,
-        "y": 2779,
-        "w": 1252,
-        "h": 1162
     },
     {
         "id": "c927282dfd987c70",
@@ -1931,75 +1784,6 @@
         "h": 202
     },
     {
-        "id": "44bb8f59b40e58cf",
-        "type": "group",
-        "z": "2ec6a7ddfe0cd173",
-        "name": "MQTT TX",
-        "style": {
-            "label": true,
-            "fill": "#92d04f",
-            "label-position": "n"
-        },
-        "nodes": [
-            "faf5a12234cf3d6a",
-            "64a9de4a4bd4dab6",
-            "1b201451fae7fae6",
-            "d57c9c3c32e5a58b",
-            "7f859a7a7ee27404",
-            "68e079e44b9dd5c2",
-            "5af92414e3f29873",
-            "524de1980547eaea",
-            "5d8a44d8d3dfd931",
-            "33dc958065cdada2",
-            "e91e846502f35c90",
-            "14e5a286770d3cd0",
-            "cec2f56be1fccf51",
-            "152082051caa1d1d",
-            "88c17ad9f892b06d",
-            "762e2c70acd9ebe0",
-            "b1fb472a0a5e24a7",
-            "37b18a222ae30d52",
-            "b6da9101dce07fd1",
-            "807128449158f2eb",
-            "f65818d390a71152",
-            "9695655b0a719b4a",
-            "20fcf5f8b61db48f",
-            "89b95ad3b6453036",
-            "af45e1bfc3e75ecb",
-            "aa4a256618f7c4a6",
-            "55bca069bdb08ee7",
-            "c5ceed661f8529ce",
-            "0c74362e749bcdc4",
-            "4a50af4869a33baa",
-            "b1b6fc76c723e0f1",
-            "7b06e3153449eb9a",
-            "d533bf0f097fedc4",
-            "f7a31bdb75d1c530",
-            "1d6a50722e33c015",
-            "e1d2a880c9ca99a4",
-            "3084477086b5b8f2",
-            "1b8ee9dbe0155dcd",
-            "e5b15ef8662e723b",
-            "34093316d4a4742b",
-            "2b25acbe5bad144e",
-            "c20ffdd3c22ba8da",
-            "0d29c855caae3889",
-            "cf798b4f51cbac85",
-            "343e66e2cb1a67c3",
-            "4a0642add9f7b983",
-            "2d85a16a42027727",
-            "2d1d2f2c5a3e44b6",
-            "947313bf5f0e22d1",
-            "bb78b77ba46f7005",
-            "534c2d0e405b4cdf",
-            "5c31dbeab217c8e9"
-        ],
-        "x": 2234,
-        "y": 1219,
-        "w": 1272,
-        "h": 1762
-    },
-    {
         "id": "4d669b1e14f85738",
         "type": "group",
         "z": "2ec6a7ddfe0cd173",
@@ -2508,6 +2292,228 @@
         "y": 79,
         "w": 832,
         "h": 149.5
+    },
+    {
+        "id": "d320c7a134a3a36a",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "MQTT RX",
+        "style": {
+            "label": true,
+            "fill": "#6f2fa0"
+        },
+        "nodes": [
+            "36a9e71117a34327",
+            "babe629c1afb5e8b",
+            "45967ab8c3bd9a21",
+            "d2b51c2f7d254def",
+            "306b57e47411d35c",
+            "23773127332c2b1f",
+            "9aa8ef50bbbe8e2d",
+            "d26972d34559fd63",
+            "a27d9eec9ce16ab7",
+            "b601d6596401a754",
+            "b6d03834b636d44d",
+            "9cea687107707a6b",
+            "50bf46056b71ec3a",
+            "5d39969ea562b92d",
+            "18b3a285bc3b304a",
+            "59e507f64ad42e32",
+            "4ddefda4dc462586",
+            "a3b043862df5d1c9",
+            "203d8eabee6242e7",
+            "33155f6018ceeffa",
+            "7a4a8d639646cff4",
+            "96d158d7fdc5ee78",
+            "746af9f95f7438cd",
+            "9fb89f4342f8baf0",
+            "e2ddf0eaa1468069",
+            "91114b46796f2205",
+            "aeded232cbae2ef0",
+            "8bcc3bb6537a078d",
+            "2e28b17c64c14184",
+            "04d27b36a3ee9934",
+            "25a924b7dc1d4576",
+            "0b6d33db8fc071c9",
+            "ac88fa94a49129ec",
+            "347c8041af1a52e0",
+            "8ec0b8acdb25a6b7",
+            "1cc9bf09772f06d3",
+            "54e338fa6a48fd5b",
+            "ae61c1e19f8634d0",
+            "8a6e91746db5e484",
+            "31eb287a0ca0a45c",
+            "508bccc9de4506fc",
+            "c8042db5402565df",
+            "8e34088eda2b7263",
+            "2acfb18cb9db9a02",
+            "c4f36ff7105c2dd1",
+            "de949c9780005117",
+            "c44d0cb54ec5e706",
+            "4fd321bd9fa719f3",
+            "f1d972d20ef54cf2",
+            "ef310c8290b45f2f",
+            "728cb5ecbddc04f0",
+            "b22449c1178f10d2",
+            "9cb8fc791809bfd9",
+            "1decf932a1bf2fcd",
+            "ba4a435e3fbcd377",
+            "a944ecbfc565c58b",
+            "54cbda477035a37f",
+            "04e9fefc43a9ccbf",
+            "b733d75a1c79f1a2",
+            "850a280f13dbdd1a",
+            "32e18f58d4f086f8",
+            "76bed5f0ebc81a4c",
+            "56ad120991eb3c83",
+            "4dc0d6bc0972a150",
+            "cf6155c5314434de",
+            "24ba1c8ca7aea429",
+            "9f35c0e151e986ea",
+            "8bb744f5177e71ff",
+            "e46baa13b39cba9e",
+            "bd24f785a5a8b525",
+            "fb04031f2c318738",
+            "d49c970eaa1d83d7",
+            "790b0c2c3183bf58",
+            "80359ffd7ddaa92c",
+            "08a917e81cfdc18d"
+        ],
+        "x": 74,
+        "y": 2779,
+        "w": 1252,
+        "h": 1162
+    },
+    {
+        "id": "1473030260740438",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "Bitrate calculator",
+        "style": {
+            "label": true,
+            "fill": "#001f60"
+        },
+        "nodes": [
+            "dd4535e1d6b65679",
+            "8c336280fd0fcc92",
+            "8751a0dd93a8ed60",
+            "d791940d6fb69cd4",
+            "1827c9f76c07664e",
+            "1c303a9ac462db5c",
+            "38ad92b4a70e6127",
+            "8bcfa3ec1a3348b7",
+            "633c66ba35309ee7",
+            "c2d784cdfb89762d",
+            "bf8752bf7250f8f9",
+            "ce85264d7bfb54fb"
+        ],
+        "x": 1514,
+        "y": 59,
+        "w": 1472,
+        "h": 242
+    },
+    {
+        "id": "44bb8f59b40e58cf",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "MQTT TX",
+        "style": {
+            "label": true,
+            "fill": "#92d04f",
+            "label-position": "n"
+        },
+        "nodes": [
+            "faf5a12234cf3d6a",
+            "64a9de4a4bd4dab6",
+            "1b201451fae7fae6",
+            "d57c9c3c32e5a58b",
+            "7f859a7a7ee27404",
+            "68e079e44b9dd5c2",
+            "5af92414e3f29873",
+            "524de1980547eaea",
+            "5d8a44d8d3dfd931",
+            "33dc958065cdada2",
+            "e91e846502f35c90",
+            "14e5a286770d3cd0",
+            "cec2f56be1fccf51",
+            "152082051caa1d1d",
+            "88c17ad9f892b06d",
+            "762e2c70acd9ebe0",
+            "b1fb472a0a5e24a7",
+            "37b18a222ae30d52",
+            "b6da9101dce07fd1",
+            "807128449158f2eb",
+            "f65818d390a71152",
+            "9695655b0a719b4a",
+            "20fcf5f8b61db48f",
+            "89b95ad3b6453036",
+            "af45e1bfc3e75ecb",
+            "aa4a256618f7c4a6",
+            "55bca069bdb08ee7",
+            "c5ceed661f8529ce",
+            "0c74362e749bcdc4",
+            "4a50af4869a33baa",
+            "b1b6fc76c723e0f1",
+            "7b06e3153449eb9a",
+            "d533bf0f097fedc4",
+            "f7a31bdb75d1c530",
+            "1d6a50722e33c015",
+            "e1d2a880c9ca99a4",
+            "3084477086b5b8f2",
+            "1b8ee9dbe0155dcd",
+            "e5b15ef8662e723b",
+            "34093316d4a4742b",
+            "2b25acbe5bad144e",
+            "c20ffdd3c22ba8da",
+            "0d29c855caae3889",
+            "cf798b4f51cbac85",
+            "343e66e2cb1a67c3",
+            "4a0642add9f7b983",
+            "2d85a16a42027727",
+            "2d1d2f2c5a3e44b6",
+            "947313bf5f0e22d1",
+            "bb78b77ba46f7005",
+            "534c2d0e405b4cdf",
+            "5c31dbeab217c8e9",
+            "067f27f529ed60f7"
+        ],
+        "x": 2234,
+        "y": 1219,
+        "w": 1272,
+        "h": 1762
+    },
+    {
+        "id": "4bfefaeb7f82f4c6",
+        "type": "group",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "settings restorer",
+        "style": {
+            "label": true,
+            "fill": "#92d04f"
+        },
+        "nodes": [
+            "7d6077cea86f2378",
+            "b800a9f107cb3124",
+            "a5d3ec26a3634e1e",
+            "8c7733a45d32bf17",
+            "98580b7a29e56897",
+            "61748e994293d03b",
+            "da0526f09e2cf48c",
+            "c667113f68ae72fa",
+            "a56122d1643df6cf",
+            "a14cd65fe7fac722",
+            "b9e877b123e7e841",
+            "000aadf55c9c61da",
+            "a8ded79652836a82",
+            "d558ecd264feb081",
+            "6afa3d5787c3c8dd",
+            "fd45eaf559f851a8",
+            "03f8ae8f0673a768"
+        ],
+        "x": 54,
+        "y": 2159,
+        "w": 1312,
+        "h": 342
     },
     {
         "id": "e7016216d1ab82c5",
@@ -4439,7 +4445,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "d320c7a134a3a36a",
         "name": "Global: sr",
-        "func": "let payload = Number(msg.payload);\nif (payload !== global.get(\"device.tx.dvbs2.sr\")) {\n    // global.set(\"bitratechange\", true);\n    global.set(\"device.tx.dvbs2.sr\", payload);\n    global.set(\"settings.SR\", payload / 1000);\n    return msg;\n}\nreturn msg;\n",
+        "func": "let payload = Number(msg.payload);\nif (payload !== global.get(\"device.tx.dvbs2.sr\")) {\n    global.set(\"device.tx.dvbs2.sr\", payload);\n    global.set(\"settings.SR\", payload / 1000);\n    return msg;\n}\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5236,7 +5242,8 @@
         "wires": [
             [
                 "b1fb472a0a5e24a7",
-                "1b8ee9dbe0155dcd"
+                "1b8ee9dbe0155dcd",
+                "067f27f529ed60f7"
             ]
         ]
     },
@@ -5246,7 +5253,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: SampleRate",
-        "func": "global.set(\"deviceChange\", true);\nlet payload = Number(msg.payload);\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"device.tx.dvbs2.sr\", payload);\nglobal.set(\"settings.SR\", payload/1000);\n// global.set(\"bitratechange\", true);\nreturn msg;\n",
+        "func": "global.set(\"deviceChange\", true);\nlet payload = Number(msg.payload);\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/sr`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"device.tx.dvbs2.sr\", payload);\nglobal.set(\"settings.SR\", payload/1000);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -5403,7 +5410,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: Frame",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/frame`;\n// global.set(\"bitratechange\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.frame\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/frame`;\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.frame\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -5463,7 +5470,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: Pilots",
-        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/pilots`;\n// global.set(\"bitratechange\", true);\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.pilots\", payload);\nreturn msg;\n",
+        "func": "let payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/dvbs2/pilots`;\nmsg.topic = topic\nmsg.payload = payload;\nglobal.set(\"stop\", true);\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.dvbs2.pilots\", payload);\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -7028,7 +7035,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2590,
+        "x": 2630,
         "y": 780,
         "wires": [
             [
@@ -7044,18 +7051,19 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "get active ffmpeg process id",
-        "func": "let payload = msg.payload;\nif (payload === \"1\") {\n    msg.backgroundcolor = \"\";\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false);\n    global.set(\"ffmpeg_cmd\", \"\");\n    msg.ffmpeg = \"clear\";\n    msg.p9_color = \"\";\n    msg.kill = \"\";\n    return msg;\n}",
+        "func": "let payload = msg.payload;\n\nif (payload === \"1\") {\n    msg.backgroundcolor = \"\";\n    global.set(\"pid\", \"\");\n    global.set(\"ProfileButtonsActive\", false);\n    global.set(\"ffmpeg_cmd\", \"\");\n    msg.ffmpeg = \"clear\";\n    msg.p9_color = \"\";\n    msg.kill = \"SIGINT\";\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2880,
+        "x": 3100,
         "y": 780,
         "wires": [
             [
-                "870adb347b148820"
+                "870adb347b148820",
+                "50e33196f9c1c78f"
             ]
         ]
     },
@@ -8511,13 +8519,13 @@
         "topic": "",
         "payload": "bitratechange",
         "payloadType": "global",
-        "x": 1590,
+        "x": 1670,
         "y": 140,
         "wires": [
             [
                 "1c303a9ac462db5c",
-                "38ad92b4a70e6127",
-                "8bcfa3ec1a3348b7"
+                "bf8752bf7250f8f9",
+                "d8e2a4c93dcfa5b6"
             ]
         ]
     },
@@ -8534,7 +8542,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2090,
+        "x": 2430,
         "y": 140,
         "wires": [
             [
@@ -8555,17 +8563,18 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 2460,
+        "x": 2800,
         "y": 160,
         "wires": [
-            []
+            [
+                "ce85264d7bfb54fb"
+            ]
         ]
     },
     {
         "id": "d791940d6fb69cd4",
         "type": "ui_toast",
         "z": "2ec6a7ddfe0cd173",
-        "d": true,
         "g": "1473030260740438",
         "position": "top right",
         "displayTime": "3",
@@ -8578,7 +8587,7 @@
         "className": "bit",
         "topic": "",
         "name": "Bitrate settings changed",
-        "x": 2470,
+        "x": 2850,
         "y": 100,
         "wires": []
     },
@@ -8602,7 +8611,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2260,
+        "x": 2620,
         "y": 100,
         "wires": [
             [
@@ -9339,7 +9348,7 @@
         "append": "",
         "useSpawn": "true",
         "timer": "",
-        "winHide": false,
+        "winHide": true,
         "oldrc": false,
         "name": "Load custom",
         "x": 1150,
@@ -11022,8 +11031,8 @@
         "winHide": true,
         "oldrc": false,
         "name": "kill ffplay",
-        "x": 2700,
-        "y": 920,
+        "x": 2640,
+        "y": 940,
         "wires": [
             [],
             [],
@@ -11069,7 +11078,7 @@
         "order": 9,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -11451,7 +11460,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1600,
+        "x": 1940,
         "y": 260,
         "wires": [
             [
@@ -11465,7 +11474,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "44bb8f59b40e58cf",
         "name": "Send: Stream Mode",
-        "func": "if(msg.restore){\n    let payload = msg.payload;\n    let topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\n    // global.set(\"bitratechange\", true);\n    msg.topic = topic;\n    msg.payload = payload;\n    // global.set(\"deviceChange\", true);\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\n// global.set(\"stop\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n\n",
+        "func": "if(msg.restore){\n    let payload = msg.payload;\n    let topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\n    msg.topic = topic;\n    msg.payload = payload;\n    global.set(\"device.tx.stream.mode\", payload);\n    return msg;\n}\nlet payload = msg.payload;\nlet topic = `${global.get(\"cmdPath\")}/tx/stream/mode`;\nglobal.set(\"bitratechange\", true);\n// global.set(\"stop\", true);\nmsg.topic = topic;\nmsg.payload = payload;\nglobal.set(\"deviceChange\", true);\nglobal.set(\"device.tx.stream.mode\", payload);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -12310,7 +12319,9 @@
         "y": 780,
         "wires": [
             [
-                "c4c1592e68a08ac2"
+                "c4c1592e68a08ac2",
+                "1e09d548d38c9016",
+                "5ea424fd3ccb47b3"
             ]
         ]
     },
@@ -13152,7 +13163,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3120,
+        "x": 3140,
         "y": 1520,
         "wires": []
     },
@@ -13183,14 +13194,14 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "1473030260740438",
         "name": "Calculate bitrate function",
-        "func": "if (msg.payload) {\n    // global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    // global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n\n\n    // if (sr > 20 && sr < 36)\n    //     videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    // if (sr > 35 && sr < 67)\n    //     videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    // if (sr > 66 && sr < 126)\n    //     videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    // if (sr > 125 && sr < 251)\n    //     videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    // if (sr > 250 && sr < 334)\n    //     videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    // if (sr > 333 && sr < 501)\n    //     videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    // if (sr > 500 && sr < 1001)\n    //     videoBitRate = (TSBitRate * 0.87) - audioBitRate;\n    // if (sr > 1000 && sr < 1501)\n    //     videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    // if (sr > 1500 && sr < 4001)\n    //     videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n\n    let gse = false;\n    // Decrease TSBitRate for GSE to 88% because of the IP-Header (internal encoder)\n    let streamout = global.get(\"device.tx.stream.mode\");\n    if (streamout == \"dvbs2-gse\") {\n        TSBitRate = TSBitRate * 0.88;\n        gse = true;\n    }\n    let numbers = fec.split(\"/\");\n    let top = numbers[0]\n    let bottom = numbers[1]\n\n\n\n    let magicNumber = 0.81;\n    //the equation is videobitrate =(TS/(2(efficiency of qpsk)xfecxreed-solomon))\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = ((sr * 2 * (1 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"1/3\") videoBitRate = ((sr * 2 * (1 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"2/5\") videoBitRate = ((sr * 2 * (2 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"1/2\") videoBitRate = ((sr * 2 * (1 / 2) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/5\") videoBitRate = ((sr * 2 * (3 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"2/3\") videoBitRate = ((sr * 2 * (2 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/4\") videoBitRate = ((sr * 2 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"4/5\") videoBitRate = ((sr * 2 * (4 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 2 * (5 / 6) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"8/9\") videoBitRate = ((sr * 2 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 2 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = ((sr * 3 * (3 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"2/3\") videoBitRate = ((sr * 3 * (2 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/4\") videoBitRate = ((sr * 3 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 3 * (5 / 6) * magicNumber)  - audioBitRate) * (gse ? 0.88 : 5/6);\n            if (fec === \"8/9\") videoBitRate = ((sr * 3 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 3 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = ((sr * 4 * (2 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/4\") videoBitRate = ((sr * 4 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 4 * (5 / 6) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"8/9\") videoBitRate = ((sr * 4 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 4 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = ((sr * 5 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 5 * (5 / 6) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"8/9\") videoBitRate = ((sr * 5 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 5 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            break;\n    }\n    if (videoBitRate > 1 && videoBitRate < 61) videoBitRate = (videoBitRate * 0.5);\n    if (videoBitRate > 60 && videoBitRate < 101) videoBitRate = (videoBitRate * 0.7);\n\n\n    // global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    msg.videorate = Number(videoBitRate.toFixed(2));\n    // global.set(\"settings.VBITRATE\", Number(videoBitRate.toFixed(2)));\n    return msg;\n}\n",
+        "func": "if (msg.payload) {\n    global.set(\"bitratechange\", false);\n    let sr = parseInt(global.get(\"device.tx.dvbs2.sr\")) / 1000;\n    // global.set(\"settings.SR\", sr);\n    let audioBitRate = parseInt(global.get(\"settings.ABITRATE\"));\n    let videoBitRate = 0;\n    let fec = global.get(\"device.tx.dvbs2.fec\");\n    let modulation = global.get(\"device.tx.dvbs2.constel\");\n    // ALL THE CALCULATIONS ARE GONE!!! XD\n    let TSBitRate = global.get(\"device.tx.dvbs2.ts.bitrate\") / 1000;\n\n\n    // if (sr > 20 && sr < 36)\n    //     videoBitRate = (TSBitRate * 0.50) - audioBitRate;\n    // if (sr > 35 && sr < 67)\n    //     videoBitRate = (TSBitRate * 0.56) - audioBitRate;\n    // if (sr > 66 && sr < 126)\n    //     videoBitRate = (TSBitRate * 0.66) - audioBitRate;\n    // if (sr > 125 && sr < 251)\n    //     videoBitRate = (TSBitRate * 0.75) - audioBitRate;\n    // if (sr > 250 && sr < 334)\n    //     videoBitRate = (TSBitRate * 0.81) - audioBitRate;\n    // if (sr > 333 && sr < 501)\n    //     videoBitRate = (TSBitRate * 0.84) - audioBitRate;\n    // if (sr > 500 && sr < 1001)\n    //     videoBitRate = (TSBitRate * 0.87) - audioBitRate;\n    // if (sr > 1000 && sr < 1501)\n    //     videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n    // if (sr > 1500 && sr < 4001)\n    //     videoBitRate = (TSBitRate * 0.88) - audioBitRate;\n\n    let gse = false;\n    // Decrease TSBitRate for GSE to 88% because of the IP-Header (internal encoder)\n    let streamout = global.get(\"device.tx.stream.mode\");\n    if (streamout == \"dvbs2-gse\") {\n        TSBitRate = TSBitRate * 0.88;\n        gse = true;\n    }\n    let numbers = fec.split(\"/\");\n    let top = numbers[0]\n    let bottom = numbers[1]\n\n\n\n    let magicNumber = 0.81;\n    //the equation is videobitrate =(TS/(2(efficiency of qpsk)xfecxreed-solomon))\n    switch (modulation) {\n        case \"qpsk\":\n            if (fec === \"1/4\") videoBitRate = ((sr * 2 * (1 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"1/3\") videoBitRate = ((sr * 2 * (1 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"2/5\") videoBitRate = ((sr * 2 * (2 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"1/2\") videoBitRate = ((sr * 2 * (1 / 2) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/5\") videoBitRate = ((sr * 2 * (3 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"2/3\") videoBitRate = ((sr * 2 * (2 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/4\") videoBitRate = ((sr * 2 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"4/5\") videoBitRate = ((sr * 2 * (4 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 2 * (5 / 6) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"8/9\") videoBitRate = ((sr * 2 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 2 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            break;\n        case \"8psk\":\n            if (fec === \"3/5\") videoBitRate = ((sr * 3 * (3 / 5) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"2/3\") videoBitRate = ((sr * 3 * (2 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/4\") videoBitRate = ((sr * 3 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 3 * (5 / 6) * magicNumber)  - audioBitRate) * (gse ? 0.88 : 5/6);\n            if (fec === \"8/9\") videoBitRate = ((sr * 3 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 3 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n        case \"16apsk\":\n            if (fec === \"2/3\") videoBitRate = ((sr * 4 * (2 / 3) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"3/4\") videoBitRate = ((sr * 4 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 4 * (5 / 6) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"8/9\") videoBitRate = ((sr * 4 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 4 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            break;\n        case \"32apsk\":\n            if (fec === \"3/4\") videoBitRate = ((sr * 5 * (3 / 4) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"5/6\") videoBitRate = ((sr * 5 * (5 / 6) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"8/9\") videoBitRate = ((sr * 5 * (8 / 9) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            if (fec === \"9/10\") videoBitRate = ((sr * 5 * (9 / 10) * magicNumber) - audioBitRate) * (gse ? 0.88 : 1);\n            break;\n    }\n    if (videoBitRate > 1 && videoBitRate < 61) videoBitRate = (videoBitRate * 0.5);\n    if (videoBitRate > 60 && videoBitRate < 101) videoBitRate = (videoBitRate * 0.7);\n\n\n    // global.set(\"settings.TSBITRATE\", TSBitRate);\n    msg.payload = TSBitRate;\n    msg.videorate = Number(videoBitRate.toFixed(2));\n    // global.set(\"settings.VBITRATE\", Number(videoBitRate.toFixed(2)));\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1850,
+        "x": 2190,
         "y": 220,
         "wires": [
             [
@@ -14191,7 +14202,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "fcb",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let use_crf = global.get(\"settings.use_crf\");\n    let input = global.get(\"settings.input_choice\");\n    let key_frame_multi = global.get(\"settings.key_frame_multi\");\n    let keyframe_interval = global.get(\"settings.FPS\") * key_frame_multi;\n    const hw_preset = global.get(\"settings.nvidia_preset\");\n    const hw_tune = global.get(\"settings.nvidia_tune\");\n    const hw_profile = global.get(\"settings.nvidia_profile\");\n    const sw_preset = global.get(\"settings.libx26x_preset\");\n    const qsv_preset = global.get(\"settings.qsv_preset\");\n    const h264_qsv = global.get(\"settings.h264_qsv\");\n    const hevc_qsv = global.get(\"settings.hevc_qsv\");\n    const av1_qsv = global.get(\"settings.av1_qsv\");\n    const libx_h264 = global.get(\"settings.libx264\");\n    const libx_h265 = global.get(\"settings.libx265\");\n    const libaom = global.get(\"settings.libaom-av1\");\n    const libsvtav1 = global.get(\"settings.libsvtav1\");\n    const libvvenc = global.get(\"settings.libvvenc\");\n    const sw_crf = global.get(\"settings.libx26x_crf\");\n    const mux_delay = global.get(\"settings.mux_delay\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset ${hw_preset} -tune ${hw_tune} -rc-lookahead ${global.get(\"settings.FPS\")}`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec_str) {\n        case \"libx264\":\n            codec = `libx264 -preset ${sw_preset} ${libx_h264} ${shapingString} ${use_crf ? `-x264-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency`\n            codec = `libx265 -preset ${sw_preset} ${libx_h265} ${shapingString} ${use_crf ? `-x265-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            max_video_rate = max_video_rate * 0.9; // Remove 10% from max rate for null packing\n            let targetBitrate = Math.floor((max_video_rate / 1.5) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc ${libvvenc} -r ${global.get(\"settings.FPS\")} -vvenc-params targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 ${libaom}`;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 ${libsvtav1}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc -profile:v ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc -tier ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_qsv\":\n            codec = `hevc_qsv ${hevc_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"h264_qsv\":\n            codec = `h264_qsv ${h264_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv_udp\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.75);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? mux_delay + 250 : mux_delay;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = flow.get(\"version\");\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.video_device_linux\"\n                )}\\ -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\n                    \"settings.audio_device_linux\"\n                )}\\ `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"video=${global.get(\n                    \"settings.video_device\"\n                )}\\\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \\\"audio=${global.get(\n                    \"settings.audio_device\"\n                )}\\\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\n                \"settings.rtmp_ip_port\"\n            )}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        // `-mpegts_flags system_b -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\" || codec_str === \"av1_qsv\") {\n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    if (codec_str === \"av1_qsv_udp\"){\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n    }\n    const key_frame_option = codec_str === \"libvvenc\" ? `` : `-g ${keyframe_interval}`\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ${key_frame_option} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000:aresample=async=1\\\" ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -af aresample=async=1 ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 ` +\n        `-b:a ${audio_bit_rate} ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let use_crf = global.get(\"settings.use_crf\");\n    let input = global.get(\"settings.input_choice\");\n    let key_frame_multi = global.get(\"settings.key_frame_multi\");\n    let keyframe_interval = global.get(\"settings.FPS\") * key_frame_multi;\n    const hw_preset = global.get(\"settings.nvidia_preset\");\n    const hw_tune = global.get(\"settings.nvidia_tune\");\n    const hw_profile = global.get(\"settings.nvidia_profile\");\n    const sw_preset = global.get(\"settings.libx26x_preset\");\n    const qsv_preset = global.get(\"settings.qsv_preset\");\n    const h264_qsv = global.get(\"settings.h264_qsv\");\n    const hevc_qsv = global.get(\"settings.hevc_qsv\");\n    const av1_qsv = global.get(\"settings.av1_qsv\");\n    const libx_h264 = global.get(\"settings.libx264\");\n    const libx_h265 = global.get(\"settings.libx265\");\n    const libaom = global.get(\"settings.libaom-av1\");\n    const libsvtav1 = global.get(\"settings.libsvtav1\");\n    const libvvenc = global.get(\"settings.libvvenc\");\n    const sw_crf = global.get(\"settings.libx26x_crf\");\n    const mux_delay = global.get(\"settings.mux_delay\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset ${hw_preset} -tune ${hw_tune} -rc-lookahead ${global.get(\"settings.FPS\")}`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec_str) {\n        case \"libx264\":\n            codec = `libx264 -preset ${sw_preset} ${libx_h264} ${shapingString} ${use_crf ? `-x264-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency`\n            codec = `libx265 -preset ${sw_preset} ${libx_h265} ${shapingString} ${use_crf ? `-x265-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            max_video_rate = max_video_rate * 0.9; // Remove 10% from max rate for null packing\n            let targetBitrate = Math.floor((max_video_rate / 1.5) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc ${libvvenc} -r ${global.get(\"settings.FPS\")} -vvenc-params targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 ${libaom}`;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 ${libsvtav1}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc -profile:v ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc -tier ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_qsv\":\n            codec = `hevc_qsv ${hevc_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"h264_qsv\":\n            codec = `h264_qsv ${h264_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv_udp\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.75);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? mux_delay + 250 : mux_delay;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = flow.get(\"version\");\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\"settings.video_device_linux\")} -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\"settings.audio_device_linux\")} `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \"video=${global.get(\"settings.video_device\")}\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \"audio=${global.get(\"settings.audio_device\")}\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\"settings.rtmp_ip_port\")}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        // `-mpegts_flags system_b -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\" || codec_str === \"av1_qsv\") {\n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    if (codec_str === \"av1_qsv_udp\"){\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n    }\n    const key_frame_option = codec_str === \"libvvenc\" ? `` : `-g ${keyframe_interval}`\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ${key_frame_option} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000:aresample=async=1\\\" ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -af aresample=async=1 ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 ` +\n        `-b:a ${audio_bit_rate} ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = global.get(\"cwd\") + str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -14202,7 +14213,8 @@
         "y": 1240,
         "wires": [
             [
-                "870adb347b148820"
+                "870adb347b148820",
+                "f3bfc6e61a25b1a6"
             ]
         ]
     },
@@ -14778,6 +14790,7 @@
         "id": "11cf525e1a7c1782",
         "type": "inject",
         "z": "2ec6a7ddfe0cd173",
+        "d": true,
         "g": "72ddf00d98862ef3",
         "name": "",
         "props": [
@@ -14792,8 +14805,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "str",
-        "x": 2630,
-        "y": 740,
+        "x": 2850,
+        "y": 700,
         "wires": [
             [
                 "0c94d661261c1f6e"
@@ -15345,8 +15358,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 2330,
-        "y": 740,
+        "x": 2310,
+        "y": 700,
         "wires": [
             [
                 "3326448b2fa1b1c6"
@@ -15426,7 +15439,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1850,
+        "x": 2190,
         "y": 120,
         "wires": [
             [
@@ -15453,7 +15466,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2100,
+        "x": 2440,
         "y": 260,
         "wires": []
     },
@@ -15476,7 +15489,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2110,
+        "x": 2450,
         "y": 200,
         "wires": []
     },
@@ -16192,6 +16205,165 @@
                 "2fc31fb2bb0ca4c0"
             ]
         ]
+    },
+    {
+        "id": "f3bfc6e61a25b1a6",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "78f7e24f56d510ed",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "50e33196f9c1c78f",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "72ddf00d98862ef3",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3350,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "1e09d548d38c9016",
+        "type": "rbe",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "72ddf00d98862ef3",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 3150,
+        "y": 960,
+        "wires": [
+            [
+                "50e33196f9c1c78f"
+            ]
+        ]
+    },
+    {
+        "id": "5ea424fd3ccb47b3",
+        "type": "rbe",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2680,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf8752bf7250f8f9",
+        "type": "rbe",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1473030260740438",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1970,
+        "y": 200,
+        "wires": [
+            [
+                "38ad92b4a70e6127"
+            ]
+        ]
+    },
+    {
+        "id": "d8e2a4c93dcfa5b6",
+        "type": "rbe",
+        "z": "2ec6a7ddfe0cd173",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1980,
+        "y": 120,
+        "wires": [
+            [
+                "8bcfa3ec1a3348b7"
+            ]
+        ]
+    },
+    {
+        "id": "ce85264d7bfb54fb",
+        "type": "change",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "1473030260740438",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2740,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "067f27f529ed60f7",
+        "type": "debug",
+        "z": "2ec6a7ddfe0cd173",
+        "g": "44bb8f59b40e58cf",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2770,
+        "y": 1880,
+        "wires": []
     },
     {
         "id": "0d83df21a3badfd8",
@@ -19320,7 +19492,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
+        "x": 1050,
         "y": 1260,
         "wires": [
             [
@@ -19478,7 +19650,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1190,
+        "x": 1290,
         "y": 1180,
         "wires": [
             []
@@ -19844,7 +20016,7 @@
         "order": 19,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "mode": "text",
         "delay": 300,
         "topic": "topic",
@@ -19897,7 +20069,7 @@
         "order": 19,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "mode": "text",
         "delay": 300,
         "topic": "topic",
@@ -20311,7 +20483,7 @@
         "order": 19,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "mode": "text",
         "delay": 300,
         "topic": "topic",
@@ -20364,7 +20536,7 @@
         "order": 19,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "mode": "text",
         "delay": 300,
         "topic": "topic",
@@ -20930,7 +21102,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -21038,7 +21210,7 @@
         "order": 3,
         "width": 0,
         "height": 0,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -21313,7 +21485,7 @@
         "order": 2,
         "width": "6",
         "height": 1,
-        "passthru": true,
+        "passthru": false,
         "multiple": false,
         "options": [
             {
@@ -28051,7 +28223,7 @@
         "z": "d7c58eb9e7b65abb",
         "g": "c070d9c6c2a6ac1b",
         "name": "generate signal report",
-        "func": "let freq = (Number(flow.get(\"freq\")) * 1000 + Math.abs(Number(global.get('device.rx.offset')))) / 1e6;\nlet provider = `\"${flow.get(\"provider\")}\"`;\nlet v_buff = Math.abs(flow.get(\"video_buffer\"));\nlet a_buff = Math.abs(flow.get(\"audio_buffer\"));\nlet delay = flow.get(\"transmission_delay\");\nif (global.get(\"platform\") === \"linux\") provider = flow.get(\"provider\");\n// let video = `${v_buff > 100000 ? \"\" : v_buff !== 0 ? `video: ${v_buff.toFixed(1)}ms` : \"\"}`;\n// let audio = `${a_buff > 100000 ? \"\" : a_buff !== 0 ? `, audio: ${a_buff.toFixed(1)}ms` : \"\"}`;\n// let tx_delay = `${delay > 0 ? `, tx delay, ${delay.toFixed(1)}ms ` : \"\"}`;\nlet video = ` - ${v_buff.toFixed(1)}ms`;\nlet audio = ` - ${a_buff.toFixed(1)}ms`;\nlet tx_delay = `${delay > 0 ? `tx delay: ${delay.toFixed(1)}ms ` : \"\"}`;\nlet ts_rate = `${global.get(\"ts.bitrate\") ? `${global.get(\"ts.bitrate\")}kb/s` : \"\"}`;\nlet v_rate = `${global.get(\"ts.video_bitrate\") ? `${global.get(\"ts.video_bitrate\")}kb/s` : \"\"}`;\nlet a_rate = `${global.get(\"ts.audio_bitrate\") ? `${global.get(\"ts.audio_bitrate\")}kb/s` : \"\"}`;\n// let a_rate = \"\";\n// let v_rate = \"\";\nlet analysis_string = \"\";\n// if (video !== \"\" || audio !== \"\" || tx_delay !== \"\") analysis_string = ` Buffer delays, ${video}${audio}${tx_delay} `;\n// analysis_string = ` TS: ${ts_rate}, Vid: ${v_rate}${video !== \"\" ? video : \"\"}, Aud: ${a_rate}${audio !== \"\" ? audio : \"\"}, ${tx_delay !== \"\" ? tx_delay : \"\"}`;\nanalysis_string = ` Vid: ${v_rate}${video !== \"\" ? video : \"\"}, Aud: ${a_rate}${audio !== \"\" ? audio : \"\"}, ${tx_delay !== \"\" ? tx_delay : \"\"}`;\n// let sigreport = `SigReport: ${flow.get(\"service\")}/${provider} - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${freq}${analysis_string} - ${global.get(\"device.sig_report_suffix\")}`;\nlet sigreport = `SigReport for ${flow.get(\"service\")} on ${freq}MHz - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${analysis_string} - ${global.get(\"device.sig_report_suffix\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
+        "func": "let freq = (Number(flow.get(\"freq\")) * 1000 + Math.abs(Number(global.get('device.rx.offset')))) / 1e6;\nlet provider = `\"${flow.get(\"provider\")}\"`;\nlet v_buff = Math.abs(flow.get(\"video_buffer\"));\nlet a_buff = Math.abs(flow.get(\"audio_buffer\"));\nlet delay = flow.get(\"transmission_delay\");\nif (global.get(\"platform\") === \"linux\") provider = flow.get(\"provider\");\n// let video = `${v_buff > 100000 ? \"\" : v_buff !== 0 ? `video: ${v_buff.toFixed(1)}ms` : \"\"}`;\n// let audio = `${a_buff > 100000 ? \"\" : a_buff !== 0 ? `, audio: ${a_buff.toFixed(1)}ms` : \"\"}`;\n// let tx_delay = `${delay > 0 ? `, tx delay, ${delay.toFixed(1)}ms ` : \"\"}`;\nlet video = ` - ${v_buff.toFixed(1)}ms`;\nlet audio = ` - ${a_buff.toFixed(1)}ms`;\nlet tx_delay = `${delay > 0 ? `tx delay: ${delay.toFixed(1)}ms ` : \"\"}`;\nlet ts_rate = `${global.get(\"ts.bitrate\") ? `${global.get(\"ts.bitrate\")}kb/s` : \"\"}`;\nlet v_rate = `${global.get(\"ts.video_bitrate\") ? `${global.get(\"ts.video_bitrate\")}kb/s` : \"\"}`;\nlet a_rate = `${global.get(\"ts.audio_bitrate\") ? `${global.get(\"ts.audio_bitrate\")}kb/s` : \"\"}`;\n// let a_rate = \"\";\n// let v_rate = \"\";\nlet analysis_string = \"\";\n// if (video !== \"\" || audio !== \"\" || tx_delay !== \"\") analysis_string = ` Buffer delays, ${video}${audio}${tx_delay} `;\n// analysis_string = ` TS: ${ts_rate}, Vid: ${v_rate}${video !== \"\" ? video : \"\"}, Aud: ${a_rate}${audio !== \"\" ? audio : \"\"}, ${tx_delay !== \"\" ? tx_delay : \"\"}`;\n// analysis_string = ` Vid: ${v_rate}${video !== \"\" ? video : \"\"}, Aud: ${a_rate}${audio !== \"\" ? audio : \"\"}, ${tx_delay !== \"\" ? tx_delay : \"\"}`;\n// let sigreport = `SigReport: ${flow.get(\"service\")}/${provider} - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${freq}${analysis_string} - ${global.get(\"device.sig_report_suffix\")}`;\nlet sigreport = `SigReport for ${flow.get(\"service\")} on ${freq}MHz - D${flow.get(\"d_rating\")} - ${flow.get(\"constellation_mode\")} ${flow.get(\"fec\")} (${flow.get(\"mer\")} dB) - ${flow.get(\"sr\")}kS ${analysis_string} - ${global.get(\"device.sig_report_suffix\")}`;\nlet clipboard = `echo ${sigreport}| clip`;\nif (global.get(\"platform\") === \"linux\") clipboard = `echo \\\"${sigreport}\\\" | xclip -sel clip`\nmsg.payload = clipboard;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -32697,7 +32869,7 @@
         "z": "5921103edf8bc817",
         "g": "d7eac6e7f4ef2b55",
         "name": "tsp version",
-        "func": "let included_duck = global.get(\"platform\") === \"win32\" ? \"tsduck/tsp.exe\" : \"tsp\";\nmsg.payload = `${included_duck} --version`;\nreturn msg;",
+        "func": "let included_duck = global.get(\"platform\") === \"win32\" ? \"\\\\tsduck\\\\tsp.exe\" : \"tsp\";\nmsg.payload = `${global.get(\"cwd\")}${included_duck} --version`;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -32818,7 +32990,7 @@
         "z": "5921103edf8bc817",
         "g": "d7eac6e7f4ef2b55",
         "name": "Set up the duck",
-        "func": "let included_duck = global.get(\"platform\") === \"win32\" ? \"tsduck/tsp.exe\" : \"tsp\";\nlet duck_address = flow.get(\"test_duck\") ? \"230.0.0.3:1234\" : global.get(\"device.rx.tsip\");\nmsg.payload = `${included_duck} -I ip -r --default-interface ${duck_address} -P analyze -i1 --json-line -O drop`;\nreturn msg;",
+        "func": "let included_duck = global.get(\"platform\") === \"win32\" ? \"\\\\tsduck\\\\tsp.exe\" : \"tsp\";\nlet duck_address = flow.get(\"test_duck\") ? \"230.0.0.3:1234\" : global.get(\"device.rx.tsip\");\nmsg.payload = `${global.get(\"cwd\")}${included_duck} -I ip -r --default-interface ${duck_address} -P analyze -i1 --json-line -O drop`;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -34290,8 +34462,8 @@
         "order": 1,
         "width": 2,
         "height": 1,
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -34478,8 +34650,8 @@
         "order": 3,
         "width": "0",
         "height": "0",
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -34666,8 +34838,8 @@
         "order": 2,
         "width": 2,
         "height": 1,
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -35194,8 +35366,8 @@
         "order": 5,
         "width": "0",
         "height": "0",
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -35382,8 +35554,8 @@
         "order": 2,
         "width": "0",
         "height": "0",
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -35544,8 +35716,8 @@
         "order": 3,
         "width": 2,
         "height": 1,
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -35885,8 +36057,8 @@
         "order": 14,
         "width": 5,
         "height": 1,
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -36073,8 +36245,8 @@
         "order": 8,
         "width": "4",
         "height": 1,
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -36287,8 +36459,8 @@
         "order": 4,
         "width": "0",
         "height": "0",
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -36322,8 +36494,8 @@
         "order": 19,
         "width": 6,
         "height": 1,
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -36506,8 +36678,8 @@
         "order": 19,
         "width": "12",
         "height": "1",
-        "passthru": true,
-        "decouple": "false",
+        "passthru": false,
+        "decouple": "true",
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -36975,6 +37147,92 @@
         "wires": [
             [
                 "2a85b7eae8f09983"
+            ]
+        ]
+    },
+    {
+        "id": "5a7ac21b4645c0b9",
+        "type": "inject",
+        "z": "f8112f55dce77cf6",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1.5",
+        "topic": "",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "cebbf804dd096dc5"
+            ]
+        ]
+    },
+    {
+        "id": "8761e8c76608b689",
+        "type": "change",
+        "z": "f8112f55dce77cf6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cwd",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cebbf804dd096dc5",
+        "type": "exec",
+        "z": "f8112f55dce77cf6",
+        "command": "cmd /c cd",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "3a8467c10a4751d8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3a8467c10a4751d8",
+        "type": "function",
+        "z": "f8112f55dce77cf6",
+        "name": "function 29",
+        "func": "let payload = msg.payload.trim().split(\"↵\")[0];\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "8761e8c76608b689"
             ]
         ]
     }
