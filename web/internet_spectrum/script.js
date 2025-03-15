@@ -241,6 +241,7 @@ function setRxChannelState(channel) {
 function on_canvas_click(ev) {
     let magicSpaceUnderSignal = canvasHeight * (4 / 8);
     let magicSpaceAboveSignal = canvasHeight * (1.59 / 8);
+    
     /* we clicked on the beacon... */
     if (uplink === undefined && canvasClickBW === undefined && busy) {
         downlink = 10491.5
@@ -257,7 +258,7 @@ function on_canvas_click(ev) {
         /* console.log(channel_coords); */
         /* RX tuning bar for longmynd */
         if (channelClicked === rx_count + 1) {
-            setRxClickState(activeColor, 43, magicSpaceUnderSignal, canvasWidth * 1 / 5);
+            setRxClickState(activeColor, 29, magicSpaceUnderSignal, canvasWidth * 0.20);
             return;
         }
         setRxChannelState(highlighted_channel);
