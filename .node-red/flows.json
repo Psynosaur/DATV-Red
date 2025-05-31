@@ -8532,7 +8532,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "0.5",
+        "repeat": "0.6",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -8540,7 +8540,7 @@
         "payload": "bitratechange",
         "payloadType": "global",
         "x": 1670,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "1c303a9ac462db5c",
@@ -34688,7 +34688,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -34876,7 +34876,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -35064,7 +35064,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -35252,7 +35252,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -35403,7 +35403,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -35592,7 +35592,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -35780,7 +35780,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -35968,7 +35968,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -36106,14 +36106,14 @@
             },
             {
                 "t": "set",
-                "p": "bitratechange",
+                "p": "settings.ui.modulator_extra",
                 "pt": "global",
                 "to": "true",
                 "tot": "bool"
             },
             {
                 "t": "set",
-                "p": "settings.ui.modulator_extra",
+                "p": "bitratechange",
                 "pt": "global",
                 "to": "true",
                 "tot": "bool"
@@ -36148,16 +36148,16 @@
             },
             {
                 "t": "set",
-                "p": "bitratechange",
-                "pt": "msg",
-                "to": "true",
+                "p": "settings.ui.modulator_extra",
+                "pt": "global",
+                "to": "false",
                 "tot": "bool"
             },
             {
                 "t": "set",
-                "p": "settings.ui.modulator_extra",
+                "p": "bitratechange",
                 "pt": "global",
-                "to": "false",
+                "to": "true",
                 "tot": "bool"
             }
         ],
@@ -36309,7 +36309,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -36497,7 +36497,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -36685,7 +36685,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
@@ -36930,7 +36930,7 @@
             {
                 "t": "set",
                 "p": "bitratechange",
-                "pt": "msg",
+                "pt": "global",
                 "to": "true",
                 "tot": "bool"
             }
