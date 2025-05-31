@@ -15,9 +15,9 @@ set /p "pluto=Please provide pluto address: "
 set /p "file=Please provide 'pluto.frm' path: "
 
 :Gogo
-scp -o UserKnownHostsFile=\\.\NUL %file% root@%pluto%:/root
+scp -O %file% root@%pluto%:/root
 ECHO Updating firmware
-ssh -o UserKnownHostsFile=\\.\NUL root@%pluto% ./update_frm_reboot.sh ./pluto.frm
+ssh -O root@%pluto% ./update_frm_reboot.sh ./pluto.frm
 ECHO Rebooting pluto
 pause
 exit
