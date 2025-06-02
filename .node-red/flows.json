@@ -1301,13 +1301,7 @@
         "nodes": [
             "05a1e2c8dad388fb",
             "fe45a8178aea5e6e",
-            "b29edbae04c962c0",
-            "1cb0f73e71362bf3",
-            "7631b140ace92b84",
-            "6ba04c2d374cb808",
             "f2774c1e20c0c717",
-            "b5581ff51192b69c",
-            "ef591a3732c41ff7",
             "6187a9f63443b5a6",
             "81afc6e9b67dd706",
             "9513e7bc7e75a755",
@@ -1332,7 +1326,9 @@
             "e76e8d4084087268",
             "16b6f6c788d1b983",
             "8245a462d4e5187e",
-            "6c365a23dd1e45d6"
+            "6c365a23dd1e45d6",
+            "b29edbae04c962c0",
+            "82eabf4ed19590eb"
         ],
         "x": 74,
         "y": 39,
@@ -1356,23 +1352,12 @@
             "a0b7358ed0f95c7d",
             "c43dd0629d64335a",
             "e25a43afa99cde8c",
-            "f2aa3f1078982769",
-            "bdbc0e378dfdc5f8",
-            "53268bde953b7f7b",
-            "ef84197a8c482fd4",
-            "200adee6a0a17962",
-            "1cc947c2494007e1",
             "c893f1da4a401d72",
-            "8d9202a5c69ff12e",
-            "7910c53e32d985c8",
-            "fce6da69915c1ded",
             "75c3cc5e2bafbcee",
             "ccd98fdb4fc0e62f",
-            "d0b57cb6afdec3c4",
             "d145b4f95cb7ccb9",
             "87350a84b63234e2",
             "b5ca2d84858c4612",
-            "3146d841c016a870",
             "38a875fd828b6e4b",
             "f040e98d76943d56",
             "1c36d4749c447ce8",
@@ -1380,24 +1365,31 @@
             "8b875f941a7ec664",
             "904f65fe1cd3e67d",
             "12817f924e8a10a6",
-            "4836e1ea2e52f007",
             "547bf3274a28b9fd",
-            "b1ecbdd63ade84af",
             "69bfe840d7ba1aeb",
             "3cb27f12428cca36",
             "b92f008d19d5c664",
             "aec0e140578add71",
-            "bbf04ab8e9c03fff",
-            "ef693a300d6d5974",
-            "6bf7d6e1fba89631",
             "8c6a42b18f8ef696",
             "9396693c.371108",
-            "a511e401a15da512"
+            "738b3595b635c49d",
+            "f2aa3f1078982769",
+            "bdbc0e378dfdc5f8",
+            "53268bde953b7f7b",
+            "ef84197a8c482fd4",
+            "200adee6a0a17962",
+            "1cc947c2494007e1",
+            "8d9202a5c69ff12e",
+            "7910c53e32d985c8",
+            "fce6da69915c1ded",
+            "bbf04ab8e9c03fff",
+            "ef693a300d6d5974",
+            "6bf7d6e1fba89631"
         ],
-        "x": 14,
+        "x": 74,
         "y": 599,
-        "w": 1872,
-        "h": 828
+        "w": 1492,
+        "h": 1068
     },
     {
         "id": "6b33e16d6eb73426",
@@ -2564,10 +2556,13 @@
             "b5e5829b.396ba8",
             "326842ddbdc15a04",
             "e55b581a1ed1a18b",
-            "48d4fb91b6cecaa8"
+            "48d4fb91b6cecaa8",
+            "3146d841c016a870",
+            "4836e1ea2e52f007",
+            "b1ecbdd63ade84af"
         ],
-        "x": 334,
-        "y": 1159,
+        "x": 354,
+        "y": 1399,
         "w": 832,
         "h": 242
     },
@@ -3443,6 +3438,17 @@
         "disp": true,
         "width": "13",
         "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "f52b22908d13a553",
+        "type": "ui_group",
+        "name": "TS analyzer UDP2",
+        "tab": "b13f7bb5e884d039",
+        "order": 3,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
         "className": ""
     },
     {
@@ -14228,7 +14234,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "78f7e24f56d510ed",
         "name": "fcb",
-        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"settings.device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"settings.device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"settings.device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let use_crf = global.get(\"settings.use_crf\");\n    let input = global.get(\"settings.input_choice\");\n    let key_frame_multi = global.get(\"settings.key_frame_multi\");\n    let keyframe_interval = global.get(\"settings.FPS\") * key_frame_multi;\n    const hw_preset = global.get(\"settings.nvidia_preset\");\n    const hw_tune = global.get(\"settings.nvidia_tune\");\n    const hw_profile = global.get(\"settings.nvidia_profile\");\n    const sw_preset = global.get(\"settings.libx26x_preset\");\n    const qsv_preset = global.get(\"settings.qsv_preset\");\n    const h264_qsv = global.get(\"settings.h264_qsv\");\n    const hevc_qsv = global.get(\"settings.hevc_qsv\");\n    const av1_qsv = global.get(\"settings.av1_qsv\");\n    const libx_h264 = global.get(\"settings.libx264\");\n    const libx_h265 = global.get(\"settings.libx265\");\n    const libaom = global.get(\"settings.libaom-av1\");\n    const libsvtav1 = global.get(\"settings.libsvtav1\");\n    const libvvenc = global.get(\"settings.libvvenc\");\n    const sw_crf = global.get(\"settings.libx26x_crf\");\n    const mux_delay = global.get(\"settings.mux_delay\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset ${hw_preset} -tune ${hw_tune} -rc-lookahead ${global.get(\"settings.FPS\")}`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec_str) {\n        case \"libx264\":\n            codec = `libx264 -preset ${sw_preset} ${libx_h264} ${shapingString} ${use_crf ? `-x264-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency`\n            codec = `libx265 -preset ${sw_preset} ${libx_h265} ${shapingString} ${use_crf ? `-x265-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            max_video_rate = max_video_rate * 0.9; // Remove 10% from max rate for null packing\n            let targetBitrate = Math.floor((max_video_rate / 1.5) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc ${libvvenc} -r ${global.get(\"settings.FPS\")} -vvenc-params targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 ${libaom}`;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 ${libsvtav1}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc -profile:v ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc -tier ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_qsv\":\n            codec = `hevc_qsv ${hevc_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"h264_qsv\":\n            codec = `h264_qsv ${h264_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv_udp\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.75);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? mux_delay + 250 : mux_delay;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = flow.get(\"version\");\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\"settings.video_device_linux\")} -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\"settings.audio_device_linux\")} `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \"video=${global.get(\"settings.video_device\")}\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \"audio=${global.get(\"settings.audio_device\")}\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\"settings.rtmp_ip_port\")}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"settings.device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"settings.device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"settings.device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        // `-mpegts_flags system_b -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\" || codec_str === \"av1_qsv\") {\n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    if (codec_str === \"av1_qsv_udp\"){\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n    }\n    const key_frame_option = codec_str === \"libvvenc\" ? `` : `-g ${keyframe_interval}`\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ${key_frame_option} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000:aresample=async=1\\\" ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -af aresample=async=1 ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 ` +\n        `-b:a ${audio_bit_rate} ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = global.get(\"cwd\") + str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
+        "func": "let ffmpegPID = global.get(\"pid\");\nlet fec =\n    global.get(\"settings.device.tx.dvbs2.fecmode\") === \"variable\"\n        ? global.get(\"settings.device.tx.dvbs2.fec\")\n        : global.get(\"settings.FEC\");\n\nlet vbr = global.get(\"settings.device.tx.dvbs2.fecmode\") === \"variable\" ? \"1\" : \"0\";\n\nif (ffmpegPID === \"\" || ffmpegPID === undefined) {\n    let videoBitrate = Math.floor(global.get(\"settings.VBITRATE\"));\n    let tsRate = Math.floor(global.get(\"settings.TSBITRATE\"));\n    let codec = global.get(\"settings.CODEC\");\n    let codec_str = codec;\n    let audio_bit_rate = global.get(\"settings.ABITRATE\") * 1000;\n    let null_packets = global.get(\"settings.null_packets\");\n    let use_crf = global.get(\"settings.use_crf\");\n    let input = global.get(\"settings.input_choice\");\n    let key_frame_multi = global.get(\"settings.key_frame_multi\");\n    let keyframe_interval = global.get(\"settings.FPS\") * key_frame_multi;\n    const hw_preset = global.get(\"settings.nvidia_preset\");\n    const hw_tune = global.get(\"settings.nvidia_tune\");\n    const hw_profile = global.get(\"settings.nvidia_profile\");\n    const sw_preset = global.get(\"settings.libx26x_preset\");\n    const qsv_preset = global.get(\"settings.qsv_preset\");\n    const h264_qsv = global.get(\"settings.h264_qsv\");\n    const hevc_qsv = global.get(\"settings.hevc_qsv\");\n    const av1_qsv = global.get(\"settings.av1_qsv\");\n    const libx_h264 = global.get(\"settings.libx264\");\n    const libx_h265 = global.get(\"settings.libx265\");\n    const libaom = global.get(\"settings.libaom-av1\");\n    const libsvtav1 = global.get(\"settings.libsvtav1\");\n    const libvvenc = global.get(\"settings.libvvenc\");\n    const sw_crf = global.get(\"settings.libx26x_crf\");\n    const mux_delay = global.get(\"settings.mux_delay\");\n    let hWEncoderSettings = `-r ${global.get(\"settings.FPS\")} ` +\n        // `-profile:v main -pix_fmt yuv420p -preset:v p7 -tune:v hq -multipass:v 2 -rc:v cbr`;\n        `-preset ${hw_preset} -tune ${hw_tune} -rc-lookahead ${global.get(\"settings.FPS\")}`;\n    // `-preset slow -rc-lookahead 10 -no-scenecut 1 -zerolatency 1 -b_ref_mode 0 -bf 0 -crf 10 -multipass 2`;\n    // `-preset p7 -multipass 2 -2pass 1 -cbr 1 -rc cbr_hq -surfaces 64 -crf 0`;\n    let shapingString = `-aspect 16:9 -minrate ${videoBitrate}k -maxrate ${videoBitrate}k`;\n    let offset = global.get(\"settings.audio_delay\");\n    switch (codec_str) {\n        case \"libx264\":\n            codec = `libx264 -preset ${sw_preset} ${libx_h264} ${shapingString} ${use_crf ? `-x264-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libx265\":\n            // codec = `libx265 -x265-params b-adapt=1 `;\n            // codec = `libx265 -bf 0 -x265-params tune=zerolatency`\n            codec = `libx265 -preset ${sw_preset} ${libx_h265} ${shapingString} ${use_crf ? `-x265-params crf=${sw_crf}` : ``}-r ${global.get(\"settings.FPS\")}`;\n            break;\n        case \"libvvenc\":\n            let max_video_rate = Math.floor(((tsRate * 1000) - audio_bit_rate) / 10000) * 10000;\n            max_video_rate = max_video_rate * 0.9; // Remove 10% from max rate for null packing\n            let targetBitrate = Math.floor((max_video_rate / 1.5) / 10000) * 10000; // as per VVC recommendations\n            videoBitrate = Math.floor(max_video_rate / 1000);\n            null_packets = true;\n            //codec = `libvvenc -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params bitrate=${vvcBitRate}`;\n            // tiles=2x2:TargetBitrate=460000:MaxBitrate=690000:FirstPassMode=2\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params wavefrontsynchro=1:tiles=2x2:bitrate=${Math.ceil(vvcBitRate / 1000) * 1000}:decodingrefreshtype=idr:size=${global.get(\"settings.IMAGESIZE\")}`;\n            codec = `libvvenc ${libvvenc} -r ${global.get(\"settings.FPS\")} -vvenc-params targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1:internalbitdepth=8`;\n            // codec = `vvc -preset faster -pix_fmt yuv420p10le -bitrate 0 -subjopt 0 -aspect 16:9 -r ${global.get(\"settings.FPS\")} -vvenc-params \"passes=1: decodingrefreshtype=idr:RefreshSec=2:FirstPassMode=2:POC0IDR=1\"`;\n            // codec = `libvvenc -subjopt 0 -preset faster -r ${global.get(\"settings.FPS\")} -vvenc-params RefreshSec=2:targetBitrate=${targetBitrate}:MaxBitrate=${max_video_rate}:FirstPassMode=2:POC0IDR=1`;\n            offset = global.get(\"settings.audio_delay_vvc\");\n            break;\n        case \"libaom-av1\":\n            codec = `libaom-av1 ${libaom}`;\n            break;\n        case \"libsvtav1\":\n            codec = `libsvtav1 ${libsvtav1}`;\n            break;\n        case \"h264_nvenc\":\n            codec = `h264_nvenc -profile:v ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_nvenc\":\n            codec = `hevc_nvenc -tier ${hw_profile} ${hWEncoderSettings} ${shapingString}`;\n            break;\n        case \"hevc_qsv\":\n            codec = `hevc_qsv ${hevc_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"h264_qsv\":\n            codec = `h264_qsv ${h264_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n        case \"av1_qsv_udp\":\n            codec = `av1_qsv ${av1_qsv} -preset ${qsv_preset} ${shapingString}`;\n            break;\n    }\n\n    /* These need to be stored in json and get GUI inputs */\n    let thread_queue = global.get(\"settings.thread_queue\");\n    let rt_buffer = global.get(\"settings.rt_buffer\");\n    let symbol_rate = global.get(\"settings.SR\");\n    let buffer_factor = symbol_rate < 66 ? 3 : 1;\n    // let buffer_size = videoBitrate * buffer_factor;\n    let buffer_size = Math.round(videoBitrate / 1.75);\n    let video_pid = 256;\n    let mpegts_start_pid = 256;\n    let audio_pid = 257;\n    //let keyframe_interval = global.get(\"settings.keyframe_interval\");\n\n    let max_delay = symbol_rate < 36 ? 2000 : symbol_rate >= 1000 ? mux_delay + 250 : mux_delay;\n    let max_interleave_delta = symbol_rate < 36 ? 0 : 4;\n    let pcr_period = 20;\n    let pat_period = 0.4;\n    let sdt_period = 0.5;\n    let mpegts_transport_stream_id = 1;\n    let mpegts_pmt_start_pid = 4096;\n    let mpegts_original_network_id = 1;\n    let service_provider = flow.get(\"version\");\n    let fifo_size = global.get(\"settings.fifo_size\");\n    /*\n          This is the big ffmpeg variable string\n          do note the space ' ' at the end of each line...\n      */\n    switch (input) {\n        case \"dshow\":\n            if (global.get(\"platform\") === \"linux\")\n                input = `-thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\"settings.video_device_linux\")} -f alsa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i ${global.get(\"settings.audio_device_linux\")} `;\n            else\n                input = `-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \"video=${global.get(\"settings.video_device\")}\" -f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M -i \"audio=${global.get(\"settings.audio_device\")}\" `;\n            break;\n        case \"udp\":\n            input = `-i udp://${global.get(\n                \"settings.udp_ip_port\"\n            )} -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n        case \"rtmp\":\n            input = `-f flv -listen 1 -i rtmp://${global.get(\"settings.rtmp_ip_port\")}/live/aaaa -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M `;\n            break;\n    }\n\n    let path = global.get(\"settings.device.ffmpeg_path\");\n    if (global.get(\"platform\") === \"linux\")\n        path = global.get(\"settings.device.ffmpeg_path_linux\");\n    let output =\n        msg.payload === \"test\"\n            ? `\\\"udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n            : `\\\"udp://${global.get(\"settings.device.tx.dvbs2.tssourceaddress\")}?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    let output_container =\n        `-f mpegts ` +\n        `${null_packets ? `-muxrate ${tsRate}K` : ``} ` +\n        `-muxpreload 0 -muxdelay 0 ` +\n        `-streamid 0:${video_pid} ` +\n        `-streamid 1:${audio_pid} ` +\n        `-max_delay ${max_delay}K ` +\n        `-max_interleave_delta ${max_interleave_delta}M ` +\n        `-pcr_period ${pcr_period} ` +\n        `-pat_period ${pat_period} ` +\n        `-sdt_period ${sdt_period} ` +\n        // `-mpegts_service_id ${mpegts_service_id} ` +\n        // `-metadata:s:v:0 TITLE=\\\"${service_provider}\\\" ` +\n        `-mpegts_original_network_id ${mpegts_original_network_id} ` +\n        `-mpegts_transport_stream_id ${mpegts_transport_stream_id} ` +\n        `-mpegts_pmt_start_pid ${mpegts_pmt_start_pid} ` +\n        `-mpegts_start_pid ${mpegts_start_pid} ` +\n        `-mpegts_service_type 0x11 ` +\n        `-metadata service_name=${global.get(\"callsign\")} ` +\n        `-metadata service_provider=${service_provider} ` +\n        `-mpegts_flags system_b -mpegts_flags nit -flush_packets 0 ` +\n        // `-mpegts_flags system_b -flush_packets 0 ` +\n        output\n    if (codec_str === \"libaom-av1\" || codec_str === \"libsvtav1\" || codec_str === \"av1_qsv\") {\n        // should be tunnel IP of your pluto :)\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]srt://${global.get(\"broker_address\")}:4567?transtype=live&mode=caller\\\"`\n    }\n    if (codec_str === \"av1_qsv_udp\"){\n        output_container = `-f tee -map 0:v -map 1:a \\\"[f=nut]udp://230.0.0.3:1234?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`\n    }\n    const key_frame_option = codec_str === \"libvvenc\" ? `` : `-g ${keyframe_interval}`\n    let str =\n        `${path} ` +\n        `-itsoffset ${offset} ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"video=${global.get(\"settings.video_device\")}\\\" ` +\n        //`-f dshow -thread_queue_size ${thread_queue}K -rtbufsize ${rt_buffer}M ` +\n        //`-i \\\"audio=${global.get(\"settings.audio_device\")}\\\" ` +\n        `${input}` +\n        `-ar ${global.get(\"settings.audio_sample_rate\")} ` +\n        `-vcodec ${codec} ` +\n        `-s ${global.get(\"settings.IMAGESIZE\")} ${key_frame_option} ` +\n        `-b:v ${videoBitrate}K ` +\n        `-bufsize ${buffer_size}K ` +\n        //`-acodec libfdk_aac ` +\n        `-acodec ${global.get(\"settings.audio_codec\")} ` +\n        `-ac ${global.get(\"settings.AUDIO\")} ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -filter_complex \\\"[1:a]lowpass=20000:aresample=async=1\\\" ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 -af aresample=async=1 ` +\n        // `-b:a ${audio_bit_rate} -profile:a aac_he_v2 ` +\n        `-b:a ${audio_bit_rate} ` +\n        output_container;\n    // Loopback for local testing without txing...\n    // `\\\"udp://230.0.0.10:9999?pkt_size=1316&overrun_nonfatal=1&fifo_size=${fifo_size}M\\\"`;\n\n    msg.payload = global.get(\"cwd\") + str;\n    global.set(\"ffmpeg_cmd\", msg.payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -15398,7 +15404,7 @@
         "z": "2ec6a7ddfe0cd173",
         "g": "72ddf00d98862ef3",
         "name": "ffplay ip and title setter",
-        "func": "let title = global.get('ffplay_title');\nlet titleWindows = global.get('ffplay_title');\n\nlet ontop = global.get('device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\ntitle = `${title}_:_Press_\\'9\\',\\'0\\'_for_volume_down_and_up,_\\'m\\'_for_mute,_right_arrow_key_\\\\'->\\\\'_to_seek_to_latest_frame`;\ntitleWindows = `\\\"${titleWindows}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\nlet titleStr = titleWindows;\nif (global.get(\"platform\") === \"linux\") titleStr = title;\nglobal.set(\"vlc_title\", titleStr);\n// title = `test`;\n// global.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('device.rx.ffplay_size');\nlet volume = global.get('device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos); \nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nlet path = `${global.get(\"settings.ffplay_console\") ? \"\" : \"start\"} ${global.get(\"settings.device.ffplay_path\")}`;\nif (global.get(\"platform\") === \"linux\") path = `${global.get(\"settings.ffplay_console\") ? \"\" : \"gnome-terminal -e\"} \\\"${global.get(\"settings.device.ffplay_path_linux\")}`;\nmsg.payload = `${path} udp://230.0.0.3:1234`;\n\nreturn msg;",
+        "func": "let title = global.get('ffplay_title');\nlet titleWindows = global.get('ffplay_title');\n\nlet ontop = global.get('settings.device.rx.ffplay_ontop') === true ? \"-alwaysontop\" : \"\";\ntitle = `${title}_:_Press_\\'9\\',\\'0\\'_for_volume_down_and_up,_\\'m\\'_for_mute,_right_arrow_key_\\\\'->\\\\'_to_seek_to_latest_frame`;\ntitleWindows = `\\\"${titleWindows}: Press \\'9\\',\\'0\\' for volume down and up, \\'m\\' for mute, right arrow key \\`->\\` to seek to latest frame\\\"`;\nlet titleStr = titleWindows;\nif (global.get(\"platform\") === \"linux\") titleStr = title;\nglobal.set(\"vlc_title\", titleStr);\n// title = `test`;\n// global.set(\"ffplay_title\", \"\");\nlet imagesize = global.get('settings.device.rx.ffplay_size');\nlet volume = global.get('settings.device.rx.ffplay_volume');\nlet xPos = imagesize.indexOf(\"x\");\nlet hor = imagesize.substr(0, xPos); \nlet vert = imagesize.substr(xPos + 1, imagesize.length);\nmsg.size = `${hor}x${vert}`;\nlet path = `${global.get(\"settings.ffplay_console\") ? \"\" : \"start\"} ${global.get(\"settings.device.ffplay_path\")}`;\nif (global.get(\"platform\") === \"linux\") path = `${global.get(\"settings.ffplay_console\") ? \"\" : \"gnome-terminal -e\"} \\\"${global.get(\"settings.device.ffplay_path_linux\")}`;\nmsg.payload = `${path} udp://230.0.0.3:1234`;\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -31518,8 +31524,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 210,
-        "y": 720,
+        "x": 170,
+        "y": 820,
         "wires": [
             [
                 "411b7a5cad286194",
@@ -31540,8 +31546,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 410,
-        "y": 720,
+        "x": 210,
+        "y": 880,
         "wires": [
             [
                 "c61b7f568c2173b3",
@@ -31566,7 +31572,7 @@
         "z": "5921103edf8bc817",
         "g": "d7eac6e7f4ef2b55",
         "name": "kill ts duck",
-        "func": "msg.payload = \"Taskkill /T /F /IM tsp.exe\";\nreturn msg;",
+        "func": "// msg.payload = \"Taskkill /T /F /IM tsp.exe\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -31591,7 +31597,7 @@
         "order": 8,
         "width": 12,
         "height": 5,
-        "label": "TS bitrates b/s",
+        "label": "UDP1: TS bitrates b/s",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
@@ -31620,8 +31626,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1220,
-        "y": 940,
+        "x": 1060,
+        "y": 900,
         "wires": [
             []
         ]
@@ -31644,8 +31650,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 220,
-        "y": 840,
+        "x": 440,
+        "y": 1200,
         "wires": []
     },
     {
@@ -31666,8 +31672,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 230,
-        "y": 880,
+        "x": 450,
+        "y": 1240,
         "wires": []
     },
     {
@@ -31688,8 +31694,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 230,
-        "y": 920,
+        "x": 450,
+        "y": 1280,
         "wires": []
     },
     {
@@ -31697,7 +31703,7 @@
         "type": "change",
         "z": "5921103edf8bc817",
         "g": "72d0cc5c362e49a0",
-        "name": "clear charts",
+        "name": "UDP1: clear charts",
         "rules": [
             {
                 "t": "set",
@@ -31712,7 +31718,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
+        "x": 730,
         "y": 640,
         "wires": [
             [
@@ -31720,141 +31726,6 @@
                 "c893f1da4a401d72",
                 "1914b70a6706ebd4",
                 "d145b4f95cb7ccb9"
-            ]
-        ]
-    },
-    {
-        "id": "f2aa3f1078982769",
-        "type": "ui_text",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "group": "263b62c11bcf21c6",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "TS",
-        "format": "{{msg.ts.bitrate}} kb/s",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1490,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "bdbc0e378dfdc5f8",
-        "type": "ui_text",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "group": "263b62c11bcf21c6",
-        "order": 3,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "Audio",
-        "format": "{{msg.audio.bitrate}} kb/s",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1490,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "53268bde953b7f7b",
-        "type": "ui_text",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "group": "263b62c11bcf21c6",
-        "order": 2,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "Video",
-        "format": "{{msg.video.bitrate}} kb/s",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1490,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "ef84197a8c482fd4",
-        "type": "calculator",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "inputMsgField": "video.bitrate",
-        "outputMsgField": "video.bitrate",
-        "operation": "div",
-        "constant": "1000",
-        "round": true,
-        "truncate": false,
-        "decimals": "2",
-        "decimals2": 0,
-        "x": 1370,
-        "y": 800,
-        "wires": [
-            [
-                "53268bde953b7f7b",
-                "bbf04ab8e9c03fff"
-            ]
-        ]
-    },
-    {
-        "id": "200adee6a0a17962",
-        "type": "calculator",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "inputMsgField": "audio.bitrate",
-        "outputMsgField": "audio.bitrate",
-        "operation": "div",
-        "constant": "1000",
-        "round": true,
-        "truncate": false,
-        "decimals": "2",
-        "decimals2": 0,
-        "x": 1370,
-        "y": 840,
-        "wires": [
-            [
-                "bdbc0e378dfdc5f8",
-                "6bf7d6e1fba89631"
-            ]
-        ]
-    },
-    {
-        "id": "1cc947c2494007e1",
-        "type": "calculator",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "inputMsgField": "ts.bitrate",
-        "outputMsgField": "ts.bitrate",
-        "operation": "div",
-        "constant": "1000",
-        "round": true,
-        "truncate": false,
-        "decimals": "2",
-        "decimals2": 0,
-        "x": 1370,
-        "y": 880,
-        "wires": [
-            [
-                "f2aa3f1078982769",
-                "ef693a300d6d5974"
             ]
         ]
     },
@@ -31868,7 +31739,7 @@
         "order": 10,
         "width": 12,
         "height": 5,
-        "label": "PID bitrates b/s",
+        "label": "UDP1: PID<20 bitrates b/s",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
@@ -31897,70 +31768,10 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1180,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8d9202a5c69ff12e",
-        "type": "smooth",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "property": "video.bitrate",
-        "action": "mean",
-        "count": "10",
-        "round": "",
-        "mult": "single",
-        "reduce": false,
-        "x": 1220,
+        "x": 1080,
         "y": 800,
         "wires": [
-            [
-                "ef84197a8c482fd4"
-            ]
-        ]
-    },
-    {
-        "id": "7910c53e32d985c8",
-        "type": "smooth",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "property": "audio.bitrate",
-        "action": "mean",
-        "count": "10",
-        "round": "",
-        "mult": "single",
-        "reduce": false,
-        "x": 1220,
-        "y": 840,
-        "wires": [
-            [
-                "200adee6a0a17962"
-            ]
-        ]
-    },
-    {
-        "id": "fce6da69915c1ded",
-        "type": "smooth",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "property": "ts.bitrate",
-        "action": "mean",
-        "count": "10",
-        "round": "",
-        "mult": "single",
-        "reduce": false,
-        "x": 1220,
-        "y": 880,
-        "wires": [
-            [
-                "1cc947c2494007e1"
-            ]
+            []
         ]
     },
     {
@@ -31976,12 +31787,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 1020,
+        "x": 430,
+        "y": 1080,
         "wires": [
             [
-                "7910c53e32d985c8",
-                "d145b4f95cb7ccb9"
+                "d145b4f95cb7ccb9",
+                "7910c53e32d985c8"
             ]
         ]
     },
@@ -31998,8 +31809,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 980,
+        "x": 430,
+        "y": 1000,
         "wires": [
             [
                 "1914b70a6706ebd4"
@@ -32010,7 +31821,6 @@
         "id": "d0b57cb6afdec3c4",
         "type": "ui_button",
         "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
         "name": "TS address",
         "group": "263b62c11bcf21c6",
         "order": 5,
@@ -32018,7 +31828,7 @@
         "height": 1,
         "passthru": false,
         "label": "",
-        "tooltip": "Use TS IP RX ",
+        "tooltip": "Restart UDP1 TS duck",
         "color": "",
         "bgcolor": "{{color}}",
         "className": "",
@@ -32027,8 +31837,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 210,
-        "y": 640,
+        "x": 310,
+        "y": 540,
         "wires": [
             [
                 "05a1e2c8dad388fb",
@@ -32046,7 +31856,7 @@
         "order": 9,
         "width": 12,
         "height": 5,
-        "label": "PID bitrates b/s",
+        "label": "UDP1: PID bitrates b/s",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
@@ -32075,8 +31885,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1220,
-        "y": 1040,
+        "x": 1060,
+        "y": 860,
         "wires": [
             []
         ]
@@ -32094,8 +31904,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 1100,
+        "x": 460,
+        "y": 1040,
         "wires": [
             [
                 "d145b4f95cb7ccb9"
@@ -32141,8 +31951,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1020,
-        "y": 1260,
+        "x": 1040,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -32154,8 +31964,8 @@
         "g": "9396693c.371108",
         "name": "",
         "events": "all",
-        "x": 1080,
-        "y": 1320,
+        "x": 1100,
+        "y": 1560,
         "wires": [
             []
         ]
@@ -32179,8 +31989,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 670,
-        "y": 1320,
+        "x": 690,
+        "y": 1560,
         "wires": [
             [
                 "e8cff46c.77d948"
@@ -32210,8 +32020,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 1320,
+        "x": 900,
+        "y": 1560,
         "wires": [
             [
                 "28cf83f5.defee4"
@@ -32238,8 +32048,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 1360,
+        "x": 900,
+        "y": 1600,
         "wires": [
             [
                 "28cf83f5.defee4"
@@ -32264,15 +32074,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 220,
-        "y": 800,
+        "x": 440,
+        "y": 1160,
         "wires": []
     },
     {
         "id": "3146d841c016a870",
         "type": "switch",
         "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
+        "g": "9396693c.371108",
         "name": "",
         "property": "service_0.name",
         "propertyType": "msg",
@@ -32291,8 +32101,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 530,
-        "y": 1120,
+        "x": 690,
+        "y": 1500,
         "wires": [
             [
                 "e8cff46c.77d948"
@@ -32312,7 +32122,7 @@
         "tooltip": "",
         "group": "263b62c11bcf21c6",
         "order": 4,
-        "width": "9",
+        "width": 9,
         "height": 1,
         "passthru": true,
         "decouple": "false",
@@ -32329,8 +32139,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 450,
-        "y": 1320,
+        "x": 470,
+        "y": 1560,
         "wires": [
             [
                 "dd218282.21d4"
@@ -32349,8 +32159,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 670,
-        "y": 720,
+        "x": 430,
+        "y": 860,
         "wires": [
             [
                 "f040e98d76943d56",
@@ -32375,8 +32185,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 740,
+        "x": 690,
+        "y": 800,
         "wires": [
             [
                 "c893f1da4a401d72"
@@ -32396,8 +32206,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 940,
+        "x": 650,
+        "y": 880,
         "wires": [
             [
                 "1914b70a6706ebd4"
@@ -32417,8 +32227,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 1060,
+        "x": 690,
+        "y": 920,
         "wires": [
             [
                 "d145b4f95cb7ccb9"
@@ -32438,8 +32248,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 1200,
+        "x": 800,
+        "y": 1440,
         "wires": [
             [
                 "e55b581a1ed1a18b"
@@ -32459,8 +32269,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
-        "y": 740,
+        "x": 640,
+        "y": 840,
         "wires": [
             [
                 "c893f1da4a401d72",
@@ -32473,7 +32283,7 @@
         "type": "function",
         "z": "5921103edf8bc817",
         "g": "72d0cc5c362e49a0",
-        "name": "function 15",
+        "name": "is there a video bitrate?",
         "func": "if (msg.video?.bitrate) {\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
@@ -32481,8 +32291,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 800,
+        "x": 690,
+        "y": 960,
         "wires": [
             [
                 "8d9202a5c69ff12e"
@@ -32494,7 +32304,7 @@
         "type": "function",
         "z": "5921103edf8bc817",
         "g": "72d0cc5c362e49a0",
-        "name": "function 16",
+        "name": "is there a ts bitrate?",
         "func": "if (msg.ts?.bitrate) {\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
@@ -32502,8 +32312,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 880,
+        "x": 470,
+        "y": 1120,
         "wires": [
             [
                 "fce6da69915c1ded"
@@ -32514,7 +32324,7 @@
         "id": "4836e1ea2e52f007",
         "type": "rbe",
         "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
+        "g": "9396693c.371108",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -32523,46 +32333,11 @@
         "septopics": true,
         "property": "service_0.name",
         "topi": "topic",
-        "x": 390,
-        "y": 1080,
+        "x": 570,
+        "y": 1500,
         "wires": [
             [
                 "3146d841c016a870"
-            ]
-        ]
-    },
-    {
-        "id": "7631b140ace92b84",
-        "type": "change",
-        "z": "5921103edf8bc817",
-        "g": "d7eac6e7f4ef2b55",
-        "name": "kill unix duck",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pid",
-                "pt": "msg",
-                "to": "ts_pid",
-                "tot": "global"
-            },
-            {
-                "t": "set",
-                "p": "kill",
-                "pt": "msg",
-                "to": "SIGTERM",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1270,
-        "y": 260,
-        "wires": [
-            [
-                "520a275fdb70f6c1"
             ]
         ]
     },
@@ -32650,8 +32425,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 680,
+        "x": 380,
+        "y": 780,
         "wires": [
             []
         ]
@@ -32660,7 +32435,7 @@
         "id": "b1ecbdd63ade84af",
         "type": "switch",
         "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
+        "g": "9396693c.371108",
         "name": "error?",
         "property": "beacon_error",
         "propertyType": "flow",
@@ -32674,8 +32449,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 390,
-        "y": 1020,
+        "x": 450,
+        "y": 1500,
         "wires": [
             [
                 "4836e1ea2e52f007"
@@ -32737,112 +32512,6 @@
         "wires": []
     },
     {
-        "id": "ef591a3732c41ff7",
-        "type": "debug",
-        "z": "5921103edf8bc817",
-        "g": "d7eac6e7f4ef2b55",
-        "name": "debug 24",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1660,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "b5581ff51192b69c",
-        "type": "exec",
-        "z": "5921103edf8bc817",
-        "g": "d7eac6e7f4ef2b55",
-        "command": "",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "pew pew",
-        "x": 1460,
-        "y": 220,
-        "wires": [
-            [
-                "ef591a3732c41ff7"
-            ],
-            [
-                "ef591a3732c41ff7"
-            ],
-            [
-                "ef591a3732c41ff7"
-            ]
-        ]
-    },
-    {
-        "id": "6ba04c2d374cb808",
-        "type": "change",
-        "z": "5921103edf8bc817",
-        "g": "d7eac6e7f4ef2b55",
-        "name": "kill duck",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "taskkill /T /F /IM tsp.exe",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1260,
-        "y": 220,
-        "wires": [
-            [
-                "b5581ff51192b69c"
-            ]
-        ]
-    },
-    {
-        "id": "1cb0f73e71362bf3",
-        "type": "switch",
-        "z": "5921103edf8bc817",
-        "g": "d7eac6e7f4ef2b55",
-        "name": "windows",
-        "property": "platform",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "win32",
-                "vt": "str"
-            },
-            {
-                "t": "neq",
-                "v": "win32",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1020,
-        "y": 180,
-        "wires": [
-            [
-                "6ba04c2d374cb808"
-            ],
-            [
-                "7631b140ace92b84"
-            ]
-        ]
-    },
-    {
         "id": "fe45a8178aea5e6e",
         "type": "delay",
         "z": "5921103edf8bc817",
@@ -32864,8 +32533,8 @@
         "y": 180,
         "wires": [
             [
-                "1cb0f73e71362bf3",
-                "b29edbae04c962c0"
+                "b29edbae04c962c0",
+                "82eabf4ed19590eb"
             ]
         ]
     },
@@ -32883,8 +32552,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 1190,
-        "y": 1120,
+        "x": 910,
+        "y": 1220,
         "wires": [
             [
                 "3cb27f12428cca36"
@@ -32904,8 +32573,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1390,
-        "y": 1120,
+        "x": 1060,
+        "y": 1220,
         "wires": []
     },
     {
@@ -32921,8 +32590,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 1120,
+        "x": 450,
+        "y": 960,
         "wires": [
             [
                 "1914b70a6706ebd4"
@@ -32943,113 +32612,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 660,
+        "x": 640,
+        "y": 700,
         "wires": []
-    },
-    {
-        "id": "bbf04ab8e9c03fff",
-        "type": "change",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ts.video_bitrate",
-                "pt": "global",
-                "to": "video.bitrate",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1750,
-        "y": 800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ef693a300d6d5974",
-        "type": "change",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ts.bitrate",
-                "pt": "global",
-                "to": "ts.bitrate",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1730,
-        "y": 880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6bf7d6e1fba89631",
-        "type": "change",
-        "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "ts.audio_bitrate",
-                "pt": "global",
-                "to": "audio.bitrate",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1750,
-        "y": 840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b29edbae04c962c0",
-        "type": "delay",
-        "z": "5921103edf8bc817",
-        "g": "d7eac6e7f4ef2b55",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 400,
-        "y": 120,
-        "wires": [
-            [
-                "7d72d668f721a872"
-            ]
-        ]
     },
     {
         "id": "8c6a42b18f8ef696",
@@ -33065,7 +32630,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1540,
+        "x": 1260,
         "y": 680,
         "wires": []
     },
@@ -33133,7 +32698,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -33471,8 +33036,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 460,
+        "x": 320,
+        "y": 480,
         "wires": [
             [
                 "ceec1114742b1cb4"
@@ -33498,8 +33063,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 460,
+        "x": 670,
+        "y": 480,
         "wires": [
             [
                 "05a1e2c8dad388fb",
@@ -33524,8 +33089,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 520,
+        "x": 170,
+        "y": 480,
         "wires": [
             [
                 "16af83675314b9c7"
@@ -33536,6 +33101,7 @@
         "id": "738b3595b635c49d",
         "type": "ui_button",
         "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
         "name": "clear charts",
         "group": "263b62c11bcf21c6",
         "order": 7,
@@ -33552,8 +33118,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 440,
+        "x": 170,
+        "y": 760,
         "wires": [
             [
                 "e25a43afa99cde8c"
@@ -33564,6 +33130,7 @@
         "id": "16b6f6c788d1b983",
         "type": "ui_button",
         "z": "5921103edf8bc817",
+        "d": true,
         "g": "d7eac6e7f4ef2b55",
         "name": "switch to test stream",
         "group": "263b62c11bcf21c6",
@@ -33635,7 +33202,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
+        "x": 530,
         "y": 540,
         "wires": [
             []
@@ -33653,8 +33220,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 540,
+        "x": 1470,
+        "y": 480,
         "wires": [
             []
         ]
@@ -33689,7 +33256,6 @@
         "id": "a511e401a15da512",
         "type": "inject",
         "z": "5921103edf8bc817",
-        "g": "72d0cc5c362e49a0",
         "name": "",
         "props": [
             {
@@ -33703,8 +33269,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 110,
-        "y": 680,
+        "x": 150,
+        "y": 540,
         "wires": [
             [
                 "d0b57cb6afdec3c4"
@@ -33732,11 +33298,1509 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 770,
-        "y": 540,
+        "x": 1270,
+        "y": 480,
         "wires": [
             [
                 "8f1a3a081cc72999"
+            ]
+        ]
+    },
+    {
+        "id": "f2aa3f1078982769",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "group": "263b62c11bcf21c6",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "TS",
+        "format": "{{msg.ts.bitrate}} kb/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1250,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "bdbc0e378dfdc5f8",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "group": "263b62c11bcf21c6",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Audio",
+        "format": "{{msg.audio.bitrate}} kb/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1250,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "53268bde953b7f7b",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "group": "263b62c11bcf21c6",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Video",
+        "format": "{{msg.video.bitrate}} kb/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1250,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "ef84197a8c482fd4",
+        "type": "calculator",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "inputMsgField": "video.bitrate",
+        "outputMsgField": "video.bitrate",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 1090,
+        "y": 1020,
+        "wires": [
+            [
+                "53268bde953b7f7b",
+                "bbf04ab8e9c03fff"
+            ]
+        ]
+    },
+    {
+        "id": "200adee6a0a17962",
+        "type": "calculator",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "inputMsgField": "audio.bitrate",
+        "outputMsgField": "audio.bitrate",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 1090,
+        "y": 1060,
+        "wires": [
+            [
+                "bdbc0e378dfdc5f8",
+                "6bf7d6e1fba89631"
+            ]
+        ]
+    },
+    {
+        "id": "1cc947c2494007e1",
+        "type": "calculator",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "inputMsgField": "ts.bitrate",
+        "outputMsgField": "ts.bitrate",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 1090,
+        "y": 1100,
+        "wires": [
+            [
+                "f2aa3f1078982769",
+                "ef693a300d6d5974"
+            ]
+        ]
+    },
+    {
+        "id": "8d9202a5c69ff12e",
+        "type": "smooth",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "property": "video.bitrate",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 960,
+        "y": 1020,
+        "wires": [
+            [
+                "ef84197a8c482fd4"
+            ]
+        ]
+    },
+    {
+        "id": "7910c53e32d985c8",
+        "type": "smooth",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "property": "audio.bitrate",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 960,
+        "y": 1060,
+        "wires": [
+            [
+                "200adee6a0a17962"
+            ]
+        ]
+    },
+    {
+        "id": "fce6da69915c1ded",
+        "type": "smooth",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "property": "ts.bitrate",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 960,
+        "y": 1100,
+        "wires": [
+            [
+                "1cc947c2494007e1"
+            ]
+        ]
+    },
+    {
+        "id": "bbf04ab8e9c03fff",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts.video_bitrate",
+                "pt": "global",
+                "to": "video.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef693a300d6d5974",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts.bitrate",
+                "pt": "global",
+                "to": "ts.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bf7d6e1fba89631",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "g": "72d0cc5c362e49a0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts.audio_bitrate",
+                "pt": "global",
+                "to": "audio.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e789203c1775e4cb",
+        "type": "ui_chart",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "group": "f52b22908d13a553",
+        "order": 7,
+        "width": 12,
+        "height": 5,
+        "label": "UDP2: TS bitrates b/s",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#5ab31e",
+            "#afe9df",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2840,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2cb6677a31a0dab5",
+        "type": "ui_chart",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "group": "f52b22908d13a553",
+        "order": 9,
+        "width": 12,
+        "height": 5,
+        "label": "UDP2: PID<20 bitrates b/s",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2860,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "707729cd6eb5c11b",
+        "type": "ui_chart",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "group": "f52b22908d13a553",
+        "order": 8,
+        "width": 12,
+        "height": 5,
+        "label": "UDP2: PID bitrates b/s",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2840,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63e978779b471d46",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "group": "f52b22908d13a553",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "TS",
+        "format": "{{msg.ts.bitrate}} kb/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2850,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "ca2c400d9b58e37d",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "group": "f52b22908d13a553",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Audio",
+        "format": "{{msg.audio.bitrate}} kb/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2850,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "943916733421e68f",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "group": "f52b22908d13a553",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Video",
+        "format": "{{msg.video.bitrate}} kb/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2850,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "47c7f2a402edca38",
+        "type": "calculator",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "inputMsgField": "video.bitrate",
+        "outputMsgField": "video.bitrate",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 2730,
+        "y": 720,
+        "wires": [
+            [
+                "943916733421e68f",
+                "b4a9cc37def26573"
+            ]
+        ]
+    },
+    {
+        "id": "04860cf78227fa5a",
+        "type": "calculator",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "inputMsgField": "audio.bitrate",
+        "outputMsgField": "audio.bitrate",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 2730,
+        "y": 800,
+        "wires": [
+            [
+                "ca2c400d9b58e37d",
+                "a97b7bcdf2a6601a"
+            ]
+        ]
+    },
+    {
+        "id": "503a89334564584a",
+        "type": "calculator",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "inputMsgField": "ts.bitrate",
+        "outputMsgField": "ts.bitrate",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 2730,
+        "y": 880,
+        "wires": [
+            [
+                "63e978779b471d46",
+                "198d8fe3f315bfbb"
+            ]
+        ]
+    },
+    {
+        "id": "18ecf4abca364f25",
+        "type": "smooth",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "property": "video.bitrate",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 2600,
+        "y": 720,
+        "wires": [
+            [
+                "47c7f2a402edca38"
+            ]
+        ]
+    },
+    {
+        "id": "e7d904ab8e24f482",
+        "type": "smooth",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "property": "audio.bitrate",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 2600,
+        "y": 800,
+        "wires": [
+            [
+                "04860cf78227fa5a"
+            ]
+        ]
+    },
+    {
+        "id": "c7816e39a0db536b",
+        "type": "smooth",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "property": "ts.bitrate",
+        "action": "mean",
+        "count": "10",
+        "round": "",
+        "mult": "single",
+        "reduce": false,
+        "x": 2600,
+        "y": 880,
+        "wires": [
+            [
+                "503a89334564584a"
+            ]
+        ]
+    },
+    {
+        "id": "b4a9cc37def26573",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts2.video_bitrate",
+                "pt": "global",
+                "to": "video.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2960,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "198d8fe3f315bfbb",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts2.bitrate",
+                "pt": "global",
+                "to": "ts.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2940,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a97b7bcdf2a6601a",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts2.audio_bitrate",
+                "pt": "global",
+                "to": "audio.bitrate",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2960,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2a18f624d53d52f",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "Set up the duck",
+        "func": "let included_duck = global.get(\"platform\") === \"win32\" ? \"\\\\tsduck\\\\tsp.exe\" : \"tsp\";\nlet duck_address = global.get(\"settings.device.rx.tsip2\");\nmsg.payload = `${global.get(\"cwd\")}${included_duck} -I ip -r --default-interface ${duck_address} -P analyze -i1 --json-line -O drop`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2540,
+        "y": 100,
+        "wires": [
+            [
+                "52a605bdc47a7291",
+                "f0f88cdf7b8bfc3a"
+            ]
+        ]
+    },
+    {
+        "id": "30ccef470f5da758",
+        "type": "exec",
+        "z": "5921103edf8bc817",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "TS Duck goes",
+        "x": 2940,
+        "y": 140,
+        "wires": [
+            [
+                "d95c1cd35983f717"
+            ],
+            [
+                "8dc3b5e00c9c94c3"
+            ],
+            [
+                "06f69bf754631a58"
+            ]
+        ]
+    },
+    {
+        "id": "8dc3b5e00c9c94c3",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "Quack quack",
+        "func": "// let stuff = msg.payload.replace(/(\\u21b5\\r\\n|\\n|\\r)/gm, \"\");\nlet stuff = msg.payload.replace(/\\r?\\n|\\r/g, \"\");\nlet ducky =  global.get(\"ts_duck_2\");\nif (typeof stuff === \"string\" && stuff.length === 0) {\n    msg.empty = true;\n    return msg;\n}      // Negates carriage return payload\n\n// Check for non split payload \nlet full_report = stuff.startsWith(\"* \");\nif (full_report) stuff = stuff.split(\"* \").pop();\nfull_report = stuff.startsWith(\"analyze: \")\nif (full_report) stuff = stuff.split(\"analyze: \").pop();\n\nlet ts_report = global.get(\"ts_report_2\");  // should be empty string or first part of report\n\nif (ts_report.includes(\"Warning:\") || ts_report.includes(\"Error:\") ) {\n    ts_report = \"\";\n}\n\nif (ts_report.length !== 0 && stuff.length !== 0) {\n    if (ts_report.slice(0, 5) === stuff.slice(0, 5)) {\n        // we broke, if the signal drops, we can't build a valid JSON object, so we start over\n        ts_report = \"\";\n    }\n}\n\nmsg.glob = ts_report;\nts_report = ts_report.concat(stuff);\nglobal.set(\"ts_report_2\", ts_report);\nmsg.concat = stuff;\nif (isJsonString(ts_report)) {\n    let json = JSON.parse(ts_report)\n    global.set(\"ts_duck_2\", json)\n    global.set(\"ts_report_2\", \"\")\n    msg.payload = json;\n    return msg\n}\nmsg.reset = true;\nmsg.payload = ducky;\nreturn msg;\n\nfunction isJsonString(str) {\n    try {\n        JSON.parse(str);\n    } catch (e) {\n        return false;\n    }\n    return true;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3170,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06f69bf754631a58",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "error out",
+        "func": "msg.payload = `TSDuck Error: ${JSON.stringify(msg.payload)}`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3160,
+        "y": 180,
+        "wires": [
+            [
+                "d95c1cd35983f717"
+            ]
+        ]
+    },
+    {
+        "id": "bf680dcc2c74c2a7",
+        "type": "inject",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "settings.device.rx.tsip2",
+        "payloadType": "global",
+        "x": 2090,
+        "y": 180,
+        "wires": [
+            [
+                "61d0ae679d9894c4"
+            ]
+        ]
+    },
+    {
+        "id": "23bdd72856071a24",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.device.rx.tsip2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "ts_report_2",
+                "pt": "global",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "bitratechange",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2200,
+        "y": 120,
+        "wires": [
+            [
+                "d2a18f624d53d52f"
+            ]
+        ]
+    },
+    {
+        "id": "61d0ae679d9894c4",
+        "type": "ui_text_input",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "label": "UDP2 IP address",
+        "tooltip": "",
+        "group": "f52b22908d13a553",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 2070,
+        "y": 280,
+        "wires": [
+            [
+                "4cc056169d55ddfe"
+            ]
+        ]
+    },
+    {
+        "id": "4a960b57c72da0e8",
+        "type": "ui_button",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "group": "f52b22908d13a553",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Set UDP2 IP",
+        "tooltip": "Restart UDP2 TS duck",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "settings.device.rx.tsip2",
+        "payloadType": "global",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2010,
+        "y": 120,
+        "wires": [
+            [
+                "23bdd72856071a24"
+            ]
+        ]
+    },
+    {
+        "id": "4cc056169d55ddfe",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings.device.rx.tsip2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2120,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b29edbae04c962c0",
+        "type": "delay",
+        "z": "5921103edf8bc817",
+        "g": "d7eac6e7f4ef2b55",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "7d72d668f721a872"
+            ]
+        ]
+    },
+    {
+        "id": "52a605bdc47a7291",
+        "type": "delay",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2740,
+        "y": 160,
+        "wires": [
+            [
+                "30ccef470f5da758"
+            ]
+        ]
+    },
+    {
+        "id": "f0f88cdf7b8bfc3a",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "kill",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2730,
+        "y": 100,
+        "wires": [
+            [
+                "30ccef470f5da758"
+            ]
+        ]
+    },
+    {
+        "id": "364fd18003a902ab",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "Process TSDuck",
+        "func": "let ts_duck = global.get(\"ts_duck_2\");\nif (ts_duck?.services) {\n    msg.services = ts_duck.services;\n    for (let index = 0; index < ts_duck.services?.length; index++) {\n        const service = ts_duck.services[index];\n        msg[`service_${index}`] = service;\n    }\n}\nif (ts_duck?.pids) {\n    for (let index = 0; index < ts_duck.pids.length; index++) {\n        const pid = ts_duck.pids[index];\n        let beacon = false;\n        if (msg.service_0?.name === \"A71A\") {\n            beacon = true;\n            if (pid.id === 257) msg.video = pid;\n            if (pid.id === 258) msg.audio = pid;\n        }\n        if (pid.id === 256 && !beacon) {\n            if (pid.audio) msg.audio = pid;\n            if (pid.video) msg.video = pid;\n        }\n        if (pid.id === 257 && !beacon) {\n            if (pid.audio) msg.audio = pid;\n            if (pid.video) msg.video = pid;\n        }\n    }\n    msg.payload = ts_duck.pids;\n    msg.ts = ts_duck.ts;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 520,
+        "wires": [
+            [
+                "f1e8de0282781b48",
+                "e99c1f0f198150f3",
+                "491a514245f0dc13",
+                "ea0b12cd0737b5ab",
+                "2a4d818d764ec7b7",
+                "4823834dc2933c1c",
+                "850c68fc26d8b9f3",
+                "75c0632fec889420",
+                "db9b409b94c3eee2",
+                "415039401734c208"
+            ]
+        ]
+    },
+    {
+        "id": "eb9b6c7b98536b26",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "pid_4095",
+        "func": "if (msg.payload.id === 4095) {\n    msg.topic = `${msg.payload.id} ${msg.payload.description}`;\n    msg.payload = msg.payload.bitrate;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2340,
+        "y": 520,
+        "wires": [
+            [
+                "2cb6677a31a0dab5"
+            ]
+        ]
+    },
+    {
+        "id": "0e1d28934d772269",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "Filter PID lower than 20",
+        "func": "if (msg.payload.id > 20) return\nmsg.topic = `${msg.payload.id} ${msg.payload.description}`;\nmsg.payload = msg.payload.bitrate;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2390,
+        "y": 480,
+        "wires": [
+            [
+                "2cb6677a31a0dab5"
+            ]
+        ]
+    },
+    {
+        "id": "8963445a2dbce2af",
+        "type": "ui_button",
+        "z": "5921103edf8bc817",
+        "name": "clear charts",
+        "group": "f52b22908d13a553",
+        "order": 6,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "Clear charts",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "loop",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2370,
+        "y": 400,
+        "wires": [
+            [
+                "0af8fd2ae1d6e167"
+            ]
+        ]
+    },
+    {
+        "id": "0af8fd2ae1d6e167",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "UDP1: clear charts",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2550,
+        "y": 400,
+        "wires": [
+            [
+                "2cb6677a31a0dab5",
+                "707729cd6eb5c11b",
+                "e789203c1775e4cb"
+            ]
+        ]
+    },
+    {
+        "id": "782b93b72b73a79d",
+        "type": "inject",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 2010,
+        "y": 60,
+        "wires": [
+            [
+                "c296e27adefcfb3b"
+            ]
+        ]
+    },
+    {
+        "id": "c296e27adefcfb3b",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ts_report_2",
+                "pt": "global",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2200,
+        "y": 60,
+        "wires": [
+            [
+                "d2a18f624d53d52f"
+            ]
+        ]
+    },
+    {
+        "id": "a14eb2e897807f6d",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "is there a video bitrate?",
+        "func": "if (msg.video?.bitrate) {\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2390,
+        "y": 640,
+        "wires": [
+            [
+                "18ecf4abca364f25"
+            ]
+        ]
+    },
+    {
+        "id": "f1e8de0282781b48",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "audio",
+        "func": "if (msg.audio?.bitrate) {\n    msg.payload = msg.audio.bitrate;\n    msg.topic = `AUDIO PID ${msg.audio.id}`\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 860,
+        "wires": [
+            [
+                "e7d904ab8e24f482",
+                "707729cd6eb5c11b"
+            ]
+        ]
+    },
+    {
+        "id": "e99c1f0f198150f3",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "is there a ts bitrate?",
+        "func": "if (msg.ts?.bitrate) {\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2170,
+        "y": 900,
+        "wires": [
+            [
+                "c7816e39a0db536b"
+            ]
+        ]
+    },
+    {
+        "id": "491a514245f0dc13",
+        "type": "split",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "splt": "",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 2130,
+        "y": 520,
+        "wires": [
+            [
+                "0e1d28934d772269",
+                "eb9b6c7b98536b26",
+                "15974aa1ec68d23a",
+                "a14eb2e897807f6d",
+                "c637a3bee557869b"
+            ]
+        ]
+    },
+    {
+        "id": "15974aa1ec68d23a",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "Filter video",
+        "func": "if (msg.payload.video) {\n    msg.topic = `${msg.payload.id} ${msg.payload.description}`;\n    msg.payload = msg.payload.bitrate;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2350,
+        "y": 600,
+        "wires": [
+            [
+                "e789203c1775e4cb"
+            ]
+        ]
+    },
+    {
+        "id": "c637a3bee557869b",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "Filter PID higher than 20",
+        "func": "if (msg.payload.id < 20) return;\nif (msg.payload.id === 256) return;\nif (msg.payload.id === 257) return;\nif (msg.payload.id === 4095) return;\nif (msg.service_0?.name === \"A71A\") {\n    if (msg.payload.id === 256) return;\n    if (msg.payload.id === 257) return;\n    if (msg.payload.id === 258) return;\n    if (msg.payload.id > 259 && msg.payload.id < 1900) return;\n}\nmsg.topic = `${msg.payload.id} ${msg.payload.description}`;\nmsg.payload = msg.payload.bitrate;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2390,
+        "y": 560,
+        "wires": [
+            [
+                "707729cd6eb5c11b"
+            ]
+        ]
+    },
+    {
+        "id": "4823834dc2933c1c",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "TS pids global",
+        "func": "if (msg.ts?.bitrate) {\n    msg.payload = msg.ts.pids.global.bitrate;\n    msg.topic = `TS pids global`\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2160,
+        "y": 820,
+        "wires": [
+            [
+                "707729cd6eb5c11b"
+            ]
+        ]
+    },
+    {
+        "id": "2a4d818d764ec7b7",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "ts",
+        "func": "msg.payload = msg.ts?.bitrate;\nmsg.topic = `TS`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 780,
+        "wires": [
+            [
+                "e789203c1775e4cb"
+            ]
+        ]
+    },
+    {
+        "id": "ea0b12cd0737b5ab",
+        "type": "function",
+        "z": "5921103edf8bc817",
+        "name": "Service ID 1",
+        "func": "if (msg.service_0?.bitrate) {\n    msg.topic = `SERVICE ${msg.service_0.id} ${msg.service_0[\"type-name\"]}`;\n    msg.payload = msg.service_0.bitrate;\n    return msg;\n}\nif (msg.service_1?.bitrate) {\n    msg.topic = `SERVICE ${msg.service_1.id} ${msg.service_1.name}`;\n    msg.payload = msg.service_1.bitrate;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2150,
+        "y": 740,
+        "wires": [
+            [
+                "e789203c1775e4cb"
+            ]
+        ]
+    },
+    {
+        "id": "75c0632fec889420",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "group": "f52b22908d13a553",
+        "order": 11,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Service",
+        "format": "{{msg.service_0.name}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2140,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "db9b409b94c3eee2",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "group": "f52b22908d13a553",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Audio codec",
+        "format": "{{msg.audio.description}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2150,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "415039401734c208",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "group": "f52b22908d13a553",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Video codec",
+        "format": "{{msg.video.description}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2150,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "850c68fc26d8b9f3",
+        "type": "ui_text",
+        "z": "5921103edf8bc817",
+        "group": "f52b22908d13a553",
+        "order": 10,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "Provider",
+        "format": "{{msg.service_0.provider}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2140,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "426ad1258ec5d0b8",
+        "type": "inject",
+        "z": "5921103edf8bc817",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1730,
+        "y": 520,
+        "wires": [
+            [
+                "364fd18003a902ab"
+            ]
+        ]
+    },
+    {
+        "id": "d95c1cd35983f717",
+        "type": "debug",
+        "z": "5921103edf8bc817",
+        "name": "debug 46",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3320,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "82eabf4ed19590eb",
+        "type": "change",
+        "z": "5921103edf8bc817",
+        "g": "d7eac6e7f4ef2b55",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "kill",
+                "pt": "msg",
+                "to": "SIGTERM",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "520a275fdb70f6c1"
             ]
         ]
     },
@@ -33907,7 +34971,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "1",
+        "onceDelay": "2",
         "topic": "",
         "payload": "TSDUCK",
         "payloadType": "global",
@@ -33955,9 +35019,9 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "n7.0-33-gc82c96199c",
+        "payload": "n-119781-gb7f763ba25-g6c291232cf+2(01-06-2025)",
         "payloadType": "str",
-        "x": 320,
+        "x": 270,
         "y": 180,
         "wires": [
             [
@@ -34139,7 +35203,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "core 164 r3190 7ed753b",
+        "payload": "core 165 r3219 ff620d0",
         "payloadType": "str",
         "x": 330,
         "y": 440,
@@ -34185,7 +35249,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v3.6+11-453d7394f",
+        "payload": "v4.1+168-1e993ee",
         "payloadType": "str",
         "x": 310,
         "y": 500,
@@ -34231,7 +35295,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v1.11.1",
+        "payload": "v1.13.1",
         "payloadType": "str",
         "x": 280,
         "y": 560,
@@ -34277,7 +35341,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v2.2.0",
+        "payload": "v3.0.0",
         "payloadType": "str",
         "x": 270,
         "y": 620,
@@ -34323,7 +35387,7 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v3.9.0-93-g5ccdc66ab6",
+        "payload": "v3.12.1-170-g146ad35c",
         "payloadType": "str",
         "x": 330,
         "y": 680,
@@ -34369,9 +35433,9 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "v2.0.0-22-g99c4d2c1",
+        "payload": "v3.0.2-59-g0cfe990",
         "payloadType": "str",
-        "x": 320,
+        "x": 310,
         "y": 740,
         "wires": [
             [
